@@ -1,0 +1,48 @@
+are you sure you want to delete this news site ?	headlines	iw	?בטוח שברצונך לחוק אתר חדשות זה
+base url	headlines	iw	URL בסיס
+basic	headlines	iw	בסיסי
+choose layout	headlines	iw	בחר תצורה
+color	headlines	iw	צבע
+create new headline	headlines	iw	צור כותרת חדשה
+current headlines in cache	headlines	iw	כותרות כרגע במטמון
+display	headlines	iw	תצוגה
+edit headline sites	headlines	iw	ערוך אתרי כותרות
+edit headlines shown by default	headlines	iw	ערוך כותרות המוצגות כברירת מחדל
+grab new news sites	common	iw	תפוס אתרי חדשות חדשים
+gray	headlines	iw	אפור
+headline preferences	common	iw	עדיפויות כותרות
+headline site management	common	iw	ניהול אתר כותרות
+headline sites	headlines	iw	אתרי כותרות
+headlines	common	iw	כותרות
+headlines administration	headlines	iw	ניהול כותרות
+headlines administration - delete headline	headlines	iw	ניהול כותרות -מחיקת כותרת
+headlines layout	headlines	iw	תצורת כותרות
+listings displayed	headlines	iw	הצגת רשימות
+minutes between refresh	headlines	iw	דקות בין רענונים
+minutes between reloads	headlines	iw	דקות בין הטענות מחדש
+monitor	common	iw	לנטר
+news file	headlines	iw	קובץ חדשות
+news from x	headlines	iw	x-חדשות מ
+news headlines	common	iw	כותרות החדשות
+news type	headlines	iw	סוג החדשות
+no headlines found	headlines	iw	לא נמצאו כותרות
+other preferences	preferences	iw	עדיפויות נוספות
+reload news sites	headlines	iw	טעל אתרי חדשות מחדש
+reset	headlines	iw	איתחול
+sample	headlines	iw	דוגמא
+select headline news sites	headlines	iw	בחר אתרי כותרות חדשות
+select headlines to display	common	iw	בחר כותרות להציג
+select layout	common	iw	בחר תצורה
+show headlines on homepage	headlines	iw	הצג כותרות בעמוד הבית
+site	headlines	iw	אתר
+that site has already been entered	headlines	iw	אתר זה כבר רשום
+unable to retrieve links	headlines	iw	לא הצלחתי להחזיר את הקישור
+update headline	headlines	iw	עדכן כותרות
+view headline	headlines	iw	הצג כותרות
+you can only enter numbers for listings display	headlines	iw	ניתן להכניס מספרים בלבד לתצוגת הרשימות
+you can only enter numbers minutes between refresh	headlines	iw	ניתן להכניס דקות במספר בלבד עבור זמן הרענון
+you must enter a base url	headlines	iw	בסיס URL עליך להכניס
+you must enter a display	headlines	iw	עליך להכניס תצוגה
+you must enter a news url	headlines	iw	של חדשות URL עליך להכניס
+you must enter the number of listings display	headlines	iw	עליך להכניס את מספר תצוגת הרשימות
+you must enter the number of minutes between reload	headlines	iw	עליך להכניס את מספר הדקות בין טיענןת

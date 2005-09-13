@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	ko	이 뉴스사이트를 정말 삭제하시겠습니까?
+base url	headlines	ko	기본 URL
+basic	headlines	ko	기본
+choose layout	headlines	ko	레이아웃을 선택
+color	headlines	ko	색상 표기
+create new headline	headlines	ko	새로운 표제어를 생성
+current headlines in cache	headlines	ko	현재 캐쉬에 저장된 표제어들
+display	headlines	ko	제목
+edit headline sites	headlines	ko	표제어 사이트를 편집
+edit headlines shown by default	headlines	ko	기본적으로 보일 표제어을 편집
+grab new news sites	common	ko	새로운 뉴스 사이트를 끌어오기(Grab)
+gray	headlines	ko	회색 표기
+headline preferences	common	ko	표제어 환경설정
+headline site management	common	ko	표제어 관리
+headline sites	headlines	ko	표제어 사이트
+headlines	common	ko	표제어
+headlines administration	headlines	ko	표제어관리
+headlines administration - delete headline	headlines	ko	표제어관리 - 표제어 삭제
+headlines layout	headlines	ko	표제어 레이아웃
+listings displayed	headlines	ko	표시할 목록개수
+minutes between refresh	headlines	ko	다시 갱신할 시간(분단위)
+minutes between reloads	headlines	ko	다시 로드할 시간(분단위)
+monitor	common	ko	모니터
+news file	headlines	ko	뉴스 파일
+news headlines	common	ko	뉴스 표제어
+news type	headlines	ko	뉴스 타입
+no headlines found	headlines	ko	표제어를 찾지 못했습니다
+other preferences	preferences	ko	기타 환경설정
+reload news sites	headlines	ko	뉴스 사이트를 다시읽기
+reset	headlines	ko	초기화
+sample	headlines	ko	예제
+select headline news sites	headlines	ko	표제어 뉴스 사이트 선택
+select headlines to display	common	ko	보여줄 표제어 선택
+select layout	common	ko	표제어 레이아웃
+show headlines on homepage	headlines	ko	홈페이지에 표제어 보이기
+site	headlines	ko	사이트
+that site has already been entered	headlines	ko	이미 입력된 사이트입니다
+unable to retrieve links	headlines	ko	링크를 확인할 수 없습니다
+update headline	headlines	ko	표제어 갱신
+view headline	headlines	ko	표제어 보기
+you can only enter numbers for listings display	headlines	ko	표시할 목록의 숫자만 입력 가능합니다
+you can only enter numbers minutes between refresh	headlines	ko	재갱신할 시간간격은 분단위의 숫자만 입력가능합니다.
+you must enter a base url	headlines	ko	기본 URL을 입력해야 합니다.
+you must enter a display	headlines	ko	제목을 입력해야 합니다.
+you must enter a news url	headlines	ko	뉴스 URL을 입력해야 합니다.
+you must enter the number of listings display	headlines	ko	보여줄 목록개수를 입력하세요
+you must enter the number of minutes between reload	headlines	ko	리로드(다시읽기) 시간 간격을 입력해야 합니다.

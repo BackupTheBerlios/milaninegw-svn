@@ -1,0 +1,43 @@
+%1 by %2	comic	hr	%1 by %2
+%1 by %2 (%3)	comic	hr	%1 by %2 (%3)
+are you sure you want to reset all comic dates and resolved image urls?	comic	hr	Are you sure you want to reset all comic dates and resolved image urls?
+censorship level	comic	hr	Censorship level
+censorship override enabled	comic	hr	Censorship override enabled
+comic	common	hr	Comics
+comic preferences updated	comic	hr	Comic Preferences Updated
+comics	common	hr	Comics
+comics per page	comic	hr	Comics per Page
+comics scaled	comic	hr	Comics Scaled
+daily comic	common	hr	Daily Comic
+daily comic preferences	comic	hr	Daily Comic Preferences
+daily comics	admin	hr	Daily Comics
+daily comics - global options	comic	hr	Daily Comics - Global Options
+daily comics data	comic	hr	Daily comics data
+daily comics global options	comic	hr	Daily comics global options
+display layout	comic	hr	Display Layout
+display options	comic	hr	Display Options
+egroupware daily comics	comic	hr	eGroupWare Daily Comics
+front page comic	comic	hr	Front Page Comic
+front page comic scaled	comic	hr	Front Page Comic Scaled
+genre	comic	hr	Genre
+global comics	admin	hr	Global Comics
+global comics	comic	hr	Global Comics
+global options	admin	hr	Global Options
+global options	comic	hr	Global Options
+global options updated	comic	hr	Global Options Updated
+image source	comic	hr	Image source
+max file size	comic	hr	Max file size
+my comics	comic	hr	My Comics
+no_entries	comic	hr	no_entries
+parser	comic	hr	Parser
+performed %1 of element	comic	hr	Performed %1 of element
+phpgroupware daily comics	comic	hr	phpGroupWare Daily Comics
+random	comic	hr	Random
+rated	comic	hr	Rated
+remote (parse/snarf) enabled	comic	hr	Remote (parse/snarf)
+reset	comic	hr	Reset
+reset comic data	admin	hr	Reset Comic Data
+resolve	comic	hr	Resolve
+showing %1 (%2 - %3 of %4)	comic	hr	showing %1 (%2 - %3 of %4)
+template	comic	hr	Template
+visit %1	comic	hr	Visit %1

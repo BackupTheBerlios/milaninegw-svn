@@ -1,0 +1,34 @@
+are you sure you want to delete %1 ?	fi	da	Er du sikker du vil slette %1 ?
+attempt to create a directory with empty name	ftp	da	Forsøger at oprette et bibliotek med tomt navn
+cancel	ftp	da	Annullere
+cd	ftp	da	cd
+connect	ftp	da	Forbind
+create new directory	ftp	da	Opret nyt bibliotek
+delete	ftp	da	slet
+failed to connect to %1 with user %2 and password %3	ftp	da	Kunne ikke forbinde til %1 med bruger %2 og adgangskode %3
+failed to create directory %1	ftp	da	Kunne ikke oprette bibliotek %1
+failed to delete %1	ftp	da	Kunne ikke slette %1
+failed to rename %1 to %2	ftp	da	Kunne ikke omdøbe %1
+failed to upload %1	ftp	da	Kunne ikke overføre %1
+ftp client	ftp	da	FTP Klient
+ftp hostname	ftp	da	FTP Hostnavn
+ftp server	ftp	da	FTP Server
+home	ftp	da	Hjem
+log into ftp server	ftp	da	Logger på FTP server
+logout/relogin	ftp	da	Logud/Genlogin
+password	ftp	da	Adgangskode
+permissions	ftp	da	Rettigheder
+rename	ftp	da	omdøb
+rename file	ftp	da	Omdøb fil
+rename from	ftp	da	Omdøb fra
+rename to	ftp	da	til
+renamed %1 to %2	ftp	da	Omdøbte %1 til %2
+save	ftp	da	gem
+save to filemanager	ftp	da	gem til Filhåndteringen
+size	ftp	da	Størrelse
+successfully created directory %1	ftp	da	Bibliotek %1 successfuldt oprettet
+successfully deleted %1	ftp	da	Slettede %1 successfuldt
+successfully uploaded %1	ftp	da	Overførte %1 successfuldt
+upload	ftp	da	overfør
+username	ftp	da	Brugernavn
+view	ftp	da	vis

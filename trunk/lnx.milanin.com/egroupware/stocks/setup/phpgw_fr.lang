@@ -1,0 +1,15 @@
+$ change	common	fr	Change
+%	stocks	fr	%
+% change	common	fr	Change %
+add new stock	stocks	fr	Ajouter une nouvelle action
+disable	stocks	fr	désactiver
+display stocks on main screen is disabled	stocks	fr	Afficher les actions sur l'écran principal est désactivé
+display stocks on main screen is enabled	stocks	fr	Afficher les actions sur l'écran principal est activé
+edit stock	stocks	fr	Modifier l'action
+enable	stocks	fr	activer
+price	stocks	fr	Prix
+select displayed stocks	preferences	fr	Choisir les actions affichées
+stock quote preferences	stocks	fr	Préférences actions
+stock quotes	common	fr	Valeurs des actions
+stocks	common	fr	Actions
+symbol	stocks	fr	Symbole

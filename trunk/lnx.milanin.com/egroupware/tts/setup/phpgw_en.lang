@@ -1,0 +1,161 @@
+a new ticket has been reported.	tts	en	A new ticket has been reported.
+accept	tts	en	ACCEPT
+accept the ticket into verification process.	tts	en	Accept the ticket into verification process.
+accepted	tts	en	ACCEPTED
+action	tts	en	Action
+add new ticket	tts	en	Add new ticket
+add ticket	tts	en	Add ticket
+additional notes	tts	en	Additional notes
+admin options	common	en	Admin Options
+assign to	tts	en	Assign to
+assigned from	tts	en	Assigned from
+assigned to	tts	en	Assigned to
+billable hours	tts	en	Billable hours
+billable hours changed	tts	en	Billable hours changed
+billable hours rate	tts	en	Billable hours rate
+billable rate	tts	en	Billable rate
+billable rate changed	tts	en	Billable rate changed
+category changed	tts	en	Category changed
+check here to generate the state's id automatically or enter a particular id below.	tts	en	Check here to generate the state's ID automatically or enter a particular ID below.
+clear form	tts	en	Clear Form
+close the invalid ticket.	tts	en	Close the invalid ticket.
+closed	tts	en	Closed
+completed	tts	en	COMPLETED
+configure the states	common	en	Configure the states
+configure the transitions	common	en	Configure the transitions
+create new state	tts	en	Create new state
+create new ticket	tts	en	Create new ticket
+create new transition	tts	en	Create new transition
+creates a new ticket, returns ticket_id	tts	en	Creates a new ticket, returns ticket_id
+creates a struct of tickets	tts	en	Creates a struct of tickets
+date opened	tts	en	Date opened
+default assign to	tts	en	Default assign to
+default group	tts	en	Default group
+default priority	tts	en	Default Priority
+delete the listed tickets.	tts	en	Delete the listed tickets.
+deleting the state	tts	en	Deleting the state
+deleting the transition	tts	en	Deleting the transition
+detail	tts	en	Detail
+duplicate	tts	en	DUPLICATE
+edit the state	tts	en	Edit the state
+edit the transition	tts	en	Edit the transition
+error: the subject of the ticket is not specified.	tts	en	ERROR: The subject of the ticket is not specified.
+force	tts	en	Force
+global categories	tts	en	Global Categories
+group ownership changed	tts	en	Group ownership changed
+history	tts	en	History
+i worked on the ticket and the work requires validation.	tts	en	I worked on the ticket and the work requires validation.
+i worked on the ticket, but did not finish.	tts	en	I worked on the ticket, but did not finish.
+in progress	tts	en	In progress
+initial state	tts	en	Initial State
+invalid	tts	en	INVALID
+invalidate	tts	en	INVALIDATE
+keep the present state [%1].	tts	en	Keep the present state [%1].
+latest note added	tts	en	Latest Note Added
+list of available tickets' states.	tts	en	List of available tickets' states.
+list of available tickets' transitions.	tts	en	List of available tickets' transitions.
+missing description	tts	en	Missing description
+morework	tts	en	MOREWORK
+needswork	tts	en	NEEDSWORK
+new	tts	en	NEW
+new ticket	tts	en	New Ticket
+new tickets can be put into this state.	tts	en	New tickets can be put into this state.
+new value	tts	en	New Value
+no additional notes	tts	en	No additional notes
+no duplicate	tts	en	NO DUPLICATE
+no notes for this ticket	tts	en	No notes for this ticket
+no states found	tts	en	No states found
+no tickets found	tts	en	No tickets found.
+no transitions found	tts	en	No transitions found
+not assigned	tts	en	Not Assigned
+not completed	tts	en	NOT COMPLETED
+notify changes to ticket assignee by e-mail	tts	en	Notify changes to ticket assignee by e-mail
+notify changes to ticket group by e-mail	tts	en	Notify changes to ticket group by e-mail
+notify changes to ticket owner by e-mail	tts	en	Notify changes to ticket owner by e-mail
+old value	tts	en	Old Value
+open	tts	en	Open
+open / closed	tts	en	Open / Closed
+open date	tts	en	Open Date
+opened	tts	en	Opened
+opened by	tts	en	Opened by
+original ticket details	tts	en	Original Ticket Details
+perform irregular transition into the following state	tts	en	Perform irregular transition into the following state
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	en	Please enter the subject of the ticket, otherwise the ticket cannot be stored.
+priority	tts	en	Priority
+priority changed	tts	en	Priority changed
+put the preexistent ticket into the state %1.	tts	en	Put the preexistent ticket into the state %1.
+re-assigned	tts	en	Re-assigned
+re-opened	tts	en	Re-opened
+refresh every (seconds)	tts	en	Refresh every (seconds)
+reopen	tts	en	REOPEN
+reopened	tts	en	REOPENED
+resolve	tts	en	RESOLVE
+resolved	tts	en	RESOLVED
+returns a struct of a tickets history	tts	en	Returns a struct of a tickets history
+returns a struct of values of a single ticket	tts	en	Returns a struct of values of a single ticket
+returns the additional notes attached to a ticket	tts	en	Returns the additional notes attached to a ticket
+selected	tts	en	selected
+show new/updated tickets on main screen	tts	en	show new/updated tickets on main screen
+source state	tts	en	Source State
+state	tts	en	State
+state changed	tts	en	State changed
+state id	tts	en	State ID
+state name	tts	en	State Name
+status/date closed	tts	en	Status/Date closed
+subject changed	tts	en	Subject changed
+target state	tts	en	Target State
+test	tts	en	TEST
+the closed ticket requires more work. reopen it.	tts	en	The closed ticket requires more work. Reopen it.
+the owner of the ticket was not able to confirm the issue.	tts	en	The owner of the ticket was not able to confirm the issue.
+the ticket has been accepted by the owner, who is about to work on it.	tts	en	The ticket has been accepted by the owner, who is about to work on it.
+the ticket has been closed without resolution.	tts	en	The ticket has been closed without resolution.
+the ticket has been reopened for further work.	tts	en	The ticket has been reopened for further work.
+the ticket has been successfully resolved.	tts	en	The ticket has been successfully resolved.
+the ticket has been verified and has to be worked on.	tts	en	The ticket has been verified and has to be worked on.
+the ticket has been worked on and the work requires validation.	tts	en	The ticket has been worked on and the work requires validation.
+the ticket has been worked on, but requires more work.	tts	en	The ticket has been worked on, but requires more work.
+the ticket is a duplicate of another ticket and should be closed.	tts	en	The ticket is a duplicate of another ticket and should be closed.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	en	The ticket is essentially not a duplicate of another ticket. Reopen it.
+the ticket is invalid and cannot be worked on.	tts	en	The ticket is invalid and cannot be worked on.
+the ticket resolution was successfully validated. close the ticket.	tts	en	The ticket resolution was successfully validated. Close the ticket.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	en	The ticket was existent before the Petri Net infrastructure was defined and should be assigned a state.
+the ticket was found a duplicate of another ticket.	tts	en	The ticket was found a duplicate of another ticket.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	en	The tickets in the following list are in the state %1. Please, decide what should be done with them.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	en	The validation of the ticket was unsuccessfull. The ticket requires more work.
+ticket	tts	en	Ticket
+ticket has been updated	tts	en	Ticket has been updated
+tickets found %1	tts	en	Tickets found %1
+tickets open %1	tts	en	Tickets open %1
+tickets total %1	tts	en	Tickets total %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	en	To go back to the tts index, click <a href="%1">here</a>
+toaccept	tts	en	TOACCEPT
+toclosed	tts	en	TOCLOSED
+toduplicate	tts	en	TODUPLICATE
+toinvalid	tts	en	TOINVALID
+toneedswork	tts	en	TONEEDSWORK
+tonew	tts	en	TONEW
+toreopened	tts	en	TOREOPENED
+toresolved	tts	en	TORESOLVED
+total billable	tts	en	Total billable
+totovalidate	tts	en	TOTOVALIDATE
+tovalidate	tts	en	TOVALIDATE
+toverified	tts	en	TOVERIFIED
+transition	tts	en	Transition
+transition name	tts	en	Transition name
+trouble ticket system	common	en	Trouble Ticket System
+tts	common	en	Trouble Ticket System
+tts preferences	tts	en	Trouble Ticket System - preferences
+undefined	tts	en	UNDEFINED
+update ticket state	tts	en	Update ticket state
+updates ticket	tts	en	Updates ticket
+verified	tts	en	VERIFIED
+verify	tts	en	VERIFY
+verify the ticket to work on it.	tts	en	Verify the ticket to work on it.
+view all tickets	tts	en	View all tickets
+view job detail	tts	en	View Job Detail
+view only my open tickets	tts	en	View only my open tickets
+view only open tickets	tts	en	View only open tickets
+you can only close a ticket if it is assigned to you.	tts	en	You can only close a ticket if it is assigned to you.
+you want to delete the state %1 and associated transitions. are you sure?	tts	en	You want to delete the state %1 and associated transitions. Are you sure?
+you want to delete the state %1. are you sure?	tts	en	You want to delete the state %1. Are you sure?
+you want to delete the transition %1. are you sure?	tts	en	You want to delete the transition %1. Are you sure?

@@ -1,0 +1,288 @@
+%1 has a one-to-many with %2 showing %3	jinn	iw	ל-%1 יש יחס אחד-לרבים עם %2 מציג %3
+%1 has a one-to-one relation with %2 using the configuration of object %3	jinn	iw	ל-%1 יש יחס אחד לאחד עם %2 שמשתמש בתצורת האוביקט %3
+%1 site objects have been imported.	jinn	iw	%1 אוביקטי אתר הובוא
+access rights	jinn	iw	הרשאות גישה
+access rights for site not succesfully editted	jinn	iw	לא הצלחתי לערוך בהצלחה את הרשאות הגישה של האתר
+access rights for site succesfully editted	jinn	iw	הצלחתי לערוך בהצלחה את הרשאות הגישה של האתר
+access rights for site-object not succesfully editted	jinn	iw	לא הצלחתי לערוך בהצלחה את הרשאות הגישה של האתר
+access rights for site-object succesfully editted	jinn	iw	הצלחתי לערוך בהצלחה את הרשאות הגישה של האתר
+access rights site-objects	jinn	iw	הרשאות גישה של אוביקט אתר
+access_rights	jinn	iw	הרשאות גישה
+action was not succesful. unknown error	jinn	iw	הפעולה לא הצליחה, שגיאה לא מוכרת
+action was succesful.	jinn	iw	הפעולה הצליחה
+actions	jinn	iw	פעולות
+activate experimental features which are in development	jinn	iw	הפעל תכונות נסיונות שבפיתוח
+add	jinn	iw	הוסף
+add %1st image	jinn	iw	הוסף את התמונה ה-%1
+add attachent	jinn	iw	הוסף מצורף
+add attachment	jinn	iw	הוסף מצורף
+add attachment %1	jinn	iw	הוסף מצורף %1
+add edit	jinn	iw	הוסף עריכה
+add image	jinn	iw	הוסף תמונה
+add image %1	jinn	iw	הוסף תמונה %1
+add new	jinn	iw	הוסף חדש
+add new entry	jinn	iw	הוסף רשומה חדשה
+add new many to many relation	jinn	iw	הוסף יחס רבים-לרבים חדש
+add new many with many relation	jinn	iw	הוסף יחס רבים-עם-רבים חדש
+add new one to many	jinn	iw	הוסף יחס אחד-לרבים חדש
+add new one with many	jinn	iw	הוסף יחס אחד-עם רבים חדש
+add new one-to-one relation	jinn	iw	הוסף יחס אחד-לאחד חדש
+add object	jinn	iw	הוסף אוביקט
+add or remove	jinn	iw	הוסף או הסר
+add phpgw_jinn_sites	jinn	iw	php_jinn הוסף אתרי
+add site	jinn	iw	הוסף אתר
+add site object	jinn	iw	הוסף אוביקט אתר
+add site-object	jinn	iw	הוסף אוביקט אתר
+admin:: edit site	jinn	iw	ניהול :: ערוך אתר
+administrator mode	jinn	iw	מצב מנהל
+administrators for site $site_name	jinn	iw	$site_name מנהלים של האתר
+advanced configuration	jinn	iw	תצורה מתקדמת
+all from	jinn	iw	-הכל מ
+an error occured.	jinn	iw	אירע שגיאע
+another	jinn	iw	נוסף
+are you sure?	jinn	iw	?אתה בטוח
+ascending	jinn	iw	בסדר עולה
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	iw	...מחיצת מצורפים לא קיימת או לא נכונה, וגם אי אפשר ליצור אותה
+<br>:נא לבדוק את מחיצות העליה של האוביקט
+automatic	jinn	iw	אוטומטי
+automaticly add objects for all tables	jinn	iw	הוסף אוביקטים עבור כל הטבלאות אוטומטית
+automaticly incrementing	jinn	iw	עלית מונה אוטומטית
+available for field types	jinn	iw	זמין עבור סוגי שדה
+back to record list	jinn	iw	חזור לרשימת הרשומות
+binary	jinn	iw	בינארי
+browse	jinn	iw	עיין
+browse current object	jinn	iw	עיין באוביקט הנוכחי
+browse sites	jinn	iw	עיין באתרים
+browse through object settings	admin	iw	עיין בהגדרות האובירט
+browse through sites	jinn	iw	עיין באתרים
+browses through sites	admin	iw	מעיין באתרים
+cancel	jinn	iw	בטל
+category	jinn	iw	קטגוריה
+check:	jinn	iw	בדוק
+choose	jinn	iw	בחר
+close this window	jinn	iw	סגור חלון זה
+column name	jinn	iw	שם העמודה
+come back after new valid tablename is saved to configure plugins	jinn	iw	חזור לכאן לאחר שמירת שם טבלה חוקי כדי להגדיר מתוספים
+come back in edit mode for configuring plugins	jinn	iw	חזור לכאן במצב עריכה כדי להגדיר מתוספים
+come back in edit mode to configure plugins	jinn	iw	חזור לכאן במצב עריכה כדי להגדיר מתוספים
+configure	jinn	iw	הגדרה
+configure browse view	jinn	iw	הגדרת תצוגת עיון
+configure field plugin	jinn	iw	הגדרת שדה מתוספים
+configure this object list view	jinn	iw	הגדר תצוגת אוביקט זה
+configure this tableview	jinn	iw	הגדרת תצוגת טבלה זו
+configure this view	jinn	iw	הגרת תצוגה זו
+configure view of	jinn	iw	הגדרת תצוגה של
+copy	jinn	iw	העתק
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	iw	לא מצאתי טבלאות כל שהם! בדוק את שם בסיס הנתונים, את שם המשתמש וסיסמא
+<br>או תצור טבלא אחד או יותר בבסיס הנתונים
+create a new site now	jinn	iw	צור אתר חדש כעת
+current color:	jinn	iw	:צבע נוכחי
+database connection failed! <p>please recheck your settings.	jinn	iw	הקישור לבסיס הנתונים נכשל! אנא בדוק את ההגדרות שנית
+database connection was succesfull. <p>you can go on with the site-objects	jinn	iw	הקישור לסיס הנתונים הצליח. אפשר להמשיך אל אוביקטים של האתר
+days	jinn	iw	ימים
+default	jinn	iw	ברירת מחדל
+default image type (jpg, gif, png)	admin	iw	(jpg, gif, png) סוג תמונה מחדלי
+default image width	admin	iw	רוחב תמונה מחדלי
+default order	jinn	iw	סדר מחדלי
+default thumb width	admin	iw	רוחב תמונה מוקטנת מחדלי
+default:	jinn	iw	:ברירת מחדל
+delete	jinn	iw	מחק
+descending	jinn	iw	בסדר יורד
+descrition	jinn	iw	תיאור
+developer links	jinn	iw	קישורי מפתחים
+development	admin	iw	פיתוח
+development server	jinn	iw	שרת פיתוח
+dimensions	jinn	iw	מידות
+disable the wysiwyg/htmlarea plugin	jinn	iw	ללא זמינה WYSIWYG/HTMLArea-הפוך את מתוסף ה
+edit	jinn	iw	ערוך
+edit object	jinn	iw	ערוך אוביקט
+edit phpgw_jinn_sites	jinn	iw	phpgw_jinn ערוך אתרי
+edit site	jinn	iw	ערוך אתר
+edit this record	jinn	iw	ערוך רשומה זו
+edit this site	jinn	iw	ערוך אתר זה
+edit this site object	jinn	iw	ערוך אוביקט אתר זה
+error path_open %1	jinn	iw	שגיאה בפתיחת מסלול %1
+error: the file %1 doesn't exists, please contact the webmaster	jinn	iw	שגיאה: הקובץ %1 לא קיים. נא ליצור קשר עם מנהל האתר
+export this site	jinn	iw	ייצא אתר זה
+failed to copy: %1 to %2 ...	jinn	iw	לא הצלחתי להעתיק את %1 אל %2
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	iw	לא הצלחתי לפתוח את הטבלה. נא לבדוק אם הטבלה %1 עדיין קיים בבסיס הנתונים
+field	jinn	iw	שדה
+field configuration	jinn	iw	תצורת השדה
+field plugin	jinn	iw	מתוסף השדה
+field plugin configuration	jinn	iw	תצורת מתוסף השדה
+field plugins	jinn	iw	מתוספי שדה
+field to display	jinn	iw	השדה להציג
+fields	jinn	iw	שדות
+filename	jinn	iw	שם קובץ
+filesize	jinn	iw	גודל הקובץ
+form input plugin	jinn	iw	מתוסף של קלט הטופס
+general preferences	jinn	iw	עדיפויות כלליות
+general settings	admin	iw	הגדרות כלליות
+give new timestamp	jinn	iw	תן חותמת זמן חדשה
+global configuration	jinn	iw	תצורה גלובלית
+global site configuration	admin	iw	תצורת אתר גלובלית
+go	jinn	iw	קדימה
+has a many to many relation with	jinn	iw	יש יחס רבים-לרבים עם
+has a one to many relation with	jinn	iw	יש יחס אחד-לרבים עם
+has a one-to-one relation with	jinn	iw	יש יחס אחד-לאחד עם
+height:	jinn	iw	גובה
+hidden	jinn	iw	מוסתר
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	iw	...מחיצת תמונות לא קיימת או לא נכונה
+<br>נא לבדוק את מחיצת העליות של האוביקט
+image settings	admin	iw	הגדרות תמונה
+import failed	jinn	iw	הייבוא נכשל
+import jinn site	jinn	iw	JiNN ייבוא של אתר
+import jinn-site	jinn	iw	JiNN ייבוא של אתר
+import site	jinn	iw	ייבוא אתר
+import was succesfull	jinn	iw	הייבוא הצליח
+import was succesfull<br>imported one site with	jinn	iw	.הייבוא הצליח
+<r>הבאתי אתר אחד עם
+index	jinn	iw	אידקס
+insert another record after saving	jinn	iw	הוסף רשומה נוספת לאחר השמירה
+jinn editors menu	jinn	iw	JiNN תפריט עריכה של
+jinn main menu	jinn	iw	Ji NN תפריט ראשי של
+jinn preferences	jinn	iw	JiNN עדיפויות
+list sites	jinn	iw	אתרים אחרונים
+many 2 many relations will not work	jinn	iw	יחסי רבים-לרבים לא יפעלו
+max. number of previews in form	jinn	iw	מספר תצוגות מקדימות מירבית בטופס
+maximum image width isn	jinn	iw	רוחב תמונה מירבי
+maximum image width isn\	jinn	iw	רוחב תמונה מירבי
+moderator mode	jinn	iw	מצב מתוך
+months	jinn	iw	חודשים
+months_abbr	jinn	iw	קיצור החודשים
+move down	jinn	iw	הורד כלפי מטה
+move to last position	jinn	iw	הורד למקום האחרון
+move up	jinn	iw	העלה למעלה
+moved record one row down.	jinn	iw	הורדתי את הרשומה מקום אחד כלפי מטה
+moved record one row up.	jinn	iw	העלתיי את הרשומה מקום אחד כלפי מעלה
+moved record to last row.	jinn	iw	הורדתי את הרשומה לשורה האחרונה
+new image size limits.	jinn	iw	מגבלות גודל תמונה חדשים
+no matchs found	jinn	iw	לא נמצאו התאמות
+no max. number	jinn	iw	אין מספר מירבי
+no object selected. no able to configure this view	jinn	iw	לא נבחר אוביקט. אני לא יכול לקנפג את תצוגה זו
+no objects found for this site.	jinn	iw	לא נמצאו אוביקטים לאתר זה
+no records found	jinn	iw	לא נמצאו רשומות
+normal view	jinn	iw	תצוגה רגילה
+not yet implemented	jinn	iw	עדיין לא מיושם
+notice that jinn needs imagemagick 5.4.9 or a later version	admin	iw	בגירסא 5.4.9 או חדש יותר ImageMagick-זקוק ל JiNN-שים נא לב ש
+only activate this if you know what your doing. you can destroy your data using experimental features.	jinn	iw	הפעל את זה רק אם אתה יודע מה אתה עושה. אפשר להרוס את הנתונים שלך כאשר משתמשים בתכונות ניסיוניות
+only if thumnails exits	jinn	iw	רק אם קיימים תמונות מוקטנות
+only one	jinn	iw	רק אחד
+optional max. height	jinn	iw	גובה מירבי אופציונלי
+optional max. width	jinn	iw	רוחב מירבי אופציונלי
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	iw	(/usr/X11R6/bin למשל) ImageMagick-המסלול להמרה מ
+please contact administrator with this message	jinn	iw	נא למסור הודעה זו למנהל האתר
+please contact administrator with this message.	jinn	iw	.נא למסור הודעה זו למנהל האתר
+please set your preferences for this application	jinn	iw	!נא לקבוע את העדיפויות שלך ליישום זה
+preview thumbs or images in form	jinn	iw	תצוגה מקדימה של תמונה או תמונה מוקטנת בטופס
+preview website	jinn	iw	תצוגה מקדימה של אתר ווב
+production	admin	iw	ייצור
+real value	jinn	iw	ערך אמיתי
+record	jinn	iw	רשומה
+record added succesfully	jinn	iw	הרשומה נוספה בהצלחה
+record deleted succesfully	jinn	iw	הרשומה נמחקה בהצלחה
+record not succesfully copied. unknown error	jinn	iw	הרשומה לא הועתקה בהצלחה. שגיאה לא מוכרת
+record not succesfully deleted. unknown error	jinn	iw	הרשומה לא נמחקה בהצלחה. שגיאה לא מוכרת
+record succesfully copied	jinn	iw	הרשומה הועתקה בהצלחה
+record succesfully deleted	jinn	iw	הרשומה נמחקה בהצלחה
+record succesfully editted	jinn	iw	הרשומה עברה עריכה בהצלחה
+registered field plugins	jinn	iw	מתוספי שדה רשומים
+related	jinn	iw	מיוחס
+related entries from table %1	jinn	iw	רשומות מיוחסות מטבלה %1
+relation %1	jinn	iw	יחס %1
+relations	jinn	iw	יחסים
+relations for this object	jinn	iw	יחסים של אוביקט זה
+remote	admin	iw	מרוחק
+remove	jinn	iw	הסר
+replace existing site with the same name?	jinn	iw	?להחליף את האתר הקיים עם שם זהה
+replaced existing site named <strong>%1</strong>.	jinn	iw	החלפתי את האתר הקיים בעל שם %1
+represented by:	jinn	iw	המיוצג על ידי
+reset form	jinn	iw	אפס את הטופס
+save	jinn	iw	שמור
+save and continue	jinn	iw	שמור והמשך
+save and contiue	jinn	iw	שמור והמשך
+save and finish	jinn	iw	שמור וצא
+search	jinn	iw	חיפוש
+search for string	jinn	iw	היפוש מחרוזת
+select directory	jinn	iw	בחר מחיצה
+select jinn site file	jinn	iw	JiNN בחר קובץ של אתר
+select site	jinn	iw	בחר אתר
+select site to moderate	jinn	iw	בחר אתר לטווך
+select site-object to moderate	jinn	iw	בחר אוביקט אתר לטווך
+select which graphic library jinn must use	admin	iw	להשתמש JiNNבחר איזה סיפריה גרפית על
+select_object	jinn	iw	בחר אוביקט
+server type?	admin	iw	?סוג השרת
+set access right for site objects	jinn	iw	קבע הרשאות גישה של אוביקטי האתר
+set access rights	admin	iw	קבע הרשאות גישה
+set access rights for sites	jinn	iw	קבע הרשאות גישה עבור אתרים
+set administrators for	jinn	iw	קבע מנהלים עבור
+set administrators for %1	jinn	iw	קבע מנהלים עבור %1
+set object moderator	jinn	iw	קבע מטווך אוביקט
+set site admin	jinn	iw	קבע מנהל האתר
+show	jinn	iw	הצג
+show all columns	jinn	iw	הצג את כל העמודות
+show colomn	jinn	iw	הצג עמודה
+show extra table debugging information	jinn	iw	נוספים עבור טבלאות debugging הצג נתוני
+show upload path	admin	iw	הצג את מסלול העליה
+showing	jinn	iw	מציג
+site beheerders	jinn	iw	מנהלי האתר
+site db host	admin	iw	מארח בסיס הנתונים של האתר
+site db name	admin	iw	שם בסיס הנתונים של האתר
+site db password	admin	iw	סיסמת בסיס הנתונים של האתר
+site db type	admin	iw	סוג בסיס הנתונים של האתר
+site db user	admin	iw	משתמש בסיס הנתונים של האר
+site description	admin	iw	תיאור האתר
+site id	admin	iw	זיהוי האתר
+site media and documents	jinn	iw	מדיה ותיעוד של האתר
+site name	admin	iw	שם האתר
+site not succesfully added, unknown error	jinn	iw	האתר לא נוסף בהצלחה, שגיאה לא מוכרת
+site not succesfully deleted, unknown error	jinn	iw	האתר לא נמחק בהצלחה, שגיאה לא מוכרת
+site not succesfully saved, unknown error	jinn	iw	האתר לא נשמר בהצלחה, שגיאה לא מוכרת
+site object not succesfully added, unknown error	jinn	iw	האוביקט לא נוסף בהצלחה, שגיאה לא מוכרת
+site object not succesfully deleted, unknown error	jinn	iw	האוביקט לא נמחק בהצלחה, שגיאה לא מוכרת
+site object not succesfully saved, unknown error	jinn	iw	האוביקט לא נשמר בהצלחה, שגיאה לא מוכרת
+site object succesfully added	jinn	iw	אוביקט האתר נוסף בהצלחה
+site object succesfully deleted	jinn	iw	אוביקט האתר נמחק בהצלחה
+site object succesfully saved	jinn	iw	אוביקט האתר נשמר בהצלחה
+site succesfully added	jinn	iw	האתר נוסף בהצלחה
+site succesfully deleted	jinn	iw	האתר נמחק בהצלחה
+site succesfully saved	jinn	iw	האתר נשמר בהצלחה
+site title	admin	iw	כותרת האתר
+site-objects	jinn	iw	אוביקטי אתר
+sites	jinn	iw	אתרים
+start	admin	iw	התחל
+start at record	jinn	iw	התחל מרשומה
+stop at record	jinn	iw	עצור ברשומה
+submit and import	jinn	iw	הגש והבא
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	iw	.שם טבלה %1 אינו נכון. כנראה ששם הטבלה מונה או הטבלה נמחקה
+<br>נא לבחור טבלה חדשה או מחר אוביקט זה
+test database access	jinn	iw	בדוק גישה לבסיס הנתונים
+the administrator set an invalid max. file upload size. for safety reasons we now use a max. filesize of 1mb. please contact your jinn administrator.	jinn	iw	MB1 המנהל קבע גודל קובץ עליה לא חוקי. מטעמי בטיחות אנו נשתמש בגודל קובץ מירבי של 
+<br>שלך JiNN-נא ליצור קשר עם מנהל ה
+the attachments subdirectory does not exist and cannot be created ...	jinn	iw	...מחיצת המצורפים אינה קיימת וגם לא ניתן ליצור אותה
+the attachments subdirectory is not writable by the webserver ...	jinn	iw	...שרת הווב אינו יכול לכתוב למחיצת העליות
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	iw	JiNN הקובץ %1 שהעלית אינו קובץ תמונה, הנו מקולקל, או מסוג שלא נתמך על ידי
+the identifierfield of this table, %1, represented by %2 has a many-to-many with %3 represented by %4 showing %5	jinn	iw	לשדה הזיהוי של טבלה זה, %1, המיוצג על ידי %2 יש יחס של רבים-לרבים עם %3 המיוצג על ידי %4 ומציג %5
+the identifyer from this table (%1.id) represented by	jinn	iw	זיהוי טבלה זה (זיהוי %1) מיוצג על ידי
+the max. file upload size is %1 mb.	jinn	iw	%1MB גודל קובץ מירבי להעלות  הנו
+the name of the new site is <strong>%1</strong>.	jinn	iw	שם האת ר החדש הוא %1
+the path to upload files is not correct, please contact your jinn administrator.	jinn	iw	שלך JiNN-המסלול להעלת קבצים אינו נכון. נא ליצור קשר עם מנהל ה
+the path to upload files is not set, please contact your jinn administrator.	jinn	iw	שלך JiNN-המסלול להעלת קבצים לא נקבע. נא ליצור קשר עם מנהל ה
+the path to upload images is not correct, please contact your jinn administrator.	jinn	iw	שלך JiNN-המסלול להעלת תמונות אינו נכון. נא ליצור קשר עם מנהל ה
+the path to upload images is not set, please contact your jinn administrator.	jinn	iw	שלך JiNN-המסלול להעלת תץמונות לא נקבע. נא ליצור קשר עם מנהל ה
+the resize process failed, please contact the administrator	jinn	iw	תהליך שינוי הגודל נכשל. נא ליצור קשר עם המנהל
+there are no directories in this site you have access to.	jinn	iw	אין לך הרשאות למחיצות באתר זה
+this table has not unique identifier field	jinn	iw	לטבלה זו אין שדה זיהוי ייחודי
+thisfile	jinn	iw	הקובץ הזה
+thumb directory does not exist or is not correct ...	jinn	iw	...מתיצת התמונות המוקטנות אינה קיימת או שאינה נכונה
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	iw	...מתיצת התמונות המוקטנות אינה קיימת או שאינה נכונה
+<br>נא לבדוק את מחיצת העליות של האוביקט
+thumbnail	jinn	iw	תמונה מוקטנת
+unlimited	jinn	iw	ללא הגבלה
+using object configuration	jinn	iw	משתמש בתצורת אוביקט
+version	jinn	iw	גירסא
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	iw	.כאשר תמונות רבות מצורפות לרשומה, טעינ הטופס יכול להיות אטית
+<br>ניתן לקבוע את כמות התמונות המירבית שאפשר להציג בטופס
+when this is enables information like field length and field type is shown when editing record	jinn	iw	כאשר זה פעיל, נתונים לדוגמת אורך השדה וסוג הסדה מוצגים בשעת עריכת הרשומה
+width:	jinn	iw	:רוחב
+you're not allowed to administrate media files	jinn	iw	אין לך הרשאה לנהל קבציה מדיה

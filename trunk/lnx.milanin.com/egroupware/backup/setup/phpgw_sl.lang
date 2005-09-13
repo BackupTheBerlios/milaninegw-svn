@@ -1,0 +1,62 @@
+absolute path of the backup directory	backup	sl	Absolutna pot mape z varnostnimi kopijami (npr.: /usr/local/www/egroupware/backup/archive)
+absolute path of the backup directory (eg.: /usr/local/www/egroupware/backup/archive	backup	sl	Absolutna pot mape z varnostnimi kopijami (npr.: /usr/local/www/egroupware/backup/archive)
+absolute path of the directory of egw backup application	backup	sl	Absolutna pot mape z EGW Backup programom
+absolute path of the directory to store the backup script	backup	sl	Absolutna pot EGW Backup programske mape
+archive type	backup	sl	Izberite tip vašega arhiva
+backup	common	sl	Varnostne kopije
+backup administration	common	sl	Urejanje varnostnih kopij
+bzip2	admin	sl	bzip2
+configuration backup	backup	sl	Nastavitve urejanja varnostnih kopij
+configuration localhost	backup	sl	Nastavitve Localhost -a
+create backups of your data ?	backup	sl	Preveri za izdelavo varnostnih kopij
+daily	backup	sl	dnevno
+data	backup	sl	Podatki
+directory locations	admin	sl	Mesta map
+directory names	admin	sl	Imena map
+e-mail	backup	sl	Preveri prejem e-poštnih opozoril
+e-mail notification?	backup	sl	E-poštna opozorila?
+homedirs	admin	sl	Domače mape
+interval	backup	sl	Interval
+ip or hostname	backup	sl	IP ali ime strežnika
+ldap	common	sl	LDAP
+ldap database	admin	sl	LDAP podatkovna baza
+list backup archives	backup	sl	izpiši arhive varnostnih kopij
+maildir	admin	sl	Opozorila pošljem na e-mail:
+monthly	backup	sl	mesečno
+mysql	admin	sl	MySQL
+nfs	backup	sl	nfs
+no backup archives available !	backup	sl	Na voljo ni nobenih arhivov varnostnih kopij!
+number of stored backup versions	backup	sl	Maksimalno število hranjenih varnostnih kopij pred izbrisom starih:
+operating system	backup	sl	Operacijski sistem
+pgsql	admin	sl	PostgreSQL
+php cgi	admin	sl	Polna pot do vašega PHP programa (npr.: /usr/bin/php)
+please enter the path of the needed applications in *site configuration* !	backup	sl	Prosimo vnesite pot do potrebnih programov v *Site configuration*!
+please enter the path to the backup dir and/or enable showing archives in phpgroupware !	backup	sl	Prosimo vnesite pot do mape z varnostnimi kopijami in/ali omogočite prikaz arhivov v phpGroupWare!
+please enter username and password for remote connection !	backup	sl	Prosimo vnesite uporabniško ime in geslo za povezavo!
+please select an application for transport to the remote host !	backup	sl	Prosimo izberite program za prenos na strežnik!
+please set the path to a local dir to store the backup script !	backup	sl	Prosimo določite pot do lokalne mape za shranjevanje skript!
+please set the path to the ldap database dir in *site configuration* !	backup	sl	Prosimo določite pot do mape z LDAP podatkovno bazo v *Site configuration*!
+please set the path to the mysql database dir in *site configuration* !	backup	sl	Prosimo določite pot do mape z MySQL podatkovno bazo v *Site configuration*!
+please set the path to the postgresql database dir in *site configuration* !	backup	sl	Prosimo določite pot do mape z PostgreSQL podatkovno bazo v *Site configuration*!
+please set the values in *site configuration* !	backup	sl	Prosimo določite vrednosti v *Site configuration*!
+please specify the ip of the remote host !	backup	sl	Prosimo vnesite IP strežnika!
+please specify the path to the backup directory !	backup	sl	Prosimo vnesite pot do mape z varnostnimi kopijami!
+please specify the path to the user-homedirectories in *site configuration* !	backup	sl	Prosimo vnesite pot do uporabniških map v *Site configuration*!
+please write down you e-mail for beeing notified	backup	sl	Prosimo napišite vaš e-mail za opozorila
+program locations	admin	sl	Mesta programov
+save backup locally ?	backup	sl	Preveri za shranjevanje varnostnih kopij lokalno
+select archive type	backup	sl	Izberite tip arhiva
+select interval	backup	sl	Določite interval
+settings	admin	sl	nastavitve
+show backup archives in phpgroupware ?	backup	sl	Preveri prikaz arhivov varnostnih kopij v phpGroupWare
+smbmount	backup	sl	smbmount
+sql	backup	sl	SQL
+tar	admin	sl	tar
+tar.bz2	backup	sl	tar.bz2
+tar.gz	backup	sl	tar.gz
+the backup application is not configured for showing the archives in phpgroupware yet !	backup	sl	Program še ni nastavljen za prikaz arhivov v phpGroupWare!
+the directory to store the backup script must be outside of the webservers *documentroot* !	backup	sl	Mapa za shranjevanje skript mora biti v strežnikovem *DocumentRoot*!
+versions can only be a number !	backup	sl	Verzije so lahko samo števila!
+weekly	backup	sl	tedensko
+your sql database isnt supported by this application !	backup	sl	Vaša SQL podatkovna baza ni podprta v tem programu
+zip	common	sl	zip

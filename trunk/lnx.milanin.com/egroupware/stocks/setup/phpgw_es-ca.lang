@@ -1,0 +1,14 @@
+%	stocks	es-ca	%
+add new stock	stocks	es-ca	Afegir nova cotització
+company name	stocks	es-ca	Nombre de la empresa
+disable	stocks	es-ca	desactivar
+display stocks on main screen is disabled	stocks	es-ca	Mostrar cotitzacions a la pantalla principal està desactivat
+display stocks on main screen is enabled	stocks	es-ca	Mostrar cotitzacions a la pantalla principal està activado
+edit stock	stocks	es-ca	Editar cotització
+enable	stocks	es-ca	activar
+price	stocks	es-ca	Preu
+select displayed stocks	preferences	es-ca	Seleccionar les cotitzacions de mercat mostrades
+stock quote preferences	stocks	es-ca	Preferències de les cotizacions del mercat
+stock quotes	common	es-ca	Cotitzacions del mercat
+stocks	common	es-ca	Cotitzacions
+symbol	stocks	es-ca	Símbol

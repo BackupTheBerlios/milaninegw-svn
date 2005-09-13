@@ -1,0 +1,40 @@
+%1 by %2	comic	nl	
+%1 by %2 (%3)	comic	nl	
+are you sure you want to reset all comic dates and resolved image urls?	comic	nl	
+censorship level	comic	nl	Niveau Cencuur
+censorship override enabled	comic	nl	
+comic	common	nl	Strips
+comic preferences updated	comic	nl	Voorkeuren strips bijgewerkt
+comics	common	nl	Strips
+comics per page	comic	nl	Strips per pagina
+comics scaled	comic	nl	Afmetingen strip bijgewerkt
+daily comic	common	nl	Dagelijke strip
+daily comic preferences	comic	nl	Dagelijke strips Voorkeuren
+daily comics	admin	nl	Dagelijke strips
+daily comics - global options	comic	nl	Dagelijke strips - Globale opties
+daily comics data	comic	nl	Dagelijke strips gegevens
+daily comics global options	comic	nl	Dagelijke strips globale opties
+display layout	comic	nl	Weergavelay-out
+display options	comic	nl	Weergaveopties
+egroupware daily comics	comic	nl	eGroupWare dagelijkse strips
+front page comic	comic	nl	Coverstrip
+front page comic scaled	comic	nl	Afmetingen coverstrip bijgewerkt
+genre	comic	nl	Genre
+global comics	comic	nl	Globale strips
+global options	comic	nl	Globale opties
+global options updated	comic	nl	Globale opties bijgewerkt
+image source	comic	nl	Afbeeldingbron
+max file size	comic	nl	Max. bestandsgrootte
+my comics	comic	nl	Mijn strips
+no_entries	comic	nl	geen items
+parser	comic	nl	
+performed %1 of element	comic	nl	
+random	comic	nl	Willekeurig
+rated	comic	nl	Beoordeling
+remote (parse/snarf) enabled	comic	nl	
+reset	comic	nl	Herstel
+reset comic data	admin	nl	Herstel stripgegevens
+resolve	comic	nl	
+showing %1 (%2 - %3 of %4)	comic	nl	
+template	comic	nl	Sjabloon
+visit %1	comic	nl	Bezoek %1

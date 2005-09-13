@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	zh	确定要删除该摘要网站吗？
+base url	headlines	zh	网址
+basic	headlines	zh	一般布局
+choose layout	headlines	zh	布局方式
+color	headlines	zh	着色布局
+create new headline	headlines	zh	新建摘要
+current headlines in cache	headlines	zh	已缓存的摘要
+display	headlines	zh	名称
+edit headline sites	headlines	zh	编辑摘要网站
+edit headlines shown by default	headlines	zh	编辑缺省摘要
+grab new news sites	common	zh	获取新的摘要网站
+gray	headlines	zh	灰色布局
+headline preferences	common	zh	首选项
+headline site management	common	zh	摘要网站管理
+headline sites	headlines	zh	摘要网站
+headlines	common	zh	新闻摘要
+headlines administration	headlines	zh	全局配置
+headlines administration - delete headline	headlines	zh	摘要管理 - 删除摘要
+headlines layout	headlines	zh	摘要的布局方式
+listings displayed	headlines	zh	摘要数目
+minutes between refresh	headlines	zh	刷新时间间隔(单位: 分钟)
+minutes between reloads	headlines	zh	重新加载时间间隔(单位: 分钟)
+monitor	common	zh	监视器
+news file	headlines	zh	摘要文件
+news headlines	common	zh	新闻标题
+news type	headlines	zh	摘要类型
+no headlines found	headlines	zh	找不到标题
+other preferences	preferences	zh	其它个性化配置
+reload news sites	headlines	zh	重新加载摘要网站
+reset	headlines	zh	复位
+sample	headlines	zh	摘要
+select headline news sites	headlines	zh	选择摘要网站
+select headlines to display	common	zh	选择摘要网站
+select layout	common	zh	选择布局方式
+show headlines on homepage	headlines	zh	在首页显示新闻摘要
+site	headlines	zh	摘要网站
+that site has already been entered	headlines	zh	已登录该网站
+unable to retrieve links	headlines	zh	无法恢复链接
+update headline	headlines	zh	编辑摘要网站
+view headline	headlines	zh	查看摘要
+you can only enter numbers for listings display	headlines	zh	摘要数目只能是数字
+you can only enter numbers minutes between refresh	headlines	zh	刷新时间间隔只能是数字
+you must enter a base url	headlines	zh	必须输入网址
+you must enter a display	headlines	zh	必须输入显示的信息
+you must enter a news url	headlines	zh	必须输入网址
+you must enter the number of listings display	headlines	zh	必须输入摘要数目
+you must enter the number of minutes between reload	headlines	zh	必须输入重新加载时间间隔

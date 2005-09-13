@@ -1,0 +1,238 @@
+Add address	felamimail	pt	Adicionar endereço
+Additional info	felamimail	pt	Adicionar informação
+Address Book Search	felamimail	pt	Procurar nos contatos
+Address Book	felamimail	pt	Contatos
+add	felamimail	pt	adicionar
+Add	felamimail	pt	Adicionar
+Add to address book	felamimail	pt	Adicionar aos contatos
+Add to %1	felamimail	pt	Adicionar a %1
+After message body	felamimail	pt	Após o corpo da mensagem
+All address books	felamimail	pt	Todos os contatos
+All Folders	felamimail	pt	Todas as pastas
+as a subfolder of	felamimail	pt	como subpasta de
+Attachments	felamimail	pt	Anexos
+Auto refresh folder list	felamimail	pt	Autoatualizar lista de pastas
+Bad request	felamimail	pt	Pedido inválido
+Based upon given criteria, incoming messages can have different background colors in the message list.  This helps to easily distinguish who the messages are from, especially for mailing lists.	felamimail	pt	Baseado em criterias dadas, mensagens de entrada podem ter cores de fundo diferentes na lista de mensagens.  Isso ajuda facilmente distinguir de quem são as mensagens, particularmente no caso de listas de mensagens.
+Before headers	felamimail	pt	Antes dos headers
+Between headers and message body	felamimail	pt	Entre cabeçalho e corpo da mensagem
+cc	felamimail	pt	cc
+Checkbox	felamimail	pt	Caixa de seleção
+Click here to log back in.	felamimail	pt	Clique aqui para (re-)login.
+Click here to return to %1	felamimail	pt	Clique aqui para voltar a %1
+Close window	felamimail	pt	Fecha janela
+Color	felamimail	pt	Cor
+Compose	felamimail	pt	Compor
+Created folder successfully!	felamimail	pt	Pasta criada com sucesso!
+Create Folder	felamimail	pt	Criar pasta
+Create Sent	felamimail	pt	Criar Sent
+Create	felamimail	pt	Criar
+Create Trash	felamimail	pt	Criar Trash
+Dark Blue	felamimail	pt	Azul escuro
+Dark Cyan	felamimail	pt	Cyan escuro
+Dark Gray	felamimail	pt	Cinza escuro
+Dark Green	felamimail	pt	Verde escuro
+Dark Magenta	felamimail	pt	Bordeaux escuro
+Dark Yellow	felamimail	pt	Amarello escuro
+date	felamimail	pt	data
+Date	felamimail	pt	Data
+Deleted folder successfully!	felamimail	pt	Pasta apagada com sucesso!
+Delete Folder	felamimail	pt	Apagar pasta
+Delete selected	felamimail	pt	Apagar selecionados
+Delete	felamimail	pt	Apagar
+Display Preferences	felamimail	pt	Preferências de aparência
+Done	felamimail	pt	Pronto
+Do not use Sent	felamimail	pt	Não usar Sent
+Do not use Trash	felamimail	pt	Não usar Trash
+Don't use Sent	felamimail	pt	Não usar Sent
+Don't use Trash	felamimail	pt	Não usar Trash
+download	felamimail	pt	download
+Download this as a file	felamimail	pt	Download isso como arquivo
+down	felamimail	pt	baixo
+Edit selected	felamimail	pt	Editar selecionado
+Edit	felamimail	pt	Editar
+E-mail address	felamimail	pt	Endereço de email
+E-Mail Address	felamimail	pt	Endereço de email
+E-mail	felamimail	pt	EMail
+empty trash	felamimail	pt	Lixo (trash) vazil
+Error connecting to IMAP server	felamimail	pt	Erro na conexão ao servidor IMAP
+Error opening 	felamimail	pt	Erro abrindo 
+ERROR	felamimail	pt	ERRO
+ERRO	felamimail	pt	ERRO
+Expunge	felamimail	pt	Apagar
+files	felamimail	pt	arquivos
+First name	felamimail	pt	Primeiro nome
+Flags	felamimail	pt	Marcadores (flags)
+Folder Path	felamimail	pt	Folder Path
+Folder Preferences	felamimail	pt	Preferências de pastas
+Folders created successfully!	felamimail	pt	Pastas criadas com sucesso!
+Folders	felamimail	pt	Pastas
+follow	felamimail	pt	seguir
+For mail to be send - not functional yet	felamimail	pt	Para enviar email - não funcionando ainda
+For received mail	felamimail	pt	Para email recebido
+Forward	felamimail	pt	Encaminhar
+Found	felamimail	pt	Encontrado
+from	felamimail	pt	de
+From	felamimail	pt	De
+Full Name	felamimail	pt	Nome completo
+Have a look at <a href="ht	felamimail	pt	Have a look at <a href="ht
+Help	felamimail	pt	Ajuda
+HTML	felamimail	pt	HTML
+Identifying name	felamimail	pt	Nome de identificação
+Illegal folder name.  Please select a different name.	felamimail	pt	Nome de pasta inválida.  Por favor escolha um nome diferente.
+Index Order	felamimail	pt	Ordenagem de indices
+Info	felamimail	pt	Info
+In order for SquirrelMail to provide the full set of options you need to create the special folders listed below.  Just click the check box and hit the create button.	felamimail	pt	Para que SquirrelMail pode providenciar todas as opções você precisa criar as pastas especiais em seguir.  Apenas clique a caixa de seleção e acionar o butão de criar.
+in	felamimail	pt	in
+in the center	felamimail	pt	no centro
+Invaild user name or password	felamimail	pt	Usuário ou senha inválido
+JavaScript	felamimail	pt	JavaScript
+Language	felamimail	pt	linguagem
+Last name	felamimail	pt	Último nome
+Left	felamimail	pt	Esquerda
+less	felamimail	pt	menos
+Let this folder contain subfolders	felamimail	pt	Deixar esta pasta conter subpastas
+Light Blue	felamimail	pt	Azul claro
+Light Cyan	felamimail	pt	Cyan claro
+Light Gray	felamimail	pt	Cinza claro
+Light Green	felamimail	pt	Verde claro
+Light Magenta	felamimail	pt	Bordeaux claro
+Light Yellow	felamimail	pt	Amarello claro
+List all	felamimail	pt	Listar todos
+Location of buttons when composing	felamimail	pt	Lugar de butões na hora de compor
+Location of folder list	felamimail	pt	Lugar da lista de pastas
+Mail Settings	felamimail	pt	Preferências de Mail
+Manage Folders	felamimail	pt	Gerenciamento de pastas
+mark selected as flagged	felamimail	pt	colocar selecionado como marcado
+mark selected as read	felamimail	pt	colocar selecionado como lido
+mark selected as unflagged	felamimail	pt	colocar selecionado como não marcado
+mark selected as unread	felamimail	pt	colocar selecionado como não lido
+Match	felamimail	pt	Encontro
+Medium Gray	felamimail	pt	Cinza média
+Message Highlighting	felamimail	pt	Colorização de mensagens
+Message List	felamimail	pt	Lista de mensagens
+messages	felamimail	pt	mensagens
+Minute	felamimail	pt	Minuto
+Minutes	felamimail	pt	Minutos
+more	felamimail	pt	mais
+move selected to	felamimail	pt	mover selecionados para
+move	felamimail	pt	mover
+Must be unique	felamimail	pt	Deve ser único
+Name	felamimail	pt	Nome
+New	felamimail	pt	Novo
+Next	felamimail	pt	Próximo
+Nickname	felamimail	pt	Nome de apelo
+No folders found	felamimail	pt	Nenhuma pasta encontrada
+No folders were found to subscribe to!	felamimail	pt	Nenhuma pasta encontrada para subscrição!
+No folders were found to unsubscribe from!	felamimail	pt	Nenhuma pasta encontrada para desubscriver! 
+No highlighting is defined	felamimail	pt	Nenhuma colorização foi definida
+No messages were selected.	felamimail	pt	Nenhuma mensagem foi selecionada.
+none	felamimail	pt	nenhum
+None	felamimail	pt	Nenhum
+no next Message	felamimail	pt	Nenhuma mensagem próxima 
+No notification	felamimail	pt	Nenhuma notificação
+No personal address book is defined. Contact administrator.	felamimail	pt	Nenhum livro de endereços persoais é definido. Contatar administrador.
+No persons matching your search was found	felamimail	pt	Nenhuma pessoa procurada encontrada
+no previous Message	felamimail	pt	Nenhuma mensagem anterior
+(no subject)	felamimail	pt	(sem assunto)
+Number of Messages to Index	felamimail	pt	Número de mensagens para indexar
+(only Cc/Bcc)	felamimail	pt	(somente Cc/Bcc)
+Only INBOX	felamimail	pt	Somente INBOX
+Only unseen	felamimail	pt	Somente não vistas
+Options	felamimail	pt	Opções
+Other	felamimail	pt	Outro
+Personal Information	felamimail	pt	Informação pessoal
+Preference file, %1, does not exist. Log out, and log back in to create a default preference file.	felamimail	pt	Arquivo de preferência, %1, não existe. Faça logout e alogin para criar um arquivo de preferência padrão.
+Preference file %1 not found. Exiting abnormally	felamimail	pt	Arquivo de preferência %1 não encontrado. Terminando emergencialmente
+Previous	felamimail	pt	Anteriores
+purge	felamimail	pt	apagar
+Read da	felamimail	pt	Ler da
+Reason Given	felamimail	pt	Razões dadas
+refresh folder list	felamimail	pt	atualizar lista de pastas
+Refresh Folder List	felamimail	pt	Atualizar lista de pastas
+Refresh Page	felamimail	pt	Atualizar página
+remove	felamimail	pt	apagar
+Rename a Folder	felamimail	pt	Renomear uma pasta
+Renamed successfully!	felamimail	pt	Renomeado com sucesso!
+Rename	felamimail	pt	Renomear
+Reply All	felamimail	pt	Responde a todos
+Reply	felamimail	pt	Responde
+Reply To	felamimail	pt	Responde a
+ReplyTo	felamimail	pt	Responde a
+Return	felamimail	pt	Voltar
+Return to options page	felamimail	pt	Voltar à página de opções
+Right	felamimail	pt	Direita
+Running SquirrelMail version %1 (c) 1999-2000.	felamimail	pt	Usando SquirrelMail versão %1 (c) 1999-2000.
+Same Window - not functional yet	felamimail	pt	Mesma Janela - não funcionando ainda
+save	felamimail	pt	salvar
+Search for	felamimail	pt	Procurar para
+Search	felamimail	pt	Procura
+Seconds	felamimail	pt	Segundos
+Select All	felamimail	pt	Selecionar Todos
+Select	felamimail	pt	Selecionar
+Sent Folder	felamimail	pt	Pasta enviar (Sent)
+Server respond	felamimail	pt	Servidor responde
+Signature	felamimail	pt	Asinatura
+Size of editor window	felamimail	pt	Tamanho da janela para editar
+Size	felamimail	pt	Tamanho
+Some or all of the help documents are not present!	felamimail	pt	Alguns ou todos documentos de ajuda não foram encontrados!
+Source	felamimail	pt	Fonte
+Special Folder Options	felamimail	pt	Opções de pastas especiais
+Squirrelmail	felamimail	pt	Squirrelmail
+subject	felamimail	pt	assunto
+Subject	felamimail	pt	Assunto
+Submit	felamimail	pt	Enviar
+Subscribed successfully!	felamimail	pt	Subscreveu com sucesso!
+Subscribe	felamimail	pt	Subscrever
+Successfully saved display preferences!	felamimail	pt	Preferências de aparência salvo com sucesso!
+Successfully saved folder preferences!	felamimail	pt	Preferências de pastas salvo com sucesso! 
+Successfully saved personal information!	felamimail	pt	Preferências de informações pessoais salvo com sucesso! 
+Table of Contents	felamimail	pt	Tabela de conteúdo
+The help has not been translated to %1.  It will be displayed in English instead.	felamimail	pt	A ajuda não foi traduzido a %1.  Vai ser mostrado em Inglês.
+The index order is the order that the columns are arranged in the message index.  You can add, remove, and move columns around to customize them to fit your needs.	felamimail	pt	A ordem dos indices é a ordem em que as colunas são montados no index das mensagens.  Você pode adicionar, apagar, e mover colunas para customizâ-los conforme suas necessidades.
+Theme	felamimail	pt	Tema
+The order of the message index can be rearanged and changed to contain the headers in any order you want.	felamimail	pt	A ordem do index das mensagens pode ser alterada para conter as cabeçadas em qualquer ordem desejada.
+These settings change the way your folders are displayed and manipulated.	felamimail	pt	Estas configurações alterão a maneira suas pastas serão mostradas e manipuladas.
+This contains personal information about yourself such as your name, your email address, etc.	felamimail	pt	Isso contem informações pessoais sobre você como seu nome, seu endereço de email, etc.
+THIS FOLDER IS EMPTY	felamimail	pt	ESTA PASTA É  VAZIL
+This port is based on Squirrelmail, which is a standalone IMAP client.<br>	felamimail	pt	Esta versão é baseado em Squirrelmail, o que é um cliente IMAP independente.<br>
+Top	felamimail	pt	Top
+to	felamimail	pt	a (to)
+To	felamimail	pt	a (To)
+to the left	felamimail	pt	na esquerda
+to the right	felamimail	pt	na direita
+Translation location	felamimail	pt	Lugar da tradução
+Translation Preferences	felamimail	pt	Preferências de tradução
+Translation server	felamimail	pt	Servidor de tradução
+Trash Folder	felamimail	pt	Pasta de lixo (trash)
+Unable to list addresses from %1	felamimail	pt	Impossível listar endereços de %1
+Unknown error	felamimail	pt	Erro desconhecido
+(unknown sender)	felamimail	pt	(remetente desconhecido)
+Unknown Sender	felamimail	pt	Remetente desconhecido
+Unknown user or password incorrect.	felamimail	pt	Usuário ou senha inválido.
+Unseen and Total	felamimail	pt	Não visto e total
+Unseen message notification	felamimail	pt	Notificação de mensagens não vistas
+Unseen message notification type	felamimail	pt	Tipo de notificação de mensagens não vistas
+Unselect All	felamimail	pt	Deselecionar Todos
+Unsubscribed successfully!	felamimail	pt	Desubscrito com sucesso!
+Unsubscribe	felamimail	pt	Desubscrever
+Update address	felamimail	pt	Atualizar endereço
+up	felamimail	pt	para cima
+Use Addresses	felamimail	pt	Usar endereços
+Use a signature?	felamimail	pt	Usar a asinatura?
+Use a signature	felamimail	pt	Usar a asinatura felamimail
+Use Javascript or HTML addressbook?	felamimail	pt	Usar Javascript or HTML nos contatos?
+View full header	felamimail	pt	Ver cabeçada completa
+Viewing full header	felamimail	pt	Ver cabeçada completa
+Viewing message	felamimail	pt	Ver mensagem 
+Viewing messages	felamimail	pt	Ver mensagens
+View message	felamimail	pt	Ver mensagem
+Welcome to %1's WebMail system	felamimail	pt	Bemvindo a sistema de webmail %1
+White	felamimail	pt	Branco
+Width of folder list	felamimail	pt	Larguara da lista de pastas
+Wrap incoming text at	felamimail	pt	Quebrar a linha do texto de entrada em 
+You can change the way that SquirrelMail looks and displays information to you, such as the colors, the language, and other settings.	felamimail	pt	Você pode mudar a maneira como SquirrelMail aparece e mostra informações, como cores, a lingua e outras configurações.
+You can only edit one address at the time	felamimail	pt	Você pode editar somente um endereço a cada vez
+You must login first.	felamimail	pt	Você preciar fazer o login primeiro.
+You need a valid user and password to access this page!	felamimail	pt	Você precisa um usuário e a senha válida para acessar esta página!
+Your search failed with the following error(s)	felamimail	pt	Sua procura falhou com o(s) seguinte(s) erro(s)

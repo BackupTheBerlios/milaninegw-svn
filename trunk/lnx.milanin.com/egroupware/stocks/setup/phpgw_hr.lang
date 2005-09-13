@@ -1,0 +1,15 @@
+%	stocks	en	%
+add new stock	stocks	en	Add new stock
+display stocks on main screen is disabled	stocks	en	Display stocks on main screen is disabled
+display stocks on main screen is enabled	stocks	en	Display stocks on main screen is enabled
+disable	stocks	en	disable
+edit stock	stocks	en	Edit stock
+enable	stocks	en	enable
+price	stocks	en	Price
+stocks	common	en	Stock Quotes
+stock quotes	common	en	Stock Quotes
+select displayed stocks	preferences	en	Select displayed stock quotes
+stock quote preferences	stocks	en	Stock Quote preferences
+symbol	stocks	en	Symbol
+$ change	common	en	Change
+% change	common	en	Change %

@@ -1,0 +1,385 @@
+% to	projects	zh	% 到
++ jobs	projects	zh	+ 工作
+account	projects	zh	帐号
+accounting	common	zh	会计
+accounting factor	projects	zh	会计要素
+accounting factor for project	projects	zh	项目的会计要素
+accounting system	projects	zh	会计系统
+active	projects	zh	启用
+activities	projects	zh	活动
+activities list	projects	zh	动作列表
+activity	common	zh	活动
+activity %1 has been added	projects	zh	新增了活动：%1
+activity %1 has been added !	projects	zh	已经成功新增活动 %1 ！
+activity %1 has been updated	projects	zh	更新了活动：%1
+activity %1 has been updated !	projects	zh	已经成功更新活动 %1 ！
+activity id	projects	zh	动作代码
+add activity	projects	zh	新增活动
+add hours	projects	zh	新增时数
+add job	projects	zh	新增工作
+add milestone	projects	zh	新增项目阶段
+add project	projects	zh	新增项目
+add project hours	projects	zh	新增项目时数
+add role	projects	zh	新增角色
+add work hours	projects	zh	新增工作时数
+address book	projects	zh	通讯录
+administrator	projects	zh	管理者
+administrator list	projects	zh	管理者清单
+alarm	projects	zh	警告
+all	projects	zh	所有的
+all delivery notes	projects	zh	所有传递消息
+all invoices	projects	zh	所有的发票
+amount	projects	zh	金额
+anonymous public	projects	zh	公开的
+archive	common	zh	封存
+are you sure you want to delete this activity	projects	zh	您确定要删除这项活动？
+are you sure you want to delete this job	projects	zh	您确定要删除这项工作？
+are you sure you want to delete this project	projects	zh	您确定要删除这个项目？
+assign	projects	zh	指派
+assign roles and events	projects	zh	指派角色与事件
+assignment has been deleted	projects	zh	指派动作已经被删除了
+assignment has been saved	projects	zh	指派动作已经被储存了
+assignment to project	projects	zh	指派到项目
+assignment to project %1	projects	zh	指派到项目%1
+assignment to role	projects	zh	指派给角色
+available	projects	zh	可用
+before	projects	zh	之前
+bill per hour	projects	zh	每小时费用
+bill per hour/workunit	projects	zh	每小时/工时费用
+bill per workunit	projects	zh	每工时的费用
+billable	projects	zh	可付款
+billable activities	projects	zh	可计费的动作
+billed	projects	zh	已计费
+billed only	projects	zh	计费专用
+billing	projects	zh	计费
+bookable activities	projects	zh	可使用的动作
+bookkeeper	projects	zh	记帐人
+browse	projects	zh	浏览
+budget	projects	zh	预算
+budget available	projects	zh	可用预算
+budget limit	projects	zh	预算上限
+budget main project	projects	zh	编列主要项目的预算
+budget planned	projects	zh	计划预算
+budget sum of all sub projects is bigger than the budget of the main project	projects	zh	所有附属项目的预算累计超过主要项目的预算
+budget used	projects	zh	已使用预算
+budget used total	projects	zh	已使用预算累计
+calculate	projects	zh	计算
+changed start date and end date	projects	zh	修改开始与结束日期
+changed start date and end date of projects bellow	projects	zh	修改下面项目的开始与结束日期
+changes of project data	projects	zh	项目资料的变动
+click %1here%2 to return to projects.	projects	zh	点击 %1这里%2 返回项目
+closed	projects	zh	关闭
+color legend	projects	zh	顏色区分
+columns to show in the projects list	projects	zh	项列表要显示的栏目
+comment	projects	zh	备注
+continue	projects	zh	继续
+coordinator	common	zh	项目协调人
+create delivery	projects	zh	建立递送
+create invoice	projects	zh	建立发票
+creator	projects	zh	建立者
+customer	common	zh	客户
+customer nr	projects	zh	客户昵称
+date created	projects	zh	建立日期
+date due of milestone %1 of project %2 has been updated	projects	zh	项目%2的阶段%1已经更新
+date due planned	projects	zh	已计划日期
+days	projects	zh	日
+days before	projects	zh	日之前
+definition per project	admin	zh	每个项目的定义
+delete activity	projects	zh	删除活动
+delete factor	projects	zh	删除要素
+delete hours	projects	zh	移除时数
+delete job	projects	zh	删除工作
+delete project	projects	zh	删除项目
+delete selected files	projects	zh	删除选择的档案
+delete work hours	projects	zh	删除工作时数
+deliveries	projects	zh	递送
+delivery	projects	zh	递送
+delivery %1 has been created !	projects	zh	Delivery %1 has been created !
+delivery %1 has been updated !	projects	zh	Delivery %1 has been updated !
+delivery date	projects	zh	递送日期
+delivery id	projects	zh	递送 ID
+delivery list	projects	zh	递送清单
+delivery note	projects	zh	递送消息
+delivery note for project	projects	zh	项目传送消息
+delivery notes	projects	zh	Delivery notes
+description can not exceed 250 characters in length	projects	zh	描述文字不能夠超过250字节(約145个中文字)
+description can not exceed 8000 characters in length	projects	zh	描述文字不能夠超过8000字节(約4000个中文字)
+discount	projects	zh	折扣
+distance	projects	zh	距离
+do you also want to delete all sub projects	projects	zh	您确定要删除所有附属项目？
+do you also want to delete all sub projects ?	projects	zh	您确定要删除所有附属项目？
+edit activity	projects	zh	编辑动作
+edit administrator list	projects	zh	编辑项目管理者清单
+edit events	projects	zh	编辑事件
+edit hours	projects	zh	编辑时数
+edit job	projects	zh	编辑工作
+edit manager list	projects	zh	编辑管理员清单
+edit milestone	projects	zh	编辑阶段
+edit milestones	projects	zh	编辑阶段
+edit project	projects	zh	编辑项目管理人员
+edit project administrator list	projects	zh	编辑项目管理人员
+edit project hours	projects	zh	编辑项目时数
+edit roles	projects	zh	编辑角色
+edit roles and events	projects	zh	编辑角色与事件
+edit seller list	projects	zh	编辑销售清单
+edit time tracker entry	projects	zh	编辑时间跟踪记录
+edit work hours	projects	zh	编辑工作时数
+employee	projects	zh	员工
+employees	projects	zh	员工
+end date has changed	projects	zh	结束日期已经更新
+ending date can not be after parent projects date due	projects	zh	结束日期不能夠在主要项目结束日期之後。
+ending date can not be after projects date due	projects	zh	结束日期不能夠在主要项目期間之後。
+ending date can not be before start date	projects	zh	结束日期不能夠在开始日期之前
+entry	projects	zh	资料
+event	projects	zh	事件
+event %1 has been saved	projects	zh	%1事件已经储存
+event %1 has been updated	projects	zh	%1事件已经更新
+events	projects	zh	事件
+exact accounting [hh.mm]	admin	zh	实际的会计时间[hh.mm]
+external reference	projects	zh	外部参考
+extra budget	projects	zh	其他预算
+extra budget sum of all sub projects is bigger than the extra budget of the main project	projects	zh	所有附属项目的額外预算累计超过主要项目的額外预算金額。
+factor employee	projects	zh	员工
+factor has been deleted	projects	zh	要素已经被删除了
+factor has been saved	projects	zh	要素已经被储存了
+factor has been updated	projects	zh	要素已经被更新了
+factor project	projects	zh	要素项目
+failed sending message to '%1' #%2 subject='%3', sender='%4' !!!	projects	zh	传送消息給'%1'时發生错误 #%2 标题='%3', 寄件人='%4' ！
+from	projects	zh	来自
+from %1 to %2	projects	zh	从 %1 到 %2
+gantt chart	projects	zh	甘特图
+gantt chart from %1 to %2	projects	zh	从%1到%2的甘特图
+generate activity id	projects	zh	自动产生活动代码？
+generate activity id ?	projects	zh	自动产生活动代码？
+generate delivery id ?	projects	zh	自动产生传递代码？
+generate invoice id ?	projects	zh	自动产生发票代码？
+generate job id	projects	zh	自动产生工作代码？
+generate project id	projects	zh	自动产生项目代码？
+generate project id ?	projects	zh	自动产生项目代码？
+global categories	projects	zh	全局类别
+has reached	projects	zh	到达
+hours	projects	zh	时数
+hours limit	projects	zh	时数上限
+hours of work day	admin	zh	每个工作天计算时数
+hours used total	projects	zh	已使用时数累计
+id can not exceed 20 characters in length	projects	zh	代码不能夠超过20个字节
+id can not exceed 250 characters in length	projects	zh	代码不能夠超过250个字节
+if using activities	admin	zh	如果使用活动
+if you are an administrator, please edit the site configuration for projects in the admin section	projects	zh	如果您是管理员，请在管理区编辑项目的网站设置。
+if you are not an administrator, please inform the administrator to configure projects	projects	zh	如果您不是管理员，请聯絡管理员这个問題。
+investment nr	projects	zh	投资数
+invoice	projects	zh	发票
+invoice %1 has been created !	projects	zh	已成功建立发票 %1 ！
+invoice %1 has been updated !	projects	zh	已成功更新发票 %1 ！
+invoice date	projects	zh	发票日期
+invoice id	projects	zh	发票号码
+invoice list	projects	zh	发票列表
+invoices	projects	zh	发票
+invoicing method	projects	zh	发票形式
+invoicing of work time	admin	zh	工作时间发票
+job	projects	zh	工作
+job date	projects	zh	工作日期
+job description	projects	zh	工作描述
+job has been added	projects	zh	工作已经新增
+job has been added !	projects	zh	已成功新增工作！
+job has been updated	projects	zh	工作已经更新
+job has been updated !	projects	zh	已成功更新工作！
+job id	projects	zh	工作代码
+job list	projects	zh	工作列表
+job manager	projects	zh	工作管理员
+jobs	common	zh	工作
+last update	projects	zh	最後更新
+list activities	projects	zh	活动清单
+list budget	projects	zh	预算清单
+list deliveries	projects	zh	递送清单
+list hours	projects	zh	List hours
+list jobs	common	zh	工作清单
+list projects	common	zh	项目清单
+list work hours	projects	zh	工时清单
+main project	projects	zh	主要项目
+main project:	projects	zh	主要项目：
+manager	projects	zh	管理
+manager list	projects	zh	管理员清单
+managing committee	admin	zh	管理委员会
+manuell entries	projects	zh	手册资料
+milestone	projects	zh	阶段
+milestone date due	projects	zh	预定阶段日期
+milestone has been deleted	projects	zh	阶段已经删除了
+milestone has been saved	projects	zh	阶段已经储存了
+milestones	common	zh	阶段
+minutes per workunit	projects	zh	每一个工作单位的分钟数
+month	projects	zh	月
+move start date if pervious projects end date changes	admin	zh	如果上一个项目的结束日期改变就同时修改这个项目的开始日期
+name not exceed 250 characters in length	projects	zh	名称不能夠超过250字节
+net	projects	zh	净
+new date due of milestone %1: %2	projects	zh	预定 %1 阶段的日期：%2。
+new end date	projects	zh	新的结束日期
+new milestone	projects	zh	新的阶段
+new project	projects	zh	新增项目
+new start date	projects	zh	新的开始日期
+nonactive	common	zh	停用
+not billable	projects	zh	未付款
+number	projects	zh	编号
+old end date	projects	zh	旧的结束日期
+old start date	projects	zh	旧的开始日期
+open	projects	zh	打开
+open popup window	projects	zh	打开弹出式窗口
+overall	projects	zh	总览
+parent project	projects	zh	主要项目
+pause	projects	zh	暂停
+per	projects	zh	每一
+per day	projects	zh	每天
+per hour	projects	zh	每个小时
+per hour/workunit	projects	zh	每个小时/工作单位
+per workunit	common	zh	每一工作单位
+percent	projects	zh	百分比
+planned	projects	zh	已计划
+planned time sum of all sub projects is bigger than the planned time of the main project	projects	zh	所有附属项目的计划时间超过主要项目。
+please choose a project coordinator	projects	zh	请选择一个项目协调人！
+please choose activities for that project first !	projects	zh	请选择这个项目可使用的动作选项！
+please choose activities for the project	projects	zh	请选择这个项目的活动！
+please choose the accounting system for the project	projects	zh	请选择这个项目的会计系統
+please choose the columns to list in the projects preferences section	projects	zh	请选择项目设置区要显示的栏目。
+please choose the discount type	projects	zh	请选择折扣种类。
+please enable html view of emails.	projects	zh	请启用邮件的HTML浏览功能
+please enter a remark	projects	zh	请输入一个别名
+please enter a remark !	projects	zh	请输入一个别名 !
+please enter an id	projects	zh	请输入代码。
+please enter an id !	projects	zh	请输入代码！
+please enter the bill	projects	zh	请输入帐单！
+please enter the bill per workunit !	projects	zh	请选择每一工作单位的费用！
+please enter the minutes per workunit	projects	zh	请输入每个工作单位的分钟数！
+please enter the minutes per workunit !	projects	zh	请选择每一工作单位的分钟数！
+please select a project for time tracking	projects	zh	请选择要跟踪时间的项目
+please set the accounting factor for the project	projects	zh	请为这个项目设置会计要素。
+please set your preferences for this application !	projects	zh	请在偏好设置中调整这个应用程序的设置！
+please specify the budget	projects	zh	请指定一个预算！
+please specify the currency in the global preferences section	common	zh	请在全局设置中指定货币种类。
+position	projects	zh	位置
+previous	projects	zh	上一个项目
+previous project	projects	zh	上一个项目
+previous projects end date has changed	projects	zh	上一个项目结束日期已经改变
+print delivery	projects	zh	打印递送
+print invoice	projects	zh	打印发票
+processor	projects	zh	处理者
+project	projects	zh	项目
+project %1 has been saved	projects	zh	项目%1已经储存了。
+project %1 has been updated	projects	zh	项目%1已经更新了。
+project accounting	admin	zh	项目会计帳
+project administration	projects	zh	项目管理
+project administrators	admin	zh	项目管理者
+project archive	projects	zh	项目封存
+project billing	projects	zh	项目计费
+project data due	projects	zh	项目预定时程
+project delivery	projects	zh	项目递送
+project dependencies	common	zh	项目附加说明
+project id	common	zh	项目代码
+project list	projects	zh	项目列表
+project name	projects	zh	项目名称
+project overview	projects	zh	项目概要
+project preferences	projects	zh	项目喜好设置
+project statistic	projects	zh	项目统计
+project statistics	projects	zh	项目统计
+project url	projects	zh	项目网址
+projects	common	zh	项目管理
+projects, which are assigned as sequencing	projects	zh	项目，依序被指定
+quality check	projects	zh	品质核查
+reference	projects	zh	参考
+remark	projects	zh	注释
+remark can not exceed 8000 characters in length	projects	zh	注释不能夠超过8000个字节。
+remark can not exceed 8000 characters in length !	projects	zh	注释不能夠超过8000个字节！
+remark required	projects	zh	必须输入注释
+result	projects	zh	结果
+role	projects	zh	角色
+role %1 has been saved	projects	zh	角色 %1 已经储存
+role %1 has been updated	projects	zh	角色 %1 已经更新
+role has been deleted	projects	zh	角色已经删除
+roles	projects	zh	角色
+roles list	projects	zh	角色清单
+sales department	admin	zh	业务部
+save factor	projects	zh	储存要素
+save milestone	projects	zh	储存阶段
+select factor	projects	zh	选择要素
+select groups	projects	zh	选择群組
+select main project	common	zh	选择主要项目
+select project	projects	zh	选择项目
+select tax for workhours	projects	zh	选择工作时数的税率
+select users	projects	zh	选择使用者
+select your address	projects	zh	选择您的地址
+seller	projects	zh	销售人员
+seller list	projects	zh	销售人员清单
+sequencing project	projects	zh	排序项目
+settings	admin	zh	设置
+short description	projects	zh	简短说明
+show gantt chart	projects	zh	显示甘特图
+show milestones	projects	zh	显示里程碑
+show planned resources	projects	zh	显示
+site configuration	projects	zh	网站设置
+size	projects	zh	大小
+start	projects	zh	开始
+start date can not be before parent projects start date	projects	zh	开始日期不能夠在主要项目的开始日期之前
+start date planned	projects	zh	预定开始日期
+statistic	projects	zh	统计
+statistics	projects	zh	统计
+stop	projects	zh	结束
+sub project level %1	projects	zh	附属项目级别 %1
+sum	projects	zh	累计
+sum budget	projects	zh	预算累计
+sum hours	projects	zh	工时累计
+sum jobs	projects	zh	工作累计
+sum workunits	projects	zh	工作单位累计
+tax	projects	zh	税率
+test	projects	zh	测试
+that id has been used already	projects	zh	这个代码已经被使用了。
+that id has been used already !	projects	zh	这个代码已经被使用了！
+the choosen previous project does not have an end date specified	projects	zh	上一个项目並未指定结束日期。
+the delivery note contains no items !	projects	zh	递送消息没有任何条目！
+this is mostly caused by a not or wrongly configured smtp server. notify your administrator.	projects	zh	这通常是您的邮件服务器设置出问题，请通知网站管理员
+till	projects	zh	直到
+time of journey	projects	zh	行程
+time planned	projects	zh	已计划行程
+time tracker	projects	zh	时间表核查员
+time tracking actions	projects	zh	时间表核查动作
+time tracking for this project has been stopped already	projects	zh	这个项目的时间核查已经被終止了
+time tracking for this project is already active	projects	zh	这个项目的时间核查已经被启用了
+time used	projects	zh	已经使用的时间
+time used billable	projects	zh	可请款工时
+time used total	projects	zh	累计使用工时
+title can not exceed 250 characters in length	projects	zh	标题不能夠超过250字节
+update delivery	projects	zh	更新递送
+update invoice	projects	zh	更新发票
+use activities	admin	zh	使用活动
+used	projects	zh	已使用
+used - jobs included	projects	zh	已使用 - 包含工作
+used billable	projects	zh	可请款活动
+used not billable	projects	zh	未能请款活动
+used total	projects	zh	已使用累计
+user statistic	projects	zh	使用者统计
+user statistics	projects	zh	用户统计
+username / group	projects	zh	使用者／群組
+view employees	projects	zh	查看员工
+view gantt chart	projects	zh	查看甘特图
+view hours	projects	zh	查看工时
+view job	projects	zh	查看工作
+view project	projects	zh	查看项目
+view users	projects	zh	查看使用者
+view work hours	projects	zh	查看工时
+work date	common	zh	工作日期
+work hours	common	zh	时数
+work time	projects	zh	工作时间
+workunit	projects	zh	工作单位
+workunits	projects	zh	工作单位
+written by:	projects	zh	作者：
+you have entered an invalid date !	projects	zh	您输入了一个错误的日期！
+you have entered an invalid date due	projects	zh	您输入了一个错误的预定日期。
+you have entered an invalid end date	projects	zh	您输入了一个错误的结束日期！
+you have entered an invalid end date !	projects	zh	您输入了不合法的结束日期！
+you have entered an invalid planned end date	projects	zh	您输入了一个错误的计划日期！
+you have entered an invalid planned start date	projects	zh	您输入了一个错误的已计划开始日期！
+you have entered an invalid start date	projects	zh	您输入了一个错误的开始日期！
+you have entered an invalid start date !	projects	zh	您输入了不合法的开始日期！
+you have no customer selected !	projects	zh	您没有选择任何的顾客！
+you have no projects selected	projects	zh	您没有选择任何的项目！
+you have selected an invalid activity	projects	zh	您选择了一个错误的活动
+you have selected an invalid activity !	projects	zh	您选择了不合法的动作！
+you have to create a delivery or invoice first !	projects	zh	您必须先「建立」送货单或发票！

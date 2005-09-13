@@ -1,0 +1,168 @@
+a new ticket has been reported.	tts	nl	Er is een nieuwe melding gedaan
+accept	tts	nl	ACCEPTEER
+accept the ticket into verification process.	tts	nl	Accepteer de kaart in het verificatiestadium
+accepted	tts	nl	GEACCEPTEERD
+action	tts	nl	Actie
+add new ticket	tts	nl	Nieuwe melding toevoegen
+add ticket	tts	nl	Melding toevoegen
+additional notes	tts	nl	Aanvullende opmerkingen
+admin options	common	nl	Beheeropties
+assign to	tts	nl	Toewijzen aan
+assigned from	tts	nl	Toegewezen door
+assigned to	tts	nl	Toegewezen aan
+billable hours	tts	nl	Te factureren uren
+billable hours changed	tts	nl	Te factureren uren gewijzigd
+billable hours rate	tts	nl	Te factureren uren tarief
+billable rate	tts	nl	Factuurtarief
+billable rate changed	tts	nl	Factuurtarief is gewijzigd
+category changed	tts	nl	Categorie is gewijzigd
+check here to generate the state's id automatically or enter a particular id below.	tts	nl	Markeer hier om de status ID automatisch te genereren of vul hieronder een specifieke ID in.
+clear form	tts	nl	Formulier wissen
+close	tts	nl	Sluiten
+close date	tts	nl	Datum sluiting
+close the invalid ticket.	tts	nl	Sluit de ongeldige kaart
+closed	tts	nl	Gesloten
+completed	tts	nl	AFGESLOTEN
+configure the states	common	nl	Configureerd de statussen
+configure the transitions	common	nl	
+create new state	tts	nl	Een nieuwe status creëren
+create new ticket	tts	nl	Een nieuwe kaart creëren
+create new transition	tts	nl	
+creates a new ticket, returns ticket_id	tts	nl	Creëert een nieuwe kaart, geeft  'ticket_id' terug
+creates a struct of tickets	tts	nl	
+date opened	tts	nl	Datum geopend
+default assign to	tts	nl	Standaard toegewezen aan
+default group	tts	nl	Standaard groep
+default priority	tts	nl	Standaard priotiteit
+delete the listed tickets.	tts	nl	De weergegeven kaarten verwijderen
+deleting the state	tts	nl	De status verwijderen
+deleting the transition	tts	nl	
+detail	tts	nl	Detail
+details	tts	nl	Details
+duplicate	tts	nl	DUPLICEER
+edit the state	tts	nl	De status wijzigen
+edit the transition	tts	nl	
+force	tts	nl	Forceer
+global categories	tts	nl	Globale categoriën
+group	tts	nl	Groep
+group ownership changed	tts	nl	Groepeigendom  is gewijzigd
+history	tts	nl	Geschiedenis
+i worked on the ticket and the work requires validation.	tts	nl	I heb aan de kaart gewerkt en het werk vereist validatie.
+i worked on the ticket, but did not finish.	tts	nl	Ik heb aan de kaart gewerkt maar niet afgerond.
+in progress	tts	nl	In uitvoering
+initial state	tts	nl	Initiële status
+invalid	tts	nl	ONGELDIG
+invalidate	tts	nl	ONGELDIG
+keep the present state [%1].	tts	nl	Behoud de huidige status [%1].
+latest note added	tts	nl	Laatste notitie  toegevoegd
+list of available tickets' states.	tts	nl	Lijst van beschikbare kaartstatussen
+list of available tickets' transitions.	tts	nl	
+missing description	tts	nl	Beschrijving ontbreekt
+morework	tts	nl	MEERWERK
+needswork	tts	nl	WERKNODIG
+new	tts	nl	NIEUW
+new ticket	tts	nl	Nieuwe melding
+new tickets can be put into this state.	tts	nl	Nieuwe kaarten kunnen deze status krijgen.
+new value	tts	nl	Nieuwe waarde
+no additional notes	tts	nl	Geen extra notities
+no duplicate	tts	nl	GEEN DUPLICAAT
+no notes for this ticket	tts	nl	Geen notities voor deze kaart
+no states found	tts	nl	Geen statussen gevonden
+no subject	tts	nl	Geen onderwerp
+no tickets found	tts	nl	Geen meldingen gevonden
+no transitions found	tts	nl	
+not assigned	tts	nl	Niet toegegwezen
+not completed	tts	nl	NIET AFGEROND
+notify changes to ticket assignee by e-mail	tts	nl	Meld kaartwijzigingen aan toegewezen persoon via e-mail
+notify changes to ticket group by e-mail	tts	nl	Meld kaartwijzigingen aan kaartgroep via e-mail
+notify changes to ticket owner by e-mail	tts	nl	Meld kaartwijzigingen aan eigenaar via e-mail
+ok	tts	nl	OK
+old value	tts	nl	Oude waarde
+open	tts	nl	Open
+open / closed	tts	nl	Open / gesloten
+open date	tts	nl	Datum opening
+opened	tts	nl	Geopend
+opened by	tts	nl	Geopend door
+original ticket details	tts	nl	Originele Kaartdetails
+perform irregular transition into the following state	tts	nl	
+prio	tts	nl	Prio
+priority	tts	nl	Prioriteit
+priority changed	tts	nl	Prioriteit  gewijzigd
+put the preexistent ticket into the state %1.	tts	nl	Geef de reeds bestaande kaart de status %1.
+re-assigned	tts	nl	Opnieuw geopend
+re-opened	tts	nl	Heropend
+refresh every (seconds)	tts	nl	Ververs elke (seconden)
+reopen	tts	nl	HEROPENEN
+reopened	tts	nl	HEROPEND
+resolve	tts	nl	OPLOSSEN
+resolved	tts	nl	OPGELOST
+returns a struct of a tickets history	tts	nl	
+returns a struct of values of a single ticket	tts	nl	
+returns the additional notes attached to a ticket	tts	nl	Geeft de extra notities van een kaart terug
+selected	tts	nl	geselecteerd
+show new/updated tickets on main screen	tts	nl	Nieuwe en gewijzigde meldingen op startscherm weergeven
+source state	tts	nl	Bronstatus
+state	tts	nl	Status
+state changed	tts	nl	Status gewijzigd
+state id	tts	nl	ID Status
+state name	tts	nl	Naam Status
+status/date closed	tts	nl	Status/Datum sluiting
+subject	tts	nl	Onderwerp
+subject changed	tts	nl	Onderwerp gewijzigd
+target state	tts	nl	Doelstatus
+test	tts	nl	TEST
+the closed ticket requires more work. reopen it.	tts	nl	De gesloten melding vereist meer werk. Heropen de melding.
+the owner of the ticket was not able to confirm the issue.	tts	nl	De eigenaar van de kaart was niet in staat de kwestie te bevestigen.
+the ticket has been accepted by the owner, who is about to work on it.	tts	nl	De kaart is geaccepteerd door de eigenaar die op het punt staat er mee aan het werk te gaan.
+the ticket has been closed without resolution.	tts	nl	De kaart is gesloten zonder oplossing.
+the ticket has been reopened for further work.	tts	nl	De kaart is heropend voor extra werk.
+the ticket has been successfully resolved.	tts	nl	De kaart is met succes opgelost.
+the ticket has been verified and has to be worked on.	tts	nl	De kaart is gecontroleerd en heeft er moet aan gewerkt worden
+the ticket has been worked on and the work requires validation.	tts	nl	Aan de kaart is gewerkt en het werk vereist validatie.
+the ticket has been worked on, but requires more work.	tts	nl	Aan de kaart is gewerkt, maar er is nog meer werk nodig.
+the ticket is a duplicate of another ticket and should be closed.	tts	nl	De kaart is een duplicaat van een andere kaart en moet worden gesloten.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	nl	De kaart is niet een duplicaat van een andere kaart. Heropen de kaart.
+the ticket is invalid and cannot be worked on.	tts	nl	De kaart is ongeldig en er kan niet aan worden gewerkt.
+the ticket resolution was successfully validated. close the ticket.	tts	nl	De kaartoplossing was met succes gevalideerd. Sluit de kaart.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	nl	De kaart bestond reeds voor de "Petri Net" infrastructuur en heeft een status nodig.
+the ticket was found a duplicate of another ticket.	tts	nl	De kaart blijkt een duplicaat te zijn van een andere kaart.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	nl	De kaarten in de onderstaande lijst zijn in de status %1. Beslis a.u.b. wat met ze gedaan moet worden.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	nl	
+ticket	tts	nl	Melding
+ticket assigned to %1	tts	nl	Melding toegewezen aan %1
+ticket has been updated	tts	nl	Medling is bijgewerkt
+tickets found %1	tts	nl	
+tickets open %1	tts	nl	
+tickets total %1	tts	nl	
+to go back to the tts index, click <a href= %1 >here</a>	tts	nl	
+toaccept	tts	nl	
+toclosed	tts	nl	
+toduplicate	tts	nl	
+toinvalid	tts	nl	
+toneedswork	tts	nl	
+tonew	tts	nl	
+toreopened	tts	nl	
+toresolved	tts	nl	
+total billable	tts	nl	
+totovalidate	tts	nl	
+tovalidate	tts	nl	
+toverified	tts	nl	
+transition	tts	nl	
+transition name	tts	nl	
+trouble ticket system	common	nl	Probleemregistratie
+tts	common	nl	Probleemregistratie
+tts preferences	tts	nl	Probleemregistratie - Voorkeuren
+undefined	tts	nl	
+update	tts	nl	bijwerken
+update ticket state	tts	nl	
+updates ticket	tts	nl	
+use email notification	tts	nl	
+verified	tts	nl	
+verify	tts	nl	
+verify the ticket to work on it.	tts	nl	
+view all tickets	tts	nl	Alle meldingen bekijken
+view job detail	tts	nl	werkdetail bekijken
+view only open tickets	tts	nl	Alleen openstaande meldingen bekijken
+you can only close a ticket if it is assigned to you.	tts	nl	
+you want to delete the state %1. are you sure?	tts	nl	
+you want to delete the transition %1. are you sure?	tts	nl	

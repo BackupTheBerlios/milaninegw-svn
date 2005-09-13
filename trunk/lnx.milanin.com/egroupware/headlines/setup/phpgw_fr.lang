@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	fr	Etes-vous sûr de vouloir effacer ce site de nouvelles ?
+base url	headlines	fr	URL de base
+basic	headlines	fr	Basique
+choose layout	headlines	fr	Choisir disposition
+color	headlines	fr	Couleur
+create new headline	headlines	fr	Créer un nouveau titre
+current headlines in cache	headlines	fr	Titres actuellement dans le cache
+display	headlines	fr	Afficher
+edit headline sites	headlines	fr	Modifier les sites de titres
+edit headlines shown by default	headlines	fr	Modifier les titres montrés par défaut
+grab new news sites	common	fr	Récupérer les nouveaux sites de nouvelles
+gray	headlines	fr	Gris
+headline preferences	common	fr	Préférences de titres
+headline site management	common	fr	Gestion des sites de titres
+headline sites	headlines	fr	Sites de titres
+headlines	common	fr	Titres
+headlines administration	headlines	fr	Administration de Titres
+headlines administration - delete headline	headlines	fr	Administration de Titres - Effacer titre
+headlines layout	headlines	fr	Disposition des Titres
+listings displayed	headlines	fr	Listes affichées
+minutes between refresh	headlines	fr	Minutes entre chaque rafraîchissement
+minutes between reloads	headlines	fr	Minutes entre les rechargements
+monitor	common	fr	Moniteur
+news file	headlines	fr	Fichier de nouvelles
+news headlines	common	fr	Titres de nouvelles
+news type	headlines	fr	Type de nouvelles
+no headlines found	headlines	fr	Aucun titre trouvé
+other preferences	preferences	fr	Autres préférences
+reload news sites	headlines	fr	Recharger les sites de nouvelles
+reset	headlines	fr	Réinitialisation
+sample	headlines	fr	Exemple
+select headline news sites	headlines	fr	Sélectionner les sites de titres de nouvelles
+select headlines to display	common	fr	Sélectionner les titres à afficher
+select layout	common	fr	Sélectionner la mise en page
+show headlines on homepage	headlines	fr	Montrer les titres sur la page d'accueil
+site	headlines	fr	Site
+that site has already been entered	headlines	fr	Ce site a déjà été entré
+unable to retrieve links	headlines	fr	Incapable de récupérer les liens
+update headline	headlines	fr	Mettre à jour le titre
+view headline	headlines	fr	Voir le titre
+you can only enter numbers for listings display	headlines	fr	Vous pouvez entrer uniquement des nombres pour l'affichage des listes
+you can only enter numbers minutes between refresh	headlines	fr	Vous pouvez entrer uniquement un nombre de minutes entre chaque rafraîchissement
+you must enter a base url	headlines	fr	Vous devez entrer une URL de base
+you must enter a display	headlines	fr	Vous devez entrer un affichage
+you must enter a news url	headlines	fr	Vous devez entrer une URL de nouvelles
+you must enter the number of listings display	headlines	fr	Vous devez entrer le nombre de listes affichées
+you must enter the number of minutes between reload	headlines	fr	Vous devez entrer le nombre de minutes entre les rechargements

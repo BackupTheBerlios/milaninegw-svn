@@ -1,0 +1,344 @@
+% to	projects	hr	% to
++ jobs	projects	hr	+ Jobs
+account	projects	hr	Account
+accounting	common	hr	Računovodstvo
+accounting factor	projects	hr	Računovodstveni koeficijent
+accounting factor for project	projects	hr	Računovodstveni koeficijent za projekt
+accounting system	projects	hr	Računovodstveni sustav
+active	projects	hr	Aktivno
+activities	projects	hr	Aktivnosti
+activity	common	hr	Aktivnost
+activity %1 has been added	projects	hr	Aktivnost %1 je dodana.
+activity %1 has been updated	projects	hr	Aktivnost %1 je obnovljena.
+activity id	projects	hr	Indetifikacija aktivnosti
+add activity	projects	hr	Dodaj aktivnost
+add file	projects	hr	Dodoaj datoteku
+add job	projects	hr	Dodaj posao
+add milestone	projects	hr	Dodaj cilj
+add project	projects	hr	Dodaj projekt
+add role	projects	hr	Dodaj ulogu
+add work hours	projects	hr	Dodaj radne sate
+address book	projects	hr	Adresar
+administrator	projects	hr	Administrator
+administrator list	projects	hr	Lista administratora
+alarm	projects	hr	alarm
+all delivery notes	projects	hr	Bilješke o svim dostavama
+amount	projects	hr	Količina
+anonymous public	projects	hr	Nepoznata javnost
+archive	common	hr	Arhiva
+are you sure you want to delete this activity	projects	hr	Jeste li sigurni da želite obrisati ovu aktivnost ?
+are you sure you want to delete this job	projects	hr	Da li ste sigurni da želite obrisati ovaj posao
+are you sure you want to delete this project	projects	hr	Da li ste sigurni da želite obrisati ovaj projekt ?
+assign	projects	hr	Dodijeli
+assign roles and events	projects	hr	Dodijeli uloge i događaje
+assignment has been deleted	projects	hr	Zadatak je obrisan
+assignment has been saved	projects	hr	Zadatak je spremljen
+assignment to project	projects	hr	Dodijeljenja projektu
+assignment to project %1	projects	hr	Zadatak za projekt %1
+assignment to role	projects	hr	Zadatak za ulogu
+available	projects	hr	Dostupan
+before	projects	hr	prije
+bill per hour	projects	hr	Naplati po satu
+bill per hour/workunit	projects	hr	Naplati po satu/radnoj jedinici
+bill per workunit	projects	hr	Naplati po radnoj jedinici
+billable	projects	hr	Naplativo
+billable activities	projects	hr	Naplative aktivnosti
+billed	projects	hr	Naplaćeno
+billed only	projects	hr	Samo naplaćeno
+billing	projects	hr	Naplata
+bookable activities	projects	hr	Bookable activities
+bookkeeper	projects	hr	Knijgovođa
+browse	projects	hr	browse
+budget	projects	hr	Proračun
+budget available	projects	hr	Dostupan proračun
+budget limit	projects	hr	Limit proračuna
+budget main project	projects	hr	Proračun glavnog projekta
+budget planned	projects	hr	Planirani proračun
+budget sum of all sub projects is bigger than the budget of the main project	projects	hr	Zbroj proračuna svih podprojekata je veći od proračuna glavnog projekta.
+budget used	projects	hr	Upotrijebljeni proračun
+budget used total	projects	hr	Ukupno potrošen proračun
+calculate	projects	hr	Izračunaj
+changed start date and end date	projects	hr	Promijena početnog i krajnjeg datuma
+changed start date and end date of projects bellow	projects	hr	Promijena početnog i krajnjeg datuma doljnjih projekata.
+changes of project data	projects	hr	Promjena podataka o projektu
+click %1here%2 to return to projects.	projects	hr	Izaberite %1tu%2 radi povratka na projekte.
+closed	projects	hr	Zatvoreno
+color legend	projects	hr	Paleta boja
+columns to show in the projects list	projects	hr	Kolumne za prikaz u listi projekata
+comment	projects	hr	komentar
+continue	projects	hr	Nastavi
+coordinator	common	hr	Koordinator
+costs	projects	hr	Troškovi
+costs list	projects	hr	Lista troškova
+costtype	projects	hr	Vrsta troška
+create delivery	projects	hr	Napravi dostavu
+creator	projects	hr	Projekt otvorio
+customer	common	hr	Korisnik
+customer nr	projects	hr	Korisnik br.
+date created	projects	hr	Datum otvaranja
+date due of milestone %1 of project %2 has been updated	projects	hr	Date due of milestone %1 of project %2 has been updated.
+date due planned	projects	hr	Planirani datum završetka
+days	projects	hr	dana
+days before	projects	hr	dana prije
+definition per project	admin	hr	Definicija po projektu
+delete activity	projects	hr	obriši aktivnost
+delete factor	projects	hr	obriši faktor
+delete hours	projects	hr	Obriši sate
+delete job	projects	hr	Obriši posao
+delete project	projects	hr	obriši projekt
+delete selected files	projects	hr	obriši izabrane datoteke
+delete work hours	projects	hr	obriši radne sate
+deliveries	projects	hr	dostave
+delivery	projects	hr	Dostava
+delivery date	projects	hr	Datum dostave
+delivery id	projects	hr	Broj dostave
+delivery list	projects	hr	Lista dostava
+delivery note	projects	hr	Bilješka o dostavi
+delivery note for project	projects	hr	Bilješka o dostavi za projekt
+description can not exceed 250 characters in length	projects	hr	Opis nesmije biti dulji od 250 znakova.
+description can not exceed 8000 characters in length	projects	hr	Opis nesmije premašiti duljinu od 8000 znakova
+discount	projects	hr	Popust
+distance	projects	hr	Udaljenost
+do you also want to delete all sub projects	projects	hr	Da li želite obrisati i sve podprojekte?
+do you also want to delete all sub projects ?	projects	hr	Da li želite obrisati i sve podprojekte?
+edit activity	projects	hr	Uredi aktivnost
+edit administrator list	projects	hr	Uredi listu administratora
+edit events	projects	hr	uredi događaje
+edit job	projects	hr	uredi posao
+edit manager list	projects	hr	Uredi listu managera
+edit milestone	projects	hr	uredi cilj
+edit milestones	projects	hr	Uredi ciljeve
+edit project	projects	hr	Uredi projekt
+edit roles	projects	hr	uredi uloge
+edit roles and events	projects	hr	Uredi uloge i događaje
+edit seller list	projects	hr	Uredi listu prodavača
+edit time tracker entry	projects	hr	uredi zapis vremenskog praćenja
+edit work hours	projects	hr	uredi radne sate
+employee	projects	hr	Zaposlenik
+employees	projects	hr	Zaposlenici
+end date has changed	projects	hr	Datum završetka je promijenjen
+ending date can not be after parent projects date due	projects	hr	Datum završetka ne može biti poslije datuma završetka glavnog projekta.
+ending date can not be after projects date due	projects	hr	Datum završetka ne može biti poslije datuma predaje projekta.
+ending date can not be before start date	projects	hr	Datum završetka ne može biti prije datuma početka.
+entry	projects	hr	zapis
+event	projects	hr	Događaji
+event %1 has been saved	projects	hr	događaj %1 je spremljen
+event %1 has been updated	projects	hr	događaj %1 je obnovljen
+events	projects	hr	Događaji
+exact accounting [hh.mm]	admin	hr	Točno računanje [hh.mm]
+export as	projects	hr	Izvezi kao
+external reference	projects	hr	Vanjska referenca
+extra budget	projects	hr	Dodatni proračun
+extra budget sum of all sub projects is bigger than the extra budget of the main project	projects	hr	Zbroj dodatnih proračuna svih podprojekata je veći od dodatnog proračuna glavnog projekta.
+factor employee	projects	hr	Koeficijent zaposlenika
+factor has been deleted	projects	hr	Koeficijent je obrisan
+factor has been saved	projects	hr	koeficijent je obrisan
+factor has been updated	projects	hr	koeficijent je obnovljen
+factor project	projects	hr	Koeficijent projekta
+failed sending message to '%1' #%2 subject='%3', sender='%4' !!!	projects	hr	Neuspješan pokušaj slanja poruke za '%1' #%2 tema='%3', pošaljioc='%4' !!!
+from	projects	hr	Pošaljitelj
+from %1 to %2	projects	hr	Od %1 do %2
+gantt chart	projects	hr	Gantt karta
+gantt chart from %1 to %2	projects	hr	Gantt karta od %1 do %2
+generate activity id	projects	hr	Generiraj indetifikaciju aktivnosti?
+generate activity id ?	projects	hr	Generiraj indetifikaciju aktivnosti?
+generate delivery id ?	projects	hr	Generiraj indetifikaciju dostave?
+generate job id	projects	hr	Generiraj indetifikaciju posla?
+generate project id	projects	hr	Generiraj indetifikaciju projekta?
+global categories	projects	hr	Globalne kategorije
+has reached	projects	hr	je dosegao
+hours	projects	hr	Sati
+hours limit	projects	hr	Granica sati
+hours of work day	admin	hr	Broj sati po radnom danu
+hours used total	projects	hr	Ukupno upotrijebljeno sati
+id can not exceed 20 characters in length	projects	hr	indetifikacija ne može biti duža od 20 znakova
+id can not exceed 250 characters in length	projects	hr	indetifikacija ne može biti duža od 250 znakova
+if using activities	admin	hr	ukoliko upotrebljavate aktivnosti
+if you are an administrator, please edit the site configuration for projects in the admin section	projects	hr	Ukoliko ste administrator, molimo vas uredite konfiguraciju stranica za projekte u administratorskom dijelu.
+if you are not an administrator, please inform the administrator to configure projects	projects	hr	Ukoliko niste administrator, molim vas obavijestite administratora da uredi projekte.
+investment nr	projects	hr	Broj investicije
+invoicing method	projects	hr	Način fakturiranja
+invoicing of work time	admin	hr	Fakturiranje radnih sati
+job	projects	hr	Posao
+job has been added	projects	hr	Posao je dodan.
+job has been updated	projects	hr	Posao je obnovljen.
+job id	projects	hr	Indetifikacija posla
+job list	projects	hr	Lista poslova
+job manager	projects	hr	Job manager
+jobs	common	hr	Poslovi
+last update	projects	hr	Poslijednje obnavljanje
+list activities	projects	hr	Lista aktivnosti
+list budget	projects	hr	Lista proračuna
+list deliveries	projects	hr	Lista dostava
+list jobs	common	hr	Lista poslova
+list projects	common	hr	Lista projekata
+list work hours	projects	hr	Lista radnih sati
+main project	projects	hr	Glavni projekt
+main project:	projects	hr	Glavni projekt:
+manager	projects	hr	Manager
+manager list	projects	hr	Lista managera
+managing committee	projects	hr	Upravni odbor
+manuell entries	projects	hr	Ručni unosi
+milestone	projects	hr	Ciljevi
+milestone date due	projects	hr	Dadtum dospijeća ciljeva
+milestone has been deleted	projects	hr	Cilj je obrisan
+milestone has been saved	projects	hr	Cilj se spremljen
+milestones	common	hr	Ciljevi
+minutes per workunit	projects	hr	Minute po radnoj jedinici
+month	projects	hr	Mjesec
+move start date if pervious projects end date changes	admin	hr	Premjestite datum početka, ukoliko se promijenio datum završetka prethodnog projekta
+name not exceed 250 characters in length	projects	hr	ime nije duže od 250 znakova
+new date due of milestone %1: %2	projects	hr	novi datum dospijeća cilja %1: %2.
+new end date	projects	hr	novi datum završetka
+new milestone	projects	hr	Novi cilj
+new project	projects	hr	Novi projekt
+new start date	projects	hr	Novi datum početka
+nonactive	common	hr	Neaktivan
+not billable	projects	hr	neneplativ
+number	projects	hr	Broj
+old end date	projects	hr	Stari datum završetka
+old start date	projects	hr	Stari datum početka
+open	projects	hr	Otvori
+open popup	projects	hr	Otvori u novom prozoru
+open popup window	projects	hr	Otvori u novom prozoru
+overall	projects	hr	Cijelokupan
+parent project	projects	hr	Osnovni projekt
+pause	projects	hr	Pauziraj
+per	projects	hr	po
+per day	projects	hr	po danu
+per hour	projects	hr	po satu
+per hour/workunit	projects	hr	po satu/radnoj jedinici
+per workunit	common	hr	po radnoj jedinici
+percent	projects	hr	Posto
+planned	projects	hr	Planirano
+planned time sum of all sub projects is bigger than the planned time of the main project	projects	hr	Planirano vrijeme trajanja svih podprojekata je duže od planiranog vremena glavnog projekta.
+please choose a project coordinator	projects	hr	Molimo vas izaberite koordinatora projekta.
+please choose activities for the project	projects	hr	Molimo vas izaberite aktivnosti za projekt.
+please choose the accounting system for the project	projects	hr	Molimo vas izaberite računovodstveni sustav za projekt.
+please choose the columns to list in the projects preferences section	projects	hr	Molimo vas izaberite kolumne za prikaz u postavkama projekata.
+please choose the discount type	projects	hr	Molimo vas izaberite vrstu popusta
+please enable html view of emails.	projects	hr	Molimo vas omogućite HTML pregled e-maila
+please enter a remark	projects	hr	Molimo vas unesite primjedbe
+please enter an id	projects	hr	Molimo vas unesite indetifikaciju.
+please enter an id !	projects	hr	Molimo vas unesite indetifikaciju !
+please enter the bill	projects	hr	Molimo vas unesite račun.
+please enter the minutes per workunit	projects	hr	Molimo vas unesite broj minuta po radnoj jedinici.
+please select a project for time tracking	projects	hr	Molimo vas izaberite projekt za vremensko praćenje.
+please set the accounting factor for the project	projects	hr	Molimo vas postavite računovodstveni koeficijent za projekt.
+please set your preferences for this application !	projects	hr	Molimo vas postavite vaše postavke za ovu aplikaciju !
+please specify the budget	projects	hr	Molimo vas specificirajte proračun
+please specify the currency in the global preferences section	common	hr	Molimo vas izaberite valutu u globalnim postavkama.
+position	projects	hr	Pozicija
+previous	projects	hr	Prethodni projekt
+previous project	projects	hr	Prethodni projekt
+previous projects end date has changed	projects	hr	Datum završetka prethodnog projekta je promijenjen
+print delivery	projects	hr	Ispiši dostavu
+processor	projects	hr	Processor
+project	projects	hr	Projekt
+project %1 has been saved	projects	hr	Projekt %1 je spremljen.
+project %1 has been updated	projects	hr	Projekt %1 je obnovljen.
+project accounting	admin	hr	Računovodstvo projekta
+project administrators	projects	hr	Administratori projekta
+project data due	projects	hr	Datum predaje projekta
+project date due	projects	hr	Datum predaje projekta
+project dependencies	common	hr	Ovisnosti projekta
+project id	common	hr	Indetifikacija projekta
+project list	projects	hr	Lista projekata
+project overview	projects	hr	Pregled projekta
+project statistic	projects	hr	Statistika projekta
+project url	projects	hr	URL projekta
+projects	common	hr	Projekti
+projects, which are assigned as sequencing	projects	hr	Projekti, koji su dodijeljeni kao niz
+quality check	projects	hr	Provjera kvalitete
+reference	projects	hr	Reveranca
+remark	projects	hr	Primjedba
+remark can not exceed 8000 characters in length	projects	hr	Primjedba nemože biti dulja od 8000 znakova.
+remark can not exceed 8000 characters in length !	projects	hr	Primjedba nemože biti dulja od 8000 znakova !
+remark required	projects	hr	Potrebna primjedba
+result	projects	hr	Rezultat
+role	projects	hr	Uloga
+role %1 has been saved	projects	hr	Uloga %1 je spremljena
+role %1 has been updated	projects	hr	Uloga %1 je obnovljena
+role has been deleted	projects	hr	Uloga je obrisana
+roles	projects	hr	Uloge
+roles list	projects	hr	Lista uloga
+sales department	projects	hr	Odijel prodaje
+save factor	projects	hr	Spremi koeficijent
+save milestone	projects	hr	spremi cilj
+select factor	projects	hr	Izaberite koeficijent
+select groups	projects	hr	Izaberite grupe
+select main project	common	hr	Izaberite glavni projekt
+select project	projects	hr	Izaberite projekt
+select users	projects	hr	Izaberite korisnike
+seller	projects	hr	Prodavač
+seller list	projects	hr	Lista prodavača
+sequencing project	projects	hr	Niz projekata
+settings	admin	hr	Postavke
+short description	projects	hr	Kratki opis
+show gantt chart	projects	hr	Prikaži gnatt kartu
+show milestones	projects	hr	prikaži ciljeve
+show planned resources	projects	hr	prikaži planirane resurse
+site configuration	projects	hr	Konfiguracija stranica
+size	projects	hr	veličina
+start	projects	hr	Početak
+start date can not be before parent projects start date	projects	hr	Datum početka nemože biti prije datuma početka osnovnog projekta.
+start date planned	projects	hr	Planirani datum početka
+statistic	projects	hr	Statistika
+statistics	projects	hr	Statistike
+stop	projects	hr	Zaustavi
+sub project level %1	projects	hr	Nivo podprojekta %1
+subproject	projects	hr	podprojekt
+sum	projects	hr	zbroj
+sum budget	projects	hr	Zbroj proračuna
+sum hours	projects	hr	Zbroj sati
+sum jobs	projects	hr	zbroj poslova
+sum workunits	projects	hr	zbroj radnih jedinica
+test	projects	hr	Test
+that id has been used already	projects	hr	Ova indetifikacija je već u upotrebi.
+that id has been used already !	projects	hr	Ova indetifikacija je već u upotrebi !
+the choosen previous project does not have an end date specified	projects	hr	Izabrani prethodni projekt nema postavljeni datum završetka.
+the delivery note contains no items !	projects	hr	Dostavnica ne sadržava nikakve stavke !
+this is mostly caused by a not or wrongly configured smtp server. notify your administrator.	projects	hr	Ovo je vjerovatno uzrokovano krivo podešwenim SMTP poslužiteljem. Molimo vas kontaktirajte vašeg administratora.
+till	projects	hr	Do
+time of journey	projects	hr	Vrijeme puta
+time planned	projects	hr	Vrijeme planirano
+time tracker	projects	hr	Vremensko praćenje
+time tracking actions	projects	hr	akcije vremenskog praćenja
+time tracking for this project has been stopped already	projects	hr	vremensko praćenje je već zaustavljeno za ovaj projekt
+time tracking for this project is already active	projects	hr	vremensko praćenje ovog projekta je već uključeno
+time used	projects	hr	Vrijeme upotrebljeno
+time used billable	projects	hr	Naplativo upotrijebljeno vrijeme
+time used total	projects	hr	Ukupno upotrijebljeno vrijeme
+title can not exceed 250 characters in length	projects	hr	Naslov nemože biti dulji od 250 znakova
+update delivery	projects	hr	Obnovi dostavu
+use activities	admin	hr	Upotrijebi aktivnosti
+used	projects	hr	upotrijebljeno
+used - jobs included	projects	hr	upotrijebljeno - poslovi uključeni
+used billable	projects	hr	Naplativo i upotrijebljeno
+used not billable	projects	hr	Nenaplativo i upotrijebljeno
+used total	projects	hr	Ukupno upotrijebljeno
+user statistic	projects	hr	Statistika korisnika
+user statistics	projects	hr	Statistike korisnika
+view employees	projects	hr	prikaži zaposlenike
+view gantt chart	projects	hr	Prikaži gnatt kartu
+view hours	projects	hr	prikaži sate
+view job	projects	hr	prikaži posao
+view project	projects	hr	Prikaži projekt
+view users	projects	hr	prikaži korisnike
+view work hours	projects	hr	prikaži radne sate
+work date	common	hr	Radni datum
+work hours	common	hr	Radni sati
+work time	projects	hr	Radno vrijeme
+workload warning for project	projects	hr	Upozorenje o radnim obavezama za projekt
+workunit	projects	hr	Radna jedinica
+workunits	projects	hr	Radne jedinica
+you have entered an invalid date !	projects	hr	Unijeli sete krivi datum !
+you have entered an invalid date due	projects	hr	Unikjeli ste krivi datum predaje.
+you have entered an invalid end date	projects	hr	Unijeli ste krivi završni datum
+you have entered an invalid planned end date	projects	hr	Unijeli ste krivi datum planiranog završetka.
+you have entered an invalid planned start date	projects	hr	Unijeli ste krivi datum planiranog početka.
+you have entered an invalid start date	projects	hr	Unijeli ste krivi datum početka.
+you have no customer selected !	projects	hr	Niste izabrali korisnika !
+you have no projects selected	projects	hr	nemate izabranih projekata
+you have selected an invalid activity	projects	hr	Izabrali ste krivu aktivnost.
+you have to create a delivery or invoice first !	projects	hr	Morat prvo NAPRAVITI dostavnic ili fakturu !

@@ -1,0 +1,41 @@
+%1 by %2	comic	da	%1 af %2
+%1 by %2 (%3)	comic	da	%1 af %2 (%3)
+are you sure you want to reset all comic dates and resolved image urls?	comic	da	Er du sikker på at du vil nulstille alle tegneserie datoer og fundne billed URLs?
+censorship level	comic	da	Censur niveau
+censorship override enabled	comic	da	Censur slået til
+comic	common	da	Tegneserier
+comic preferences updated	comic	da	Tegneserie præferencerne er opdateret
+comics	common	da	Tegneserier
+comics per page	comic	da	Tegneserier pr. side
+comics scaled	comic	da	Skalerede Tegneserier
+daily comic	common	da	Daglig Tegneserie
+daily comic preferences	comic	da	Daglig Tegneserie Præferencer
+daily comics	admin	da	Daglige Tegneserier
+daily comics - global options	comic	da	Daglige Tegneserier - Globale indstillinger
+daily comics data	comic	da	Daglige tegneserier data
+daily comics global options	comic	da	Daglige tegneserier globale indstillinger
+display layout	comic	da	Vis Layout
+display options	comic	da	Vis Indstillinger
+egroupware daily comics	comic	da	eGroupWare Daglige Tegneserier
+front page comic	comic	da	Forside Tegneserie
+front page comic scaled	comic	da	Forside Tegneserie Skaleret
+genre	comic	da	Genre
+global comics	comic	da	Globale Tegneserier
+global options	comic	da	Globale Indstillinger
+global options updated	comic	da	Globale indstillinger opdateret
+image source	comic	da	Billedkilde
+max file size	comic	da	Maks filstørrelse
+my comics	comic	da	Mine Tegneserier
+no_entries	comic	da	ingen_indtastning
+parser	comic	da	Parser
+performed %1 of element	comic	da	
+egroupware daily comics	comic	da	eGroupWare Daglige Tegneserier
+random	comic	da	Tilfældig
+rated	comic	da	Bedømt
+remote (parse/snarf) enabled	comic	da	Remote (parse/snarf) slået til
+reset	comic	da	Nulstil
+reset comic data	admin	da	Nulstil Tegneserie Data
+resolve	comic	da	Løs
+showing %1 (%2 - %3 of %4)	comic	da	Viser %1 (%2 - %3 af %4)
+template	comic	da	Skabelon
+visit %1	comic	da	Besøg %1

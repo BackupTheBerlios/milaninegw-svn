@@ -1,0 +1,198 @@
+%1 by %2	comic	pt-br	%1 por %2
+%1 by %2 (%3)	comic	pt-br	%1 por %2 (%3)
+a new ticket has been reported.	tts	pt-br	Um novo ticket foi reportado.
+accept	tts	pt-br	ACEITAR
+accept the ticket into verification process.	tts	pt-br	Aceita o ticket para o processo de verificação.
+accepted	tts	pt-br	ACEITO
+action	tts	pt-br	Ação
+add new ticket	tts	pt-br	Adicionar um novo ticket
+add ticket	tts	pt-br	Adicionar ticket
+additional notes	tts	pt-br	Notas adicionais
+admin options	common	pt-br	Opções de administração
+are you sure you want to reset all comic dates and resolved image urls?	comic	pt-br	Você tem certeza que quer reiniciar todas as datas dos quadrinhos e URLs das imagens?
+assign to	tts	pt-br	Designar a
+assigned from	tts	pt-br	Designado de
+assigned to	tts	pt-br	Designado para
+billable hours	tts	pt-br	Horas Remuneráveis
+billable hours changed	tts	pt-br	Horas remuneradas alteradas
+billable hours rate	tts	pt-br	Valor de horas Remuneráveis
+billable rate	tts	pt-br	Valor da Remuneração
+billable rate changed	tts	pt-br	Valor da remuneração alterado
+category changed	tts	pt-br	Categoria alterada
+censorship level	comic	pt-br	Nível de censura
+censorship override enabled	comic	pt-br	Ativação de censura habilitada
+check here to generate the state's id automatically or enter a particular id below.	tts	pt-br	Selecione aqui para gerar os estados dos IDs automaticamente ou especifique um ID em particular abaixo.
+clear form	tts	pt-br	Limpar formulário
+close the invalid ticket.	tts	pt-br	Fechar o ticket inválido.
+closed	tts	pt-br	Fechado
+comic	common	pt-br	Quadrinhos
+comic preferences updated	comic	pt-br	Preferências dos quadrinhos atualizada
+comics	common	pt-br	Quadrinhos
+comics per page	comic	pt-br	Quadrinhos por página
+comics scaled	comic	pt-br	Quadrinhos programados
+completed	tts	pt-br	COMPLETO
+configure the states	common	pt-br	Configurar estados
+configure the transitions	common	pt-br	Configurar Transições
+create new state	tts	pt-br	Criar novo estado
+create new ticket	tts	pt-br	Criar novo ticket
+create new transition	tts	pt-br	Criar nova transição
+creates a new ticket, returns ticket_id	tts	pt-br	Cria um novo ticket, retorna o número de identificação do ticket
+creates a struct of tickets	tts	pt-br	Cria uma estrutura de tickets
+daily comic	common	pt-br	Quadrinho do dia
+daily comic preferences	comic	pt-br	Preferências dos quadrinhos diários
+daily comics	admin	pt-br	Quadrinhos diários
+daily comics - global options	comic	pt-br	Quadrinhos diários - Opções Globais
+daily comics data	comic	pt-br	Dados de Quadrinhos diários
+daily comics global options	comic	pt-br	Opções globais para Quadrinhos diários
+date opened	tts	pt-br	Data da abertura
+default assign to	tts	pt-br	Atribuir por padrão a
+default group	tts	pt-br	Grupo padrão
+default priority	tts	pt-br	Prioridade Padrão
+delete the listed tickets.	tts	pt-br	Lista de tickets apagados.
+deleting the state	tts	pt-br	Apagando estado
+deleting the transition	tts	pt-br	Apagando transição
+detail	tts	pt-br	Detalhes
+display layout	comic	pt-br	Leiaute de exibição
+display options	comic	pt-br	Opções de exibição
+duplicate	tts	pt-br	DUPLICADO
+edit the state	tts	pt-br	editar estado
+edit the transition	tts	pt-br	Editar transição
+egroupware daily comics	comic	pt-br	Quadrinhos diários do eGroupWare
+force	tts	pt-br	Forçar
+front page comic	comic	pt-br	Charge de início
+front page comic scaled	comic	pt-br	Charge definida para início
+genre	comic	pt-br	Gênero
+global categories	tts	pt-br	Categorias Globais
+global comics	comic	pt-br	Quadrinhos globais
+global options	comic	pt-br	Opções globais
+global options updated	comic	pt-br	Opções globais
+group ownership changed	tts	pt-br	Grupo alterado
+history	tts	pt-br	Histórico
+i worked on the ticket and the work requires validation.	tts	pt-br	Eu trabalhei num ticket e o trabalho requer validação.
+i worked on the ticket, but did not finish.	tts	pt-br	Eu trabalhei num ticket, mas não finalizei.
+image source	comic	pt-br	Fonte da imagem
+in progress	tts	pt-br	Em progresso
+initial state	tts	pt-br	Estado inicial
+invalid	tts	pt-br	INVáLIDO
+invalidate	tts	pt-br	INVALIDAR
+keep the present state [%1].	tts	pt-br	Manter estado atual [%1].
+latest note added	tts	pt-br	Última nota adicionada
+list of available tickets' states.	tts	pt-br	Lista de estados disponíveis para tickets
+list of available tickets' transitions.	tts	pt-br	Lista de transições disponíveis para tickets
+max file size	comic	pt-br	Tamanho máximo do arquivo
+missing description	tts	pt-br	Descrição Inexistente
+morework	tts	pt-br	RETRABALHO
+my comics	comic	pt-br	Minhas Charges
+needswork	tts	pt-br	COMEÇAR
+new	tts	pt-br	NOVO
+new ticket	tts	pt-br	Novo ticket
+new tickets can be put into this state.	tts	pt-br	Novos tickets podem ser postos nesse estado.
+new value	tts	pt-br	Novo valor
+no additional notes	tts	pt-br	Nenhuma nota adicional
+no duplicate	tts	pt-br	SEM DUPLICAÇÃO
+no notes for this ticket	tts	pt-br	Nenhuma nota para este ticket
+no states found	tts	pt-br	Nenhum estado encontrado
+no tickets found	tts	pt-br	Nenhum ticket encontrado
+no transitions found	tts	pt-br	Nenhuma transição encontrada
+no_entries	comic	pt-br	sem_entradas
+not assigned	tts	pt-br	Não designado
+not completed	tts	pt-br	INCOMPLETO
+notify changes to ticket assignee by e-mail	tts	pt-br	Notificar alterações na atribuição do ticket por email
+notify changes to ticket group by e-mail	tts	pt-br	Notificar alterações no grupo do ticket por email
+notify changes to ticket owner by e-mail	tts	pt-br	Notificar alterações no propietário do ticket por email
+old value	tts	pt-br	Valor Antigo
+open	tts	pt-br	Abrir
+open / closed	tts	pt-br	Aberto / Fechado
+open date	tts	pt-br	Data de abertura
+opened	tts	pt-br	Aberto
+opened by	tts	pt-br	Aberto por
+original ticket details	tts	pt-br	Detalhes originais do Ticket
+parser	comic	pt-br	Analisador
+perform irregular transition into the following state	tts	pt-br	Realizar transição irregular para o estado seguinte
+performed %1 of element	comic	pt-br	Executadda %1 do elemento
+prio	tts	pt-br	Prioridade
+priority	tts	pt-br	Prioridade
+priority changed	tts	pt-br	Prioridade alterada
+put the preexistent ticket into the state %1.	tts	pt-br	Colocar o ticket pre-existente no estado %1
+random	comic	pt-br	Aleatório
+rated	comic	pt-br	Classificado
+re-assigned	tts	pt-br	Redesignado
+re-opened	tts	pt-br	Reaberto
+refresh every (seconds)	tts	pt-br	Atualizar a cada (segundos)
+remote (parse/snarf) enabled	comic	pt-br	Remoto
+reopen	tts	pt-br	REABRIR
+reopened	tts	pt-br	REABERTO
+reset	comic	pt-br	Reiniciar
+reset comic data	admin	pt-br	Reiniciar Dados dos Quadrinhos
+resolve	comic	pt-br	RESOLVER
+resolved	tts	pt-br	RESOLVIDO
+returns a struct of a tickets history	tts	pt-br	Traz a estrutura do histórico de um ticket
+returns a struct of values of a single ticket	tts	pt-br	Traz a estrutura de valores de um único ticket
+returns the additional notes attached to a ticket	tts	pt-br	Traz as notas adicionais anexadas a um ticket
+selected	tts	pt-br	selecionado
+show new/updated tickets on main screen	tts	pt-br	mostrar tickets novos/atualizados na tela principal
+showing %1 (%2 - %3 of %4)	comic	pt-br	mostrando %1 (%2 - %3 de %4)
+source state	tts	pt-br	Estado fonte
+state	tts	pt-br	Estado
+state changed	tts	pt-br	Estado modificado
+state id	tts	pt-br	ID do Estado
+state name	tts	pt-br	Nome do estado
+status/date closed	tts	pt-br	Status/Data do fechamento
+subject changed	tts	pt-br	Assunto alterado
+target state	tts	pt-br	Estado Alvo
+template	comic	pt-br	Modelo
+test	tts	pt-br	TESTAR
+the closed ticket requires more work. reopen it.	tts	pt-br	O ticket fechado requer que ele seja refeito. Reabra-o.
+the owner of the ticket was not able to confirm the issue.	tts	pt-br	O propietário do ticket não foi capaz de confirmar a questão.
+the ticket has been accepted by the owner, who is about to work on it.	tts	pt-br	O ticket foi aceito pelo propietário, que iniciará o trabalho nele.
+the ticket has been closed without resolution.	tts	pt-br	O ticket foi fechado sem uma solução.
+the ticket has been reopened for further work.	tts	pt-br	O ticket foi reaberto para mais trabalhos.
+the ticket has been successfully resolved.	tts	pt-br	O ticket foi resolvido com sucesso.
+the ticket has been verified and has to be worked on.	tts	pt-br	O ticket foi verificado e necessita ser iniciado.
+the ticket has been worked on and the work requires validation.	tts	pt-br	O ticket foi trabalhado e esse trabalho requer validação.
+the ticket has been worked on, but requires more work.	tts	pt-br	O ticket foi trabalhado e esse trabalho requer retrabalho.
+the ticket is a duplicate of another ticket and should be closed.	tts	pt-br	Esse ticket é uma duplicata de outro ticket e deve ser fechado.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	pt-br	Esse ticket não é uma duplicata de outro. Reabra-o
+the ticket is invalid and cannot be worked on.	tts	pt-br	Esse ticket é inválido e não pode ser trabalhado.
+the ticket resolution was successfully validated. close the ticket.	tts	pt-br	A resolução do ticket foi validada com sucesso. Feche o ticket.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	pt-br	O ticket existia antes da definição da estrutura de redes de Petri e deve ter um estado atribuido.
+the ticket was found a duplicate of another ticket.	tts	pt-br	O ticket foi detectado como duplicata de outro ticket.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	pt-br	Os tickets na seguinte lista estão com o estado %1. Favor decidir o que deve ser feito com eles.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	pt-br	A validação não foi favorável. o ticket necessita de retrabalho.
+ticket	tts	pt-br	Ticket
+ticket has been updated	tts	pt-br	Ticket foi atualizado
+tickets found %1	tts	pt-br	Tickets encontrados %1
+tickets open %1	tts	pt-br	Tickets abertos %1
+tickets total %1	tts	pt-br	Total de tickets %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	pt-br	Para voltar para a página principal do TTS, clique <a href="%1">aqui</a>
+toaccept	tts	pt-br	A_ACEITAR
+toclosed	tts	pt-br	A_FECHAR
+toduplicate	tts	pt-br	A_DUPLICAR
+toinvalid	tts	pt-br	A_INVALIDAR
+toneedswork	tts	pt-br	A_INICIAR
+tonew	tts	pt-br	A_NOVO
+toreopened	tts	pt-br	A_REABRIR
+toresolved	tts	pt-br	A_RESOLVER
+total billable	tts	pt-br	Total remunerável
+totovalidate	tts	pt-br	A_VALIDAR
+tovalidate	tts	pt-br	A_VALIDAR
+toverified	tts	pt-br	A_VERIFICAR
+transition	tts	pt-br	Transição
+transition name	tts	pt-br	Nome da transição
+trouble ticket system	common	pt-br	Sistema de Tickets de Processos (STP)
+tts	common	pt-br	Sistema deTickets de Processos (STP)
+tts preferences	tts	pt-br	Preferências do STP
+undefined	tts	pt-br	INDEFINIDO
+update ticket state	tts	pt-br	Atualizar o estado do ticket
+updates ticket	tts	pt-br	atualizar ticket
+use email notification	tts	pt-br	Usar notificação por email
+verified	tts	pt-br	VERIFICADO
+verify	tts	pt-br	VERIFICAR
+verify the ticket to work on it.	tts	pt-br	Veifica o ticket à ser trabalhado
+view all tickets	tts	pt-br	Exibir todos tickets
+view job detail	tts	pt-br	Exibir detalhe da tarefa
+view only open tickets	tts	pt-br	Exibir somente tickets abertos
+visit %1	comic	pt-br	Visitar %1
+you can only close a ticket if it is assigned to you.	tts	pt-br	Você só pode fechar um ticket que foi atribuido a você
+you want to delete the state %1. are you sure?	tts	pt-br	tem certeza que você deseja remover o estado %1?
+you want to delete the transition %1. are you sure?	tts	pt-br	tem certeza que você deseja remover a transição %1?

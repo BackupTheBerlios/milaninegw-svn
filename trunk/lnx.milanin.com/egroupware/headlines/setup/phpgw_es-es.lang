@@ -1,0 +1,49 @@
+are you sure you want to delete this news site ?	headlines	es-es	¿Está seguro de querer borrar este sitio de noticias?
+base url	headlines	es-es	URL Base
+basic	headlines	es-es	Básico
+choose layout	headlines	es-es	Elija formato
+color	headlines	es-es	Color
+create new headline	headlines	es-es	Crear nuevo encabezado
+current headlines in cache	headlines	es-es	Encabezados actualmente en caché
+display	headlines	es-es	Mostrar
+edit headline sites	headlines	es-es	Editar los sitios de encabezados
+edit headlines shown by default	headlines	es-es	Editar los encabezados mostrados por defecto
+grab new news sites	common	es-es	Buscar nuevos sitios de noticias
+gray	headlines	es-es	Gris
+headline preferences	common	es-es	Preferencias de los encabezados
+headline site management	common	es-es	Gestión de cabeceras del sitio
+headline sites	headlines	es-es	Sitios encabezados de noticias
+headlines	common	es-es	Encabezados
+headlines administration	headlines	es-es	Administración de encabezados
+headlines administration - delete headline	headlines	es-es	Administración de encabezados - Borrar encabezado
+headlines layout	headlines	es-es	Formato de los encabezados
+listings displayed	headlines	es-es	Listados mostrados
+minutes between refresh	headlines	es-es	Minutos entre refrescos
+minutes between reloads	headlines	es-es	Minutos entre recargas
+monitor	common	es-es	Monitor
+news file	headlines	es-es	Archivo de noticias
+news from x	headlines	es-es	Noticias de x
+news headlines	common	es-es	Encabezados de noticias
+news headlines	common	es-es	encabezados de noticias
+news type	headlines	es-es	Tipo de noticias
+no headlines found	headlines	es-es	No se encontraron encabezados
+other preferences	preferences	es-es	Otras preferencias
+reload news sites	headlines	es-es	Recargar sitios de noticias
+reset	headlines	es-es	Restablecer
+sample	headlines	es-es	Ejemplo
+select headline news sites	headlines	es-es	Seleccione sitios de encabezados de noticias
+select headlines to display	common	es-es	Seleccione los encabezados a mostrar
+select layout	common	es-es	Seleccione formato
+show headlines on homepage	headlines	es-es	Mostrar encabezados en la página de inicio
+site	headlines	es-es	Sitio
+that site has already been entered	headlines	es-es	Este sitio ya fue entrado
+unable to retrieve links	headlines	es-es	No se pudieron recuperar los enlaces
+update headline	headlines	es-es	Actualizar encabezado
+view headline	headlines	es-es	Ver encabezado
+you can only enter numbers for listings display	headlines	es-es	Sólo puede introducir número para visualizar listados
+you can only enter numbers minutes between refresh	headlines	es-es	Sólo pueden introducir números en los minutos entre refresco
+you must enter a base url	headlines	es-es	Debe introducir una dirección url base
+you must enter a display	headlines	es-es	Debe introducir una visualización
+you must enter a news url	headlines	es-es	Debe introducir una dirección url de noticias
+you must enter the number of listings display	headlines	es-es	Debe introducir el número de elementos listados a mostrar
+you must enter the number of minutes between reload	headlines	es-es	Debe introducir el número de minutos entre recargas

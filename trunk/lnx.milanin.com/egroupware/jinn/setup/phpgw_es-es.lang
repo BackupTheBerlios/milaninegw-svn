@@ -1,0 +1,242 @@
+%1 site objects have been imported.	jinn	es-es	Los objetos del sitio %1 han sido importados
+access rights	jinn	es-es	Derechos de acceso
+access rights for site not succesfully editted	jinn	es-es	Los derechos de acceso para el sitio NO fueron editados correctamente
+access rights for site succesfully editted	jinn	es-es	Los derechos de acceso para el sitio fueron editados correctamente
+access rights for site-object not succesfully editted	jinn	es-es	Los derechos de acceso para el objeto del sitio NO fueron editados correctamente
+access rights for site-object succesfully editted	jinn	es-es	Los derechos de acceso para el objeto del sitio fueron editados correctamente
+access rights site-objects	jinn	es-es	Derechos de acceso para objetos del sitio
+access_rights	jinn	es-es	Derechos de acceso
+add	jinn	es-es	Añadir
+add %1st image	jinn	es-es	Añadir primera imagen
+add attachent	jinn	es-es	Añadir adjunto
+add attachment	jinn	es-es	Añadir adjunto
+add attachment %1	jinn	es-es	Añadir adjunto %1
+add edit	jinn	es-es	Añadir editar
+add image	jinn	es-es	Añadir imagen
+add image %1	jinn	es-es	Añadir imagen %1
+add new	jinn	es-es	Añadir nuevo
+add new entry	jinn	es-es	Añadir nueva entrada
+add new many to many relation	jinn	es-es	Añadir nueva relación MUCHOS A MUCHOS
+add new many with many relation	jinn	es-es	Añadir nueva relación MUCHOS A MUCHOS
+add new one to many	jinn	es-es	Añadir nueva UNO A VARIOS
+add new one with many	jinn	es-es	Añadir nueva UNO A VARIOS
+add object	jinn	es-es	Añadir objeto
+add or remove	jinn	es-es	Añadir o quitar
+add phpgw_jinn_sites	jinn	es-es	añadir phpgw_jinn_sites
+add site	jinn	es-es	Añadir sitio
+add site object	jinn	es-es	Añadir objeto del sitio
+add site-object	jinn	es-es	Añadir objeto del sitio
+admin:: edit site	jinn	es-es	administrador: editar sitio
+administrator mode	jinn	es-es	Modo administrador
+administrators for site $site_name	jinn	es-es	administradores del sitio $site_name
+all from	jinn	es-es	todos los de
+another	jinn	es-es	otro
+are you sure?	jinn	es-es	¿Está seguro?
+ascending	jinn	es-es	ascendente
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	es-es	El directorio del adjunto no existe o no es correcto, y tampoco se puede crear...<br>Por favor, compruebe el directorio del servidor
+automatic	jinn	es-es	automático
+automaticly incrementing	jinn	es-es	incremento automático
+binary	jinn	es-es	binario
+browse	jinn	es-es	Examinar
+browse current object	jinn	es-es	examinar objeto actual
+browse sites	jinn	es-es	examinar sitios
+browse through object settings	admin	es-es	Navegar a través de las opciones de los objetos
+browse through sites	jinn	es-es	Navegar a través de los sitios
+browses through sites	admin	es-es	Navega a través de los sitios
+c_all	jinn	es-es	
+c_none	jinn	es-es	
+cancel	jinn	es-es	Cancelar
+category	jinn	es-es	Categoría
+check:	jinn	es-es	comprobar:
+choose	jinn	es-es	elegir
+close this window	jinn	es-es	cerrar esta ventana
+column name	jinn	es-es	nombre de columna
+come back after new valid tablename is saved to configure plugins	jinn	es-es	volver después de guardar el nuevo nombre de tabla válido para configurar los plugins
+come back in edit mode for configuring plugins	jinn	es-es	volver en modo edición para configurar los plugins
+come back in edit mode to configure plugins	jinn	es-es	volver en modo edición para configurar los plugins
+configure	jinn	es-es	configurar
+configure browse view	jinn	es-es	configurar la vista de examinar
+configure this object list view	jinn	es-es	Configurar esta vista de lista de objetos
+configure this tableview	jinn	es-es	Configurar esta vista de tabla
+configure this view	jinn	es-es	Configurar esta vista
+configure view of	jinn	es-es	Configurar la vista de
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	es-es	Ruta a 'Convert' de ImageMagick (p. ej. /usr/X11/R6/convert)
+copy	jinn	es-es	copiar
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	es-es	¡No se pudieron encontrar tablas! Compruebe el nombre,usuario y contraseña de la base de datos o cree una o más tablas en la base de datos.
+create a new site now	jinn	es-es	Crear un nuevo sitio ahora
+database connection failed! <p>please recheck your settings.	jinn	es-es	Fallo al conectar con la base de datos<P>Por favor, compruebe la configuración
+database connection was succesfull. <p>you can go on with the site-objects	jinn	es-es	La conexión a la base de datos se realizó correctamente.<P>Puede continuar con los objetos del sitio
+days	jinn	es-es	días
+default	jinn	es-es	predeterminado
+default image type (jpg, gif, png)	admin	es-es	Tipo de imagen predeterminado (jpg, gif, png)
+default image width	admin	es-es	Ancho predeterminado de imagen
+default order	jinn	es-es	Orden predeterminado
+default thumb width	admin	es-es	Ancho predeterminado de miniatura
+default:	jinn	es-es	Predeterminado:
+delete	jinn	es-es	Borrar
+descending	jinn	es-es	descendente
+developer links	jinn	es-es	Enlaces para el desarrollador
+development	admin	es-es	Desarrollo
+development server	jinn	es-es	Servidor de desarrollo
+dimensions	jinn	es-es	dimensiones
+disable the wysiwyg/htmlarea plugin	jinn	es-es	Desacativar el plugin de WYSIWYG/HTMLArea
+edit	jinn	es-es	editar
+edit jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li><br><li>define field relations</li><li>configure fieldplugins</li>	jinn	es-es	Editar parámetros de los objetos del sitio de JINN:<li>seleccione un nombre de objeto para visualizar</li><li>seleccione una tabla de una base de datos para usar con este objeto</li><li>si es necesario, corrija la ruta absoluta del servidor para subir el fichero</li><li>si es necesario, una URL de vista previa alternativa para los elementos subidos</li><br><li>define las relaciones entre los campos</li><li>configurar plugins</li>
+edit object	jinn	es-es	Editar objeto
+edit object configuration: <li>select a object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li><br><li>define field relations</li><li>configure fieldplugins</li>	jinn	es-es	Editar configuración del objeto: <li>seleccione un nombre de objeto para mostrar</li> <li>seleccionar una tabla de base de datos para usar con este objeto</li> <li>si es necesario, una ruta alternativa correcta absoluta para subir</li><li>si es necesario, una URL de vista previa alternativa correspondiente para los elementos subidos</li><br><li>definir relaciones de campos</li><li>configurar plugins de campos</li>
+edit phpgw_jinn_sites	jinn	es-es	editar phpgw_jinn_sites
+edit site	jinn	es-es	Editar sitio
+edit this site	jinn	es-es	Editar este sitio
+edit this site object	jinn	es-es	Editar este objeto de sitio
+editors for object $object_name in site $site_name	jinn	es-es	editores para el objeto $object_name en el sitio $site_name
+error path_open %1	jinn	es-es	error path_open %1
+export this site	jinn	es-es	exportar este sitio
+extra info	jinn	es-es	información extra
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	es-es	No se pudo abrir la tabla. Por favor, compruebe si la tabla <i>%1</i> existe todavía en la base de datos
+field plugin configuration	jinn	es-es	configuración del plugin del campo
+fields	jinn	es-es	campos
+filename	jinn	es-es	nombre de fichero
+filesize	jinn	es-es	tamaño de fichero
+form input plugin	jinn	es-es	plugin de entrada de formulario
+general preferences	jinn	es-es	Preferencias generales
+general settings	admin	es-es	Configuración general
+global configuration	jinn	es-es	Configuración global
+global site configuration	admin	es-es	Conifguración global del sitio
+go	jinn	es-es	ir
+height:	jinn	es-es	Altura:
+hidden	jinn	es-es	ocuto
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	es-es	El directorio de imágenes no existe o no es correcto.<br>Por favor, compruebe el directorio en el servidor
+image settings	admin	es-es	Configuración de la imagen
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	es-es	Directorio de ImageMagick (p. ej. /usr/X11R6/bin)
+import failed	jinn	es-es	Fallo al importar
+import jinn site	jinn	es-es	Importar sitio de JINN
+import jinn-site	jinn	es-es	Importar sitio de JINN
+import site	jinn	es-es	Importar sitio
+import was succesfull	jinn	es-es	Se importó correctamente
+import was succesfull<br>imported one site with	jinn	es-es	Se importó correctamente<br>Se importó un sitio con
+index	jinn	es-es	índice
+insert another record after saving	jinn	es-es	insertar otro registro después de guardar
+insert jinn site parameters: <li>insert a jinn site name for display</li> <li>insert correct database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview url for uploaded elements</li>	jinn	es-es	Insertar parámetros del sitio de JINN:<li>Insertar un nombre del sitio para identificarlo</li> <li>Insertar configuración correcta de la bse de datos</li> <li>Insertar una ruta absoluta correcta para subir</li> <li>Insertar una URL para la vista previa correspondiente a los elementos subidos</li>
+insert new site configuration: <li>insert a site name for display</li> <li>insert correct database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview url for uploaded elements</li>	jinn	es-es	Insertar configuración del nuevo sitio: <li>Insertar un nombre del sitio que se mostrará</li> <li>insertar configuración correcta de la base de datos</li> <li>insertar una ruta correcta absoluta de subida</li><li>insertar una URL para la vista previa correspondiente a los elementos subidos</li>
+insert/select jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li>	jinn	es-es	Insertar parámetros de objetos del sitio de JINN:<li>seleccione un nombre de objeto de JINN para identificarlo</li> <li>seleccione una tabla de la base de datos para usarla con este objeto</li> <li>si es necesario, una ruta correcta para subir al servidor</li> <li>si es necesario, una URL para la vista previa correspondiente a los elementos subidos</li>
+jinn	common	es-es	JINN
+jinn editors menu	jinn	es-es	Menú de editor de JiNN
+jinn preferences	jinn	es-es	Preferencias de JiNN
+list sites	jinn	es-es	Lista de sitios
+many 2 many relations will not work	jinn	es-es	Las relaciones de muchos a muchos no funcionan
+max. number of previews in form	jinn	es-es	Número máximo de vistas previas en el formulario
+maximum image width isn	jinn	es-es	el ancho máximo de la imagen es
+maximum image width isn\	jinn	es-es	Anchura máxima de la imagen
+moderator mode	jinn	es-es	Modo moderador
+months	jinn	es-es	meses
+months_abbr	jinn	es-es	
+new image size limits.	jinn	es-es	Nuevos límites para el tamaño de la imagen
+no matchs found	jinn	es-es	No se encontraron coincidencias
+no max. number	jinn	es-es	No hay número máximo
+no object selected. no able to configure this view	jinn	es-es	No hay objeto seleccionado. No se pudo configurar esta vista
+no records found	jinn	es-es	No se encontraron registros
+normal view	jinn	es-es	Vista normal
+notice that jinn needs imagemagick 5.4.9 or a later version	admin	es-es	Tenga en cuenta que JiNN necesita ImageMagick 5.4.9 o posterior
+object configuration: <li>select a object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li>	jinn	es-es	Configuración del objet: <li>Insertar un nombre del objeto mostrará</li> <li>seleccionar una base de datos para usar con este objeto</li> <li>si es necesario, una ruta correcta absoluta de subida</li> <li>si es necesario, una URL para la vista previa correspondiente a los elementos subidos</li>
+only if thumnails exits	jinn	es-es	Sólo si existen las miniaturas
+optional max. height	jinn	es-es	Altura máxima opcional
+optional max. width	jinn	es-es	Ancho máximo opcional
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	es-es	Ruta a convert de ImageMagick (p. ej. /usr/X11R6/bin
+please set your preferences for this application	jinn	es-es	Por favor, elija sus preferencias para esta aplicación
+preview thumbs or images in form	jinn	es-es	Vista previa de miniaturas o imágenes en el formulario
+preview website	jinn	es-es	Vista previa del sitio web
+production	admin	es-es	Producción
+real value	jinn	es-es	valor real
+record	jinn	es-es	registro
+record added succesfully	jinn	es-es	Registro añadido correctamente
+record deleted succesfully	jinn	es-es	Registro borrado correctamente
+record not succesfully copied. unknown error	jinn	es-es	El registro NO se ha copiado correctamente. Error desconocido.
+record not succesfully deleted. unknown error	jinn	es-es	El registro NO se ha borrado correctamente. Error desconocido.
+record succesfully copied	jinn	es-es	Registro copiado correctamente
+record succesfully deleted	jinn	es-es	Registro borrado correctamente
+record succesfully editted	jinn	es-es	Registro editado correctamente
+related	jinn	es-es	relacionado
+relation %1	jinn	es-es	relación %1
+relations for this object	jinn	es-es	Relaciones para este objeto
+remote	admin	es-es	Remoto
+remove	jinn	es-es	borrar
+replace existing site with the same name?	jinn	es-es	¿Sustituir el sitio existente con el mismo nombre?
+replaced existing site named <strong>%1</strong>.	jinn	es-es	El sitio <strong>%1</strong> ha sido sustituido
+reset form	jinn	es-es	restablecer formulario
+save	jinn	es-es	guardar
+save and continue	jinn	es-es	guardar y seguir
+save and contiue	jinn	es-es	guardar y seguir
+save and finish	jinn	es-es	guardar y terminar
+search	jinn	es-es	Buscar
+search for string	jinn	es-es	Buscar cadena
+select directory	jinn	es-es	Seleccionar directorio
+select jinn site file	jinn	es-es	Seleccionar fichero del sitio JINN
+select site	jinn	es-es	Seleccionar sitio
+select site to moderate	jinn	es-es	Seleccionar sitio para moderar
+select site-object to moderate	jinn	es-es	Seleccionar objeto del sitio para moderar
+select which graphic library jinn must use	admin	es-es	Seleccionar la librería gráfica que JiNN debe usar
+select_object	jinn	es-es	Seleccionar objeto
+server type?	admin	es-es	¿Tipo de servidor?
+set access right for site objects	jinn	es-es	Elija derecho de acceso para objetos del sitio
+set access rights	admin	es-es	Elija derechos de acceso
+set access rights for sites	jinn	es-es	Elija derechos de acceso para los sitios
+set administrators for	jinn	es-es	Elija administradores para
+set administrators for %1	jinn	es-es	Administradores del sitio para %1
+set object moderator	jinn	es-es	Elija moderator del objeto
+set site admin	jinn	es-es	Elija administrador del sitio
+show	jinn	es-es	mostrar
+show all columns	jinn	es-es	Mostrar todas las columnas
+show colomn	jinn	es-es	Mostrar columna
+show extra table debugging information	jinn	es-es	Mostrar información extra de depuración de la tabla
+show upload path	admin	es-es	Mostrar ruta de subida al servidor
+site beheerders	jinn	es-es	Administradores del sitio
+site db host	admin	es-es	Servidor de la base de datos del sitio
+site db name	admin	es-es	Nombre de la base de datos del sitio
+site db password	admin	es-es	Contraseña de la base de datos del sitio
+site db type	admin	es-es	Tipo de la base de datos del sitio
+site db user	admin	es-es	Usuario de la base de datos del sitio
+site description	admin	es-es	Descripción del sitio
+site id	admin	es-es	Id del sitio
+site media and documents	jinn	es-es	Medios y documentos del sitio
+site name	admin	es-es	Nombre del sitio
+site not succesfully added, unknown error	jinn	es-es	El sitio NO se añadió correctamente. Error desconocido.
+site not succesfully deleted, unknown error	jinn	es-es	El sitio NO se borró correctamente. Error desconocido.
+site not succesfully saved, unknown error	jinn	es-es	El sitio NO se guardó correctamente. Error desconocido.
+site object not succesfully added, unknown error	jinn	es-es	El objeto del sitio NO se añadió correctamente. Error desconocido.
+site object not succesfully deleted, unknown error	jinn	es-es	El objeto del sitio NO se borró correctamente. Error desconocido.
+site object not succesfully saved, unknown error	jinn	es-es	El objeto del sitio NO se guardó correctamente. Error desconocido.
+site object succesfully added	jinn	es-es	El objeto del sitio se añadió correctamente
+site object succesfully deleted	jinn	es-es	El objeto del sitio se borró correctamente
+site object succesfully saved	jinn	es-es	El objeto del sitio se guardó correctamente
+site succesfully added	jinn	es-es	El sitio se añadió correctamente.
+site succesfully deleted	jinn	es-es	El sitio se borró correctamente.
+site succesfully saved	jinn	es-es	El sitio se guardó correctamente.
+site title	admin	es-es	Título del sitio
+site-objects	jinn	es-es	Objetos del sitio
+sites	jinn	es-es	Sitios
+something went wrong	jinn	es-es	Algo fue mal
+start	admin	es-es	Inicio
+start at record	jinn	es-es	Iniciar en el registro
+stop at record	jinn	es-es	Parar en el registro
+submit and import	jinn	es-es	Enviar e importar
+t/m	jinn	es-es	t/m
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	es-es	El nombre de la tabla <i>%1</i> no es correcto. Probablemente el nombre de la tabla ha cambiado o la tabla fue borrada. Por favor, seleccione una tabla nueva o borre este objeto
+test database access	jinn	es-es	Probar acceso a la base de datos
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	es-es	El fichero que ha subido con el nombre %1 no es un fichero de imagen, está corrupto, o el tipo de fichero no está soportado por JINN
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn. if this error repeates, please check your imagemagick installation.  older version of imagemagick are known not work properly with jinn. be sure to install at least version 5.4.9 or higher	jinn	es-es	El fichero que subió con el nombre %1 no es un fichero de imagen, está corrupto, o el tipo de fichero no está soportado por JINN. Si este error se repite, por favor, compruebe su instalación de ImageMagick. Versiones antiguas de ImageMagick no funcionan correctamente con JINN. Asegúrese de instalar al menos la versión 5.4.9 o superior.
+the name of the new site is <strong>%1</strong>.	jinn	es-es	El nombre del nuevo sitio es <strong>%1</strong>
+the resize process failed, please contact the administrator	jinn	es-es	El proceso de redimensionado falló. Por favor, póngase en contacto con el administrador.
+the wysiwyg plugin makes you edit text like you do in a program like openoffice writer or word. some people don't like this feature though, so you can force jinn not to use it.	jinn	es-es	El plugin WYSIWYG hace que edite texto igual que en un programa como OpenOffice Writer o Word. Sin embargo, a algunas personas no les gusta esta característica, por lo que se puede forzar a que JiNN no la use.
+there are no directories in this site you have access to.	jinn	es-es	No hay directorios en este sitio a los que tenga acceso
+there is not site you have access to. ask your administrator to give you access to your site of site-objects or check if any site exist	jinn	es-es	No ningún sitio al que tenga acceso. Consulta al administrador para darle acceso al sitio de objetos o compruebe si existe alguno
+this table has not unique identifier field	jinn	es-es	La tabla no tiene un campo identificador único
+thisfile	jinn	es-es	este fichero
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	es-es	El directorio de las miniaturas no existe o no es correcto.<br>Por favor, compruebe el directorio del objeto en el servidor
+thumbnail	jinn	es-es	miniatura
+version	jinn	es-es	versión
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	es-es	Cuando muchas imágenes se adjuntan a un registro, el formulario puede cargarse muy lentamente. Se puede poner un número máximo de imágenes que se muestren en el formulario.
+when this is enables information like field length and field type is shown when editing record	jinn	es-es	Si está activado, la información como la longitud y el tipo de campo se muestra al editar el registro.
+when you choose 'never', only links to the images are displayed; when you choose 'only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'yes' all images are shown	jinn	es-es	Cuando elija 'Nunca', sólo se muestran los enlaces a las imágenes. Cuando elija 'Sólo si existe la miniatura', las vistas se muestran si existe una miniatura de la imagen. Si elige 'Sí', se muestran todas las imágenes.
+width:	jinn	es-es	Ancho:
+with_checked_files	jinn	es-es	
+you're not allowed to administrate media files	jinn	es-es	No tiene permiso para admnistrar los ficheros de medios

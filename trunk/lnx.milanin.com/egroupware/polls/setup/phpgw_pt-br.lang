@@ -1,0 +1,31 @@
+actions	polls	pt-br	Ações
+add answer to poll	polls	pt-br	Adicionar resposta a uma enquete
+add answers	polls	pt-br	Adicionar respostas
+add new poll question	polls	pt-br	Adicionar nova pergunta
+add questions	polls	pt-br	Adicionar perguntas
+allow users to vote more then once	polls	pt-br	Permitir aos usuários votarem mais de uma vez
+answer	polls	pt-br	Resposta
+answer has been added to poll	polls	pt-br	Resposta adicionada
+answer has been updated	polls	pt-br	Resposta atualizada
+answers	polls	pt-br	Respostas
+are you sure want to delete this answer ?	polls	pt-br	Você tem certeza que deseja remover essa resposta?
+are you sure want to delete this question ?	polls	pt-br	Você tem certeza que deseja remover essa pergunta?
+edit answer	polls	pt-br	Editar resposta
+edit poll question	polls	pt-br	Editar pergunta
+enter poll question	polls	pt-br	Incluir pergunta
+new poll has been added.  you should now add some answers for this poll	polls	pt-br	Nova enquete foi adicionada.  Você deve agora adicionar algumas respostas.
+poll question	polls	pt-br	Perguntas
+poll settings	common	pt-br	Configurações
+polls	common	pt-br	Enquetes
+question has been updated	polls	pt-br	A pergunta foi atualizada
+select current poll	polls	pt-br	Selecionar enquete atual
+settings	polls	pt-br	Configurações
+settings updated	polls	pt-br	Configurações atualizadas
+show answers	polls	pt-br	Exibir respostas
+show questions	common	pt-br	Exibir perguntas
+total votes	polls	pt-br	Total de respostas
+view poll	polls	pt-br	Ver enquete
+vote	polls	pt-br	Responder
+voting booth admin	admin	pt-br	Área de votação
+voting booth administration	polls	pt-br	Área de Administração de enquetes
+which poll	polls	pt-br	Qual enquete

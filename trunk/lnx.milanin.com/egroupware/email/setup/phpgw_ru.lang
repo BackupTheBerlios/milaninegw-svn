@@ -1,0 +1,382 @@
+%1 messages have been deleted	email	ru	Удалено %1 сообщений
+(required)	email	ru	(требуется)
+1 message has been deleted	email	ru	Удалено 1 сообщение
+1 message has been moved to	email	ru	1 сообщение перемещено
+<b>*apply*</b> this filter	email	ru	<b>ПРИМЕНИТЬ</b> Этот фильтр
+<b>apply all</b> filters	email	ru	<b>ПРИМЕНИТЬ ВСЕ</b>  Фильтры
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	ru	
+account	email	ru	учетная запись
+account name	email	ru	Имя учетной записи
+account user name	email	ru	Имя пользователя учетной записи
+accounts	email	ru	Учетные записи
+accounts:	email	ru	Учетные записи:
+add to address book	email	ru	Добавить в адресную книгу
+add to addressbook	email	ru	Добавить в адресную книгу
+address book	email	ru	Адресная книга
+after	email	ru	После
+all messages	email	ru	Все Сообщения
+and	email	ru	и
+and stop filtering	email	ru	и остановить фильтрацию
+answered	email	ru	отвечено
+apply	email	ru	применить
+apply filters report:	email	ru	Отчет применения фильтров
+apr	email	ru	Апр
+aqua fusion	email	ru	Aqua Fusion
+arrival date	email	ru	Дата прихода
+as	email	ru	как
+attach file	email	ru	Вложить Файл
+attach signature	email	ru	Присоединить подпись
+attachment	email	ru	Вложение
+aug	email	ru	Авг
+bcc	email	ru	bcc
+bcc address	email	ru	Адрес bcc
+before	email	ru	Перед
+big	email	ru	Большой
+bigger	email	ru	Больше
+biggest	email	ru	Наибольший
+body	email	ru	Тело
+both	email	ru	Оба
+button type	email	ru	Тип кнопки
+cache server data whenever possible	email	ru	кешировать данные с сервера, когда это возможно
+cc	email	ru	CC
+cc address	email	ru	Адрес CC
+change font size in your e-mail pages	email	ru	Изменить размер шрифта на Ваших E-Mail страницах
+check flags for type of mails	email	ru	Отметить флаги для типов почты
+choose for rename	email	ru	Выбрать для переименования
+choose to rename	email	ru	выбрать для переименования
+click here for more info in a new window	email	ru	для доп. информации щелкните здесь
+click here to continue	email	ru	Щелкнуть здесь для продолжения
+click here to edit the settings for this email account.	email	ru	щелкнуть здесь для изменения установок учетной записи
+click here to return to your home page.	email	ru	щелкнуть здесь, чтобы вернутся на Вашу домашнюю страницу
+company	email	ru	Организация
+compose	email	ru	Создать
+compose message	email	ru	новое сообщение
+compose new	common	ru	Создать новое
+contains	email	ru	Содержит
+could not open this mailbox	email	ru	Не могу открыть этот почтовый ящик
+create (expert)	email	ru	создать (эксперт)
+create a folder	email	ru	Создать папку
+current attachments (%1)	email	ru	Текущие вложения (%1)
+custom e-mail preferences	email	ru	Личные настройки E-Mail
+custom e-mail settings	email	ru	Личные установки E-Mail
+debugging page	email	ru	Страница отладки
+dec	email	ru	Дек
+default sorting order	email	ru	Порядок сортировки по умолчанию
+default:	common	ru	по умолчанию:
+delete (expert)	email	ru	Удалить (эксперт)
+delete a folder	email	ru	Удалить папку
+delete account	common	ru	Удалить учетную запись
+deleted	email	ru	удалено
+deleted messages (trash) folder	email	ru	Папка удаленных сообщений (Trash)
+deleted messages folder name	email	ru	Имя папки для удаленных сообщений
+deleted messages go to trash	email	ru	Удаленные сообщения помещаются в Trash
+deleted messages saved to folder:	email	ru	Удаленные сообщения сохраняются в папке:
+discard	email	ru	Отбросить
+does not contain	email	ru	Не содержит
+draft	email	ru	черновик
+e-mail extra account	email	ru	Дополнительная учетная запись
+e-mail extra accounts	email	ru	Дополнительные учетные записи
+e-mail extra accounts list	email	ru	Список дополнительных учетных записей
+e-mail filters	common	ru	Фильтры E-Mail
+e-mail folders	common	ru	Папки E-Mail
+e-mail inbox filters list	email	ru	Список фильтров Входящих
+e-mail preferences	common	ru	Настройки E-Mail
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	ru	
+edit filters	email	ru	Отредактировать фильтры
+email account name	email	ru	Имя учетной записи E-Mail
+email address	email	ru	адрес E-Mail
+email date	email	ru	Дата E-Mail
+email filters	email	ru	Фильтры E-Mail
+email password	email	ru	Пароль E-Mail
+email preferences	email	ru	Настройки E-Mail
+email signature	email	ru	Подпись E-Mail
+email type	common	ru	Тип E-Mail
+enable this email account	common	ru	Включить эту учетную запись
+enable utf-7 encoded folder names	email	ru	Включить кодирование имен папок utf-7
+enter the search string in the text boxes	email	ru	Введите строку для поиска
+enter your pop	admin	ru	Введите IP-адрес или имя Вашего POP-сервера
+error moving messages to	email	ru	Ошибка при перемещении сообщений в
+error text not provided	email	ru	ошибка нет текста
+error: unknown message data	email	ru	Ошибка: Неизвестные данные сообщения
+evolution style	email	ru	Стиль Evolution
+extra accounts	email	ru	Дополнительные учетные записи
+extra e-mail account	common	ru	Дополнительная учетная запись E-Mail
+extra e-mail accounts	common	ru	Дополнительные учетные записи E-Mail
+extra e-mail preferences number %1	email	ru	Настройки дополнительных E-Mail номер %1
+feb	email	ru	Фев
+fewer actions	email	ru	Меньше действий
+fewer choices	email	ru	Меньше выбор
+file	email	ru	Файл
+file attachment	email	ru	Файл-вложение
+file into	email	ru	Файл В
+fill in as much as you can	email	ru	Заполните как можно больше
+filter [number] and name	email	ru	Фильтровать [номер] и Имя
+filter inbox for accounts	email	ru	Фильтровать Входящие по учетным записям
+filter name	email	ru	Фильтровать по Имени
+filter name:	email	ru	фильтровать по имени:
+filter number	email	ru	Фильтровать Номер
+filters	email	ru	Фильтры
+filters list	email	ru	Список фильтров
+flag as important	email	ru	Пометить как важное
+flagged	email	ru	помечено
+folder	email	ru	Папка
+folder maintenance	email	ru	Управление папками
+folder name	email	ru	Имя папки
+folder size	email	ru	Размер папки
+folders	email	ru	Папки
+for the file to actually upload	email	ru	для выгрузки файла
+for these items, fill only what is different from you default e-mail preferences	common	ru	
+forward	email	ru	Перенаправить
+from	email	ru	От
+from address	email	ru	Адрес "От"
+get size	email	ru	получить размер
+go	email	ru	перейти
+go back	email	ru	Перейти назад
+go back to	email	ru	Перейти назад к
+header field	email	ru	Поле заголовка
+hidden	email	ru	скрытое
+hide help	email	ru	Скрыть Помощь
+html messages with the iframe  tag may be klez or other worm emails.	email	ru	
+icon size	email	ru	Размер иконок
+icon theme	email	ru	Тема иконок
+idots crystal style	email	ru	Стиль iDots Crystal
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	ru	
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	ru	
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	ru	
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	ru	
+if applicable	email	ru	Если применимо
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	ru	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	ru	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	ru	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	ru	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	ru	
+if fileto then select destination folder	email	ru	
+if messages match	email	ru	
+if there is no obvious error, check your username and password first.	email	ru	
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	ru	
+image	email	ru	Рисунок
+imap mail server hostname or ip address	admin	ru	IP-адрес или имя Вашего IMAP-сервера
+imap server type	common	ru	Тип IMAP-сервера
+imap server type - if applicable	email	ru	Тип IMAP-сервера - если применяется
+important	email	ru	важно
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	ru	
+inbox	email	ru	Входящие
+input error	email	ru	Ошибка ввода
+input error:	email	ru	Ошибка ввода:
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	ru	
+jan	email	ru	Янв
+javascript	email	ru	Яваскрипт
+jul	email	ru	Июл
+jun	email	ru	Июн
+keep	email	ru	Сохранить
+keyword	email	ru	ключевое слово
+keywords	email	ru	Ключевые слова
+layout 1	common	ru	
+layout 2	common	ru	
+lines	email	ru	Строки
+list messages	email	ru	показать сообщения
+long names	email	ru	длинные имена
+mail folder(uw-maildir)	email	ru	Папка Mail (uw-maildir)
+mail server	email	ru	Почтовый сервер
+mail server login type	admin	ru	Тип входа на почтовый сервер
+mail server type	email	ru	Тип почтового сервера
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	ru	
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	ru	
+manage accounts	email	ru	Управление учетными записями
+manage folders	email	ru	Управление папками
+mar	email	ru	Март
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	ru	
+message list layout	common	ru	Тип списка сообщений
+messages	email	ru	Сообщения
+messages found in folder	email	ru	Сообщения, найденные в папке
+messages have been moved to	email	ru	сообщения перемещены в
+more actions	email	ru	Больше действий
+more choices	email	ru	Больше выбор
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	ru	
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	ru	
+move down	email	ru	Переместить вниз
+move selected messages into	email	ru	Переместить выбранные сообщения в
+move this message into	email	ru	Переместить это сообщение в
+move up	email	ru	Переместить вверх
+mozilla modern style	email	ru	Стиль Mozilla Modern
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	ru	
+new	email	ru	Новое
+new account	email	ru	Новая учетная запись
+new filter	email	ru	Новый фильтр
+new message	email	ru	Новое сообщение
+new messages	email	ru	Новые сообщения
+newest	common	ru	новейшее
+next message	email	ru	Следующее сообщение
+no change	email	ru	не изменять
+no error returned from server	email	ru	Сервер не вернул ошибок
+no message found in folder '%1'	email	ru	В папке '%1'нет сообщений
+no next message	email	ru	нет следующего сообщения
+no previous message	email	ru	нет предыдущего сообщения
+noia &#64; carlitus style	email	ru	Стиль Carlitus
+non-standard	email	ru	Нестандартное
+not used	email	ru	не используется
+notify on delivery	email	ru	Оповестить о доставке
+nov	email	ru	Ноя
+number	common	ru	Номер
+number of matches:	email	ru	количество совпадений:
+oct	email	ru	Окт
+old	email	ru	Старое
+oldest	common	ru	старейшее
+on	email	ru	На
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	ru	
+or	common	ru	или
+or enter text	email	ru	или введите текст
+organization	email	ru	Организация
+persistent email server session	email	ru	
+phone	email	ru	Телефон
+please fill in everything you need	email	ru	Пожалуйста, заполните все, что Вам нужно
+please select a folder to rename	email	ru	Пожалуйста, выберите папку для переименования
+please select a message first	email	ru	Пожалуйста, сначала выберите сообщение
+please submit a filename to attach	email	ru	Пожалуйста, укажите имя файла для вложения
+please type a folder name in the text box	email	ru	Пожалуйста, введите имя папки
+previous	email	ru	Предыдущее
+previous message	email	ru	Предыдущее сообщение
+printable	email	ru	печатная (версия)
+raw message	email	ru	исходный текст
+read mail	email	ru	Прочитать почту
+received headers	email	ru	Полученные заголовки
+recent	email	ru	Недавние
+recipient	email	ru	Получатель
+redirect	email	ru	Перенаправить
+reject	email	ru	Утказать
+rename (expert)	email	ru	Переименовать (эксперт)
+rename a folder	email	ru	Переименовать папку
+reply	email	ru	Ответить
+reply all	email	ru	Ответить всем
+replyto	email	ru	Ответить:
+request delivery notification	email	ru	Затребовать извещение о доставке
+requested filter action:	email	ru	затребованное действие фильтра:
+required	email	ru	требуется
+reset	email	ru	Сбросить
+result	email	ru	результат
+return mails during this time period	email	ru	Вернуть почту за этот период
+save deleted messages in folder named below	email	ru	сохранить Удаленные в папке, указанной ниже
+save sent messages in folder named below	email	ru	сохранить Отправленные в папке, указанной ниже
+search for mails in these folders	email	ru	Искать почту в этих папках
+search this folder	email	ru	искать в этой папке
+section	email	ru	Секция
+seen	email	ru	Просмотренные
+select home email address	email	ru	Выберите домашний адрес почты
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	ru	
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	ru	
+select work email address	email	ru	Выберите рабочий адрес почты
+select your mail server type	admin	ru	Выберите тип Вашего почтового сервера
+select your screensize for proper showing of the javascript addressbook	email	ru	
+select your screensize for propper showing of the javascript addressbook	email	ru	
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	ru	
+send	email	ru	Отправить
+send deleted messages to the trash	email	ru	Переместить удаленные сообщения в trash
+send forwarded mail as quoted attachment	email	ru	Посылать перенаправленные сообщения как цитаты
+sender	email	ru	Отправитель
+sent	email	ru	отправлено
+sent folder	email	ru	папка отправленного
+sent messages folder	common	ru	Папка отправленных сообщений
+sent messages folder name	email	ru	Имя папки отправленных сообщений
+sent messages saved in &quot;sent&quot; folder	common	ru	Отправленные сообщения сохраненв в папке &quot;sent&quot;
+sent messages saved to folder:	email	ru	Отправленные сообщения сохраненв в папке:
+sep	email	ru	Сен
+settings	email	ru	Установки
+short names	email	ru	краткие имена
+show help	email	ru	Показать Помощь
+show long names	email	ru	Показать длинные имена
+show message	email	ru	показать сообщение
+show new messages in combobox	email	ru	Показать Новые сообщения в ComboBox
+show new messages on main screen	email	ru	Показать новые сообщения на главном экране
+show sender's email address with name	email	ru	Показать адрес отправителя с именем
+show short names	email	ru	Показать короткие имена
+show total folder size by default	email	ru	Показывать общий размер папки по умолчанию
+simple	email	ru	Простой
+size	email	ru	Размер
+size larger than	email	ru	Размер больше чем
+size smaller than	email	ru	Размер меньше чем
+small	email	ru	Маленькие
+small view	email	ru	уменьшенный вид
+smaller	email	ru	Меньше
+smallest	email	ru	Наименьший
+somebody	email	ru	кто-то
+sort by	email	ru	Сортировать по
+spell check	email	ru	Проверка правописания
+standard e-mail preferences	email	ru	Стандартные настройки E-Mail
+stop if matched	email	ru	Остановиться, если совпало
+switch accounts	email	ru	Переключить учетные записи
+switch current folder to	common	ru	Переключить текущую папку на
+test all filters	email	ru	Тестировать все фильтры
+test or apply all filters	email	ru	тестировать или применить ВСЕ фильтры
+test run this filter	email	ru	Тест-проход этого фильтра
+text	email	ru	Текст
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	ru	
+the email application offers different button displays, these buttons can be text, images, or both.	email	ru	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	ru	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	ru	
+the email application offers different icon image themes, these icons can be big or small.	email	ru	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	ru	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	ru	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	ru	
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	ru	
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	ru	
+then do this	email	ru	Тогда сделать это
+then take this actions	email	ru	Тогда произвести эти действия
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	ru	
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	ru	
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	ru	
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	ru	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	ru	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	ru	
+this data not supplied.	email	ru	Эти данные не предоставлены
+this folder is empty	email	ru	Эта папка пуста
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	ru	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	ru	
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	ru	
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	ru	
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	ru	
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	ru	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	ru	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	ru	
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	ru	
+to	email	ru	Кому
+to address	email	ru	Адрес "Кому"
+total messages	email	ru	Всего сообщений
+trash	email	ru	trash
+trash folder	email	ru	папка trash
+u-wash mail folder	email	ru	
+u-wash mail folder - if applicable	email	ru	
+unable to get source folder name	email	ru	Не указана папка-источник
+unable to get target folder name	email	ru	Не указана папка-приемник
+unanswered	email	ru	Неотвеченные
+undeleted	email	ru	Неудаленные
+undisclosed recipients	email	ru	Нераскрытые получатели
+undisclosed sender	email	ru	Нераскрытые отправители
+unflagged	email	ru	Непомеченные
+unknown action	email	ru	Неизвестное действие
+unknown error	email	ru	Неизвестная ошибка
+unknown translation	email	ru	неизвестный перевод
+unseen	email	ru	Не просмотренные
+use custom settings	email	ru	Используйте личные установки
+view as html	email	ru	Смотреть как HTML
+view formatted	email	ru	Смотреть как форматированное
+view headers	email	ru	Смотреть заголовки
+view unformatted	email	ru	Смотреть как неформатированное
+warn_attachment_name_dangerous	email	ru	
+warn_attachment_only_mail	email	ru	
+warn_b64_encoded_displayable	email	ru	
+warn_has_iframe_maybe_klez	email	ru	
+warn_script_tags	email	ru	
+warn_style_sheet	email	ru	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	ru	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	ru	
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	ru	
+wrote	email	ru	писал
+you have %1 new messages!	common	ru	%1 новых сообщений !
+you have 1 new message!	common	ru	1 новое сообщение !
+you have messages!	common	ru	Новые сообщения !
+you have no new messages	common	ru	Нет новых сообщений !
+you must click	email	ru	Вы должны щелкнуть
+you must click %1 for the file to actually upload	email	ru	Вы должны щелкнуть %1 чтобы загрузить файл
+your full name	common	ru	Ваше полное имя
+your message has been sent	common	ru	Ваше сообщение отправлено
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	ru	

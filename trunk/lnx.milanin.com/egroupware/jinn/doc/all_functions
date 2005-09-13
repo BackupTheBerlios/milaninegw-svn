@@ -1,0 +1,48 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	This file list all known function for systematic testing purposes
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++
++ Author Pim
++ Last Changed 09-04-2003
++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+	moderator modus Overall status	-> OK
+	------------------------------------------------------
+	browse JSO						-> OK
+	copy JSO-record					-> OK 
+	delete JSO-record				-> OK
+	show all cols					-> OK
+	config columnview				-> NOT IMPLEMENTED JET
+	edit JSO-record					-> OK
+	add JSO-record					-> OK 
+	1w1 relations in edit form		-> OK
+	1wX relations in edit form		-> OK 
+	delete objects from edit form	-> OK
+	
+	imagepath  						-> OK
+	attachment path  				-> OK
+	nl2break plugin					-> OK 
+	htmlarea						-> BROKEN 
+	htmlarea v3						-> NOT IMPLEMENTED JET
+	boolian							-> OK
+	select							-> OK
+	hide this field					-> OK
+
+	admin modus status				-> not tested
+	------------------------------------------------------
+	global configuration			-> OK
+	test_db_access					-> OK 
+	browse_site						-> OK
+	add new site					-> OK
+	object							-> OK 
+	copy site/object from list		-> NOT IMPLEMENTED JET
+	export/import site				-> OK
+	delete site/object				-> OK
+	list access rights				-> OK
+	set access rights site			-> OK
+	access rights object			-> OK
+	plugin config					-> OK 

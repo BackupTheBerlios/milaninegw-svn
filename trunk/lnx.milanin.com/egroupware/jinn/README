@@ -1,0 +1,42 @@
+Readme Jinn for phpGroupWare
+======================================
+Jinn for phpGroupWare is a multi-site, multi-database, multi-user/-group,
+database driven jinn written for in and for the phpGroupWare Framework.
+jinn for phpGroupWare makes it possible to have a lot of site-databases moderated
+by a lot of people all in one system. Access Rights are asigned at
+table-level and every site can have one or more site administrators.
+
+Currently it's only tested with MySQL but because it only uses the phpGW-API database calls
+it's must be able to work with PostgreSQL too.
+
+Main features are:
+- automatic form creation for databasetables
+- automatic image-uploading method
+- automatic image-thumb generation
+- users or groups can be assigned to tables or databases
+- one with many relations between tablefields
+- easy accessright administration
+- easy site (database) setup and administration
+- easy object (tables) setup and administraion
+- support for large tables
+- fast browsing trough records
+- fast seaching for records
+- themable(using phpGroupware-templates)
+- language independant
+- uploading support for other attachments then images
+- wysiwyg html/xml editor
+- many with many fieldrelations
+- relation editor
+
+Future features:
+- backup interface for databases and directories
+- waiting,prgrammed and blind content
+- support for other databases
+- support for remote sites/databases
+- more browsing functions, like sorting, hiding columns and previewing thumbs
+- userpreferences
+- accessrights administration by site-administrator
+- automatic database-setup
+- more database administration-features like creating databases/fields etc, etc.
+
+Please report bugs or better, patches to pim@lingewoud.nl

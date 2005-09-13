@@ -1,0 +1,84 @@
+%1 does not exist !!!	setup	nl	%1 bestaat niet !!!
+%1 is %2%3 !!!	setup	nl	%1 is %2%3 !!!
+(account deletion in sql only)	setup	nl	(verwijderen van accounts alleen in SQL)
+*** do not update your database via setup, as the update might be interrupted by the max_execution_time, which leaves your db in an unrecoverable state (your data is lost) !!!	setup	nl	*** Werk uw database niet via Setup bij omdat de update mogelijk onderbroken kan worden door de max_execution_time van PHP. Dit laat uw database achter in een niet repareerbare staat en uw data zal verloren zijn.
+*** you have to do the changes manualy in your php.ini (usualy in /etc on linux) in order to get egw fully working !!!	setup	nl	*** U heeft moet handmatig wijzigingen aanbrengen in uw php.ini om eGroupWare volledig aan het werk te krijkgen.
+00 (disable)	setup	nl	00 (deactiveer / aanbevolen)
+13 (ntp)	setup	nl	13 (ntp)
+80 (http)	setup	nl	80 (http)
+<b>this will create 1 admin account and 3 demo accounts</b><br>the username/passwords are: demo/guest, demo2/guest and demo3/guest.	setup	nl	<b>Dit maakt 1 beheerdersaccount en 3 demo accounts</b><br>De gebruikersnamen/wachtwoorden zijn: demo/guest, demo2/guest and demo3/guest.
+actions	setup	nl	Acties
+add a domain	setup	nl	Een domein toevoegen
+add auto-created users to this group ('default' will be attempted if this is empty.)	setup	nl	Automatisch gecreërde gebruikers toevoegen aan deze groep ('Standaard' wordt gebruikt als dit veld leeg is)
+additional settings	setup	nl	Overige instellingen
+admin first name	setup	nl	Voornaam beheerder
+admin last name	setup	nl	Achternaam beheerder
+admin password	setup	nl	Wachtwoord beheerder
+admin password to header manager	setup	nl	Wachtwoord beheerder van header
+admin user for header manager	setup	nl	Beheerder voor de header-configutie
+admin username	setup	nl	gebruikersnaam beheerder
+admins	setup	nl	Beheerders
+after retrieving the file, put it into place as the header.inc.php.  then, click "continue".	setup	nl	Zet het bestand op de plek van header.inc.php als u het hebt ontvangen. Klik vervolgens op "doorgaan".
+all core tables and the admin and preferences applications	setup	nl	Alle hoofdtabellen en de beheerder- en voorkeurentoepassingen
+all users	setup	nl	Alle gebruikers
+analysis	setup	nl	Analyse
+app details	setup	nl	Toep. details
+app install/remove/upgrade	setup	nl	Toep. installeren/verwijderen/bijwerken
+app process	setup	nl	Toep. proces
+application data	setup	nl	Gegevens toepassing
+application list	setup	nl	Lijst toepassingen
+application management	setup	nl	Toepassingenbeheer
+application name and status	setup	nl	Naam en status toepassing
+application name and status information	setup	nl	Naam en statusinformatie toepassing
+application title	setup	nl	Titel toepassing
+are you sure you want to delete your existing tables and data?	setup	nl	Weet u zeker dat i uw huidige tabellen en gegevens wilt verwijderen?
+are you sure?	setup	nl	WEET U HET ZEKER?
+at your request, this script is going to attempt to create the database and assign the db user rights to it	setup	nl	Op uw verzoek gaat dit script proberen een database aan te maken en de db-gebruikersrechten toe te wijzen.
+available version	setup	nl	Beschikbare versie
+back to the previous screen	setup	nl	Terug naar voor vorig scherm
+back to user login	setup	nl	Terug naar gebruikerslogin
+because an application it depends upon was upgraded	setup	nl	omdat een toepassing waar het afhankelijk van is, is bijgewerkt
+because it depends upon	setup	nl	omdat het afhankelijk is van
+bottom	setup	nl	onderaan
+cancel	setup	nl	Annuleren
+change system-charset	setup	nl	Verander de systeemkarakterset
+charset	setup	nl	karakterset
+check installation	setup	nl	Controleer installatie
+check ip address of all sessions	setup	nl	Controleer IPadres van alle sessies
+checking the egroupware installation	setup	nl	eGroupWare installatie aan het controleren
+click <a href="index.php">here</a> to return to setup.	setup	nl	Klik <a href="index.php">hier</a> om terug te gaan naar Setup.
+click here	setup	nl	Klik hier
+completed	setup	nl	Compleet
+configuration	setup	nl	Configuratie
+you appear to be running version %1 of egroupware	setup	nl	U lijkt eGroupWare versie %1 te draaien
+you appear to be using php earlier than 4.1.0. egroupware now requires 4.1.0 or later	setup	nl	U lijkt een oudere versie dan PHP 4.1.0 te gebruiken. eGroupWare vereist nu PHP 4.1.0 of nieuwer
+you appear to be using php3. disabling php4 sessions support	setup	nl	Het lijkt erop dat u PHP3 gebruikt. PHP4 Sessieondersteuning is gedeactiveerd.
+you appear to be using php4. enabling php4 sessions support	setup	nl	Het lijkt erop dat u PHP4 gebruikt. PHP4 Sessieondersteuning is geactiveerd.
+you appear to have microsoft sql server support enabled	setup	nl	Microsoft SQL Server ondersteuning lijkt te zijn geactiveerd
+you appear to have mysql support enabled	setup	nl	MySQL ondersteuning lijkt te zijn geactiveerd.
+you appear to have oracle support enabled	setup	nl	Oracle ondersteuning lijkt te zijn geactiveerd.
+you appear to have oracle v8 (oci) support enabled	setup	nl	Oracle V8 (OCI) ondersteuning lijkt te zijn geactiveerd.
+you appear to have postgres-db support enabled	setup	nl	Postgres-DB ondersteuning lijkt te zijn geactiveerd.
+you appear to have xml support enabled	setup	nl	XML ondersteuning lijkt te zijn geactiveerd.
+you are ready for this stage, but this stage is not yet written.<br>	setup	nl	U bent klaar voor dit stadium, maar dit stadium is nog niet weggeschreven.</br>
+you didn't enter a config password for domain %1	setup	nl	U heeft geen configuratie wachtwoord ingevoerd voor domein %1.
+you didn't enter a header admin password	setup	nl	U heeft geen header beheerderwachtwoord ingevoerd.
+you do not have any languages installed. please install one now <br>	setup	nl	U heeft nog geen talen geïnstalleerd. Doe dit a.u.b. nu.<br/>
+you have not created your header.inc.php yet!<br> you can create it now.	setup	nl	U heeft nog geen header.inc.php gemaakt! <br/> U kunt dit nu doen.
+you have successfully logged out	setup	nl	U bent correct uitgelogd.
+you must enter a username for the admin	setup	nl	U moet een gebruikersnaam geven voor de beheerder
+you need to add some domains to your header.inc.php.	setup	nl	U moet één of meerdere domeinen toevoegen aan uw header.inc.php.
+you need to select your current charset!	setup	nl	U moet een huidige karakterset kiezen!
+you should either uninstall and then reinstall it, or attempt manual repairs	setup	nl	U moet of proberen de de-installeren en vervolgens opnieuw te installeren of u kunt  handmatige reparaties doen
+you're using an old configuration file format...	setup	nl	U gebruikt een verouderd bestandsformaat voor de configuratie
+you're using an old header.inc.php version...	setup	nl	U gebruikt een verouderde header.inc.php versie...
+your applications are current	setup	nl	Uw toepassingen zijn actueel
+your database does not exist	setup	nl	U database bestaat niet!
+your database is not working!	setup	nl	U database werkt niet!
+your database is working, but you dont have any applications installed	setup	nl	U database werkt, maar u heeft nog geen toepassingen geïnstalleerd.
+your header admin password is not set. please set it now!	setup	nl	Uw header-beheerderwachtwoord is niet ingesteld. Doe dit nu!
+your header.inc.php needs upgrading.	setup	nl	Het is noodzakelijk uw header.inc.php bij te werken
+your header.inc.php needs upgrading.<br><blink><b class="msg">warning!</b></blink><br><b>make backups!</b>	setup	nl	Het is noodzakelijk uw header.inc.php bij te werken. <br>
+your tables are current	setup	nl	Uw tabellen zijn actueel
+your tables may be altered and you may lose data	setup	nl	U tabellen kunnen gewijzigd worden en u kunt gegevens verliezen
+your tables will be dropped and you will lose data	setup	nl	U tabellen worden verwijderd en alle gegevens gaan verloren !!

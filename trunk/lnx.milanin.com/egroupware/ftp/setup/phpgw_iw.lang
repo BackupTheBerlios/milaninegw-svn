@@ -1,0 +1,33 @@
+are you sure you want to delete %1 ?	ftp	iw	?בטוח שברצומך למחוק את %1
+attempt to create a directory with empty name	ftp	iw	נסיון ליצור מחיצה בעלת שם ריק
+cancel	ftp	iw	בטל
+connect	ftp	iw	התחבר
+create new directory	ftp	iw	צור מחיצה חדשה
+delete	ftp	iw	מחק
+failed to connect to %1 with user %2 and password %3	ftp	iw	לא הצלחתי להתחבר אל %1 עם שם שמשתמש %2 וסיסמא %3
+failed to create directory %1	ftp	iw	לא הצלחתי ליצור את מחיצת %1
+failed to delete %1	ftp	iw	לא הצלחתי למחוק את %1
+failed to rename %1 to %2	ftp	iw	לה הצלחתי לשנות את השם של %1 ל-%2
+failed to upload %1	ftp	iw	לא הצלחתי לעלות את %1
+ftp client	ftp	iw	FTP-לקוח ה
+ftp hostname	ftp	iw	FTP-שם מארח ה
+ftp server	ftp	iw	FTP שרת
+home	ftp	iw	בית
+log into ftp server	ftp	iw	FTP-כניסה אל שרת ה
+logout/relogin	ftp	iw	צא/כנס מחדש מ/אל המערכת
+password	ftp	iw	סיסמא
+permissions	ftp	iw	הרשאות
+rename	ftp	iw	שנה שם
+rename file	ftp	iw	שנה שם קובץ
+rename from	ftp	iw	-שנה מ
+rename to	ftp	iw	-ל
+renamed %1 to %2	ftp	iw	שינתי את שם %1 ל- %2
+save	ftp	iw	שמור
+save to filemanager	ftp	iw	שמור למנהל הקבצים
+size	ftp	iw	גודל
+successfully created directory %1	ftp	iw	הצלחתי ליצור חמיצת %1
+successfully deleted %1	ftp	iw	הצלחתי למחוק את %1
+successfully uploaded %1	ftp	iw	הצלחתי לעלות את %1
+upload	ftp	iw	העלה
+username	ftp	iw	שם משתמש
+view	ftp	iw	תצוגה

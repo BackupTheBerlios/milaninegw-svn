@@ -1,0 +1,194 @@
+%1 site objects have been imported.	jinn	fr	%1 Objets du Site ont été importés.
+access rights	jinn	fr	Droits d'Accès
+access rights for site not succesfully editted	jinn	fr	Droits d'Accès pour Site PAS édité avec succès
+access rights for site succesfully editted	jinn	fr	Droits d'Accès pour Site édité avec succès
+access rights for site-object not succesfully editted	jinn	fr	Droits d'Accès pour objet de site PAS édité avec succès
+access rights for site-object succesfully editted	jinn	fr	Droits d'Accès pour objet de site édité avec succès
+access rights site-objects	jinn	fr	Droits d'Accès pour objets de site
+access_rights	jinn	fr	access_rights
+add	jinn	fr	ajouter
+add %1st image	jinn	fr	ajouter la %1ème image
+add attachent	jinn	fr	ajouter attachement
+add attachment	jinn	fr	ajouter attachement
+add attachment %1	jinn	fr	ajouter attachement %1
+add edit	jinn	fr	Ajouter Edition
+add image	jinn	fr	ajouter image
+add image %1	jinn	fr	ajouter image %1
+add new	jinn	fr	Ajouter nouveau
+add new entry	jinn	fr	Ajouter nouvelle entrée
+add new many with many relation	jinn	fr	Ajouter nouvelle relation PLUSIEURS AVEC PLUSIEURS
+add new one with many	jinn	fr	Ajouter nouveau UN AVEC PLUSIEURS
+add object	jinn	fr	Ajouter objet
+add or remove	jinn	fr	ajouter ou supprimer
+add site	jinn	fr	Ajouter Site
+add site object	jinn	fr	Ajouter objet de site
+add site-object	jinn	fr	Ajouter objet de site
+administrator mode	jinn	fr	Mode Administrateur
+administrators for site $site_name	jinn	fr	administrateurs pour site $site_name
+all from	jinn	fr	tous de
+another	jinn	fr	un autre
+are you sure?	jinn	fr	Etes-vous sûr?
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	fr	le répertoire d'attachement n'existe pas ou est incorrect, ou bien il ne peut être créé...<br>veuillez vérifier le répertoire d'upload des objets:
+automatic	jinn	fr	automatique
+binary	jinn	fr	binaire
+browse	jinn	fr	Voir
+browse current object	jinn	fr	Voir les objets en cours
+browse sites	jinn	fr	voir les sites
+browse through object settings	admin	fr	Voir les paramètres des objets
+browse through sites	jinn	fr	Voir les sites
+browses through sites	admin	fr	Va voir les sites
+cancel	jinn	fr	Annuler
+category	jinn	fr	Catégorie
+check:	jinn	fr	vérifiez:
+choose	jinn	fr	choisir
+close this window	jinn	fr	fermer cette fenêtre
+column name	jinn	fr	nom de colonne
+come back after new valid tablename is saved to configure plugins	jinn	fr	revenez après avoir enregistré un nom de table valide afin de configurer les plugins
+come back in edit mode for configuring plugins	jinn	fr	revenez en mode édition pour configurer les plugins
+come back in edit mode to configure plugins	jinn	fr	revenez en mode édition pour configurer les plugins
+configure	jinn	fr	configurer
+configure browse view	jinn	fr	configurer la vue d'affichage
+configure this object list view	jinn	fr	Configurer cette Vue de Liste d'Objet
+configure this tableview	jinn	fr	Configurer cette vue de table
+configure this view	jinn	fr	Configurer cette Vue
+configure view of	jinn	fr	Configurer cette vue de
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	fr	chemin pour Convertir depuis ImageMagick ( p.ex. /usr/X11R6/bin/convert )
+copy	jinn	fr	copier
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	fr	Je ne trouve aucune table! Vérifiez le nom de votre base de données, le nom d'utilisateur ou mot de passe de la base de données ou crééez une ou plusieurs tables dans la base de données.
+database connection failed! <p>please recheck your settings.	jinn	fr	la connection à la base de données a échoué!<P>Veuillez re-vérifier vos paramètres.
+database connection was succesfull. <p>you can go on with the site-objects	jinn	fr	La connexion à la base de données a fonctionné.<P>Vous pouvez continuer avec les objets de site
+days	jinn	fr	jours
+default image type (jpg, gif, png)	admin	fr	Type d'image par défaut (jpg, gif, png)
+default image width	admin	fr	Largeur d'image par défaut
+default order	jinn	fr	tri par défaut
+default thumb width	admin	fr	Largeur d'échantillon par défaut
+default:	jinn	fr	par défaut:
+delete	jinn	fr	Effacer
+developer links	jinn	fr	Liens développeurs
+development	admin	fr	Développement
+development server	jinn	fr	Serveur de développement
+dimensions	jinn	fr	dimensions
+edit	jinn	fr	édition
+edit this site	jinn	fr	Editer ce Site
+edit this site object	jinn	fr	Editer l'Objet de ce Site
+editors for object $object_name in site $site_name	jinn	fr	éditeurs pour l'objet $object_name du site $site_name
+error path_open %1	jinn	fr	erreur path_open %1
+export this site	jinn	fr	exporter ce site
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	fr	Je n'ai pas pu ouvrir la table. Veuillez vérifier que la table<i>%1</i> existe toujours dans la base de données
+field plugin configuration	jinn	fr	configuration du champ de plugin
+fields	jinn	fr	champs
+filename	jinn	fr	nom du fichier
+filesize	jinn	fr	taille du fichier
+form input plugin	jinn	fr	plugin d'entrée de formulaire
+general preferences	jinn	fr	Préférences Générales
+general settings	admin	fr	Paramètres Généraux
+global configuration	jinn	fr	Configuration Globale
+global site configuration	admin	fr	Configuration Globale du site
+go	jinn	fr	aller
+height:	jinn	fr	Hauteur:
+hidden	jinn	fr	caché
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	fr	le répertoire d'images n'existe pas ou est incorrect ......<br>veuillez vérifier le répertoire d'upload des objets
+image settings	admin	fr	paramètres de l'Image
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	fr	répertoire d'ImageMagick ( p.ex. /usr/X11R6/bin )
+import failed	jinn	fr	l'importation a échoué
+import jinn site	jinn	fr	Importer un Site JiNN
+import jinn-site	jinn	fr	Importer un Site JiNN
+import site	jinn	fr	Importer un site
+import was succesfull	jinn	fr	L'importation a réussi
+import was succesfull<br>imported one site with	jinn	fr	L'importation a réussi<br>Ai importé un site avec
+index	jinn	fr	index
+insert another record after saving	jinn	fr	insérer un autre enregistrement après sauvegarde
+jinn	common	fr	JiNN
+jinn editors menu	jinn	fr	Menu des Editeurs JiNN
+jinn preferences	jinn	fr	Préférences JiNN
+max. number of previews in form	jinn	fr	Nombre max. de prévisualisations dans le formulaire
+moderator mode	jinn	fr	Mode Modérateur
+months	jinn	fr	mois
+months_abbr	jinn	fr	months_abbr
+new image size limits.	jinn	fr	Nouvelles limites de dimensions d'image.
+no matchs found	jinn	fr	Aucun résultat trouvé
+no max. number	jinn	fr	Pas de nombre maximal
+normal view	jinn	fr	Vue Normale
+only if thumnails exits	jinn	fr	Seulement si les échantillons existent
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	fr	Chemin pour la conversion depuis ImageMagick ( p.ex. /usr/X11R6/bin )
+please set your preferences for this application	jinn	fr	Veuilllez svp spécifier vos préférences pour cette application
+preview thumbs or images in form	jinn	fr	Prévisualiser les échantillons ou les images sous la forme
+preview website	jinn	fr	Prévisualiser le site Web
+production	admin	fr	Production
+real value	jinn	fr	valeur réelle
+record	jinn	fr	enregistrement
+record added succesfully	jinn	fr	Enregistrement ajouté avec succès
+record deleted succesfully	jinn	fr	Enregistrement supprimé avec succès
+record not succesfully copied. unknown error	jinn	fr	Enregistrement PAS copié avec succès. Erreur inconnue
+record not succesfully deleted. unknown error	jinn	fr	Enregistrement PAS supprimé avec succès. Erreur inconnue
+record succesfully copied	jinn	fr	Enregistrement copiés avec succès
+record succesfully deleted	jinn	fr	Enregistrement supprimés avec succès
+record succesfully editted	jinn	fr	Enregistrement édités avec succès
+related	jinn	fr	en relation
+relation %1	jinn	fr	relation %1
+relations for this object	jinn	fr	Relations pour cet objet
+remote	admin	fr	Distant
+remove	jinn	fr	enlever
+replace existing site with the same name?	jinn	fr	Remplacer le site existant avec le même nom?
+replaced existing site named <strong>%1</strong>.	jinn	fr	Remplacer le site nommé <strong>%1</strong>.
+reset form	jinn	fr	vider le formulaire
+save	jinn	fr	enregistrer
+search	jinn	fr	Rechercher
+search for string	jinn	fr	chercher la chaîne de caractères
+select directory	jinn	fr	sélectionner le répertoire
+select jinn site file	jinn	fr	Sélectionner le fichier du site JiNN
+select site	jinn	fr	sélectionner le site
+select site to moderate	jinn	fr	Sélectionnez le site à modérer
+select site-object to moderate	jinn	fr	Sélectionnez l'objet du site à modérer
+select_object	jinn	fr	Sélectionnez l'objet
+server type?	admin	fr	Type de Serveur?
+set access right for site objects	jinn	fr	Paramétrer le Droit d'Accès pour les Objets du Site
+set access rights	admin	fr	Paramétrer les droits d'accès
+set access rights for sites	jinn	fr	Paramétrer les Droits d'Accès pour les Sites
+set administrators for	jinn	fr	Définir  l'administrateur pour
+set object moderator	jinn	fr	définir le modérateur de l'objet
+set site admin	jinn	fr	définir l'administrateur de l'objet
+show	jinn	fr	montrer
+show all columns	jinn	fr	Montrer toutes les colonnes
+show colomn	jinn	fr	montrer la colonne
+show upload path	admin	fr	Montrer le chemin d'upload
+site beheerders	jinn	fr	Administrateurs du Site
+site db host	admin	fr	Hôte de la base de données du Site
+site db name	admin	fr	Nom de la base de données du Site
+site db password	admin	fr	Mot de passe de la base de données du Site
+site db type	admin	fr	Type de la base de données du Site
+site db user	admin	fr	Utilisateur de la base de données du Site
+site description	admin	fr	Description du Site
+site id	admin	fr	id du Site
+site media and documents	jinn	fr	Média et Documents du Site
+site name	admin	fr	Nom du Site
+site not succesfully added, unknown error	jinn	fr	Le Site n'a PAS été ajouté, erreur inconnue
+site not succesfully deleted, unknown error	jinn	fr	Le Site n'a PAS été effacé, erreur inconnue
+site not succesfully saved, unknown error	jinn	fr	Le Site n'a PAS été enregistré, erreur inconnue
+site object not succesfully added, unknown error	jinn	fr	L'objet du Site n'a PAS été ajouté, erreur inconnue
+site object not succesfully deleted, unknown error	jinn	fr	L'objet du site n'a PAS été effacé, erreur inconnue
+site object not succesfully saved, unknown error	jinn	fr	L'objet du Site n'a PAS été enregistré, erreur inconnue
+site object succesfully added	jinn	fr	L'objet du Site a été ajouté avec succès
+site object succesfully deleted	jinn	fr	L'objet du Site a été effacé avec succès
+site object succesfully saved	jinn	fr	L'objet du Site a été enregistré avec succès
+site succesfully added	jinn	fr	Site ajouté avec succès
+site succesfully deleted	jinn	fr	Site effacé avec succès
+site succesfully saved	jinn	fr	Site enregistré avec succès
+site title	admin	fr	Titre du Site
+site-objects	jinn	fr	Objets du Site
+sites	jinn	fr	Sites
+start	admin	fr	Départ
+start at record	jinn	fr	démarrer à l'enregistrement
+stop at record	jinn	fr	stopper à l'enregistrement
+submit and import	jinn	fr	soumettre et importer
+test database access	jinn	fr	tester l'accès à la base de données
+the name of the new site is <strong>%1</strong>.	jinn	fr	Le nom du nouveau site est <strong>%1</strong>.
+the resize process failed, please contact the administrator	jinn	fr	le processus de redimensionnement a échoué, veuillez contacter votre administrateur
+there are no directories in this site you have access to.	jinn	fr	Il n'y a pas de répertoire dans le site dont vous avez accès.
+thisfile	jinn	fr	ce fichier
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	fr	le répertoire d'échantillons n'existe pas ou est incorrect...<br>veuillez vérifier le répertoire d'upload des objets
+thumbnail	jinn	fr	échantillon
+version	jinn	fr	version
+width:	jinn	fr	Largeur:
+with_checked_files	jinn	fr	with_checked_files
+you're not allowed to administrate media files	jinn	fr	Vous n'êtes pas autorisé à administrer les fichiers de média

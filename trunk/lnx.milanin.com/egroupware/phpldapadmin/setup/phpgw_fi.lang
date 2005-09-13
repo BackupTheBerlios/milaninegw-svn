@@ -1,0 +1,109 @@
+add	phpldapadmin	fi	Lis‰‰
+add_a_jpeg_photo	phpldapadmin	fi	Lis‰‰ jpeg kuva
+add_new	phpldapadmin	fi	Lis‰‰ uusi
+add_new_attribute	phpldapadmin	fi	Lis‰‰ uusi ominaisuus
+add_new_attribute_tooltip	phpldapadmin	fi	Lis‰‰ uusi ominaisuus/arvo merkinn‰lle
+add_new_binary_attr	phpldapadmin	fi	Lis‰‰ uusi bin‰‰rinen ominaisuus
+add_new_binary_attr_tooltip	phpldapadmin	fi	Lis‰‰ uusi bin‰‰rinen ominaisuus/arvo tiedostosta
+add_oclass_and_attrs	phpldapadmin	fi	Lis‰‰ objektin luokka ja ominaisuudet
+add_value	phpldapadmin	fi	lis‰‰ arvo
+add_value_tooltip	phpldapadmin	fi	lis‰‰ muu arvo t‰lle ominaisuudelle
+advanced_search_form_str	phpldapadmin	fi	Kehittynyt etsint‰ lomake
+alias_for	phpldapadmin	fi	Salanimi
+base_dn	phpldapadmin	fi	Kanta DN
+binary_value	phpldapadmin	fi	Bin‰‰rinen arvo
+change_entry_rdn	phpldapadmin	fi	Muuta merkinn‰n RDN
+click_to_display	phpldapadmin	fi	paina n‰hd‰ksesi
+contains	phpldapadmin	fi	sis‰lt‰‰
+copy_this_entry	phpldapadmin	fi	Kopioi merkint‰
+copy_this_entry_tooltip	phpldapadmin	fi	Kopioi objekti toiseen paikkaan, uusi DN, tai toinen palvelin
+could_not_connect	phpldapadmin	fi	Ei yhteytt‰ LDAP palvelimeen
+could_not_determine_root	phpldapadmin	fi	Ei voida m‰‰ritt‰‰ juurta sinun LDAP puulle.
+create	phpldapadmin	fi	Luo
+create_a_child_entry	phpldapadmin	fi	Luo lapsi merkint‰
+create_new	phpldapadmin	fi	Luo uusi
+create_new_entry_in	phpldapadmin	fi	Luo uusi merkint‰
+create_new_entry_on	phpldapadmin	fi	Luo uusi merkint‰
+current_list_of	phpldapadmin	fi	Viimeisin lista
+delete_attribute	phpldapadmin	fi	poista ominaisuus
+delete_hint	phpldapadmin	fi	Vihje:<b>Poista ominaisuudet</b>, tyhjenn‰ teksti kentt‰ ja tallennna.
+delete_this_entry	phpldapadmin	fi	Poista merkint‰
+delete_this_entry_tooltip	phpldapadmin	fi	Sinua kehoitetaan konfirmoimaan t‰t‰ p‰‰tˆst‰
+desc	phpldapadmin	fi	Kuvaus
+distinguished_name	phpldapadmin	fi	Ensisijainen nimi
+download_value	phpldapadmin	fi	Inuroi arvo
+enter_value_to_add	phpldapadmin	fi	Kirjoita arvo jonka haluaisit lis‰t‰:
+entry_attributes	phpldapadmin	fi	Merkinn‰n ominaisuudet
+export_subtree_to_ldif	phpldapadmin	fi	Vie alipuu LDIF
+export_subtree_to_ldif_tooltip	phpldapadmin	fi	Tallenna objektille LDIF vedos ja kaikki sen lapset
+export_to_ldif	phpldapadmin	fi	Vie LDIF
+export_to_ldif_mac	phpldapadmin	fi	Macintosh tyyli linja p‰‰ttyy
+export_to_ldif_tooltip	phpldapadmin	fi	Tallennna t‰m‰n objektin LDIF vedos
+export_to_ldif_unix	phpldapadmin	fi	Unix tyyli linja p‰‰ttyy
+export_to_ldif_win	phpldapadmin	fi	Windows tyyli linja p‰‰ttyy
+false	phpldapadmin	fi	v‰‰r‰
+hidden	phpldapadmin	fi	piilotettu
+hide_internal_attrs	phpldapadmin	fi	piilota sis‰iset ominaisuudet
+import	phpldapadmin	fi	Tuo
+import_from_ldif	phpldapadmin	fi	Tuo merkinn‰t LDIF tiedostosta
+info	phpldapadmin	fi	info
+inherits	phpldapadmin	fi	Peri‰
+internal_attributes	phpldapadmin	fi	Perityt ominaisuudet
+internal_attrs_tooltip	phpldapadmin	fi	Ominaisuudet asetetaan automaattisesti systeemin toimesta
+is_obsolete	phpldapadmin	fi	T‰m‰ objektin luokka on <b>vanhanmallinen</b>
+jump_to_attr	phpldapadmin	fi	Hypp‰‰ ominaisuuteen
+jump_to_objectclass	phpldapadmin	fi	Hypp‰‰ objektin luokkaan
+jump_to_this_oclass	phpldapadmin	fi	Hypp‰‰ objektin luokan m‰‰ritelm‰‰n
+ldap_refuses_to_give_root	phpldapadmin	fi	Se ilmestyy sill‰ LDAP palvelin on konfiguroitu osoittamatta sen juurta.
+logout	phpldapadmin	fi	kirjaudu  ulos
+logout_of_this_server	phpldapadmin	fi	kirjaudu ulos palvelimelta
+matching_rule_oid	phpldapadmin	fi	Sopiva ohje OID
+new_attributes	phpldapadmin	fi	uudet ominaisuudet
+new_required_attrs	phpldapadmin	fi	Uudet vaaditut ominaisuudet
+new_required_attrs_note	phpldapadmin	fi	Huomautus: Sinun tarvitsee kirjoittaa uudet ominaisuudet<br/>joita t‰m‰n objektin luokka vaatii.
+no_new_attrs_available	phpldapadmin	fi	ei uusia ominaisuuksia saatavilla merkinn‰lle
+no_updates_in_read_only_mode	phpldapadmin	fi	Et voi tehd‰ p‰ivityksi‰ kun palvelin on vain luku tilassa
+none	phpldapadmin	fi	ei mit‰‰n
+none_remove_value	phpldapadmin	fi	ei mit‰‰n, poistettu arvo
+not_enough_login_info	phpldapadmin	fi	Ei tarpeeksi tietoa palvelimelle kirjautumiseen. Tarkista konfiguraatiosi
+oid	phpldapadmin	fi	OID
+optional_attrs	phpldapadmin	fi	Valinnaiset ominaisuudet
+please_specify_in_config	phpldapadmin	fi	Nime‰ se config.php:hen
+read_only	phpldapadmin	fi	Vain luku
+really_delete_attribute	phpldapadmin	fi	poista ominaisuus
+refresh	phpldapadmin	fi	p‰ivit‰
+refresh_expanded_containers	phpldapadmin	fi	P‰ivit‰ kaikki laajennetut s‰ilˆt
+refresh_this_entry	phpldapadmin	fi	p‰ivit‰ merkint‰
+rename	phpldapadmin	fi	nime‰ uudelleen
+rename_entry	phpldapadmin	fi	nime‰ merkint‰ uudelleen
+report_bug	phpldapadmin	fi	Ilmoita virheest‰
+required_attrs	phpldapadmin	fi	Vaatii ominaisuuksia
+requires_to_add	phpldapadmin	fi	Toiminta vaatii sinua lis‰‰m‰‰n
+save_changes	phpldapadmin	fi	Tallenna muutokset
+schema	phpldapadmin	fi	kaava
+schema_for_server	phpldapadmin	fi	Kaava palvelimelle
+search	phpldapadmin	fi	hae
+search_ filter	phpldapadmin	fi	suodatin haku
+search_for_entries_whose	phpldapadmin	fi	Etsii merkinnˆist‰ joiden
+search_scope	phpldapadmin	fi	laaja haku
+see_open_bugs	phpldapadmin	fi	katso avattuja virheit‰
+see_open_requests	phpldapadmin	fi	katso avattuja pyyntˆj‰
+server	phpldapadmin	fi	palvelin
+show_attributes	phpldapadmin	fi	N‰yt‰ ominaisuudet
+show_internal_attrs	phpldapadmin	fi	n‰yt‰ sis‰iset ominaisuudet
+simple_search_form_str	phpldapadmin	fi	yksinkertainen etsint‰ lomake
+sounds_like	phpldapadmin	fi	kuulostaa kuin
+syntax	phpldapadmin	fi	Syntaksi
+syntax_oid	phpldapadmin	fi	Syntaksi OID
+that_this_oclass_requires	phpldapadmin	fi	jota t‰m‰n objektin luokka vaatii. Sin‰ voit tehd‰ niin t‰ss‰ lomakkeessa.
+the_following_attributes	phpldapadmin	fi	Seuraavia<b>ominaisuus tyyppej‰</b> tuetaan t‰ll‰ LDAP palvelimella.
+the_following_matching	phpldapadmin	fi	Seuraavia<b> yhteensopivia s‰‰ntˆj‰</b> tuetaan t‰ll‰ LDAP palvelimella.
+the_following_objectclasses	phpldapadmin	fi	Seuraavia<b>objketin luokkkia</b> tuetaan t‰ll‰ LDAP palvelimella.
+the_following_syntaxes	phpldapadmin	fi	Seuraavia<b>syntakseja</b> tuetaan t‰ll‰ LDAP palvelimella.
+true	phpldapadmin	fi	tosi
+value_to	phpldapadmin	fi	arvo
+values_for_attribute	phpldapadmin	fi	arvot ominaisuuksiin
+view	phpldapadmin	fi	N‰yt‰
+view_schema_for	phpldapadmin	fi	N‰yt‰ kaava
+view_server_info	phpldapadmin	fi	N‰yt‰ palvelimen toimittama tieto
+viewing_read_only	phpldapadmin	fi	N‰ytet‰‰n merkint‰ vain luku tilassa.

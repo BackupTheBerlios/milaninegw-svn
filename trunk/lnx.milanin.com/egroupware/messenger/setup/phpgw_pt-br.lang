@@ -1,0 +1,36 @@
+compose	messenger	pt-br	Escrever
+compose global message	common	pt-br	Compor mensagem coletiva
+compose message	messenger	pt-br	Compor mensagem
+delete a message.	messenger	pt-br	Remover uma mensagem.
+delete selected	messenger	pt-br	Remover selecionada.
+forward	messenger	pt-br	Encaminhar
+forward a message	messenger	pt-br	Encaminhar uma mensagem
+forward a message to another user.	messenger	pt-br	Encaminhar uma mensagem para outro usuário.
+forwarded	messenger	pt-br	Encaminhada
+from	messenger	pt-br	De
+global message	messenger	pt-br	Mensagem Global
+i can't find the username %1 on the system	messenger	pt-br	Não é possível encontrar o nome %1 no sistema.
+inbox	messenger	pt-br	Cx. Entrada
+message from	messenger	pt-br	Mensagem de
+messenger	common	pt-br	Mensageiro
+new	messenger	pt-br	Nova
+read a list of messages.	messenger	pt-br	Ler mensagens da lista.
+read a single message.	messenger	pt-br	Ler apenas uma mensagem.
+read message	messenger	pt-br	Ler mensagem
+replied	messenger	pt-br	Respondida
+reply	messenger	pt-br	Responder
+reply to a message	messenger	pt-br	Resposta para uma mensagem.
+reply to a received message.	messenger	pt-br	Resposta para uma mensagem recebida.
+send	messenger	pt-br	Enviar
+send a global message.	messenger	pt-br	Enviar uma mensagem global.
+send a message to a single recipient.	messenger	pt-br	Enviar uma mensagem para uma pasta.
+send message to	messenger	pt-br	Enviar mensagem para
+sorry, %1's account is not currently active	messenger	pt-br	Desculpe, o usuário %1 não está ativo neste momento
+update a message status	messenger	pt-br	Atualizar status da mensagem
+use select box for user list in compose	common	pt-br	Utilize a caixa de seleção para selecionar vários usuários
+you didn't enter anything for the message	messenger	pt-br	Você não informou nenhum dado para a mensagem
+you have %1 new message	messenger	pt-br	Você possui %1 nova mensagem
+you have %1 new messages	messenger	pt-br	Você possui %1 novas mensagens
+you have no messages	messenger	pt-br	Você não tem novas mensagens
+you must enter a subject	messenger	pt-br	Você precisa informar um assunto
+you must enter the username this message is for	messenger	pt-br	Você precisa informar o nome do usuário para o envio desta mensagem

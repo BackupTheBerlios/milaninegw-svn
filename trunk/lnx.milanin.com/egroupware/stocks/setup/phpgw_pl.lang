@@ -1,0 +1,16 @@
+$ change	common	pl	Zmieñ
+%	stocks	pl	%
+% change	common	pl	Zmieñ %
+add new stock	stocks	pl	Dodaj now± spó³kê
+company name	stocks	pl	Nazwa spki
+disable	stocks	pl	Wy³±cz
+display stocks on main screen is disabled	stocks	pl	W³±czone wy¶wietlanie na stronie g³ównej
+display stocks on main screen is enabled	stocks	pl	W³±czone wy¶wietlanie na stronie g³ównej
+edit stock	stocks	pl	Edycja spó³ki
+enable	stocks	pl	W³±cz
+price	stocks	pl	Cena
+select displayed stocks	preferences	pl	Wybierz wywietlane spó³ki
+stock quote preferences	stocks	pl	Preferencje spó³ki
+stock quotes	common	pl	Gie³da
+stocks	common	pl	Gie³da
+symbol	stocks	pl	Symbol

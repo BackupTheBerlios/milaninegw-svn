@@ -1,0 +1,15 @@
+$ change	common	iw	שינוי
+% change	common	iw	% שינוי
+add new stock	stocks	iw	הוסף מניה חדשה
+company name	stocks	iw	שם החברה
+disable	stocks	iw	הפוך ללא פעיל
+display stocks on main screen is disabled	stocks	iw	תצוגת שניות במסך הראשי אינה פעילה
+display stocks on main screen is enabled	stocks	iw	תצוגת שניות במסך הראשי פעילה
+edit stock	stocks	iw	ערוך מניה
+enable	stocks	iw	הפוך לפעיל
+price	stocks	iw	מחיר
+select displayed stocks	preferences	iw	בחר מחירים של מניות מוצגות
+stock quote preferences	stocks	iw	עדיפויות של מחירי מניה
+stock quotes	common	iw	מחירי מניות
+stocks	common	iw	מחירי מניות
+symbol	stocks	iw	סמל

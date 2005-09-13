@@ -1,0 +1,97 @@
+(don't offer the possibility)	admin	sv	(erbjud inte möjligheten)
+<em>but</em> display at least this many entries in recentchanges and other subscription lists:	wiki	sv	<em>Men</em> visa åtminstone så många poster i SenasteÄndring och andra prenumerations listor:
+add document to category	wiki	sv	Lägg till dokument i kategori
+added	wiki	sv	Tillagd
+administration features are disabled for this wiki.	wiki	sv	Administrations möjligheterna är avaktiverade i denna Wiki.
+admins	wiki	sv	Adminstratörer
+allow anonymous access	admin	sv	Tillåt anonym åtkomst
+anonymous password	admin	sv	Anonymas lösenord
+anonymous session type	admin	sv	Anonymas session typ
+anonymous username	admin	sv	Anonymas användarnamn
+automatically convert pages with wiki-syntax to richtext (if edited)?	admin	sv	Konvertera sidor automatiskt med Wiki-syntax till richtext (om redigerad)?
+block	wiki	sv	Spärra
+block / unblock hosts	common	sv	Spärra/Tillåt klienter
+blocked ip address ranges	wiki	sv	Spärra IP adress omfång
+cancel without saving	wiki	sv	Avbryt utan att spara
+changed	wiki	sv	Ändrad
+changes by last author	wiki	sv	Ändringar av senaste författare
+choose your current time here, so the server may figure out what time zone you are in.	wiki	sv	Välj din nuvarande tid så att servern kan ta reda på vilken tidzon du befinner dig i.
+columns	wiki	sv	Kolumner
+compute difference	wiki	sv	Utarbeta skillnader
+converts the page to richtext	wiki	sv	Konvertera sidan till richtext
+current version	wiki	sv	Aktuell version
+deleted	wiki	sv	Raderad
+deletes this page	wiki	sv	Raderar sidan
+difference between versions	wiki	sv	Skillnader mellan versionerna
+differences in	wiki	sv	Skillnader i
+different languages can have different titles	wiki	sv	Olika språk kan ha olika titlar
+document last modified	wiki	sv	Dokumentet senast ändrad
+edit box	wiki	sv	Editor fönster
+edit this <em>archive version</em> of this document	wiki	sv	Redigera <em>ARKIVERADE VERSION</em> av detta dokument
+edit this document	wiki	sv	Redigera dokumentet
+edit with preview	admin	sv	Redigera med förhandsgranskning
+editable	admin	sv	Redigerbar
+editing	wiki	sv	Redigerar
+emailaddress administrator	admin	sv	E-post adress administratör
+enable free links	admin	sv	Aktivera "Fria länkar"
+enable wiki links	admin	sv	Aktiver "Wiki länkar"
+enter here the maximum number of entries to display in a document's history list.	wiki	sv	Antal poster som visas i dokumentets historik.
+enter here the number of days of edits to display on recentchanges or any other subscription list.  set this to zero if you wish to see all pages in recentchanges, regardless of how recently they were edited.	wiki	sv	Ange antal dagar med ändringar att visa i SenasteÄndringar eller i annan prenumerations tjänst. Sätt till noll för att se alla sidor i SenasteÄndringar, oavsett när ändringen gjordes.
+enter ip address range in form <tt>12.*</tt>, <tt>34.56.*</tt>, or <tt>78.90.123.*</tt>	wiki	sv	Ange IP adress omfång enligt <tt>12.*</tt>, <tt>34.56.*</tt> eller <tt>78.90.123.*</tt>
+error creating temporary file.	wiki	sv	Fel vid skapande av temporär fil.
+error writing to temporary file.	wiki	sv	Fel vid skrivning till temporär fil.
+everyone	wiki	sv	Någon
+find	wiki	sv	Hitta
+history	wiki	sv	Historik
+history display should show <em>all</em> changes made by the latest author.  otherwise, show only the last change made.	wiki	sv	Historik ska visa <em>alla</em> ändringar gjorda av senaste författare. Visa annars endast senaste ändring.
+history lists	wiki	sv	Historik lista
+history of	wiki	sv	Historik för
+interwikiprefix	admin	sv	InterWikiPrefix
+invalid page name.	wiki	sv	Ogiltigt sido namn
+load	wiki	sv	Ladda
+loads the named page in the given language, all change so far get lost !!!	wiki	sv	Laddar sida på angivet språk, alla ändringar så här långt går förlorade!
+lock / unlock pages	common	sv	Lås/Öppna sidor
+locked	wiki	sv	Låst
+name wiki home link	admin	sv	Namnge Wiki hem länk
+newer	wiki	sv	Aldrig
+no never	admin	sv	Aldrig
+no only on request	admin	sv	Bara på begäran
+not set	wiki	sv	Inte satt
+older	wiki	sv	Äldre
+only if browser supports a richtext-editor	admin	sv	Bara om webbläsaren stödjer richtext-redigering
+please contact the %1administrator%2 for assistance.	wiki	sv	Var god kontakta %1Administratör%2 för hjälp.
+preview	wiki	sv	Förhandsgranska
+preview of current version	wiki	sv	Förhandsgranska aktuell version
+rate control / ip blocking disabled	wiki	sv	"Rate control" / IP blockering inaktiverad
+readable by	wiki	sv	Läsbar av
+readonly	admin	sv	Skrivskyddad
+recent changes	wiki	sv	Senaste ändringar
+renames page to the given name and language	wiki	sv	Byter sidans namn och språk
+richtext	wiki	sv	Richtext
+rows	wiki	sv	Rader
+save the changes and exit	wiki	sv	Spara ändringar och avsluta
+saves and continues editing	wiki	sv	Spara ändringar och fortsätt redigera
+see complete list (%1 entries)	wiki	sv	Se fullständig lista (%1 poster)
+site configuration	wiki	sv	Site alternativ
+summary	wiki	sv	Summering
+summary of change	wiki	sv	Summering av ändringar
+this page can not be edited.	wiki	sv	Denna sida kan inte ändras
+twin pages	wiki	sv	Dublett
+unblock	wiki	sv	Öppna
+updates the preview	wiki	sv	Uppdateringar förhandsgranskning
+users	wiki	sv	Användare
+view document history	wiki	sv	Visa historik
+visit %1 to set your user name	wiki	sv	Besök %1 för att sätta ditt användarnamn
+warning: since you started editing, this document has been changed by someone else.  please merge your edits into the current version of this document.	wiki	sv	Varning: sedan du började skriva har dokumentet uppdaterats av annan. Var god och migrera dina ändringar till aktuell version av dokumentet.
+who should be able to edit this page	wiki	sv	Vem ska kunna redigera denna sida
+who should be able to read this page	wiki	sv	Vem ska kunna läsa denna sida
+wiki	common	sv	Wiki
+wiki administration	wiki	sv	Wiki Administration
+wiki menu	wiki	sv	Wiki Meny
+writable by	wiki	sv	Skrivbar för
+yes always	admin	sv	Alltid ja
+you have been denied access to this site.	wiki	sv	Du nekas tillträde till denna site.
+you have entered an invalid user name.	wiki	sv	Du har angett ett ogiltigt användarnamn.
+you have exeeded the number of pages you are allowed to visit in a given period of time. please return later.	wiki	sv	Du har besökt fler sidor änn du har rätt till under given period. Var god och återkom senare.
+your changes	wiki	sv	Dina ändringar
+your user name is "%1".	wiki	sv	Ditt användarnamn är "%1".

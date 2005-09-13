@@ -1,0 +1,120 @@
+simple_search_form_str	phpldapadmin	en	Simple Search Form
+advanced_search_form_str	phpldapadmin	en	Advanced Search Form
+server	phpldapadmin	en	Server
+search_for_entries_whose	phpldapadmin	en	Search for entries whose
+base_dn	phpldapadmin	en	Base DN
+search_scope	phpldapadmin	en	Search Scope
+search_ filter	phpldapadmin	en	Search Filter
+show_attributes	phpldapadmin	en	Show Attributtes
+Search	phpldapadmin	en	Search
+equals	phpldapadmin	en	equals
+starts_with	phpldapadmin	en	starts with
+contains	phpldapadmin	en	contains
+ends_with	phpldapadmin	en	ends with
+sounds_like	phpldapadmin	en	sounds like
+request_new_feature	phpldapadmin	en	Request a new feature
+see_open_requests	phpldapadmin	en	see open requests
+report_bug	phpldapadmin	en	Report a bug
+see_open_bugs	phpldapadmin	en	see open bugs
+schema	phpldapadmin	en	schema
+search	phpldapadmin	en	search
+refresh	phpldapadmin	en	refresh
+create	phpldapadmin	en	create
+info	phpldapadmin	en	info
+import	phpldapadmin	en	import
+logout	phpldapadmin	en	logout
+create_new	phpldapadmin	en	Create New
+view_schema_for	phpldapadmin	en	View schema for
+refresh_expanded_containers	phpldapadmin	en	Refresh all expanded containers for
+create_new_entry_on	phpldapadmin	en	Create a new entry on
+view_server_info	phpldapadmin	en	View server-supplied information
+import_from_ldif	phpldapadmin	en	Import entries from an LDIF file
+logout_of_this_server	phpldapadmin	en	Logout of this server
+logged_in_as	phpldapadmin	en	Logged in as: 
+read_only	phpldapadmin	en	read only
+could_not_determine_root	phpldapadmin	en	Could not determin the root of your LDAP tree.
+ldap_refuses_to_give_root	phpldapadmin	en	It appears that the LDAP server has been configured to not reveal its root.
+please_specify_in_config	phpldapadmin	en	Please specify it in config.php
+create_new_entry_in	phpldapadmin	en	Create a new entry in
+delete_this_entry	phpldapadmin	en	Delete this entry
+delete_this_entry_tooltip	phpldapadmin	en	You will be prompted to confirm this decision
+copy_this_entry	phpldapadmin	en	Copy this entry
+copy_this_entry_tooltip	phpldapadmin	en	Copy this object to another location, a new DN, or another server
+export_to_ldif	phpldapadmin	en	Export to LDIF
+export_to_ldif_tooltip	phpldapadmin	en	Save an LDIF dump of this object
+export_subtree_to_ldif_tooltip	phpldapadmin	en	Save an LDIF dump of this object and all of its children
+export_subtree_to_ldif	phpldapadmin	en	Export subtree to LDIF
+export_to_ldif_mac	phpldapadmin	en	Macintosh style line ends
+export_to_ldif_win	phpldapadmin	en	Windows style line ends
+export_to_ldif_unix	phpldapadmin	en	Unix style line ends
+create_a_child_entry	phpldapadmin	en	Create a child entry
+add_a_jpeg_photo	phpldapadmin	en	Add a jpegPhoto
+rename_entry	phpldapadmin	en	Rename Entry
+rename	phpldapadmin	en	Rename
+add	phpldapadmin	en	Add
+view	phpldapadmin	en	View
+add_new_attribute	phpldapadmin	en	Add New Attribute
+add_new_attribute_tooltip	phpldapadmin	en	Add a new attribute/value to this entry
+internal_attributes	phpldapadmin	en	Internal Attributes
+hide_internal_attrs	phpldapadmin	en	Hide internal attributes
+show_internal_attrs	phpldapadmin	en	Show internal attributes
+internal_attrs_tooltip	phpldapadmin	en	Attributes set automatically by the system
+entry_attributes	phpldapadmin	en	Entry Attributes
+click_to_display	phpldapadmin	en	click to display
+hidden	phpldapadmin	en	hidden
+none	phpldapadmin	en	none
+save_changes	phpldapadmin	en	Save Changes
+add_value	phpldapadmin	en	add value
+add_value_tooltip	phpldapadmin	en	Add an additional value to this attribute
+refresh_this_entry	phpldapadmin	en	Refresh this entry
+delete_hint	phpldapadmin	en	Hint: <b>To delete an attribute</b>, empty the text field and click save.
+viewing_read_only	phpldapadmin	en	Viewing entry in read-only mode.
+change_entry_rdn	phpldapadmin	en	Change this entry's RDN
+no_new_attrs_available	phpldapadmin	en	no new attributes available for this entry
+binary_value	phpldapadmin	en	Binary value
+add_new_binary_attr	phpldapadmin	en	Add New Binary Attribute
+add_new_binary_attr_tooltip	phpldapadmin	en	Add a new binary attribute/value from a file
+alias_for	phpldapadmin	en	Alias for
+download_value	phpldapadmin	en	download value
+delete_attribute	phpldapadmin	en	delete attribute
+true	phpldapadmin	en	true
+false	phpldapadmin	en	false
+none_remove_value	phpldapadmin	en	none, remove value
+really_delete_attribute	phpldapadmin	en	Really delete attribute
+the_following_objectclasses	phpldapadmin	en	The following <b>objectClasses</b> are supported by this LDAP server.
+the_following_attributes	phpldapadmin	en	The following <b>attributeTypes</b> are supported by this LDAP server.
+the_following_matching	phpldapadmin	en	The following <b>matching rules</b> are supported by this LDAP server.
+the_following_syntaxes	phpldapadmin	en	The following <b>syntaxes</b> are supported by this LDAP server.
+jump_to_objectclass	phpldapadmin	en	Jump to an objectClass
+jump_to_attr	phpldapadmin	en	Jump to an attribute
+schema_for_server	phpldapadmin	en	Schema for server
+required_attrs	phpldapadmin	en	Required Attributes
+optional_attrs	phpldapadmin	en	Optional Attributes
+OID	phpldapadmin	en	OID
+desc	phpldapadmin	en	Description
+is_obsolete	phpldapadmin	en	This objectClass is <b>obsolete</b>
+inherits	phpldapadmin	en	Inherits
+jump_to_this_oclass	phpldapadmin	en	Jump to this objectClass definition
+matching_rule_oid	phpldapadmin	en	Matching Rule OID
+syntax_oid	phpldapadmin	en	Syntax OID
+new_required_attrs	phpldapadmin	en	New Required Attributes
+requires_to_add	phpldapadmin	en	This action requires you to add
+new_attributes	phpldapadmin	en	new attributes
+new_required_attrs_instructions	phpldapadmin	en	Instructions: In order to add this objectClass to this entry, you must specify
+that_this_oclass_requires	phpldapadmin	en	that this objectClass requires. You can do so in this form.
+add_oclass_and_attrs	phpldapadmin	en	Add ObjectClass and Attributes
+chooser_link_tooltip	phpldapadmin	en	Click to popup a dialog to select an entry (DN) graphically
+no_updates_in_read_only_mode	phpldapadmin	en	You cannot perform updates while server is in read-only mode
+bad_server_id	phpldapadmin	en	Bad server id
+not_enough_login_info	phpldapadmin	en	Not enough information to login to server. Please check your configuration.
+could_not_connect	phpldapadmin	en	Could not connect to LDAP server.
+could_not_perform_ldap_mod_add	phpldapadmin	en	Could not perform ldap_mod_add operation.
+add_new	phpldapadmin	en	Add new
+value_to	phpldapadmin	en	value to
+distinguished_name	phpldapadmin	en	Distinguished Name
+current_list_of	phpldapadmin	en	Current list of
+values_for_attribute	phpldapadmin	en	values for attribute
+inappropriate_matching_note	phpldapadmin	en	Note: You will get an "inappropriate matching" error if you have not<br />setup an <tt>EQUALITY</tt> rule on your LDAP server for this attribute.
+enter_value_to_add	phpldapadmin	en	Enter the value you would like to add:
+new_required_attrs_note	phpldapadmin	en	Note: you may be required to enter new attributes<br />that this objectClass requires.
+syntax	phpldapadmin	en	Syntax

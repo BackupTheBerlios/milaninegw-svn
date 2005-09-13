@@ -1,0 +1,86 @@
+simple_search_form_str	phpldapadmin	de	Einfache Suche
+advanced_search_form_str	phpldapadmin	de	Experten Suche
+server	phpldapadmin	de	Server
+search_for_entries_whose	phpldapadmin	de	Suche nach Eintr&auml;gen die
+base_dn	phpldapadmin	de	Base DN
+search_scope	phpldapadmin	de	Suchart
+search_ filter	phpldapadmin	de	Suchfilter
+show_attributes	phpldapadmin	de	Zeige Attribute
+Search	phpldapadmin	de	Suchen
+equals	phpldapadmin	de	gleich
+starts_with	phpldapadmin	de	beginnt mit
+contains	phpldapadmin	de	enth&auml;
+ends_with	phpldapadmin	de	endet mit
+sounds_like	phpldapadmin	de	&auml;nlich wie
+request_new_feature	phpldapadmin	de	Anfragen von neuen M&ouml;glichkeiten
+see_open_requests	phpldapadmin	de	Siehe offene Anfragen
+report_bug	phpldapadmin	de	Einen Fehler berichten
+see_open_bugs	phpldapadmin	de	Siehe offene Fehler
+schema	phpldapadmin	de	schema
+search	phpldapadmin	de	suche
+refresh	phpldapadmin	de	aktualisieren
+create	phpldapadmin	de	Neu
+info	phpldapadmin	de	info
+import	phpldapadmin	de	import
+logout	phpldapadmin	de	logout
+create_new	phpldapadmin	de	Neuen erzeugen
+delete_this_entry	phpldapadmin	de	Diesen Eintrag l&ouml;schen
+delete_this_entry_tooltip	phpldapadmin	de	You will be prompted to confirm this decision
+copy_this_entry	phpldapadmin	de	Diesen Eintrag kopieren
+copy_this_entry_tooltip	phpldapadmin	de	Copy this object to another location, a new DN, or another server
+export_to_ldif	phpldapadmin	de	Exportieren nach LDIF
+export_to_ldif_tooltip	phpldapadmin	de	Speichere einen LDIF-Abzug diese Objektes
+export_subtree_to_ldif_tooltip	phpldapadmin	de	Speicher eine LDIF-Abzug ab diesem Objekt und alle seine Untereintr&auml;ge
+export_subtree_to_ldif	phpldapadmin	de	Export Unterbaum nach LDIF
+export_to_ldif_mac	phpldapadmin	de	Zeilenende f&uuml;r Macintosh
+export_to_ldif_win	phpldapadmin	de	Zeilenende f&uuml;r Windows
+export_to_ldif_unix	phpldapadmin	de	Zeilenende f&uuml;r Unix
+create_a_child_entry	phpldapadmin	de	Erzeuge einen Untereintrag
+add_a_jpeg_photo	phpldapadmin	de	Ein JPEG-Foto hinzuf&uuml;gen
+rename_entry	phpldapadmin	de	Eintrag umbenennen
+rename	phpldapadmin	de	Umbenennen
+add	phpldapadmin	de	Hinzuf&uuml;gen
+view	phpldapadmin	de	Ansehen
+add_new_attribute	phpldapadmin	de	Neues Attribut hinz&uuml;gen
+add_new_attribute_tooltip	phpldapadmin	de	F&uuml;ge ein neues Attribut/Wert zu diesem Eintrag hinzu
+internal_attributes	phpldapadmin	de	Interne Attribute
+hide_internal_attrs	phpldapadmin	de	Verdecke interne Attribute
+show_internal_attrs	phpldapadmin	de	Zeige interne Attribute
+internal_attrs_tooltip	phpldapadmin	de	Attribute werden automatisch vom System erzeugt.
+entry_attributes	phpldapadmin	de	Attribute des Eintrages
+click_to_display	phpldapadmin	de	Klicken zum Ansehen
+hidden	phpldapadmin	de	verdeckt
+none	phpldapadmin	de	Keine
+save_changes	phpldapadmin	de	&Auml;nderungen speichern
+add_value	phpldapadmin	de	Wert hinzuf&uuml;gen
+add_value_tooltip	phpldapadmin	de	F&uuml;g einen weiteren Wert zu dem Attribut hinzu
+refresh_this_entry	phpldapadmin	de	Aktualisiere den Entrag
+delete_hint	phpldapadmin	de	Hinweis: Um ein Attribute zu l&ouml;schen, leeren Sie den Inhalt des Wertes.
+viewing_read_only	phpldapadmin	de	Zeige Eintrag im Nurlesemodus
+change_entry_rdn	phpldapadmin	de	&Auml;ndere den RDN des Eintrages
+no_new_attrs_available	phpldapadmin	de	Keine weiteren Attribute verf&uuml;gbar f&uuml;r diesen Eintrag
+binary_value	phpldapadmin	de	Bin&auml;rwert
+add_new_binary_attr	phpldapadmin	de	Neuen Bin&auml;rwert hinzuf&uuml;gen
+add_new_binary_attr_tooltip	phpldapadmin	de	ABCDEFGH
+alias_for	phpldapadmin	de	Alias f&uuml;r
+download_value	phpldapadmin	de	Wert herunterladen
+delete_attribute	phpldapadmin	de	L&ouml;sche Attribut
+true	phpldapadmin	de	Wahr
+false	phpldapadmin	de	Falsch
+none_remove_value	phpldapadmin	de	nichts, entferne den Wert
+really_delete_attribute	phpldapadmin	de	L&ouml;sche das Attribut wirklich
+the_following_objectclasses	phpldapadmin	de	Die folgenden objectClass werden vom LDAP-Server unterst&uuml;tzt.
+the_following_attributes	phpldapadmin	de	Die folgenden Attribute werden vom LDAP-Server unterst&uuml;tzt.
+the_following_matching	phpldapadmin	de	Die folgenden Suchregeln werden vom LDAP-Server unterst&uuml;tzt.
+the_following_syntaxes	phpldapadmin	de	Die folgenden Syntaxe werden vom LDAP-Server unterst&uuml;tzt.
+jump_to_objectclass	phpldapadmin	de	Gehe zur objectClass
+jump_to_attr	phpldapadmin	de	Gehe zum Attribut
+schema_for_server	phpldapadmin	de	Schema f&uuml;r Server
+required_attrs	phpldapadmin	de	Notwendige Attribute
+optional_attrs	phpldapadmin	de	Optionale Attribute
+OID	phpldapadmin	de	OID
+desc	phpldapadmin	de	Beschreibung
+is_obsolete	phpldapadmin	de	Diese objectClass ist veraltet
+inherits	phpldapadmin	de	Abgeleitet von
+jump_to_this_oclass	phpldapadmin	de	Gehe zur objectClass Definition
+chooser_link_tooltip	phpldapadmin	de	Click to popup a dialog to select an entry (DN) graphically

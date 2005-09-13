@@ -1,0 +1,137 @@
+a new ticket has been reported.	tts	uk	Зареєстрована нова проблема.
+accept the ticket into verification process.	tts	uk	Прийняти проблему в процесс перевірки
+action	tts	uk	Дія
+add new ticket	tts	uk	Додати нову картку проблеми
+add ticket	tts	uk	Додати картку проблеми
+additional notes	tts	uk	Додаткові примітки
+admin options	common	uk	Опції адміністратора
+assign to	tts	uk	Призначити
+assigned from	tts	uk	Призначено від
+assigned to	tts	uk	Призначено
+billable hours	tts	uk	Оплачувані години
+billable hours changed	tts	uk	Оплачувані години змінено
+billable hours rate	tts	uk	Ставка оплати витрат часу
+billable rate	tts	uk	Ставка оплати
+billable rate changed	tts	uk	Ставку оплати змінено
+category changed	tts	uk	Категорія змінена
+check here to generate the state's id automatically or enter a particular id below.	tts	uk	Для автоматичної генерації ID стану клацніть тут, або введіть відповідне ID нижче.
+clear form	tts	uk	Очистити форму.
+close the invalid ticket.	tts	uk	Закрити помилкову картку.
+closed	tts	uk	Закрито
+configure the states	tts	uk	Конфігурувати стани
+configure the transitions	tts	uk	Конфігурувати переміщення
+create new state	tts	uk	Створити новий стан
+create new ticket	tts	uk	Створити нову картку
+create new transition	tts	uk	Створити нове переміщення
+creates a new ticket, returns ticket_id	tts	uk	Створює нову картку, повертає ticket_id
+creates a struct of tickets	tts	uk	Створює структуру карток
+date opened	tts	uk	Дата відкриття
+default assign to	tts	uk	По замовченню призначати
+default group	tts	uk	Група по замовченню
+default priority	tts	uk	Пріоритет по замовченню
+delete the listed tickets.	tts	uk	Видалити перелічені картки
+deleting the state	tts	uk	Видалити стан
+deleting the transition	tts	uk	Видалити переміщення
+detail	tts	uk	Деталі
+edit the state	tts	uk	Редагувати стан
+edit the transition	tts	uk	Редагувати переміщення
+force	tts	uk	Форсувати
+global categories	tts	uk	Глобальні категорії
+group ownership changed	tts	uk	
+history	tts	uk	Історія
+i worked on the ticket and the work requires validation.	tts	uk	Я відпрацював картку і потрібно перевірити роботу.
+i worked on the ticket, but did not finish.	tts	uk	Я відпрацював картку, але робота не закінчена.
+in progress	tts	uk	В роботі
+initial state	tts	uk	Початковий стан
+keep the present state [%1].	tts	uk	Зберегти поточний стан [%1].
+latest note added	tts	uk	Остання примітка додана
+list of available tickets' states.	tts	uk	Перелік доступних станів картки.
+list of available tickets' transitions.	tts	uk	Перелік доступних переміщень картки.
+missing description	tts	uk	Пропущений опис
+new ticket	tts	uk	Нова картка
+new tickets can be put into this state.	tts	uk	Нові картки можуть бути встановлені в цей стан.
+new value	tts	uk	Нове значення
+no additional notes	tts	uk	Немає додаткових приміток
+no notes for this ticket	tts	uk	Немає приміток до цієї картки
+no states found	tts	uk	Станів не знайдено
+no tickets found	tts	uk	Карток не знайдено
+no transitions found	tts	uk	Переміщень не знайдено
+not assigned	tts	uk	Не призначено
+old value	tts	uk	Старе значення
+open	tts	uk	Відкрито
+open / closed	tts	uk	Відкрито / Закрито
+open date	tts	uk	Дата відкриття
+opened	tts	uk	Відкрито
+opened by	tts	uk	Відкрито
+original ticket details	tts	uk	Оригінальні деталі картки
+perform irregular transition into the following state	tts	uk	Виконати незвичайне переміщення в наступний стан
+prio	tts	uk	
+priority	tts	uk	Пріоритет
+priority changed	tts	uk	Пріоритет змінено
+put the preexistent ticket into the state %1.	tts	uk	Перевести існуючу картку в стан %1.
+re-assigned	tts	uk	Пере-назначено
+re-opened	tts	uk	Пере-відкрито
+refresh every (seconds)	tts	uk	Оновлювати кожні (секунд)
+returns a struct of a tickets history	tts	uk	Повертає структуру історії карток
+returns a struct of values of a single ticket	tts	uk	Повертає структуру значень однієї картки
+returns the additional notes attached to a ticket	tts	uk	Повертає додаткові примітки, приєднані до картки
+selected	tts	uk	вибрано
+show new/updated tickets on main screen	tts	uk	показувати нові/змінені картки на основному екрані
+source state	tts	uk	Вхідний стан
+state	tts	uk	Стан
+state changed	tts	uk	Стан змінено
+state id	tts	uk	ID стану
+state name	tts	uk	Назва стану
+status/date closed	tts	uk	Статус/Дата закриття
+subject changed	tts	uk	Тема змінена
+target state	tts	uk	Вихідний стан
+the closed ticket requires more work. reopen it.	tts	uk	Закрита картка потребує доопрацювання. Перевідкрити.
+the owner of the ticket was not able to confirm the issue.	tts	uk	Власник картки не зміг підтвердити проблему.
+the ticket has been accepted by the owner, who is about to work on it.	tts	uk	Картка прийнята власником, який буде над нею працювати.
+the ticket has been closed without resolution.	tts	uk	Картка закрита без резолюції.
+the ticket has been reopened for further work.	tts	uk	Картка перевідкрита для додаткової роботи.
+the ticket has been successfully resolved.	tts	uk	Проблема картки успішно вирішена.
+the ticket has been verified and has to be worked on.	tts	uk	Картка перевірена, над нею необхідно працювати.
+the ticket has been worked on and the work requires validation.	tts	uk	Картка опрацьована, і робота потребує перевірки.
+the ticket has been worked on, but requires more work.	tts	uk	Картка опрацьована, але потребує додаткової роботи.
+the ticket is a duplicate of another ticket and should be closed.	tts	uk	Картка дублює іншу і має бути закрита.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	uk	Насправді картка не є дублікатом іншої. Перевідкрити.
+the ticket is invalid and cannot be worked on.	tts	uk	Картка помилкова і не може бути взята в роботу.
+the ticket resolution was successfully validated. close the ticket.	tts	uk	Вирішення проблеми успішно перевірено. Закрити.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	uk	Картка існувала до створення інфраструктури Petri Net і їй має бути присвоєний стан.
+the ticket was found a duplicate of another ticket.	tts	uk	Картка визначена як дублікат іншої.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	uk	Картки в переліку знаходяться в стані %1. Будь ласка, вирішіть, що має бути з ними зроблено.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	uk	Картка перевірки не пройшла і потребує додаткової роботи.
+ticket	tts	uk	Картка
+ticket has been updated	tts	uk	Картка змінена
+tickets found %1	tts	uk	Знайдено %1 карток
+tickets open %1	tts	uk	Відкрито %1 карток
+tickets total %1	tts	uk	Всього %1 карток
+to go back to the tts index, click <a href= %1 >here</a>	tts	uk	Для повернення в перелік карток <a href="%1">натисніть тут</a>
+toaccept	tts	uk	
+toclosed	tts	uk	
+toduplicate	tts	uk	
+toinvalid	tts	uk	
+toneedswork	tts	uk	
+tonew	tts	uk	
+toreopened	tts	uk	
+toresolved	tts	uk	
+total billable	tts	uk	Всього до оплати
+totovalidate	tts	uk	
+tovalidate	tts	uk	
+toverified	tts	uk	
+transition	tts	uk	Переміщення
+transition name	tts	uk	Назва переміщення
+trouble ticket system	common	uk	Система ведення проблем
+tts	common	uk	Проблеми
+tts preferences	tts	uk	Система ведення проблем - параметри
+update ticket state	tts	uk	Змінити стан картки
+updates ticket	tts	uk	Змінені картки
+use email notification	tts	uk	Використовувати оповіщення по email
+verify the ticket to work on it.	tts	uk	Перевірити картку для роботи над нею.
+view all tickets	tts	uk	Переглянути всі картки
+view job detail	tts	uk	Переглянути деталі завдання
+view only open tickets	tts	uk	Дивитись тільки відкриті завдання
+you can only close a ticket if it is assigned to you.	tts	uk	Ви можете закрити тільки призначені Вам картки.
+you want to delete the state %1. are you sure?	tts	uk	Ви дійсно хочете видалити стан %1 ?
+you want to delete the transition %1. are you sure?	tts	uk	Ви дійсно хочете видалити переміщення %1 ?

@@ -1,0 +1,35 @@
+%1 by %2	comic	fi	%1 %2
+are you sure you want to reset all	comic	fi	Oletko varma että haluat nollata kaiken
+are you sure you want to reset all comic dates and resolved image urls?	comic	fi	Haluatko pyyhkiä päivät ja kuvien url:t?
+censorship level	comic	fi	Sensuurin taso
+censorship override enabled	comic	fi	Sensuurin ohitus käytössä
+comic	common	fi	Sarjakuvat
+comic preferences updated	comic	fi	Sarjakuvan asetuksiea päivitetty
+comics	common	fi	Sarjakuvat
+comics per page	comic	fi	Sarjakuvia sivua kohti
+comics scaled	comic	fi	Sarjakuvat skaalattu
+daily comic	common	fi	Päivittäinen sarjakuva
+daily comic preferences	comic	fi	Päivittäisen sarjakuvan asetukset
+daily comics	admin	fi	Päivittäiset sarjakuvat
+daily comics - global options	comic	fi	Päivittäiset sarjakuvat -julkiset asetukset
+daily comics data	comic	fi	Sarjakuvien tiedot
+daily comics global options	comic	fi	Sarjakuvien järjestelmäasetukset
+display layout	comic	fi	Näytön ulkoasu
+display options	comic	fi	Näytön vaihtoehdot
+egroupware daily comics	comic	fi	eGroupWare Sarjakuvat
+front page comic	comic	fi	Etusivun sarjakuva
+front page comic scaled	comic	fi	Etusivun sarjakuva skaalattu
+genre	comic	fi	Tyylilaji
+image source	comic	fi	Kuvan lähde
+max file size	comic	fi	Suurin tiedoston koko
+my comics	comic	fi	Sarjakuvani
+no_entries	comic	fi	Ei_merkintöjä
+parser	comic	fi	Tulkki
+random	comic	fi	Sattumanvarainen
+rated	comic	fi	Luokitus
+remote (parse/snarf) enabled	comic	fi	Etäpalvelin (tulkkaa/paikalliskopio)
+reset	comic	fi	Nollaa
+reset comic data	admin	fi	Nollaa sarjakuva tieto
+resolve	comic	fi	Selvitä
+showing %1 (%2 - %3 of %4)	comic	fi	Näytetään %1 (%2-%3 %4)
+template	comic	fi	Malli

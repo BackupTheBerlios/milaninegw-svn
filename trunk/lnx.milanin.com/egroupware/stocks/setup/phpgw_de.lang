@@ -1,0 +1,13 @@
+%	stocks	de	%
+add new stock	stocks	de	Aktie hinzuf&uuml;gen
+display stocks on main screen is disabled	stocks	de	Anzeigen der Aktienkurse auf der Hauptseite ist deaktiviert
+display stocks on main screen is enabled	stocks	de	Anzeigen der Aktienkurse auf der Hauptseite ist aktiviert
+disable	stocks	de	deaktivieren
+edit stock	stocks	de	Aktie editieren
+enable	stocks	de	aktivieren
+price	stocks	de	Preis
+stocks	common	de	Aktienkurse
+stock quotes	common	de	Aktienkurse
+select displayed stocks	preferences	de	Angezeigte Aktienkurse ausw&auml;hlen
+stock quote preferences	stocks	de	Aktienkurse-Einstellungen
+symbol	stocks	de	Symbol

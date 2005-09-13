@@ -1,0 +1,342 @@
+% to	projects	iw	% אל
++ jobs	projects	iw	+ עבודות
+account	projects	iw	חשבון
+accounting	common	iw	חישוב
+accounting factor	projects	iw	פקטור חישוב
+accounting factor for project	projects	iw	פקטור חישוב לפרויקט
+accounting system	projects	iw	מערכת חישוב
+active	projects	iw	פעיל
+activities	projects	iw	פעיליות
+activity	common	iw	פיעלות
+activity %1 has been added	projects	iw	.נוספה פעילות %1 נוספה
+activity %1 has been updated	projects	iw	.פעילות %1 עודכנה
+activity id	projects	iw	זיהוי פעילות
+add activity	projects	iw	הוסף פעילות
+add file	projects	iw	הוסף קובץ
+add job	projects	iw	הוסף עבודה
+add milestone	projects	iw	הוסף אבן-דרך
+add project	projects	iw	הוסף פרויקט
+add role	projects	iw	הוסף תפקיד
+add work hours	projects	iw	הוסף שעות עבודה
+address book	projects	iw	ספר כתובות
+administrator	projects	iw	מנהל
+administrator list	projects	iw	רשימת מנהלים
+alarm	projects	iw	אזעקה
+all delivery notes	projects	iw	כל תעודות המשלוח
+amount	projects	iw	כמות
+anonymous public	projects	iw	הציבור האנונימי
+archive	common	iw	ארכיב
+are you sure you want to delete this activity	projects	iw	?בטוח שברצונך למחוק פעילות זו
+are you sure you want to delete this job	projects	iw	?בטוח שברצונך למחוק עבודה זו
+are you sure you want to delete this project	projects	iw	?בטוח שברצונך למחוק פרויקט זה
+assign	projects	iw	למנות
+assign roles and events	projects	iw	למנות תפקידים ואירועים
+assignment has been deleted	projects	iw	המנוי נמחק
+assignment has been saved	projects	iw	המנוי נשמר
+assignment to project	projects	iw	התמנה אל הפרויקט
+assignment to project %1	projects	iw	התמנה לפרויקט %1
+assignment to role	projects	iw	התמנה לתפקיד
+available	projects	iw	זמין
+before	projects	iw	לפני
+bill per hour	projects	iw	חייב לפי שעה
+bill per hour/workunit	projects	iw	חייב לפי שעה/יחידת עבודה
+bill per workunit	projects	iw	חייב לפי יחידת עבודה
+billable	projects	iw	ניתן לחיוב
+billable activities	projects	iw	פעיליות הניתנות לחיוב
+billed	projects	iw	מחויב
+billed only	projects	iw	מחויב בלבד
+billing	projects	iw	חיובים
+bookable activities	projects	iw	פעיליות נרשנות
+bookkeeper	projects	iw	מנהל חשבונות
+browse	projects	iw	עיון
+budget	projects	iw	תקציב
+budget available	projects	iw	תקציב זמין
+budget limit	projects	iw	מגבלת תקציב
+budget main project	projects	iw	תקצב פרויקט ראשי
+budget planned	projects	iw	תקציב מתוכנן
+budget sum of all sub projects is bigger than the budget of the main project	projects	iw	סכום תקציב כל תתי-הפרויקטים גדול יותר מתקציב הפרויקט
+budget used	projects	iw	תקציב מנוצל
+budget used total	projects	iw	סה"כ תקציב מנוצל
+calculate	projects	iw	חשב
+changed start date and end date	projects	iw	.שינוי תאריך התחלה ותאריך סיום
+changed start date and end date of projects bellow	projects	iw	.שינוי תאריך התחלה ותאריך סיום של הפרויקטים הרשומים מטה
+changes of project data	projects	iw	שינוי נתוני הפרויקט
+click %1here%2 to return to projects.	projects	iw	.הקלק %1כאן%2 לחזור לפרויקטים
+closed	projects	iw	נסגר
+color legend	projects	iw	מפתח צבעים
+columns to show in the projects list	projects	iw	עמודות להציג ברשימת הפרויקטים
+comment	projects	iw	הערה
+continue	projects	iw	המשך
+coordinator	common	iw	מתאם
+costs	projects	iw	עלויות
+costs list	projects	iw	רשימת עלויות
+costtype	projects	iw	סוג עלויות
+create delivery	projects	iw	צור משלוח
+creator	projects	iw	יוצר
+customer	common	iw	לקוח
+customer nr	projects	iw	מספר לקוח
+date created	projects	iw	תאריך יצירה
+date due of milestone %1 of project %2 has been updated	projects	iw	.תאריך אבן-דרך %1 של פרויקט %2 עודכן
+date due planned	projects	iw	תאריך יעד מתוכנן
+days	projects	iw	ימים
+days before	projects	iw	ימים לפני
+definition per project	admin	iw	הגדרה לפרויקט
+delete activity	projects	iw	מחק פעילות
+delete factor	projects	iw	מחק פקטור
+delete hours	projects	iw	מחק שעות
+delete job	projects	iw	מחק עבודה
+delete project	projects	iw	מחק פרויקט
+delete selected files	projects	iw	מחק קבצים מובחרים
+delete work hours	projects	iw	מחק שעות עבודה
+deliveries	projects	iw	משלוחים
+delivery	projects	iw	משלוח
+delivery date	projects	iw	תאריך אספקה
+delivery id	projects	iw	זיהוי משלוח
+delivery list	projects	iw	רשימת משלוחים
+delivery note	projects	iw	תעודת משלוח
+delivery note for project	projects	iw	תעודת משלוח לפרויקט
+description can not exceed 250 characters in length	projects	iw	אורך התיאור עד 250 תווים
+description can not exceed 8000 characters in length	projects	iw	אורך התיאור עד 8000 תווים
+discount	projects	iw	הנחה
+distance	projects	iw	מרחק
+do you also want to delete all sub projects	projects	iw	?האם ברצונך למחוק גם את כל תתי-הפרויקט
+do you also want to delete all sub projects ?	projects	iw	?האם ברצונך למחוק גם את כל תתי-הפרויקט
+edit activity	projects	iw	ערוך פעילות
+edit administrator list	projects	iw	ערוך רשימת מנהלים
+edit events	projects	iw	ערוך אירועים
+edit job	projects	iw	ערוך עבודות
+edit manager list	projects	iw	ערוך רשימת מנהלים
+edit milestone	projects	iw	ערוך אבן-דרך
+edit milestones	projects	iw	ערוך עבני-דרך
+edit project	projects	iw	ערוך פרויקט
+edit roles	projects	iw	ערוך תפקידים
+edit roles and events	projects	iw	ערוך תפקידים ואירועים
+edit seller list	projects	iw	ערוך רשימת ספקים
+edit time tracker entry	projects	iw	ערוך רשומת מעקב זמן
+edit work hours	projects	iw	ערוך שעות עבודה
+employee	projects	iw	מועסק
+employees	projects	iw	מועסקים
+end date has changed	projects	iw	תאריך סיום השתנה
+ending date can not be after parent projects date due	projects	iw	.תאריך הסיום לא יכול להיות מאוחר מתאריך היעד של פרויקט האב
+ending date can not be after projects date due	projects	iw	.תאריך סיום לא יכול להיות מאוחר מתאריך היעד של הפרויקט
+ending date can not be before start date	projects	iw	.תאריך סיום לא יכול להיות מוקדם מתאריך התחלה
+entry	projects	iw	רשומה
+event	projects	iw	אירוע
+event %1 has been saved	projects	iw	אירוע %1 נשמר
+event %1 has been updated	projects	iw	אירוע %2 עודכן
+events	projects	iw	אירועים
+exact accounting [hh.mm]	admin	iw	[חישוב מדויק [שש.דד
+export as	projects	iw	-ייצא כ
+external reference	projects	iw	רפרנט חיצוני
+extra budget	projects	iw	תקציב נוסף
+extra budget sum of all sub projects is bigger than the extra budget of the main project	projects	iw	.סכום התקציבים הנוספים של כל תתי-הפרויקטים גדול יותר מהתקצים הנוסף של פרויקט האב
+factor employee	projects	iw	פקטור מועסק
+factor has been deleted	projects	iw	הפקטור נמחק
+factor has been saved	projects	iw	הפקטור נשמר
+factor has been updated	projects	iw	הפקטור עודכן
+factor project	projects	iw	הקטור הפרויקט
+failed sending message to '%1' #%2 subject='%3', sender='%4' !!!	projects	iw	!נכשלתי במשלוח הודעה אל '%1' #%2 הנושא='%3', השולח='%4'
+from	projects	iw	מאת
+from %1 to %2	projects	iw	מאת %1 אל %2
+gantt chart	projects	iw	גנט
+gantt chart from %1 to %2	projects	iw	גנט מ-%1 ל-%2
+generate activity id	projects	iw	?לחולל זיהוי פעילות
+generate activity id ?	projects	iw	?לחולל זיהוי פעילות
+generate delivery id ?	projects	iw	?לחולל זיהוי משלוח
+generate job id	projects	iw	?לחולל זיהוי עבודה
+generate project id	projects	iw	?לחולל זיהוי פרויקט
+global categories	projects	iw	קטגוריות גלובליות
+has reached	projects	iw	-הגיע ל
+hours	projects	iw	שעות
+hours limit	projects	iw	הגבלת שעות
+hours of work day	admin	iw	כמות השעות ביום עבודה
+hours used total	projects	iw	סה"כ שעות מנוצלות
+id can not exceed 20 characters in length	projects	iw	אורך הזיהוי עד 20 תווים
+id can not exceed 250 characters in length	projects	iw	אורך הזיהוי עד 250 תווים
+id is already taken, choose an other one	projects	iw	זיהוי זה תפוס, בחר אחר
+if using activities	admin	iw	אם משתמשים בפעילויות
+investment nr	projects	iw	מספר השקעה
+invoicing method	projects	iw	סוג ההתחשבנות
+invoicing of work time	admin	iw	התחשבנות של זמן עבודה
+job	projects	iw	עבודה
+job has been added	projects	iw	.העבודה נוספה
+job has been updated	projects	iw	.העבודה עודכנה
+job id	projects	iw	זיהוי העבודה
+job list	projects	iw	רשימת עבודות
+job manager	projects	iw	מנהל עבודה
+jobs	common	iw	עבודות
+last update	projects	iw	עדכון אחרון
+list activities	projects	iw	הצג פעילויות
+list budget	projects	iw	הצג תקציב
+list deliveries	projects	iw	הצג משלוחים
+list jobs	common	iw	רשימת עבודות
+list projects	common	iw	רשימת פרויקטים
+list work hours	projects	iw	רשימת שעות עבודה
+main project	projects	iw	פרויקט ראשי
+main project:	projects	iw	:פרויקט ראשי
+manager	projects	iw	מנהל
+manager list	projects	iw	רשימת מנהלים
+managing committee	projects	iw	וועדת היגוי
+manuell entries	projects	iw	רשומות ידניות
+milestone	projects	iw	אבן-דרך
+milestone date due	projects	iw	תאריך יעד של אבן-הדרך
+milestone has been deleted	projects	iw	אבן-הדרך נמחקה
+milestone has been saved	projects	iw	אבן-הדרך נשמרה
+milestones	common	iw	אבני-דרך
+minutes per workunit	projects	iw	דקות ביחידת עבודה
+month	projects	iw	חודש
+move start date if pervious projects end date changes	admin	iw	שנה את תאריך ההתחלה אם תאריך הסיום של פרויקט קודם משתנה
+name not exceed 250 characters in length	projects	iw	אורך השם עד 250 תווים
+new date due of milestone %1: %2	projects	iw	.תאריך היעד החדש של עבן-דרך %1: %2
+new end date	projects	iw	תאריך סיום חדש
+new milestone	projects	iw	אבן-דרך חדשה
+new project	projects	iw	פרויקט חדש
+new start date	projects	iw	תאריך התחלה חדש
+nonactive	common	iw	לא פעיל
+not billable	projects	iw	לא ניתן לחייב
+number	projects	iw	מספר
+old end date	projects	iw	תאריך סיום הקודם
+old start date	projects	iw	תאריך התחלה הקודם
+open	projects	iw	פתח
+open popup	projects	iw	פתח חלונית קופצת
+open popup window	projects	iw	פתח חלונית קופצת
+overall	projects	iw	סה"כ
+parent project	projects	iw	פקרויקט האב
+pause	projects	iw	הפסקה
+per	projects	iw	-ל
+per day	projects	iw	ליום
+per hour	projects	iw	לשעה
+per hour/workunit	projects	iw	לשעה/יחידת עבודה
+per workunit	common	iw	ליחידת עבודה
+percent	projects	iw	אחוז
+planned	projects	iw	מתוכנן
+planned time sum of all sub projects is bigger than the planned time of the main project	projects	iw	.סכום הזמן המתוכן של כל תתי-הפרויקטים גדול יותר מזמן מתוכנן של הפרויקט כולו
+please choose a project coordinator	projects	iw	.בחר מתאם פרויקט
+please choose activities for the project	projects	iw	.נא לבחור פעילויות לפרויקט
+please choose the accounting system for the project	projects	iw	.נא לבחור את מערכת ההתחשבנות של הפרויקט
+please choose the discount type	projects	iw	.נא לבחור את סוג ההנחה
+please enable html view of emails.	projects	iw	.בדוא"ל HTML נא לאפשר הצגת
+please enter a remark	projects	iw	.נא להכניס הערה
+please enter an id	projects	iw	נא להכניס זיהוי
+please enter an id !	projects	iw	!נא להכניס זיהוי
+please enter the bill	projects	iw	.נא להכניס את החשבונית
+please enter the minutes per workunit	projects	iw	.נא הכניס את מספר הדקות ביחידת עבודה
+please select a project for time tracking	projects	iw	נא לבחור פרויקט למעקב זמן
+please set the accounting factor for the project	projects	iw	.נא לקבוע את פקטור החישוב לפרויקט
+please set your preferences for this application !	projects	iw	!נא לקבוע את העדיפויות שלך ליישום זה
+please specify the budget	projects	iw	.נא לציין את התקציב
+position	projects	iw	מיקום
+previous	projects	iw	פרויקט הקודם
+previous project	projects	iw	פרויקט הקודם
+previous projects end date has changed	projects	iw	תאריך הסיום של הפרויקט הקודם השתנה
+print delivery	projects	iw	הדפס משלוח
+processor	projects	iw	מעבד
+project	projects	iw	פרויקט
+project %1 has been saved	projects	iw	.פרויקט %1 נשמר
+project %1 has been updated	projects	iw	.פרויקט %1 עודכן
+project accounting	admin	iw	התחשבנות הפרויקט
+project administrators	common	iw	מנהלי הפרויקט
+project data due	projects	iw	תאריך היעד של הפרויקט
+project date due	projects	iw	תאריך היעד של הפרויקט
+project dependencies	common	iw	תלותיות הפרויקט
+project id	common	iw	זיהוי פרויקט
+project list	projects	iw	רשימת פרויקטים
+project overview	projects	iw	סקירת הפרויקט
+project statistic	projects	iw	סטיסטיקות של הפרויקט
+project url	projects	iw	של הפרויקט URL
+projects	common	iw	פרויקטים
+projects, which are assigned as sequencing	projects	iw	פרויקטים, שנקבע לגניהם שהם סדרתיים
+quality check	projects	iw	בדיקת איכות
+reference	projects	iw	רפרנט
+remark	projects	iw	הערה
+remark can not exceed 8000 characters in length	projects	iw	.אורך ההערה עד 8000 תווים
+remark can not exceed 8000 characters in length !	projects	iw	!אורך ההערה עד 8000 תווים
+remark required	projects	iw	חייב הערה
+result	projects	iw	תוצאה
+role	projects	iw	תפקיד
+role %1 has been saved	projects	iw	תפקיד %1 נשמר
+role %1 has been updated	projects	iw	תפקיד %1 עודכן
+role has been deleted	projects	iw	התפקיד נמחק
+roles	projects	iw	תפקידים
+roles list	projects	iw	רשימת תפקידים
+sales department	projects	iw	מחלקת מכירות
+save factor	projects	iw	שמור פקטור
+save milestone	projects	iw	שמור אבן-דרך
+select factor	projects	iw	בחר פקטור
+select groups	projects	iw	בחר קבוצות
+select main project	common	iw	בחר פרויקט ראשי
+select project	projects	iw	בחר פרויקט
+select role	projects	iw	בחר תפקיד
+select users	projects	iw	בחר משתמשים
+seller	projects	iw	ספק
+seller list	projects	iw	רשימת ספקים
+sequencing project	projects	iw	פרויקט סידרתי
+settings	admin	iw	הגדרות
+short description	projects	iw	תיאור קצר
+show gantt chart	projects	iw	הצג גנט
+show milestones	projects	iw	הצג אבני-דרך
+show planned resources	projects	iw	הצג משאבים מתוכננים
+site configuration	projects	iw	הגדרות אתר
+size	projects	iw	גודל
+start	projects	iw	התחל
+start date can not be before parent projects start date	projects	iw	.תאריך ההתחלה לא יכול להקדים את תאריך התחלת פרויקט האב
+start date planned	projects	iw	תאריך התחלה מתוכנן
+statistic	projects	iw	סטטיסטיקה
+statistics	projects	iw	סטטיסטיקות
+stop	projects	iw	עצור
+sub project level %1	projects	iw	תת-פרויקט רמה %1
+subproject	projects	iw	תת-פרויקט
+sum	projects	iw	סכום
+sum budget	projects	iw	סכום התקציב
+sum hours	projects	iw	סכום שעות
+sum jobs	projects	iw	סכום העבודות
+sum workunits	projects	iw	סכום יחידות העבודה
+test	projects	iw	בדוק
+that id has been used already	projects	iw	.זיהוי זה כבר בשימוש
+that id has been used already !	projects	iw	!זיהוי זה כבר בשימוש
+the choosen previous project does not have an end date specified	projects	iw	.לפרויקט הקודם לנבחר לא נקבע תאריך סיום
+the delivery note contains no items !	projects	iw	!תעודת המשלוח לא מכיל  כל פריט
+this is mostly caused by a not or wrongly configured smtp server. notify your administrator.	projects	iw	.שלא מוגדר או שלא מוגדר נכון. הודע למנהל שלך SMTP זה בדרך כלל נגרם על ידי שרת
+till	projects	iw	עד
+time of journey	projects	iw	זמן נסיעה
+time planned	projects	iw	זמן מתוכנן
+time tracker	projects	iw	מעקב זמן
+time tracking actions	projects	iw	פעיליות מעקב זמן
+time tracking for this project has been stopped already	projects	iw	מעקב הזמן של פרויקט זה הופסק כבר
+time tracking for this project is already active	projects	iw	מעקב הזמן של פרויקט זה כפר פעיל
+time used	projects	iw	זמן מנוצל
+time used billable	projects	iw	זמן לחיוב מנוצל
+time used total	projects	iw	סה"כ זמן מנוצל
+title can not exceed 250 characters in length	projects	iw	.אורך הכותרת עד 250 תווים
+update delivery	projects	iw	עדכן משלוח
+use activities	admin	iw	פעילויות בשימוש
+used	projects	iw	בשימוש
+used - jobs included	projects	iw	בשימוש - כולל עבודות
+used billable	projects	iw	בשימוש לחיוב
+used not billable	projects	iw	בשימוש לא לחיוב
+used total	projects	iw	סה"כ בשימוש
+user statistic	projects	iw	סטיסטיקת משתמש
+user statistics	projects	iw	סטטיסטיקות משתמש
+view employees	projects	iw	הצג מעוסקים
+view gantt chart	projects	iw	הצג גנט
+view hours	projects	iw	הצג שעות
+view job	projects	iw	הצג עבודה
+view project	projects	iw	הצג פרויקט
+view users	projects	iw	הצג משתמשים
+view work hours	projects	iw	הצג שעות עבודה
+work date	common	iw	יום עבודה
+work hours	common	iw	שעה עבודה
+work time	projects	iw	זמן עבודה
+workload warning for project	projects	iw	אזהרת עומס עבודה לפרויקט
+workunit	projects	iw	יחידת עבודה
+workunits	projects	iw	יחידות עבודה
+you have entered an invalid date !	projects	iw	!הכנסת תאריך לא חוקי
+you have entered an invalid date due	projects	iw	!הכנסת תאריך יעד לא חוקי
+you have entered an invalid end date	projects	iw	!הכנסת תאריך סיום לא חוקי
+you have entered an invalid planned end date	projects	iw	!הכנסת תאריך סיום מתוכנן לא חוקי
+you have entered an invalid planned start date	projects	iw	!הכנסת תאריך התחלה מתוכנן לא חוקי
+you have entered an invalid start date	projects	iw	!הכנסת תאריך התחלה לא חוקי
+you have no customer selected !	projects	iw	!לא בחרת לקוח
+you have no projects selected	projects	iw	לא נבחרו פרויקטים
+you have selected an invalid activity	projects	iw	.בחרת פעילות לא חוקית
+you have to create a delivery or invoice first !	projects	iw	!קודם עליך ליצור משלוח או חשבונית

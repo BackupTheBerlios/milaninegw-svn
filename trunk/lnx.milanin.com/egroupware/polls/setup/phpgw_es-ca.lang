@@ -1,0 +1,31 @@
+actions	polls	es-ca	acciones
+add answer to poll	polls	es-ca	Afegir respostes al sondeig
+add answers	polls	es-ca	Afegir respostes
+add new poll question	polls	es-ca	Afegir nova pregunta al sondeig
+add questions	polls	es-ca	Afegir preguntes
+allow users to vote more then once	polls	es-ca	Permetre als usuaris votar més d'un cop
+answer	polls	es-ca	Resposta
+answer has been added to poll	polls	es-ca	Resposta afegida al sondeig
+answer has been updated	polls	es-ca	Resposta actualitzada
+answers	polls	es-ca	Respostes
+are you sure want to delete this answer ?	polls	es-ca	Esteu segurs d'esborrar aquesta resposta?
+are you sure want to delete this question ?	polls	es-ca	Esteu segurs d'esborrar aquesta pregunta?
+edit answer	polls	es-ca	Editar resposta
+edit poll question	polls	es-ca	Editar pregunta del sondeig
+enter poll question	polls	es-ca	Entrar pregunta al sondeig
+new poll has been added.  you should now add some answers for this poll	polls	es-ca	S'ha afegit un nou sondeig. Heu d'afegir ara les respostes per aquest sondeig.
+poll question	polls	es-ca	Pregunta del sondeig
+poll settings	polls	es-ca	Configurar el sondeig
+polls	common	es-ca	Sondejos/Votacions
+question has been updated	polls	es-ca	Pregunta actualitzada
+select current poll	polls	es-ca	Seleccionar sondeig actual
+settings	polls	es-ca	Configuración
+settings updated	polls	es-ca	Configuració actualitzada
+show answers	polls	es-ca	Mostrar respostes
+show questions	polls	es-ca	Mostrar preguntes
+total votes	polls	es-ca	Total
+view poll	polls	es-ca	Veure sondeig
+vote	polls	es-ca	Votar
+voting booth admin	admin	es-ca	Situació del vot
+voting booth administration	polls	es-ca	Administració de situacions de vot
+which poll	polls	es-ca	Quin sondeig

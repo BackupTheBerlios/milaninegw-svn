@@ -1,0 +1,8 @@
+eGroupWare uses it's own translations in the setup-directory.
+
+The lang2eGW utility (needs a php cgi-binary) can be used to convert new
+languages to the eGW format. 
+USING IT ON EXISTING ONES DELETES ALL CHANGES MADE BY EGW !!!
+The english lang-file might be ok, as it's the leading one.
+
+RalfBecker@outdoor-training.de

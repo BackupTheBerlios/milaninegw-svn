@@ -1,0 +1,39 @@
+%1 by %2	comic	sl	%1 od %2
+%1 by %2 (%3)	comic	sl	%1 od %2 (%3)
+are you sure you want to reset all comic dates and resolved image urls?	comic	sl	Ali ste prepričani, da želite ponastaviti vse datume stripov in internetne naslove slik?
+censorship level	comic	sl	Stopnja cenzure
+censorship override enabled	comic	sl	Izključi cenzuro
+comic	common	sl	Stripi
+comic preferences updated	comic	sl	Nastavitve prikazovanja stripov so shranjene
+comics	common	sl	Stripi
+comics per page	comic	sl	Stripov na stran
+comics scaled	comic	sl	Prilagodi velikost slike
+daily comic	common	sl	Dnevni strip
+daily comic preferences	comic	sl	Nastavitve prikazovanja stripov
+daily comics	admin	sl	Dnevni stripi
+daily comics - global options	comic	sl	Dnevni stripi - globalne nastavitve
+daily comics data	comic	sl	Podatki o stripih
+daily comics global options	comic	sl	Globalne nastavitve dnevnih stripov
+display layout	comic	sl	Postavitev slik
+display options	comic	sl	Nastavitve prikaza
+egroupware daily comics	comic	sl	eGroupWare dnevni stripi
+front page comic	comic	sl	Strip na prvi strani
+front page comic scaled	comic	sl	Prilagodi velikost začetnega stripa
+genre	comic	sl	Zvrst
+global comics	comic	sl	Globalni stripi
+global options	comic	sl	Globalne nastavitve
+global options updated	comic	sl	Globalne nastavitve posodobljene
+image source	comic	sl	Vir slike
+max file size	comic	sl	Največja velikost datoteke
+my comics	comic	sl	Moji stripi
+no_entries	comic	sl	brez vnosa
+performed %1 of element	comic	sl	Obdelano %1 elementa
+phpgroupware daily comics	comic	sl	phpGroupWare dnevni stripi
+random	comic	sl	Naključno
+rated	comic	sl	Ocenjeno
+reset	comic	sl	Ponastavi
+reset comic data	admin	sl	Ponastavi zapise o stripih
+resolve	comic	sl	Razreši
+showing %1 (%2 - %3 of %4)	comic	sl	prikazano %1 (%2 - %3 od %4)
+template	comic	sl	Predloga
+visit %1	comic	sl	Obišći %1

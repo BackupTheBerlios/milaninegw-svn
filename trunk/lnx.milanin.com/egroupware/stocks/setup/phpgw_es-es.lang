@@ -1,0 +1,16 @@
+%	stocks	es-es	%
+add new stock	stocks	es-es	Añadir nueva cotización
+company name	stocks	es-es	Nombre de la empresa
+disable	stocks	es-es	desactivar
+display stocks on main screen is disabled	stocks	es-es	Mostrar las cotizaciones en la pantalla principal está desactivado
+display stocks on main screen is enabled	stocks	es-es	Mostrar las cotizaciones en la pantalla principal está activado
+edit stock	stocks	es-es	Editar cotización
+enable	stocks	es-es	activar
+price	stocks	es-es	Precio
+select displayed stocks	preferences	es-es	Seleccionar las cotizaciones de mercado mostradas
+stock quote preferences	stocks	es-es	Preferencias de las cotización de mercado
+stock quotes	common	es-es	Cotizaciones del mercado
+stocks	common	es-es	Cotizaciones
+symbol	stocks	es-es	Símbolo
+$ change	common	es-es	Cambio
+% change	common	es-es	Cambio %

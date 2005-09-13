@@ -1,0 +1,69 @@
+add profile	emailadmin	es-ca	Afegir perfil
+admin dn	emailadmin	es-ca	dn del administrador
+admin password	emailadmin	es-ca	contrasenya del administrador
+admin passwort	emailadmin	es-ca	contrasenya del administrador
+admin username	emailadmin	es-ca	nom d'usuari del administrador
+advanced options	emailadmin	es-ca	opcions avançades
+alternate email address	emailadmin	es-ca	adreça de correu alternativa
+cyrus imap server	emailadmin	es-ca	Servidor IMAP Cyrus
+cyrus imap server administration	emailadmin	es-ca	Administració del servidor IMAP Cyrus
+default	emailadmin	es-ca	predeterminada
+deliver extern	emailadmin	es-ca	entrega externa
+do you really want to delete this profile	emailadmin	es-ca	Realmente voleu esborrar aquest perfil?
+domainname	emailadmin	es-ca	nom del domini
+edit email settings	emailadmin	es-ca	editar configuració del compte
+email account active	emailadmin	es-ca	compte de correu electrònic actiu
+email address	emailadmin	es-ca	adreça de correu electrònic
+enable cyrus imap server administration	emailadmin	es-ca	activar administració del servidor Cyrus IMAP
+enable sieve	emailadmin	es-ca	activar Sieve
+enter your default mail domain (from: user@domain)	emailadmin	es-ca	Entreu el domini predeterminat (de usuari@domini)
+forward also to	emailadmin	es-ca	reeenviar també a
+forward email's to	emailadmin	es-ca	reenviar correus a
+forward only	emailadmin	es-ca	només reenviar
+imap admin password	admin	es-ca	contrasenya de l'administrador IMAP
+imap admin user	admin	es-ca	usuari administrador IMAP
+imap c-client version < 2001	emailadmin	es-ca	Versió C-Client IMAP < 2001
+imap server hostname or ip address	emailadmin	es-ca	Servidor IMAP o adreça IP
+imap server logintyp	emailadmin	es-ca	Tipus de sessió del servidor IMAP
+imap server port	emailadmin	es-ca	Port del servidor IMAP
+imap/pop3 server name	emailadmin	es-ca	Nom del servidor POP/IMAP
+in mbyte	emailadmin	es-ca	en MBytes
+ldap basedn	emailadmin	es-ca	basedn per a LDAP
+ldap server	emailadmin	es-ca	servidor LDAP
+ldap server accounts dn	emailadmin	es-ca	DN per a comptes del servidor LDAP
+ldap server admin dn	emailadmin	es-ca	DN del administrador del servidor LDAP
+ldap server admin password	emailadmin	es-ca	contrasenya del administrador del servidor LDAP
+ldap server hostname or ip address	emailadmin	es-ca	Nom del servidor LDAP o adreça IP
+ldap settings	emailadmin	es-ca	Configuració LDAP
+leave empty for no quota	emailadmin	es-ca	Deixar en blanc per a no posar quota
+mail settings	admin	es-ca	Configuració del correu.
+name of organisation	emailadmin	es-ca	Nom de l'organització
+no alternate email address	emailadmin	es-ca	Sense adreça de correu alternativa
+no forwarding email address	emailadmin	es-ca	Sense adreça de correu per a reenviar
+pop3 server hostname or ip address	emailadmin	es-ca	Nom del servidor POP3 o adreça IP
+pop3 server port	emailadmin	es-ca	Port del servidor POP3
+postfix with ldap	emailadmin	es-ca	Postfix amb LDAP
+profile list	emailadmin	es-ca	Llista de perfils
+profile name	emailadmin	es-ca	Nom del perfil
+qmaildotmode	emailadmin	es-ca	Modus de punt de qmail
+qouta size in mbyte	emailadmin	es-ca	Tamanyo de la quota en MBytes
+quota settings	emailadmin	es-ca	Configuració de les quotas
+remove	emailadmin	es-ca	esborrar
+select type of imap/pop3 server	emailadmin	es-ca	Seleccioneu el tipus de servidor IMAP/POP3
+select type of smtp server	emailadmin	es-ca	Seleccioneu el tipus de servidor SMTP
+sieve server hostname or ip address	emailadmin	es-ca	Nom del servidor Sieve o adreça IP
+sieve server port	emailadmin	es-ca	Port del servidor Sieve
+sieve settings	emailadmin	es-ca	Configuració de Sieve
+smtp server name	emailadmin	es-ca	Nom del servidor SMTP
+smtp-server hostname or ip address	emailadmin	es-ca	Nom del servidor SMTP o adreça IP
+smtp-server port	emailadmin	es-ca	Port del servidor SMTP
+standard	emailadmin	es-ca	Estàndar
+standard imap server	emailadmin	es-ca	Servidor IMAP estàndar
+standard pop3 server	emailadmin	es-ca	Servidor POP3 estàndar
+standard smtp-server	emailadmin	es-ca	Servidor SMTP estàndar
+use ldap defaults	emailadmin	es-ca	usar les opcions predeterminades per LDAP
+use smtp auth	emailadmin	es-ca	Usar identificació SMTP
+use tls authentication	emailadmin	es-ca	Usar identificació TLS
+use tls encryption	emailadmin	es-ca	Usar xifrat TLS
+users can define their own emailaccounts	emailadmin	es-ca	Els usuaris poden definir els seus propis comptes de correu
+virtual mail manager	emailadmin	es-ca	Gestor de correu virtual

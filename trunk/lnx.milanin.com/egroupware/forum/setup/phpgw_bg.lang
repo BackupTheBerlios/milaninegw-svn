@@ -1,0 +1,32 @@
+add forum	forum	bg	Добавяне на дискусия
+belongs to category	forum	bg	Принадлежи към категория
+category description	forum	bg	Описание на категорията
+category name	forum	bg	Име на категория
+collapse threads	forum	bg	Свиване на отговорите
+collapsed	forum	bg	свити
+create new category	forum	bg	Създаване на нова категория
+edit forum	forum	bg	Редактиране на дискусиите
+forum	common	bg	Дискусия
+forum administration	admin	bg	Управление на дискусиите
+forum description	forum	bg	Описание на дискусията
+forum name	forum	bg	Име на дискусията
+forums	common	bg	Дискусии
+latest reply	forum	bg	Последен отговор
+new category	forum	bg	Нова категория
+new forum	forum	bg	Нова дискусия
+new topic	forum	bg	Нова тема
+no category	forum	bg	Без категория
+post	forum	bg	Подкатегория
+post a message to this thread	forum	bg	Изпращане на съобщение по тази тема:
+replies	forum	bg	Отговори
+return to admin	forum	bg	Назад към управлението
+return to forums	forum	bg	Назад към дискусиите
+sub category	forum	bg	Подкатегория
+there are no forums in this category	forum	bg	Няма дискусии в тази категория
+threaded	forum	bg	Нишков изглед
+topic	forum	bg	Тема
+update category	forum	bg	Обновяване на категорията
+update forum	forum	bg	Обновяване на дискусията
+view threads	forum	bg	Разгъване на отговорите
+your email	forum	bg	Вашата електронна поща
+your name	forum	bg	Вашето име

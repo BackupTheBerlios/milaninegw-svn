@@ -1,0 +1,158 @@
+a new ticket has been reported.	tts	el	Έχετε μια νέα κλήση.
+accept	tts	el	Αποδοχή
+accept the ticket into verification process.	tts	el	Αποδοχή της κλήσης κατα την διαδικασία επαλήθευσης.
+accepted	tts	el	Αποδοχή επιτυχής
+action	tts	el	Ενέργεια
+add new ticket	tts	el	Προσθήκη νέας κλήσης
+add ticket	tts	el	Προσθήκη κλήσης
+additional notes	tts	el	Πρόσθετες σημειώσεις
+admin options	common	el	Επιλογές διαχειριστή
+assign to	tts	el	Καθορισμός στον/στην
+assigned from	tts	el	Καθορίστηκε απο
+assigned to	tts	el	Καθορίστηκε στον/στην
+billable hours	tts	el	Ώρες χρέωσης
+billable hours changed	tts	el	Οι ώρες χρέωσης άλλαξαν
+billable hours rate	tts	el	Βαθμός χρεωστικών ωρών
+billable rate	tts	el	Βαθμός χρέωσης
+billable rate changed	tts	el	Ο βαθμός χρέωσης άλλαξε
+category changed	tts	el	Αλλαγή κατηγορίας επιτυχής
+check here to generate the state's id automatically or enter a particular id below.	tts	el	Πατήστε εδώ για την αυτοματοποίηση της δημιουργίας του αριθμού κατάστασης ή πληκτρολογήστε ένα συγκεκριμένο αριθμό παρακάτω
+clear form	tts	el	Καθαρισμός φόρμας
+close the invalid ticket.	tts	el	Κλείσιμο των άκυρων κλήσεων
+closed	tts	el	Έκλεισε
+completed	tts	el	Ολοκληρώθηκε
+configure the states	common	el	Τροποποίηση καταστάσεων
+configure the transitions	common	el	Τροποποίηση μεταβάσεων
+create new state	tts	el	Δημιουργία νέας κατάστασης
+create new ticket	tts	el	Δημιουργία νέας κλήσης
+create new transition	tts	el	Δημιουργία νέας μετάβασης
+creates a new ticket, returns ticket_id	tts	el	Δημιουργεί μια νέα κλήση, επιστρέφει τον αριθμό της κλήσης
+creates a struct of tickets	tts	el	Δημιουργεί μια δομή κλήσεων
+date opened	tts	el	Ημερομηνία ανοίγματος
+default assign to	tts	el	Προκαθορισμένη αποστολή στον/στην
+default group	tts	el	Προκαθορισμένη ομάδα
+default priority	tts	el	Προκαθορισμένη προτεραιότητα
+delete the listed tickets.	tts	el	Διαγραφή των κλήσεων της λίστας.
+deleting the state	tts	el	Διαγραφή της κατάστασης
+deleting the transition	tts	el	Διαγραφή της μετάβασης
+detail	tts	el	Λεπτομέρεια
+duplicate	tts	el	Δημιουργία διπλότυπου
+edit the state	tts	el	Επεξεργασία της κατάστασης
+edit the transition	tts	el	Επεξεργασία της μετάβασης
+force	tts	el	Αναγκαστικά
+global categories	tts	el	Γενικές κατηγορίες
+group ownership changed	tts	el	Η ιδιοκτησία της ομάδας άλλαξε
+history	tts	el	Ιστορικό
+i worked on the ticket and the work requires validation.	tts	el	Η επεξεργασία της κλήσης πρέπει να επιβεβεωθεί.
+i worked on the ticket, but did not finish.	tts	el	Η επεξεργασία της κλήσης δεν ολοκληρώθηκε
+in progress	tts	el	Επεξεργασία σε εξέλιξη
+initial state	tts	el	Αρχική κατάσταση
+invalid	tts	el	Άκυρο
+invalidate	tts	el	Ακυρώνω
+keep the present state [%1].	tts	el	Κράτησε την τρέχουσα κατάσταση [%1]
+latest note added	tts	el	Τελευταία καταχώριση
+list of available tickets' states.	tts	el	Λίστα καταστάσης των διαθέσιμων κλήσεων
+list of available tickets' transitions.	tts	el	Λίστα μεταβάσεων των διαθέσιμων κλήσεων
+missing description	tts	el	Ελλιπής περιγραφή
+morework	tts	el	Περισσότερη επεξεργασία
+needswork	tts	el	Χρειάζεται επεξεργασία
+new	tts	el	Δημιουργία
+new ticket	tts	el	Νέα κλήση
+new tickets can be put into this state.	tts	el	Νέες κλήσεις μπορούν να εισαχθούν σε αυτή την κατάσταση.
+new value	tts	el	Νέα τιμή
+no additional notes	tts	el	Δεν υπάρχουν συμπληρωματικές σημειώσεις
+no duplicate	tts	el	Κανένα διπλότυπο
+no notes for this ticket	tts	el	Δεν υπάρχουν σημειώσεις για το συγκεκριμένο
+no states found	tts	el	Δεν βρέθηκαν καταστάσεις
+no tickets found	tts	el	Δεν βρέθηκαν κλήσεις
+no transitions found	tts	el	Δεν βρέθηκαν μεταβάσεις
+not assigned	tts	el	Δεν καθορίστηκε
+not completed	tts	el	Δεν ολοκληρώθηκε
+notify changes to ticket assignee by e-mail	tts	el	Ειδοποίηση για όποιες αλλαγές στον καθορισμό της κλήσης μέσω ηλεκτρονικού ταχυδρομείου
+notify changes to ticket group by e-mail	tts	el	Ειδοποίηση για όποιες αλλαγές των ομάδων κλήσεων μέσω ηλεκτρονικού ταχυδρομείου
+notify changes to ticket owner by e-mail	tts	el	Ειδοποίηση για κάθε αλλαγή της ιδιοκτησίας των κλήσεων μέσω ηλεκτρονικού ταχυδρομείου
+old value	tts	el	Παλιά τιμή
+open	tts	el	Άνοιγμα
+open / closed	tts	el	Άνοιγμα / Κλείσιμο
+open date	tts	el	Ημερομηνία ανοίγματος
+opened	tts	el	Άνοιξε
+opened by	tts	el	Άνοιξε απο
+original ticket details	tts	el	Αρχικές λεπτομέρειες κλήσης
+perform irregular transition into the following state	tts	el	Εκτελέσατε μια αντικανονική μετάβαση στην ακόλουθη κατάσταση
+prio	tts	el	Προηγούμενο
+priority	tts	el	Προτεραιότητα
+priority changed	tts	el	Αλλαγή προτεραιότητας επιτυχής
+put the preexistent ticket into the state %1.	tts	el	Τοποθετήστε την προϋπάρχουσα κλήση στην κατάσταση %1.
+re-assigned	tts	el	Επανακαθορίστηκε
+re-opened	tts	el	
+refresh every (seconds)	tts	el	Ανανέωση κάθε (δευτερόλεπτα)
+reopen	tts	el	Ξανάνοιγω
+reopened	tts	el	
+resolve	tts	el	Επιλύση
+resolved	tts	el	Επιτυχής επίλυση
+returns a struct of a tickets history	tts	el	Επιστρέφει το ιστορικό της δομής των κλήσεων
+returns a struct of values of a single ticket	tts	el	Επιστρέφει την δομή των τιμών μιας κλήσης
+returns the additional notes attached to a ticket	tts	el	Επιστρέφει τις σημειώσεις που αφορούν μια κλήση
+selected	tts	el	Επιλεγμένο
+show new/updated tickets on main screen	tts	el	Εμφάνισε τις καινούριες/ανανεωμένες κλήσεις στο αρχική οθόνη
+source state	tts	el	Αρχική κατάσταση
+state	tts	el	Kατάσταση
+state changed	tts	el	Αλλαγή κατάστασης
+state id	tts	el	Αριθμός κατάστασης
+state name	tts	el	Όνομα κατάστασης
+status/date closed	tts	el	Κατάσταση / Ημερομηνία έκλεισε
+subject changed	tts	el	Αλλαγή θέματος επιτυχής
+target state	tts	el	Τελική κατάσταση
+test	tts	el	Έλεγχος/Δοκιμή
+the closed ticket requires more work. reopen it.	tts	el	Η κλήση που έκλεισε χρειάζεται περισσότερη ανάλυση. Ανοίξτε την.
+the owner of the ticket was not able to confirm the issue.	tts	el	Ο ιδιοκτήτης της κλήσης δεν ήταν δυνατό να επιβεβαιώση το θέμα.
+the ticket has been accepted by the owner, who is about to work on it.	tts	el	Η κλήση έχει αποδεχθεί απο τον ιδιοκτήτη, ο οποίος θα αναλύσει το πρόβλημα.
+the ticket has been closed without resolution.	tts	el	Η κλήση έκλεισε χωρίς ανάλυση.
+the ticket has been reopened for further work.	tts	el	Η κλήση έχει ξανανοιχθεί για περαιτέρω ανάλυση.
+the ticket has been successfully resolved.	tts	el	Η επίλυση της κλήσης ήταν επιτυχής.
+the ticket has been verified and has to be worked on.	tts	el	Η κλήση έχει επαληθευθεί και πρέπει να αναλυθεί.
+the ticket has been worked on and the work requires validation.	tts	el	Η επεξεργασία της κλήσης τελείωσε και χρειάζεται επιβεβαίωση.
+the ticket has been worked on, but requires more work.	tts	el	Η κλήση έχει αναλυθεί, αλλά χρειάζεται περισσότερη ανάλυση.
+the ticket is a duplicate of another ticket and should be closed.	tts	el	Η κλήση υπάρχει ώς διπλότυπο σε άλλη κλήση και πρέπει να κλείσει.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	el	Η κλήση δεν είναι διπλότυπο μιας άλλης κλήσηας. Ανοίξτε την ξανά.
+the ticket is invalid and cannot be worked on.	tts	el	Η κλήση είναι άκυρη και δεν είναι δυνατή η επεξεργασία της.
+the ticket resolution was successfully validated. close the ticket.	tts	el	Η ανάλυση της κλήσης επιβεβεώθηκε επιτυχημένα. Κλείστε την κλήση.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	el	Η κλήση υπήρχε πριν δηλωθεί η Petri Net αρχιτεκτονική και πρέπει να καθοριστεί μια κατάσταση.
+the ticket was found a duplicate of another ticket.	tts	el	Η συγκεκρημένη κλήση ήδη υπάρχει.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	el	Οι κλήσεις στην ακόλουθη λίστα βρίσκονται σε κατάσταση %1. Παρακαλώ, αποφασίστε τι πρέπει να γίνει με αυτές.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	el	Η επιβεβαίωση της κλήσης ήταν ανεπιτυχής. Η κλήση χρειάζεται περισσότερη επεξεργασία.
+ticket	tts	el	Κλήση
+ticket has been updated	tts	el	Η κλήση ανανεώθηκε
+tickets found %1	tts	el	Κλήσεις που βρέθηκαν %1
+tickets open %1	tts	el	Ανοιχτές κλήσεις %1
+tickets total %1	tts	el	Συνολικές κλήσεις %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	el	Για να μεταφερθείτε πίσω στο ευρετήριο του tts, πατήστε <a href="%1"> εδω</a>
+toaccept	tts	el	Προς αποδοχή
+toclosed	tts	el	Προς κλείσιμο
+toduplicate	tts	el	Προς αντιγραφή
+toinvalid	tts	el	Προς ακύρωση
+toneedswork	tts	el	Προς περισσότερη επεξεργασία
+tonew	tts	el	Προς δημιουργία
+toreopened	tts	el	
+toresolved	tts	el	Προς επίλυση
+total billable	tts	el	Συνολική χρέωση
+totovalidate	tts	el	
+tovalidate	tts	el	Προς επιβεβαίωση
+toverified	tts	el	Προς επαλήθευση
+transition	tts	el	Μετάβαση
+transition name	tts	el	Ονομασία μετάβασης
+trouble ticket system	common	el	
+tts	common	el	
+tts preferences	tts	el	Trouble Ticket System - Προτιμήσεις
+undefined	tts	el	Δεν έχει δηλωθεί
+update ticket state	tts	el	Ανανέωση καταστάσεως της κλήσης
+updates ticket	tts	el	Ανανεώνει την κλήση
+verified	tts	el	Επαληθεύτηκε
+verify	tts	el	Επαλήθευση
+verify the ticket to work on it.	tts	el	Επαλήθευση της κλήσης για επεξεργασία με αυτή.
+view all tickets	tts	el	Προβολή όλων των κλήσεων
+view job detail	tts	el	Προβολή λεπτομερειών εργασίας
+view only open tickets	tts	el	Προβολή μόνο των ανοιχτών κλήσεων
+you can only close a ticket if it is assigned to you.	tts	el	Μπορείτε να κλείσετε μια κλήση μόνο αν είναι καθορισμένη σε εσάς.
+you want to delete the state %1. are you sure?	tts	el	Θέλετε να διαγράψετε την κατάσταση %1. Είστε σίγουροι ;
+you want to delete the transition %1. are you sure?	tts	el	Θέλετε να διαγράψετε την μετάβαση %1. Είστε σίγουροι ;

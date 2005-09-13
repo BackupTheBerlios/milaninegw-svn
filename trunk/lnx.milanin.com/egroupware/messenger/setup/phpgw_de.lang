@@ -1,0 +1,36 @@
+compose	messenger	de	Verfassen
+compose global message	common	de	Globale Mitteilung verfassen
+compose message	messenger	de	Mitteilung verfassen
+delete a message.	messenger	de	Nachricht löschen
+delete selected	messenger	de	Ausgewählte Nachrichten löschen
+forward	messenger	de	Weiterleiten
+forward a message	messenger	de	Mitteilung weiterleiten
+forward a message to another user.	messenger	de	Eine Nachricht an einen anderen Benutzer weiterleiten
+forwarded	messenger	de	Weitergeleitet
+from	messenger	de	Von
+global message	messenger	de	Globale Mitteilung
+i can't find the username %1 on the system	messenger	de	Benutzername %1 ist im System nicht vorhanden
+inbox	messenger	de	Posteingang
+message from	messenger	de	Mitteilung von
+messenger	common	de	Messenger
+new	messenger	de	Neu
+read a list of messages.	messenger	de	Eine Liste von Nachrichten lesen
+read a single message.	messenger	de	Eine einzelne Nachricht lesen
+read message	messenger	de	Mitteilung lesen
+replied	messenger	de	Beantwortet
+reply	messenger	de	Antworten
+reply to a message	messenger	de	Mitteilung beantworten
+reply to a received message.	messenger	de	Auf eine Empfangene Nachricht antworten
+send	messenger	de	Absenden
+send a global message.	messenger	de	Eine globale Nachricht senden
+send a message to a single recipient.	messenger	de	Eine Nachricht zu einem einzelnen Empfänger senden
+send message to	messenger	de	Mitteilung senden an
+sorry, %1's account is not currently active	messenger	de	Sorry, das Benutzerkonto von %1 ist zur Zeit nicht aktiviert
+update a message status	messenger	de	Den Status eine Nachricht updaten
+use select box for user list in compose	common	de	Die Auswahlbox benutzen um die Empfänger auszuwählen
+you didn't enter anything for the message	messenger	de	Sie haben in Ihrer Nachricht keinen Inhalt eingegeben
+you have %1 new message	common	de	Sie haben %1 neue Mitteilungen
+you have %1 new messages	common	de	Sie haben %1 neue Mitteilungen
+you have no messages	messenger	de	Sie haben keine neuen Nachrichten
+you must enter a subject	messenger	de	Sie müssen einen Betreff angeben
+you must enter the username this message is for	messenger	de	Sie müssen einen Benutzer angeben an welchen Sie diese Nachricht senden möchten

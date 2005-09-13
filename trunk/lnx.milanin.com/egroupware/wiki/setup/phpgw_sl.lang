@@ -1,0 +1,95 @@
+<em>but</em> display at least this many entries in recentchanges and other subscription lists:		sl	<em>Vendar</em> prikaži vsaj toliko zapisov med Zadnjimi spremembami in drugih seznamih:
+add document to category		sl	Dodaj dokument v kategorijo
+added		sl	Dodan
+administration features are disabled for this wiki.		sl	Administrativne možnosti so v tem wikiju onemogočene.
+admins		sl	administratorji
+allow anonymous access		sl	dovoli anonimni dostop
+anonymous password		sl	Geslo za anonimni dostop
+anonymous session type		sl	Tip anonimnih sej
+anonymous username		sl	Uporabniško ime za anonimni dostop
+automatically convert pages with wiki-syntax to richtext (if edited)?		sl	Avtomatično prevedem strani z wiki sintakso v RichText (ob popravljanju)?
+block		sl	Bolkiraj
+block / unblock hosts		sl	Bolkiraj / deblokiraj strežnike
+blocked ip address ranges		sl	Blokirane IP maske
+cancel without saving		sl	Prekini brez shranjevanja
+changed		sl	Spremenjeno
+changes by last author		sl	Spremembe zadnjega avtorja
+choose your current time here, so the server may figure out what time zone you are in.		sl	Izberite svoj trenutni čas, da bo strežnik lahko ugotovil vašo časovno cono.
+columns		sl	Stolpci
+compute difference		sl	Poišči razlike
+converts the page to richtext		sl	Prevede stran v richtext
+current version		sl	Trenutna različica
+deleted		sl	Izbrisano
+deletes this page		sl	Izbriši to stran
+difference between versions		sl	Razlika med različicami
+differences in		sl	Razlike v
+different languages can have different titles		sl	različni jeziki imajo različne naslove
+document last modified		sl	Zadnji spremenjeni dokument
+edit box		sl	Polje za urejanje
+edit this <em>archive version</em> of this document		sl	Urejanje te <em>ARHIVSKE RAZLIČICE</em> dokumenta
+edit this document		sl	Urejanje tega dokumenta
+edit with preview		sl	Urejanje s predogledom
+editable		sl	popravljanje omogočeno
+editing		sl	Urejanje
+emailaddress administrator		sl	Administracija enaslovov
+enable free links		sl	Omogoči proste povezave
+enable wiki links		sl	Omogoči wiki povezave
+enter here the maximum number of entries to display in a document's history list.		sl	Vnesite največje število zapisov, ki se prikažejo v popisu zgodovine dokumenta.
+enter here the number of days of edits to display on recentchanges or any other subscription list.  set this to zero if you wish to see all pages in recentchanges, regardless of how recently they were edited.		sl	Vnesite število dni, za katere se spremembe pokažejo na Zadnjih spremembah ali drugih seznamih. Nastavite na 0, če želite, da se v seznamih prikažejo vse strani, ne glede na čas urejanja.
+enter ip address range in form <tt>12.*</tt>, <tt>34.56.*</tt>, or <tt>78.90.123.*</tt>		sl	Vnesite IP masko v obliki <tt>12.*</tt>, <tt>34.56.*</tt>, ali <tt>78.90.123.*</tt>.
+error creating temporary file.		sl	Napaka pri ustvarjanju pomožne datoteke.
+error writing to temporary file.		sl	Napaka pri pisanju v pomožno datoteko.
+everyone		sl	vsak
+find		sl	Najdi
+history		sl	zgodovina
+history display should show <em>all</em> changes made by the latest author.  otherwise, show only the last change made.		sl	Prikaz zgodovine naj pokaže <em>vse</em> spremembe, ki jih je naredil zadnji avtor. Sicer se pokaže le zadnja sprememba.
+history lists		sl	Seznam zgodovine
+history of		sl	Zgodovina za
+interwikiprefix		sl	InterWikiPrefix
+invalid page name.		sl	Neveljavno ime strani.
+load		sl	Naloži
+loads the named page in the given language, all change so far get lost !!!		sl	Naloži imenovano stran v danem jeziku, vse dosedanje spremembe se <em>izgubijo</em>.
+lock / unlock pages		sl	Zakleni / Odkleni strani
+locked		sl	Zaklenjeno
+name wiki home link		sl	ime začetne wiki povezave
+newer		sl	Novejši
+no never		sl	Ne, nikoli
+not set		sl	ni nastavljen
+older		sl	Starejši
+only if browser supports a richtext-editor		sl	Le, če brskalnik podpira urejanje richtext.
+please contact the %1administrator%2 for assistance.		sl	Prosim, posvetujte se z %1administratorjem%2.
+preview		sl	Predogled
+preview of current version		sl	Predogled trenutne različice
+rate control / ip blocking disabled		sl	Onemogočen nadzor ocenjevanja in blokada IPjev
+readable by		sl	Berljivo za
+readonly		sl	le za branje
+recent changes		sl	Zadnje spremembe
+renames page to the given name and language		sl	Preimenuje stran v dano ime in jezik
+richtext		sl	Richtext
+rows		sl	Vrstice
+save the changes and exit		sl	Shrani spremembe in končaj
+saves and continues editing		sl	Shrani in nadaljuje urejanje
+see complete list (%1 entries)		sl	Preglej popolni seznam (%1 zapisov)
+site configuration		sl	Konfiguracija spletišča
+summary		sl	Povzetek
+summary of change		sl	Povzetek spremembe
+this page can not be edited.		sl	Ta stran ne more biti urejana.
+twin pages		sl	Strani dvojčki
+unblock		sl	Deblokiraj
+updates the preview		sl	Osveži predogled
+users		sl	uporabniki
+view document history		sl	Preglej zgodovino dokumenta
+visit %1 to set your user name		sl	Obišči %1 za nastavitev uporabniškega imena
+warning: since you started editing, this document has been changed by someone else.  please merge your edits into the current version of this document.		sl	Opozorilo: dokument je od začetka vašega urejanja spremenil nekdo drug. Prosim, združite spremembe v aktualno različico dokumenta.
+who should be able to edit this page		sl	kdo lahko spreminja to stran
+who should be able to read this page		sl	kdo lahko bere to stran
+wiki		sl	Wiki
+wiki administration		sl	Wiki administracija
+wiki menu		sl	Wiki menu
+writable by		sl	Piše lahko
+yes always		sl	Da, vedno
+you have been denied access to this site.		sl	Dostop do tega spletišča vam je bil zavrnjen.
+you have entered an invalid user name.		sl	Vnesli ste neveljavno uporabniško ime.
+you have exeeded the number of pages you are allowed to visit in a given period of time. please return later.		sl	Prekoračili ste število strani, ki jih lahko v omejenem času obiščete. Prosimo, vrnite se kasneje.
+your changes		sl	Vaše spremembe
+your user name is "%1".		sl	Vaše uporabniško ime je "%1".
