@@ -1,0 +1,208 @@
+%1 site objects have been imported.	jinn	en	%1 Site Objects have been imported.
+access rights	jinn	en	Access Rights
+access rights for site not succesfully editted	jinn	en	Access rights for Site NOT succesfully editted
+access rights for site succesfully editted	jinn	en	Access rights for site succesfully editted
+access rights for site-object not succesfully editted	jinn	en	Access rights for site-object NOT succesfully editted
+access rights for site-object succesfully editted	jinn	en	Access rights for site-object succesfully editted
+access rights site-objects	jinn	en	Access rights site-objects
+access_rights	jinn	en	access_rights
+add	jinn	en	add
+add %1st image	jinn	en	add %1st image
+add attachent	jinn	en	add attachment
+add attachment	jinn	en	add attachment
+add attachment %1	jinn	en	add attachment %1
+add edit	jinn	en	Add Edit
+add image	jinn	en	add image
+add image %1	jinn	en	add image %1
+add new	jinn	en	Add new
+add new entry	jinn	en	Add new entry
+add new many with many relation	jinn	en	Add new MANY WITH MANY relation
+add new one with many	jinn	en	Add new ONE WITH MANY
+add object	jinn	en	add object
+add or remove	jinn	en	add or remove
+add site	jinn	en	Add Site
+add site object	jinn	en	add site object
+add site-object	jinn	en	add site-object
+admin:: edit site	jinn	en	admin:: edit site
+administrator mode	jinn	en	Administrator Mode
+administrators for site $site_name	jinn	en	administrators for site $site_name
+all from	jinn	en	all from
+another	jinn	en	another
+are you sure?	jinn	en	Are you sure?
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	en	attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:
+automatic	jinn	en	automatic
+binary	jinn	en	binary
+browse	jinn	en	Browse
+browse current object	jinn	en	Browse current object
+browse sites	jinn	en	browse sites
+browse through object settings	admin	en	Browse through object settings
+browse through sites	jinn	en	Browse through sites
+browses through sites	admin	en	Browses through sites
+c_all	jinn	en	c_all
+c_none	jinn	en	c_none
+cancel	jinn	en	Cancel
+category	jinn	en	Category
+check:	jinn	en	check:
+choose	jinn	en	choose
+close this window	jinn	en	close this window
+column name	jinn	en	column name
+come back after new valid tablename is saved to configure plugins	jinn	en	come back after new valid tablename is saved to configure plugins
+come back in edit mode for configuring plugins	jinn	en	come back in edit mode for configuring plugins
+come back in edit mode to configure plugins	jinn	en	come back in edit mode to configure plugins
+configure	jinn	en	configure
+configure browse view	jinn	en	configure browse view
+configure this object list view	jinn	en	Configure this Object List View
+configure this tableview	jinn	en	Configure this tableview
+configure this view	jinn	en	Configure this View
+configure view of	jinn	en	Configure view of
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	en	path to Convert from ImageMagick ( e.g. /usr/X11R6/bin/convert )
+copy	jinn	en	copy
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	en	Could not find any tables! Check your database name, database username or database password or create one or more  tables in the database.
+database connection failed! <p>please recheck your settings.	jinn	en	database connection failed! <P>Please recheck your settings.
+database connection was succesfull. <p>you can go on with the site-objects	jinn	en	Database connection was succesfull. <P>You can go on with the site-objects
+days	jinn	en	days
+default image type (jpg, gif, png)	admin	en	Default image type (jpg, gif, png)
+default image width	admin	en	Default image width
+default order	jinn	en	default order
+default thumb width	admin	en	Default thumb width
+default:	jinn	en	default:
+delete	jinn	en	Delete
+developer links	jinn	en	Developer Links
+development	admin	en	Development
+development server	jinn	en	Development Server
+dimensions	jinn	en	dimensions
+edit	jinn	en	edit
+edit jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li><br><li>define field relations</li><li>configure fieldplugins</li>	jinn	en	Edit JiNN Site Object Parameters: <li>select a JiNN Object Name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview URL for uploaded elements</li><br><li>define field relations</li><li>configure fieldplugins</li>
+edit this site	jinn	en	Edit this Site
+edit this site object	jinn	en	Edit this Site Object
+editors for object $object_name in site $site_name	jinn	en	editors for object $object_name in site $site_name
+error path_open %1	jinn	en	error path_open %1
+export this site	jinn	en	export this site
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	en	Failed to open table. Please check if table <i>%1</i> still exists in database
+field plugin configuration	jinn	en	field plugin configuration
+fields	jinn	en	fields
+filename	jinn	en	filename
+filesize	jinn	en	filesize
+form input plugin	jinn	en	form input plugin
+general preferences	jinn	en	General Preferences
+general settings	admin	en	General Settings
+global configuration	jinn	en	Global Configuration
+global site configuration	admin	en	Global site configuration
+go	jinn	en	go
+height:	jinn	en	Height:
+hidden	jinn	en	hidden
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	en	image directory does not exist or is not correct ...<br>please check object's upload dir
+image settings	admin	en	Image settings
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	en	ImageMagick directory ( e.g. /usr/X11R6/bin )
+import failed	jinn	en	import failed
+import jinn site	jinn	en	Import JiNN Site
+import jinn-site	jinn	en	Import JiNN-Site
+import site	jinn	en	import site
+import was succesfull	jinn	en	Import was succesfull
+import was succesfull<br>imported one site with	jinn	en	import was succesfull<br>Imported one site with
+index	jinn	en	index
+insert another record after saving	jinn	en	insert another record after saving
+insert jinn site parameters: <li>insert a jinn site name for display</li> <li>insert correct database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview url for uploaded elements</li>	jinn	en	Insert JiNN Site Parameters: <li>Insert a JiNN Site Name for display</li> <li>insert correct Database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview URL for uploaded elements</li>
+insert/select jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li>	jinn	en	Insert/Select JiNN Site Object Parameters: <li>select a JiNN Object Name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview URL for uploaded elements</li>
+jinn	common	en	JiNN
+jinn editors menu	jinn	en	JiNN Editors Menu
+jinn preferences	jinn	en	JiNN Preferences
+max. number of previews in form	jinn	en	Max. number of previews in form
+maximum image width isn	jinn	en	maximum image width isn
+maximum image width isn\	jinn	en	maximum image width isn
+moderator mode	jinn	en	Moderator Mode
+months	jinn	en	months
+months_abbr	jinn	en	months_abbr
+new image size limits.	jinn	en	New image size limits.
+no matchs found	jinn	en	No matchs found
+no max. number	jinn	en	No max. number
+normal view	jinn	en	Normal View
+only if thumnails exits	jinn	en	Only if thumnails exits
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	en	Path to convert from ImageMagick ( e.g. /usr/X11R6/bin )
+please set your preferences for this application	jinn	en	Please set your preferences for this application
+preview thumbs or images in form	jinn	en	Preview thumbs or images in form
+production	admin	en	Production
+real value	jinn	en	real value
+record	jinn	en	record
+record added succesfully	jinn	en	Record added succesfully
+record deleted succesfully	jinn	en	Record deleted succesfully
+record not succesfully copied. unknown error	jinn	en	Record NOT succesfully copied. Unknown error
+record not succesfully deleted. unknown error	jinn	en	Record NOT succesfully deleted. Unknown error
+record succesfully copied	jinn	en	Record succesfully copied
+record succesfully deleted	jinn	en	Record succesfully deleted
+record succesfully editted	jinn	en	Record succesfully editted
+related	jinn	en	related
+relation %1	jinn	en	relation %1
+relations for this object	jinn	en	Relations for this object
+remote	admin	en	Remote
+remove	jinn	en	remove
+replace existing site with the same name?	jinn	en	Replace existing site with the same name?
+replaced existing site named <strong>%1</strong>.	jinn	en	Replaced existing site named <strong>%1</strong>.
+reset form	jinn	en	reset form
+save	jinn	en	save
+search	jinn	en	Search
+search for string	jinn	en	search for string
+select directory	jinn	en	select directory
+select jinn site file	jinn	en	Select JiNN site file
+select site	jinn	en	select site
+select site to moderate	jinn	en	Select site to moderate
+select site-object to moderate	jinn	en	Select site-object to moderate
+select_object	jinn	en	Select object
+server type?	admin	en	Server Type?
+set access right for site objects	jinn	en	Set Access Right for Site Objects
+set access rights	admin	en	Set access rights
+set access rights for sites	jinn	en	Set Access Rights for Sites
+set administrators for	jinn	en	Set administrators for
+set object moderator	jinn	en	set object moderator
+set site admin	jinn	en	set site admin
+show	jinn	en	show
+show all columns	jinn	en	Show all columns
+show colomn	jinn	en	show colomn
+show upload path	admin	en	Show upload path
+site beheerders	jinn	en	Site Administrators
+site db host	admin	en	Site datebase host
+site db name	admin	en	Site database name
+site db password	admin	en	Site database password
+site db type	admin	en	Site database type
+site db user	admin	en	Site database user
+site description	admin	en	Site description
+site id	admin	en	Site id
+site media and documents	jinn	en	Site Media and Documents
+site name	admin	en	Site name
+site not succesfully added, unknown error	jinn	en	Site NOT succesfully added, unknown error
+site not succesfully deleted, unknown error	jinn	en	Site NOT succesfully deleted, Unknown error
+site not succesfully saved, unknown error	jinn	en	Site NOT succesfully saved, unknown error
+site object not succesfully added, unknown error	jinn	en	Site Object NOT succesfully added, unknown error
+site object not succesfully deleted, unknown error	jinn	en	Site Object NOT succesfully deleted, Unknown error
+site object not succesfully saved, unknown error	jinn	en	Site Object NOT succesfully saved, unknown error
+site object succesfully added	jinn	en	Site Object succesfully added
+site object succesfully deleted	jinn	en	Site Object succesfully deleted
+site object succesfully saved	jinn	en	Site Object succesfully saved
+site succesfully added	jinn	en	Site succesfully added
+site succesfully deleted	jinn	en	site succesfully deleted
+site succesfully saved	jinn	en	Site succesfully saved
+site title	admin	en	Site title
+site-objects	jinn	en	Site-objects
+sites	jinn	en	Sites
+start	admin	en	Start
+start at record	jinn	en	start at record
+stop at record	jinn	en	stop at record
+submit and import	jinn	en	submit and import
+t/m	jinn	en	t/m
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	en	Tablename <i>%1</i> is not correct. Probably the tablename has changed or or the table is deleted. Please select a new table or delete this object
+test database access	jinn	en	test database access
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	en	The file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by JiNN.
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn. if this error repeates, please check your imagemagick installation.  older version of imagemagick are known not work properly with jinn. be sure to install at least version 5.4.9 or higher	jinn	en	The file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by JiNN. If this error repeates, please check your ImageMagick installation.  Older version of ImageMagick are known not work properly with JiNN. Be sure to install at least Version 5.4.9 or higher
+the name of the new site is <strong>%1</strong>.	jinn	en	The name of the new site is <strong>%1</strong>.
+the resize process failed, please contact the administrator	jinn	en	the resize process failed, please contact the administrator
+there are no directories in this site you have access to.	jinn	en	There are no directories in this site you have access to.
+thisfile	jinn	en	thisfile
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	en	thumb directory does not exist or is not correct ...<br>please check object's upload dir
+thumbnail	jinn	en	thumbnail
+version	jinn	en	version
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	en	When a lot of images are attached to a record, the form can load very slow. You can set a maximum number of images that is show in the form.
+when you choose 'never', only links to the images are displayed; when you choose 'only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'yes' all images are shown	jinn	en	When you choose 'Never', only links to the images are displayed; when you choose 'Only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'Yes' all images are shown
+width:	jinn	en	Width:
+with_checked_files	jinn	en	with_checked_files
+you're not allowed to administrate media files	jinn	en	You're not allowed to administrate media files
+Preview Website	jinn	en	Preview Website

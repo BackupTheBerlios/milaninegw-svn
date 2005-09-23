@@ -1,0 +1,56 @@
+absolute path of the backup directory	backup	el	Ακριβής διαδρομή του κατάλογου των αντίγραφων ασφαλείας (π.χ.: /usr/local/www/egroupware/backup/archive)
+absolute path of the directory to store the backup script	backup	el	Ακριβής διαδρομή του κατάλογου των αντίγραφων ασφαλείας της εφαρμογής EGW
+archive type	backup	el	Επιλέξτε τύπο αρχειοθέτησης
+backup	common	el	Αντίγραφα ασφαλείας
+backup administration	common	el	Διαχείρηση αντίγραφων ασφαλείας
+bzip2	admin	el	bzip2
+configuration backup	backup	el	Ρυθμίσεις αντιγράφων ασφαλείας
+configuration localhost	backup	el	LocalhostConfiguration
+create backups of your data ?	backup	el	Τσεκάρετε για να δημιουργηθούν αντίγραφα ασφαλείας των δεδομένων σας:
+daily	backup	el	Ημερησίως
+data	backup	el	Δεδομένα
+directory locations	admin	el	Θέσεις καταλόγων
+directory names	admin	el	Ονόματα καταλόγων
+e-mail	backup	el	Τσεκάρετε για να λαμβάνετε ανακοινώσεις μέσω E-MAIL:
+homedirs	admin	el	Αρχικοί κατάλογοι
+interval	backup	el	Μεσοδιάστημα
+ip or hostname	backup	el	IP ή hostname
+ldap	common	el	LDAP
+ldap database	admin	el	LDAP βάση δεδομένων
+maildir	admin	el	Η ανακοίνωση πηγαίνει στο E-Mail:
+monthly	backup	el	Μηνιαίως
+mysql	admin	el	MySQL
+no backup archives available !	backup	el	Δεν υπάρχουν διαθέσιμα αρχεία αντίγραφων ασφαλείας
+number of stored backup versions	backup	el	Αριθμός αντίγραφων ασφαλείας προς αποθήκευση, προ διαγραφής παλαιότερων:
+operating system	backup	el	Λειτουργικό Σύστημα
+pgsql	admin	el	PostgreSQL
+php cgi	admin	el	Πλήρης διαδρομή για το PHP εκτελέσιμο (π.χ.: /usr/local/bin/php)
+please enter the path of the needed applications in *site configuration* !	backup	el	Εισάγετε τις διαδρομές των απαιτούμενων εφαρμογών στo *Site configuration* !
+please enter the path to the backup dir and/or enable showing archives in phpgroupware !	backup	el	Εισάγετε τη διαδρομή για τον κατάλογο των αντίγραφων ασφαλείας και/ή ενεργοποιήστε την εμφάνιση των αρχείων στο phpGroupWare !
+please enter username and password for remote connection !	backup	el	Εισάγετε όνομα και κωδικό πρόσβασης για την απομακρυνσμένη σύνδεση !
+please select an application for transport to the remote host !	backup	el	Επιλέξτε εφαρμογή για μεταφορά στον απομακρυνσμένο κεντρικό υπολογιστή !
+please set the path to a local dir to store the backup script !	backup	el	Ορίστε τη διαδρομή σε τοπικό κατάλογο για την αποθήκευση του αρχείου δέσμης εντολών για τα αντίγραφα ασφαλείας !
+please set the path to the ldap database dir in *site configuration* !	backup	el	Ορίστε τη διαδρομή καταλόγου για την LDAP βάση δεδομένων στo *Site configuration* !
+please set the path to the mysql database dir in *site configuration* !	backup	el	Ορίστε τη διαδρομή καταλόγου για την MySQL βάση δεδομένων στo *Site configuration* !
+please set the path to the postgresql database dir in *site configuration* !	backup	el	Ορίστε τη διαδρομή καταλόγου για την PostgreSQL βάση δεδομένων στo *Site configuration* !
+please set the values in *site configuration* !	backup	el	Ορίστε τις τιμές στo *Site configuration* !
+please specify the ip of the remote host !	backup	el	Προσδιορίστε το ip του απομακρυνσμένου κεντρικού υπολογιστή
+please specify the name of the maildir in *site configuration* !	backup	el	Προσδιορίστε το όνομα του Maildir στo *Site configuration*  !
+please specify the path to the backup directory !	backup	el	Προσδιορίστε τη διαδρομή καταλόγου των αντίγραφων ασφαλείας
+please specify the path to the user-homedirectories in *site configuration* !	backup	el	Προσδιορίστε τη διαδρομή για τους αρχικούς καταλόγους των χρηστών στo *Site configuration* !
+program locations	admin	el	Θέσεις προγραμμάτων
+save backup locally ?	backup	el	Τσεκάρετε για να αποθηκεύσετε τα αντίγραφα ασφαλείας τοπικά
+select archive type	backup	el	Επιλέξτε τύπο αρχειοθέτησης
+select interval	backup	el	Επιλέξτε μεσοδιάστημα
+settings	admin	el	Ρυθμίσεις
+show backup archives in phpgroupware ?	backup	el	Τσεκάρετε για εμφάνιση των αρχελιων αντιγράφων ασφαλείας στο phpGroupWare:
+sql	backup	el	SQL
+tar	admin	el	tar
+tar.bz2	backup	el	tar.bz2
+tar.gz	backup	el	tar.gz
+the backup application is not configured for showing the archives in phpgroupware yet !	backup	el	H εφαρμογή αντίγραφων ασφαλείας δεν είναι ακόμα διαμορφωμένη για εμφάνιση των αρχείων στο phpGroupWare !
+the directory to store the backup script must be outside of the webservers *documentroot* !	backup	el	Ο κατάλογος αποθήκευσης της δέσμης εντολών των αντίγραφων ασφαλείας πρέπει να περιέχεται στο *DocumentRoot* των webservers !
+versions can only be a number !	backup	el	Η έκδοση μπορεί να είναι μόνο αριθμός !
+weekly	backup	el	Εβδομαδιαία
+your sql database isnt supported by this application !	backup	el	Η SQL βάση δεδομένων σας δεν υποστηρίζεται από αυτή την εφαρμογή
+zip	common	el	zip

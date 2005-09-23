@@ -1,0 +1,391 @@
+%1 messages have been deleted	email	nl	%1 berichten zijn verwijderd
+(required)	email	nl	(vereist)
+1 message has been deleted	email	nl	1 bericht is verwijderd
+1 message has been moved to	email	nl	1 bericht is verplaatst naar
+<b>*apply*</b> this filter	email	nl	Dit filter <b>TOEPASSEN</b>
+<b>apply all</b> filters	email	nl	Alle filters <b>TOEPASSEN</b>
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	nl	
+account	email	nl	account
+account name	email	nl	Account naam
+account user name	email	nl	Account gebruikersnaam
+accounts	email	nl	Accounts
+accounts:	email	nl	Accounts:
+add to address book	email	nl	Aan adresboek toevoegen
+add to addressbook	email	nl	Aan adresboek toevoegen
+address book	email	nl	Adresboek
+after	email	nl	Na
+all messages	email	nl	Alle berichten
+and	email	nl	en
+and stop filtering	email	nl	en stop met filteren
+answered	email	nl	beantwoord
+apply	email	nl	activeren
+apply filters report:	email	nl	Filters rapport toepassen:
+apr	email	nl	Apr
+aqua fusion	email	nl	
+arrival date	email	nl	Aankomst datum
+as	email	nl	als
+attach file	email	nl	Bestandsbijlage
+attach signature	email	nl	Onderschrift toevoegen
+attachment	email	nl	Bijlage
+aug	email	nl	Aug
+bcc	email	nl	bcc
+bcc address	email	nl	Bcc adres
+before	email	nl	Voor
+big	email	nl	Groot
+bigger	email	nl	Groter
+biggest	email	nl	Grootst
+body	email	nl	Bericht
+both	email	nl	Beide
+button type	email	nl	Knop type
+cache server data whenever possible	email	nl	cache server data waar mogelijk
+cc	email	nl	CC
+cc address	email	nl	CC adres
+change font size in your e-mail pages	email	nl	Pas grootte lettertype aan in uw email pagina's
+check flags for type of mails	email	nl	Controleer markering voor het type email
+choose for rename	email	nl	Kies voor hernoemen
+choose to rename	email	nl	kies voor hernoemen
+click here for more info in a new window	email	nl	klik hier voor meer info in een nieuw venster
+click here to continue	email	nl	Klik hier om verder te gaan
+click here to edit the settings for this email account.	email	nl	klik hier om de instellingen voor dit email account te wijzigen.
+click here to return to your home page.	email	nl	klik hier om terug te gaan naar uw home-page.
+company	email	nl	Bedrijf
+compose	email	nl	Schrijven
+compose message	email	nl	Schrijf bericht
+compose new	common	nl	Schrijf nieuw
+contains	email	nl	Bevat
+could not open this mailbox	email	nl	Kan dit postvak niet openen
+create (expert)	email	nl	maak (gevorderden)
+create a folder	email	nl	Maak een folder
+current attachments (%1)	email	nl	Huidige bijlagen (%1)
+custom e-mail preferences	email	nl	Aangepaste email voorkeuren
+custom e-mail settings	email	nl	Aangepaste email instellingen
+date	email	nl	datum
+debugging page	email	nl	Foutopsporings-pagina
+dec	email	nl	Dec
+default sorting order	email	nl	Standaard sorteervolgorde
+default:	common	nl	huidig:
+delete	email	nl	Verwijderen
+delete (expert)	email	nl	Verwijder (gevorderden)
+delete a folder	email	nl	Verwijder een folder
+delete account	common	nl	Verwijder een account
+deleted	email	nl	verwijderd
+deleted messages (trash) folder	email	nl	Verwijderde berichten (Rommel) folder
+deleted messages folder name	email	nl	Foldernaam verwijderde berichten
+deleted messages go to trash	email	nl	Verwijderde berichten gaan naar Rommel
+deleted messages saved to folder:	email	nl	Verwijderde berichten opslaan in folder:
+discard	email	nl	Weggooien
+does not contain	email	nl	Bevat geen
+draft	email	nl	Klad
+e-mail extra account	email	nl	Extra email account
+e-mail extra accounts	email	nl	Extra email accounts
+e-mail extra accounts list	email	nl	Lijst extra email accounts
+e-mail filters	common	nl	Email filters
+e-mail folders	common	nl	Email folders
+e-mail inbox filters list	email	nl	Lijst filters POSTVAK-IN
+e-mail preferences	common	nl	Email voorkeuren
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	nl	
+edit filters	email	nl	Filters aanpassen
+email	email	nl	E-mail
+email account name	email	nl	Email gebruikersnaam
+email address	email	nl	Email adres
+email date	email	nl	Email datum
+email filters	email	nl	Email filters
+email password	email	nl	Email wachtwoord
+email preferences	email	nl	Email voorkeuren
+email signature	email	nl	Email onderschrift
+email type	common	nl	Email type
+enable this email account	common	nl	Activeer dit email account
+enable utf-7 encoded folder names	email	nl	Inschakelen utf-7 gecodeerde foldernamen
+enter the search string in the text boxes	email	nl	Geeft de zoektekst in het tekstvak
+enter your pop	admin	nl	Uw POP server
+error moving messages to	email	nl	Fout bij verplaatsten berichten naar
+error text not provided	email	nl	fout tekst niet opgegeven
+error: unknown message data	email	nl	Fout: Onbekende bericht data
+evolution style	email	nl	Evolution stijl
+extra accounts	email	nl	Extra accounts
+extra e-mail account	common	nl	Extra email account
+extra e-mail accounts	common	nl	Extra email accounts
+extra e-mail preferences number %1	email	nl	Extra email voorkeuren nummer %1
+feb	email	nl	Feb
+fewer actions	email	nl	Minder acties
+fewer choices	email	nl	Minder keuzes
+file	email	nl	Bestand
+file attachment	email	nl	Bestandsbijlage
+file into	email	nl	Bestand in
+files	email	nl	Bestanden
+fill in as much as you can	email	nl	Vul zoveel mogelijk in
+filter [number] and name	email	nl	Filter [nummer] en naam
+filter inbox for accounts	email	nl	Filter POSTVAK-IN voor accounts
+filter name	email	nl	Filter naam
+filter name:	email	nl	Filter naam:
+filter number	email	nl	Filter nummer
+filters	email	nl	Filters
+filters list	email	nl	Lijst filters
+flag as important	email	nl	Markeer als belangrijk
+flagged	email	nl	Gemarkeerd
+folder	email	nl	Folder
+folder maintenance	email	nl	Onderhoud folders
+folder name	email	nl	Folder naam
+folder size	email	nl	Folder grootte
+folders	email	nl	Folders
+for the file to actually upload	email	nl	
+for these items, fill only what is different from you default e-mail preferences	common	nl	
+forward	email	nl	Doorsturen
+from	email	nl	Van
+from address	email	nl	Van adres
+get size	email	nl	grootte
+go	email	nl	ga
+go back	email	nl	Terug
+go back to	email	nl	Terug naar
+header field	email	nl	Kop veld
+hidden	email	nl	verborgen
+hide help	email	nl	Verberg help
+html messages with the iframe  tag may be klez or other worm emails.	email	nl	
+icon size	email	nl	Icoon grootte
+icon theme	email	nl	Icoon thema
+idots crystal style	email	nl	iDots Crystal stijl
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	nl	
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	nl	
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	nl	
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	nl	
+if applicable	email	nl	Indien van toepassing
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	nl	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	nl	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	nl	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	nl	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	nl	
+if fileto then select destination folder	email	nl	
+if messages match	email	nl	
+if there is no obvious error, check your username and password first.	email	nl	
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	nl	
+image	email	nl	Afbeelding
+imap mail server hostname or ip address	admin	nl	IMAP server of IP adres
+imap server type	common	nl	IMAP Server Type
+imap server type - if applicable	email	nl	IMAP servertype - indien van toepassing
+important	email	nl	belangrijk
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	nl	
+inbox	email	nl	Postvak-IN
+input error	email	nl	Invoer fout
+input error:	email	nl	Invoer fout:
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	nl	
+jan	email	nl	Jan
+javascript	email	nl	Javascript
+jul	email	nl	Jul
+jun	email	nl	Jun
+keep	email	nl	Bewaren
+keyword	email	nl	
+keywords	email	nl	
+layout 1	common	nl	Opmaak 1
+layout 2	common	nl	Opmaak 2
+lines	email	nl	Regels
+list messages	email	nl	lijst met berichten
+long names	email	nl	Lange namen
+mail folder(uw-maildir)	email	nl	Mail folder (uw-maildir)
+mail server	email	nl	Mail Server
+mail server login type	admin	nl	Mail server login-type
+mail server type	email	nl	Mail Server type
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	nl	
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	nl	
+manage accounts	email	nl	Beheer accounts
+manage folders	email	nl	Beheer folders
+mar	email	nl	Maa
+message	email	nl	Bericht
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	nl	
+message list layout	common	nl	Berichten lijst opmaak
+messages	email	nl	Berichten
+messages found in folder	email	nl	Berichten gevonden in folder
+messages have been moved to	email	nl	berichten zijn verplaatst naar
+monitor	email	nl	Monitor
+more actions	email	nl	Meer acties
+more choices	email	nl	Meer keuzes
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	nl	
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	nl	
+move down	email	nl	Naar onder
+move selected messages into	email	nl	Geselecteerde berichten verplaatsen naar
+move this message into	email	nl	Verplaats dit bericht naar
+move up	email	nl	Naar boven
+mozilla modern style	email	nl	
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	nl	
+new	email	nl	Nieuw
+new account	email	nl	Nieuw account
+new filter	email	nl	Nieuw filter
+new message	email	nl	Nieuw bericht
+new messages	email	nl	Nieuwe berichten
+newest	common	nl	Nieuwste
+next	email	nl	Volgende
+next message	email	nl	Volgend bericht
+no change	email	nl	geen wijzigingen
+no error returned from server	email	nl	Geen fout verkregen van server
+no message found in folder '%1'	email	nl	Geen bericht gevonden in folder '%1'
+no next message	email	nl	geen volgend bericht
+no previous message	email	nl	geen vorig berocht
+no subject	email	nl	Geen onderwerp
+noia &#64; carlitus style	email	nl	
+non-standard	email	nl	Niet-standaard
+not used	email	nl	niet gebruikt
+notify on delivery	email	nl	Aankomst bevestiging
+nov	email	nl	Nov
+number	common	nl	Nummer
+number of matches:	email	nl	Aantal overeenkomsten:
+oct	email	nl	Okt
+old	email	nl	Oud
+oldest	common	nl	oudste
+on	email	nl	Aan
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	nl	
+or	common	nl	of
+or enter text	email	nl	of geef tekst
+organization	email	nl	Organisatie
+persistent email server session	email	nl	
+phone	email	nl	Telefoon
+please fill in everything you need	email	nl	Vul alles in wat u nodig heeft
+please select a folder to rename	email	nl	Kies een folder om te hernoemen
+please select a message first	email	nl	Selecteer eerst een bericht
+please submit a filename to attach	email	nl	Geef een bestandsnaam op voor de bijlage
+please type a folder name in the text box	email	nl	Geef de foldernaam op in het tekstvak
+previous	email	nl	Vorige
+previous message	email	nl	Vorig bericht
+printable	email	nl	afdrukbaar
+raw message	email	nl	
+read mail	email	nl	Lees mail
+received headers	email	nl	Ontvangen onderwerpen
+recent	email	nl	Recent
+recipient	email	nl	Geadresseerde
+redirect	email	nl	Doorsturen
+reject	email	nl	
+rename (expert)	email	nl	Hernoemen (gevorderden)
+rename a folder	email	nl	Hernoem een folder
+reply	email	nl	Antwoorden
+reply all	email	nl	Allen antwoorden
+replyto	email	nl	Antwoorden aan
+request delivery notification	email	nl	Ontvangstbevestiging
+requested filter action:	email	nl	
+required	email	nl	vereist
+reset	email	nl	
+result	email	nl	resultaat
+return mails during this time period	email	nl	Mail terug sturen in deze periode
+save deleted messages in folder named below	email	nl	sla verwijderde berichten op in onderstaande folder
+save sent messages in folder named below	email	nl	sla verzonden berichten op in onderstaande folder
+search for mails in these folders	email	nl	Zoek naar mail in deze folders
+search this folder	email	nl	doorzoek deze folder
+section	email	nl	Sectie
+seen	email	nl	Gezien
+select home email address	email	nl	Uw thuis-email adres
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	nl	
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	nl	
+select work email address	email	nl	Uw werk-email adres
+select your mail server type	admin	nl	Kies uw type mailserver
+select your screensize for proper showing of the javascript addressbook	email	nl	
+select your screensize for propper showing of the javascript addressbook	email	nl	
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	nl	
+send	email	nl	Verzenden
+send deleted messages to the trash	email	nl	Verplaats de verwijderde berichten naar de prullenbak
+send forwarded mail as quoted attachment	email	nl	Verzend doorgezonden mail als bijlage
+sender	email	nl	Verzender
+sent	email	nl	Verzonden
+sent folder	email	nl	Folder verzonden
+sent messages folder	common	nl	Folder verzonden berichten
+sent messages folder name	email	nl	Foldernaam verzonden berichten
+sent messages saved in &quot;sent&quot; folder	common	nl	Verzonden berichten opgeslagen in &quot;verzonden&quot;folder
+sent messages saved to folder:	email	nl	Verzonden berichten opgeslagen in folder:
+sep	email	nl	Sep
+settings	email	nl	Instellingen
+short names	email	nl	Korte namen
+show help	email	nl	Toon help
+show long names	email	nl	Toon lange namen
+show message	email	nl	toon bericht
+show new messages in combobox	email	nl	
+show new messages on main screen	email	nl	Nieuwe berichten weergeven op hoofdscherm
+show sender's email address with name	email	nl	Toon afzenders email-adres met naam
+show short names	email	nl	Korte naamen
+show total folder size by default	email	nl	Altijd foldergrootte tonen
+simple	email	nl	Eenvoudig
+size	email	nl	Grootte
+size larger than	email	nl	Grootte groter dan
+size smaller than	email	nl	Grootte kleinder dan
+small	email	nl	Klein
+small view	email	nl	klein overzicht
+smaller	email	nl	Kleiner
+smallest	email	nl	Kleinst
+somebody	email	nl	Iemand
+sort by	email	nl	Gesorteerd bij
+spell check	email	nl	Spellingscontrole
+standard e-mail preferences	email	nl	Email voorkeuren
+stop if matched	email	nl	
+subject	email	nl	Onderwerp
+switch accounts	email	nl	Wissel accounts
+switch current folder to	common	nl	Ga naar folder
+test all filters	email	nl	Test alle filters
+test or apply all filters	email	nl	
+test run this filter	email	nl	
+text	email	nl	Tekst
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	nl	
+the email application offers different button displays, these buttons can be text, images, or both.	email	nl	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	nl	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	nl	
+the email application offers different icon image themes, these icons can be big or small.	email	nl	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	nl	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	nl	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	nl	
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	nl	
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	nl	
+then do this	email	nl	
+then take this actions	email	nl	
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	nl	
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	nl	
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	nl	
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	nl	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	nl	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	nl	
+this data not supplied.	email	nl	Deze dat is niet opgegeven
+this folder is empty	email	nl	Deze folder is leeg
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	nl	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	nl	
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	nl	
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	nl	
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	nl	
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	nl	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	nl	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	nl	
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	nl	
+to	email	nl	Aan
+to address	email	nl	Aan adres
+total messages	email	nl	Totaal berochten
+trash	email	nl	rommel
+trash folder	email	nl	rommel folder
+u-wash mail folder	email	nl	
+u-wash mail folder - if applicable	email	nl	
+unable to get source folder name	email	nl	
+unable to get target folder name	email	nl	
+unanswered	email	nl	Niet beantwoord
+undeleted	email	nl	
+undisclosed recipients	email	nl	Onbekende ontvangers
+undisclosed sender	email	nl	onbekende afzender
+unflagged	email	nl	Niet gemarkeerd
+unknown action	email	nl	Onbekende actie
+unknown error	email	nl	Onbekende fout
+unknown translation	email	nl	Onbekende vertaling
+unseen	email	nl	Ongezien
+use custom settings	email	nl	Gebruik persoonlijke instellingen
+view as html	email	nl	Toon als HTML
+view formatted	email	nl	Toon opgemaakt
+view headers	email	nl	Toon onderwerpen
+view unformatted	email	nl	Toon onopgemaakt
+warn_attachment_name_dangerous	email	nl	
+warn_attachment_only_mail	email	nl	
+warn_b64_encoded_displayable	email	nl	
+warn_has_iframe_maybe_klez	email	nl	
+warn_script_tags	email	nl	
+warn_style_sheet	email	nl	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	nl	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	nl	
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	nl	
+wrote	email	nl	schreef
+you have %1 new messages!	common	nl	U heeft %1 nieuwe berichten!
+you have 1 new message!	common	nl	U heeft 1 nieuw bericht!
+you have messages!	common	nl	U heeft nieuwe berichten!
+you have no new messages	common	nl	U heeft geen nieuwe berichten!
+you must click	email	nl	
+you must click %1 for the file to actually upload	email	nl	
+your full name	common	nl	Uw volledige naam
+your message has been sent	common	nl	Uw bericht is verzonden!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	nl	

@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	sl	Res želite izbrisati ta naslov strežnika novic?
+base url	headlines	sl	Osnovni URL
+basic	headlines	sl	Osnovno
+choose layout	headlines	sl	Izberite postavitev
+color	headlines	sl	Barva
+create new headline	headlines	sl	Ustvarite nov naslovnjak
+current headlines in cache	headlines	sl	Trenutni naslovnjaki v predpomnilniku
+display	headlines	sl	Prikaži
+edit headline sites	headlines	sl	URejanje strežnikov z naslovnimi naovicami
+edit headlines shown by default	headlines	sl	Urejanje naslovnkakov vedno prikazano
+grab new news sites	common	sl	Poišči nove strežnike z novicami
+gray	headlines	sl	Sivo
+headline preferences	common	sl	Nastavitve naslovnjaka
+headline site management	common	sl	Upravljanje strežnikov z naslovnimi novicami
+headline sites	headlines	sl	Strežniki z naslovnimi novicami
+headlines	common	sl	Naslovne novice
+headlines administration	headlines	sl	Administracija strežnikov z naslovnimi novicami
+headlines administration - delete headline	headlines	sl	Administriranje strežnikov z naslovnimi novicami - brisanje naslovnih novic
+headlines layout	headlines	sl	Postavitev naslovnih novic
+listings displayed	headlines	sl	Prikaz seznamov
+minutes between refresh	headlines	sl	Minut med osvežitvami
+minutes between reloads	headlines	sl	Minut med ponovnimi nalaganji
+monitor	common	sl	Kontrola
+news file	headlines	sl	Datoteka z novicami
+news headlines	common	sl	Naslovi novic
+news type	headlines	sl	Tip novic
+no headlines found	headlines	sl	Ne najdem novic
+other preferences	preferences	sl	Druge nastavitve
+reload news sites	headlines	sl	Obnovi strežnike novic
+reset	headlines	sl	Reset
+sample	headlines	sl	Primer
+select headline news sites	headlines	sl	Izberite strežnik z novicami
+select headlines to display	common	sl	Izberite novice, ki naj se prikažejo
+select layout	common	sl	Izberite postavitev
+show headlines on homepage	headlines	sl	Prikaži naslove na domači strani
+site	headlines	sl	Strežnik
+that site has already been entered	headlines	sl	Ta strežnik je že opisan
+unable to retrieve links	headlines	sl	Ne morem prebrati povezav
+update headline	headlines	sl	Posodobi novice
+view headline	headlines	sl	Preglej novice
+you can only enter numbers for listings display	headlines	sl	Številke lahko vnesete le za prikaz seznamov
+you can only enter numbers minutes between refresh	headlines	sl	Lahko vnesete le minute med osvežitvami
+you must enter a base url	headlines	sl	Vnesti morate osnovni URL
+you must enter a display	headlines	sl	Vnesti morate prikaz
+you must enter a news url	headlines	sl	Vnesti morate URL z novicami
+you must enter the number of listings display	headlines	sl	Vnesti morate število prikazov s seznami
+you must enter the number of minutes between reload	headlines	sl	Vnesti morate število minut med ponovnim nalaganjem

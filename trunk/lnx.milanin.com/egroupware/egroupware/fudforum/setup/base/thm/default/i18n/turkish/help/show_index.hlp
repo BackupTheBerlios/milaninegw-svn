@@ -1,0 +1,22 @@
+İletilerin seçtiğiniz kritere göre görüntülenmesini sağlayan bir ileti
+süzgeç sistemi.
+
+İletileri süzmenin 3 farklı yolu var:<br>
+<ul>
+<li>Bugünkü İletiler
+<li>Okunmamış İletiler (sadece kayıtlı kullanıcılar kullanabilir)
+<li>Yanıtlanmamış İletiler
+</ul>
+
+Bugünkü İletiler sadece bugün 0 ve 23:59 saatleri arasında gönderilmiş iletilerin
+görüntülenmesini sağlar.
+<br><br>
+Okunmamış İletiler tüm forumdaki okumadığınız bütün iletilerin görüntülenmesini sağlar.
+<br><br>
+Yanıtlanmamış İletiler tüm forumdaki hiç yanıt almayan iletilerin görüntülenmesini sağlar.
+<br><br>
+Tüm bu seçenekler birbirine eklenerek çalışır, bu yüzden hangilerinin seçili olduğuna dikkaet etmelisiniz.
+örneğin "Bugünkü İletiler"i tıklattıktan sonra "Okunmamış İletiler"i tıklatırsasınız, süzgeçleri eklemiş
+olur ve sonuç olarak sadece bugün atılan iletilerden sizin tarafınızdan okunmamış olanları görüntülersiniz.
+Eğer tekrar "Bugünkü İletiler"i tıklatırsanız, süzgeçteki "Bugünkü İletiler" kısmını çıkarmış olursunuz,
+ve geriye "Okunmamış İletiler" kaldığı için, forumdaki bütün okumadığınız iletilerin görüntülenmesini sağlarsınız.

@@ -1,0 +1,38 @@
+compose	messenger	iw	חדש
+compose global message	common	iw	הודעה גלובלית חדשה
+compose message	messenger	iw	הודעה חדשה
+compose to multi-users	messenger	iw	חדשה למספר משתמשים
+compose to single-user	messenger	iw	חדשה למשתמש יחיד
+delete a message.	messenger	iw	מחק הודעה
+delete selected	messenger	iw	מחק נבחרים
+forward	messenger	iw	העבר
+forward a message	messenger	iw	העבר הודעה
+forward a message to another user.	messenger	iw	העבר הודעה למשתמש אחר
+forwarded	messenger	iw	הועבר
+from	messenger	iw	מאת
+global message	messenger	iw	הודעות גלובליות
+i can't find the username %1 on the system	messenger	iw	לא מצאתי שם משתמש %1 במערכת
+inbox	messenger	iw	תיבת דואר נכנס
+message from	messenger	iw	הודעה מאת
+messenger	common	iw	מסנג'ר
+new	messenger	iw	חדש
+read a list of messages.	messenger	iw	קרקא רשימת הודעות
+read a single message.	messenger	iw	קרא הודעה אחת
+read message	messenger	iw	קרא הודעה
+replied	messenger	iw	הישיב
+reply	messenger	iw	השב
+reply to a message	messenger	iw	השב להודעה
+reply to a received message.	messenger	iw	השב להודעה שהתקבלה
+send	messenger	iw	שלח
+send a global message.	messenger	iw	שלח הודעה גלובלית
+send a message to a single recipient.	messenger	iw	שלח הודעה אל נמען יחיד
+send message to	messenger	iw	שלח הודעה אל
+sorry, %1's account is not currently active	messenger	iw	מצטער, החשבון של %1 אינו פעיל כרגע
+update a message status	messenger	iw	עדכן סטאטוס של הודעה
+use select box for user list in compose	common	iw	השתמש בתיבת טקסט לרשימת המשתמשים בהודעות חדשות
+you didn't enter anything for the message	messenger	iw	לא הכנסת כלום להודעה
+you have %1 new message	common	iw	יש לך הודעה חדשה אחת
+you have %1 new messages	common	iw	יש לך %1 הודעות חדשות
+you have no messages	messenger	iw	אין לך הודעות חדשות
+you must enter a subject	messenger	iw	עליך להכניס נושא
+you must enter the username this message is for	messenger	iw	עליך לקבוע את שם המשתמש עבורו ההודעה הזאת

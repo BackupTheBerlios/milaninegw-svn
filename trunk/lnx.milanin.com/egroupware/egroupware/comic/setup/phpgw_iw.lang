@@ -1,0 +1,41 @@
+%1 by %2	comic	iw	%1 על יד %2
+%1 by %2 (%3)	comic	iw	%1 על יד %2 )%3(
+are you sure you want to reset all	comic	iw	בטוח שברצונך לאפס את הכל
+are you sure you want to reset all comic dates and resolved image urls?	comic	iw	ים פתורים של תמונות-URL-בטוח שברצונך לאפס את כל תאריכי הקומיקס ואת ה
+censorship level	comic	iw	רמת צנזורה
+censorship override enabled	comic	iw	אפשור עקיפת צנזורה
+comic	common	iw	קומיקס
+comic preferences updated	comic	iw	עדיפויות קומיקס עודכנו
+comics	common	iw	קומיקס
+comics per page	comic	iw	כמות הקומיקס לעמוד
+comics scaled	comic	iw	גודל הקומיקס הותאם
+daily comic	common	iw	קומיקס יומי
+daily comic preferences	comic	iw	עדיפויות לקומיקס יומי
+daily comics	admin	iw	קומיקס יומי
+daily comics - global options	comic	iw	קומיקס יומי - אפשריות גלובליות
+daily comics data	comic	iw	נתונים של קומיקס יומי
+daily comics global options	comic	iw	אפשריות גלובליות של קומיקס יומי
+display layout	comic	iw	קינפוגורצית התצוגה
+display options	comic	iw	אפשריות תצוגה
+egroupware daily comics	comic	iw	eGroupWare הקומיקס היומי של
+front page comic	comic	iw	קומיקס של עמוד ראשון
+front page comic scaled	comic	iw	התאמת גודל של קומיקס של עמוד הראשון
+genre	comic	iw	ג'נר
+global comics	comic	iw	קומיקס גלובלי
+global options	comic	iw	אפשריות קומיקס
+global options updated	comic	iw	אפשריות גלובליות עודכנו
+image source	comic	iw	מקור תמונה
+max file size	comic	iw	גודל קובץ מירבי
+my comics	comic	iw	הקומיקס שלי
+no_entries	comic	iw	אין רשומות
+parser	comic	iw	מנתח
+performed %1 of element	comic	iw	בצעתי %1 של הרכיב
+random	comic	iw	אקראי
+rated	comic	iw	מדורג
+remote (parse/snarf) enabled	comic	iw	מרוחק  (parse/snarf)
+reset	comic	iw	אתחול
+reset comic data	admin	iw	אתחול נתוני הקומיקס
+resolve	comic	iw	פתור
+showing %1 (%2 - %3 of %4)	comic	iw	מציג %1 (%2 - %3 מתוך %4)
+template	comic	iw	תבנית
+visit %1	comic	iw	ביקור %1

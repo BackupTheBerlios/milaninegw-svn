@@ -1,0 +1,13 @@
+archive type	backup	ru	Выбирите тип архива
+backup	common	ru	Резервное копирование
+backup administration	common	ru	Администрирование резервного копирования
+configuration backup	backup	ru	Настройка резервного копирования
+daily	backup	ru	ежедневно
+directory locations	admin	ru	Расположение директорий
+monthly	backup	ru	ежемесячно
+program locations	admin	ru	Расположение программ
+save backup locally ?	backup	ru	Выбирите для сохранения архива на локальной машине:
+select archive type	backup	ru	Выбирите тип архива
+select interval	backup	ru	Выбирите интервал
+settings	admin	ru	настройки
+weekly	backup	ru	еженедельно

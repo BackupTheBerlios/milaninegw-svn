@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	de	Sind Sie sicher, diese Quelle löschen zu wollen ?
+base url	headlines	de	Basis URL
+basic	headlines	de	einfach
+choose layout	headlines	de	Darstellung auswählen
+color	headlines	de	farbig
+create new headline	headlines	de	neue Schlagzeilen hinzufügen
+current headlines in cache	headlines	de	zwischengespeicherte Schlagzeilen
+display	headlines	de	Anzeige
+edit headline sites	headlines	de	Schlagzeilenquellen bearbeiten
+edit headlines shown by default	headlines	de	Vorgabe  für angezeite Schlagzeilen bearbeiten
+grab new news sites	common	de	Neue Quellen für Schlagzeilen suchen
+gray	headlines	de	grau
+headline preferences	common	de	Schlagzeilen Einstellungen
+headline site management	common	de	Quellen der Schlagzeilen verwalten
+headline sites	headlines	de	Schlagzeilenquellen
+headlines	common	de	Schlagzeilen
+headlines administration	headlines	de	Administration  Schlagzeilen
+headlines administration - delete headline	headlines	de	Administration - Schlagzeilen löschen
+headlines layout	headlines	de	Darstellung der Schlagzeilen
+listings displayed	headlines	de	Anzahl der Schlagzeilen
+minutes between refresh	headlines	de	Aktualisierungsinterval in Minuten
+minutes between reloads	headlines	de	Minuten zwischen Aktualisierungen
+monitor	common	de	Überwachen
+news file	headlines	de	Datei mit Schlagzeilen
+news headlines	common	de	News headlines
+news type	headlines	de	Nachrichtentyp
+no headlines found	headlines	de	keine Schlagzeilen gefunden
+other preferences	preferences	de	andere Einstellungen
+reload news sites	headlines	de	Schlagzeilenquellen aktualisieren
+reset	headlines	de	Rücksetzen
+sample	headlines	de	Beispiel
+select headline news sites	headlines	de	Welche Schlagzeilen sollen angezeigt werden?
+select headlines to display	common	de	Schlagzeilen auswählen
+select layout	common	de	Layout auswählen
+show headlines on homepage	headlines	de	Schlagzeilen auf der Startseite anzeigen
+site	headlines	de	Quelle
+that site has already been entered	headlines	de	Diese Quelle wurde bereits eingegeben
+unable to retrieve links	headlines	de	Kann keine Verweise laden
+update headline	headlines	de	Schlagzeilen aktualisieren
+view headline	headlines	de	Schlagzeilen anzeigen
+you can only enter numbers for listings display	headlines	de	Sie dürfen nur Zahlen für die Anzahl der Schlagzeilen angeben
+you can only enter numbers minutes between refresh	headlines	de	Sie dürfen nur Zahlen für das Aktualisierungsinterval eingeben
+you must enter a base url	headlines	de	Sie müssen eine Basis URL angeben
+you must enter a display	headlines	de	Sie müssen einen Namen für die Quelle eingeben
+you must enter a news url	headlines	de	Sie müssen eine News URL angeben
+you must enter the number of listings display	headlines	de	Sie müssen die Anzahl der anzuzeigenden Zeilen angeben
+you must enter the number of minutes between reload	headlines	de	Sie müssen eine Anzahl von Minuten zwischen den Aktualisierungen angeben

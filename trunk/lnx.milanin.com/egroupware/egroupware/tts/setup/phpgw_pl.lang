@@ -1,0 +1,165 @@
+a new ticket has been reported.	tts	pl	Pojawi³ siê nowy problem
+accept	tts	pl	AKCEPTUJ
+accept the ticket into verification process.	tts	pl	Akceptuj do wykonania
+accepted	tts	pl	ZAAKCEPTOWANY
+action	tts	pl	Polecenie
+add new ticket	tts	pl	Dodaj nowy problem
+add ticket	tts	pl	Dodaj problem
+additional notes	tts	pl	Uwagi dodatkowe
+admin options	common	pl	Opcje Administratora
+assign to	tts	pl	Przypisz do
+assigned from	tts	pl	Wys³ane przez
+assigned to	tts	pl	Przypisane do
+billable hours	tts	pl	Fakturowane godziny
+billable hours changed	tts	pl	Zmieniono godziny fakturowane
+billable hours rate	tts	pl	Stawka za godzinê
+billable rate	tts	pl	Stawka za godzinê
+billable rate changed	tts	pl	Zmieniono stawkê za godzinê
+category changed	tts	pl	Zmieniono kategoriê
+check here to generate the state's id automatically or enter a particular id below.	tts	pl	Kliknij tutaj aby wygenerowaæ ID stanu automatycznie, lub wprowad¼ ID poni¿ej.
+clear form	tts	pl	Wyczy¶æ formularz
+close the invalid ticket.	tts	pl	zamknij b³êdne zg³oszenie problemu.
+closed	tts	pl	Zamkniêty
+completed	tts	pl	ZAKOÑCZONE
+configure the states	common	pl	Konfiguruj stany
+configure the transitions	common	pl	Konfiguruj przej¶cia stanów
+create new state	tts	pl	Stwórz nowy stan
+create new ticket	tts	pl	Tworzenie nowego problemu
+create new transition	tts	pl	Stwórzy nowe przej¶cie stanu
+creates a new ticket, returns ticket_id	tts	pl	Dodaje nowy problem, zwraca ID problemu
+creates a struct of tickets	tts	pl	Dodaje strukturê problemów
+date opened	tts	pl	Data otwarcia
+default assign to	tts	pl	Domy¶lne przypisanie do osoby
+default group	tts	pl	Domy¶lna grupa
+default priority	tts	pl	Domy¶lny priorytet
+delete the listed tickets.	tts	pl	Skasuj pokazane problemy.
+deleting the state	tts	pl	Kasowanie stanu
+deleting the transition	tts	pl	Kasowanie przej¶cia stanu
+detail	tts	pl	Szczegó³y
+duplicate	tts	pl	DUPLIKAT
+edit the state	tts	pl	Edycja stanu
+edit the transition	tts	pl	Edycja przej¶cia stanu
+error: the subject of the ticket is not specified.	tts	pl	B£¡D: nie zosta³ okreslony temat problemu
+force	tts	pl	Wymu¶
+global categories	tts	pl	Kategorie globalne
+group ownership changed	tts	pl	Zmieniono grupê
+history	tts	pl	Historia
+i worked on the ticket and the work requires validation.	tts	pl	Pracowa³em nad problemem, efekty wymagaj± zatwierdzenia.
+i worked on the ticket, but did not finish.	tts	pl	Pracowa³em nad tematem, ale go nie zakoñczy³em
+in progress	tts	pl	W opracowaniu
+initial state	tts	pl	Stan pocz±tkowy
+invalid	tts	pl	B£ÊDNY
+invalidate	tts	pl	UNIEWA¯NIONY
+keep the present state [%1].	tts	pl	Utrzymaj bie¿±cy stan [%1]
+latest note added	tts	pl	Ostatnio dodana notatka
+list of available tickets' states.	tts	pl	Lista dostêpnych stanów zg³oszonych problemów.
+list of available tickets' transitions.	tts	pl	Lista dostêpnych zmian stanów zg³oszonych problemów.
+missing description	tts	pl	Brak opisu
+morework	tts	pl	WIÊCEJ PRACY
+needswork	tts	pl	WYMAGA PRACY
+new	tts	pl	NOWY
+new ticket	tts	pl	Nowy problem
+new tickets can be put into this state.	tts	pl	Ten stan mo¿na przypisaæ nowym problemom.
+new value	tts	pl	Nowa warto¶æ
+no additional notes	tts	pl	Ne ma dodatkowych uwag
+no duplicate	tts	pl	BRAK DUPLIKATU
+no notes for this ticket	tts	pl	Brak notatek do problemu
+no states found	tts	pl	Nie znaleziono stanów
+no tickets found	tts	pl	Nie znaleziono problemów.
+no transitions found	tts	pl	Nie znaleziono zmian stanów
+not assigned	tts	pl	Nie przypisane
+not completed	tts	pl	NIE ZAKOÑCZONY
+notify changes to ticket assignee by e-mail	tts	pl	Powiadom e-mailem adresata problemu o zmianach
+notify changes to ticket group by e-mail	tts	pl	Powiadom e-mailem grupê o zmianach
+notify changes to ticket owner by e-mail	tts	pl	Powiadom e-mailem w³a¶ciciela problemu o zmianach
+old value	tts	pl	Poprzednia warto¶æ
+open	tts	pl	Otwarty
+open / closed	tts	pl	Otwarty / Zamkniêty
+open date	tts	pl	Data otwarcia
+opened	tts	pl	Otwarty
+opened by	tts	pl	Otwarty przez
+original ticket details	tts	pl	Szczegó³y problemu pocz±tkowego
+perform irregular transition into the following state	tts	pl	Wykonaj nieregularn± zmianê na ten stan
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	pl	Prosze wprowadziæ temat problemu, w przeciwnym razie problem nie zostanie zapisany.
+prio	tts	pl	Priorytet
+priority	tts	pl	Priorytet
+priority changed	tts	pl	Zmieniono priorytet
+put the preexistent ticket into the state %1.	tts	pl	Zmiañ stan poprzedaj±cego problemu na %1.
+re-assigned	tts	pl	Przypisany do innej osoby
+re-opened	tts	pl	Ponownie otwarty
+refresh every (seconds)	tts	pl	Czêsto¶æ od¶wie¿ania (s)
+reopen	tts	pl	OTWÓRZ PONOWNIE
+reopened	tts	pl	OTWARTY PONOWNIE
+resolve	tts	pl	ROZWI¡¯
+resolved	tts	pl	ROZWI¡ZANY
+returns a struct of a tickets history	tts	pl	Pokazuje strukturê historii problemów
+returns a struct of values of a single ticket	tts	pl	Pokazuje strukturê warto¶ci pojedynczego problemu
+returns the additional notes attached to a ticket	tts	pl	Pokazuje dodatkowe notatki do³±czone do problemu
+selected	tts	pl	wybrany
+show new/updated tickets on main screen	tts	pl	Wy¶wietlaæ nowe/zaktualizowane problemy na stronie g³ównej?
+source state	tts	pl	Stan ¼ród³owy
+state	tts	pl	Stan
+state changed	tts	pl	Zmieniono stan
+state id	tts	pl	ID stanu
+state name	tts	pl	Nazwa stanu
+status/date closed	tts	pl	Status/Data zamkniêcia
+subject changed	tts	pl	Zmieniono temat
+target state	tts	pl	Stan docelowy
+test	tts	pl	TEST
+the closed ticket requires more work. reopen it.	tts	pl	Zamkniety problem wymaga wiêcej pracy. Otwórz go ponownie.
+the owner of the ticket was not able to confirm the issue.	tts	pl	W³a¶ciciel problemu nie móg³ tego potwierdziæ.
+the ticket has been accepted by the owner, who is about to work on it.	tts	pl	Zg³oszenie problemu zosta³o zaakceptowane przez w³a¶ciela, który bêdzie nad nim pracowa³
+the ticket has been closed without resolution.	tts	pl	Problem zosta³ zamkniety bez rozwi±zania.
+the ticket has been reopened for further work.	tts	pl	Problem zosta³ otwarty ponownie do dalszej pracy.
+the ticket has been successfully resolved.	tts	pl	Problem zosta³ rozwi±zany.
+the ticket has been verified and has to be worked on.	tts	pl	Problem zosta³ zweryfikowany i musi zostaæ rozwi±zany.
+the ticket has been worked on and the work requires validation.	tts	pl	Pracowano nad projektem, wyniki wymagaj± sprawdzenia.
+the ticket has been worked on, but requires more work.	tts	pl	Pracowano nad projektem, ale wymaga on wiêcej pracy.
+the ticket is a duplicate of another ticket and should be closed.	tts	pl	Problem jest duplikatem ju¿ istniej±cego i powienien byæ zamkniety.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	pl	Problem wcale nie jest duplikatem ju¿ istniej±cego. Otwórz go ponownie.
+the ticket is invalid and cannot be worked on.	tts	pl	To nie jest problem i nie powinno siê nad nim pracowaæ.
+the ticket resolution was successfully validated. close the ticket.	tts	pl	Rozwi±zanie problemu zosta³o zaakceptowane. Zamknij go.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	pl	Problemowi nale¿y przypisaæ stan, poniewa¿ istnia³, zanim zosta³a zdefiniowana infrastruktura sieci Petri'ego.
+the ticket was found a duplicate of another ticket.	tts	pl	Problem zidentyfikowano jako duplikat innego, ju¿ istniej±cego.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	pl	Problemy na tej li¶cie maj± stan %1. Zdecyduj co z nimi zrobiæ.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	pl	Nie zaakceptowano rozwi±zania problemu. Wymaga on wiêcej pracy.
+ticket	tts	pl	Problem
+ticket has been updated	tts	pl	Problem zosta³ zaktualizowany
+tickets found %1	tts	pl	Znalezionych problemów %1
+tickets open %1	tts	pl	Otwartych problemów %1
+tickets total %1	tts	pl	Wszystkich problemów %1
+to go back to the tts index, click <a href= %1>here</a>	tts	pl	Aby wróciæ do listy problemów, kliknij <a href="%1">tutaj</a>.
+to go back to the tts index, click <a href= %1?sessionid=1251b004b0dc601825d74cad5180d9f4 >here</a>	tts	pl	Aby wróciæ do listy problemów, kliknij <a href="%1">tutaj</a>
+to go back to the tts index, click <a href= %1?sessionid=1251b004b0dc601825d74cad5180d9f4&sessionid=1251b004b0dc601825d74cad5180d9f4 >here</a>	tts	pl	Aby wróciæ do listy problemów, kliknij <a href="%1">tutaj</a>
+toaccept	tts	pl	NA ZAAKCEPTOWANY
+toclosed	tts	pl	NA ZAMKNIÊTY
+toduplicate	tts	pl	NA DUPLIKAT
+toinvalid	tts	pl	NA B£ÊDNY
+toneedswork	tts	pl	NA WYMAGA PRACY
+tonew	tts	pl	NA NOWY
+toreopened	tts	pl	NA WZNOWIONY
+toresolved	tts	pl	NA ROZWI¡ZANY
+total billable	tts	pl	£±cznie warto¶æ fakturowana
+totovalidate	tts	pl	NA DO ZATWIERDZENIA
+tovalidate	tts	pl	DO ZATWIERDZENIA
+toverified	tts	pl	NA ZWERYFIKOWANY
+transition	tts	pl	Zmiana stanu
+transition name	tts	pl	Nazwa zmiany stanu
+trouble ticket system	common	pl	Problemy
+tts	common	pl	Problemy
+tts preferences	tts	pl	Preferencje systemu Problemów
+undefined	tts	pl	NIEZDEFINIOWANY
+update ticket state	tts	pl	Ukatualnij stan problemu
+updates ticket	tts	pl	Uaktualnia problem
+use email notification	tts	pl	Powiadamiaj via e-mail
+verified	tts	pl	ZWERYFIKOWANY
+verify	tts	pl	WERYFIKUJ
+verify the ticket to work on it.	tts	pl	Zweryfikuj problem aby nad nim pracowaæ
+view all tickets	tts	pl	Poka¿ wszystkie
+view job detail	tts	pl	Widok szczegó³owy zadania
+view only my open tickets	tts	pl	Poka¿ tylko moje otwarte problemy
+view only open tickets	tts	pl	Poka¿ tylko otwarte
+you can only close a ticket if it is assigned to you.	tts	pl	Mo¿esz zamkn±æ wy³±cznie zg³oszenia problemów przypisane do Ciebie.
+you want to delete the state %1 and associated transitions. are you sure?	tts	pl	Zamierasz skasowaæ stan %1 i powi±zane zmiany stanów. Jeste¶ pewien?
+you want to delete the state %1. are you sure?	tts	pl	Zamierzasz skasowaæ stan %1. Jeste¶ pewien?
+you want to delete the transition %1. are you sure?	tts	pl	Zamierzasz skasowaæ zmianê stanu %1. Jeste¶ pewien?

@@ -1,0 +1,40 @@
+/* red dotted lines around blocks in edit-mode */
+.edit {
+	border: thin dotted red;
+	margin-top: 10px;
+	padding: 2px;
+}
+
+/* red dashed lines around contentareas in edit-mode */
+.editContentarea {
+	border: thin dashed red;
+	margin-top: 10px;
+	padding: 2px;
+}
+
+/* black dotted lines around blocks in edit-mode, which are anonymous viewable and so normaly not visible */
+.editAnonymous {
+	border: thin dotted black;
+	margin-top: 10px;
+	padding: 2px;
+}
+
+/* div for the icons in edit mode */
+.editIcons{
+	position: relative;
+	top: -10px;
+	text-align: right;
+	border-style: none;
+}
+
+/* iconice text for module- or contentarea-name in edit-mode */
+.editIconText
+{
+	vertical-align: top;
+	border: 2px ridge black;
+	background-color: white;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+

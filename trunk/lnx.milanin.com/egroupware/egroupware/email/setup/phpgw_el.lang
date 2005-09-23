@@ -1,0 +1,382 @@
+%1 messages have been deleted	email	el	Διαγράφηκαν 1% μηνύματα
+(required)	email	el	(προαπαιτούμενο)
+1 message has been deleted	email	el	Διαγράφηκε 1 μήνυμα
+1 message has been moved to	email	el	Ματακινήθηκε 1 μήνυμα στο
+<b>*apply*</b> this filter	email	el	<b>*ΕΦΑΡΜΟΓΗ*</b> του Φίλτρου
+<b>apply all</b> filters	email	el	<b>ΕΦΑΡΜΟΓΗ ΟΛΩΝ</b> των Φίλτρων
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	el	μια ομάδα δεδομένων scrips, javascript ή κάτι άλλο, είναι inline μήνυμα HTML. Όχι απαραιτήτως κακό, αλλά ο χρήστης μπορεί να θέλει να το ξέρει. Αυτά είναι ομάδες δεδομένων .... κώδικα ....... κομμάτια δεδομένων, όχι εντολές "OnMouseOver".
+account	email	el	λογαριασμός
+account name	email	el	Όνομα Λογαριασμού
+account user name	email	el	Όνομα Χρήστη Λογαριασμού
+accounts	email	el	Λογαριασμοί
+accounts:	email	el	Λογαριασμοί:
+add to address book	email	el	Προσθήκη στις Επαφές
+add to addressbook	email	el	Προσθήκη στις Επαφές
+address book	email	el	Επαφές
+after	email	el	Πίσω από
+all messages	email	el	Όλα τα Μηνύματα
+and	email	el	και
+and stop filtering	email	el	και διακοπή φιλτραρίσματος
+answered	email	el	Απαντήθηκε
+apply	email	el	εφαρμογή
+apply filters report:	email	el	Εφαρμογή της Αναφοράς Φίλτρων:
+apr	email	el	Απρ
+aqua fusion	email	el	Aqua
+arrival date	email	el	Ημερομηνία Παραλαβής
+as	email	el	ως
+attach file	email	el	Προσάρτηση Αρχείου
+attach signature	email	el	Προσάρτηση υπογραφής
+attachment	email	el	Συνημμένο
+aug	email	el	Αυγ
+bcc	email	el	Ιδιαίτ. Κοιν.
+bcc address	email	el	Διεύθυνση Ιδιαίτ. Κοιν.
+before	email	el	Πρίν
+big	email	el	Μεγάλο
+bigger	email	el	Πιο Μεγάλο
+biggest	email	el	Μεγαλύτερο
+body	email	el	Σώμα
+both	email	el	Και τα δύο
+button type	email	el	Τύπος Κουμπιού
+cache server data whenever possible	email	el	cache server data whenever possible
+cc	email	el	Κοιν.
+cc address	email	el	Διεύθυνση Κοιν
+change font size in your e-mail pages	email	el	Αλλαγή του μεγέθους γραμματοσειράς στα E-Mail
+check flags for type of mails	email	el	Check Flags for type of mails
+choose for rename	email	el	Επιλέξτε για μετονομασία
+choose to rename	email	el	επιλέξτε για μετονομασία
+click here for more info in a new window	email	el	κάντε κλικ εδώ για περισσότερες πληροφορίες
+click here to continue	email	el	Πατήστε εδώ για να συνεχίσετε
+click here to edit the settings for this email account.	email	el	Πατήστε εδώ για να αλλάξετε τις ρυθμίσεις του email λογαριασμού
+click here to return to your home page.	email	el	Πατήστε εδώ για να επιστρέψετε στην αρχική σας σελίδα
+company	email	el	Εταιρία
+compose	email	el	Σύνταξη
+compose message	email	el	Σύνταξη μηνύματος
+compose new	common	el	Σύνταξη νέου
+contains	email	el	Περιέχει
+could not open this mailbox	email	el	Το γραμματοκιβώτιο δεν μπορεί να ανοιχτεί
+create (expert)	email	el	Δημιουργία (ειδική)
+create a folder	email	el	Δημιουργία φακέλου
+current attachments (%1)	email	el	Τρέχοντες επισυνάψεις
+custom e-mail preferences	email	el	Προσαρμοσμένες προτιιμήσεις email
+custom e-mail settings	email	el	Προσαρμοσμένες ρυθμίσεις email
+debugging page	email	el	
+dec	email	el	Δεκ
+default sorting order	email	el	Προεπιλεγμένη σειρά ταξινόμησης
+default:	common	el	Προεπιλεγμένο:
+delete (expert)	email	el	Διαγραφή (ειδική)
+delete a folder	email	el	Διαγραφή φακέλου
+delete account	common	el	Διαγραφή λογαριασμού
+deleted	email	el	Διαγράφηκε
+deleted messages (trash) folder	email	el	Φάκελος Διαγραμένων μηνυμάτων (Trash)
+deleted messages folder name	email	el	Όνομα φακέλου Διαγραμένων μηνυμάτων
+deleted messages go to trash	email	el	Τα Διαγραμένα μηνύματα μεταφέρονται στο φάκελο Trash
+deleted messages saved to folder:	email	el	Τα Διαγραμένα μηνύματα αποθηκεύονται στο φάκελο:
+discard	email	el	Απόρριψη
+does not contain	email	el	Δεν περιέχει
+draft	email	el	πρόχειρο
+e-mail extra account	email	el	Επιπλέον λογαριασμός E-Mail
+e-mail extra accounts	email	el	Επιπλέον λογαριασμοί E-Mail
+e-mail extra accounts list	email	el	Λίστα Επιπλέον λογαριασμοί E-Mail
+e-mail filters	common	el	Φίλτρα E-Mail
+e-mail folders	common	el	Φάκελοι E-Mail
+e-mail inbox filters list	email	el	Λίστα φίλτρων E-Mail INBOX
+e-mail preferences	common	el	Προτιμήσεις E-Mail
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	el	Κάθε χρήστης έχει μια συνοπτική σελίδα που μπορεί να παρουσιάσει ποικίλες πληροφορίες. Αυτή η προαιρετική δυνατότητα θα εμφανίσει έναν μικρό κατάλογο μηνυμάτων ηλεκτρονικού tαχυδρομείου στο INBOX του προκαθορισμένου ηλεκτρονικού ταχυδρομείου του χρήστη στη συνοπτική αρχική σελίδα χρηστών.
+edit filters	email	el	Επεξεργασία Φίλτρων
+email account name	email	el	Όνομα Λογαριασμού Email
+email address	email	el	Διεύθυνση E-Mail
+email date	email	el	Ημερομηνία E-Mail
+email filters	email	el	Φίλτρα E-Mail
+email password	email	el	Κωδικός E-Mail
+email preferences	email	el	Προτιμήσεις E-Mail
+email signature	email	el	Υπογραφή E-Mail
+email type	common	el	Τύπος E-Mail
+enable this email account	common	el	Ενεργοποίηση αυτού του λογαριασμού email
+enable utf-7 encoded folder names	email	el	Ενεργοποίηση utf-7 κωδικοποίησης για τα ονόματα φακέλων
+enter the search string in the text boxes	email	el	Εισάγετε το αλφαριθμητικό εύρεσης στα πλαίσια κειμένου
+enter your pop	admin	el	Εισάγωγή POP
+error moving messages to	email	el	Σφάλμα κατά τη μετακίνηση μηνυμάτων σε
+error text not provided	email	el	Η επεξήγηση του σφάλματος δεν υπάρχει
+error: unknown message data	email	el	Σφάλμα: Αγνωστο μήνυμα δεδομένων
+evolution style	email	el	
+extra accounts	email	el	Επιπλέον Λογαριασμοί
+extra e-mail account	common	el	Επιπλέον E-Mail Λογαριασμός
+extra e-mail accounts	common	el	Επιπλέον E-Mail Λογαριασμοί
+extra e-mail preferences number %1	email	el	Επιπλέον προτιμήσεις E-Mail Αριθμός %1
+feb	email	el	Φεβ
+fewer actions	email	el	Λιγότερες Ενέργειες
+fewer choices	email	el	Λιγότερες Επιλογές
+file	email	el	Αρχείο
+file attachment	email	el	Συνημμένο Αρχείο
+file into	email	el	
+fill in as much as you can	email	el	
+filter [number] and name	email	el	
+filter inbox for accounts	email	el	
+filter name	email	el	
+filter name:	email	el	
+filter number	email	el	
+filters	email	el	
+filters list	email	el	
+flag as important	email	el	
+flagged	email	el	
+folder	email	el	Φάκελος
+folder maintenance	email	el	
+folder name	email	el	Όνομα φακέλου
+folder size	email	el	Μέγεθος φακέλου
+folders	email	el	Φάκελοι
+for the file to actually upload	email	el	
+for these items, fill only what is different from you default e-mail preferences	common	el	
+forward	email	el	Προώθηση
+from	email	el	Από
+from address	email	el	Διεύθηνση Από
+get size	email	el	Λήψη μεγέθους
+go	email	el	μετάβαση
+go back	email	el	Επιστροφή
+go back to	email	el	Επιοστροφή στο
+header field	email	el	
+hidden	email	el	κρυφό
+hide help	email	el	Απόκρυψη Βοήθειας
+html messages with the iframe  tag may be klez or other worm emails.	email	el	html μηνύματα με IFRAME tag μάλλον είναι KLEZ ή άλλα worm emails.
+icon size	email	el	Μέγεθος Εικονιδίου
+icon theme	email	el	Θέμα Εικονιδίου
+idots crystal style	email	el	
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	el	
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	el	
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	el	
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	el	
+if applicable	email	el	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	el	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	el	
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	el	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	el	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	el	
+if fileto then select destination folder	email	el	
+if messages match	email	el	
+if there is no obvious error, check your username and password first.	email	el	
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	el	
+image	email	el	
+imap mail server hostname or ip address	admin	el	
+imap server type	common	el	
+imap server type - if applicable	email	el	
+important	email	el	
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	el	
+inbox	email	el	
+input error	email	el	
+input error:	email	el	
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	el	
+jan	email	el	Ιαν
+javascript	email	el	
+jul	email	el	Ιούλ
+jun	email	el	Ιούν
+keep	email	el	
+keyword	email	el	Λέξη κλειδί
+keywords	email	el	Λέξεις κλειδιά
+layout 1	common	el	
+layout 2	common	el	
+lines	email	el	Γραμμές
+list messages	email	el	Λίστα Μηνυμάτων
+long names	email	el	
+mail folder(uw-maildir)	email	el	
+mail server	email	el	
+mail server login type	admin	el	
+mail server type	email	el	
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	el	
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	el	
+manage accounts	email	el	Διαχείρηση Λογαριασμών
+manage folders	email	el	Διαχείρηση Φακέλων
+mar	email	el	Μαρ
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	el	
+message list layout	common	el	
+messages	email	el	Μηνύματα
+messages found in folder	email	el	
+messages have been moved to	email	el	
+more actions	email	el	
+more choices	email	el	
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	el	
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	el	
+move down	email	el	
+move selected messages into	email	el	
+move this message into	email	el	
+move up	email	el	
+mozilla modern style	email	el	
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	el	
+new	email	el	Νέο
+new account	email	el	Νέος Λογαριασμός
+new filter	email	el	Νέο Φίλτρο
+new message	email	el	Νέο Μήνυμα
+new messages	email	el	Νέα Μηνύματα
+newest	common	el	νεώτερα
+next message	email	el	Επόμενο Μήνυμα
+no change	email	el	
+no error returned from server	email	el	
+no message found in folder '%1'	email	el	
+no next message	email	el	
+no previous message	email	el	
+noia &#64; carlitus style	email	el	
+non-standard	email	el	
+not used	email	el	
+notify on delivery	email	el	
+nov	email	el	Νοέ
+number	common	el	Αριθμός
+number of matches:	email	el	
+oct	email	el	Οκτ
+old	email	el	Παλιό
+oldest	common	el	Παλιότερο
+on	email	el	
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	el	
+or	common	el	ή
+or enter text	email	el	
+organization	email	el	Οργανισμός
+persistent email server session	email	el	
+phone	email	el	Τηλέφωνο
+please fill in everything you need	email	el	
+please select a folder to rename	email	el	
+please select a message first	email	el	
+please submit a filename to attach	email	el	
+please type a folder name in the text box	email	el	
+previous	email	el	Προηγούμενο
+previous message	email	el	Προηγούμενο Μήνυμα
+printable	email	el	
+raw message	email	el	
+read mail	email	el	
+received headers	email	el	
+recent	email	el	
+recipient	email	el	
+redirect	email	el	
+reject	email	el	
+rename (expert)	email	el	
+rename a folder	email	el	
+reply	email	el	
+reply all	email	el	
+replyto	email	el	
+request delivery notification	email	el	
+requested filter action:	email	el	
+required	email	el	
+reset	email	el	
+result	email	el	Αποτέλεσμα
+return mails during this time period	email	el	
+save deleted messages in folder named below	email	el	
+save sent messages in folder named below	email	el	
+search for mails in these folders	email	el	
+search this folder	email	el	Αναζήτηση στο φάκελο
+section	email	el	
+seen	email	el	
+select home email address	email	el	
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	el	
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	el	
+select work email address	email	el	
+select your mail server type	admin	el	
+select your screensize for proper showing of the javascript addressbook	email	el	
+select your screensize for propper showing of the javascript addressbook	email	el	
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	el	
+send	email	el	Αποστολή
+send deleted messages to the trash	email	el	
+send forwarded mail as quoted attachment	email	el	
+sender	email	el	Αποστολέας
+sent	email	el	Αποστολή
+sent folder	email	el	
+sent messages folder	common	el	
+sent messages folder name	email	el	
+sent messages saved in &quot;sent&quot; folder	common	el	
+sent messages saved to folder:	email	el	
+sep	email	el	Σεπ
+settings	email	el	Ρυθμίσεις
+short names	email	el	
+show help	email	el	Εμφάνιση βοήθειας
+show long names	email	el	
+show message	email	el	Εμφάνιση Μηνύματος
+show new messages in combobox	email	el	
+show new messages on main screen	email	el	
+show sender's email address with name	email	el	
+show short names	email	el	
+show total folder size by default	email	el	
+simple	email	el	Απλό
+size	email	el	Μέγεθος
+size larger than	email	el	
+size smaller than	email	el	
+small	email	el	Μικρό
+small view	email	el	
+smaller	email	el	Πιο μικρό
+smallest	email	el	Μικρότερο
+somebody	email	el	
+sort by	email	el	
+spell check	email	el	
+standard e-mail preferences	email	el	
+stop if matched	email	el	
+switch accounts	email	el	
+switch current folder to	common	el	
+test all filters	email	el	
+test or apply all filters	email	el	
+test run this filter	email	el	
+text	email	el	Κείμενο
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	el	
+the email application offers different button displays, these buttons can be text, images, or both.	email	el	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	el	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	el	
+the email application offers different icon image themes, these icons can be big or small.	email	el	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	el	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	el	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	el	
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	el	
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	el	
+then do this	email	el	
+then take this actions	email	el	
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	el	
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	el	
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	el	
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	el	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	el	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	el	
+this data not supplied.	email	el	
+this folder is empty	email	el	
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	el	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	el	
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	el	
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	el	
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	el	
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	el	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	el	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	el	
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	el	
+to	email	el	Προς
+to address	email	el	Διεύθυνση Προς
+total messages	email	el	
+trash	email	el	Απορρίματα
+trash folder	email	el	Φάκελος Απορριμάτων
+u-wash mail folder	email	el	
+u-wash mail folder - if applicable	email	el	
+unable to get source folder name	email	el	
+unable to get target folder name	email	el	
+unanswered	email	el	Αναπάντητα
+undeleted	email	el	
+undisclosed recipients	email	el	
+undisclosed sender	email	el	
+unflagged	email	el	
+unknown action	email	el	
+unknown error	email	el	
+unknown translation	email	el	
+unseen	email	el	
+use custom settings	email	el	
+view as html	email	el	
+view formatted	email	el	
+view headers	email	el	
+view unformatted	email	el	
+warn_attachment_name_dangerous	email	el	
+warn_attachment_only_mail	email	el	
+warn_b64_encoded_displayable	email	el	
+warn_has_iframe_maybe_klez	email	el	
+warn_script_tags	email	el	
+warn_style_sheet	email	el	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	el	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	el	
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	el	
+wrote	email	el	
+you have %1 new messages!	common	el	Έχετε %1 καινούργια μηνύματα!
+you have 1 new message!	common	el	Έχετε %1 καινούργιο μήνυμα!
+you have messages!	common	el	Έχετε Μηνύματα!
+you have no new messages	common	el	Δεν υπάρχουν καινούργια μηνύματα!
+you must click	email	el	
+you must click %1 for the file to actually upload	email	el	
+your full name	common	el	Το Ονοματεπώνυμο σας
+your message has been sent	common	el	Το μήνυμα σας έχει αποσταλεί!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	el	

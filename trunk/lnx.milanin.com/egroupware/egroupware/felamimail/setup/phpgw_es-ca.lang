@@ -1,0 +1,367 @@
+(no subject)	felamimail	es-ca	(Sin asunto)
+(only cc/bcc)	felamimail	es-ca	(sólo Cc/Cco)
+(unknown sender)	felamimail	es-ca	(remitente desconocido)
+activate	felamimail	es-ca	Activar
+activate script	felamimail	es-ca	sctivar script
+add	felamimail	es-ca	añadir
+add address	felamimail	es-ca	Añadir dirección
+add rule	felamimail	es-ca	Añadir regla
+add script	felamimail	es-ca	Añadir script
+add to %1	felamimail	es-ca	Añadir a %1
+add to address book	felamimail	es-ca	Añadir a la libreta de direcciones
+add to addressbook	felamimail	es-ca	Añadir a la libreta de direcciones
+additional info	felamimail	es-ca	Información adicional
+address book	felamimail	es-ca	Libreta de direcciones
+address book search	felamimail	es-ca	Buscar en la libreta de direcciones
+after message body	felamimail	es-ca	Después del cuerpo del mensaje
+all address books	felamimail	es-ca	Todas las libretas de direcciones
+all folders	felamimail	es-ca	Todas las carpetas
+always show html emails	felamimail	es-ca	Mostrar siempre los correos HTML
+anyone	felamimail	es-ca	cualquiera
+as a subfolder of	felamimail	es-ca	como una subcarpeta de
+attachments	felamimail	es-ca	Adjuntos
+auto refresh folder list	felamimail	es-ca	Refrescar automáticamente la lista de carpetas
+back to folder	felamimail	es-ca	Volver a la carpeta
+bad reque	felamimail	es-ca	Petición errónea
+based upon given criteria, incoming messages can have different background colors in the message list.  this helps to easily distinguish who the messages are from, especially for mailing lists.	felamimail	es-ca	Basado en los criterios dados, los mensajes que lleguen pueden tener distintos colores de fondo en la lista de mensajes. Esto ayuda a distinguir fácilmente de quién son los mensajes, espcialmente para listas de correo.
+bcc	felamimail	es-ca	Cco
+before headers	felamimail	es-ca	Antes de las cabeceras
+between headers and message body	felamimail	es-ca	Entre las cabeceras y el cuerpo del mensaje
+body part	felamimail	es-ca	Parte del cuerpo
+cc	felamimail	es-ca	Cc
+change folder	felamimail	es-ca	Cambiar carpeta
+checkbox	felamimail	es-ca	Casilla
+click here to log back in.	felamimail	es-ca	Pulse aquí para volver a iniciar sesión
+click here to return to %1	felamimail	es-ca	Pulse aquí para volver a %1
+close this page	felamimail	es-ca	cerrar esta página
+close window	felamimail	es-ca	Cerrar ventana
+color	felamimail	es-ca	Color
+compose	felamimail	es-ca	Redactar
+compress folder	felamimail	es-ca	Comprimir carpeta
+configuration	felamimail	es-ca	Configuración
+contains	felamimail	es-ca	contiene
+create	felamimail	es-ca	Crear
+create folder	felamimail	es-ca	Crear carpeta
+create sent	felamimail	es-ca	Crear carpeta de enviados
+create subfolder	felamimail	es-ca	Crear subcarpeta
+create trash	felamimail	es-ca	Crear Papelera
+created folder successfully!	felamimail	es-ca	La carpeta se ha creado correctamente
+dark blue	felamimail	es-ca	Azul oscuro
+dark cyan	felamimail	es-ca	Cyan oscuro
+dark gray	felamimail	es-ca	Gris oscuro
+dark green	felamimail	es-ca	Verde oscuro
+dark magenta	felamimail	es-ca	Violeta oscuro
+dark yellow	felamimail	es-ca	Amarillo oscuro
+date	felamimail	es-ca	Fecha
+date(newest first)	felamimail	es-ca	Fecha (la más reciente primero)
+date(oldest first)	felamimail	es-ca	Fecha (la más antigua primero)
+deactivate script	felamimail	es-ca	desactivar script
+default sorting order	felamimail	es-ca	Modo de ordenar predeterminado
+delete	felamimail	es-ca	Borrar
+delete all	felamimail	es-ca	Borrar todos
+delete folder	felamimail	es-ca	Borrar carpeta
+delete selected	felamimail	es-ca	Borrar la selección
+delete selected messages	felamimail	es-ca	Borrar mensajes seleccionados
+deleted	felamimail	es-ca	Borrado
+deleted folder successfully!	felamimail	es-ca	Carpeta borrada correctamente
+disable	felamimail	es-ca	Deshabilitar
+display message in new window	felamimail	es-ca	Mostrar el mensaje en una ventana nueva
+display of html emails	felamimail	es-ca	Mostrar los mensajes HTML
+display only when no plain text is available	felamimail	es-ca	Mostrar sólo cuando no hay texto simple disponible
+display preferences	felamimail	es-ca	Preferencias de visualización
+do it!	felamimail	es-ca	¡Hacerlo!
+do not use sent	felamimail	es-ca	No usar Enviados
+do not use trash	felamimail	es-ca	No usar Papelera
+do you really want to delete the '%1' folder?	felamimail	es-ca	¿Realmente quiere borrar la carpeta '%1'?
+do you really want to delete the \'%1\' folder?	felamimail	es-ca	¿Realmente quiere borrar la carpeta '%1'?
+does not contain	felamimail	es-ca	No contiene
+does not match	felamimail	es-ca	No coincide con
+does not match regexp	felamimail	es-ca	No coincide con la expresión
+don't use sent	felamimail	es-ca	No usar Enviados
+don't use trash	felamimail	es-ca	No usar Papelera
+don\'t use sent	felamimail	es-ca	No usar Enviados
+don\'t use trash	felamimail	es-ca	No usar Papelera
+done	felamimail	es-ca	Hecho
+down	felamimail	es-ca	abajo
+download	felamimail	es-ca	descargar
+download this as a file	felamimail	es-ca	Descargar esto como un fichero
+e-mail	felamimail	es-ca	Correo electrónico
+e-mail address	felamimail	es-ca	Dirección de correo electrónico
+e-mail folders	felamimail	es-ca	Carpetas de correo electrónico
+edit	felamimail	es-ca	Editar
+edit filter	felamimail	es-ca	Editar filtro
+edit rule	felamimail	es-ca	Añadir regla
+edit selected	felamimail	es-ca	Editar selección
+email address	felamimail	es-ca	Dirección de correo electrónico
+email signature	felamimail	es-ca	Firma de correo
+empty trash	felamimail	es-ca	Vaciar papelera
+enable	felamimail	es-ca	Habilitar
+enter your default mail domain ( from: user@domain )	admin	es-ca	Introduzca su dominio de correo predeterminado (de usuario@dominio)
+enter your imap mail server hostname or ip address	admin	es-ca	Introduzca el nombre del servidor de correo IMAP o la dirección IP
+enter your sieve server hostname or ip address	admin	es-ca	Introduzca el nombre del servidor SIEVE o la dirección IP
+enter your sieve server port	admin	es-ca	Introduzca el puerto del servidor SIEVE
+enter your smtp server hostname or ip address	admin	es-ca	ntroduzca el nombre del servidor SIEVE o la dirección IP
+enter your smtp server port	admin	es-ca	Introduzca el el puerto del servidor smtp
+erro	felamimail	es-ca	ERROR
+error	felamimail	es-ca	ERROR
+error connecting to imap serv	felamimail	es-ca	Error al conectar al servidor IMAP
+error opening	felamimail	es-ca	Error al abrir
+expunge	felamimail	es-ca	Suprimir
+felamimail	common	es-ca	FelaMiMail
+file into	felamimail	es-ca	Información del fichero
+files	felamimail	es-ca	Ficheros
+filter active	felamimail	es-ca	Filtro activo
+filter name	felamimail	es-ca	Nombre del filtro
+first name	felamimail	es-ca	Nombre de pila
+flagged	felamimail	es-ca	marcado
+flags	felamimail	es-ca	Marcas
+folder acl	felamimail	es-ca	ACL de la carpeta
+folder name	felamimail	es-ca	Nombre de la carpeta
+folder path	felamimail	es-ca	Ruta de la carpeta
+folder preferences	felamimail	es-ca	Preferencias de la carpeta
+folder settings	felamimail	es-ca	Opciones de la carpeta
+folder status	felamimail	es-ca	Estado de la carpeta
+folderlist	felamimail	es-ca	Lista de carpetas
+folders	felamimail	es-ca	Carpetas
+folders created successfully!	felamimail	es-ca	Las carpetas se han creado correctamente
+follow	felamimail	es-ca	seguir
+for mail to be send - not functional yet	felamimail	es-ca	Para el correo pendiente de enviar - todavía no funciona
+for received mail	felamimail	es-ca	Para el correo recibido
+forward	felamimail	es-ca	Reenviar
+found	felamimail	es-ca	Encontrado
+from	felamimail	es-ca	De
+from(a->z)	felamimail	es-ca	De (A-> Z)
+from(z->a)	felamimail	es-ca	De (Z-> A)
+full name	felamimail	es-ca	Nombre completo
+have a look at <a href="http://www.felamimail.org" target="_new">www.felamimail.org</a> to learn more about squirrelmail.<br>	felamimail	es-ca	Eche un vistazo a <a href="http://www.felamimail.org" target="_new">www.felamimail.org</a> para saber más acerca de Squirrelmail.<br>
+have a look at <a href=\"http://www.felamimail.org\" target=\"_new\">www.felamimail.org</a> to learn more about squirrelmail.<br>	felamimail	es-ca	Eche un vistazo a <a href="http://www.felamimail.org" target="_new">www.felamimail.org</a> para saber más acerca de Squirrelmail.<br>
+help	felamimail	es-ca	Ayuda
+hide header	felamimail	es-ca	Ocultar cabecera
+html	felamimail	es-ca	HTML
+icons and text	felamimail	es-ca	Iconos y texto
+icons only	felamimail	es-ca	Sólo iconos
+identifying name	felamimail	es-ca	Nombre identificativo
+if	felamimail	es-ca	SI
+illegal folder name.  please select a different name.	felamimail	es-ca	Nombre de carpeta ilegal. Por favor, seleccione un nombre distinto
+imap	felamimail	es-ca	IMAP
+imap server	felamimail	es-ca	Servidor IMAP
+imap server address	felamimail	es-ca	Dirección del servidor IMAP
+imap server type	felamimail	es-ca	Tipo de servidor IMAP
+imaps authentication	felamimail	es-ca	Identificación IMAPS
+imaps encryption only	felamimail	es-ca	Cifrado IMAPS solamente
+in	felamimail	es-ca	en
+in order for squirrelmail to provide the full set of options you need to create the special folders listed below.  just click the check box and hit the create button.	felamimail	es-ca	Para que SquirrelMail proporcione todas las opciones necesita crear las carpetas especiales que se indican debajo. Simplemente marque la casilla pulse el botón de crear.
+in the center	felamimail	es-ca	en el centro
+index order	felamimail	es-ca	Orden del índica
+info	felamimail	es-ca	Información
+invalid user name or password	felamimail	es-ca	El usuario o la contraseña no son válidos
+javascript	felamimail	es-ca	JavaScript
+language	felamimail	es-ca	Idioma
+last name	felamimail	es-ca	Apellidos
+left	felamimail	es-ca	Izquierda
+less	felamimail	es-ca	menos
+let this folder contain subfolders	felamimail	es-ca	Permitir a este carpeta tener subcarpetas
+light blue	felamimail	es-ca	Azul claro
+light cyan	felamimail	es-ca	Cyan claro
+light gray	felamimail	es-ca	Gris claro
+light green	felamimail	es-ca	Verde claro
+light magenta	felamimail	es-ca	Morado claro
+light yellow	felamimail	es-ca	Amarillo claro
+list all	felamimail	es-ca	Listar todo
+location of buttons when composing	felamimail	es-ca	Ubicación de los botones al redactar
+location of folder list	felamimail	es-ca	Ubicación de la lista de carpetas
+mail server login type	admin	es-ca	Tipo de sesión del servidor de correo
+mail settings	felamimail	es-ca	Configuración del correo
+manage folders	felamimail	es-ca	Administrar carpetas
+manage sieve	felamimail	es-ca	Administrar scripts Sieve
+mark as deleted	felamimail	es-ca	Marcar como borrado
+mark messages as	felamimail	es-ca	Marcar mensajes seleccionados como
+mark selected as flagged	felamimail	es-ca	Marcar la selección como para descargar
+mark selected as read	felamimail	es-ca	Marcar la selección como leído
+mark selected as unflagged	felamimail	es-ca	Marcar la selección como para no descargar
+mark selected as unread	felamimail	es-ca	Marcar la selección como no leído
+match	felamimail	es-ca	Coincidencia
+matches	felamimail	es-ca	coincide
+matches regexp	felamimail	es-ca	coincide con la expresión
+medium gray	felamimail	es-ca	Gris medio
+message highlighting	felamimail	es-ca	Resaltado del mensaje
+message list	felamimail	es-ca	Lista de mensajes
+messages	felamimail	es-ca	mensajes
+minute	felamimail	es-ca	Minuto
+minutes	felamimail	es-ca	Minutos
+more	felamimail	es-ca	más
+move	felamimail	es-ca	mover
+move messages	felamimail	es-ca	mover mensajes
+move selected to	felamimail	es-ca	mover los seleccionados a
+move to trash	felamimail	es-ca	Mover a la papelera
+must be unique	felamimail	es-ca	Debe ser único
+name	felamimail	es-ca	Nombre
+never display html emails	felamimail	es-ca	Nunca mostar los correos en HTML
+new	felamimail	es-ca	Nuevo
+new filter	felamimail	es-ca	Nuevo filtro
+next	felamimail	es-ca	Siguiente
+next message	felamimail	es-ca	Mensaje siguiente
+nickname	felamimail	es-ca	Apodo
+no filter	felamimail	es-ca	Sin filtro
+no folders found	felamimail	es-ca	No se encontraron carpetas
+no folders were found to subscribe to!	felamimail	es-ca	No se encontraron carpetas a las que suscribirse
+no folders were found to unsubscribe from!	felamimail	es-ca	No se encontraron carpetas de las que desuscribirse
+no highlighting is defined	felamimail	es-ca	No se definió un resaltado
+no messages were selected.	felamimail	es-ca	No se seleccionaron mensajes
+no next message	felamimail	es-ca	No hay mensaje siguiente
+no notification	felamimail	es-ca	Sin notificación
+no personal address book is defined. contact administrator.	felamimail	es-ca	No se ha definido una libreta de direcciones personal. Póngase en contacto con el administrador
+no persons matching your search was found	felamimail	es-ca	No se han encontrado personas con el criterio indicado
+no previous message	felamimail	es-ca	No hay mensaje anterior
+no valid emailprofile selected!!	felamimail	es-ca	No se ha seleccionado un perfil de correo válido
+none	felamimail	es-ca	ninguno
+number of messages to index	felamimail	es-ca	Número de mensajes a indexar
+on behalf of	felamimail	es-ca	en nombre de
+only inbox	felamimail	es-ca	Sólo la Bandeja de entrada
+only unseen	felamimail	es-ca	Sólo los no vistos
+options	felamimail	es-ca	Opciones
+organisation	felamimail	es-ca	Organización
+organization	felamimail	es-ca	Organización
+organization name	admin	es-ca	Nombre de la organización
+oth	felamimail	es-ca	Otros
+participants	felamimail	es-ca	Participantes
+personal information	felamimail	es-ca	Información personal
+posting	felamimail	es-ca	enviar
+preference file %1 not found. exiting abnormally	felamimail	es-ca	El fichero de preferencias %1 no se ha encontrado. Saliendo de forma anormal.
+preference file, %1, does not exist. log out, and log back in to create a default preference file.	felamimail	es-ca	El fichero de preferencias %1 no existe. Cierre la sesión y vuelva a iniciarla para crear un fichero de preferencias predeterminado.
+previous	felamimail	es-ca	Anterior
+previous message	felamimail	es-ca	Mensaje anterior
+print it	felamimail	es-ca	Imprimirlo
+print this page	felamimail	es-ca	Imprimir esta página
+purge	felamimail	es-ca	Purgar
+quicksearch	felamimail	es-ca	Búsqueda rápida
+read	felamimail	es-ca	leídos
+read da	felamimail	es-ca	Fecha de lectura
+reading	felamimail	es-ca	leyendo
+reason giv	felamimail	es-ca	Razón
+recent	felamimail	es-ca	reciente(s)
+refresh folder list	felamimail	es-ca	Refrescar la lista de carpetas
+refresh page	felamimail	es-ca	Refrescar página
+refresh time in minutes	felamimail	es-ca	Tiempo de refresco en minutos
+remove	felamimail	es-ca	eliminar
+remove immediately	felamimail	es-ca	Eliminar inmediatamente
+rename	felamimail	es-ca	Renombrar
+rename a folder	felamimail	es-ca	Renombrar una carpeta
+rename folder	felamimail	es-ca	Renombrar carpeta
+renamed successfully!	felamimail	es-ca	Renombrado correctamente
+replied	felamimail	es-ca	respondido
+reply	felamimail	es-ca	Responder
+reply all	felamimail	es-ca	Responder a todos
+reply to	felamimail	es-ca	Responder A
+replyto	felamimail	es-ca	Responder A
+return	felamimail	es-ca	Volver
+return to options page	felamimail	es-ca	Volver a la página de opciones
+right	felamimail	es-ca	Derecha
+rule	felamimail	es-ca	Regla
+running squirrelmail version %1 (c) 1999-2000.	felamimail	es-ca	Ejecutando SquirrelMail versión %1 (c) 1999-2000
+same window - not functional yet	felamimail	es-ca	En la misma ventana - no funciona todavía
+save	felamimail	es-ca	Guardar
+search	felamimail	es-ca	Buscar
+search for	felamimail	es-ca	Buscar
+seconds	felamimail	es-ca	Segundos
+select	felamimail	es-ca	Seleccionar
+select all	felamimail	es-ca	Seleccionar todo
+select emailprofile	felamimail	es-ca	Seleccionar perfil de correo
+select home email address	felamimail	es-ca	Seleccionar dirección de correo
+select work email address	felamimail	es-ca	Seleccionar dirección de correo del trabajo
+select your mail server type	admin	es-ca	Seleccionar el tipo de servidor de correo
+send	felamimail	es-ca	Enviar
+sent fold	felamimail	es-ca	Carpeta de enviados
+sent folder	felamimail	es-ca	Carpeta de enviados
+server respond	felamimail	es-ca	Respuesta del servidor
+show header	felamimail	es-ca	mostrar cabecera
+show new messages on main screen	felamimail	es-ca	Mostrar mensajes nuevos en la pantalla principal
+sieve settings	admin	es-ca	Configuración de Sieve
+signature	felamimail	es-ca	Firma
+site configuration	felamimail	es-ca	Configuración del sitio
+size	felamimail	es-ca	Tamaño
+size of editor window	felamimail	es-ca	Tamaño de la ventana del editor
+size(...->0)	felamimail	es-ca	Tamaño (...->0)
+size(0->...)	felamimail	es-ca	Tamaño (0->...)
+small view	felamimail	es-ca	Vista reducida
+smtp settings	admin	es-ca	Opciones SMTP
+some or all of the help documents are not present!	felamimail	es-ca	Algunos o todos los documentos de la ayuda no están presentes
+source	felamimail	es-ca	Origen
+special folder options	felamimail	es-ca	Opciones especiales de la carpeta
+squirrelmail	felamimail	es-ca	Squirrelmail
+subject	felamimail	es-ca	Asunto
+subject(a->z)	felamimail	es-ca	Asunto (A->Z)
+subject(z->a)	felamimail	es-ca	Asunto (Z->A)
+submit	felamimail	es-ca	Enviar
+subscribe	felamimail	es-ca	Suscribirse
+subscribed	felamimail	es-ca	Suscrito
+subscribed successfully!	felamimail	es-ca	Suscripción correcta
+successfully saved display preferences!	felamimail	es-ca	Las preferencias de visualización se han guardado correctamente
+successfully saved folder preferences!	felamimail	es-ca	Las preferencias de las carpetas se han guardado correctamente
+successfully saved personal information!	felamimail	es-ca	La información personal se ha guardado correctamente
+switch current folder to	felamimail	es-ca	cambiar la carpeta actual a
+table of contents	felamimail	es-ca	Tabla de contenidos
+text only	felamimail	es-ca	Sólo texto
+the connection to the imap server failed!!	felamimail	es-ca	¡Ha fallado la conexión con el servidor IMAP!
+the help has not been translated to %1.  it will be displayed in english instead.	felamimail	es-ca	La ayuda no ha sido traducida a %1. Se mostrará en inglés.
+the index order is the order that the columns are arranged in the message index.  you can add, remove, and move columns around to customize them to fit your needs.	felamimail	es-ca	El orden de los índices es el orden en el cual se muestran las columnas en el índice de mensajes. Puede añadir, borrar y mover columnas para personalizarlas y ajustarlas a sus necesidades.
+the order of the message index can be rearanged and changed to contain the headers in any order you want.	felamimail	es-ca	El orden del índice de mensajes puede reordenarse y cambiarse para contener las cabeceras en el orden que quiera.
+theme	felamimail	es-ca	Tema
+then	felamimail	es-ca	ENTONCES
+these settings change the way your folders are displayed and manipulated.	felamimail	es-ca	Estas opciones varían dependiendo de cómo se manipulen las carpetas.
+this contains personal information about yourself such as your name, your email address, etc.	felamimail	es-ca	Esta contiene información personal acerca de usted como su nombre, dirección de correo electrónico, etc.
+this folder is empty	felamimail	es-ca	ESTA CARPETA ESTA VACIA
+this php has no imap support compiled in!!	felamimail	es-ca	¡Esta instalación de PHP no tiene soporte IMAP!
+this port is based on squirrelmail, which is a standalone imap client.<br>	felamimail	es-ca	El puerto en el que está basado Squirrelmail, que es un cliente IMAP.<br>
+to	felamimail	es-ca	Para
+to the left	felamimail	es-ca	a la izquierda
+to the right	felamimail	es-ca	a la derecha
+top	felamimail	es-ca	Superior
+translation location	felamimail	es-ca	Ubicación de la traducción
+translation preferences	felamimail	es-ca	Preferencias de la traducción
+translation server	felamimail	es-ca	Servidor de traducciones
+trash fold	felamimail	es-ca	Carpeta Papelera
+trash folder	felamimail	es-ca	Carpeta Papelera
+type	felamimail	es-ca	tipo
+unable to list addresses from %1	felamimail	es-ca	No se pudieron listar las direcciones desde %1
+unflagged	felamimail	es-ca	Sin marcar
+unknown err	felamimail	es-ca	Error desconocido
+unknown error	felamimail	es-ca	Error desconocido
+unknown sender	felamimail	es-ca	Remitente desconocido
+unknown user or password incorrect.	felamimail	es-ca	Usuario desconocido o contraseña incorrecta
+unread	felamimail	es-ca	No leído
+unseen and total	felamimail	es-ca	No vistos y total
+unseen message notification	felamimail	es-ca	Notificación de mensaje desconocida
+unseen message notification type	felamimail	es-ca	Tipo de notificación de mensaje no visto
+unselect all	felamimail	es-ca	Deseleccionar todo
+unsubscribe	felamimail	es-ca	Desuscribir
+unsubscribed	felamimail	es-ca	No suscrito
+unsubscribed successfully!	felamimail	es-ca	Desuscripción correcta
+up	felamimail	es-ca	arriba
+update address	felamimail	es-ca	Actualizar dirección
+use a signature	felamimail	es-ca	Usar una firma
+use a signature?	felamimail	es-ca	¿Usar una firma?
+use addresses	felamimail	es-ca	Usar direcciones
+use custom settings	felamimail	es-ca	Usar opciones personalizadas
+use javascript or html addressbook?	felamimail	es-ca	Usar javascript o libreta de direcciones HTML
+use smtp auth	admin	es-ca	Usar identificación SMTP
+users can define their own emailaccounts	admin	es-ca	Los usuarios pueden definir sus propias cuentas de correo
+view full header	felamimail	es-ca	Ver la cabecera completa
+view message	felamimail	es-ca	Ver mensaje
+viewing full header	felamimail	es-ca	Viendo la cabecera completa
+viewing message	felamimail	es-ca	Viendo mensaje
+viewing messages	felamimail	es-ca	Viendo mensajes
+welcome to %1's webmail system	felamimail	es-ca	Bienvenido al sistema de WebMail %1
+welcome to %1\'s webmail system	felamimail	es-ca	Bienvenido al sistema de WebMail %1
+when deleting messages	felamimail	es-ca	Al borrar mensajes
+white	felamimail	es-ca	Blanco
+width of folder list	felamimail	es-ca	Ancho de la lista de carpetas
+wrap incoming text at	felamimail	es-ca	Ajustar el texto entrante a
+writing	felamimail	es-ca	escribiendo
+wrote	felamimail	es-ca	escribió
+you can change the way that squirrelmail looks and displays information to you, such as the colors, the language, and other settings.	felamimail	es-ca	Puede cambiar la forma en que SquirrelMail mira y muestra la información, como los colores, el idioma y otras opciones.
+you can only edit one address at the time	felamimail	es-ca	Sólo puede editar una dirección al mismo tiempo
+you must login first.	felamimail	es-ca	Antes, debe iniciar la sesión.
+you need a valid user and password to access this page!	felamimail	es-ca	Necesita un usuario y una contraseña válidos para acceder a esta página
+your search failed with the following error(s)	felamimail	es-ca	La búsqueda falló, dando los siguientes errores:
+1	felamimail	es-ca	1

@@ -1,0 +1,34 @@
+rTOPIC_TITLE: 用戶使用手冊
+TOPIC_HELP:
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#register" class="GenLink">為什麼要注冊?</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#cookies" class="GenLink">FUD論壇如何使用cookies功能？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#clrcookie" class="GenLink">如何清除FUD論壇的cookie？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#updprofile" class="GenLink">什麼是個人信息？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#sigs" class="GenLink">什麼是個人簽名？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#rstpasswd" class="GenLink">忘記了密碼怎麼辦？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#cstat" class="GenLink">什麼是定制標簽？我該如何定制？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#avatars" class="GenLink">什麼是頭像？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#blist" class="GenLink">什麼是好友列表？</a><br>
+<a href="{ROOT}?t=help_index&section=usermaintance&%_rsid%#ignlist" class="GenLink">黑名單的功能是什麼？</a><br>
+
+TOPIC_TITLE: 論壇的一般功能
+TOPIC_HELP:
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#bsearch" class="GenLink">我如何搜索？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#email" class="GenLink">我可以向別的論壇成員發送郵件麼？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#pmsg" class="GenLink">什麼是悄悄話，我該如何發送悄悄話？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#mlist" class="GenLink">什麼是用戶列表？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#ann" class="GenLink">什麼是公告和臨時公告？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#rate" class="GenLink">我能評價帖子麼？</a><br>
+<a href="{ROOT}?t=help_index&section=boardusage&%_rsid%#ref" class="GenLink">什麼是被推薦者？</a><br>
+
+TOPIC_TITLE: 查看和發布信息
+TOPIC_HELP:
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#style" class="GenLink">如何編輯要發布的信息？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#sml" class="GenLink">什麼是表情符號？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#polls" class="GenLink">我該如何使用“調查”功能？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#attach" class="GenLink">我能否在提交的信息中添加附件？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#msgico" class="GenLink">提交信息時添加的圖標是什麼？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#edit" class="GenLink">我能編輯我要發布的信息麼？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#mod" class="GenLink">誰是版主和系統管理員？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#cens" class="GenLink">什麼是審查制度？</a><br>
+<a href="{ROOT}?t=help_index&section=readingposting&%_rsid%#not" class="GenLink">當有人回復時能否通知我？</a><br>

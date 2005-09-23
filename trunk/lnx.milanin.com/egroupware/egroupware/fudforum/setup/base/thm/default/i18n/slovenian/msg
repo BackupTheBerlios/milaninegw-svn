@@ -1,0 +1,1018 @@
+action:				Akcija
+add_to_buddy_list:		dodaj v skupino
+admin:				Admin 
+admin_control_panel:		Administratorjev kontrolni menu
+administrator:			Administrator
+announcement:			Obvestilo
+attachment:			Priponka:
+avatar:				Avatar:
+average_post_count:		{VAR: u->posted_msg_count} objav ({VAR: avg} povpreèno na dan)
+biography:			Biografija:
+birth_date:			Datum rojstva:
+by:				Od:
+by_mod:				od moderatorja
+current_time:			Trenuten èas
+custom_avatar_queue:		Prirejena vrsta avatarjev
+date:				Datum
+date_posted:			Datum objave
+date_registered:		Datum prijave:
+download_counter:		Prenešeno {VAR: v[3]} krat
+pmsg_download_counter:		Prenešeno {VAR: r->dlcount} krat
+email:				Epošta:
+email_to_friend:		Epošta prijatelju
+email_to_friend_desc:		Pošljite URL te strani po epošti
+email_user:			Kliknite tu za pošiljanje epošte uporabniku
+faq:				P.Z.V.
+first_unread_msg:		Prikaži neprebrana sporoèila
+first_unread_msg_desc:		Pojdi na prvo neprebrano sporoèilo v tem pogovoru
+flat_view:			Povratek na privzet zaporeden pregled
+forum:				Forum:
+forum_icon:			Ikona foruma
+forum_new_messages:		Nova sporoèila
+forum_none_messages:		Le registrirani èlani foruma lahko sledijo branim in nebranim sporoèilom
+forum_old_messages:		Ni novih sporoèil
+from:				Od:
+gender:				Spol:
+go:				Pojdi
+goto_next_msg:			Pojdi na naslednje sporoèilo
+goto_prev_msg:			Pojdi na predhodnje sporoèilo
+home:				Domov
+homepage:			Domaèa stran:
+icq_control_panel:		ICQ pano online sporoèil
+icq_message_form:		ICQ sporoèilo od:
+ignore_user:			spreglej vse objave tega uporabnika
+im_aim:				AIM prijemališèe:
+im_msnm:			MSN glasnik:
+im_yahoo:			Yahoo glasnik:
+image:				Slika:
+index_forum:			Forum
+index_new_posts:		Novih objav od zadnjega branja
+index_no_new_posts:		Ni novih objav od zadnjega branja
+interests:			Zanimanja:
+last_post:			Zadnja objava
+last_thread_msg:		Pojdi na zadnje sporoèilo v tej temi
+legend:				Legenda:
+location:			Položaj:
+lock_thread:			Zakleni temo
+locked:				Zaklenjeno
+locked_with_new_posts:		Zaklenjeno (z neprebranimi sporoèili)
+logged_in_list:			Seznam prijavljenih uporabnikov
+login:				Prijava
+login_header:			Prijava:
+logout:				Odjava
+mark_all_read:			oznaèi vsa obvestila kot prebrana
+mark_all_read_desc:		Vsa sporoèila, ki jih še niste pogledali, bodo oznaèena za prebrana.
+members:			Èlani
+message:			Sporoèilo
+message_counter:		Naèi uporabniki so objavili skupaj <b>{VAR: post_count}</b> sporoèil v <b>{VAR: thread_count}</b> pogovorih.
+message_index:			Kazalo sporoèil
+message_index_desc:		Prikaže seznam sporoèil.
+minimize_category:		Skrij kategorijo
+moderation_queue:		Vrsta za moderiranje
+moderator:			Moderator
+moderator_of:			Moderator za:
+moderator_options:		Nastavitve moderatorja
+moderators:			Moderator(ji)
+more_unread_messages:		veè neprebranih sporoèil
+more_unread_messages_desc:	Pokaži veè neprebranih sporoèil in oznaèi trenutno vidna sporoèila kot prebrana.
+move_thread:			Premakni
+moved:				Premakni v drug forum
+moved_thread_message:		Ta tema je bila premaknjena v drug forum
+na:				n/a
+new_posts:			Nove objave
+new_private_messages:		Imate <span class="GenText" style="color: #ff0000">({VAR: c})</span> neprebranih zasebnih sporoèil.
+new_thread:			Ustvari novo temo
+newest_user:			Zadnji prijavljeni uporabnik je
+next_page:			Naslednja stran
+next_thread:			Naslednja tema:
+no_messages:			Ni sporoèil v tej temi.
+no_msg_body:			Ni telesa sporoèila.
+no_new_posts:			Ni novih objav.
+no_posts:			Ni objav.
+no_subscribed_forums:		Ni prijavljenih forumov.
+no_subscribed_threads:		Ni prijavljenih tem.
+no_unread_locked:		Ta tema je bila zaklenjena.
+no_unread_msg:			Ta tema nima neprebranih sporoèil.
+no_unread_msg_unreg:		KAtera sporoèila so bila prebrana je zabeleženo le pri registriranih uporabnikih.
+num_pages:			Strani ({VAR: ttl_pg}):
+num_votes:			{VAR: obj->total_votes} glas(ov)
+occupation:			Zaposlitev:
+off:				IZKLOPLJENO
+on:				VKLOPLJENO
+page_timings:			Celoten èas za izdelavo strani: {VAR: page_gen_time} sekund.
+fud_query_stats:		{VAR: q_time} MySQL poizvedbe so trajale {VAR: ttl_time} sekund.<br>
+pm:				Zasebno dopisovanje
+poll:				Anketa:
+post_count:			Števec objav {VAR: u_pcount}
+post_count_l:			Števec objav:
+poster:				Pošiljatelj
+posts:				Objave
+posts_c:			objave:
+prev_thread:			Predhodnja tema:
+usrinfo_private_message:	Zasebno sporoèilo:
+profile:			Profil
+profile_2:			Profil:
+profile_desc:			Kliknite tu za dostop do upravljanja uporabnikov
+rate:				oceni
+rate_thread:			Oceni temo
+rating:				Ocena
+refresh_list:			Osveži seznam
+register:			Prijavi
+registered:			Prijavljen:
+registered_on:			Prijavljen na {DATE: u_reg_date %a, %d %B %Y}
+replies:			Odgovorov
+report_to_mod:			Opozori moderatorja na sporoèilo
+reported_messages:		Prijavljenih sporoèil
+reveal_all_posts:		odkri vsa sporoèila uporabnika {VAR: user_login}
+reveal_post:			odkri objavo
+search:				Iskanje
+sel_todays_posts:		Današnje objave
+sel_todays_posts_desc:		Vklopi sito za današnje objave
+sel_unanswered_posts:		Neodgovorjene objave
+sel_unanswered_posts_desc:	Vklopi sito za neodgovorjene objave
+sel_unread_messages:		Unread Messages
+sel_unread_messages_desc:	Prijavi sito neprebranih sporoèil
+send:				Pošlji
+send_pm_desc:			Pošlji uporabniku privatno sporoèilo
+sender_email:			Pošiljateljev enaslov:
+sender_name:			Pošiljateljevo ime:
+show_all_posts:			Pokaži vse objave uporabnika {VAR: user_login}
+show_posts_by:			Pokaži objave od: {VAR: u_alias}
+size:				Velikost:
+started_on:			Zaèeto dne
+status:				Status:
+status_line:			Na obisku je <b>{VAR: st_obj->online_users_reg}</b> èlanov, <b>{VAR: st_obj->online_users_hidden}</b> nevidnih èlanov in <b>{VAR: st_obj->online_users_anon}</b> gostov.
+sticky:				lepljiv:
+stop_ignoring:			prenehaj ignorirati uporabnika
+sub_to_thread:			Prijavi se na temo
+sub_to_thread_desc:		Prejemaj obvestila o novih objavah znotraj te teme.
+subject:			Zadeva
+subscribe:			Prijavi
+subscribe_desc:			Prejmi obvestilo, èe kdo v tem forumu odpre novo temo.
+subscribed_forums:		Opazovani forumi:
+subscribed_forums_desc:		Vkljuèi sito za opazovane forume. 
+subscribed_threads:		Opazovane teme
+subscribed_threads_desc:	Vkljuèi sito opazovanih tem. 
+switch_to_thread_view:		Preklopi v niten pregled tem.
+thread:				Tema:
+thread_announcement:		Obvestilo:
+thread_first_unread_msg:	Klikni za prikaz prve neprebrane objave v temi.
+thread_thread:			Tema
+threads:			Teme
+time:				Èas
+todays_posts:			Današnje objave
+todays_posts_desc:		Prikaži vsa obvestila, ki so bila objavljena danes.
+un_ignore_user:			prenehaj ignorirati objave tega uporabnika
+unanswered_posts:		Neodgovorjene objave
+unanswered_posts_desc:		Prikaži vse objave, na katere ni nihèe odgovoril.
+unlock_thread:			Odkleni temo
+unread_msg:			Ta tema vsebuje objave, ki jih še niste prebrali.
+unread_msg_locked:		Zaklenjene teme z neprebranimi sporoèili.
+unread_posts:			Neprebrane objave
+unread_posts_desc:		Pokaži vse neprebrane objave.
+unsub_from_thread:		Odjavi s teme.
+unsub_from_thread_desc:		Prenehaj prejemati obvestila o novih objavah v temi.
+unsubscribe:			Odjavi
+unsubscribe_desc:		Prenehaj prejemati obvestila o novih temah na tem forumu.
+updated_on:			Osveženo:
+user:				Uporabnik
+user_counter:			Imamo <b>{VAR: st_obj->user_count}</b> prijavljenih uporabnikov.
+user_info:			Podatki o uporabnikih
+user_info_l:			Podatki o uporabnikih {VAR: u->alias}
+user_offline:			{VAR: obj->login} je trenutno ni aktiven.
+user_online:			{VAR: obj->login} je aktiven.
+usrinfo_last_post:		Zadnja objava:
+view_forum:			Preglej forum
+view_results:			Preglej rezultate
+view_thread:			Preglej temo
+views:				pogledov
+vote:				{VAR: frm->n_rating} glasov
+vote_button:			Glasuj
+vote_for_thread:		Glasuj
+was_moved_msg:			<a href="{TEMPLATE: was_moved_msg_lnk}" class="GenLink">{VAR: r[2]}</a> je moderator premaknil v <a href="{TEMPLATE: was_moved_msg_lnk2}" class="GenLink">{VAR: r[12]}</a>.
+welcome_message:		Dobrodošli <b>{VAR: usr->alias}</b>, vaš zadnji obisk je bil dne {DATE: usr->last_visit %a, %d %B %Y %H:%M}
+what_ppl_doing:			pokaži, kaj obiskovalci poènejo
+reported_del_report:		Poroèilo o brisanju
+reported_reason:		Razlog
+reported_on:			Na:
+reported_reported_by:		Prijavil:
+reported_reported_msg:		Prijavljena sporoèila
+modque_pending_approval:	Sporoèila, ki èakajo na odobritev
+modque_approve:			Odobri
+modque_delete:			Izbriši
+modque_no_message:		Ni sporoèil, ki bi èakala na odobritev.
+pmsg_new_messages:		Neprebrano zasebno sporoèilo
+pmsg_old_messages:		Prebrano zasebno sporoèilo
+deny_recipt:			Zavrni potrdilo
+deny_recipt_desc:		Ne pošlji obvestila, da ste pregledali sporoèilo.
+restore_to:			Povrni v:
+move_to:			Premakni v:
+list_referes_referrals:		Sklicevanja
+list_referes_members:		Èlani, ki se sklicujejo
+list_referes_member:		Èlani
+referals_none:			Nihèe se še ni skliceval.
+referals_refered_by:		Na èlane foruma se sklicuje: <b><a href="{TEMPLATE: referals_refered_by_lnk}" class="thLnk">{VAR: p_user[1]}</a></b>
+referals_post_count:		Število objav
+referals_registered_on:		Prijavljen dne
+referals_action:		Akcija
+pmsg_all:			vsa
+pmsg_none:			nobeno
+folder:				Mapa:
+pmsg_replied:			odgovorjeno
+pmsg_forwarded:			posredovano
+pmsg_subject:			Zadeva
+pmsg_author:			Avtor
+pmsg_time:			Èas
+pmsg_selected:			Oznaèeno
+pmsg_delete:			Izbriši
+cur_ppage_pm:			Zasebno dopisovanje
+writing_pm:			Pisanje zasebnih sporoèil
+browsing_folder:		Brskanje po mapi <b>{VAR: folders[$folder_id]}</b> 
+inbox:				Prejeto
+draft:				Osnutek
+sent:				Poslano
+trash:				Smeti
+msg_author:			Avtor
+msg_thread:			Tema
+avatar_sel_form:		Obrazec za izbor avatarjev
+no_avatars:			Ni razpoložljivih avatarjev
+month_1:			Januar
+month_2:			Februar
+month_3:			Marec
+month_4:			April
+month_5:			Maj
+month_6:			Junji
+month_7:			Julij
+month_8:			Avgust
+month_9:			September
+month_10:			Oktober
+month_11:			November
+month_12:			December
+male:				Moški
+female:				Ženski
+unspecified:			NEDOLOÈEN
+register_tree_view:		Drevesni pregled sporoèil in tem
+register_msg_tree_view:		Zaporedni pregled tem/Drevesni pregled sporoèil
+register_tree_msg_view:		Drevesni pregled tem/Zaporedni pregled sporoèil
+register_flat_view:		Zaporedni pregled sporoèil in tem
+use_forum_default:		Uporabi nastavitev foruma
+finduser_user_info:		Podatki o uporabniku
+finduser_by_login:		Po prijavi:
+finduser_by_email:		Po enaslovu:
+finduser_submit:		Najdi
+finduser_no_such_user:		Ni takega uporabnika
+finduser_user:			Uporabnik
+finduser_postcount:		Števec objav
+finduser_joindate:		Datum pridružitve
+finduser_action:		Akcija
+yes:				Da
+no:				Ne
+register_email:			Epošta
+edit_time_limit:		<br><b>Omejitev èasa urejanja</b>: <b>{GVAR: EDIT_TIME_LIMIT}</b> minut
+no_edit_time_limit:		<br><b>Omejitev èasa urejanja</b>: <b>Neomejeno</b>
+pmuserloc_login:		Prijava:
+pmuserloc_email:		Enaslov:
+pmuserloc_submit:		Potrdi
+pmuserloc_user:			Uporabnik
+pmuserloc_no_result:		Ni rezultata
+register_builtin:		Vgrajeno
+register_specify_url:		Doloèi URL
+register_uploaded:		Naloži avatarja
+register_login:			Prijava:
+register_password:		Geslo:
+register_conf_pass:		Potrdi geslo:
+register_email_desc:		Prosim, vnesite veljaven enaslov. Z nastavitvami ga lahko skrijete pred drugimi.
+register_name:			Ime:
+register_your_pass:		Vaše geslo:
+register_update:		Osveži
+register_avatar_type:		Tip avatarja:
+register_del_avatar:		Izbriši avatarja
+register_avatar:		Avatar:
+register_sel_avatar:		Izberi avatarja
+register_custom_avatar_rules:	Vaš avatar se ne bo prikazal, dokler ga ne odobri administrator.<br><font class="SmallText">Avatar ne sme biti veèji od <b>{GVAR: CUSTOM_AVATAR_MAX_DIM} pikslov</b> in mora biti v formatu <b>jpg</b>, <b>gif</b> ali <b>png</b>.</font>
+register_custom_avatar_url:	URL lastnega avatarja:
+register_preview:		Predogled
+register_custom_avatar_upload:	Datoteka lastnega avatarja:
+register_register:		Prijavi
+register_required:		Zahtevani podatki
+register_required_desc:		Vsa polja so zahtevana. Pozor: pri geslih razlikujemo med velikimi in malimi èrkami.
+register_optional:		Neobvezni podatki
+register_optional_desc:		Ti podatki bodo na vpogled ostalim uporabnikom foruma.
+register_location:		Mesto:
+register_occupation:		Poklic:
+register_interests:		Zanimanja:
+register_image:			Slika:
+register_icq:			ICQ
+register_aim:			AIM oprijemalo:
+register_yahoo:			Yahoo glasnik:
+register_msnm:			MSN glasnik:
+register_homepage:		Domaèa stran:
+register_bday:			Rojstni dan:
+register_bday_desc:		Èe vnesete vaš rojstni dan, ga bodo drugi uporabniki lahko videli v vašem profilu.
+register_day:			Dan
+register_month:			Mesec
+register_year:			Leto
+register_gender:		Spol:
+register_bio:			Življenjepis:
+register_bio_desc:		Nekaj podrobnosti o vas, vaših zanimanjih itd.
+register_prefs:			Nastavitve
+register_sig:			Podpis:
+register_sig_desc:		Neobvezen podpis, ki se pojavi na dnu vsake vaše objave.
+register_reset:			Reset
+register_style:			Slog:
+register_def_thread_view:	Privzet pregled tem:
+register_msg_per_page:		Sporoèil na stran:
+register_show_sig:		Prikaži podpise:
+register_show_sig_desc:		Omogoèa vam skriti oz. prikazati podpise èlanov foruma v objavah.
+register_use_sig_default:	Navadno uporabi podpis:
+register_use_sig_default_desc:	Avtomatsko pripni podpis vsakemu sporoèilu.
+register_timezone:		Èasovna cona:
+register_ignore_admin:		Spreglej administrativna obvestila:
+register_invisible_mode:	Nevidni naèin:
+register_invisible_mode_desc:	Prikrije vaše stanje aktivnosti.
+register_show_email:		Pokaži enaslov:
+register_show_email_desc:	Vklopite to stikalo, èe želite, da je vaš enaslov javno dostopen.
+register_notification:		Navadno vkljuèi obvešèanje:
+register_notification_desc:	Èe je obvešèanje navadno vklopljeno, ga lahko izklopite ob objavi.
+register_notify_method:		Izberite metodo obvešèanja:
+register_notify_method_desc:	Èe želite prejemati obvestila preko ICQ, morate v vaših ICQ nastavitvah omogoèiti 'EmailExpress'.
+register_notify_js_error:	Izbrali ste ICQ obvešèanje, niste pa vnesli ICQ #. Privzeto bo obvešèanje po epošti.
+register_allow_email_msg:	Dovoli esporoèila:
+register_allow_email_msg_desc:	Dovoli, da vam drugi uporabniki pošiljajo epošto preko FUDForuma.
+buddy_status:			Status
+my_buddies:			Moja skupina
+add_buddy:			Dodaj v skupino
+add:				Dodaj
+buddy_search:			Vnesite uporabniško ime, ki ga želite dodati
+member_search:			<br>ali uporabite <a href="javascript://" class="GenLink" onClick="javascript: window_open(\'{ROOT}?t=pmuserloc&amp;{DEF: _rsid}&amp;js_redr=buddy_add.add_login&amp;overwrite=1\', \'user_list\', 250,250);">Iskalnik uporabnikov</a> za iskanje med èlani foruma.
+buddy_remove:			odstrani
+post_normal:			Navadno
+post_sticky:			Leplijov
+post_annoncement:		Obvestilo
+post_size:			Velikost
+post_color:			Barva
+post_font:			Pisava
+create_thread:			Ustvari temo
+submit_reply:			Pošlji odgovor
+edit_message:			Uporabi spremembe sporoèila
+apply_spell_changes:		Uporabi spremembe èrkovanja
+post_preview:			Pošlji predogled
+post_logedin_user:		Prijavljeni uporabnik:
+post_logout:			odjava
+post_passwd:			Objavljeno geslo:
+post_poll:			Anketa:
+post_create_poll:		USTVARI ANKETO
+post_poll_delete:		BRIŠI
+post_poll_edit:			UREDI
+post_mod_opt:			Nastavitve moderatorja:
+post_thread_type:		Tip teme:
+post_thread_expiry:		Preteklost teme:
+post_locked:			Zaklenjena tema
+post_icons:			Objavi ikono:
+post_no_icon:			Ni ikone
+post_smiley:			Bližnjice do smeškov:
+post_format_tools:		Orodja za oblikovanje:
+post_upload_file:		Naloži datoteko
+post_file_del:			Briši
+post_file_name:			Ime
+post_file_size:			Velikost
+file_attachments:		Priponke:
+allowed_files:			Dovoljene konènice datotek:
+max_file_size:			Najveèja velikost datoteke:
+max_files_per_msg:		Najveè datotek na sporoèilo:
+post_notification:		Obvestilo o objavi
+include_sig:			Vkljuèi podpis
+include_sig_desc:		Vkljuèi podpis mojega profila.
+disable_smilies:		Onemogoèi smeške v tem sporoèilu
+spell_check_msg:		Èrkuj sporoèilo
+post_form:			Obrazec za objavo
+post_forum:			Forum:
+post_title:			Naslov:
+post_body:			Besedilo:
+post_options:			Opcije:
+post_preview_btn:		Predogled sporoèila
+post_processing_msg:		Vaša objava se obdeluje, prosim, poèakajte.
+ignore_users:			Ignorirani uporabniki
+add_ignore:			Dodaj ignorirane
+forum_terms:			Pogoji uporabe foruma
+forum_rules:			Prijava na ta forum je brezplaèna! Zahtevamo pa, da upoštevate pravila omnašanja, kot so specificirana spodaj. Èe se strinjate z njimi, kliknite gumb "Strinjam se" na koncu te strani. Pozor: s klikom na gumb potrjujete, da ste starejši od 13 let. Èe ste stari 13 let ali manj, vas prosimo, da uporabite ta obrazec za registracijo. <p>Èeprav si moderatorji in administratorji prizadevajo, da bi prepreèili objavo spornih sporoèil in jih sproti odstranjevali, je nemogoèe pregledati vsa sporoèila. Vsa sporoèila predstavljajo poglede in nazore avtorja. Lastnik foruma, njegovi upravljalci ali razvijalci ne prevzemajo odgovornosti za nobeno objavo niti vsebino kateregakoli sporoèila. <p>S klikom na gumb "Strinjam se" se zavežete, da ne boste objavljali obscenih, vulgarnih, seksualno orientiranih, sovražnih ali sovrašto spodbujajoèih, grozeèih, nestrpnih ali kakorkoli drugaèe nasilnih sporoèil, niti s sporoèili ne boste kršili katerihkoli veljavnih zakonov. <p>Lastniki in upravniki foruma imajo pravico brez obrazložitve odstraniti, prirediti, premakniti ali zapreti katerokoli sporoèilo ali temo iz kateregakoli razloga. <p>
+forum_rules_13:			Vsi uporabniki, stari 13 let ali manj, morajo pred prijavo na forum za dovoljenje vprašati starše ali skrbnike. Uporaba foruma s strani teh èlanov nam je dobrodošla, vendar zahtevamo da eden od staršev ali skrbnik po pošti ali po faksu posreduje podpisano dovoljenje, preden bomo omogoèili uporabo. <p>Èe želite sprožiti postopek registracije preden bomo prejeli podpisano dovoljenje, pritisnite na gumb "Strinjam se". Èe želite prekiniti registracijo, kliknite na gumb "Prekini" za vrnitev na seznam forumov. <p>Kopija dovoljenja se lahko prenese s te strani. Za veè podatkov o registraciji se lahko pozanimate na enaslovu <a href="mailto:{GVAR: ADMIN_EMAIL}" class="GenLink">{GVAR: ADMIN_EMAIL}</a>.<p>
+coppa_conf:			COPPA potrditev
+coppa_before:			Pred {DATE: coppa %B %e, %Y}
+coppa_after:			Po {DATE: coppa %B %e, %Y}
+coppa_link:			Kliknite na povezavo, ki ustreza vaši starosti
+coppa:				Starš ali skrbnik mora poslati po pošti ali faksu podpisano dovoljenje, preden lahko uporabnik z manj kot 13 leti dokonèa registracijo. <p>Za veè informacij se obrnite na enaslov <a class="GenLink" href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a>
+prereg_info:			Podatki
+prereg_agree:			Strinjam se
+prereg_disagree:		Se ne strinjam
+coppa_fax_instructions:		Navodila za starša ali skrbnika
+coppa_fax_instructions2:	Prosimo, natisnite to stran, podpišite jo in po faksu pošljite na:
+coppa_fax_reg_form:		Obrazec za prijavo
+coppa_fax_sign:			Prosim, podpišite spodnji obrazec in nam ga pošljite
+coppa_fax_conf:			Pregledal sem podatke, ki jih je moj otrok posredoval in prebral sem pogoje uporabe strežnika ter se strinjam z njimi. Razumem, da je posredovane podatke mogoèe spremeniti z uporabo gesla. Razumem, da lahko zahtevam odstranitev tega prijavnega profila v celoti. 
+coppa_fax_permission:		Podpišite tu, èe želite dati dovoljenje za uporabo
+coppa_fax_no_permission:	Podpišite tu, èe želite, da se profil izbriše
+coppa_fax_parent_name:		Polno ime starša/skrbnika:
+coppa_fax_relation:		Odnos do otroka:
+coppa_fax_telephone:		Telefon:
+coppa_fax_email:		Enaslov:
+coppa_fax_date:			Datum:
+coppa_fax_questions:		Z vprašanji se lahko obrnete na <a href="mailto:{GVAR: ADMIN_EMAIL}">{GVAR: ADMIN_EMAIL}</a> 
+coppa_fax_login:		Prijava
+coppa_fax_passwd:		Geslo
+coppa_fax_remail:		Enaslov
+coppa_fax_name:			Ime
+login_not_logedin:		Niste prijavljeni. To je lahko zaradi enega od veè razlogov: 
+login_cookie_expired:		Vaš piškotek je potekel, zqato se morate ponovno prijaviti, da ga obnovite.
+login_perm_denied:		Nimate dovoljenja za dostop do željene strani kot aninimen uporabnik, zato se morate prijaviti in dobiti dovoljenje za dostop.
+login_want_to_register:		Se želite registrirati?
+login_forgot_passwd:		Pozabljeno geslo
+login_use_cookie:		Uporaba piškotkov<br><font class="SmallText">Èe uporabljate javni terminal v knjižnjici, šoli, Internet kavarni, je priporoèeno, da izklopite to opcijo zaradi veèje varnosti. <br>Èe pustite vklopljeno, boste ob naslednjem obisku avtomatièno prijavljeni v forum.
+login_login:			Prijava
+login_login_btn:		Prijava
+login_name_required:		Potrebno je uporabniško ime
+login_passwd_required:		Potrebno je geslo
+login_invalid_radius:		Neveljavna kombinacija gesla in uporabniškega imena
+reset_confirmation:		Hvala za registracijo. \n\nZa aktiviranje vašega uporabniškega raèuna, prosimo sledite naslednji URL povezavi: \n\n{VAR: url}\n\nKo bo vaš raèun aktiviran, boste prijavljeni v forum \npreusmerjeni na njegovo zaèetno stran.\n
+reset_reset:			Pozdravljeni,\n\nzaprosili ste za obnovo gesla. Da se menjava res zgodi, \nsledite naslednji povezavi:\n\n{VAR: url}\n\nPOZOR: Forum shranjuje gesla v nepovratni kriptirani obliki, kar pomeni, da gesel \npo vašem vnosu nihèe ne more veè rekonstruirati. To deluje na ta naèin, da \nse geslo ob vsakem vnosu vedno zakodira in se preveri, èe ustreza zakodiranemu shranjenemu geslu. \nÈe vas zanimajo podrobnosti, poišèite veè podatkov o MD5 HASH algoritmu.
+rpasswd_invalid_passwd:		Neveljavno geslo
+rpasswd_passwd_nomatch:		Gesli se ne ujemata
+rpasswd_passwd_length:		Geslo mora biti dolgo vsaj 6 znakov
+reset_remind_pass:		Opomin o geslu
+reset_reset_conf:		Vaše geslo bo spremenjeno in vam poslano po epošti, èe pa enaslova niste potrdili, vam bo poslana prošnja za potrditev. 
+reset_error:			V bazi ne najdem enaslova
+rpasswd_change_pass:		Sprememba gesla
+rpasswd_login:			Uporabniško ime:
+rpasswd_cur_pass:		Trenutno geslo:
+rpasswd_new_pass:		Novo geslo:
+rpasswd_conf_pass:		Potrdite geslo:
+login_passwd:			Geslo:
+reset_email:			Enaslov:
+reset_reset_button:		Spremeni geslo
+rate_this_thread:		Oceni
+report_reporting_about:		Poroèanje o:
+report_subject:			Zadeva:
+report_by:			Od:
+report_posted_on:		Objavljeno dne:
+report_give_reason:		Prosimo, podajte razlog, zakaj se vam objava zdi sporna:
+report_submit_report:		Potrdi obrazec
+search_entire_msg:		Celotno sporoèilo
+search_subect_only:		Le zadeva
+search_forum:			Forum
+search_subject:			Zadeva
+search_posted_on:		Objavljeno dne
+search_no_results:		Ni rezultatov
+search_search:			Iskanje
+search_all_forums:		Iskanje po vseh forumih
+search_in_forum:		Iskanje v forumu:
+search_for:			Išèi:
+search_forum_search:		Iskanje po forumih
+move_thread_to:			Premakni temo <b>{VAR: thr->subject}</b> v:
+remail_email_topic:		Priporoèi temo po epošti:
+remail_your_name:		Vaše ime:
+remail_your_email:		Vaš enaslov:
+remail_friends_name:		Ime prejemnika:
+remail_friends_email:		Enaslov prejemnika:
+remail_required:		zajhtevano
+remail_subject:			Zadeva:
+remail_message:			Sporoèilo:
+remail_send_now:		Pošlji enaslov
+remail_anon_opt:		Prenesite to sporoèilo v vaš program za epošto in ga pošljite naslovniku.
+remail_done:			Dokonèano
+remail_sent_conf:		Esporoèilo o temi {VAR: data->subject} je bilo uspešno poslano na naslov {VAR-HTML: _POST['femail']}.
+remail_continue:		Nadaljuj
+remail_error:			Prišlo je do napake.
+mklist_type:			Tip:
+mklist_option:			Opcija:
+mklist_additem:			Dodaj element
+mklist_apply:			Uporabi
+mklist_delete:			Briši
+qbud_nick_name:			Vzdevek
+qbud_add_selected:		Dodaj oznaèeno
+qbud_selected:			Oznaèeno
+qbud_no_buddies:		Ni èlanov skupine za izbor
+mklist_numerical:		Numerièno
+mklist_aplha:			Alfa
+mklist_square:			Kvadrat
+mklist_disc:			Disk
+mklist_circle:			Krog
+mklist_close:			Zapri
+email_to:			Prejemnik:
+email_name:			Ime:
+email_email:			Enaslov:
+email_pg_title:			Epošta
+email_subject:			Zadeva:
+email_body:			Telo:
+email_submit:			Enaslov
+ppost_quote_msg:		{VAR: msg_to_list} je dne {DATE: msg_r->post_stamp %a, %d %B %Y %H:%M} napisal
+ppost_quote:			Citat:
+ppost_to:			Za:
+ppost_from_buddy_list:		Izberite s seznama èlanov skupine
+ppost_find_User:		Najdi uporabnika
+ppost_track_msg:		Sledi temu sporoèilu
+ppost_track_msg_desc:		Z zasebnim sporoèilom me obvesti, ko bo sporoèilo prebrano..
+ppost_send:			Pošlji
+ppost_save_draft:		Shrani osnutek
+poll_blank_option:		Ne morete dodati prazne opcije.
+poll_del_conf:			Èe želite izbrisati to opcijo, kliknite OK.
+poll_name:			Ime ankete:
+poll_timelimit:			Èasovna omejitev
+poll_maxiumvotes:		Najveè glasov
+poll_create:			Ustvari
+poll_update:			Osveži
+poll_disablesmilies:		Ukini smeškote
+poll_create_poll:		Ustvari anketo
+poll_update_poll:		Osveži anketo
+poll_delete:			Izbriši
+poll_updateoption:		Osveži opcijo
+poll_addoption:			Dodaj opcijo
+poll_unlimited:			Neomejeno
+poll_day:			dan
+poll_days:			dni
+poll_hour:			ura
+poll_hours:			ur
+poll_month:			mesec
+poll_year:			leto
+poll_week:			teden
+tabs_register:			Nastavitve
+tabs_subscriptions:		Prijave
+tabs_referrals:			Sklici
+tabs_buddy_list:		Skupina
+tabs_ignore_list:		Ignoriranje
+tabs_private_messaging:		Zasebno dopisovanje
+single_msg_delete:		<font color="#ff0000" size="4">IZBRISALI</font> boste sporoèilo z naslovom: <b>{VAR: data[3]}</b><p>
+thread_delete:			<font color="#ff0000" size="4">IZBRISALI</font> boste <font color="#ff0000" size="4">CELOTNO TEMO</font> z naslovom: <b>{VAR: data[3]}</b><p>
+delete_proceed:			<font size="3"><b>Želite nadaljevati?</b></font>
+delete_yes:			Da
+delete_no:			Ne
+error_invalidurl:		Neveljaven URL
+error_error:			Napaka
+usrinfo_profile:		{VAR: u->alias}&#39;s Profil
+usrinfo_show_all_posts:		Pokažem vse objave uporabnika {VAR: u->alias}
+actions_update:			Vohljanje za takimi ljudmi kot si ti
+err_info:			Informacije
+buddy_list_err_cantadd:		Ne morem te dodati na seznam prijateljev
+buddy_list_err_dup:		Ta uporabnik je že na vašem seznamu prijateljev
+buddy_list_err_nouser:		Uporabnik, ki ste ga želeli dodati na seznam prijateljev, ni bil najden na forumu
+buddy_list_err_nouser_title:	Ne morem dodati uporabnika
+buddy_list_update:		Išèem po svojem seznamu prijateljev
+core_err_invinp_title:		Nepravilen vnos
+core_err_invinp_err:		Sledili ste napaèni hiperpovezavi, prosimo sporoèite <a href="mailto:{GVAR: ADMIN_EMAIL}">upravljalcu spletnih strani</a>
+core_adm_login_msg:		<br>Administrator se lahko prijavi<a href="{GVAR: WWW_ROOT}adm/admloginuser.php">tukaj</a>
+email_err_unabletoemail_title:	NAPAKA: ne morem poslati e-pošte
+email_err_unabletoemail_msg:	E-poštni sistem je bil izklopljen s strani administratorja.
+email_err_unabletoemailu_msg:	E-poštni sistem je bil izklopljen s strani administratorja.
+email_error_unabletolocaddr:	Oprostite, sistem ni mogel poslati e-pošte {VAR-HTML: _POST['tx_name']} ker ni mogel najti e-poštnega naslova
+email_error_body:		Zahtevano je telo
+email_error_subject:		Zahtevan je naslov
+email_error_emailrequired:	Zahtevan je e-poštni naslov
+email_error_invalidaddress:	Nepravilen e-poštni naslov
+email_error_namerequired:	Zahtevano je ime
+email_error_invaliduser:	Nepravilni uporabnik
+emailconf_err_invkey_title:	Napaka
+emailconf_err_invkey_msg:	Napaèen potrditveni kljuè. Prosimo preverite svoj e-poštni naslov, èe ste šli na pravi URL
+err_inc_criticaltitle:		KRITIÈNA NAPAKA
+err_inc_criticalmsg:		Naleteli ste na napako, vendar je na žalost problem s sistemom za sporoèanje napak.
+finduser_update:		Išèem za uporabnike
+help_index_update:		Berem <a href="{TEMPLATE: help_index_update_lnk}" class="GenLink">F.A.Q.</a>
+iemail_thr_subject:		Nov odgovor na {VAR: thr_subject} od {VAR: poster_login}
+iemail_thr_bodyemail:		Za pregled neprebranih odgovorov pojdite na {VAR: goto_url['email']}\n\nÈe ne želite prejeti nadaljnjih opozoril o odgovorih v tej temi, pojdite sem: {VAR: unsub_url['email']}
+iemail_thr_bodyicq:		Za pregled neprebranih odgovorov pojdite na\n{VAR: goto_url['icq']}\n\nÈe ne želite prejeti nadaljnjih opozoril o odgovorih v tej temi, pojdite sem:\n{VAR: unsub_url['icq']}
+iemail_frm_subject:		Nova tema v forumu {VAR: frm_name} imenovana {VAR: thr_subject} od {VAR: poster_login}
+iemail_frm_bodyemail:		Za pregled teme pojdite na:\n{VAR: goto_url['email']}\n\nÈe ne želite prejeti nadaljnjih opozoril o novih temah v forumu, pojdite sem: {VAR: unsub_url['email']}
+iemail_frm_bodyicq:		Za pregled teme pojdite na:\n{VAR: goto_url['icq']}\n\nÈe ne želite prejeti nadaljnjih opozoril o novih temah v forumu, pojdite sem:\n{VAR: unsub_url['icq']}
+iemail_participate:		Za udeležbo v debati, kliknite sem:
+ignore_list_err_info_title:	Informacije
+ignore_list_err_noign_msg:	Tega uporabnika ne morete ignorirati
+ignore_list_err_dup_msg:	Tega uporabnika že imate na seznamu ignoriranih uporabnikov
+ignore_list_err_nu_title:	Ne najdem uporabnika
+ignore_list_err_nu_msg:		Uporabnika, ki ste ga želeli ignorirati, ni bilo mogoèe najti na forumu.
+ignore_list_cantign_msg:	Tega uporabnika ne morete ignorirati
+ignore_list_update:		Išèem po seznamu ignoriranih uporabnikov
+index_update:			Išèem po <a href="{TEMPLATE: index_update_lnk}" class="GenLink">seznamu forumov</a>
+list_referers_update:		Išèem po sklicih
+login_update:			Odjava od
+msg_err_onlyreg_title:		Samo prijavljeni uporabniki lahko berejo ta forum
+msg_err_onlyreg_msg:		Èe želite videti ta forum, se morate <a href="{TEMPLATE: msg_register_lnk}" class="GenLink">registrirati</a>, èe ste že registrirani, se morate <a href="{TEMPLATE: msg_login_lnk}" class="GenLink">prijaviti</a>.
+msg_err_ininfo_title:		Pomanjkljive informacije
+msg_err_ininfo_msg:		Pri ustvarjanju te strani je prišlo do težav.
+msg_update:			Preiskujem temo <a class="GenLink" href="{TEMPLATE: msg_update_lnk}">{VAR: frm->subject}</a>
+pm_err_nopm_title:		NAPAKA: Zasebna sporoèila so izkljuèena
+pm_err_nopm_msg:		Sistema za pošiljanje zasebnih sporoèil ne morate uporabljati, ker je bil izkljuèen s strani administratorja.
+pm_update:			Uporaba zasebnih sporoèil
+post_err_notallowed_title:	Dostop zavrnjen
+post_err_notallowed_msg:	Nimate pravice objavljati
+post_err_lockedthread_title:	NAPAKA: Zaklenjena tema
+post_err_lockedthread_msg:	Ta tema je zaklenjena, objavljanje ni veè dovoljeno
+err_coppa_title:		NAPAKA: Vaš raèun še ni bil potrjen
+err_coppa_msg:			Nismo prejeli potrdila od vaših staršev in/ali uradnega skrbnika, ki bi vam dovolil objavo sporoèil. Èe ste izgubili svoj obrazec <a href="{TEMPLATE: err_coppa_msg_lnk}">kliknite sem</a> da ga boste zopet dobili
+err_blockedaccnt_title:		NAPAKA: Nimate pravice do objave
+err_blockedaccnt_msg:		Vaš raèun ima prepoved objavljanja
+post_err_notowner_title:	NAPAKA
+post_err_notowner_msg:		Niste pisec tega sporoèila
+post_err_edttimelimit_title:	NAPAKA
+post_err_edttimelimit_msg:	Ne morete veè urejati tega sporoèila
+post_err_noannontopics_title:	NAPAKA: Nezadostni privilegiji
+post_err_noannontopics_msg:	Anonimni uporabniki ne morejo ustvarjati tem<br><br>Èe se želite registrirati, izpolnite <a href="{TEMPLATE: msg_register_lnk}">obrazec za registracijo</a><br>Èe se želite prijaviti, odprite <a href="{TEMPLATE: msg_login_lnk}">obrazec za prijavo</a>
+post_err_noannonposts_title:	NAPAKA: Nezadostni privilegiji
+post_err_noannonposts_msg:	Anonimni uporabniki ne morejo odgovarjati<br><br>Èe se želite registrirati, izpolnite <a href="{TEMPLATE: msg_register_lnk}">obrazec za registracijo</a><br>Èe se želite prijaviti, odprite <a href="{TEMPLATE: msg_login_lnk}">obrazec za prijavo</a>
+post_err_noreplying_title:	NAPAKA: Odgovarjanje ni dovoljeno
+post_err_noreplying_msg:	Na to temo ne morete odgovarjati, ker je ali oglas ali sporoèilo, na katerega je administrator prepovedal odgovarjanje.
+post_err_floodtrig_title:	NAPAKA: Zasipanje z objavami.
+post_err_floodtrig_msg:		Poskusite ponovno v {VAR: tm} sekundah
+post_err_attach_size:		<font class="ErrorText">Priponka je prevelika (èez dovoljeno velikost {VAR: MAX_F_SIZE} bytes)</font><br>
+post_err_attach_ext:		<font class="ErrorText">Datoteka, ki jo želite prenesti ni dovoljenega tipa.</font><br>
+post_err_attach_filelimit:	<font class="ErrorText">Prenesti ste hoteli veè datotek kot je dovoljeno.</font><br>
+post_err_passwd:		Napaèno geslo.
+post_reply_update:		Odgovarjanje na <a class="GenLink" href="{TEMPLATE: msg_post_lnk}">{VAR: thr->subject}</a> v {VAR-HTML: frm->name}
+post_edit_update:		Urejanje <a class="GenLink" href="{TEMPLATE: msg_post_lnk}">{VAR: msg->subject}</a> v {VAR-HTML: frm->name}
+post_topic_update:		Pišem novo temo v <a class="GenLink" href="{TEMPLATE: post_topic_update_lnk}">{VAR-HTML: frm->name}</a>
+post_error_generic:		Imate napako
+postcheck_max_images_err:	Najveè {GVAR: MAX_IMAGE_COUNT} slik je dovoljeno na objavo, prosimo zmanjšajte število slik.
+postcheck_subj_needed:		Zahtevan je predmet
+postcheck_not_allowed_file:	Ta tip datoteke ni dovoljen
+postcheck_no_such_user:		Uporabnika z imenom "{VAR-HTML: v}" ni v tem forumu
+postcheck_ignored:		Osebi "{VAR-HTML: v}" ne morete poslati zasebnega sporoèila, ker vas ima na seznamu ignoriranih uporabnikov.
+postcheck_no_recepient:		Ne morem poslati sporoèila, ker manjka naslovnik.
+postcheck_invalid_email:	Prosimo, vnesite pravilen e-poštni naslov prijatelja.
+postcheck_email_subject:	Ne morete poslati e-pošte brez predmeta.
+postcheck_email_body:		Ne morete poslati e-pošte brez besedila.
+private_msg_notify_subj:	Berite obestilo za : {VAR: m->subject}
+private_msg_notify_body:	Pozdravljeni,<br>{VAR: usr->login} je prebral vaše zasebno sporoèilo, "{VAR: m->subject}", dne {DATE: m->post_stamp %a, %d %B %Y %H:%M}<br>
+referals_update:		Preiskujem sklice
+register_err_short_login:	Uporabniško ime, ki ste ga izbrali mora biti dolgo vsaj 4 znake.
+register_err_login_notallowed:	To uporabniško ime ni dovoljeno
+register_err_loginunique:	To uporabniško ime je že zasedeno na tem forumu.
+register_err_emailexists:	Ta e-poštni naslov že obstaja, èe ste pozabili geslo uporabite možnost za odkrivanje, sicer se ponovno registrirajte
+register_err_shortpasswd:	Geslo mora biti dolgo vsaj 6 znakov.
+register_err_passwdnomatch:	Vaša gesla se ne ujemajo.
+register_err_invalidemail:	Vaš e-poštni naslov, ki ste ga navedli ne izgleda pravilen.
+register_err_needname:		Za uspešno dokonèanje registracije morate vnesti ime.
+register_err_enterpasswd:	Vnesti morate svoje trenutno geslo, da uveljavite spremembe
+register_err_adminpasswd:	Za uveljavitev sprememb morate vnesti geslo ADMINISTRATORja
+register_err_notyouremail:	Nekdo je že registriran na ta e-poštni naslov, in to niste vi
+register_err_avatartobig:	Datoteka, ki jo želite prenesti je prevelika, èez mejo {GVAR: CUSTOM_AVATAR_MAX_SIZE} bytov 
+register_err_avatarnotallowed:	Tip datoteke, ki ga želite prenesti, ni dovoljen. Preverite kateri tipi so dovoljeni.
+register_conf_subject:		Potrditev registracije
+register_conf_msg:		Hvala za registracijo,\nZa aktivacijo svojega raèuna, prosimo pojdite na spodnji URL:\n\n{ROOT}?t=emailconf&conf_key={VAR: uent->conf_key}\n\nKo boste aktivirali svoj raèun, boste prijavljeni v forum in preusmerjeni na glavno stran foruma.
+register_welcome_subject:	Potrditev registracije v forum
+register_welcome_msg:		Hvala za registracijo,\n\nTukaj imate podrobnosti o prijavi za forum:\n\nURL foruma: {TEMPLATE: index_update_lnk}\nPrijava: {VAR: uent->login}\nGeslo: {VAR: _POST['reg_plaintext_passwd']}\n\nGesla so obèutljiva na velikost èrk!\nZa spremembo vaših nastavitev in profila, pojdite na stran:\n{ROOT}?t=register\n
+register_err_cantreg_title:	NAPAKA: registracija ni bila možna
+regsiter_err_cantreg_msg:	Uporabniškega raèuna ni bilo mogoèe ustvariti, prosimo obvestite administratorja na tej povezavi <a href="mailto:{VAR: ADMIN_EMAIL}">{VAR: ADMIN_EMAIL}</a>
+register_profile_update:	Pregledovanje lastnega profila
+register_register_update:	Stran za registracijo
+report_err_nosuchmsg_title:	NAPAKA
+report_err_nosuchmsg_msg:	Tako sporoèilo ne obstaja
+report_err_cantreport_title:	NAPAKA
+report_err_cantreport_msg:	Nimate dovoljenja za poroèanje upravljalcu
+reset_err_invalidkey_title:	NAPAKA
+reset_err_invalidkey_msg:	Napaèen kljuè za ponastavitev gesla
+reset_err_rstconf_title:	Informacije
+reset_err_rstconf_msg:		Navodila boste prejeli po e-pošti v naslednjih nekaj minutah
+reset_newpass_title:		Ponastavi geslo
+reset_newpass_msg:		Pozdravljeni,\n\nAs na vašo zahtevo je bilo uporabniško ime poslano vam.\nTu so informacije o vaši prijavi:\n\nPrijava: {VAR: ui[1]}\nGeslo: {VAR: passwd}\n\nVedite, da je bilo vaše geslo spremenjeno na zgornjo vrednost, èe želite spremeniti geslo, lahko to storite preko uporabniške nadzorne plošèe na:\n{ROOT}?t=register\n\n
+reset_login_notify:		Vaše geslo je bilo poslano vam na e-pošto. Prejeti bi ga morali v nekaj minutah. Preverite vašo e-pošto za geslo in uporabniško ime.<br>
+search_update:			Preiskujem objave
+selmsg_update:			Preiskujem <a class="GenLink" href="{TEMPLATE: selmsg_update_lnk}">današnje objave</a>
+showposts_update:		Pregledujem objave od: <a class="GenLink" href="{TEMPLATE: showposts_update_lnk}">{VAR: u_alias}</a>
+subscribed_update:		Preiskujem svoje objave
+th_err_invid_title:		Nepravilen ID teme
+th_err_invid_msg:		Sledili ste neobstojeèi povezavi, tema, ki jo želite pregledati, ne obstaja.
+thread_err_onlyregview_title:	Samo registrirani uporabniki lahko berejo ta forum.
+thread_err_onlyregview_msg:	Èe želite videti ta forum, se morate<a href="{TEMPLATE: msg_register_lnk}" class="GenLink">registrirati</a>, èe ste že registrirani, se morate <a href="{TEMPLATE: msg_login_lnk}" class="GenLink">prijaviti</a>.
+thread_update:			Preiskujem forum <a class="GenLink" href="{TEMPLATE: thread_update_lnk}">{VAR-HTML: frm->name}</a>
+tree_update:			Preiskujem temo (drevesni pogled) <a class="GenLink" href="{TEMPLATE: tree_update_lnk}">{VAR: frm->subject}</a>
+userinfo_update:		Pregledujem profil: <a class="GenLink" href="{TEMPLATE: userinfo_update_lnk}">{VAR: u->alias}&#39;s</a> 
+ERR_login_ttl:			NAPAKA: Niste prijavljeni
+ERR_login_msg:			Niste prijavljeni, prosimo storite to<br><br>Èe se želite registrirati, pojdite na <a href="{TEMPLATE: msg_register_lnk}">obrazec za registracijo</a><br>Èe se želite prijaviti, prosimo pojdite na <a href="{TEMPLATE: msg_login_lnk}">obrazec za prijavo</a>
+ERR_login_url:			{TEMPLATE: msg_login_lnk}
+ERR_disabled_ttl:		Onemogoèena opcija
+ERR_disabled_msg:		Ta možnost je bila izkljuèena s strani administratorja
+ERR_disabled_url:		{VAR: _SERVER['HTTP_REFERER']}?{DEF: _rsid}
+ERR_access_ttl:			NAPAKA: Nezadostni privilegiji
+ERR_access_msg:			Nimate zahtevanih dovoljenj
+ERR_access_url:			{VAR: _SERVER['HTTP_REFERER']}?{DEF: _rsid}
+ERR_registration_disabled_ttl:	Registracija izkljuèena
+ERR_registration_disabled_msg:	Administrator je izkljuèil možnost registracije, prosimo poskusite kasneje
+ERR_registration_disabled_url:	{TEMPLATE: index_update_lnk}&amp;{DEF: _rsid}
+ERR_emailconf_ttl:		NAPAKA: Vaš raèun še ni potrjen.
+ERR_emailconf_msg:		Vašega raèuna še niste potrdili prek emaila<br><table border=0><tr><td><ol><li>Èe niste prejeli potrditvene e-pošte <a href="{TEMPLATE: ERR_emailconf_msg_lnk}">kliknite tukaj</a><li>Èe {VAR: usr_d->email} ni vaš pravi e-poštni naslov <a href="{TEMPLATE: ERR_emailconf_msg_lnk2}">kliknite tukaj</a></ol></td></tr></table>
+ERR_user_ttl:			NAPAKA: ta uporabnik ne obstaja
+ERR_user_msg:			Tega uporabnika ni
+ERR_user_url:			{VAR: _SERVER['HTTP_REFERER']}?{DEF: _rsid}
+ERR_systemerr_ttl:		NAPAKA: Sistemska napaka
+ERR_systemerr_msg:		Zgodila se je sistemska napaka, prosimo sporoèite jo <a href="mailto:{GVAR: ADMIN_EMAIL}">upravljalcu spletnih strani</a>.
+ERR_systemerr_url:		 
+email_title:			E-pošta od
+finduser_title:			Poišèi uporabnika
+help_title:			F.A.Q.
+login_title:			Obrazec za prijavo
+msg_title:			{VAR-HTML: frm->frm_name} =&gt; {VAR: frm->subject}
+poll_title:			Urejevalnik anket
+register_title:			Obrazec za registracijo
+reset_title:			Ponastavi geslo
+rpasswd_title:			Obrazec za spreminjanje gesla
+error_title:			Okno za napako
+index_title:			Pozdravljeni na forumu
+search_title:			Išèi {VAR-HTML: srch}
+thread_title:			{VAR-HTML: frm->name}
+tree_title:			{VAR-HTML: frm->frm_name} =&gt; {VAR: frm->subject}
+remail_emailsent:		E-pošta je bila poslana
+remail_email:			Pozdravljeni,\n\nTukaj je zanimiva tema o "{VAR: data->subject}" na {GVAR: FORUM_TITLE} forumu, ki bi jo mogoèe radi prebrali. Temo lahko vidite na:\n {ROOT}?t={VAR: def_thread_view}&amp;th={VAR: data->id}&amp;rid={DEF: _uid}\n\n Vaš prijatelj,\n\n{VAR: usr->alias}\n
+poll_add_option:		Dodaj možnost:
+post_opt_html_on:		<b>HTML</b> je <b>vkljuèen</b>
+post_opt_fud_on:		<a href="{TEMPLATE: post_opt_fud_on_lnk}" target="_blank"><b>FUDcode</b> je <b>vkljuèen</b></a>
+post_opt_images_on:		<b>Images</b> are <b>ON</b>
+post_opt_smilies_on:		<a href="{TEMPLATE: post_opt_smilies_on_lnk}" target="_blank"><b>Smilies</b> so <b>vkljuèen</b></a>
+post_opt_html_off:		<b>HTML</b> koda je <b>izkljuèena</b>
+post_opt_fud_off:		<b>FUDkoda</b> je <b>izkljuèena</b>
+post_opt_images_off:		<b>Slike</b> so <b>izkljuèeni</b>
+post_opt_smilies_off:		<b>Smeškoti</b> so <b>izkljuèeni</b>
+post_opt:			Nastavitve foruma
+register_change_passwd:		spremenite geslo
+install_script_present_error:	Zaradi varnosti, morate odstraniti nastavitveno skripto na <b>{GVAR: WWW_ROOT_DISK}install.php</b> preden lahko uporabljate forum.
+approved_avatar_title:		Vaš avatar je bil potrjen.
+approved_avatar_msg:		Administrator je potrdil vaš avatar. Sedaj bo prikazan poleg vseh sporoèil. Èe ga ne vidite, ali pa se prikaže stari, poskusite nekajkrat osvežiti stran.
+unapproved_avatar_title:	Vaš avatar je bil zavrnjen.
+unapproved_avatar_msg:		Administrator ni potrdil vašega avatarja. Najpogostejši razlogi za to so, da je vaš avatar prevelik (velikost v bajtih ali dimenzije) ali pa je bil neprimeren. Èe želite podrobnejše razloge, kontaktirajte administratorja.
+mvthread_request_move:		zahtevaj premik
+move_request_reason:		Zakaj želite, da se vaša tema premakne
+mvthread_submit_req:		Potrdite zahtevo
+thread_exchange:		Izmenjava tem
+move_request_by:		Premik teme je zahteval:
+move_reason:			Razlog za premik teme:
+thr_exch_accept:		sprejmi temo
+thr_exch_decline:		zavrni temo
+thr_exch_orig_forum:		Izvorni forum:
+thr_exch_dest_forum:		Ciljni forum:
+thr_exch_no_threads:		Nobena tema ne èaka na dovoljenje.
+thr_exch_decl_reason:		Razlog za zavrnitev teme <b>{VAR: data->subject}</b> v forumu <b>{VAR-HTML: data->f2_name}</b>
+thr_exch_submit:		Potrdi
+exch_decline_ttl:		Premikanje teme {VAR: data->subject} v forum {VAR-HTML: data->f2_name} je bilo zavrnjeno.
+ppost_original_msg:		sporoèilo, na katerega odgovarjate ali ga pošiljate naprej
+split_thread:			Razdeli temo
+groupmgr_no_user:		Uporabnika z uporabniškim imenom "{VAR-HTML: gr_member}" ni.
+groupmgr_already_exists:	Uporabnik"{VAR-HTML: gr_member}" že obstaja v tej skupini.
+groupmgr_yes:			Da
+groupmgr_no:			Ne
+groupmgr_inherit:		Podeduj
+groupmgr_action:		Dejanje
+groupmgr_member:		Èlan
+groupmgr_cancel:		Preklièi
+groupmgr_add_member:		Dodaj èlana
+groupmgr_update_member:		Posodobi èlana
+groupmgr_edit:			Uredi
+groupmgr_delete:		Zbriši
+group_mgr_anon:			Anonimno
+group_mgr_reged:		Vsi registrirani uporabniki
+show_show:			Prikaži:
+group_mgr:			Upravljalnik skupin
+group_mgr_edit_btn:		Uredi skupino
+group_mgr_heading:		Izbor urejevalnika skupin
+group_mgr_group:		Skupina:
+permission_denied_title:	Dostop zavrnjen!
+permission_denied_msg:		Vaše uporabniške pravice ne dovolijo dejanja, ki ga nameravate izvesti.
+p_READ:				Beri
+p_POST:				Objavi
+p_REPLY:			Odgovori
+p_EDIT:				Uredi
+p_DEL:				Zbriši
+p_STICKY:			Nevljudne objave
+p_POLL:				Ustvari ankete
+p_FILE:				Pripni datoteke
+p_VOTE:				Glasuj
+p_RATE:				Oceni teme
+p_SPLIT:			Razdeli teme
+p_LOCK:				Zakleni teme
+p_MOVE:				Premakni teme
+p_SML:				Uporabi smeškote
+p_IMG:				Uporabi oznake slik
+p_SEARCH:			Iskanje
+group_mgr_search:		<a href="javascript://" class="GenLink" onClick="javascript: window_open(\'{TEMPLATE: group_mgr_search_lnk}\', \'user_list\', 250,250);">Najdi uporabnika</a>
+group_mgr_indicator:		Trenutno urejam: <b>{VAR: grp->name}</b>
+rate_worst:			Najslabše
+rate_best:			Najboljše
+post_quote_msg:			{VAR: msg->login} zapisano na {DATE: msg->post_stamp %a, %d %B %Y %H:%M}
+post_quote:			Citat:
+userinfo_referals:		Sklicni uporabniki:
+userinfo_referals_count:	{VAR: referals} Èlani
+pm_no_space_title:		Ni veè prostora!
+pm_no_space_msg:		Vaša mapa s privatnimi sporoèili je presegla dovoljeno velikost <b>{GVAR: MAX_PMSG_FLDR_SIZE} bajtov</b>. Trenutna velikost je <b>{VAR: fldr_size} bajtov</b> sporoèil.<br><br><font class="ErrorText">Odstranite nekaj starih sporoèil, da boste sprostili prostor</font>.
+pm_space_indct_msg:		Vaša mapa z OS je {VAR: percent_full}% polna.
+th_expr_never:			Nikoli
+th_expr_one_hr:			1 ura
+th_expr_two_hr:			2 uri
+th_expr_three_hr:		3 ure
+th_expr_four_hr:		4 ure
+th_expr_eight_hr:		8 ur
+th_expr_sixteen_hr:		16 ur
+th_expr_one_day:		1 dan
+th_expr_two_day:		2 dni
+th_expr_four_day:		4 dni
+th_expr_one_week:		1 teden
+th_expr_two_week:		2 tedna
+th_expr_one_month:		1 mesec
+th_expr_two_month:		2 meseca
+th_expr_four_month:		4 mesecev
+th_expr_one_year:		1 leto
+thread_mod_delete:		Zbriši
+action_latest_post:		Zadnja objava
+online_today_last_visit:	Zadnji obisk
+online_today_update:		Pregledujem seznam ljudi, ki so bili danes na forumu.
+logedin_todays_visitors:	Današnji obiskovalci
+logedin_latest_post:		Zadnja objava na forumu: 
+register_show_avatar:		Prikaži avatarje:
+register_show_avatar_desc:	Omogoèa vam, da skrijete avatarje drugih uporabnikov, ko pregledujete njihova sporoèila
+drawmsg_view_rest_post:		Prikaže ostanek sporoèila
+post_re:			Re: 
+forumsel_goto_forum:		Pojdi na forum:
+minimsg_thread_view:		Pogled teme
+split_th_post_by:		Objavil:
+split_th_posted_on:		Objavljeno:
+split_th_subject:		Naslov:
+split_th_new_thread_title:	Naslov nove teme:
+split_th_forum:			Forum:
+split_th_split_sel:		Razdeli izbrana sporoèila
+split_th_split_unsel:		Razdeli neizbrana sporoèila
+split_th_messages:		Sporoèila
+split_th_select:		Izberi
+report_report_post:		Poroèaj o objavi
+quicklogin_login:		Prijava
+quicklogin_password:		Geslo
+quicklogin_use_cookies:		Uporabi cookije?
+quicklogin_login_btn:		Prijava
+post_notification_desc:		Opozori me, ko kdo odgovori na to sporoèilo.
+post_all_ext_allowed:		(neomejeno)
+maximize_category:		Poveèaj kategorijo
+no_view_perm:			Nimate dovoljenj za pregled te teme
+report_empty_report:		Ne morete poslati praznega poroèila, prosimo vnesite razlog vašega poroèila.
+report_already_reported_title:	Že poroèano
+report_already_reported_msg:	To sporoèilo je bilo že poroèano in trenutno èaka v vrsti za pregled administratorjev.
+register_err_toomanyimages:	Poskušate uporabiti veè sporoèil, kot je dovoljeno {GVAR: FORUM_IMG_CNT_SIG} v vašem podpisu.
+pmsg_next_msg:			Naslednje sporoèilo
+pmsg_prev_msg:			Prejšnje sporoèilo
+post_proc_reveal_spoiler:	Razkrij nevljudneža
+register_jabber:		Upravljanje s èenèanjem:
+im_jabber:			Èenèanje: 
+forum_contact:			Stik
+forum_home:			Domov
+post_cur_attached:		trenutno pripetih {VAR: i} datotek
+ppost_cur_attached:		trenutno pripetih {VAR: attach_count} datotek 
+ignored_anon_post:		{GVAR: ANON_NICK} je ignoriran
+ignored_user_post:		Objava uporabnika <a href="{TEMPLATE: ignored_user_post_lnk}" class="GenLink">{VAR: obj->login}</a> je ignorirana
+smladd_close_window:		zapri okno
+post_list_smilies:		prikaži vse smeškote
+p_VISIBLE:			Viden
+reported_in_thread:		V temi
+help_back_to_top:		nazaj na vrh
+help_return_to_index:		Povratek na seznam
+forumsel_unread:		*(NEPREBRANO)
+groupmgr_no_groups:		Ni skupin za urejanje
+msg_err_nosuchmsg_msg:		Tega sporoèila ni v temi
+msg_err_nosuchmsg_title:	Napaka
+imsg_err_message_title:		Napaèno sporoèilo
+imsg_err_message_msg:		Sporoèilo, ki ga želite pregledati, ne obstaja.
+poll_edit:			Uredi
+register_err_not_valid_img:	Ta URL ne vsebuje pravilne slike
+pmsg_recepient:			Prejemnik
+register_err_taken_alias:	Drugo ime, ki ga želite uporabiti, je že v uporabi drugega èlana foruma. Prosimo izberita drugaèno.
+register_alias:			Drugo ime:
+register_alias_desc:		Èe želite drugaèen vzdevek, kot je vaše uporabniško ime, ga vnesite tukaj.
+register_allow_pm_msg:		Dovoli zasebna sporoèila
+register_allow_pm_msg_desc:	Dovoli druge uporabnike, da pošljejo zasebno sporoèilo po FUDforumu.
+postcheck_pm_disabled:		Ne morete poslati zasebnega sporoèila na "{VAR-HTML: v}", ker ta oseba ne sprejema zasebnih sporoèil.
+polllist_vote:			Glasuj
+polllist_view_results:		Poglej rezultate
+polllist_name:			Naslov ankete
+polllist_date:			Ustvarjeno
+polllist_owner:			Ustvaril
+polllist_votes:			Vsi glasovi
+polllist_action:		Dejanje
+polllist_update:		<a href="{TEMPLATE: polllist_update_lnk}">Pregledujem ankete</a>
+userinfo_polls:			Ankete:
+show_pollist:			Prikaži ankete
+search_and:			IN
+search_or:			ALI
+search_desc_order:		Padajoèi vrstni red
+search_asc_order:		Narašèajoèi vrstni red
+search_logic:			Logika iskanja:
+search_sorting:			Razporedi rezultate po datumu v:
+post_proceed:			Nadaljuj
+post_moderated_forum:		Objavili ste v urejevanem forumu, kar pomeni, da vaša objava ne bo vidna, dokler je ne bo potrdil eden izmed upravljalcev.
+post_moderated_forum_ttl:	Sporoèilo - urejevan forum
+buddy_list_bday:		Danes je {VAR: r[2]} star {VAR: age}
+email_warning_msg:		Èe spremenite svoj e-poštni naslov, bo vaš raèun nepotrjen, dokler ga ne boste aktivirali prek e-pošte.
+register_show_im:		Prikaži IM pokazatelje
+register_show_im_desc:		Prikaži ali skrij IM pokazatelje avtorjev poleg njihovih sporoèil.
+unread_message:			Neprebrano sporoèilo
+read_message:			Prebrano sporoèilo
+threadt_more:			&lt;veè&gt;
+threadt_disabled_ttl:		Drevesni pogled seznama tem je bil onemogoèen.
+threadt_disabled_desc:		Administrator je onemogoèil drevesni pogled seznama tem, prosimo uporabite navaden pogled.
+threadt_update:			Preiskovanje foruma (drevesni pogled) <a class="GenLink" href="{TEMPLATE: threadt_update_lnk}">{VAR-HTML: frm->name}</a>
+mmod_delete_cofirm_ttl:		Potrditev brisanja sporoèila/teme
+spell_alts:			brez alternativ
+insert_uploaded_image:		Vstavi sliko v telo sporoèila
+finduser_help:			Iskalnik bo samodejno dodal * masko v vašo poizvedbo. Èe želite preiskati za vse uporabnike, katerih ime se zaène z &#39;a&#39;, vnesite &#39;a&#39; v iskano polje.
+back_to_top:			Nazaj na vrh
+pm_err_disabled_title:		Zasebna sporoèila onemogoèena
+pm_err_disabled_msg:		Ne morete pošiljati zasebnih sporoèil, dokler ne omogoèite &#39;Dovoli zasebna sporoèila&#39; možnost v vašem profilu.
+err_mod_acc_ttl:		Nepotrjen raèun
+err_mod_acc_msg:		Administrator je je odloèil, da bo pregledal vse raèune pred aktivacijo. Dokler ne bo vaš raèun preverjen s strani administratorja, ga ne boste mogli uporabljati.
+accounts_pending_approval:	Raèuni, ki èakajo na potrditev
+saved:				Shranjeno
+register_err_time_limit:	Meja registracij 1 na sekundo {GVAR: REG_TIME_LIMIT} je bila dosežena. Prosimo poèakajte {VAR: reg_limit_reached} sekund in poskusite znova.
+login_blocked_account_ttl:	Vaš raèun je bil prepovedan.
+login_blocked_account_msg:	Vaš raèun je bil prepovedan za uporabo na tem forumu. Èe še ne veste za razlog, kontaktirajte administratorja.
+register_affero:		Affero uporabniško ime:<br /><font class="SmallText">Èe imate <a href="http://www.affero.com/ca/{VAR-URL: affero_domain['host']}" target="_blank">Affero</a> uporabniško ime, ga vnesite sem.</font>
+im_affero:			Affero uporabniško ime
+register_err_avatardimtobig:	Dimenzije avatarja <b>({VAR: img_info[0]}x{VAR: img_info[1]})</b> so presegle dovoljene dimenzije <b>({GVAR: CUSTOM_AVATAR_MAX_DIM})</b>.
+buddy_offline:			{VAR: r[2]} trenutno ni prikljuèen
+buddy_online:			{VAR: r[2]} je trenutno prikljuèen
+sml_no_smilies:			Smeškoti niso na voljo.
+login_unapproved_account_ttl:	Nepotrjen raèun
+login_unapproved_account_msg:	Administrator je je odloèil, da bo pregledal vse raèune pred aktivacijo. Dokler ne bo vaš raèun preverjen s strani administratorja, ne boste mogli uporabljati vseh storitev.
+remove_from_buddy_list:		odstrani iz seznama prijateljev
+iemail_msg_author:		<b>Avtor:</b> {VAR: obj->alias}
+iemail_msg_subject:		<b>Naslov:</b> {VAR: obj->subject}
+iemail_msg_date:		<b>Datum:</b> {DATE: obj->post_stamp %a, %d %B %Y %H:%M}
+iemail_msg_reply:		Odgovor
+iemail_msg_quote:		Citat
+iemail_msg_view:		Preglej temo/sporoèilo
+threadt_sticky:			nevljudno
+threadt_announce:		obvestilo
+reported_no_messages:		Ni poroèanih sporoèil.
+poll_no_polls:			Ni nobenih anket.
+no_unread_messages:		Ni neprebranih sporoèil, ki bi se ujemala z vašo poizvedbo.
+thread_mark_all_read:		oznaèi vsa neprebrana sporoèila na forumu kot prebrana
+thread_mark_all_read_desc:	Vsa neprebrana sporoèila v forumu bodo oznaèena kot že prebrana
+private_no_messages:		V tej mapi ni sporoèil
+register_email_change_subject:	Potrditev spremembe e-poštnega naslova
+register_email_change_msg:	Prosimo potrdite vaš nov e-poštni naslov "{VAR: uent->email}", ki nadomešèa vaš stari e-poštni naslov "{VAR: old_email}". To storite s klikom na spodnji naslov:\n{ROOT}?t=emailconf&conf_key={VAR: conf_key}\n\nKo boste potrdili nov e-poštni naslov, bo vaš raèun ponovno aktiviran.
+iemail_thread_unsub:		Odjavite se od te teme
+iemail_forum_unsub:		Odjavite se iz tega foruma
+primary_group_prefix:		Primarna skupina za forum:
+group_resources:		Ta skupina nadzoruje pravice na naslednjih forumih
+register_admin_newuser_title:	Nov uporabnik se je registriral in njegov raèun èaka na potrditev
+register_admin_newuser_msg:	Nov uporabnik ({VAR: uent->login}) se je pravkar registriral na forumu. Ker je vkljuèeno potrjevanje raèunov, njegov raèun ne bo uporaben dokler ne bo potrjen od vas ali katerega od administratorjev foruma. Za pregled raèuna, prosimo pojdite na: {GVAR: WWW_ROOT}adm/admaccapr.php\n\nTo je avtomatski proces, ne odgovarjajte na to sporoèilo. \nÈe želite izkljuèiti bodoèa obvešèanja po e-pošti o novih uporabnikih, storite to prek nadzorne plošèe, s spreminjanjem nastavitve "Obvešèanje o novih raèunih".
+post_mod_msg_notify_title:	Novo sporoèilo v forumu "{VAR: frm->name}" èaka na potrditev
+post_mod_msg_notify_msg:	Novo sporoèilo z naslovom "{VAR: msg_post->subject}" je bilo pravkar objavljeno na forumu, ki ga urejate. Za pregled tega sporoèila, pojdite na: {ROOT}?t=modque\n\nTo je avtomatski proces, ne odgovarjajte na to sporoèilo.\n
+thread_printable_pdf:		Ustvari PDF za tiskanje
+thread_syndicate:		Združi ta forum (XML)
+reg_conf_title:			Potrditev registracije
+reg_conf_email:			<b>Potrditev e-poštnega naslova</b><br />Poseben URL je bil poslan na vaš e-poštni naslov, ki ga uporabite za dostop preden je vaš raèun aktiviran. Èe ne dobite te pošte v nekaj naslednjih minutah, preverite, èe ste vnesli pravi e-poštni naslov. Ko potrdite vaš raèun, boste lahko uporabljali storitve foruma, ki so na voljo registriranim uporabnikom.
+reg_conf_account:		<b>Potrditev raèuna</b><br />Preden je vaš raèun aktiven, mora biti potrjen s strani administratorjev. O tem boste obvešèeni po e-pošti. Do tedaj se ne boste mogli prijaviti z vašim raèunom in ne boste mogli uporabljati storitev, ki so na voljo samo registriranim uporabnikom.
+forum_banned_user:		Vaša dejanja so povzroèila, da je bil vaš dostop na forum za vedno prepovedan.
+mnav_description:		Navigator po sporoèilih
+mnav_date_limit:		Interval datuma:
+mnav_time_unit:			Enota za èas:
+mnav_forum_limit:		Išèi samo v:
+mnav_all_forums:		Preišèi vse forume
+mnav_submit:			Zaèni iskanje
+mnav_no_range:			Vnesti morate pravilni interval datuma. Ta vrednost je lahko decimalka (0.12), vendar mora biti veèja od niè.
+mnav_invalid_unit:		Vnesti morate pravilno enoto za èas
+mnav_invalid_date:		Vnešeni interval datuma je veèji, kot je bil dovoljen s strani administratorjev. Prosimo, da ga prilagodite.
+mnav_no_results:		Ni sporoèil, ki bi se ujemala z poizvedbo.
+mnav_posted_by:			Objavil:
+mnav_more:			Veè &raquo;&raquo;
+mnav_minute:			Minut
+mnav_hour:			Ur
+mnav_day:			Dni
+mnav_week:			Tednov
+mnav_month:			Mesecev
+mnav_title:			Navigator po sporoèilih
+mnav_update:			Preiskujem sporoèila z uporabo <a class="GenLink" href="{TEMPLATE: mnav_update_lnk}">Navigatorja po sporoèilih</a>
+pm_notify_subject:		[{GVAR: FORUM_TITLE}] Obvestilo o novem zasebnem sporoèilu
+pm_notify_body_email:		Imate novo zasebno sporoèilo z naslovom "{VAR: subject}" od "{VAR: from}" na "{GVAR: FORUM_TITLE}" forumu.\nZa pregled sporoèila kliknite tukaj: {ROOT}?t=pmsg_view&id={VAR: pid}\n\nÈe ne želite veè prejemati obvestil, izkljuèite "Obvešèaj o zasebnih sporoèilih" v vašem profilu.
+pm_notify_body_icq:		Imate novo zasebno sporoèilo z naslovom "{VAR: subject}" od "{VAR: from}" na "{GVAR: FORUM_TITLE}" forumu.\nZa pregled sporoèila kliknite tukaj: {ROOT}?t=pmsg_view&id={VAR: pid}\n\nÈe ne želite veè prejemati obvestil, izkljuèite "Obvešèaj o zasebnih sporoèilih" v vašem profilu.
+register_pm_notification:	Obvešèaj o zasebnih sporoèilih
+register_pm_notification_desc:	Èe je vkljuèeno, boste prejemali obvestila prek izbranega naèina vsakiè, ko boste prejeli zasebno sporoèilo.
+findu_admin_opts_header:	Admin Opts.
+findu_unban:			UnBan
+findu_ban:			Ban
+findu_edit:			Uredi
+findu_delete:			Zbriši
+dmsg_reply_to:			je odgovor na sporoèilo #{VAR: obj->reply_to}
+merge_topics:			Združi teme
+merge_topics_cp:		Združi teme - nadzorna plošèa
+merge_topics_tpl:		Izberite teme za združevanje <font class="SmallText">(izbrati morate veè kot eno temo)</font>
+merge_merge:			Združi izbrane teme
+merge_next:			Naslednja tema
+merge_prev:			Prejšnja tema
+split_cp:			Razdružavanje - nadzorna plošèa
+groups_perms_header:		Pravica <font size="-1">(premaknite miško èez pravico, da vidite njen tip)</font>
+register_err_sig_too_long:	Vaš podpis presega najveèjo dovoljeno dolžino {GVAR: FORUM_SIG_ML} znakov .
+register_sig_limit:		{GVAR: FORUM_SIG_ML} znaki <a href="javascript: alert(\'Vaš podpis je dolg \'+document.fud_register.reg_sig.value.length+\' znakov. Najveèja dovoljena dolžina je {GVAR: FORUM_SIG_ML} characters.\');" class="SmallText">Prilagodite dolžino podpisa</a>
+adm_account_accepted:		Administrator je potrdil vaš raèun \'{VAR: GLOBALS['r']->login}\' in je sedaj aktiven. Forum {GVAR: FORUM_TITLE}\' lahko dostopate kot potrjen registriran uporabnik.
+adm_account_accepted_s:		Vaš zahtevek po raèunu \'{GVAR: FORUM_TITLE}\' je bil sprejet.
+adm_account_rejected:		Administrator je zavrnil vaš raèun \'{VAR: GLOBALS['r']->login}\' . Èe želite izvedeti za razlog, kontaktirajte administratorja na \'{GVAR: ADMIN_EMAIL}\'.
+adm_account_rejected_s:		Vaša zahteva za raèun \'{GVAR: FORUM_TITLE}\' je bila zavrnjena.
+thread_on:			na
+userinfo_buddy:			Prijatelj:
+register_email_addr:		E-poštni naslov:
+reset_suffix:			\n\nÈe ste pomotoma prejeli to sporoèilo, vas prosimo, da ga ignorirate. Èe ste prejeli veè kopij tega sporoèila, ki ga niste zahtevali, vas naprošamo, da kontaktirate upravljalca foruma na {GVAR: ADMIN_EMAIL}\n\nTa zahteva je bila poslana od: {VAR: _SERVER['REMOTE_ADDR']}.\n\n
+nt request for \'{GVAR: FORUM_TITLE}\' was declined.
+thread_on:			on
+userinfo_buddy:			Buddy:
+register_email_addr:		E-mail Address:
+reset_suffix:			\n\nIf you received this message in error, please ignore it. If you are receiving multiple copies of this e-mail, which you have not requested, please contact the forum administrator at {GVAR: ADMIN_EMAIL}\n\nThis request was initiated from: {VAR: _SERVER['REMOTE_ADDR']}.\n\n

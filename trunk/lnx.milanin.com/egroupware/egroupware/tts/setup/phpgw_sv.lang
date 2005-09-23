@@ -1,0 +1,162 @@
+a new ticket has been reported.	tts	sv	Nytt ärende anmält
+accept	tts	sv	Acceptera
+accept the ticket into verification process.	tts	sv	Acceptera ärende till verifiering
+accepted	tts	sv	Accepterad
+action	tts	sv	Åtgärd
+add new ticket	tts	sv	Skapa ärende
+add ticket	tts	sv	Skapa ärende
+additional notes	tts	sv	Övriga anteckningar
+admin options	common	sv	Admin alternativ
+assign to	tts	sv	Tilldela
+assigned from	tts	sv	Tilldelad av
+assigned to	tts	sv	Tilldelad till
+billable hours	tts	sv	Budgeterade timmar
+billable hours changed	tts	sv	Budgeterade timmar ändrade
+billable hours rate	tts	sv	Faktura tim taxa
+billable rate	tts	sv	Faktura taxa
+billable rate changed	tts	sv	Faktura taxa ändrad
+category changed	tts	sv	Kategori ändrad
+check here to generate the state's id automatically or enter a particular id below.	tts	sv	Generera status ID automatiskt eller ange eget ID nedan
+clear form	tts	sv	Töm formulär
+close the invalid ticket.	tts	sv	Stäng ogiltigt ärende
+closed	tts	sv	Stängd
+completed	tts	sv	Färdig
+configure the states	common	sv	Konfigurera tillstånd
+configure the transitions	common	sv	Konfigurera övergång
+create new state	tts	sv	Skapa tillstånd
+create new ticket	tts	sv	Skapa ärande
+create new transition	tts	sv	Skapa ny övergång
+creates a new ticket, returns ticket_id	tts	sv	Skapar ärende och returnerar ärende ID
+creates a struct of tickets	tts	sv	Skapar ärende struktur
+date opened	tts	sv	Öppnande datum
+default assign to	tts	sv	Standard tilldelning till
+default group	tts	sv	Standard grupp
+default priority	tts	sv	Standard prioritet
+delete the listed tickets.	tts	sv	Radera valda ärenden
+deleting the state	tts	sv	Raderar tillstånd
+deleting the transition	tts	sv	Radera övergång
+detail	tts	sv	Detaljer
+duplicate	tts	sv	Dublett
+edit the state	tts	sv	Ändra tillstånd
+edit the transition	tts	sv	Redigera övergång
+error: the subject of the ticket is not specified.	tts	sv	Fel: Ärende rubrik inte angivet
+force	tts	sv	Tvinga
+global categories	tts	sv	Globala kategorier
+group ownership changed	tts	sv	Ägande grupp ändrad
+history	tts	sv	Historik
+i worked on the ticket and the work requires validation.	tts	sv	Ärendet slutfört och behöver valideras
+i worked on the ticket, but did not finish.	tts	sv	Ärendet kunde inte slutföras
+in progress	tts	sv	Under bearbetning
+initial state	tts	sv	Utgångs tillstånd
+invalid	tts	sv	Ogiltig
+invalidate	tts	sv	Göra ogiltig
+keep the present state [%1].	tts	sv	Behåll nuvarande tillstånd [%1]
+latest note added	tts	sv	Senaste tillagda anteckning
+list of available tickets' states.	tts	sv	Lista tillgängliga tillstånd
+list of available tickets' transitions.	tts	sv	Lista tillgängliga övergångar
+missing description	tts	sv	Beskrivning saknas
+morework	tts	sv	Bearbetning
+needswork	tts	sv	Fortsatt arbete
+new	tts	sv	Nytt
+new ticket	tts	sv	Nytt ärende
+new tickets can be put into this state.	tts	sv	Nya ärenden sätts i tillståndet
+new value	tts	sv	Nytt värde
+no additional notes	tts	sv	Inga övriga anteckningar
+no duplicate	tts	sv	Inte dublett
+no notes for this ticket	tts	sv	Inga övriga anteckningar för ärendet
+no states found	tts	sv	Inget tillstånd hittat
+no tickets found	tts	sv	Inga ärenden
+no transitions found	tts	sv	Ingen övergång hittad
+not assigned	tts	sv	Inte tilldelad
+not completed	tts	sv	Inte färdig
+notify changes to ticket assignee by e-mail	tts	sv	Meddela ärende ändringar till uppdragsinnehavare
+notify changes to ticket group by e-mail	tts	sv	Meddela ärende ändringar till gruppen
+notify changes to ticket owner by e-mail	tts	sv	Meddela ärende ändringar till ägare
+old value	tts	sv	Gammalt värde
+open	tts	sv	Öppen
+open / closed	tts	sv	Öppen/Stängd
+open date	tts	sv	Öppnande datum
+opened	tts	sv	Öppen
+opened by	tts	sv	Öppnad av
+original ticket details	tts	sv	Ursprungliga ärende detaljer
+perform irregular transition into the following state	tts	sv	Genomför oriktig övergång till följande tillstånd
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	sv	Ange rubrik för ärendet, utan den kan det inte sparas
+prio	tts	sv	Prioritet
+priority	tts	sv	Prioritet
+priority changed	tts	sv	Prioritet ändrad
+put the preexistent ticket into the state %1.	tts	sv	Sätt preexisterande ärende i tillståndet %1
+re-assigned	tts	sv	Åter-tilldelad
+re-opened	tts	sv	Åter-öppnad
+refresh every (seconds)	tts	sv	Uppdatera varje (sekunder)
+reopen	tts	sv	Återöppna
+reopened	tts	sv	Återöppnad
+resolve	tts	sv	Lös
+resolved	tts	sv	Löst
+returns a struct of a tickets history	tts	sv	Returnerar struktur på ärende historik
+returns a struct of values of a single ticket	tts	sv	Returnerar struktur på ärendes värden
+returns the additional notes attached to a ticket	tts	sv	Returnerar övriga anteckningar till ärende
+selected	tts	sv	Valda
+show new/updated tickets on main screen	tts	sv	Visa nya/uppdaterade ärenden på Startsidan
+source state	tts	sv	Tidigare tillstånd
+state	tts	sv	Tillstånd
+state changed	tts	sv	Tillståndet ändrat
+state id	tts	sv	Tillstånds ID
+state name	tts	sv	Tillstånds namn
+status/date closed	tts	sv	Tillstånd/datum stängd
+subject changed	tts	sv	Rubrik ändrad
+target state	tts	sv	Fortsatt tillstånd
+test	tts	sv	Test
+the closed ticket requires more work. reopen it.	tts	sv	Ärendet stängdes men kräver mer arbete och öppnas återigen
+the owner of the ticket was not able to confirm the issue.	tts	sv	Kunden kunde inte verifiera problemet
+the ticket has been accepted by the owner, who is about to work on it.	tts	sv	Ärendet accepterades av ägare för verifiering
+the ticket has been closed without resolution.	tts	sv	Ärendet stängdes utan åtgärd
+the ticket has been reopened for further work.	tts	sv	Ärendet öppnades åter för bearbetning
+the ticket has been successfully resolved.	tts	sv	Ärendet löst
+the ticket has been verified and has to be worked on.	tts	sv	Ärendet verifierat och kan behandlas
+the ticket has been worked on and the work requires validation.	tts	sv	Ärendet behandlat och kräver validering
+the ticket has been worked on, but requires more work.	tts	sv	Ärendet behandlas och kräver mer arbete
+the ticket is a duplicate of another ticket and should be closed.	tts	sv	Ärendet är dublett på annat ärende och bör stängas
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	sv	Ärendet är ingen dublett och behöver öppnas återigen
+the ticket is invalid and cannot be worked on.	tts	sv	Ärendet oglitigt och kan inte behandlas
+the ticket resolution was successfully validated. close the ticket.	tts	sv	Ärendet validerat och stängs
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	sv	Ärendet saknar status och måste tilldelas ett
+the ticket was found a duplicate of another ticket.	tts	sv	Ärendet är dublett på annat ärende
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	sv	Ärenden i listan är i tillstånd %1. Bestäm handlingsplan för dessa.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	sv	Ärendet validerat men kräver mer arbete
+ticket	tts	sv	Ärende
+ticket has been updated	tts	sv	Ärendet uppdaterat
+tickets found %1	tts	sv	%1 ärenden hittade
+tickets open %1	tts	sv	%1 ärenden öppna
+tickets total %1	tts	sv	%1 ärenden totalt
+to go back to the tts index, click <a href= %1 >here</a>	tts	sv	Tillbaks till <a href="%1">ÄHS</a> index
+toaccept	tts	sv	TillAcceptera
+toclosed	tts	sv	TillStängd
+toduplicate	tts	sv	TillDublett
+toinvalid	tts	sv	TillOgiltig
+toneedswork	tts	sv	TillBearbetning
+tonew	tts	sv	TillNytt
+toreopened	tts	sv	TillÅteröppnad
+toresolved	tts	sv	TillLöst
+total billable	tts	sv	Fakturerbart totalt
+totovalidate	tts	sv	TillValidering
+tovalidate	tts	sv	Validering
+toverified	tts	sv	TillVerifiering
+transition	tts	sv	Övergång
+transition name	tts	sv	Övergångs namn
+trouble ticket system	common	sv	Ärende Hanterings System
+tts	common	sv	ÄHS
+tts preferences	tts	sv	Ärende Hanterings System - Alternativ
+undefined	tts	sv	Odefinierad
+update ticket state	tts	sv	Uppdatera ärende tillstånd
+updates ticket	tts	sv	Uppdaterar ärende
+verified	tts	sv	Verifierad
+verify	tts	sv	Verifiera
+verify the ticket to work on it.	tts	sv	Verifiera ärendet för att arbeta på det
+view all tickets	tts	sv	Alla ärenden
+view job detail	tts	sv	Ärende detaljer
+view only my open tickets	tts	sv	Mina öppna ärenden
+view only open tickets	tts	sv	Öppna ärenden
+you can only close a ticket if it is assigned to you.	tts	sv	Du kan bara stänga till dig tilldelade ärenden.
+you want to delete the state %1 and associated transitions. are you sure?	tts	sv	Vill du verkligen radera tillstånd %1 och associerad övergång?
+you want to delete the state %1. are you sure?	tts	sv	Vill du verkligen radera tillstånd %1?
+you want to delete the transition %1. are you sure?	tts	sv	Vill du verkligen radera övergång %1?

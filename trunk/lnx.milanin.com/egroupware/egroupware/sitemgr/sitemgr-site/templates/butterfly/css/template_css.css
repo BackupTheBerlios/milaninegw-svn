@@ -1,0 +1,307 @@
+/* Body */
+BODY {
+        margin: 0px 0px 0px 0px;
+        background-color : #ffffff;
+        color : #000000;
+        }
+
+td,tr,p,div {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #333333;
+        }
+
+h4 {
+        color: #333333; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 16px; font-weight: bold;
+        }
+
+h5 {
+        color: #333333; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 14px; font-weight: bold;
+        }
+
+h6 {
+        color: #333333; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px; font-weight: bold;
+        }
+
+/* Links */
+a:link, a:visited {
+        font-size: 11px; color: #333333; text-decoration: none;
+        font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        }
+
+a:hover {
+        color: #3451B4;        text-decoration: none;
+        }
+
+/* Horizontal Line */
+hr {
+        background: #f0f8ff; height:2px; border: 1px inset;
+        }
+
+/* --Default Class Settings-- */
+
+
+a.mainmenu:link, a.mainmenu:visited {
+	font-size: 11px;
+	color: #000000;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding: 1px;
+	height: 14;
+	width: 90%;
+	border: none;
+        }
+
+a.mainmenu:hover {
+	font-size: 11px;
+	color: #3451B4;
+	text-decoration: none;
+	font-weight: bold;
+	height: 14;
+	width: auto;
+	border: none;
+        }
+/* Content - Sections & Categories */
+.contentpane {
+
+
+        }
+
+.contentpaneopen {
+
+        }
+
+.contentheading {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+         color: #333333;
+        text-align:left;
+        }
+
+.contentdescription {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #000000;
+        text-align: left;
+        }
+
+.pathway {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 9px;
+         color: #5A75CF;
+        }
+
+
+/* Links */
+a.blogsection:link, a.blogsection:visited {
+        color: #3451B4; text-decoration: none; font-weight: normal;
+        font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        }
+
+a.blogsection:hover {
+        color: #000000;        text-decoration: none;
+        }
+
+a.pathway:link, a.pathway:visited {
+        color: #000000; text-decoration: none; font-weight: normal;        font-size: 9px;
+        font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        }
+
+a.pathway:hover {
+        color:#333333;
+        text-decoration: underline;
+        }
+
+a.weblinks:link, a.weblinks:visited {
+        color: #3451B4; text-decoration: none; font-weight: normal;
+        font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        }
+
+a.weblinks:hover {
+        color: #000000;        text-decoration: none;
+        }
+
+a.readon:link, a.readon:visited {
+        color: #3451B4; text-decoration: none; font-weight: normal;
+        font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        }
+
+a.readon:hover {
+        color: #000000;
+        text-decoration: none;
+        }
+
+.moduleheading {
+        font: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        color: #ffffff
+        text-align: left;
+        height: 22px;
+        line-height: 22px;
+        white-space: nowrap;
+        width: 100%;
+        background-color: transparent;
+        background-image: url(http://ool-4350d58c.dyn.optonline.net:81/mauhab457/templates/butterfly/images/mod_title_bg.gif);
+        background-repeat: no-repeat;
+        text-indent: 12px;
+        }
+
+.componentheading {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333333;
+	text-align:left;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #6699CC;
+        }
+
+.boxheading {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+         color: #000000;
+        text-align:left;
+        }
+
+.button {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 11px;
+        background: #496094;
+        color: #66CCFF;
+        border-style: solid;
+        border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;
+        }
+
+.inputbox {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        color: #333333;
+        background: #E5E9F2;
+        border: 1px solid #9999FF;
+        }
+
+.slogan {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+         color: #f0f8ff;
+        }
+
+.searchsite {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+         color: #ffffff;
+        }
+
+/** category text format and links **/
+.category {
+        color: #000000; font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px; font-weight: bold; text-decoration: none;
+        }
+
+a.category:link, a.category:visited {
+        color: #000000; font-weight: bold;
+        }
+
+a.category:hover {
+        color: #3451B4;
+        }
+
+.poll {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #000000;
+        line-height: 14px
+        }
+
+.sectiontableentry1 {
+	color: #FFFFFF;
+	background-color: #C0C6DA;
+        }
+
+.sectiontableentry2 {
+        }
+
+.sectiontableheader {
+	background-color : #1A2D4D;
+	color : #FFFFFF;
+	font-weight : bold;
+        }
+
+.small {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #5A75CF;
+        text-decoration: none;
+        font-weight: normal;
+        }
+
+.createdate {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #3451B4;
+        text-decoration: none;
+        font-weight: normal;
+        }
+
+.modifydate {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: #808080;
+        text-decoration: none;
+        font-weight: normal;
+        }
+
+ul {
+        margin: 0px 0px 0px 0px;
+        }
+
+li {
+        list-style: inside url(http://ool-4350d58c.dyn.optonline.net:81/mauhab457/templates/butterfly/images/arrow.png) 3px;
+        list-style-image: url(http://ool-4350d58c.dyn.optonline.net:81/mauhab457/templates/butterfly/images/arrow.png);
+        }
+
+.fase4rdf {
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-size: 11px; color: #000000; font-weight: normal;
+        }
+
+a.fase4rdf:link {
+        font-size: 11px; font-weight: normal; color: #3451B4;
+        }
+
+a.fase4rdf:hover {
+        font-weight: bold; color: #808080;
+        }
+
+table.searchintro {
+          background-color: #ffffff;
+        }
+
+table.contact {
+        background-color: #ffffff;
+        }
+
+table.contact td.icons {
+        background-color: #ffffff;
+        }
+
+table.contact td.details {
+        background-color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        color: #333333;
+        }

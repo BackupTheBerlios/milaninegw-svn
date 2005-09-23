@@ -1,0 +1,62 @@
+eGroupware Backup Application v.2004-01-14 joao@wipmail.com.br
+
+This backup is complet new but if already installed you only
+backup your complete data in ~/egroupware/backup and empty
+the directory.
+
+Untar all files into this directory
+
+Open ~/egroupware/backup/backup/dbset.php and put your correct
+Database connection settings. The user you set HERE can be
+different from the main application and only need READ rights.
+
+Open ~/egroupware/backup/egw.backup.sh and set the PATH
+according to your eGW installation. Depending on your system
+you perhaps need to adjust the php PATH.
+
+In eGW administratin enable the Backup Application for your
+account. In ADMIN you find two backup settings:
+
+- Server Configuration
+- Backup Configuration
+
+Configure first the Server Settings and then the Backup.
+
+Now configure with crontab for a user how has READ and WRITE
+access to egroupwares web directory and has READ access to
+the DATABASE directory. Probably will this be root but any
+user with this permissions will go as well.
+
+ATTENTION: You can tie the permissions of the backup/archives
+directory so that ONLY the backup executing user has write
+or even read access. That may cause that you can not see your
+backups in eGW backup application but they are SECURE then.
+You do not need 775 or 777 chmods on the backup or subdirs,
+you can set the backup dir to your normal websettings.
+
+Crontab
+Set something like this with crontab according to your OS,
+most probably you can do
+
+#crontab -u root -e<enter>
+and write this line
+
+4 5 * * * cd /usr/local/htdocs/egroupware/backup && ./egw.backup.sh
+
+Attention.: *** change the path to your egroupware web directory ***
+
+The first COl are the minutes of the hour
+The second COL is the hour of the day
+
+This setting will run the backup each day at 05:04h and you can set
+any time you want.
+
+This application was NOT checked on WINDOWS. But it should work
+with MySQL on Windows you only need to find out how the scheduling
+works. On NT4 it should be go with at command on the prompt.
+
+If any questions our doubths you can contact me joao@wipmail.com.br
+
+JM
+
+

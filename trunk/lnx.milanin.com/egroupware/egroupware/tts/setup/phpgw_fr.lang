@@ -1,0 +1,163 @@
+a new ticket has been reported.	tts	fr	Un nouveau ticket a été créé
+accept	tts	fr	ACCEPTER
+accept the ticket into verification process.	tts	fr	Accepter le ticket pour vérification
+accepted	tts	fr	ACCEPTÉ
+action	tts	fr	Action
+add new ticket	tts	fr	Ajouter un nouveau ticket
+add ticket	tts	fr	Ajouter un ticket
+additional notes	tts	fr	Notes additionelles
+admin options	common	fr	Options d'Administration
+assign to	tts	fr	Assigner à
+assigned from	tts	fr	Assigné depuis
+assigned to	tts	fr	Assigné à
+billable hours	tts	fr	Heures facturables
+billable hours changed	tts	fr	Heures facturables changées
+billable hours rate	tts	fr	Taux d'heures facturables
+billable rate	tts	fr	Taux facturable
+billable rate changed	tts	fr	Taux facturable changé
+category changed	tts	fr	Catégorie changée
+check here to generate the state's id automatically or enter a particular id below.	tts	fr	Cliquer ici pour générer un ID d'état ou entrer un ID ci dessous.
+clear form	tts	fr	Réinitialiser le formulaire
+close the invalid ticket.	tts	fr	Fermer le ticket invalide
+closed	tts	fr	Fermé
+completed	tts	fr	COMPLÉTÉ
+configure the states	common	fr	Configurer les états
+configure the transitions	common	fr	Configurer les transitions
+create new state	tts	fr	Créer un nouvel état
+create new ticket	tts	fr	Créer un nouveau ticket
+create new transition	tts	fr	Créer une nouvelle transition
+creates a new ticket, returns ticket_id	tts	fr	Crée un nouveau ticket, retourne l'id du ticket
+creates a struct of tickets	tts	fr	Crée une structure de tickets
+date opened	tts	fr	Date d'ouverture
+default assign to	tts	fr	Assigné par défaut à
+default group	tts	fr	Groupe par défaut
+default priority	tts	fr	Priorité par défaut
+delete the listed tickets.	tts	fr	Supprimer les tickets listés
+deleting the state	tts	fr	Supprimer l'état
+deleting the transition	tts	fr	Supprimer la transition
+detail	tts	fr	Détail
+duplicate	tts	fr	DUPLIQUÉ
+edit the state	tts	fr	Editer l'état
+edit the transition	tts	fr	Editer la transition
+error: the subject of the ticket is not specified.	tts	fr	ERREUR: Le sujet du ticket n'est pas spécifié.
+force	tts	fr	Force
+global categories	tts	fr	Catégories Globales
+group ownership changed	tts	fr	Propriétaire du groupe changé
+history	tts	fr	Historique
+i worked on the ticket and the work requires validation.	tts	fr	Le ticket a été traité mais il requiert une validation
+i worked on the ticket, but did not finish.	tts	fr	En cours de traitement
+in progress	tts	fr	En progression
+initial state	tts	fr	Etat initial
+invalid	tts	fr	INVALIDE
+invalidate	tts	fr	INVALIDÉ
+keep the present state [%1].	tts	fr	Conserver l'état [%1]
+latest note added	tts	fr	Dernière note ajoutée
+list of available tickets' states.	tts	fr	Liste des états disponibles
+list of available tickets' transitions.	tts	fr	Liste des transitions disponibles
+missing description	tts	fr	Description manquante
+morework	tts	fr	RESTE DU TRAVAIL
+needswork	tts	fr	ENCORE BESOIN DE TRAVAILLER DESSUS
+new	tts	fr	NOUVEAU
+new ticket	tts	fr	Nouveau ticket
+new tickets can be put into this state.	tts	fr	Les nouveaux tickets peuvent être mis dans cet état
+new value	tts	fr	Nouvelle valeur
+no additional notes	tts	fr	Pas de notes additionnelles
+no duplicate	tts	fr	PAS DE DUPLICATION
+no notes for this ticket	tts	fr	Pas de notes pour ce ticket
+no states found	tts	fr	Pas d'état pour ce ticket
+no tickets found	tts	fr	Pas de ticket trouvé
+no transitions found	tts	fr	Pas de transition trouvée
+not assigned	tts	fr	Non assigné
+not completed	tts	fr	NON TERMINÉ
+notify changes to ticket assignee by e-mail	tts	fr	Notifier les changements au soussigné du ticket par e-mail
+notify changes to ticket group by e-mail	tts	fr	Notifier les changements au groupe du ticket par e-mail
+notify changes to ticket owner by e-mail	tts	fr	Notifier les changements au propriétaire du ticket par e-mail
+old value	tts	fr	Ancienne valeur
+open	tts	fr	Ouvert
+open / closed	tts	fr	Ouvert / Fermé
+open date	tts	fr	Date d'ouverture
+opened	tts	fr	Ouvert
+opened by	tts	fr	Ouvert par
+original ticket details	tts	fr	Détails du ticket original
+perform irregular transition into the following state	tts	fr	Traiter les transition irrégulières dans l'état suivant
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	fr	Veuillez entrer le sujet du ticket, sans cela le ticket ne peut pas être enregistré.
+prio	tts	fr	Prio
+priority	tts	fr	Priorité
+priority changed	tts	fr	Priorité changée
+put the preexistent ticket into the state %1.	tts	fr	Mettre les tickets précédents en l'état %1.
+re-assigned	tts	fr	Réassigné
+re-opened	tts	fr	Rouvert
+refresh every (seconds)	tts	fr	Rafraichir chaque (secondes)
+reopen	tts	fr	ROUVRIR
+reopened	tts	fr	RÉOUVERT
+resolve	tts	fr	RÉSOUDRE
+resolved	tts	fr	RÉSOLU
+returns a struct of a tickets history	tts	fr	Retourne une structure d'historique des tickets
+returns a struct of values of a single ticket	tts	fr	Retourne une structure de valeurs d'un seul ticket
+returns the additional notes attached to a ticket	tts	fr	Retourne les notes additionnelles attachées à un ticket
+selected	tts	fr	Sélectionné
+show new/updated tickets on main screen	tts	fr	Montrer les nouveaux/modifiés tickets sur la page d'accueil
+source state	tts	fr	Etat d'origine
+state	tts	fr	Etat
+state changed	tts	fr	Etat changé
+state id	tts	fr	ID d'état
+state name	tts	fr	Nom de l'état
+status/date closed	tts	fr	Statut/Date de fermeture
+subject changed	tts	fr	Sujet changé
+target state	tts	fr	Etat cible
+test	tts	fr	TEST
+the closed ticket requires more work. reopen it.	tts	fr	Le ticket fermé a besoin de plus de travail. Il faut l'ouvrir à nouveau.
+the owner of the ticket was not able to confirm the issue.	tts	fr	Le propriétaire du ticket n'a pas été capable de confirmer l'achèvement.
+the ticket has been accepted by the owner, who is about to work on it.	tts	fr	Le ticket a été accepté par le propriétaire qui va travailler dessus.
+the ticket has been closed without resolution.	tts	fr	Le ticket a été fermé sans être résolu.
+the ticket has been reopened for further work.	tts	fr	Le ticket a été réouvert afin de re-travailler dessus.
+the ticket has been successfully resolved.	tts	fr	Le ticket a été résolu avec succès.
+the ticket has been verified and has to be worked on.	tts	fr	Le ticket a été vérifié et a besoin d'être traité.
+the ticket has been worked on and the work requires validation.	tts	fr	Le ticket a été traité mais il requiert validation.
+the ticket has been worked on, but requires more work.	tts	fr	Le ticket a été traité partiellement.
+the ticket is a duplicate of another ticket and should be closed.	tts	fr	Un ticket du même type est déjà ouvert, vous devriez fermer le ticket en cours.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	fr	Le ticket n'est pas dupliqué, il faut l'ouvrir à nouveau.
+the ticket is invalid and cannot be worked on.	tts	fr	Le ticket est invalide et ne peut être traité.
+the ticket resolution was successfully validated. close the ticket.	tts	fr	La résolution du ticket est complète, vous pouvez fermer le ticket.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	fr	Le ticket existait avant la définition de l'infrastructure, il faut lui définir un état.
+the ticket was found a duplicate of another ticket.	tts	fr	Ce ticket existe déjà !
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	fr	Les tickets suivants sont dans l'état %1. Merci de décider ce que vous devez faire avec...
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	fr	La validation n'est pas bonne, il faut corriger d'autres choses.
+ticket	tts	fr	Ticket
+ticket has been updated	tts	fr	Le ticket a été mis à jour
+tickets found %1	tts	fr	Tickets trouvés %1
+tickets open %1	tts	fr	Tickets ouverts %1
+tickets total %1	tts	fr	Tickets total %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	fr	Pour retourner à l'index de tts, cliquez <a href="%1">ici</a>
+toaccept	tts	fr	A ACCEPTER
+toclosed	tts	fr	A FERMER
+toduplicate	tts	fr	A DUPLIQUER
+toinvalid	tts	fr	A DÉVALIDER
+toneedswork	tts	fr	A COMPLÉTER
+tonew	tts	fr	A CRÉER
+toreopened	tts	fr	A ROUVRIR
+toresolved	tts	fr	A RÉSOUDRE
+total billable	tts	fr	Total facturable
+totovalidate	tts	fr	A A VALIDER
+tovalidate	tts	fr	A VALIDER
+toverified	tts	fr	A VÉRIFIER
+transition	tts	fr	Transition
+transition name	tts	fr	Nom de la Transition
+trouble ticket system	common	fr	Système de tickets d'incidents
+tts	common	fr	Système de tickets d'incidents
+tts preferences	tts	fr	Système de tickets d'incidents - préférences
+undefined	tts	fr	INDÉFINI
+update ticket state	tts	fr	Mettre à jour l'état du ticket
+updates ticket	tts	fr	Met à jour le ticket
+use email notification	tts	fr	Utiliser la notification par EMail
+verified	tts	fr	VÉRIFIÉ
+verify	tts	fr	EN COURS DE VÉRIFICATION
+verify the ticket to work on it.	tts	fr	Vérifier le ticket pour pouvoir le traiter.
+view all tickets	tts	fr	Voir tous les tickets
+view job detail	tts	fr	Voir le détail du travail
+view only my open tickets	tts	fr	Voir mes tickets ouverts
+view only open tickets	tts	fr	Voir tous les tickets ouverts
+you can only close a ticket if it is assigned to you.	tts	fr	Vous pouvez fermer un ticket s'il vous est assigné.
+you want to delete the state %1 and associated transitions. are you sure?	tts	fr	Vous voulez effacer l'état %1 et ses transitions associées. Etes-vous sûr?
+you want to delete the state %1. are you sure?	tts	fr	Vous souhaitez supprimer l'état %1. Etes-vous sûr ?
+you want to delete the transition %1. are you sure?	tts	fr	Vous souhaitez supprimer la transition %1. Etes-vous sûr ?

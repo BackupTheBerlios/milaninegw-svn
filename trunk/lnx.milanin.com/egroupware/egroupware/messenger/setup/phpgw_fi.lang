@@ -1,0 +1,31 @@
+compose	messenger	fi	Kirjoita
+compose global message	common	fi	Kirjoita järjestelmäviesti
+compose message	messenger	fi	Kirjoita viesti
+delete a message.	messenger	fi	Poista viesti.
+delete selected	messenger	fi	Poista valittu.
+forward	messenger	fi	Lähetä eteenpäin
+forward a message	messenger	fi	Lähetä viesti eteenpäin
+forward a message to another user.	messenger	fi	Lähetä viesti toiselle käyttäjälle.
+forwarded	messenger	fi	Edelleenlähetetty
+global message	messenger	fi	Järjestelmäviesti
+i can't find the username %1 on the system	messenger	fi	En löydä käyttäjätunnusta %1 järjestelmästä.
+inbox	messenger	fi	Saapuneet
+message from	messenger	fi	Lähettäjä
+messenger	common	fi	Viestit
+new	messenger	fi	Uusi
+read a list of messages.	messenger	fi	Lue viestien listaa
+read a single message.	messenger	fi	Lue yksittäistä viestiä
+read message	messenger	fi	Lue viesti
+replied	messenger	fi	Vastattu
+reply	messenger	fi	Vastaa
+reply to a message	messenger	fi	Vastaa viestiin
+reply to a received message.	messenger	fi	Vastaa vastaanotettuun viestiin.
+send	messenger	fi	Lähetä
+send a global message.	messenger	fi	Lähetä järjestelmäviesti.
+send message to	messenger	fi	Kenelle
+update a message status	messenger	fi	Päivitä viestin tilaa
+you didn't enter anything for the message	messenger	fi	Et kirjoittanut viestiin mitään.
+you have %1 new message	common	fi	Uusia viestejä %1
+you have %1 new messages	common	fi	Uusia viestejä %1
+you have no messages	messenger	fi	Sinulle ei ole viestejä
+you must enter a subject	messenger	fi	Sinun täytyy kirjoittaa aihe

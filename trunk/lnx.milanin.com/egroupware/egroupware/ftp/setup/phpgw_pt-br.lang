@@ -1,0 +1,36 @@
+are you sure you want to delete %1 ?	ftp	pt-br	Tem certeza que deseja apagar %1?
+attempt to create a directory with empty name	ftp	pt-br	Tentativa de criar diretório com nome vazio
+cancel	ftp	pt-br	cancelar
+cd	ftp	pt-br	cd
+connect	ftp	pt-br	Conectar
+create new directory	ftp	pt-br	Criar novo diretório
+delete	ftp	pt-br	apagar
+failed to connect to %1 with user %1 and password %3	ftp	pt-br	Failed to connect to %1 with user %2 and password %3
+failed to connect to %1 with user %2 and password %3	ftp	pt-br	Falha ao conectar a %1 com usuário %2 e senha %3
+failed to create directory %1	ftp	pt-br	Falha ao criar o diretório %1
+failed to delete %1	ftp	pt-br	Falha ao apagar %1
+failed to rename %1 to %2	ftp	pt-br	Falha ao renomear %1 para %2
+failed to upload %1	ftp	pt-br	Falha ao carregar %1
+ftp client	ftp	pt-br	Cliente de FTP
+ftp hostname	ftp	pt-br	Nome do Servidor FTP
+ftp server	ftp	pt-br	Servidor FTP
+home	ftp	pt-br	Início
+log into ftp server	ftp	pt-br	Efetuar login no servidor FTP
+logout/relogin	ftp	pt-br	Desconectar/Conectar novamente
+password	ftp	pt-br	Senha
+permissions	ftp	pt-br	Permissões
+rename	ftp	pt-br	renomear
+rename file	ftp	pt-br	Renomear arquivo
+rename from	ftp	pt-br	Renomear de
+rename to	ftp	pt-br	para
+renamed	%1 to %2	pt-br	pt-br
+renamed %1 to %2	ftp	pt-br	Renomear %1 para %2
+save	ftp	pt-br	salvar
+save to filemanager	ftp	pt-br	salvar para o Gerenciador de Arquivos
+size	ftp	pt-br	Tamanho
+successfully created directory %1	ftp	pt-br	Diretório %1 criado com sucesso
+successfully deleted %1	ftp	pt-br	%1 apagado com sucesso
+successfully uploaded %1	ftp	pt-br	%1 carregado com sucesso
+upload	ftp	pt-br	carregar
+username	ftp	pt-br	nome de usuário
+view	ftp	pt-br	visualizar

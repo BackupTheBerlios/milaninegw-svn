@@ -1,0 +1,50 @@
+/***************************************************************************
+* copyright            : (C) 2001-2003 Advanced Internet Designs Inc.
+* email                : forum@prohost.org
+* $Id: tabs.tmpl,v 1.3 2003/12/18 18:52:05 iliaa Exp $
+*
+* This program is free software; you can redistribute it and/or modify it 
+* under the terms of the GNU General Public License as published by the 
+* Free Software Foundation; either version 2 of the License, or 
+* (at your option) any later version.
+***************************************************************************/
+
+{PHP_FILE: input: tabs.inc.t; output: @tabs.inc;}
+
+{SECTION: active_tab}
+<td class="tabA"><div class="tabT"><a href="{VAR: tab_url}">{VAR: tab_name}</a></div></td>
+{SECTION: END}
+
+{SECTION: inactive_tab}
+<td class="tabI"><div class="tabT"><a href="{VAR: tab_url}">{VAR: tab_name}</a></div></td>
+{SECTION: END}
+
+{MAIN_SECTION: tablist tablist used in the profile control panels}
+<table border=0 cellspacing=1 cellpadding=0 class="tab">
+<tr class="tab">{TEMPLATE-DATA: tabs}</tr>
+</table>
+{MAIN_SECTION: END}
+
+{SECTION: tabs_register}
+{MSG: tabs_register}
+{SECTION: END}
+
+{SECTION: tabs_subscriptions}
+{MSG: tabs_subscriptions}
+{SECTION: END}
+
+{SECTION: tabs_referrals}
+{MSG: tabs_referrals}
+{SECTION: END}
+
+{SECTION: tabs_buddy_list}
+{MSG: tabs_buddy_list}
+{SECTION: END}
+
+{SECTION: tabs_ignore_list}
+{MSG: tabs_ignore_list}
+{SECTION: END}
+
+{SECTION: tabs_private_messaging}
+{MSG: tabs_private_messaging}
+{SECTION: END}

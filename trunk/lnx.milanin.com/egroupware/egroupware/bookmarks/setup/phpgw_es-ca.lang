@@ -1,0 +1,68 @@
+%1 bookmarks have been deleted	bookmarks	es-ca	Esborrades %1 adreces d'interès
+%1 bookmarks imported from %2 successfully.	bookmarks	es-ca	Importades correctament %1 de %2 adreces d'interès
+(comma separate multiple addresses)	bookmarks	es-ca	(la coma separa vàries adreces)
+<b>note:</b> this currently works with netscape bookmarks only	bookmarks	es-ca	<b>Nota:</b> Actualment només funciona amb adreces d'interès de Netscape/Mozilla
+all bookmarks	bookmarks	es-ca	Totes les adreces d'interès
+and	bookmarks	es-ca	I
+append this message to mailed bookmarks	bookmarks	es-ca	Afegir aquest missatge a les adreces d'interès enviades
+ascending	bookmarks	es-ca	Ascendent
+book marks	common	es-ca	Adreces d'Interès
+bookmark changed sucessfully	bookmarks	es-ca	Adreça d'interès canviada correctament
+bookmark created successfully.	bookmarks	es-ca	Adreça d'interès creada correctament
+bookmark not editable	bookmarks	es-ca	Adreça d'interès no editable
+bookmark not readable	bookmarks	es-ca	Adreça d'interès no llegible
+bookmarks	common	es-ca	Adreces d'Interès
+bookmarks settings	bookmarks	es-ca	Configuració de les adreces d'interès
+change bookmark	bookmarks	es-ca	Canviar adreça d'interès
+close this window to return	bookmarks	es-ca	tancar aquesta ventana per tornar
+create bookmark	bookmarks	es-ca	Crear adreça d'interès
+create new bookmark	bookmarks	es-ca	Crear nova adreça d'interès
+date added	bookmarks	es-ca	Data afegida
+date changed	bookmarks	es-ca	Data canviada
+date last updated	bookmarks	es-ca	Data de la darrera actualització
+date last visited	bookmarks	es-ca	Data de la darrera visita
+descending	bookmarks	es-ca	Descendent
+edit bookmark	bookmarks	es-ca	Editar adreça d'interès
+edit this bookmark	bookmarks	es-ca	Editar aquesta adreça d'interès
+enter the name of the netscape bookmark file<br>that you want imported into bookmarker below.	bookmarks	es-ca	entreu el nom de l'arxiu d'Adreces d'Interès de Netscape<br>que volgueu importar a continuació.
+export bookmarks	preferences	es-ca	Exportar adreça d'interès
+fewer	bookmarks	es-ca	Menys
+filter by	bookmarks	es-ca	Filtrar per
+found a link you might like	bookmarks	es-ca	Trobat un enllaç interessant
+from	bookmarks	es-ca	De
+from category %1	bookmarks	es-ca	de categoria %º
+highest	bookmarks	es-ca	La més alta
+i thought you would be interested in the following link(s):	bookmarks	es-ca	Hem trobat que potser són interessants els següents enllaços:
+import bookmarks	preferences	es-ca	Importar Adreces d'Interès
+like	bookmarks	es-ca	com
+list	bookmarks	es-ca	Llista
+lowest	bookmarks	es-ca	La més baixa
+mail this bookmark	bookmarks	es-ca	Enviar aquesta adreça d'interès
+mail-this-link message sent to %1.	bookmarks	es-ca	Missatge enviar-aquest-enllaç enviat a %1
+mass update:	bookmarks	es-ca	Actualització massiva:
+message from	bookmarks	es-ca	Missatge de
+more	bookmarks	es-ca	Més
+name	bookmarks	es-ca	Nom
+name is required	bookmarks	es-ca	El nom és obligatori
+netscape bookmark file	bookmarks	es-ca	Arxiu d'Adreces d'Interès de Netscape
+netscape bookmark filename is required!	bookmarks	es-ca	El nom de l'arxiu d'Adreces d'Interès de Netscape és obligatori
+new	bookmarks	es-ca	Nou
+or	bookmarks	es-ca	o
+please fill out <b>to e-mail address</b>, <b>subject</b>, and <b>message</b>!	bookmarks	es-ca	Ompliu <b>Adreça de correu destí</b>, <b>Assumpte</b> i <b>Missatge</b>
+query condition	bookmarks	es-ca	Condició de consulta
+rating	bookmarks	es-ca	Estimació
+search for:	bookmarks	es-ca	Cercar:
+send bookmark	bookmarks	es-ca	Enviar adreça d'interès
+sub category	bookmarks	es-ca	Subcategoria
+to address %1 invalid. format must be <strong>user@domain</strong> and domain must exist!	bookmarks	es-ca	L'adreça Per: %1 no es vàlida. El format ha de ser <strong>usuari@domini</strong> i el domini ha d'existir.
+to e-mail addresses	bookmarks	es-ca	Adreces de correu destí
+to which category should the imported folder hierarchy be attached	bookmarks	es-ca	A quina categoria s'ha d'afegir la jerarquia de la carpeta importada
+total visits	bookmarks	es-ca	visites totals
+tree view	bookmarks	es-ca	Vista d'arbre
+unable to open temp file %1 for import.	bookmarks	es-ca	No es pot obrir l'arxiu temporal %1 per importar
+url is required.	bookmarks	es-ca	URL obligatória
+view bookmark	bookmarks	es-ca	Veure adreça d'interès
+view this bookmark	bookmarks	es-ca	Veure aquesta adreça d'interès
+warning	bookmarks	es-ca	Avís
+you are viewing this site outside of egroupware	bookmarks	es-ca	Esteu veient aquest lloc des de fora d'eGroupWare
+you must select a category	bookmarks	es-ca	Heu de seleccionar una categoria

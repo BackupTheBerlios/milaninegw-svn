@@ -1,0 +1,70 @@
+%1 bookmarks have been deleted	bookmarks	no	%1 favoritter ble slettet
+%1 bookmarks imported from %2 successfully.	bookmarks	no	%1 favoritter ble importert fra %2.
+(comma separate multiple addresses)	bookmarks	no	(komma skiller flere adresser)
+<b>note:</b> this currently works with netscape bookmarks only	bookmarks	no	<b>Merk:</b> Dette virker kun med netscape bokmerker
+all bookmarks	bookmarks	no	Alle favoritter
+and	bookmarks	no	Og
+append this message to mailed bookmarks	bookmarks	no	Legg denne meldingen til favoritter som sendes pr. e-post
+ascending	bookmarks	no	Stigende
+book marks	common	no	Favoritter
+bookmark changed sucessfully	bookmarks	no	Endringen av favoritten var vellykket
+bookmark created successfully.	bookmarks	no	Opprettelse av favoritten var vellykket
+bookmark not editable	bookmarks	no	Favoritten er ikke mulig å endre
+bookmark not readable	bookmarks	no	Favoritten er ikke mulig å lese
+bookmarks	common	no	Favoritter
+bookmarks settings	bookmarks	no	Favoritt innstillinger
+change bookmark	bookmarks	no	Endre Favoritt
+close this window to return	bookmarks	no	lukk dette vinduet for å returnere
+create bookmark	bookmarks	no	Lag favoritt
+create new bookmark	bookmarks	no	Lag ny favoritt
+date added	bookmarks	no	Lagt til Dato
+date changed	bookmarks	no	Endret Dato
+date last updated	bookmarks	no	Sist oppdatert dato
+date last visited	bookmarks	no	Sist besøkte dato
+descending	bookmarks	no	Synkede
+edit bookmark	bookmarks	no	Endre favoritt
+edit this bookmark	bookmarks	no	Endre denne favoritten
+enter the name of the netscape bookmark file<br>that you want imported into bookmarker below.	bookmarks	no	Skriv inn navnet på Netscape favorittfilen<br>som du vil importere til favorittene under.
+export bookmarks	common	no	Eksportèr Favoritter
+fewer	bookmarks	no	Færre
+filter by	bookmarks	no	Filtrer ved
+found a link you might like	bookmarks	no	Fant en link du kanskje vil like
+from	bookmarks	no	Fra
+from category %1	bookmarks	no	fra %1 kategorien
+highest	bookmarks	no	Høyeste
+i thought you would be interested in the following link(s):	bookmarks	no	Jeg tror du ville være interessert i denne linken(e):
+import bookmarks	common	no	Importer favoritter
+like	bookmarks	no	lignende
+list	bookmarks	no	Liste
+lowest	bookmarks	no	Laveste
+mail this bookmark	bookmarks	no	Send denne favoritten som e-post
+mail-this-link message sent to %1.	bookmarks	no	send denne linken som e-post melding sendt til %1.
+mass update:	bookmarks	no	Oppdater alle:
+message from	bookmarks	no	Melding fra
+more	bookmarks	no	Mer
+name	bookmarks	no	Navn
+name is required	bookmarks	no	Navn er påkrevd
+netscape bookmark file	bookmarks	no	Netscape Favoritt Fil
+netscape bookmark filename is required!	bookmarks	no	Netscape favoritt filnavn er påkrevd!
+new	bookmarks	no	Ny
+or	bookmarks	no	eller
+please fill out <b>to e-mail address</b>, <b>subject</b>, and <b>message</b>!	bookmarks	no	Vennligst fyll inn <B>Til epost adresse</B>, <B>Emne</B>, og <B>Melding</B>!
+please select the categories to export	bookmarks	no	Vennligst velg kategorier å eksportere
+query condition	bookmarks	no	Spørsmålsvilkår
+rating	bookmarks	no	Ranking
+search for:	bookmarks	no	Søk etter:
+select the format you would like to export to	bookmarks	no	Velg format du vil eksportere til
+send bookmark	bookmarks	no	Send favoritt
+sub category	bookmarks	no	Underkategori
+to address %1 invalid. format must be <strong>user@domain</strong> and domain must exist!	bookmarks	no	Til adresse %1 ugyldig. Formatet må være <strong>bruker@domene</strong> og domenet må finnes!
+to e-mail addresses	bookmarks	no	Til E-Post Adressene
+to which category should the imported folder hierarchy be attached	bookmarks	no	Til hvilken kategori skal de importerte katalogene bli knyttes til
+total visits	bookmarks	no	Totalt besøkte
+tree view	bookmarks	no	Trevisning
+unable to open temp file %1 for import.	bookmarks	no	Kan ikke åpne midlertidig fil %1 for import.
+url is required.	bookmarks	no	En URL er nødvendig.
+view bookmark	bookmarks	no	Vis Favoritt
+view this bookmark	bookmarks	no	Vis denne favoritten
+warning	bookmarks	no	Advarsel
+you are viewing this site outside of egroupware	bookmarks	no	Du ser denne siden på utsiden av eGroupWare
+you must select a category	bookmarks	no	Du må velge en kategori

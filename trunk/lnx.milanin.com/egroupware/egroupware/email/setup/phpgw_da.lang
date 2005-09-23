@@ -1,0 +1,413 @@
+%1 messages have been deleted	email	da	%1 beskeder er slettet
+(required)	email	da	(krævet)
+1 message has been deleted	email	da	1 besked er slettet
+1 message has been moved to	email	da	1 besked er flyttet til
+<b>*apply*</b> this filter	email	da	<b>*ANVEND*</b> dette filter
+<b>apply all</b> filters	email	da	<b>Benyt alle</b> filtre
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	da	
+account	email	da	Konto
+account name	email	da	Konto navn
+account user name	email	da	Konto bruger navn
+accounts	common	da	Kontoer
+accounts:	email	da	Konti:
+add to address book	email	da	Føj til adressebog
+add to addressbook	email	da	Føj til adressebog
+address book	email	da	Adressebog
+addressbook	email	da	addressebog
+after	email	da	Efter
+all messages	email	da	Alle beskeder
+and	email	da	og
+and stop filtering	email	da	og stop filtering
+answered	email	da	besvaret
+apply	email	da	anvend
+apply filters report:	email	da	Anvend filter report
+apr	email	da	Apr
+aqua fusion	email	da	Aqua Fusion
+arrival date	email	da	Ankomst dato
+as	email	da	som
+attach file	email	da	Vedhæft fil
+attach signature	email	da	Vedhæft signatur
+attachment	email	da	Vedhæftning
+aug	email	da	Aug
+bcc	email	da	bcc
+bcc address	email	da	BCC Adresse
+before	email	da	Før
+big	email	da	Stor
+bigger	email	da	Større
+biggest	email	da	Størst
+body	email	da	
+both	email	da	begge
+button type	email	da	Knap type
+cache server data whenever possible	email	da	cache server data når muligt
+cancel	email	da	Annuler
+cc	email	da	CC
+cc address	email	da	CC Adresse
+change font size in your e-mail pages	email	da	Ændre font størrelse i dine e-mails
+check flags for type of mails	email	da	
+choose for rename	email	da	Vælg for at omdøbe
+choose to rename	email	da	Vælg for at omdøbe
+clear cache	email	da	Tøm cache
+click here for more info in a new window	email	da	Klik her for mere information i et nyt vindue
+click here to continue	email	da	Klik her for at forsætte
+click here to edit the settings for this email account.	email	da	Klik her for at redigere indstillingerne for denne konto
+click here to return to your home page.	email	da	klik her for at gå til startsiden.
+company	email	da	Firma
+compose	common	da	Skriv ny e-mail
+compose message	email	da	ny e-mail
+compose new	common	da	Skriv ny e-mail
+contains	email	da	Indeholder
+could not open this mailbox	email	da	Kunne ikke åbne denne mailbox
+create (expert)	email	da	Lav (ekspert)
+create a folder	email	da	Opret en mappe
+create a folder email	email	da	Opret e-mail mappe
+current attachments	email	da	Nuværende vedhæftninger
+current attachments (%1)	email	da	Nuværende vedhæftninger (%1)
+custom e-mail preferences	email	da	Tilpas e-mail præferencer
+custom e-mail settings	email	da	Tilpas e-mail indstillinger
+custom email settings	email	da	Tilpas e-mail indstillinger
+date	email	da	Dato
+debugging page	email	da	Vis debug side
+dec	email	da	Dec
+default sorting order	email	da	Standard sorteringsrækkefølge
+default:	common	da	standard:
+delete	email	da	Slet
+delete (expert)	email	da	Slet (ekspert)
+delete a folder	email	da	Slet en mappe
+delete account	common	da	Slet konto
+deleted	email	da	slettet
+deleted messages (trash) folder	email	da	Slettede beskeder (skraldespand)
+deleted messages folder name	email	da	Slettede beskeders mappe navn
+deleted messages go to trash	email	da	Slettede beskeder går i skraldespanden
+deleted messages saved to folder:	email	da	Slettede beskeder gemmes i mappe:
+disabled	email	da	Slået fra
+discard	email	da	Kasser
+does not contain	email	da	Indeholder ikke
+done	email	da	Færdig
+draft	email	da	klade
+e-mail clear cache	preferences	da	Tøm e-mail cache
+e-mail extra account	email	da	Ekstra e-mail konto
+e-mail extra accounts	email	da	Ekstra e-mail konti
+e-mail extra accounts list	email	da	Liste over ekstra e-mail konti
+e-mail filters	common	da	E-mail filtre
+e-mail folders	common	da	E-mail mapper
+e-mail inbox filters list	email	da	E-mail indboks filtre
+e-mail preferences	common	da	E-mail præferencer
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	da	Hver bruger har en side med sammendrag, som kan vise forskellige informationer. Denne funktion vil vise en lille liste af e-mail beskeder fra indbakken fra brugerens standarte e-mail konto på brugerens startside.
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account onthe users summary home page.	email	da	Hver bruger har en side med sammendrag, som kan vise forskellige informationer. Denne funktion vil vise en lille liste af e-mail beskeder fra indbakken fra brugerens standarte e-mail konto på brugerens startside.
+edit	email	da	Rediger
+edit filters	email	da	Rediger filter
+email	email	da	e-mail
+email account name	email	da	E-mail brugernavn
+email address	email	da	E-mail adresse
+email date	email	da	E-mail dato
+email filters	email	da	E-mail filtre
+email password	email	da	E-mail password
+email preferences	email	da	E-mail præferencer
+email signature	email	da	E-mail underskrift
+email type	common	da	E-mail type
+enable this email account	common	da	Aktiver denne e-mail konto
+enable utf-7 encoded folder names	email	da	Tillad utf-7 kodede mappe-navne
+enter the search string in the text boxes	email	da	
+enter your pop	admin	da	Indtast POP-server navn
+error	email	da	fejl
+error moving messages to	email	da	Fejl ved flytning af beskeder til
+error text not provided	email	da	
+error: unknown message data	email	da	Fejl: Ukendt besked-data
+evolution style	email	da	Evolution stil
+extra accounts	email	da	Ekstra konti
+extra e-mail account	common	da	Ekstra e-mail konto
+extra e-mail accounts	common	da	Ekstra e-mail konti
+extra e-mail preferences number %1	email	da	Ekstra e-mail fræferencer nummer %1
+feb	email	da	Feb
+fewer actions	email	da	Færre muligheder
+fewer choices	email	da	Færre valg
+file	email	da	Fil
+file attachment	email	da	Fil vedhæftning
+file into	email	da	Fil til
+fill in as much as you can	email	da	Udfyld så meget du kan
+filter [number	email	da	filter [nummer] og navn
+filter [number] and name	email	da	Filtere [antal] og navne
+filter inbox for accounts	email	da	Filtere INDBAKKE for konto
+filter name	email	da	Filter navn
+filter name:	email	da	Filter navn:
+filter number	email	da	Filter nummer
+filters	email	da	Filter
+filters list	email	da	Filter liste
+firstname	email	da	Fornavn
+flag as important	email	da	Flag sat som vigtig
+flagged	email	da	Flag sat
+folder	common	da	Mappe
+folder maintenance	email	da	Mappe vedligehold
+folder name	email	da	Mappe navn
+folder size	email	da	Mappe størrelse
+folders	email	da	Mapper
+for the file to actually upload	email	da	For at filen faktisk lægges op
+for these items, fill only what is different from you default e-mail preferences	common	da	Udfyld kun hvad der adskiller sig fra dine standard e-mail præferencer for disse elementer
+forward	email	da	Videresend e-mail
+from	email	da	Fra
+from address	email	da	Fra adresse
+get size	email	da	hent størrelse
+go	email	da	gå
+go back	email	da	Gå tilbage
+go back to	email	da	Gå tilbage til
+header field	email	da	Hoved felt
+hidden	email	da	Skjult
+hide help	email	da	Gem hjælp
+html messages with the iframe  tag may be klez or other worm emails.	email	da	HTML beskeder med IFRAME vedhæftet kan være KLEZ eller andre orme e-mails.
+icon size	email	da	Ikon størrelse
+icon theme	email	da	Ikon tema
+idots crystal style	email	da	iDots Crystal  stil
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	da	Hvis &quot; Slettede beskeder går i skraldespanden &quot; er valgt, vil slettede beskeder blive kopieret til mappen som du indtaster her. Hvis denne mappe ikke findes, vil den automatisk blive oprettet for dig. Standart navnet er &quot;Trash&quot;. Du kan omdøbe den til hvad du vil. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	da	Hvis &quot; Sendte beskeder &quot; er valgt vil en kopi af din e-mail blive gemt i mappen som du indtaster her. Hvis dene mappe ikke findes, vil den automatisk blive oprettet for dig. Standart navnet er &quot;Sent&quot;. Du kan omdøbe den til hvad du vil. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	da	Hvis &quot; Slettede beskeder går i skraldespanden &quot; er valgt, vil slettede beskeder blive kopieret til mappen som du indtaster her. Hvis denne mappe ikke findes, vil den automatisk blive oprettet for dig. Standart navnet er &quot;Trash&quot;. Du kan omdøbe den til hvad du vil. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	da	Hvis &quot; Sendte beskeder &quot; er valgt vil en kopi af din e-mail blive gemt i mappen som du indtaster her. Hvis dene mappe ikke findes, vil den automatisk blive oprettet for dig. Standart navnet er &quot;Sent&quot;. Du kan omdøbe den til hvad du vil. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if applicable	email	da	Hvis passende
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	da	Hvis valgt, vil en kopi af dine sendte e-mails blive gemt i &quot;Sent&quot; mappen som du har valgt i &quot; Sendte beskeder mappen &quot;. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	da	Hvis valgt, vil en kopi af dine sendte e-mails blive gemt i &quot;Sent&quot; mappen som du har valgt i &quot; Sendte beskeder mappen &quot;. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	da	Hvis valgt, vil en kopi af dine sendte e-mails blive gemt i &quot;Sent&quot; mappen som du har valgt i &quot; Sendte beskeder mappen &quot;. Det virker kun med IMAP servere, POP servere understøtter ikke mapper.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	da	
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	da	
+if fileto then select destination folder	email	da	Hvis fil-til vælg da destinations mappe
+if messages match	email	da	Hvis beskeder matcher
+if there is no obvious error, check your email account name and password first.	email	da	Hvis der ingen iøjnefaldende fejl er, kontrollere din e-mail kontonavn og adgangskode først.
+if there is no obvious error, check your username and password first.	email	da	Hvis der ingen iøjnefaldende fejl er, kontrollere dir brugernavn og adgangskode først.
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	da	Hvis en IMAP server anvendes kan typen ofte uden problemer sættes til &quot;Cyrus or Courier&quot;. Teknisk betyder dette at serveren bruger et punktum mellem de forskellige dele af mappe navnene, som f.eks. &quot;INBOX.Sent&quot;. Den anden store type IMAP server er the University of Washington &quot;UWash&quot; IMAP server. Den bruger skråstreger i stedet for punktumer. Og selvom den har en mappe navn givet &quot;INBOX&quot;, er det ikke opfattet som samme navn som de andre mapper. &quot;UW-Maildir&quot; typen er en ret sjælden kombination af de to førnævnte server typer. Dette er den mindst brugte IMAP server. Hvis du er usikker, så spørg sin systemadministrator. Anvendes kun til IMAP servere.
+image	email	da	Billede
+imap mail server hostname or ip address	admin	da	IMAP-server navn
+imap server type	common	da	IMAP server type
+imap server type - if applicable	email	da	IMAP server type - hvis muligt
+important	email	da	vigtigt
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	da	På e-mail index siden, har siden en liste som viser alle e-mails i en mappe. Post kan sorteres efter dato, afsender, størrelse eller emne, MEN alle af disse lister skal have en rækkefølge, denne indstilling kontrollere hvad der skal være først eller sidst. F.eks. hvis sortering efter dato, vil nyeste til ældste viser de nyeste først og herefter ned til den ældste e-mail.
+inbox	email	da	Indbakke
+input error	email	da	Indtastningsfejl
+input error:	email	da	Indtastningsfejl:
+is not set so your administrator should set email site configuration for mail server hostname or ip address	email	da	er ikke sat, din systemadministrator bør indstille standart e-mail for postserver, hostnavn eller IP adresse.
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	da	Der er ikke en RFC standart at base64 kode en del af en besked der IKKE er vedhæftet. NOTE dette check er i øjeblikket gjort efter beskeden allerede bliver vist, dette skulle gerne stoppe beskeden fra automatisk at blive vist, dvs. vise en "vis dette" knap i stedet.
+jan	email	da	Jan
+javascript	email	da	Javascript
+jul	email	da	Jul
+jun	email	da	Jun
+keep	email	da	Behold
+keyword	email	da	Nøgleord
+keywords	email	da	Nøgleord
+lastname	email	da	Efternavn
+layout 1	common	da	Layout 1
+layout 2	common	da	Layout 2
+lines	email	da	Linjer
+list messages	email	da	
+long names	email	da	Lange navne
+mail folder(uw-maildir)	email	da	Post mappe (uw-maildir)
+mail server	email	da	Post server
+mail server login type	admin	da	Post server login type
+mail server type	email	da	Post server type
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	da	Post du har sendt vil bruge denne adresse som &quot;Fra&quot; adresse. Dette kan være det samme som dit eGroupWare login navn eller systemadministrator kan lave indstillet den for dig. Når modtageren klikker besvar, vil denne adresse blive brugt. Du kan efterlade denne boks tom, da vil den standarte adresse blive brugt.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	da	Post du har sendt vil bruge denne adresse som &quot;Fra&quot; adresse. Dette kan være det samme som dit eGroupWare login navn eller systemadministrator kan lave indstillet den for dig. Når modtageren klikker besvar, vil denne adresse blive brugt. Du kan efterlade denne boks tom, da vil den standarte adresse blive brugt.
+manage accounts	email	da	Vedligehold konti
+manage folders	email	da	Vedligehold mapper
+mar	email	da	Mar
+message	email	da	Besked
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	da	Beskeder der har en vedhæftet vil som er en eller anden form for script eller exe fil som Windows brugere bør advares om ikke at klikke på. Disse filnavne ender oftes på bat, inf, pif, com, exe, reg, vbs, and scr
+message list layout	common	da	Beskedliste layout
+messages	email	da	Beskeder
+messages found in folder	email	da	Beskeder funder i mappe
+messages have been moved to	email	da	Beskeder er blevet flyttet til
+monitor	email	da	Monitor
+more actions	email	da	Flere muligheder
+more choices	email	da	Flere valg
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	da	De fleste amerikanske og europæiske brugere behøver ikke slå denne funktion til. Hvis den er slået til så vil din post server kunne arbejde med mapper med en ikke US-ASCII karakterer i. Standart er deaktiveret. Brig den kun hvis du er helt sikker du behøver det. Virker kun med IMAP servere, POP servere understøtter ikke mapper.
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	da	De fleste amerikanske og europæiske brugere behøver ikke slå denne funktion til. Hvis den er slået til så vil din post server kunne arbejde med mapper med en ikke US-ASCII karakterer i. Standart er deaktiveret. Brig den kun hvis du er helt sikker du behøver det. Virker kun med IMAP servere, POP servere understøtter ikke mapper.
+move down	email	da	Flyt ned
+move selected messages into	email	da	Flyt valgte beskeder til
+move this message into	email	da	Flyt denne besked til
+move up	email	da	Flyt op
+mozilla modern style	email	da	Mozilla Modern stil
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	da	Navnet på den post server du vil have adgang til. Bør være et navn som &quot;mail.eksempel.dk&quot;. Hvis du efterlader dette felt tomt vil standart værdien blive brugt
+new	email	da	Nye
+new account	email	da	Ny konto
+new filter	email	da	Nyt filter
+new message	email	da	Ny besked
+new messages	email	da	Nye beskeder
+newest	common	da	Nyeste
+next	email	da	Næste
+next message	email	da	Næste besked
+no change	email	da	Ingen ændring
+no error returned from server	email	da	Ingen fejlbeskeder fra serveren
+no message found in folder '%1'	email	da	Ingen beskeder er fundet i mappe '%1'
+no next message	email	da	Ingen næste besked
+no previous message	email	da	Ingen forrig besked
+no subject	email	da	Intet emne
+noia &#64; carlitus style	email	da	
+non-standard	email	da	Ikke-standard
+none	email	da	ingen
+not used	email	da	ikke brugt
+notify on delivery	email	da	Bekræft ved levering
+nov	email	da	Nov
+number	common	da	Nummer
+number of matches:	email	da	antal fundet:
+oct	email	da	Okt
+old	email	da	gamle
+oldest	common	da	ældst
+on	email	da	På
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	da	
+or	common	da	eller
+or enter text	email	da	eller indsæt tekst
+or you can use custom settings for this email account	email	da	eller du kan bruge egne indstillinger for denne e-mail konto
+organization	email	da	Virksomhed
+persistent email server session	email	da	vedvarende e-mail server session
+phone	email	da	Telefon
+please fill in everything you need	email	da	Indsæt venligst den information der er brug for
+please select a folder to rename	email	da	Vælg en mappe er skal omdøbes
+please select a message first	email	da	Vælg venligst en sætning først
+please submit a filename to attach	email	da	Indsæt venligst filnavn der skal vedhæftes
+please type a folder name in the text box	email	da	Skriv venligst et mappe-navn i tekstboksen
+previous	email	da	Forrige
+previous message	email	da	Forrige besked
+printable	email	da	print venlig
+raw message	email	da	Rå beskedtekst
+read mail	email	da	Læs post
+received headers	email	da	Modtag hoved information
+recent	email	da	
+recipient	email	da	Modtager
+redirect	email	da	Omdirriger
+reject	email	da	Afvis
+rename (expert)	email	da	Omdøb (ekspert)
+rename a folder	email	da	Omdøb en mappe
+reply	email	da	Svar
+reply all	email	da	Svar alle
+replyto	email	da	Svar til
+request delivery notification	email	da	Anmod om brkræftelse
+requested filter action:	email	da	
+required	email	da	Krævet
+reset	email	da	Nulstil
+result	email	da	resultat
+return mails during this time period	email	da	
+save deleted messages in folder named below	email	da	gem slettede beskeder i mappe navnet nedenfor
+save sent messages in folder named below	email	da	gem sendte beskeder i mappe navnet nedenfor
+search for mails in these folders	email	da	Søg for e-mails i disse mapper
+search this folder	email	da	søg i denne folder
+section	email	da	Afsnit
+seen	email	da	Set
+select home email address	email	da	Vælg privat e-mail adresse
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	da	
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	da	
+select work email address	email	da	Vælg arbejds e-mail adresse
+select your mail server type	admin	da	Vælg din mailserver type
+select your screensize for proper showing of the javascript addressbook	email	da	Vælg din skærm opløsning, for at Javasrript adressebogen vises korrekt
+select your screensize for propper showing of the javascript addressbook	email	da	Vælg din skærm opløsning, for at Javasrript adressebogen vises korrekt
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	da	Vælg stil for adressebogen. Enten den traditionelle simple stil. Eller den nye Javascript advanceret adressebog.
+send	email	da	Send
+send deleted messages to the trash	email	da	Læg slettede beskeder i skraldespanden
+send forwarded mail as quoted attachment	email	da	Send videresendt e-mails som vedhæftet filer
+sender	email	da	Afsender
+sent	common	da	sent
+sent folder	email	da	sent mappe
+sent messages folder	common	da	Sendte beskeder mappe
+sent messages folder name	email	da	Sendte beskeder mappe navn
+sent messages saved in "sent" folder	common	da	Sendte beskeder gemt i &quot;sendte beskeder&quot; mappen
+sent messages saved in &quot;sent&quot; folder	common	da	Sendte beskeder gemmes i &quot;sent&quot; mappen
+sent messages saved to folder:	email	da	Sendte beskeder gemmes i mappe:
+sep	email	da	Sep
+settings	common	da	Indstillinger
+short names	email	da	Korte navne
+show help	email	da	Vis hjælp
+show long names	email	da	Vis lange navne
+show message	email	da	vis besked
+show new messages in combobox	email	da	Vis nye beskeder i &quot;ComboBoxt&quot;
+show new messages on main screen	email	da	Vis nye beskeder på forsiden
+show sender's email address with name	email	da	Vis afsenderens e-mail adresse med navn
+show short names	email	da	Vis korte navne
+show total folder size by default	email	da	Vis mappe størrelse som standart
+simple	email	da	Simpel
+size	email	da	Størrelse
+size larger than	email	da	Større end
+size smaller than	email	da	Mindre end
+small	email	da	lille
+small view	email	da	lille visning
+smaller	email	da	Mindre
+smallest	email	da	Mindst
+somebody	email	da	En eller anden
+sort by	email	da	Sorter efter
+source accounts	email	da	Kilde konto
+spell check	email	da	Stavekontrol
+standard e-mail preferences	email	da	Standard e-mail præferencer
+stop if matched	email	da	Stop hvis match fundert
+subject	email	da	Emne
+submit	email	da	Send
+switch accounts	email	da	Skift konto
+switch current folder to	common	da	Gå til mappe
+test all filters	email	da	Test alle filtere
+test or apply all filters	email	da	test eller anvend ALLE filtere
+test run this filter	email	da	Kør dette filter
+text	email	da	Tekst
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	da	
+the email application offers different button displays, these buttons can be text, images, or both.	email	da	E-mail applikationen tilbyder forskellige knappe visninger, disse knapper kan være tekst, billeder eller begge dele.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	da	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	da	
+the email application offers different icon image themes, these icons can be big or small.	email	da	E-mail applikationen tilbyder forskellige ikon temaer, disse ikoner kan være store eller små.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	da	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	da	
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	da	
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	da	Typen af post server du kommunikere med. IMAP post servere har mapper, så som Sent og Trash. POP servere har ikke disse mapper. POP, POP-3 og POP3 er det samme. Du kan have kommunikationen med serveren krypteret ved at bruge IMAPS eller POPS, men kun hvis post serveren understøtter og hvis din eGroupWare installation har &quot;SSL&quot; aktiveret version af PHP.
+then check the	email	da	
+then do this	email	da	
+then take this actions	email	da	og udfør da følgende
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	da	
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	da	
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	da	Der opstod en fejl under forbindelsesforsøg til din mailserver.<br> Kontroller venligst at dit brugernavn og password er korrekt, eller kontakt din systemadministrator.
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	da	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	da	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	da	
+this data not supplied.	email	da	Blev ikke forsynet med disse data
+this folder is empty	email	da	Denne mappe er tom
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	da	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as "your full name". if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use "your full name" as your from name for email messages. note that "your full name" for your email account 0 is the name you gave in the egroupware setup.	email	da	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	da	
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	da	
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	da	
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	da	
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	da	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	da	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	da	
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	da	
+to	email	da	Til
+to address	email	da	Til adresse
+total messages	email	da	Total antal beskeder
+trash	email	da	skraldespand
+trash folder	email	da	skraldespands mappe
+u-wash mail folder	email	da	U-Wash post mappe
+u-wash mail folder - if applicable	email	da	U-Wash post mappe - Hvis muligt
+unable to get source folder name	email	da	Kunne ikke hente mappens kilde navn
+unable to get target folder name	email	da	Kunne ikke hente mappens modtager navn
+unanswered	email	da	Ikke besvaret
+undeleted	email	da	Ikke slettet
+undisclosed recipients	email	da	Ubekendte modtagere
+undisclosed sender	email	da	Ubekendt afsender
+unflagged	email	da	Flag ikke sat
+unknown action	email	da	Ukendt handling
+unknown error	email	da	Ukendt fejl
+unknown translation	email	da	Ukendt oversættelse
+unseen	email	da	Ulæst
+use custom settings	email	da	Anvend personlige indstillinger
+view as html	email	da	Se som html
+view formatted	email	da	Se formatteret
+view headers	email	da	Se mail-headers
+view unformatted	email	da	Se uformatteret
+warn_attachment_name_dangerous	email	da	
+warn_attachment_only_mail	email	da	
+warn_b64_encoded_displayable	email	da	
+warn_has_iframe_maybe_klez	email	da	
+warn_script_tags	email	da	
+warn_style_sheet	email	da	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	da	Vi har for nyligt tilføjet denne nye adressebog så brugere kan vælge at have en mere kompleks adressebog. a) Nemmere pej og klik søgning, b) Bedst til virksomheder med en stor central adressebog med mange kategorier. Du kan her vælge hvilken type du foretrækker.
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	da	Vi har for nyligt tilføjet denne nye adressebog så brugere kan vælge at have en mere kompleks adressebog. <br>a) Nemmere pej og klik søgning, <br>b) Bedst til virksomheder med en stor central adressebog med mange kategorier. <br>Du kan her vælge hvilken type du foretrækker.
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	da	Vi har disse opløsninger for at bedre kunne præsentere adressebogen for dig. 800x600 (adressebogen vil vises i en 700pixel bred boks), 1024x768 (vil den være i 800 pixel bred), 1200x1600 (vil den være i en 900 pixel bred). Skriftstørrelsen vil for alt html være sat til xx-small, x-small og normal (ingen skrifttype ændring) alt efter skærmopløsningen.
+wrote	email	da	skrev
+you have %1 new messages!	common	da	Du har %1 nye beskeder!
+you have 1 new message!	common	da	Du har 1 ny besked!
+you have messages!	common	da	Du har nye beskeder!
+you have no new messages	common	da	Du har ingen nye beskeder!
+you must click	email	da	Du skal klikke
+you must click %1 for the file to actually upload	email	da	Du skal klikke %1 for at filen bliver vedhæftet
+your full name	common	da	Dit fulde navn
+your message has been sent	common	da	Din besked er blevet sendt!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	da	Din systemadministrator har sat standarter for følgende indstillinger. Det er ikke sikker nu nogensinde behøver at ændre dem. Hvis du alligevel skal bruge egne indstillinger der afviger fra standarten, så afmærk denne boks. Standart indstillingerne er deaktiveret hvis den ikke er afmærket. Hvis indtaster informationer i felterne nedenfor, men senere gerne vil tilbage til standart indstillingerne, afmærkning af denne boks vil slette de indtastede data og bruge standarten i stedet. Alle af følgende felter har en standart værdi, så du kan måske se data i felterne som du ikke har indtastet. Denne checkboks vises kun for den standart e-mail konto, hvis du vil sætte flere kontoer op skal du indtaste oplysningerne i felterne, og denne checkboks vil ikke blive vist.

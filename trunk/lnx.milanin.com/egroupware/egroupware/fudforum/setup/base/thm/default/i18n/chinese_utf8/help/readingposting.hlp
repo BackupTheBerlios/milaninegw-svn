@@ -1,0 +1,257 @@
+TOPIC_TITLE: <a name="style">如何編輯要發布的信息？</a>
+TOPIC_HELP:
+一般而言，論壇中發布的信息都是純文本，但是，你也可以根據需要進行一些簡單的編輯，比如加入粗體、斜體等。
+<p>
+因為在大多數情況下，系統管理員都不會允許你提交信息時使用HTML代碼。你可以使用FUD代碼對提交的信息進行一些編輯， 這種代碼很容易使用，而且比HTML語言安全。
+<p>
+<b>這里是可以使用的FUD代碼功能和一些簡單的實例</b>
+
+<b>網址超鏈接</b><br><br>
+
+這個論壇可以自動識別網址超鏈接，比如︰網址<br>
+	<div align="Center"><font color="#FF0000">http://fud.prohost.org</font></div><br>
+將被作為URL識別並指向正確的網址，其功能類似于︰
+	<div align="center"><a href="http://fud.prohost.org" target=_blank>http://fud.prohost.org</a></div><br>
+	
+	
+你自己可以用下面2種方法通過FUD代碼創建URL超鏈接︰一種是輸入下列代碼︰
+	<div align="Center"><b><font color="#ff0000">[URL]<font color="#006600">http://www.myhomepage.com</font>[/URL]</font></b></div><br>
+其效果等同于︰
+	<div align="center"><a href="http://www.myhomepage.com" target=_blank>http://www.myhomepage.com</a></div><br>
+其次你還可以在<font color="#ff0000"><b>[URL=<font color="#006600">http://www.myhomepage.com</font>]<font color="#006600">My Homepage</font>[/URL]</b></font> 中使用不同的句法對你的URL進行描述，其效果如下︰<br>
+	<div align="center"><a href="http://www.myhomepage.com" target=_blank>My Homepage</a></div><br>
+<p>
+<b>電子郵件超鏈接</b><br><br>
+         要創建電子郵件超鏈只需按照一般的方法輸入電子郵件地址，比如︰<br>
+<div align="Center"><font color="#ff0000"><b>support@prohost.org</b></font></div><br>
+       論壇將自動識別並創建鏈接。此外還可以用下列方法創建電子郵件超鏈︰<br>
+<div align="Center"><font color="#ff0000"><b>[email=<font color="#006600">support@prohost.org</font>]</b></font>點擊這里給我們的技術支持發送電子郵件。<font color="#ff0000"><b>[/email]</b></font><br></div>
+<br>
+<b>Text Styling</b><br>
+         下面是可以編輯文本的代碼標簽︰<br>
+<br>
+<ul>
+  <li><font color="#ff0000"><b>[b]</b></font>粗體<font color="#ff0000"><b>
+         [/b]</b></font> 生成 <b>粗體</b> 文本</li>
+  <li><font color="#ff0000"><b>[u]</b></font>下劃線<font color="#ff0000"><b>
+         [/u]</b></font> 生成 <u>下劃線</u> 文本</li>
+  <li><font color="#ff0000"><b>[i]</b></font>斜體<font color="#ff0000"><b>
+         [/i]</b></font> 生成 <i>斜體</i> 文本</li>
+   <li><font color="#ff0000"><b>[sub]</b></font>subscript<font color="#ff0000"><b>
+          [/sub]</b></font> produces <sub>subscript</sub> text</li>
+   <li><font color="#ff0000"><b>[sup]</b></font>superscript<font color="#ff0000"><b>
+          [/sup]</b></font> produces <sup>superscript</sup> text</li>
+</ul>
+         此外還可以選擇顏色、外觀、字體、字號等等.<br>
+<ul>
+  <li><font color="#ff0000"><b>[color=red]</b></font>紅色文本<font color="#ff0000"><b>
+         [/color]</b></font> 生成 <font color="#ff0000">紅色文本</font></li>
+  <li><font color="#ff0000"><b>[size=4]</b></font>更大一號的文本<font color="#ff0000"><b>
+        [/size]</b></font>生成指定大小的文本<font size="4">
+</font></li>
+  <li><font color="#ff0000"><b>[font=courier]</b></font>文本<font color="#ff0000"><b>
+        [/font]</b></font> 使用指定的<font face="Courier New, Courier, monospace">
+        字體樣式生成文件</font></li>
+</ul>
+        還可以同時使用不同的格式標簽<br>
+<div align="Center"><font color="#ff0000"><b>[b][u][i][color=red][size=10][font=courier]</b></font>格式化文本<font color="#ff0000"><b>[/font][/size][/color][/i][/u][/b]<br></b></font></div>
+       這個例子︰<br>
+<div align="Center"> &nbsp;&nbsp; <font color="#ff0000" size="10" face="Courier New, Courier, monospace"><u><i><b>Formatted Text</b></i></u></font></div>
+<br>
+<br>
+<b>文本排列</b><br>
+FUD代碼支持文本通過使用[align]標簽以下列3種方式排列︰
+<ul>
+	<li><font color="#ff0000"><b>[align=center]</b></font>文本居中<font color="#ff0000"><b>[/align]</b></font> produces︰</li>
+		<div align="center">文本居中</div>
+	<li><font color="#ff0000"><b>[align=left]</b></font>文本居左<font color="#ff0000"><b>[/align]</b></font> produces︰</li>
+		<div align="left">文本居左</div>
+	<li><font color="#ff0000"><b>[align=right]</b></font>文本居右<font color="#ff0000"><b>[/align]</b></font> produces︰</li>
+		<div align="right">文本居右</div>	
+</ul>
+<br>
+<br>
+<b>不同的查看方式</b><br>
+      你可以通過使用形式代碼按不同的方式查看︰<br>
+<br>
+      不規則的公告版方式︰<br>
+<font color="#ff0000"><b>[list]</b></font><br>
+<font color="#ff0000"><b>[*]</b></font>第一條<br>
+<font color="#ff0000"><b>[*]</b></font>第二條<br>
+<font color="#ff0000"><b>[/list]<br>
+</b></font><br>
+      生成<br>
+<ul>
+  <li>第一條</li>
+  <li>第二條</li>
+</ul>
+      按照不同的排列方式可以生成按不同查看的帖子列表︰<br>
+<font color="#ff0000"><b>[list type=1]</b></font><br>
+<font color="#ff0000"><b>[*]</b></font>第一條<br>
+<font color="#ff0000"><b>[*]</b></font>第二條<br>
+<font color="#ff0000"><b>[/list]</b></font><br>
+     生成<br>
+<ol>
+  <li>第一條</li>
+  <li>第二條<br>
+  </li>
+</ol>
+     按A-Z的字母順序排列︰<br>
+<font color="#ff0000"><b>[list type=A]</b></font><br>
+<font color="#ff0000"><b>[*]</b></font第一條<br>
+<font color="#ff0000"><b>[*]</b></font>第二條<br>
+<font color="#ff0000"><b>[/list]</b></font><br>
+<br>
+     生成︰<br>
+<ol type="a">
+  <li>第一條</li>
+  <li>第二條</li>
+</ol>
+<b>Adding Images</b><br>
+    使用<font color="#ff0000"><b>
+    [img][/img]</b></font> 標簽，可以嵌入帶有圖片說明的圖片。 <br>
+<br>
+    比如<br>
+<div align="Center">&nbsp;<font color="#ff0000"><b>[img]</b></font><font color="#006600">http︰//www.prohost.org/img/pro_logo.gif</font><font color="#ff0000"><b>[/img]</b></font>, <br></div>
+    將生成帶有如下說明的圖片︰<br>
+<div align="Center"><img src="http://www.prohost.org/img/pro_logo.gif" alt="http://www.prohost.org/img/pro_logo.gif" width="409" height="62"><br></div>
+    此外，在下列標簽
+<font color="#ff0000"><b>    [url][/url]</b></font>比如<br>
+<div align="Center"><font color="#006600"><font color="#ff0000"><b>[url=<font color="#006600">http://www.prohost.org</font>][img]</b></font>http://www.prohost.org/img/pro_logo.gif<b><font color="#ff0000">[/img][/url]</font></b></font><br></div>
+    中加入圖片鏈接，就能生成帶鏈接的圖片，如<br>
+<div align="Center"><a href="http︰//www.prohost.org"><img src="http://www.prohost.org/img/pro_logo.gif" alt="image" width="409" height="62" border="0"></a><br></div><br>
+
+<br><b>引用別的信息</b><br>
+  引用已經提交的信息，只需要加入下列標簽︰<font color="#ff0000"><b>[quote][/quote]</b></font> 
+<br>
+<div align="Center"><font color="#ff0000"><b>[quote]</b></font>你好，世界！<font color="#ff0000"><b>[/quote]</b></font><br></div>
+  將顯示為︰<br>
+
+<table border="0" align="center" width="20%" cellpadding="3" cellspacing="1"><tr><td class="SmallText"><b>Quote︰</b></td></tr><tr><td class="quote">你好，世界！<br></td></tr></table>
+<p>
+<b>計算機代碼和前格式化文本</b><br>
+ 該代碼 <font color="#ff0000"><b>[code][/code]</b></font> 允許提交的文件保留相關的格式，比如制表符或者更多的空間。<br>
+<br>
+ 具體用法是︰ <br>
+<font color="#ff0000"><b>[code]</b></font>
+<pre>$fp = fopen('somefile', 'w');<br>if ( !$fp ) {<br>	exit('no such file!');<br>}<br>else { <br>	fwrite($fp, 'hello world');<br>	fclose($fp);<br>}<br></pre>
+<font color="#ff0000"><b>[/code]</b></font><br>
+<br>
+ 保留了所有格式的文件，就像被打印的效果一樣。
+<br>
+<br>
+<pre>$fp = fopen('somefile', 'w');<br>if ( !$fp ) {<br>	exit('no such file!');<br>}<br>else { <br>	fwrite($fp, 'hello world');<br>	fclose($fp);<br>}<br><br><br></pre>
+<p>
+<b>PHP Code</b><br>
+The <font color="#ff0000"><b>[php][/php]</b></font> tag allows you to post PHP scripts
+and have the forum automatically syntax highlight the code for easier readability.<br>
+<br>it used like this: <br>
+<font color="#ff0000"><b>[php]</b></font>
+<pre>
+function hello()
+{
+	echo "Hello World!";
+}
+
+hello();
+</pre>
+<font color="#ff0000"><b>[/php]</b></font><br>
+<br>which produces:<br><br>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br /></font><font color="#007700">function </font><font color="#0000BB">hello</font><font color="#007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo </font><font color="#DD0000">"Hello World!"</font><font color="#007700">;<br />}<br /><br /></font><font color="#0000BB">hello</font><font color="#007700">();<br /></font><font color="#0000BB">?&gt;</font>
+
+</font>
+</code>
+<p>
+
+<b>No Tag</b><br>
+The <font color="#ff0000"><b>[notag][/notag]</b></font> tag allows you to have the text inside
+the tags not be parsed by the FUDforum's tag parser. This allows you to give examples of FUDcode 
+and not have them converted to equivalent HTML.
+<p>
+
+<b>Spoiler</b><br>
+The <font color="#ff0000"><b>[spoiler][/spoiler]</b></font> tag allows you to hide a portion of message
+from being displayed. To see the hidden portion the users must click a link that will display the 
+hidden portion of the text. Internally this is accomplished by JavaScript so the page is not actually 
+reloaded, instead a hidden layer is made visible.<br>
+<br>
+Here is an example of this tag in action: <br>
+
+Visible part of the message
+<font color="#ff0000"><b>[spoiler]</b></font>
+<br>Hidden part of the message</br>
+<font color="#ff0000"><b>[/spoiler]</b></font><br>
+More visible text.
+
+<p>and the result:<p>
+
+Visible part of the message<br />
+<div class="dashed" style="padding: 3px;" align="center" width="100%"><a href="javascript://" OnClick="javascript: layerVis('1482055279834293165', 1);">Reveal Spoiler</a><div align="left" id="1482055279834293165" style="visibility: hidden;"><br />
+Hidden part of the message<br />
+</div></div><br />
+More visible text.
+
+<p>
+
+你還可以發現系統管理員開通了表情符號功能，即你可以使用表情符號表達自己的情緒，同時使用[img]代碼添加圖片。
+
+
+TOPIC_TITLE:<a name="sml">什麼是表情符號？</a> 
+TOPIC_HELP:
+表情符號是一些小的按鈕，你可以在你提交的文本中加入這些按鈕表達你的不同的情緒和感受。
+如果開通了表情符號功能，那麼在輸入發言的文本框上方將出現論壇系統支持的一些表情符號。點擊哪個符號就在你的文本輸入這個表情符號。<br>
+一般的表情符號將被同樣意義的圖片代替。如果你不需要，點擊
+<b>關閉表情符號</b> 前的方框即可。<p>
+
+TOPIC_TITLE: <a name="polls">如何使用調查？</a>
+TOPIC_HELP:
+在某些論壇，你在發帖時還能發起調查。在調查中，你可以問一個問題，並且提供一些供論壇成員選擇的選項。為了保證選票的精確性，只有注冊成員才能參與調查。<br>
+當你點擊 <b>發起調查</b> 鏈接, 在頁面出現的彈出框中輸入可以生成包含多重選項的調查。當填完調查後，只需點擊<b>編輯</b>按鈕，你將回到發帖頁面，剛剛生成的調查將和帖子一起提交<br>
+你可以點擊<b>編輯</b>鏈接編輯調查，或者點擊<b>刪除</b>鏈接，刪除該調查。
+<p>
+一次調查你只有一次機會參與，因此請認真考慮再做決定，而且一旦填了答案將不能改變。
+
+TOPIC_TITLE: <a name="attach">我能否在提交的信息中添加附件？</a>
+TOPIC_HELP:
+經過系統管理員允許後，你可以在發布信息或者發送“悄悄話”時添加一個或者多個附件。這個功能是在不同的論壇有不同的規定，所以當你在一個論壇有這個權限時並不意味著你在別的論壇也有此權限。
+<br>
+對于添加附件，有下列3個規定︰<p>
+<b>允許的文件類型</b> —— 能夠作為附件添加的文件類型︰ex. jpg, gif. png<br>
+<b>文件最大限制</b> ——允許添加的文件的最大限制<br>
+<b>每條信息能夠添加的文件數量限制</b>—— 你能夠添加到你的發言中的最多的附件數
+<p>
+要添加附件，點擊提交信息頁面最下面的<b>瀏覽</b>按鈕， 出現一個對話窗口要求從你的硬盤上查找需要上傳的文件。選定一個文件，點擊
+<b>上傳文件</b>按鈕，你就能把文件添加到你的信息當中。<br>
+如果需要刪除添加的附件，點擊位于文件右側的<b>刪除</b>按鈕即可。
+
+
+TOPIC_TITLE: <a name="msgico">提交信息時添加的圖標是什麼？</a>
+TOPIC_HELP:
+提交信息時添加的圖標是一些可以放在你發布的信息旁邊的小的圖片。他們一般用來表示你發布的信息的主旨或者你向表達的感情。如果你在提交信息的頁面上沒有看到這些圖標，那說明系統管理員封閉了相關功能。
+
+TOPIC_TITLE: <a name="edit">我能否編輯提交的信息？</a>
+TOPIC_HELP:
+如果你是注冊用戶，你將可以編輯以前發布的信息，但是這是有時間限制的，即你可以編輯近期發布的信息，但是不能編輯很久以前發布的信息。<br>
+如果你編輯了一條信息，那麼這條信息後面就會出現一段說明，表明這條信息被作者編輯過以及編輯的具體時間。<br>
+如果版主或者系統管理員已經編輯過你的信息，那麼根據不同的論壇設置，你有可能能夠看見相關關于此條信息被編輯過的說明文字，也有可能不能看見相關說明。
+
+TOPIC_TITLE: <a name="mod">什麼是論壇版主和系統管理員？</a> 
+TOPIC_HELP:
+版主是總體管理一個或者幾個論壇的“超級用戶”，他們有權力編輯、刪除帖子，批準或者發布論壇通告。如果你在論壇中看到違犯論壇管理規定的帖子，可以直接和他們聯系。
+如果你對論壇管理有意見和建議也可以向版主反應。<p>
+系統管理員論壇的總管，他有權利做任何事情。所以和他說話時客氣點;-)。系統管理員除了擁有版主的權利以外，還可以批準頭像、分配和刪除定制的標簽、封用戶賬號以及回答各種各樣的關于論壇的問題。
+如果你發現了論壇的bug，請和系統管理員聯系。
+
+TOPIC_TITLE: <a name="cens">什麼是審查制度？</a>
+TOPIC_HELP:
+系統管理員可以選擇審查某些詞，這些詞將自動地被系統管理員提供的詞替換掉。而所有這一切論壇用戶都是不能看到的。
+
+TOPIC_TITLE: <a name="not">當我發布的信息有回復時能得到通知麼？</a> 
+TOPIC_HELP:
+當你發布一個新的主題或者回復一個主題時，你可以選擇（在你填寫個人信息時選擇）當有新的回復時是否通過電子郵件或者ICQ接收通知。你還可以選擇預定沒有回復的主題，如果想預定某個論壇的帖子，請點擊頁面頂端的<b>預定</b>鏈接，此後該論壇一有新的帖子你就能收到相關通知。
+<p>
+如果你不想收到相關回復，那麼在查看相關論壇或者主題時，請點擊<b>退訂</b>鏈接。
+或者直接到個人信息的<b>預定</b>中，從預定論壇和主題列表中刪除相關鏈接。
+<p>
+只有注冊用戶才有收取相關通知的權限。

@@ -1,0 +1,34 @@
+$Id: CHANGES,v 1.6 2004/04/21 16:21:32 joestewart Exp $
+
+Changes Legend...
+
+ B - Bugfix
+ F - Feature Added
+ E - Experimental
+ T - Template changed
+ D - Documentation
+ S - Database Schema
+ R - RELEASE
+ W - General Work on something
+ 9 - Removal of something (kill -9 :)
+
+2004-April 21 11:30AM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[W] - back-end.inc.php - language should follow BE.
+
+2004-April 21 10:00AM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[W] - admin.php, init.inc.php, theme.php, phpslash.inc.php, back-end.inc.php -
+      Coppermine no longer sets it's own cookie all user info is stored in the 
+      php4 session.  Last visit is updated correctly.
+
+2004-April 9 1:30PM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[W] - Initial Import of PSL/BE module changes to Coppermine.
+[R] - Initial alpha release.
+
+2004-April 9 6:30PM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[W] - all themes display correctly.  Added Arabic and Turkish from stable cvs.
+
+2004-April 15 10:30AM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[B] - back-end.inc.php - fixed typo calling add_backend_user();
+
+2004-April 15 3:30PM CDT Joe Stewart <joestewart@users.phpslashforge.org>
+[B] - back-end.inc.php, phpslash.inc.php - fixed last visit updating.

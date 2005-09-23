@@ -1,0 +1,414 @@
+===================================================================================
+
+                CHANGELOG JiNN for eGroupWare
+
+===================================================================================
+
+version 0.5.2pre3
+Mon May 12 01:56:32 CEST 2003
+=============================
+- added checkbox for repeating insert action
+
+
+version 0.5.2pre2
+Mon May 12 01:56:32 CEST 2003
+=============================
+- fixed htmlarea plugin for IE 5.5+ only
+- added htmlarea plugin v3 for mozilla 1.3+ and IE 5.5+
+
+version 0.5.1/0.5.2pre1
+we apr 9  23:14:32 UTC 2003
+===========================
+- completly reorganized all classes
+- removed a lot of ugly code and unneccesary functions
+- lot of performance optimalisation
+- standard message box for info and errors
+- standard header
+- standard redirection
+- added a lot of error messages
+- better (but not ideal) session handleling
+- remember moderator order state
+
+version 0.5.0
+th maa 14 23:34:46 UTC 2003
+===========================
+- Made the setup up to date
+- desided to skip the upgrade process for one more time (From now on, I promise I
+  will provide proper upgrade scripts
+  wrote the attachmentplugin in less then an hour (wow)
+- did a big codecleanup, removed some files
+
+===================================================================================
+version 0.4.4
+- I have desided that we skip 0.4.4 and go right on to release 0.5. This is because
+  of the finish of the hole plugin system which I'm very proud of. I also desided 
+  to release it right now because I just read howto TAG a release in CVS and I'm 
+  longing to try this out ;-) So there nothing to mention for 0.4.4
+
+===================================================================================
+version 0.4.4pre7
+we maa 13 01:45:34 UTC 2003
+===========================
+- finally I have the imagepath-plugin working (not complete, but probably stable) 
+- made some new plugins
+- almost finished the plugin structure
+- fixed bug in display_func.js strValues undefined
+- introduce process plugin
+- wrote/port all the default plugins
+- add type of configvalue in plugins (like yes/no)
+- added a imagemagick class
+
+version 0.4.4pre6
+mo maa 04 01:12:34 UTC 2003
+===========================
+- remove the difference between fip and sfp plugins
+- improved the classes infrastructure
+- test database access function implemented (NOT FINISHED, Though it works)
+- removed some image fields from jinn_site_objects (This will be handled by a plugin)
+- removed some ugly code and unneccesary functions
+- input part of plugins, almost finished
+
+version 0.4.4pre5
+mo feb 24 16.21.21 UTC 2003
+===========================
+- finish import/export function!
+- introduce plugin configuration
+
+version 0.4.4pre4
+date still unknown
+===========================
+- finally learned how to use CVS and so now we're using it
+  hope the rest of this log can be generated from cvs at
+  the release date
+
+version 0.4.4pre3
+mo nov 19 00.05.45 UTC 2002
+===========================
+- completely replaced the old hardcoded name 
+  'contentmanager' for 'jinn'
+- fixed some style faults in admin-screens
+- made the start for the export/import function
+- fixed anoying bug in site-object editting screen in
+  the plugin section
+
+version 0.4.3
+do oct 24 18.00.00 UTC 2002
+===========================
+- redone browse-list layouts (admin and user)
+- browse-list can now change sorting by clicking on header
+- browse-view-configuration almost done (not working yet)
+- redone navigation layouts (admin adn user)
+- much better error reporting for image-handling
+- implemented 'graphical pathfinder' for finding 
+  the right upload-dir
+- also using this for finding 'convert' (not working yet)
+- removed some hardcoded messages
+- fixed bug in acl-mainscreen
+- fixed 'tab'-bug in textarea-plugins
+- fixed: sessions are broken when navigating/now only
+  works with session in cookie (not completely tested)
+- all text via lang() (I think I've changed them all)
+- browse
+    + make use of nextmatch (not using nextmatch we're
+      using our own browse-class, though it's not 
+      completly finished;-( ) 
+    + implement prefences (almost done)
+- preview van image geven (more doc how)
+- added copy-entry-function in browse-list
+- added warning message before deleting or copying a record
+- more dutch translations
+- more english translations
+- dropped config-table
+- dropped some unneccesary fields in object-table and 
+  site-table
+- added new fields for files in object-table
+- redone some lay-outing of the add/edit forms 
+  (not finished yet)
+
+
+version 0.4.3pre1
+wo oct 16 00.28.00 UTC 2002
+===========================
+- removed all hardcoded dutch phrases (I think)
+- started writing documentation
+- dropped out government ;-)
+- removed some unneccesary files
+
+
+version 0.4.2
+mo oct 14 23.59.00 UTC 2002
+===========================
+- gekoppelde site-tabellen (moeilijk) (PRIORITY)
+- fixed 1 with many relation
+- made classes: 
+  class.uiuseraddedit.inc.php
+  class.boplugins.inc.php
+  class.uiuserbrowse.inc.php
+  class.uiadminacl.inc.php
+  class.uiadminaddedit.inc.php
+  class.borelations.inc.php
+- fixed name to show for many with many relations
+- fixed listbox size for many with many relations
+- added some lang-functions
+
+version 0.4.1
+wo oct 9 23.26:00 UTC 2002
+==========================
+- Started with using official versionnummers
+- Installation and updateroutine is working
+- The start is made for formplugins
+	at this time only db-textblobs are supported but this one works nice. 
+	To test this feature I ported the htmlArea-javascript-app which generates a
+	real nice WYSIWYG-editor for textarea's, when selected by the admin
+	Attention, writing/porting plugins is realy easy, just have a look at this 
+	plugin in the plugins/form-directory
+	Idea's for other plugins are: datepicker, colorpicker, uploader, etc...
+- test written plugins ;-)
+- store pluginsetting made in the admin
+- select plugin when setting is found in userform
+- many with many relations are implemented!
+	it's not complete but it's now fully functional
+	The admin can make new mwm-relations and the moderator can use them without
+	knowing he dealing with a mwm-relation (nice)
+- sort listboxes aplhebeticly
+
+
+do oct 4 03:58:00 UTC 2002
+==========================
+- started implementing form-input-plugins
+- ported the htmlarea plugin to have a DHTML-textarea-editor
+- almost finished adminside of the plugins
+
+
+do sep 26 17:00:30 UTC 2002
+===========================
+- relation listboxes are sorting alphabeticly now
+
+
+do sep 19 22:50:29 UTC 2002
+===========================
+- altered field image_dir_url from varchar 50 to 100 to make image previews on
+  testserver possible. Maybe better to make it text immediatly
+- implemented image preview popup
+- added some more error messages for image converting
+- show htmlentities in browse list
+
+
+di jun 25 23:05:46 UTC 2002
+===========================
+- added unofficial navbar icon
+- switching to new log style
+- created roadmap in TODO
+- fixed searching in records
+
+21 jun
+=======
+- switching to English as main development language for todo, changes and comments
+- using versionnumbers, starting with 0.3 ;-)
+- added setup method, egroupware SETUP3 compliant
+- Added GPL-Licence
+- Added languagefiles, though very incomplete
+- added message-box function
+- removed some unnecessary files
+
+20 juni
+=======
+- bij browsen zoekfunctie implemeteren
+- alle links checken op sessiebeheer
+- global's verwijderen en vervangen voor $GLOBALS[.....] VOOR compatibiliteit met laatste php-versie
+- dit controleren
+- gekoppelde site-tabellen (moeilijk) (PRIORITY)
+	- opslagmethode bedenken (PRIORITY)
+	- onderscheid in 1 op veel en veel op veel relaties (PRIORITY)
+	- routines bedenken (PRIORITY)
+	- interface bedenken (PRIORITY)
+	- implementatie (PRIORITY)
+- universele make_option functie
+- bug verwijderd uit get_record_values
+- alles links uitlijnen
+- in admin gedeelte standaard terug komen in het browse venster
+- delete button aan add_edit form toegevoegd
+- bij elke actie een status geven
+
+12 juni
+=======
+- save-mode uploadbug eindelijke verwijderd,
+  denk eraan convert in de root van egroupware
+  te zetten anders mag dit niet worden uitgevoerd
+- bladeren geeft geen bianry data meer
+- bladeren kort te lange strings in
+- Omgang met backslashes en vreemde tekens (PRIORITY)
+
+11 juni
+=======
+- main-menu geeft fout als men in een site object
+  zit van een site en vervolges direct naar een
+  andere site toegaat
+- image toevoegen/wijzigen/deleten routine (PRIORITY)
+- nieuwe image-interface:
+        - onbeperkt aantal images mogelijk mits
+	  TEXT field voor image_path en thumb_path
+	- thumbs optioneel als aangetroffen in table
+	- images en thumbs worden verwijdert door vinkje
+        - imagetype in objecttable
+	- image en thumb size in objecttable
+- fixed: browse to last
+- workaround for obsolete img_path, new field must be
+  named image_path
+- main_menu moet geen add en browse knoppen laten zien
+  als en er geen object_id is
+
+
+10 juni 2002
+===========
+- site administrators can now be maintained
+- add_edit 'if binary' routine voor blob (FIXED)
+- add_edit integer in trital krijgt geen goed veld(textarea) (FIXED)
+
+30 mei 2002
+===========
+- userpersmission administration (PRIORITY) op een klein gebrekje na zie todo
+
+29 mei 2002
+===========
+- Site configuration toegevoegd
+
+28 mei 2002
+===========
+- standaard berichten venster
+		verloopstatus geven voor insert/update en delete routine
+- phpgw tables
+	- objecten:veld voor voor site URL dat kan dienen om direct te previewen
+	- objecten van acl scheiden
+	- objecten: veld voor pad naar upload-directorie
+	- objecten: veld met img- en thumbsizes
+- oude functies wegflikkeren of herschrijven.
+- nieuwe lay-out voor contentmanager meer stadaard aan phpgw themes
+- table onafhankelijk invoer/update formulier maken met bijbehorende tempplates (vergelijkbaar met browse) (misschien schaduw tabel aanmaken bij problemen)
+- alles wat al werkt omzetten naar classes
+- bestanden verwijderen: config.inc.php, nieuws.obj.php, rawimage.php,add_edit.php
+- templates van fouten grafische fouten ontdoen (low priority)
+- administratiebeheer in classes
+  - browse sites
+  - delete site
+  - edit site
+- Standaard header met naam applicate en actie bovin toegevoegd op elke ui-pagina
+- begin gemaakt aan standaard message
+- foutmelding SQL bij browsen trital lag aan localhost
+- foutmelding SQL Sessie beheer bij toevoegen trital  lag aan localhost
+- alle mysql functies eruit gehaald. Wellicht is contentmanager nu al PostgreSQL-compatible
+- nieuwe templates gemaakt en html uit uicontentmanager verwijdert
+
+
+Admin
+- start gemaakt aan browsen, gebruikt nu zelfde template als de rest
+- class opgeruimd
+
+
+23 mei 2002
+===========
+- insert, update, en delete record werken nu grotendeels
+- /n worden omgezet in <br /> en bij wijzigen worden ze weer omgezet weggehaald
+- i-dots heeft nu een favicon
+- hele vevelende nowrap weggehaald wat vooral in Konqueror veel problemen opleverde
+- zodra dit kan is browsen de default actie
+
+
+4 mei 2002
+==========
+- verder uitwerken automatisch gegenereerd formulier
+- begonnen aan de de insert routine
+- begonnen aan algemene functie voor het verweken van data voor insert en
+  update
+
+
+3 mei 2002
+==========
+- opmaak van interface sterk verbeterd
+- bij browse limieten invoeren
+- bij terugkomen limieten handhaven
+- blader / zoek systeem geimplementeerd
+- javascript of weglaten of protocol voor creeren
+- browsen werkt vrijwel helemaal alleen links naar del en edit nog niet
+- begin gemaakt aan het automatisch gegenereerde formulier voor het toevoegen en wijizgen van objecten 
+
+11 apr 2002
+===========
+-start main menu voor programma
+-selectbox voor sites gemaakt (kijkt naar de rechten van de user)
+-selectbox voor objects gemaakt (kijkt naar de rechten van de user)
+-sessionsupport ingebouwd (nog niet af) belangrijk om site en object te onthouden
+-boadmin en soadmin hernoemd naar bocontentmanager en socontentmanager
+
+30 mrt 2002
+===========
+-new site formulier klaar net action boadmin.save_site_data
+-opslaan nieuwe site via boadmin.save_site_data->soadmin.insert_site_data
+
+29 mrt 2002
+===========
+-admin.php aangemaakt en weer verwijderd
+-formulier voor nieuwe site aangemaakt in class.uiadmin.inc.php
+-start gemaakt alles om te zetten in classes
+-start gemaakt met hook_admin
+-default_copyright_header.txt gemaakt voor gebruik van elk bestand
+-intwerp_notities.txt voor gebruik van notities
+-inc/footer.inc.php verwijdert
+-created javascript/display_func.je
+-naam weer terugverandert naar contentmanager
+-tbl sites verandert naar phpgw_contentmanager_sites
+
+28 mrt 2002
+===========
+-nieuws versie v3
+-nieuws ontwerp i-dots conform www.i-dots.nl
+-index.tpl gemaakt voor /admin/templates/i-dots
+-hook_admin
+
+28 feb 2002
+===========
+-bug hersteld in make objectmenu() hard pad
+-templateoplossing voor gerelateerde tabellen zie de TRITAL-CMS
+-objectmenu naar links
+
+
+13 feb 2002
+===========
+-mainmenu maken op basis van objecten (objectbrowser)
+	-objectpagina's in subdirectory
+-template veldennamen meer ruimte geven voor veldinfo
+	fldXXXX
+	   ||_veldtype, index, picure(I,P)
+       |__optioneel/benodigt(O,R)
+-templateroutine maken voor checkboxes en radio's
+-standaard visible checkbox
+-enters zijn nu mogelijk in the body (moet nog goed getest worden)
+-openDbConn() herschreven
+-getRecord() herschreven
+
+
+7  feb 2002
+===========
+-overbodige bestanden weggegooid, nu alleen de functies.old.inc nog
+-alle links naar phpgwlink in nieuws en functions en add_edit
+-links met sessiebeheer
+-bij succesvolle edit terugkomen in browse
+-del implementeren
+-bij del terugkomen bij browse
+-berichtenstructuur maken en doorvoeren
+-berichtenfout herstellen
+-gebruiken van templates
+-bij onsuccesvolle edit terug komen bij edit op het desbetreffende record
+-plaatjes toevoegen editen/deleten
+-automatisch thumnail systeem dat wellicht in te stellen is met hiddenfields
+	thumbnail worden nu altijd gemaakt dus er moet altijd een '_thumb'-field aanwezig zijn als er een blob aanwezig is
+
+5  feb 2002
+===========
+-porten naar 0.9.14
+-templates doorgevoerd voor nieuws
+-begonnen aan taalsysteem
+-edit.php onnodig gemaakt op delete na
+-add_edit gemaakt geheel gebaseerd op post_http_vars !!!
+
+

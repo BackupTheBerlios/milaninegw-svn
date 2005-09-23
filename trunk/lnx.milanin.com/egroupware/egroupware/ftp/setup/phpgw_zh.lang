@@ -1,0 +1,34 @@
+are you sure you want to delete %1 ?	ftp	zh	确定要删除%1吗?
+attempt to create a directory with empty name	ftp	zh	创建的目录名称为空
+cancel	ftp	zh	取消
+cd	ftp	zh	切换目录
+connect	ftp	zh	连接
+create new directory	ftp	zh	新建目录
+delete	ftp	zh	删除
+failed to connect to %1 with user %2 and password %3	ftp	zh	无法使用用户名%2和密码%3连接站点%1
+failed to create directory %1	ftp	zh	无法创建目录%1
+failed to delete %1	ftp	zh	无法删除目录%1
+failed to rename %1 to %2	ftp	zh	无法将%1重命名为%2
+failed to upload %1	ftp	zh	无法上传%1
+ftp client	ftp	zh	FTP客户端
+ftp hostname	ftp	zh	FTP站点主机名
+ftp server	ftp	zh	FTP服务器
+home	ftp	zh	主目录
+log into ftp server	ftp	zh	登录FTP服务器
+logout/relogin	ftp	zh	注销/重登录
+password	ftp	zh	密码
+permissions	ftp	zh	权限
+rename	ftp	zh	重命名
+rename file	ftp	zh	重命名文件
+rename from	ftp	zh	重命名
+rename to	ftp	zh	为
+renamed %1 to %2	ftp	zh	已将%1重命名为%2
+save	ftp	zh	保存
+save to filemanager	ftp	zh	保存至文件管理
+size	ftp	zh	大小
+successfully created directory %1	ftp	zh	已成功创建目录%1
+successfully deleted %1	ftp	zh	已成功删除%1
+successfully uploaded %1	ftp	zh	已成功上传%1
+upload	ftp	zh	上传
+username	ftp	zh	用户名
+view	ftp	zh	查看

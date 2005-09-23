@@ -1,0 +1,75 @@
+Hi....:)... good that one of you three are checkling this...
+
+Difference from the preceding tarball:
+-This text file
+-Comments in addressbook.php
+-The addressbook remembers whatever is in the destination boxes (to,cc and bcc) and this data
+ survives a submit. This is needed since, when you click on a name in the source (where the names resulting from a query appear)
+ , we do a form.submit so we can go and fetch the extra user data from the database -if, and only if, a) U selected ONE name and 
+ b) the More Data checkbox is on
+
+
+TODO:
+- Keep cleaning up and documenting
+- When you click on a name in the destination boxs, say, to select it for removal, this thing does a submit and, so, if u have a single
+  entry in this places, you effectively cannot remove them (its now a documented feature...:P)
+- What should happen is, you click on one of the names in the destination boxes, it does the submit but IT SEARCHES for the extra data
+  AND REMEMBERS your selection in this boxes....it shouldnt be that hard but its very very late (4:30) so im leaving
+
+Please dont hate it, help me improve it.... i think this email clients can be cool and easy to use, lets give this kind of 
+thing a chance to attract new users and developers into the whole project.
+
+Sunday 22 of september
+
+New Stuff:
+- Change the name of this file from addressbook-chnglog.txt to addressbook-js.changelog.txt
+- Changes in selectboxes.js to support a couple of functions we needed for the rest of the changes
+- You now can select a single user from a destination box and his data will be shown in the more data textarea box
+- Formatting changes in the addressbook-js.tpl to make this thing smaller...this was supposed to run in 800x600, now i have no idea how
+  to cram all that inside that
+- The addressbook now remembers everything you clicked regardless of where u did it with the exeptions mentioned in the next section
+
+TODO:
+- Keep cleaning and documenting
+- It would be nice if the destination boxes content didnt die when u hit a category, sometimes u want to send mail to different categories
+- Sleep, but this is no time to do that.... im going to take a crack at a "forward as inline" functionality as a user preference
+
+
+ 
+Monday 23 of september
+- Lots of caching gets performed so that we dont go and fetch the whole thing everytime we click on a name.
+- Bug that made the boxes forget what was in them if u clicked on the more-data button
+- Created preferences for your screensize which controls both the size of the window that gets poped up and the fonts of
+  the html widgets withing them.
+- Your addressbook choice is now a preference
+
+TODO:
+- Keep cleaning and documenting
+- It would be nice if the destination boxes content didnt die when u hit a category, sometimes u want to send mail to different categories
+- Search button still not working...pretty stupid
+- U guys go and test it.... id the behaviour is good, i will move to make it a class.... please check it out... i think its production qualuty...im putting it online about wensday
+
+Wendsday October 9 2002
+- This changelog entry makes up for the last releases of no documenting the changes
+- This thing went into a major overhaul, the js addressbook now is implemented in two classes
+  class.uijsaddressbook and class.bojsaddressbook.
+- The templates also changed as we moved to an event driven model of two frames, one hidden, one shown
+  The shown frame is basicaly what we were using as an index file (addressbook-js.php). The second frame
+  is dynamicaly set byu the event system when it needs to go fetch data from the server.
+- The particular stuff each of this classes provides will be put into angles documentation style
+  once my life is a bit stabler
+- Major changes include the hability to select the fields you want shown for user data, extreme use
+  of caching to improve performance... etc
+
+BUGFIXES:
+- This addressbook now remembers everything with each page submit, actually, it will remember your
+  last selections and queries for the rest of your phpgw session.
+- This thing now uses the event system for most everything that doesnt involve a query to the database (and ill move that as well)
+  this means it cannot forget your selections on any of the relevant boxes unless you requery the database, in which case the present
+  selection of the nameselect box is unimportant and the destboxes are refeched from cache.... this baby rocks....
+
+TODO:
+- I have tons of documentation to do, i know.... its good that tony doesnt live here cause he would probably shoot me
+  since he is so good at it himself... I promise it wont take long.
+
+

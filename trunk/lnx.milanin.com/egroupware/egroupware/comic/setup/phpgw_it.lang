@@ -1,0 +1,41 @@
+%1 by %2	comic	it	%1 di %2
+%1 by %2 (%3)	comic	it	%1 di %2 (%3)
+are you sure you want to reset all comic dates and resolved image urls?	comic	it	Sei sicuro di voler cancellare tutti i dati dei fumetti e le URL delle immagini?
+censorship level	comic	it	Livello Censura
+censorship override enabled	comic	it	Abilita override della censura
+comic	common	it	Fumetti
+comic preferences updated	comic	it	Preferenze Fumetti aggiornate
+comics	common	it	Fumetti
+comics per page	comic	it	Fumetti per pagina
+comics scaled	comic	it	Fumetti Scalati
+daily comic	common	it	Fumetto quotidiano
+daily comic preferences	comic	it	Preferenze Fumetto quotidiano
+daily comics	admin	it	Fumetti Quotidiani
+daily comics - global options	comic	it	Fumetti Quotidiani - Opzioni Generali
+daily comics data	comic	it	Dati sui Fumetti Quotidiani
+daily comics global options	comic	it	Opzioni Generali per Fumetti Quotidiani
+display layout	comic	it	Layout visualizzazione
+display options	comic	it	Opzioni visualizzazione
+egroupware daily comics	comic	it	Fumetti Quotidiani di eGroupWare
+front page comic	comic	it	Fumetto Pagina Principale
+front page comic scaled	comic	it	Fumetto Pagina Principale scalato
+genre	comic	it	Genere
+global comics	comic	it	Fumetti Generali
+global options	comic	it	Opzioni Generali
+global options updated	comic	it	Opzioni Generali aggiornate
+image source	comic	it	Fonte Immagine
+max file size	comic	it	Dimensione Massima File
+my comics	comic	it	i Miei Fumetti
+no_entries	comic	it	nessun elemento
+parser	comic	it	Parser
+performed %1 of element	comic	it	Eseguito %1 dell'elemento
+egroupware daily comics	comic	it	Fumetti Quotidiani di eGroupWare
+random	comic	it	Casuale
+rated	comic	it	Valutazione
+remote (parse/snarf) enabled	comic	it	remote (parse/snarf)
+reset	comic	it	Reset
+reset comic data	admin	it	Reset Dati Fumetti
+resolve	comic	it	Visualizza
+showing %1 (%2 - %3 of %4)	comic	it	visualizzati %1 (%2 - %3 di %4)
+template	comic	it	Template
+visit %1	comic	it	Visita %1

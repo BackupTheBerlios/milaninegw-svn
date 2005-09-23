@@ -1,0 +1,44 @@
+%1 by %2	comic	de	%1 von %2
+%1 by %2 (%3)	comic	de	%1 von %2 (%3)
+are you sure you want to reset all	comic	de	Sind Sie sicher das Sie alle Einstellungen zurücksetzen  möchten
+are you sure you want to reset all comic dates and resolved image urls?	comic	de	Sind Sie sicher das Sie alle Comic Daten und aufgelösten Bild urls zurücksetzen möchten?
+censorship level	comic	de	Altersfreigabe
+censorship override enabled	comic	de	Altersfreigabe überschreiben eingeschalten
+comic	common	de	Comics
+comic preferences updated	comic	de	Comic-Einstellungen aktualisiert
+comics	common	de	Comics
+comics per page	comic	de	Comics pro Seite
+comics scaled	comic	de	Comics eingestuft
+daily comic	common	de	Täglicher Comic
+daily comic preferences	comic	de	Täglicher Comic - Einstellungen
+daily comics	admin	de	Tägliche Comics
+daily comics - global options	comic	de	Tägliche Comics - Globale Optionen
+daily comics data	comic	de	Tägliche Comics Daten
+daily comics global options	comic	de	Tägliche Comics globale Einstellungen
+display layout	comic	de	Layout der Anzeige
+display options	comic	de	Anzeige Optionen
+egroupware daily comics	comic	de	eGroupWare tägliche Comics
+front page comic	comic	de	Front Page Comic
+front page comic scaled	comic	de	Front Page Comic skaliert
+genre	comic	de	Genre
+global comics	admin	de	Globale Comics
+global comics	comic	de	Globale Comics
+global options	admin	de	Globale Optionen
+global options	comic	de	Globale Optionen
+global options updated	comic	de	Globale Optionen upgedated
+image source	comic	de	Bildquelle
+max file size	comic	de	Maximale Dateigrösse
+my comics	comic	de	Meine Comics
+no_entries	comic	de	keine Einträge
+parser	comic	de	Parser
+performed %1 of element	comic	de	Durchgeführt %1 des Elements
+egroupware daily comics	comic	de	eGroupWare tägliche Comics
+random	comic	de	Gelegentlich
+rated	comic	de	Eingestuft
+remote (parse/snarf) enabled	comic	de	Remote (parse/snarf)
+reset	comic	de	Zurücksetzen
+reset comic data	admin	de	Comic-Einstellung zurücksetzen
+resolve	comic	de	Empfangen
+showing %1 (%2 - %3 of %4)	comic	de	anzeigen %1 (%2 - %3 von %4)
+template	comic	de	Template
+visit %1	comic	de	Besucht %1

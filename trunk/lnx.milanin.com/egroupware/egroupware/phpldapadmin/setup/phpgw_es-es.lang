@@ -1,0 +1,119 @@
+add	phpldapadmin	es-es	Añadir
+add_a_jpeg_photo	phpldapadmin	es-es	Añadir una foto jpeg
+add_new	phpldapadmin	es-es	Añadir nuevo
+add_new_attribute	phpldapadmin	es-es	Añadir nuevo atributo
+add_new_attribute_tooltip	phpldapadmin	es-es	Añadir un nuevo atributo o valor a esta entrada
+add_new_binary_attr	phpldapadmin	es-es	Añadir nuevo atributo binario
+add_new_binary_attr_tooltip	phpldapadmin	es-es	Añadir un nuevo atributo binario de un fichero
+add_oclass_and_attrs	phpldapadmin	es-es	Añadir ObjectClass y atributos
+add_value	phpldapadmin	es-es	añadir valor
+add_value_tooltip	phpldapadmin	es-es	Añadir un valor adicional a este atributo
+advanced_search_form_str	phpldapadmin	es-es	Formulario de búsqueda avanzada
+alias_for	phpldapadmin	es-es	Alias para
+bad_server_id	phpldapadmin	es-es	Id de servidor erróneo
+base_dn	phpldapadmin	es-es	DN Base
+binary_value	phpldapadmin	es-es	Valor binario
+change_entry_rdn	phpldapadmin	es-es	Cambiar el RDN de esta entrada
+chooser_link_tooltip	phpldapadmin	es-es	Pulsar para mostrar un diálogo y seleccionar una entrada (DN) gráficamente
+click_to_display	phpldapadmin	es-es	Pulsar para mostrar
+contains	phpldapadmin	es-es	contiene
+copy_this_entry	phpldapadmin	es-es	Copiar esta entrada
+copy_this_entry_tooltip	phpldapadmin	es-es	Copiar este objeto a otra ubicación, un nuevo DN u otro servidor
+could_not_connect	phpldapadmin	es-es	No se puedo conectar al servidor LDAP
+could_not_determine_root	phpldapadmin	es-es	No se pudo determinar la raíz del árbol LDAP
+could_not_perform_ldap_mod_add	phpldapadmin	es-es	No se pudo realizar la operación ldap_mod_add
+create	phpldapadmin	es-es	crear
+create_a_child_entry	phpldapadmin	es-es	Crear una entrada hijo
+create_new	phpldapadmin	es-es	Crear nueva
+create_new_entry_in	phpldapadmin	es-es	Crear una nueva entrada dentro de
+create_new_entry_on	phpldapadmin	es-es	Crear una nueva entrada sobre
+current_list_of	phpldapadmin	es-es	Lista actual de
+delete_attribute	phpldapadmin	es-es	Borrar atributo
+delete_hint	phpldapadmin	es-es	Consejo: <b>Para borrar un atributo</b>, vacíe el campo de texto y pulse guardar.
+delete_this_entry	phpldapadmin	es-es	Borrar esta entrada
+delete_this_entry_tooltip	phpldapadmin	es-es	Se le pedirá que confirme esta decisión
+desc	phpldapadmin	es-es	Descripción
+distinguished_name	phpldapadmin	es-es	Nombre distinguido
+download_value	phpldapadmin	es-es	Descargar valor
+ends_with	phpldapadmin	es-es	Acaba en
+enter_value_to_add	phpldapadmin	es-es	Introduzca el valor que le gustaría añadir
+entry_attributes	phpldapadmin	es-es	Atributos de la entrada
+equals	phpldapadmin	es-es	es igual a
+export_subtree_to_ldif	phpldapadmin	es-es	Exportar rama a LDIF
+export_subtree_to_ldif_tooltip	phpldapadmin	es-es	Guardar un volcado LDIF de este objeto y todos sus hijos
+export_to_ldif	phpldapadmin	es-es	Exportar a LDIF
+export_to_ldif_mac	phpldapadmin	es-es	Finales de línea estilo Macintosh
+export_to_ldif_tooltip	phpldapadmin	es-es	Guardar un volcado de este objeto
+export_to_ldif_unix	phpldapadmin	es-es	Finales de línea estilo unix
+export_to_ldif_win	phpldapadmin	es-es	Finales de línea estilo windows
+false	phpldapadmin	es-es	falso
+hidden	phpldapadmin	es-es	oculto
+hide_internal_attrs	phpldapadmin	es-es	Ocultar atributos internos
+import	phpldapadmin	es-es	importar
+import_from_ldif	phpldapadmin	es-es	importar entradas de un fichero LDIF
+inappropriate_matching_note	phpldapadmin	es-es	Nota: verá un error "coincidencia inapropiada" si no ha configurado una regla de <tt>IGUALDAD</tt> en su servidor LDAP para el atributo
+info	phpldapadmin	es-es	información
+inherits	phpldapadmin	es-es	herencias
+internal_attributes	phpldapadmin	es-es	Atributos internos
+internal_attrs_tooltip	phpldapadmin	es-es	Atributos puestos automáticamente por el sistema
+is_obsolete	phpldapadmin	es-es	Esta clase de objeto está <b>obsoleta</b>
+jump_to_attr	phpldapadmin	es-es	Saltar a un atributo
+jump_to_objectclass	phpldapadmin	es-es	Saltar a una clase de objeto
+jump_to_this_oclass	phpldapadmin	es-es	Saltar a una definición de clase de objeto
+ldap_refuses_to_give_root	phpldapadmin	es-es	Para que el servidor LDAP ha sido configurado para no revelar su raíz.
+logged_in_as	phpldapadmin	es-es	Sesión iniciada como:
+logout	phpldapadmin	es-es	Cerrar sesión
+logout_of_this_server	phpldapadmin	es-es	Cerrar la sesión en este servidor
+matching_rule_oid	phpldapadmin	es-es	Regla de coincidencia OID
+new_attributes	phpldapadmin	es-es	nuevos atributos
+new_required_attrs	phpldapadmin	es-es	Nuevos atributos requeridos
+new_required_attrs_instructions	phpldapadmin	es-es	Instrucciones: para añadir la clase de objeto para esta entrada, debe especificar
+new_required_attrs_note	phpldapadmin	es-es	Nota: es posible que se le pida introducir nuevos atributos<br />que necesita esta clase de objeto
+no_new_attrs_available	phpldapadmin	es-es	No hay atributos nuevos disponibles para esta entrada
+no_updates_in_read_only_mode	phpldapadmin	es-es	No se pueden realizar actualizaciones mientras el servidor está en modo de sólo lectura
+none	phpldapadmin	es-es	ninguno
+none_remove_value	phpldapadmin	es-es	ninguno, borrar valor
+not_enough_login_info	phpldapadmin	es-es	No hay suficiente información para iniciar la sesión en el servidor. Por favor, comprueba su configuración.
+oid	phpldapadmin	es-es	OID
+optional_attrs	phpldapadmin	es-es	Atributos opcionales
+please_specify_in_config	phpldapadmin	es-es	Por favor, especifíquelo en config.php
+read_only	phpldapadmin	es-es	sólo lectura
+really_delete_attribute	phpldapadmin	es-es	Borrar realmetne el atributo
+refresh	phpldapadmin	es-es	referescar
+refresh_expanded_containers	phpldapadmin	es-es	Refrescar todos los contenedores para
+refresh_this_entry	phpldapadmin	es-es	Refrescar esta entrada
+rename	phpldapadmin	es-es	Renombrar
+rename_entry	phpldapadmin	es-es	Renombrar entrada
+report_bug	phpldapadmin	es-es	Informar sobre un fallo
+request_new_feature	phpldapadmin	es-es	Solicitar una característica nueva
+required_attrs	phpldapadmin	es-es	Atributos requeridos
+requires_to_add	phpldapadmin	es-es	La acción requiere que añada
+save_changes	phpldapadmin	es-es	Guardar cambios
+schema	phpldapadmin	es-es	esquema
+schema_for_server	phpldapadmin	es-es	Esquema para el servidor
+search	phpldapadmin	es-es	buscar
+search_ filter	phpldapadmin	es-es	Filtro de búsqueda
+search_for_entries_whose	phpldapadmin	es-es	Buscar entradas cuyo
+search_scope	phpldapadmin	es-es	Ambito de búsqueda
+see_open_bugs	phpldapadmin	es-es	ver fallos abiertos
+see_open_requests	phpldapadmin	es-es	ver solicitudes abiertas
+server	phpldapadmin	es-es	Servidor
+show_attributes	phpldapadmin	es-es	Mostrar atributos
+show_internal_attrs	phpldapadmin	es-es	Mostrar atributos internos
+simple_search_form_str	phpldapadmin	es-es	Formulario de búsqueda simple
+sounds_like	phpldapadmin	es-es	suena como
+starts_with	phpldapadmin	es-es	empieza por
+syntax	phpldapadmin	es-es	Sintaxis
+syntax_oid	phpldapadmin	es-es	Sintaxis OID
+that_this_oclass_requires	phpldapadmin	es-es	que esta clase de objeto requiere. Puede hacerlo en este formulario.
+the_following_attributes	phpldapadmin	es-es	Los siguientes <b>tipos de atributo</b> están soportados por el servidor LDAP.
+the_following_matching	phpldapadmin	es-es	Las siguientes <b>reglas de coincidencia</b> están soportadas por el servidor LDAP.
+the_following_objectclasses	phpldapadmin	es-es	Las siguientes <b>clases de objetos</b> están soportadas por el servidor LDAP
+the_following_syntaxes	phpldapadmin	es-es	Las siguientes <b>sintaxis</b> están soportadas por el servidor LDAP.
+true	phpldapadmin	es-es	verdadero
+value_to	phpldapadmin	es-es	valor a
+values_for_attribute	phpldapadmin	es-es	valores para el atributo
+view	phpldapadmin	es-es	Ver
+view_schema_for	phpldapadmin	es-es	Ver esquema para
+view_server_info	phpldapadmin	es-es	Ver la información proporcionada por el servidor
+viewing_read_only	phpldapadmin	es-es	Ver la entrada en modo de sólo lectura.

@@ -1,0 +1,120 @@
+add	phpldapadmin	pt-br	Adicionar
+add_a_jpeg_photo	phpldapadmin	pt-br	Adicionar Imagem jpeg
+add_new	phpldapadmin	pt-br	Adicionar novo
+add_new_attribute	phpldapadmin	pt-br	Adicionar Novo Atributo
+add_new_attribute_tooltip	phpldapadmin	pt-br	Adicionar um novo atributo/valor para este registro
+add_new_binary_attr	phpldapadmin	pt-br	Adicionar um novo atributo binário
+add_new_binary_attr_tooltip	phpldapadmin	pt-br	Adicionar um novo atributo ou valor binário para um arquivo
+add_oclass_and_attrs	phpldapadmin	pt-br	Adicionar uma Classe de objeto e atributos
+add_value	phpldapadmin	pt-br	adicionar valor
+add_value_tooltip	phpldapadmin	pt-br	Adicionar um valor complementar para este atributo
+advanced_search_form_str	phpldapadmin	pt-br	Formulário para pesquisa avançada
+alias_for	phpldapadmin	pt-br	Redirecionamento para
+bad_server_id	phpldapadmin	pt-br	Id do servidor incorreto
+base_dn	phpldapadmin	pt-br	Base DN
+binary_value	phpldapadmin	pt-br	Valor binário
+change_entry_rdn	phpldapadmin	pt-br	Alterar esta entrada RDN
+chooser_link_tooltip	phpldapadmin	pt-br	Clique na janela instantânea para selecionar graficamente um registro DN
+click_to_display	phpldapadmin	pt-br	clique para visualizar
+contains	phpldapadmin	pt-br	conteúdo
+copy_this_entry	phpldapadmin	pt-br	copiar este registro
+copy_this_entry_tooltip	phpldapadmin	pt-br	Copiar este objeto para outro local, um novo DN, ou outro servidor.
+could_not_connect	phpldapadmin	pt-br	Não foi possível conectar ao servidor LDAP.
+could_not_determine_root	phpldapadmin	pt-br	Não foi possível determinar o diretório principal (root) da árvore LDAP.
+could_not_perform_ldap_mod_add	phpldapadmin	pt-br	Não foi possível executar a operação ldap_mod_add
+create	phpldapadmin	pt-br	criar
+create_a_child_entry	phpldapadmin	pt-br	Criar uma entrada filha
+create_new	phpldapadmin	pt-br	Criar nova
+create_new_entry_in	phpldapadmin	pt-br	Criar uma nova entrada em
+create_new_entry_on	phpldapadmin	pt-br	Criar uma nova entrada no
+current_list_of	phpldapadmin	pt-br	Lista atual de
+delete_attribute	phpldapadmin	pt-br	apagar atributo
+delete_hint	phpldapadmin	pt-br	Sugestão: <b>Para apagar um atributo</b>, remova o conteúdo do campo de texto e clique em salvar.
+delete_this_entry	phpldapadmin	pt-br	Apagar este registro
+delete_this_entry_tooltip	phpldapadmin	pt-br	Você será alertado para confirmar sua decisão.
+desc	phpldapadmin	pt-br	Descrição
+distinguished_name	phpldapadmin	pt-br	Nome diferente
+download_value	phpldapadmin	pt-br	download
+ends_with	phpldapadmin	pt-br	termina com
+enter_value_to_add	phpldapadmin	pt-br	Informe o valor a ser adicionado
+entry_attributes	phpldapadmin	pt-br	Registro dos atributos
+equals	phpldapadmin	pt-br	iguais
+export_subtree_to_ldif	phpldapadmin	pt-br	Exporar diretórios inferiores para LDIF
+export_subtree_to_ldif_tooltip	phpldapadmin	pt-br	Salvar uma cópia em LDIF deste objeto e todos os filhos.
+export_to_ldif	phpldapadmin	pt-br	Exportar para LDIF
+export_to_ldif_mac	phpldapadmin	pt-br	Fim de linha estilo Macintosh
+export_to_ldif_tooltip	phpldapadmin	pt-br	Salvar uma cópia LDIF para este objeto
+export_to_ldif_unix	phpldapadmin	pt-br	Fim de linha estilo Unix
+export_to_ldif_win	phpldapadmin	pt-br	Fim de linha estilo Windows
+false	phpldapadmin	pt-br	falso
+hidden	phpldapadmin	pt-br	oculto
+hide_internal_attrs	phpldapadmin	pt-br	Ocultar atributos internos
+import	phpldapadmin	pt-br	importar
+import_from_ldif	phpldapadmin	pt-br	Importar registros para um arquivo LDIF
+inappropriate_matching_note	phpldapadmin	pt-br	Nota: Você receberá um erro de "combinação imprópria" caso não<br />configure uma <tt>regra de IGUALDADE</tt> para o seu servidor LDAP para este atributo.
+info	phpldapadmin	pt-br	info
+inherits	phpldapadmin	pt-br	Herdar
+internal_attributes	phpldapadmin	pt-br	Atributos internos
+internal_attrs_tooltip	phpldapadmin	pt-br	Configurar atributos automáticamente pelo sistema
+is_obsolete	phpldapadmin	pt-br	Esta Classe / Objeto está <b>obsoleta</b>
+jump_to_attr	phpldapadmin	pt-br	Avançar até um atributo
+jump_to_objectclass	phpldapadmin	pt-br	Avançar até uma Classe / Objeto
+jump_to_this_oclass	phpldapadmin	pt-br	Avançar até a definição desta Clsse / Objeto
+ldap_refuses_to_give_root	phpldapadmin	pt-br	Aparentemente o servidor LDAP está configurado para não revelar sua raiz (root)
+logged_in_as	phpldapadmin	pt-br	Conectado como:
+logout	phpldapadmin	pt-br	Desconectar
+logout_of_this_server	phpldapadmin	pt-br	Desconectar deste servidor
+matching_rule_oid	phpldapadmin	pt-br	Combinando regras OID
+new_attributes	phpldapadmin	pt-br	novos atributos
+new_required_attrs	phpldapadmin	pt-br	Novos atributos obrigatórios
+new_required_attrs_instructions	phpldapadmin	pt-br	Instruções: Antes de adicionar Classes / Objetos a este registro, você deve especificar
+new_required_attrs_note	phpldapadmin	pt-br	Nota: Você pode ser solicitado a digitar novos atributos<br /> que estas Classes / Ojetos necessitam.
+no_new_attrs_available	phpldapadmin	pt-br	não há novos atributos disponíveis para este registro
+no_updates_in_read_only_mode	phpldapadmin	pt-br	Você não pode executar atualizações enquanto o servidor estiver em modo "apenas leitura".
+none	phpldapadmin	pt-br	nenhum
+none_remove_value	phpldapadmin	pt-br	nenhum, remover valor
+not_enough_login_info	phpldapadmin	pt-br	Não há informação para conexão ao servidor. Por favor verifique sua configuração.
+oid	phpldapadmin	pt-br	OID
+optional_attrs	phpldapadmin	pt-br	Atributos opcionais
+phpldapadmin	common	pt-br	Admin do LDAP
+please_specify_in_config	phpldapadmin	pt-br	Especifique dentro do arquivo config.php
+read_only	phpldapadmin	pt-br	Leitura apenas
+really_delete_attribute	phpldapadmin	pt-br	Realmente apagar atributo
+refresh	phpldapadmin	pt-br	atualizar
+refresh_expanded_containers	phpldapadmin	pt-br	Atualizar todo o conteúdo expandido para
+refresh_this_entry	phpldapadmin	pt-br	Atualizar este registro
+rename	phpldapadmin	pt-br	Renomear
+rename_entry	phpldapadmin	pt-br	Renomear registro
+report_bug	phpldapadmin	pt-br	Reportar um bug
+request_new_feature	phpldapadmin	pt-br	Solicitar uma nova característica
+required_attrs	phpldapadmin	pt-br	Atributos obrigatórios
+requires_to_add	phpldapadmin	pt-br	Esta ação é obrigatória para você adicionar
+save_changes	phpldapadmin	pt-br	Salvar alterações
+schema	phpldapadmin	pt-br	esquema
+schema_for_server	phpldapadmin	pt-br	Esquema para o servidor
+search	phpldapadmin	pt-br	Pesquisar
+search_ filter	phpldapadmin	pt-br	Filtro para pesquisa
+search_for_entries_whose	phpldapadmin	pt-br	Pesquisar por entradas nas quais
+search_scope	phpldapadmin	pt-br	Escopo da pesquisa
+see_open_bugs	phpldapadmin	pt-br	Visualizar bugs abertos
+see_open_requests	phpldapadmin	pt-br	Visualizar solicitações abertas
+server	phpldapadmin	pt-br	Servidor
+show_attributes	phpldapadmin	pt-br	Mostrar Atributos
+show_internal_attrs	phpldapadmin	pt-br	Mostrar atributos internos
+simple_search_form_str	phpldapadmin	pt-br	Formulário de pesquisa -  Simples
+sounds_like	phpldapadmin	pt-br	Soa como
+starts_with	phpldapadmin	pt-br	Iniciando com
+syntax	phpldapadmin	pt-br	Sintaxe
+syntax_oid	phpldapadmin	pt-br	Sintaxe OID
+that_this_oclass_requires	phpldapadmin	pt-br	isto que esta classe / objetos precisa. Você pode informar neste formulário.
+the_following_attributes	phpldapadmin	pt-br	Os <b>tipos de atributos</b> a seguir são suportados por este servidor LDAP.
+the_following_matching	phpldapadmin	pt-br	As <b>regras de combinação</b> a seguir são suportadas por este servidor LDAP.
+the_following_objectclasses	phpldapadmin	pt-br	As <b>classes / Objetos</b> a seguir são suportadas por este servidor LDAP.
+the_following_syntaxes	phpldapadmin	pt-br	As <b>sintaxes</b> a seguir são suportadas por este servidor LDAP.
+true	phpldapadmin	pt-br	verdadeiro
+value_to	phpldapadmin	pt-br	valor para
+values_for_attribute	phpldapadmin	pt-br	valores para os atributos
+view	phpldapadmin	pt-br	Visualizar
+view_schema_for	phpldapadmin	pt-br	Visualizar o esquema para
+view_server_info	phpldapadmin	pt-br	Visualizar informação disponível do servidor
+viewing_read_only	phpldapadmin	pt-br	Visualizar registros em modo de leitura apenas.

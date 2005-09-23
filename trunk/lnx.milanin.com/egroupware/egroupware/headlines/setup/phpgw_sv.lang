@@ -1,0 +1,48 @@
+are you sure you want to delete this news site ?	headlines	sv	Vill du verkligen radera siten?
+base url	headlines	sv	Bas URL
+basic	headlines	sv	Grunläggande
+choose layout	headlines	sv	Välj layout
+color	headlines	sv	Färg
+create new headline	headlines	sv	Skapa rubrik
+current headlines in cache	headlines	sv	Aktuella rubriker i cachen
+display	headlines	sv	Site
+edit headline sites	headlines	sv	Redigera nyhetssiter
+edit headlines shown by default	headlines	sv	Redigera standard rubriker
+grab new news sites	common	sv	Hämta nya nyhetssiter
+gray	headlines	sv	Grå
+headline preferences	common	sv	Rubrik alternativ
+headline site management	common	sv	Site hantering
+headline sites	headlines	sv	Rubriksiter
+headlines	common	sv	Rubriker
+headlines administration	headlines	sv	Rubrik administration
+headlines administration - delete headline	headlines	sv	Rubrik administration - radera site
+headlines layout	headlines	sv	Rubrik layout
+listings displayed	headlines	sv	Antal rubriker
+minutes between refresh	headlines	sv	Minuter mellan uppdatering
+minutes between reloads	headlines	sv	Minuter mellan uppdatering
+monitor	common	sv	Monitorera
+news file	headlines	sv	Nyhetsfil
+news from x	headlines	sv	Nyheter från x
+news headlines	common	sv	Nyhets rubriker
+news type	headlines	sv	Nyhetstyp
+no headlines found	headlines	sv	Inga rubriker funna
+other preferences	preferences	sv	Övriga inställningar
+reload news sites	headlines	sv	Uppdatera nyhetssiter
+reset	headlines	sv	Återställ
+sample	headlines	sv	Exempel
+select headline news sites	headlines	sv	Välj nyhetssiter
+select headlines to display	common	sv	Välj nyhetssiter
+select layout	common	sv	Välj layout
+show headlines on homepage	headlines	sv	Visa rubriker på Startsidan
+site	headlines	sv	Site
+that site has already been entered	headlines	sv	Siten finns redan
+unable to retrieve links	headlines	sv	Kunde inte hämta länkar
+update headline	headlines	sv	Redigera
+view headline	headlines	sv	Sammanfattning
+you can only enter numbers for listings display	headlines	sv	Ange i nummer antal visade rubriker
+you can only enter numbers minutes between refresh	headlines	sv	Ange i nummer antal minuter mellan uppdatering
+you must enter a base url	headlines	sv	Ange bas URL
+you must enter a display	headlines	sv	Ange en display
+you must enter a news url	headlines	sv	Ange nyhetssite
+you must enter the number of listings display	headlines	sv	Ange antal visade rubriker
+you must enter the number of minutes between reload	headlines	sv	Ange i nummer antal minuter mellan uppdatering

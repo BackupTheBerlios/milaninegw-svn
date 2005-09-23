@@ -1,0 +1,218 @@
+%1 site objects have been imported.	jinn	sl	Uvoženih je bilo %1 objektov spletnega mesta.
+access rights	jinn	sl	Pravice dostopa
+access rights for site not succesfully editted	jinn	sl	Pravice dostopa do spletišča NISO bile uspešno sprejenjene
+access rights for site succesfully editted	jinn	sl	Pravice dostopa do spletišča so bile uspešno spremenjene
+access rights for site-object not succesfully editted	jinn	sl	Pravice dostopa do spletnega objekta NISO bile uspešno spremenjene
+access rights for site-object succesfully editted	jinn	sl	Pravice dostopa do spletnega mesta so bile uspešno spremenjene
+access rights site-objects	jinn	sl	Pravice dostopa do spletnih mest
+access_rights	jinn	sl	pravice_dostopa
+add	jinn	sl	dodaj
+add %1st image	jinn	sl	dodaj %1. sliko
+add attachent	jinn	sl	dodaj priponko
+add attachment	jinn	sl	dodaj priponko
+add attachment %1	jinn	sl	dodaj priponko %1
+add edit	jinn	sl	Dodaj urejanje
+add image	jinn	sl	dodaj sliko
+add image %1	jinn	sl	dodaj sliko %1
+add multiple records	jinn	sl	Dodaj večkraten zapis
+add new	jinn	sl	Dodaj novo
+add new entry	jinn	sl	Dodaj nov vnos
+add new many with many relation	jinn	sl	Dodaj novo VEČ DO VEČ relacijo
+add new one with many	jinn	sl	Dodaj novo EDEN DO VEČ relacijo
+add object	jinn	sl	Dodaj objekt
+add or remove	jinn	sl	Dodaj ali odstrani
+add site	jinn	sl	Dodaj spletišče
+add site object	jinn	sl	Dodaj spleten objekt
+add site-object	jinn	sl	Dodaj spleten objekt
+admin:: edit site	jinn	sl	admin::urejanje spletišča
+administrator mode	jinn	sl	Administratorski način
+administrators for site $site_name	jinn	sl	Administratorji za spletišče $site_name
+all from	jinn	sl	vsi iz
+another	jinn	sl	drug
+are you sure?	jinn	sl	Ste prepričani?
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	sl	Datoteka s priponkami ne obstaja, niti ga ne morem izdelati. <br>Prosim, preverite mapo za nalaganje v objektu:
+automatic	jinn	sl	avtomatično
+binary	jinn	sl	binarno
+browse	jinn	sl	Brskaj
+browse current object	jinn	sl	Brskaj aktivni objekt
+browse sites	jinn	sl	Brskaj po spletiščih
+browse through object settings	admin	sl	Brskaj po nastavitvah objektov
+browse through sites	jinn	sl	Brskaj po spletiščih
+browses through sites	admin	sl	Brskanje po spletiščih
+c_all	jinn	sl	c_all
+c_none	jinn	sl	c_none
+cancel	jinn	sl	Prekini
+category	jinn	sl	Kategorija
+check:	jinn	sl	preveri
+choose	jinn	sl	izberi
+close this window	jinn	sl	zapri to okno
+column name	jinn	sl	ime stolpca
+come back after new valid tablename is saved to configure plugins	jinn	sl	Vrni se, ko bo novo veljavno ime tabele shranjeno za prilagajanje pluginov.
+come back in edit mode for configuring plugins	jinn	sl	Vrni se v načinu za urejanje za konfiguriranje pluginov.
+come back in edit mode to configure plugins	jinn	sl	Vrni se v načinu za urejanje za konfiguriranje pluginov.
+configure	jinn	sl	Konfiguriranje
+configure browse view	jinn	sl	Konfiguriranje pogleda za brskanje
+configure this object list view	jinn	sl	Konfiguriranje seznamskega pogleda tega seznama
+configure this tableview	jinn	sl	Konfiguriraj pogled te tabele
+configure this view	jinn	sl	Konfiguriraj ta pogled
+configure view of	jinn	sl	Konfiguriraj pogled za
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	sl	Pot do orodja Convert od ImageMagick (npr. /usr/X11R6/bin/convert )
+copy	jinn	sl	kopiraj
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	sl	Ne najdem nobenih tabel. Preverite ime podatkovne baze, uporabniško ime za dostop ali ustvarite eno ali več tabel v podatkovni bazi.
+database connection failed! <p>please recheck your settings.	jinn	sl	Povezava s podatkovno bazo ni uspela. <br> Prosim, preverite nastavitve.
+database connection was succesfull. <p>you can go on with the site-objects	jinn	sl	Povezava s podatkovno bazo je uspela. <br> Lahko nadaljujete s spletnimi objekti.
+days	jinn	sl	dni
+default image type (jpg, gif, png)	admin	sl	Privzeti tip slik (jpg, gif, png)
+default image width	admin	sl	Privzeta širina slik
+default order	jinn	sl	Privzet vrstni red
+default thumb width	admin	sl	Privzeta širina predogleda
+default:	jinn	sl	privzeto:
+delete	jinn	sl	Briši
+dev site db host	jinn	sl	Strežnik s testno (razvojno) podatkovno bazo
+dev site db name	jinn	sl	Ime  testne (razvojne) podatkovne baze
+dev site db password	jinn	sl	Geslo za testno (razvojno) podatkovno bazo
+dev site db type	jinn	sl	Tip testne (razvojne) podatkovne baze
+dev site db user	jinn	sl	Uporabniško ime za testno (razvojno) podatkovno bazo
+dev upload path	jinn	sl	Pot za nalaganje testnega (razvojnega) spletnega mesta
+developer links	jinn	sl	Povezave za razvijalce
+development	admin	sl	Razvoj
+development server	jinn	sl	Razvojni strežnik
+dimensions	jinn	sl	dimenzije
+edit	jinn	sl	urejanje
+edit this site	jinn	sl	Urejanje tega spletišča
+edit this site object	jinn	sl	Urejanje tega spletnega objekta
+editors for object $object_name in site $site_name	jinn	sl	urejevalniki za objekt $object_name v spletišču $site_name
+editors for object %1 in site %2	jinn	sl	urejevalniki za objekt %1 v spletišču %2
+error path_open %1	jinn	sl	Napaka path_open %1
+export this site	jinn	sl	Izvozi to spletišče
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	sl	Neuspešno odpiranje tabele. Prosim, preverite, če tabela <i>%1</i> še obstaja v podatkovni bazi.
+field plugin configuration	jinn	sl	konfiguracija vtiča za polje
+fields	jinn	sl	polja
+filename	jinn	sl	ime datoteke
+filesize	jinn	sl	velikost datoteke
+form input plugin	jinn	sl	vtič za podatke iz forme
+general preferences	jinn	sl	Splošne lastnosti
+general settings	admin	sl	Splošne nastavitve
+global configuration	jinn	sl	Globalna konfiguracija
+global site configuration	admin	sl	Globalna konfiguracija spletišča
+go	jinn	sl	Pojdi
+height:	jinn	sl	Višina
+hidden	jinn	sl	skrit
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	sl	Mapa s slikami ne obstaja ali ni pravilna.. .<br> Prosim, preverite objektovo mapo za nalaganje.
+image settings	admin	sl	Nastavitve slik
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	sl	Mapa z ImageMagick (npr. /usr/X11R6/bin )
+import failed	jinn	sl	Uvoz neuspešen
+import jinn site	jinn	sl	Uvoz JiNN spletišča.
+import jinn-site	jinn	sl	Uvoz JiNN spletišča.
+import site	jinn	sl	Uvoz spletišča.
+import was succesfull	jinn	sl	Uvoz je bil uspešen.
+import was succesfull<br>imported one site with	jinn	sl	Uvoz je bil uspešen.<br> Uvoženo eno spletno mesto s
+index	jinn	sl	kazalo
+insert another record after saving	jinn	sl	Po shranjevanju vnesi nov zapis
+jinn	common	sl	JiNN
+jinn editors menu	jinn	sl	JiNN menu urejevalnikov
+jinn preferences	jinn	sl	JiNN nastavitve
+max records	jinn	sl	Max. zapisov
+max. number of previews in form	jinn	sl	Max. število predogledov na formo
+maximum image width isn	jinn	sl	Maksimalna širina slike
+moderator mode	jinn	sl	Moderatorski način
+months	jinn	sl	mesecev
+months_abbr	jinn	sl	okrajšave_mesecev
+new image size limits.	jinn	sl	Omejitve velikosti nove slike
+no matchs found	jinn	sl	Ni najdenih zadetkov.
+no max. number	jinn	sl	Ni maks. števila.
+normal view	jinn	sl	Normalen pogled
+object id	jinn	sl	Id objekta
+only if thumnails exits	jinn	sl	Le, če predogeldi obstajajo
+parent site id	jinn	sl	ID nadrejenega spletišča
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	sl	Pot za prevajanje iz ImageMagick (npr. /usr/X11R6/bin )
+please set your preferences for this application	jinn	sl	Prosim, uredite nastavitve za to apliakcijo.
+preview thumbs or images in form	jinn	sl	Predogled slik v formi
+preview website	jinn	sl	Predogled spletišča
+production	admin	sl	Produkcija
+real value	jinn	sl	realna vrednost
+record	jinn	sl	zapis
+record added succesfully	jinn	sl	Zapis je bil uspešno dodan
+record deleted succesfully	jinn	sl	Zapis je bil uspešno izbrisan
+record not succesfully copied. unknown error	jinn	sl	Zapis NI bil uspešno prekopiran. Neznana napaka.
+record not succesfully deleted. unknown error	jinn	sl	Zapis NI bil uspešno izbrisan. Neznana napaka.
+record succesfully copied	jinn	sl	Zapis uspešno prekopiran.
+record succesfully deleted	jinn	sl	Zapis uspešno izbrisan.
+record succesfully editted	jinn	sl	Zapis uspešno popravljen.
+related	jinn	sl	v relaciji
+relation %1	jinn	sl	relacija %1
+relations for this object	jinn	sl	Relacije za ta objekt
+remote	admin	sl	Oddaljen
+remove	jinn	sl	odstrani
+replace existing site with the same name?	jinn	sl	Zamenjam spletišče z istim imenom?
+replaced existing site named <strong>%1</strong>.	jinn	sl	Zamenjano je bilo spletišče z imenom <strong>%1</strong>.
+reset form	jinn	sl	izprazni formo
+save	jinn	sl	shrani
+search	jinn	sl	Išči
+search for string	jinn	sl	išči niz
+select directory	jinn	sl	Izberi mapo
+select jinn site file	jinn	sl	Izberi datoteko JiNN spletišča
+select site	jinn	sl	izberi spletišče
+select site to moderate	jinn	sl	Izberi spletišče za moderiranje
+select site-object to moderate	jinn	sl	Izberi spletni objekt za moderiranje
+select_object	jinn	sl	Izberi objekt
+serialnumber	jinn	sl	Serijska številka objekta
+server type?	admin	sl	Tip strežnika
+set access right for site objects	jinn	sl	Nastavljanje pravic dostopa do spletnih objektov
+set access rights	jinn	sl	Nastavljanje pravic dostopa
+set access rights for sites	jinn	sl	Nastavljanje pravic dostopa do spletišča
+set administrators for	jinn	sl	Izberi administratorje za
+set object moderator	jinn	sl	Izberi moderatorja objekta
+set site admin	jinn	sl	Izberi administratorja spletišča
+show	jinn	sl	prikaži
+show all columns	jinn	sl	Prikaži vse stolpce
+show colomn	jinn	sl	Prikaži stolpec
+show upload path	admin	sl	Prikaži pot za nalaganje
+site beheerders	jinn	sl	Administratorji spletišča
+site db host	jinn	sl	Ime strežnika s podatkovno bazo spletišča
+site db name	jinn	sl	Ime podatkovne baze spletišča
+site db password	jinn	sl	Geslo podatkovne baze spletišča
+site db type	jinn	sl	Tip podatkovne baze spletišča
+site db user	jinn	sl	Uporabniško ime podatkovne baze spletišča
+site description	admin	sl	Opis spletišča
+site id	jinn	sl	ID spletišča
+site media and documents	jinn	sl	Dokumenti in medijske datoteke spletišča
+site name	jinn	sl	Ime spletišča
+site not succesfully added, unknown error	jinn	sl	Spletišče NI bilo uspešno dodano, neznana napaka
+site not succesfully deleted, unknown error	jinn	sl	Spletišče NI bilo uspešno izbrisano, neznana napaka
+site not succesfully saved, unknown error	jinn	sl	Spletišče NI bilo uspešno shranjeno, neznana napaka
+site object not succesfully added, unknown error	jinn	sl	Spletni objekt NI bil uspešno dodan, neznana napaka
+site object not succesfully deleted, unknown error	jinn	sl	Spletni objekt NI bil uspešno izbrisano, neznana napaka
+site object not succesfully saved, unknown error	jinn	sl	Spletni objekt NI bil uspešno shranjeno, neznana napaka
+site object succesfully added	jinn	sl	Spletni objekt je bil uspešno dodan
+site object succesfully deleted	jinn	sl	Spletni objekt je bil uspešno izbrisan
+site object succesfully saved	jinn	sl	Spletni objekt je bil uspešno shranjen
+site succesfully added	jinn	sl	Spletišče je bilo uspešno dodano
+site succesfully deleted	jinn	sl	Spletišče je bilo uspešno izbrisano
+site succesfully saved	jinn	sl	Spletišče je bilo uspešno shranjeno
+site title	admin	sl	Naslov spletišča
+site-objects	jinn	sl	Objekti spletišča
+sites	jinn	sl	Spletišča
+start	admin	sl	Začetek
+start at record	jinn	sl	začni pri zapisu
+stop at record	jinn	sl	končaj pri zapisu
+submit and import	jinn	sl	potrdi in uvozi
+table name	jinn	sl	Ime tabele
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	sl	Ime tabele <i>%1</i> ni pravilno. Verjetno se je ime spremenilo ali pa je bila tabela izbrisana. Prosim, izberite novo tabelo ali izbrišite ta objekt.
+test database access	jinn	sl	Preveri dostop do podatkovne baze.
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	sl	Datoteka %1, ki ste jo naložili, ni datoteka s sliko, ali pa ta tip slik ni podprt v JiNNu.
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn. if this error repeates, please check your imagemagick installation.  older version of imagemagick are known not work properly with jinn. be sure to install at least version 5.4.9 or higher	jinn	sl	Datoteka %1, ki ste jo naložili, je poškodovana, ali pa ta tip datotek ni podprt v JiNNu. Če se napaka ponovi, preverite namestitev ImageMagick. Starejše različice ImageMagick imajo včasih težave pri sodelovanju z JiNNom. Zagotovite, da je vaša različica vsaj 5.4.9 ali novejša.
+the name of the new site is <strong>%1</strong>.	jinn	sl	Ime novega strežnika je <strong>%1</strong>.
+the resize process failed, please contact the administrator	jinn	sl	Prilagoditev velikosti ni uspela, prosimo posvetujte se z administratorjem spletišča.
+there are no directories in this site you have access to.	jinn	sl	V spletišču nimate dostopa do nobene mape.
+thisfile	jinn	sl	ta datoteka
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	sl	Mapa s predoglednimi sličicami ne obstaja ali ni pravilna. <br> Prosim, preverite objektovo mapo za nalaganje.
+thumbnail	jinn	sl	sličica s predogledom
+upload path	jinn	sl	Pot za nalaganje
+version	jinn	sl	različica
+website url	jinn	sl	URL spletišča za predogled
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	sl	Ko je pripetih veliko slik k istemu zapisu, se forma lahko zelo počasi nalaga. Lahko določite maksimalno število slik, ki se pokažejo v formi.
+when you choose 'never', only links to the images are displayed; when you choose 'only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'yes' all images are shown	jinn	sl	Če izberete 'Nikoli', se prikažejo le povezave do slik. Če izberete 'Le kadar predogledne sličice obstajajo' se predogledne sličice pokažejo le v tem primeru, če izberete 'Da' se predogledne sličice vedno pokažejo.
+width:	jinn	sl	Širina:
+with_checked_files	jinn	sl	širina_preverjenih_datotek
+you're not allowed to administrate media files	jinn	sl	Nimate dovoljenja za administriranej datotek z multimedijo.

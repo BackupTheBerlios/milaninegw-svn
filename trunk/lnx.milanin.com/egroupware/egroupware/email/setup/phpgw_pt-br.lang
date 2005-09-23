@@ -1,0 +1,399 @@
+%1 messages have been deleted	email	pt-br	%1 mensagens foram removidas
+(required)	email	pt-br	(obrigatório)
+1 message has been deleted	email	pt-br	1 mensagem foi apagada
+1 message has been moved to	email	pt-br	1 mensagem foi movida para
+<b>*apply*</b> this filter	email	pt-br	<b>*APLICAR*</b> Este Filtro
+<b>apply all</b> filters	email	pt-br	<b>APLICAR TODOS</b> os Filtros
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	pt-br	um bloco de código, javascript ou similar, está inserido na mensagem html. Não que seja necessariamente mal, mas o usuário deve estar ciente de que esse código não faz parte dos recursos do eGroupware, portanto pode ser perigoso abrí-lo.
+account	email	pt-br	conta
+account name	email	pt-br	Nome da Conta
+account user name	email	pt-br	Nome de usuário da conta
+accounts	common	pt-br	Contas
+accounts:	email	pt-br	Contas:
+add to address book	email	pt-br	Adicionar ao Catálogo de Endereços
+add to addressbook	email	pt-br	Adicionar ao Catálogo de Endereços
+address book	email	pt-br	Catálogo de Endereços
+after	email	pt-br	Após
+all messages	email	pt-br	Todas Mensagens
+and	email	pt-br	e
+and stop filtering	email	pt-br	e para de filtrar
+answered	email	pt-br	respondida
+apply	email	pt-br	aplicar
+apply filters report:	email	pt-br	Apilcar Relatório de Filtros
+apr	email	pt-br	Abr
+aqua fusion	email	pt-br	Aqua Fusion
+arrival date	email	pt-br	Data de Recebimento
+as	email	pt-br	como
+attach file	email	pt-br	Anexar arquivo
+attach signature	email	pt-br	Anexar assinatura
+attachment	email	pt-br	Anexo
+aug	email	pt-br	Ago
+bcc	email	pt-br	cco
+bcc address	email	pt-br	Endereço CCO
+before	email	pt-br	Antes
+big	email	pt-br	Grande
+bigger	email	pt-br	Maior
+biggest	email	pt-br	Maior ainda
+body	email	pt-br	Corpo
+both	email	pt-br	Ambos
+button type	email	pt-br	Tipo de botão
+cache server data whenever possible	email	pt-br	armazenar dados no servidor quando possível
+cc	email	pt-br	CC
+cc address	email	pt-br	Endereço CC
+change font size in your e-mail pages	email	pt-br	Mudar tamanho da Fonte nas suas páginas de Correio Eletrônico
+check flags for type of mails	email	pt-br	Verificar sinalizadores por tipo
+choose for rename	email	pt-br	Escolher para renomear
+choose to rename	email	pt-br	escolher para renomear
+clear cache	email	pt-br	Limpar cache
+click here for more info in a new window	email	pt-br	clique aqui para maiores informações em uma nova janela
+click here to continue	email	pt-br	Clique aqui para continuar
+click here to edit the settings for this email account.	email	pt-br	clique aqui para editar as configuraões dessa conta de correio eletrônico
+click here to return to your home page.	email	pt-br	clique aqui para retornar à sua página inicial
+company	email	pt-br	Empresa
+compose	common	pt-br	Compor
+compose message	email	pt-br	compor mensagem
+compose new	common	pt-br	Compor nova
+contains	email	pt-br	Contêm
+could not open this mailbox	email	pt-br	Não foi possível abrir esta caixa de mensagem
+create (expert)	email	pt-br	criar (expert)
+create a folder	email	pt-br	Criar uma pasta
+create a folder email	en	pt-br	Criar uma pasta
+current attachments (%1)	email	pt-br	Anexos correntes (%1)
+custom e-mail preferences	email	pt-br	Preferência de E-mail personalizadas
+custom e-mail settings	email	pt-br	Parâmetros personalizados de configuração do Correio Eletrônico
+custom email settings	email	pt-br	Configurações da conta de E-mail
+debugging page	email	pt-br	Página de Depuração
+dec	email	pt-br	Dez
+default sorting order	email	pt-br	Ordenação padrão
+default:	common	pt-br	padrão:
+delete (expert)	email	pt-br	Remover (expert)
+delete a folder	email	pt-br	Remover uma pasta
+delete account	common	pt-br	Remover conta
+deleted	email	pt-br	Removida
+deleted messages (trash) folder	email	pt-br	Pasta de mensagens removidas (Lixeira)
+deleted messages folder name	email	pt-br	Nome da pasta de mensagens apagadas
+deleted messages go to trash	email	pt-br	Mensagens removidas vão para a Lixeira
+deleted messages saved to folder:	email	pt-br	Mensagens Apagadas vão para a pasta:
+discard	email	pt-br	Descartar
+does not contain	email	pt-br	Não Contêm
+draft	email	pt-br	rascunho
+e-mail clear cache	preferences	pt-br	Limpar cache do e-mail
+e-mail extra account	email	pt-br	Conta extra de Correio Eletrônico
+e-mail extra accounts	email	pt-br	Contas extras de Correio Eletrônico
+e-mail extra accounts list	email	pt-br	Lista de contas extras de e-mail
+e-mail filters	common	pt-br	Filtros de E-mail
+e-mail folders	common	pt-br	Pastas de E-mail
+e-mail inbox filters list	email	pt-br	Lista de Filtros de e-mail da Caixa de Entrada
+e-mail preferences	common	pt-br	Preferências de E-Mail
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	pt-br	Cada usuário possui uma página com súmario de diversas informações. Essa opção mostra uma pequena lista dos emails existentes pasta Caixa de Entrada (da conta padrão) nessa página de sumário individualmente.
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account onthe users summary home page.	email	pt-br	Cada usuário possui uma página com súmario de diversas informações. Essa opção mostra uma pequena lista dos e-mails existentes pasta Caixa de Entrada (da conta padrão) nessa página de sumário individualmente.
+each user has a summary page which can display a variety of information. this option willshow a small list of email messages in the inbox of the users default email account onthe users summary home page.	email	pt-br	Cada usuário possui uma página com súmario de diversas informações. Essa opção mostra uma pequena lista dos emails na pasta INBOX (da conta padrão) nessa página de sumário de cada usuário.
+edit filters	email	pt-br	Editar Filtros
+email account name	email	pt-br	Nome da conta de Correio Eletrônico
+email address	email	pt-br	Endereço eletrônico
+email date	email	pt-br	Data do e-mail
+email filters	email	pt-br	Filtros de e-mail
+email password	email	pt-br	Senha de e-mail
+email preferences	email	pt-br	Preferências de E-mail
+email signature	email	pt-br	Assinatura do E-mail
+email type	common	pt-br	Tipo de e-mail
+enable this email account	common	pt-br	Habilitar esta conta de e-mail
+enable utf-7 encoded folder names	email	pt-br	Habilitar codificação utf-7 para nomes de pastas
+enter the search string in the text boxes	email	pt-br	Digite o argumento de busca nas caixas de texto
+enter your pop	admin	pt-br	Digite o endereço de seu servidor POP
+error moving messages to	email	pt-br	Erro movendo mensagens para
+error text not provided	email	pt-br	Erro desconhecido
+error: unknown message data	email	pt-br	Erro: mensagem contém dados desnconhecidos
+evolution style	email	pt-br	Estilo Evolution
+extra accounts	email	pt-br	Contas Extras
+extra e-mail account	common	pt-br	Conta Extra de Correio Eletrônico
+extra e-mail accounts	common	pt-br	Contas Extras de Correio Eletrônico
+extra e-mail preferences number %1	email	pt-br	Preferências da conta extra de correio %1
+feb	email	pt-br	Fev
+fewer actions	email	pt-br	Menos Ações
+fewer choices	email	pt-br	Menos Opções
+file	email	pt-br	Arquivo
+file attachment	email	pt-br	Arquivo anexo
+file into	email	pt-br	Arquivar em
+fill in as much as you can	email	pt-br	preencha o máximo possível
+filter [number] and name	email	pt-br	Filtro [número] e Nome
+filter inbox for accounts	email	pt-br	Filtrar Caixa de Entrada para contas
+filter name	email	pt-br	Nome do Filtro
+filter name:	email	pt-br	nome do filtro
+filter number	email	pt-br	Número do Filtro
+filters	email	pt-br	Filtros
+filters list	email	pt-br	Lista de Filtros
+flag as important	email	pt-br	Sinalizar como importante
+flagged	email	pt-br	sinalizado
+folder	common	pt-br	Caixa postal
+folder maintenance	email	pt-br	Manutenção de pastas
+folder name	email	pt-br	Nome da pasta
+folder size	email	pt-br	Tamanho da pasta
+folders	email	pt-br	Pastas
+for the file to actually upload	email	pt-br	para o arquivo enviado
+for these items, fill only what is different from you default e-mail preferences	common	pt-br	Para estes itens, preencha somente o que é diferente das suas preferências padrões do Correio Eletrônico
+forward	email	pt-br	Encaminhar
+from	email	pt-br	De
+from address	email	pt-br	Endreço Rementente
+get size	email	pt-br	verificar tamanho
+go	email	pt-br	ir
+go back	email	pt-br	Voltar
+go back to	email	pt-br	Voltar para
+header field	email	pt-br	Cabeçalho
+hidden	email	pt-br	oculto
+hide help	email	pt-br	Ocultar Ajuda
+html messages with the iframe  tag may be klez or other worm emails.	email	pt-br	mensagens html com o comandos IFRAME podem ser o KLEZ ou outros vermes.
+icon size	email	pt-br	Tamanho dos Ícones
+icon theme	email	pt-br	Tema dos Ícones
+idots crystal style	email	pt-br	Estilo iDots Crystal
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	pt-br	Se o campo &quot;As mensagens apagadas devem ir para a lixeira&quot; está marcado, toda mensagem apagada será depositada em uma pasta cujo nome você pode digitar nesta caixa de texto.  Se esta pasta não existir, será criada automaticamente.  O nome padrão é "Trash".  Esta será sua "Lixeira", mas não é necessário que realmente seja chamada "Trash",  você pode nomeá-la para qualquer coisa.  Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	pt-br	Se o campo &quot; Pasta de mensagens enviadas &quot; estiver marcado, as mensagens enviadas serão movidas para esta pasta com o nome que você preencher aqui. Caso essa pasta não exista, será criada automaticamente. O nome padrão é &quot;Enviados&quot;. Essa será sua pasta &quot;Enviados&quot;, mas não precisa necessáriamente ser &quot;Enviados&quot;, pois você poderá atribuir outro nome qualquer. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	pt-br	Se o campo &quot; Mensagens apagadas vão para a lixeira &quot; estiver marcado, as mensagens apagadas serão movidas para a pasta com o nome que você preencher aqui. Caso essa pasta não exista, será criada automaticamente. O nome padrão é &quot;Lixeira&quot;. Essa será sua pasta &quot;Lixeira&quot;, mas não precisa necessáriamente ser &quot;Lixeira&quot;, pois você poderá atribuir outro nome qualquer. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	pt-br	Se o campo&quot; Pasta de mensagens enviadas &quot; estiver marcado, as mensagens enviadas serão movidas para a pasta com o nome que você preencher aqui. Caso essa pasta não exista, será criada automaticamente. O nome padrão é &quot;Enviados&quot;. Essa será sua pasta &quot;Sent&quot;, mas não precisa necessáriamente ser &quot;Enviados&quot;, pois você poderá atribuir outro nome qualquer. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if applicable	email	pt-br	Aplicável
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	pt-br	Quando Marcado, uma cópia de sua mensagem enviada será armazenada na pasta &quot;Enviados&quot; que foi especificada na caixa de texto &quot;Pasta de Mensagens Enviadas&quot;. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	pt-br	Quando Marcado, uma cópia de sua mensagem enviada será armazenada na pasta &quot;Enviadas&quot; que foi especificada na caixa de texto &quot;Pasts de Mensagens Enviadas &quot;. Somente funciona em servidores IMAP, servidores POP não trabalham com pastas.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	pt-br	Quando Marcado, uma cópia de sua mensagem enviada será armazenada na pasta &quot;Enviadas&quot; que foi especificada na caixa de texto &quot;Pasta de Mensagens Enviadas &quot;. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	pt-br	Quando Marcado, a mensagem apagada será movida para a pasta &quot;Lixeira&quot; que foi especificada na caixa de texto &quot; Pasta de Mensagens Apagadas (Lixeira) &quot;. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	pt-br	Quando Marcado, a mensagem apagada será movida para a pasta &quot;Lixeira&quot; que foi especificada na caixa de texto &quot;  Pasta de Mensagens Apagadas (Lixeira) &quot;. Este recurso só funciona com servidores IMAP, servidores POP não possuem o recurso de pastas.
+if fileto then select destination folder	email	pt-br	se Arquivar em está selecionado, selecione pasta de destino
+if messages match	email	pt-br	Se a mensagem combinar
+if there is no obvious error, check your email account name and password first.	email	pt-br	se não houver nenhum erro óbvio, primeiro verifique cuidadosamente sua conta de e-mail (grafia), usuário e sua senha.
+if there is no obvious error, check your username and password first.	email	pt-br	se não existir um erro óbvio, Primeiro verifique seu nome de usuário e senha.
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	pt-br	Quando Marcado estiver usando um servidor IMAP,de qualquer tipo, por medidas de segurança é aconselhável que esta opção seja configurada como "Cyrus ou Courier". Isto significa que o servidor utilizará um ponto entre as partes diferentes dos nomes das pastas, tais como "Mensagens.enviadas". A outra possibiliadade é o Servidor IMAP "UWash" da Universidade de Washington;  Este servidor IMAP. Usa barras em vez dos pontos, embora tenha uma pasta chamada "INBOX", ela não é utilizada como "namespace"  para os nomes das outras pastas. O "UW-Maildir" é uma combinação rara dos dois tipos acima.  Este é menos utilizado dos servidores IMAP.  Se você não estiver seguro, peça auxílio ao seu administrador de rede. Aplica-se somente aos usuários IMAP.
+image	email	pt-br	Imagem
+imap mail server hostname or ip address	admin	pt-br	Nome ou Endereço IP do servidor IMAP
+imap server type	common	pt-br	Tipo de servidor IMAP
+imap server type - if applicable	email	pt-br	Tipo de servidor IMAP - se aplicável
+important	email	pt-br	importante
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	pt-br	Na página inicial do correio e na página que lista as mensagens em uma pasta, as mensagens podem estar ordenadas por remetente (autor), tamanho ou assunto. Contudo, todos esses campos precisam estar ordenados em ordem crescente (do primeiro ao último). Esta opção controla o que é significa primeiro e último. Por Exemplo, se ordenamos por data, ordem crescente significa que as mensagens mais recentes serão exibidas primeiro.
+inbox	email	pt-br	Caixa de Entrada
+input error	email	pt-br	Erro de entrada
+input error:	email	pt-br	Erro de entrada:
+is not set so your administrator should set email site configuration for mail server hostname or ip address	email	pt-br	Se não está configurado, seu administrador pode determinar a configuração do site para o servidor de correio eletrônico, nome do servidore ou endereço IP
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	pt-br	A codificação com base64 não faz parte do padrão RFC, para as partes da mensagem que não são anexos. NOTE: Normalmente essa verificação é feita quando a mensagem já está em processo de visualização, provávelmente isso impedirá a visualização da mensagem.
+jan	email	pt-br	Jan
+javascript	email	pt-br	Javascript
+jul	email	pt-br	Jul
+jun	email	pt-br	Jun
+keep	email	pt-br	Manter
+keyword	email	pt-br	palavra-chave
+keywords	email	pt-br	Palavras-chave
+layout 1	common	pt-br	Layout 1
+layout 2	common	pt-br	Layout 2
+lines	email	pt-br	Linhas
+list messages	email	pt-br	listar mensagens
+long names	email	pt-br	nomes longos
+mail folder(uw-maildir)	email	pt-br	Pasta de Entrada(uw-maildir)
+mail server	email	pt-br	Servidor de E-mail
+mail server login type	admin	pt-br	Tipo de conexão para o servidor de correio
+mail server type	email	pt-br	Tipo de servidor de Correio eletrônico
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	pt-br	A mensagem que você enviar usará este endereço como o endereço "Remetente". Este pode ser o mesmo nome usado na conexão ao eGroupWare ou, pode ser que o administrador do seu servidor já tenha configurado isso para você. Quando os destinatários clicarem em Responder, esse será o endereço que será utilizado. Você pode deixar este espaço em branco e o valor padrão será utilizado.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	pt-br	A mensagem que você enviar usará este endereço como o endereço "Remetente". Este pode ser o mesmo nome usado na conexão ao eGroupWare ou, pode ser que o administrador do seu servidor já tenha configurado isso para você. Quando os destinatários clicarem em Responder, esse será o endereço que será utilizado. Você pode deixar este espaço em branco e o valor padrão será utilizado.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	pt-br	Mensagens enviadas por você usará o endereço &quot;From&quot;. Talvez esse seja o mesmo nome de login de seu usuário. Ao clicar em responder, esse será o endereço utilizado pelo destinatário para responder. DEixando essa caixa em branco, será utilizado o valor padrão.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	pt-br	Mensagens enviadas por você usará o endereço &quot;From&quot;. Talvez esse seja o mesmo nome de login de seu usuário. Ao clicar em responder, esse será o endereço utilizado pelo destinatário para responder. DEixando essa caixa em branco, será utilizado o valor padrão.
+manage accounts	email	pt-br	Gerenciar contas
+manage folders	email	pt-br	Gerenciar pastas
+mar	email	pt-br	Mar
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	pt-br	A mensagem possui um anexo que é algum tipo de script ou arquivo executável. Usuários do Windows devem ser notificados para não clicar sobre esse tipo de anexo. Os nomes de arquivos anexos perigosos, normalmente terminam como .bat, .inf, .pif, .com, .exe, .reg, .vbs, e .scr, portanto tenha cuidado.
+message list layout	common	pt-br	Layout da lista de mensagens
+messages	email	pt-br	Mensagens
+messages found in folder	email	pt-br	Mensagens encontradas na pasta
+messages have been moved to	email	pt-br	mensagens foram movidas para
+more actions	email	pt-br	Mais Ações
+more choices	email	pt-br	Menos Ações
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	pt-br	Grande parte dos usuários dos EUA e Europa, não necessitam selecionar essa opção. Caso essa opção esteja selecionada, o servidor de correio estará habilitado a gerenciar nomes de pastas com caracteres não US-ASCII. Por padrão não é habilitado. Use somente se  tiver certeza que é necessário. Somente funciona em servidores IMAP, servidores POP não trabalham com pastas.
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	pt-br	Grande parte dos usuários dos EUA e Europa, não necessitam selecionar essa opção. Caso essa opção esteja selecionada, o servidor de correio estará habilitado a gerenciar nomes de pastas com caracteres não US-ASCII. Por padrão não é habilitado. Use somente se  tiver certeza que é necessário. Somente funciona em servidores IMAP, servidores POP não trabalham com pastas.
+move down	email	pt-br	Mover para baixo
+move selected messages into	email	pt-br	Mover mensagens para
+move this message into	email	pt-br	Mover esta mensagem para
+move up	email	pt-br	Mover para cima
+mozilla modern style	email	pt-br	Estilo Mozilla Modern
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	pt-br	Nome do servidor de correio que você deseja acessar. Deve ser um nome do tipo &quot;pop.seuprovedor.com.br&quot;. Caso você não preencha essa caixa, será usado o valor padrão.
+new	email	pt-br	Nova
+new account	email	pt-br	Nova Conta
+new filter	email	pt-br	Novo Filtro
+new message	email	pt-br	Nova Mensagem
+new messages	email	pt-br	Novas Mensagens
+newest	common	pt-br	mais nova
+next message	email	pt-br	Próxima Mensagem
+no change	email	pt-br	sem alteração
+no error returned from server	email	pt-br	Nenhum erro foi retornado pelo servidor
+no message found in folder '%1'	email	pt-br	Nenhuma mensagem encontrada na pasta '%1'
+no next message	email	pt-br	sem próxima mensagem
+no previous message	email	pt-br	sem mensagem anterior
+noia &#64; carlitus style	email	pt-br	Estilo Noia &#64; Carlitus
+non-standard	email	pt-br	Fora do padrão
+not used	email	pt-br	não utilizado
+notify on delivery	email	pt-br	Notificar na entrega
+nov	email	pt-br	Nov
+number	common	pt-br	Número
+number of matches:	email	pt-br	número de combinações:
+oct	email	pt-br	Out
+old	email	pt-br	Antigo
+oldest	common	pt-br	mais antiga
+on	email	pt-br	Em
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	pt-br	Recomendado apenas para o sistema "UWash" da universidade de Washington; O valor padrão é "mail"  para suas pastas de mensagens, o outro é  INBOX, são situados em um diretório chamado "mail" diretamente sob seu diretório "HOME". Esta caixa pode ser deixada vazia, significa que suas pastas de mensagens ficarão situadas em seu diretório "HOME", não em algum subdiretório.  Se suas pastas de mensagens ficarem em algum subdiretório do "HOME" informe então o nome desse subdiretório aqui.  Geralmente, não é necessário usar nenhuma barra ou sinais especiais, "HOME"  é considerado sempre o diretório inicial, e a barra entre o "HOME"  e o subdiretório será adicionado para você automaticamente, não coloque barra nesta caixa.
+or	common	pt-br	ou
+or enter text	email	pt-br	ou digite texto
+or you can use custom settings for this email account	email	pt-br	ou você deve usar as configurações personalizadas para esta conta de e-mail
+organization	email	pt-br	Organização
+persistent email server session	email	pt-br	conexão persistente com o servidor de correio
+phone	email	pt-br	Telefone
+please fill in everything you need	email	pt-br	Por favor preencha tudo que for necessário
+please select a folder to rename	email	pt-br	Por favor selecione uma pasta para renomear
+please select a message first	email	pt-br	Selecione a mensagem primeiro
+please submit a filename to attach	email	pt-br	Por favor informe o arquivo a ser anexado
+please type a folder name in the text box	email	pt-br	Por favor digite um nome de pasta no campo
+previous	email	pt-br	Anterior
+previous message	email	pt-br	Mensagem Anterior
+printable	email	pt-br	versão para impressão
+raw message	email	pt-br	fonte da mensagem
+read mail	email	pt-br	Ler Email
+received headers	email	pt-br	Cabeçalho Recebido
+recent	email	pt-br	Recente
+recipient	email	pt-br	Recipiente
+redirect	email	pt-br	Redirecionar
+reject	email	pt-br	Rejeitar
+rename (expert)	email	pt-br	Renomear (expert)
+rename a folder	email	pt-br	Renomear uma pasta
+reply	email	pt-br	Responder
+reply all	email	pt-br	Responder a todos
+replyto	email	pt-br	Responder para
+request delivery notification	email	pt-br	Solicitar notificação de entrega
+requested filter action:	email	pt-br	ação requisitada pelo filtro
+required	email	pt-br	requerido
+reset	email	pt-br	Limpar
+result	email	pt-br	resultado
+return mails during this time period	email	pt-br	Retornar mensagens durante esse período de tempo
+save deleted messages in folder named below	email	pt-br	Salvar mensagens Apagadas na seguinte pasta
+save sent messages in folder named below	email	pt-br	Salvar mensagens Enviadas na seguinte pasta
+search for mails in these folders	email	pt-br	Pesquisar mensagens nessas pastas
+search this folder	email	pt-br	procurar nesta pasta
+section	email	pt-br	Seção do E-mail
+seen	email	pt-br	Vista
+select home email address	email	pt-br	Selecione endereço de correio eletrônico  doméstico
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	pt-br	Selecione essa opção se você quiser que o corpo de uma mensagem encaminhada apareça no corpo da sua mensagem (e não como anexo)
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	pt-br	Selecione essa opção se você quiser que o corpo de uma mensagem encaminhada apareça no corpo da sua mensagem (e não como anexo)
+select work email address	email	pt-br	Selecione endereço comercial de correio eletrônico
+select your mail server type	admin	pt-br	Selecione o tipo de servidor de correio
+select your screensize for proper showing of the javascript addressbook	email	pt-br	Selecione o tamanho apropriado da tela que exibirá o Catálogo de Endereços.
+select your screensize for propper showing of the javascript addressbook	email	pt-br	Selecione o tamanho apropriado da tela que exibirá o Catálogo de Endereços
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	pt-br	Selecione o estilo do seu Catálogo de Endereços. O tradicional, estilo simples. Ou o novo com javascript habilitado.
+send	email	pt-br	Enviar
+send deleted messages to the trash	email	pt-br	Enviar mensagens excluídas para a lixeira
+send forwarded mail as quoted attachment	email	pt-br	Enviar mensagens encaminhadas como  anexo
+sender	email	pt-br	Remetente
+sent	common	pt-br	enviada
+sent folder	email	pt-br	pasta enviadas
+sent messages folder	common	pt-br	Pasta mensagens enviadas
+sent messages folder name	email	pt-br	Nome da Pasta Mensagens Enviadas
+sent messages saved in &quot;sent&quot; folder	common	pt-br	Mensagens enviadas salvas na pasta &quot;Enviadas&quot;
+sent messages saved to folder:	email	pt-br	Salvar mensagens enviadas na pasta:
+sep	email	pt-br	Set
+settings	common	pt-br	Configurações
+short names	email	pt-br	nomes curtos
+show help	email	pt-br	Exibir Ajuda
+show long names	email	pt-br	Mostar nomes longos
+show message	email	pt-br	mostrar mensagem
+show new messages in combobox	email	pt-br	Mostrar novas mensagens numa caixa Combo
+show new messages on main screen	email	pt-br	Exibir novas mensagens
+show sender's email address with name	email	pt-br	Exibir e-mail do remetente com o nome
+show short names	email	pt-br	Mostrar nomes curtos
+show total folder size by default	email	pt-br	Mostrar tamanho total da pasta por padrão
+simple	email	pt-br	Simples
+size	email	pt-br	Tamanho
+size larger than	email	pt-br	Tamanho maior que
+size smaller than	email	pt-br	Tamanho menor que
+small	email	pt-br	Pequeno
+small view	email	pt-br	visão resumida
+smaller	email	pt-br	Menor
+smallest	email	pt-br	Menor ainda
+somebody	email	pt-br	alguém
+sort by	email	pt-br	Ordenar por
+source accounts	email	pt-br	localizar contas
+spell check	email	pt-br	Verificação Ortográfica
+standard e-mail preferences	email	pt-br	Preferências padrões de E-mail
+stop if matched	email	pt-br	Parar se houver ocorrência
+switch accounts	email	pt-br	Trocar de contas
+switch current folder to	common	pt-br	Alterar a pasta corrente para
+test all filters	email	pt-br	Testar Todos os Filtros
+test or apply all filters	email	pt-br	testar ou aplicar TODOS os filtros
+test run this filter	email	pt-br	Testar Execução deste filtro
+text	email	pt-br	Texto
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	pt-br	O aplicativo de correio oferece duas formas diferentes para exibição da página principal. A página principal é a página que lista as mensagens em uma pasta. provavelmente esta é a página mais visualizada pelo usuário por isso são oferecidos diferentes formas.
+the email application offers different button displays, these buttons can be text, images, or both.	email	pt-br	O aplicativo de correio permite formas diferentes de exibir os botões: texto, imagem ou ambos.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	pt-br	O aplicativo de coreio permite o uso de temas diferentes para ícones para cada estilo em uso. Atualmente essas imagens são baseadas no Evolution da Ximian e no Navegador Mozilla. Em breve teremos novos temas.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	pt-br	O aplicativo de coreio permite o uso de temas diferentes para ícones para cada estilo em uso. Atualmente essas imagens são baseadas no Evolution da Ximian e no Navegador Mozilla. Em breve teremos novos temas.
+the email application offers different icon image themes, these icons can be big or small.	email	pt-br	O aplicativo de correio oferece seus ícones em diferentes tamanhos: grande e pequeno
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	pt-br	O nome de conexão(login) de uma sessão é utilizado para verificar as mensagens nesta conta de e-mail. Este pode ser o mesmo nome de conexão de uma sessão do eGroupWare, ou o administrador pode tê-lo configurado para você. Caso você tenha múltiplas contas de e-mail configuradas, você necessitará informar este campo. Se você tiver somente uma conta de e-mail, você pode deixar esse campo sem alterações. Se você deixar essa caixa de texto em branco, o valor padrão será utilizado. Você pode alterar todos os valores desejados e manter esse valor como padrão, bastando deixá-la em branco. Sempre que retornar a essa página de preferências o valor padrão será exibido.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	pt-br	O nome de conexão(login) de uma sessão é utilizado para verificar as mensagens nesta conta de e-mail. Este pode ser o mesmo nome de conexão de uma sessão do eGroupWare, ou o administrador pode tê-lo configurado para você. Caso você tenha múltiplas contas de e-mail configuradas, você necessitará informar este campo. Se você tiver somente uma conta de e-mail, você pode deixar esse campo sem alterações. Se você deixar essa caixa de texto em branco, o valor padrão será utilizado. Você pode alterar todos os valores desejados e manter esse valor como padrão, bastando deixá-la em branco. Sempre que retornar a essa página de preferências o valor padrão será exibido.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	pt-br	O nome de usuário a ser utilizado para se verificar o correio desta conta. Provavelmente esse é mesmo nome utilizado para você entrar no eGroupware, ou será preenchido pelo administrador. Caso você possua múltiplas contas de correio configuradas, você precisará preencher esses dados. Caso exista apenas uma conta configurada, provavelmente você não precisará preencher. Caso você apague seu conteúdo, ele voltará para o valor padrão. Caso você precise personalizar apenas alguns dados, preencha os campos necessários, deixando esse campo em branco. Isso fará com ele volte ao valor padrão e será exibido a próxima vez que você
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	pt-br	A senha que será utilizada para verificar correspondências para essa conta de correio eletrônico. Essa pode ser sua senha de acesso ao eGroupware ou você pode ter uma senha configurada pelo administrador do seu servidor de correio eletrônico. Se você estiver usando diversas contas de correio eletrônico, essa valor deverá ser preenchido. Se possúir apenas uma conta de correio eletrônico, talvez possa deixar esse valor em branco. Sempre que você acessar essa página, esse campo será mostrado em branco. Essa é uma característica de segurança. Para mudar sua senha, basta preencher o novo valor na caixa de texto. Se você desejar utilizar as configurções padronizadas, limpe o campo &quot;Utilizar Configurações Personalizadas&quot.
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a "ssl" capabable version of php.	email	pt-br	O tipo de servidor de e-mail que você utilizará. Servidores IMAP possuem pastas, como Itens Enviados e Lixeira. POP não permitem a utilização de pastas. POP, POP-3 são iguais. Você pode utilizar uma conexão encrypitada usando IMAPS ou POPS, somente se o servidor de e-mails suportar e se sua instalação do eGroupWare tiver um certificado "SSL" ativado para a versão do PHP.
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	pt-br	O tipo de servidor de e-mail que você utilizará. Servidores IMAP possuem pastas, como Itens Enviados e Lixeira. Servidores POP não permitem a utilização de pastas. Você pode utilizar uma conexão encrypitada usando IMAPS ou POPS, somente se o servidor de e-mails suportar e se sua instalação do eGroupWare tiver um certificado "SSL" e uma versão de php que suporte essa facilidade.
+then check the	email	pt-br	verifique então
+then do this	email	pt-br	Então faça isso
+then take this actions	email	pt-br	Então execute estas ações
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	pt-br	Não existe texto a ser exibido para o usuário, pois todas as partes são anexos.
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	pt-br	Houve um erro ao tentar conectar no servidor IMAP.<br>Por favor verifique o nome do servidor, seu usuário e sua senha ou entre em contato com o administrador do sistema.
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	pt-br	Houve um erro ao tentar conectar no servidor de Correio Eletrônico.<br>Por favor verifique seu usuário e sua senha ou entre em contato com o administrador do sistema.
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	pt-br	Houve um erro ao tentar conectar no servidor POP3.<br>Por favor verifique o nome do servidor, seu usuário e sua senha ou entre em contato com o administrador do sistema.
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	pt-br	Esta opção é confusa e constantemente mal entendidas, elas foram deixadas aqui apenas porque esse aplicativo origina-se no Aeromail de Mark Cushman. Quando visualizamos uma lista de mensagens de uma pasta o campo Remetente deve mostar: a) apenas o nome do rementente, desde que um nome tenha sido fornecido. b) O endereço de correio eletrônico do remetente, além do nome do remetente, quando este é fornecido. c) O endereço de resposta do remetente (Repply to) se ele for diferente do endereço de correio eletrônico do remetente, além do nome do remetente, quando este é fornecido. Normalmente, os usuários selecionam 'nada' para essa opção, o que irá mostrar apenas o nome do remetente, se o nome do remetente não foi fornecido, esse campo mostrará o endereço de correio eletrônico do remetente, dessa forma, um  endereço de resposta diferente, não terá efeito nessa lista.
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	pt-br	Esta opção é confusa e constantemente mal entendidas, elas foram deixadas aqui apenas porque esse aplicativo origina-se no Aeromail de Mark Cushman. Quando visualizamos uma lista de mensagens de uma pasta o campo Remetente deve mostar: a) apenas o nome do rementente, desde que um nome tenha sido fornecido. b) O endereço de correio eletrônico do remetente, além do nome do remetente, quando este é fornecido. c) O endereço de resposta do remetente (Repply to) se ele for diferente do endereço de correio eletrônico do remetente, além do nome do remetente, quando este é fornecido. Normalmente, os usuários selecionam 'nada' para essa opção, o que irá mostrar apenas o nome do remetente, se o nome do remetente não foi fornecido, esse campo mostrará o endereço de correio eletrônico do remetente, dessa forma, um  endereço de resposta diferente, não terá efeito nessa lista.
+this data not supplied.	email	pt-br	Este dado não foi digitado
+this folder is empty	email	pt-br	Esta pasta está vazia
+this is really a visual template conflict issue. the egw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	pt-br	Na verdade, este é um conflito de modelos. Os modelos do eGreoupware possuem sua própria CSS . O uso de páginas de estilo CSS herdadas, pode impedir a visualização da tela.
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	pt-br	Na verdade, este é um conflito de modelos. Os modelos do eGreoupware possuem sua própria CSS . O uso de páginas de estilo CSS herdadas, pode impedir a visualização da tela.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as "your full name". if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use "your full name" as your from name for email messages. note that "your full name" for your email account 0 is the name you gave in the egroupware setup.	email	pt-br	Este é o nome que aparecerá na caixa de seleção de contas. Se você não preencher esse campo, o eGroupware irá determinar um nome padrão para sua conta (ex.: Account1:seu nome onde seu nome é o nome que você informará no campo "Seu Nome Completo" Se você desejar pode dar a essa conta um nome especial apenas preenchendo esse campo. Esse nome será apenas para seu uso. Não alterando nenhuma das configuraçãoes de Correio Eletrônico.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup	email	pt-br	Este é o nome que aparece no campo de preenchimento da sua conta. Se for deixado em branco, suas contas precisarão utilizar um nome básico como Conta[1]: Jane Doe, onde Jane Doe é o nome que você informará acima no campo como "Seu nome completo". Se você quiser dar a uma conta um nome especial você pode preenchê-lo.  Não importa o que, isto é para seu uso, seus e-mails utilizarão "Seu nome completo" para o campo DE: em suas mensagens. Repare que "Seu nome completo" para sua conta de e-mail for deixado em branco este será exatamente o nome que foi atribuído na instalação do eGroupWare.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	pt-br	Este é o nome que aparece no campo de preenchimento da sua conta. Se for deixado em branco, suas contas precisarão utilizar um nome básico como Conta[1]: Jane Doe, onde Jane Doe é o nome que você informará acima no campo como "Seu nome completo". Se você quiser dar a uma conta um nome especial você pode preenchê-lo.  Não importa o que, isto é para seu uso, seus e-mails utilizarão "Seu nome completo" para o campo DE: em suas mensagens. Repare que "Seu nome completo" para sua conta de e-mail for deixado em branco este será exatamente o nome que foi atribuído na instalação do eGroupWare.
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	pt-br	Este é o nome que aparecerá no campo rementente. A conta de correio eletrônico padrão pega esse valor automáticamente do módulo phpgwapi. Se forem criadas contas adicionais, você poderá determinar o campo "nome completo" para cada uma delas.
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	pt-br	ESSA OPÇÃO NÃO ESTÁ ATIVA NO MOMENTO. Usuários podem ter mais de uma conta de e-mail. Futuramente antecipa-se que ações automáticas podem ser executadas nestas contas, tais como verificação automática de novas mensagens, auto filtrar, etc. Talvez o usuário queira desabilitar uma conta para que estas ações automáticas não ocorram. Isto é possível. Também, um administrador pode querer desativar contas de tempos em tempos.
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	pt-br	ESSA OPÇÃO NÃO ESTÁ ATIVA NO MOMENTO. Usuários podem ter mais de uma conta de e-mail. Futuramente antecipa-se que ações automáticas podem ser executadas nestas contas, tais como verificação automática de novas mensagens, auto filtrar, etc. Talvez o usuário queira desabilitar uma conta para que estas ações automáticas não ocorram. Isto é possível. Também, um administrador pode querer desativar contas de tempos em tempos.
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	pt-br	Esta opção determina se o número de mensagens novas, por pastas, deve ser apresentado em uma caixa de seleção na página inicial.
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	pt-br	Esta opção determina se o tamanho total das pastas será ou não mostrado. Se essa opção não está selecionada, você terá um botão que permite a verificação do tamanho da pasta.
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	pt-br	Esta opção determina se o tamanho total das pastas será ou não mostrado. Se essa opção não está selecionada, você terá um botão que permite a verificação do tamanho da pasta.
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	pt-br	Este texto será adicionado ao rodapé das mensagens dos usuários das contas de correio eletrônico. Atualmente códigos html não são suportados. As mensagens encaminhadas NÃO receberão  esta assinatura nas mensagens, provavelmente a parte enviada já possui suas próprias assinaturas do autor original.
+to	email	pt-br	Para
+to address	email	pt-br	Endereço Destinatário
+total messages	email	pt-br	Total de mensagens
+trash	email	pt-br	lixeira
+trash folder	email	pt-br	pasta da lixeira
+u-wash mail folder	email	pt-br	Pasta de Email U-Wash
+u-wash mail folder - if applicable	email	pt-br	Pasta de Email U-Wash - se aplicável
+unable to get source folder name	email	pt-br	Incapaz de conseguir nome da pasta de origem
+unable to get target folder name	email	pt-br	Incapaz de conseguir nome da pasta de destino
+unanswered	email	pt-br	Não respondido
+undeleted	email	pt-br	Não apagado
+undisclosed recipients	email	pt-br	Destinatários não exibidos
+undisclosed sender	email	pt-br	Remetende não exibido
+unflagged	email	pt-br	Desmarcado
+unknown action	email	pt-br	Ação desconhecida
+unknown error	email	pt-br	Erro desconhecido
+unknown translation	email	pt-br	tradução desconhecida
+unseen	email	pt-br	Não lida
+use custom settings	email	pt-br	Usar configurações personalizadas
+view as html	email	pt-br	Exibir como HTML
+view formatted	email	pt-br	Exibir formatado
+view headers	email	pt-br	Exibir cabeçalhos
+view unformatted	email	pt-br	Exibir não formatado
+warn_attachment_name_dangerous	email	pt-br	Aviso_nome_de_Anexo_Perigoso
+warn_attachment_only_mail	email	pt-br	Aviso_mesagem_so_com_Anexos
+warn_b64_encoded_displayable	email	pt-br	Aviso_codificacao_b64
+warn_has_iframe_maybe_klez	email	pt-br	Aviso_Virus_provavel_klez
+warn_script_tags	email	pt-br	Aviso_Script
+warn_style_sheet	email	pt-br	Aviso_Pagina_Estilos
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	pt-br	Recentemente nós adicionamos este novo catálogo de endereços de modo que os usuários possam escolher ter uma ferramenta mais complexa que caracterizasse: a) fácil, localização através de um clique sobre um ponto, b) Melhor organização com catálogos de endereços centrais grandes e com muitas categorias.  Você pode escolher aqui qual  catálogo de endereços você prefere.
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	pt-br	Recentemente nós adicionamos este novo catálogo de endereços de modo que os usuários possam escolher ter uma ferramenta mais complexa que caracterizasse: a) fácil, localização através de um clique sobre um ponto, b) Melhor organização com catálogos de endereços centrais grandes e com muitas categorias.  Você pode escolher aqui qual  catálogo de endereços você prefere.
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	pt-br	Existem três tamanhos disponíveis para a visualização do catálogo de endereços: 800x600 (catálogo atingindo 700 pixels como caixa), 1024x768 (terá uma caixa de 800), 1200x1600 (terá uma caixa de 900). As fontes para todo o html será respectivamente xx-pequena, x-pequena e normal (não há configuração para as fontes).
+wrote	email	pt-br	escrito
+you have %1 new messages!	common	pt-br	Você tem %1 mensagens novas!
+you have 1 new message!	common	pt-br	Você tem 1 mensagem nova!
+you have messages!	common	pt-br	Você tem mensagens !
+you have no new messages	common	pt-br	Você não tem nenhuma mensagem nova!
+you must click	email	pt-br	Você deve clicar
+you must click %1 for the file to actually upload	email	pt-br	Você deve clicar %1 para o arquivo que será enviado
+your full name	common	pt-br	Seu nome completo
+your message has been sent	common	pt-br	Sua mensagem foi enviada!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	pt-br	O administrador do servidor ajustará os valores das seguintes opções como sendo padrão. É provável que você não precise alterar nenhum dos valores padrões. Quando você precisar utilizar configurações específicas diferentes dos padrões você deve selecionar/marcar este campo. Caso você informe valores para alguns campos, porém mais tarde queira retornar aos valores padrão, basta desmarcar este campo e suas configurações retornarão automáticamente. Se você estiver ajustando contas adicionais de e-mail, você será obrigado a preencher as seguintes opções e este checkbox não será indicado, ele será marcado para todas as contas de e-mail extras.

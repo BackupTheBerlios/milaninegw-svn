@@ -1,0 +1,73 @@
+you have to [save] every manual change in the above fields, before you can go to the next step !!!	developer_tools	es-ca	!!! Heu de [Desar] cada canvi manual als camps anteriors, abans de continuar amb el pas següent !!!
+add	developer_tools	es-ca	afegir
+add change	developer_tools	es-ca	Afegir canvi
+add more	developer_tools	es-ca	Afegir més
+add new phrase	developer_tools	es-ca	Afegir nova frase
+add phrase	developer_tools	es-ca	Afegir frase
+allows you to add a single phrase	developer_tools	es-ca	Us permet afegir una frase
+application	developer_tools	es-ca	Aplicació
+back	developer_tools	es-ca	Tornar
+cancel	developer_tools	es-ca	Cancel.lar
+change	developer_tools	es-ca	Canviar
+changelog entry has been added	developer_tools	es-ca	Entrada afegida al Registre de canvis
+changelogs	developer_tools	es-ca	Registres de canvis
+clears the internal buffer, all changes made sofar are lost	developer_tools	es-ca	Neteja el enmagatzemament intern, tots els canvis fets fins ara es perdràn
+create new language file	developer_tools	es-ca	Crear Nou Arxiu d'Idioma
+create sgml file	developer_tools	es-ca	Crear arxiu SGML
+developer tools - preferences	developer_tools	es-ca	Eines de traducció - preferències
+developer_tools	common	es-ca	Eines de Traducció
+diary	developer_tools	es-ca	Diari
+done	developer_tools	es-ca	Fet
+download	developer_tools	es-ca	Descarregar
+download the lang-file to be saved in the apps setup-dir	developer_tools	es-ca	Descarregar l'arxiu d'idioma per guardar-lo al directori "setup" de l'aplicació
+edit	developer_tools	es-ca	Editar
+installed applications	developer_tools	es-ca	Aplicacions instal.lades
+language file management	developer_tools	es-ca	Gestió d'arxius d'idioma
+list changelogs	developer_tools	es-ca	Llistar Registres de canvi
+load	developer_tools	es-ca	Carregar
+loading source langfile	developer_tools	es-ca	Carregant arxiu d'idioma origen
+loading target langfile	developer_tools	es-ca	Carregant arxiu d'idioma destí
+loads the selected lang-files, to be modified in the next steps	developer_tools	es-ca	Carrega els arxius d'idioma seleccionats, per modificar-los a les passes següents
+message	developer_tools	es-ca	Missatge
+message_id in english	developer_tools	es-ca	Id. de Missatge en Anglès
+no file	developer_tools	es-ca	Sense arxiu
+ok	developer_tools	es-ca	D'acord
+original	developer_tools	es-ca	Original
+phrase in english (or empty if identical)	developer_tools	es-ca	Frase en Anglès (o buit si es igual)
+preferences	developer_tools	es-ca	Preferències
+preferences have been updated	developer_tools	es-ca	Preferències actualitzades
+project	developer_tools	es-ca	Projecte
+remove	developer_tools	es-ca	Treure
+returns to the application list, not saved changes get lost !!!	developer_tools	es-ca	Torna a la llista d'aplicacions, els canvis no guardats es perdràn !!!
+revert	developer_tools	es-ca	Revertir
+saves the added/changed translations to an internal buffer, to be used in further steps	developer_tools	es-ca	Desa les traduccions afegides/canviades a un magatzem intern, per al seu ús en posteriors accions
+search changelogs	developer_tools	es-ca	Cercar en registres de canvis
+search for missing phrase	developer_tools	es-ca	Cercar per frase omesa
+search new phrases	developer_tools	es-ca	Cercar noves frases
+searches the source-code for phrases not in the actual source-lang-file	developer_tools	es-ca	Cerca en el codi font frases que no hi siguin al arxiu d'idioma actual
+select project	developer_tools	es-ca	Seleccionar projecte
+sf project tracker	developer_tools	es-ca	Seguiment de Projecte SF
+sf project tracker preferences	preferences	es-ca	Preferències de Seguiment de Projecte SF
+source language	developer_tools	es-ca	Idioma Origen
+sourceforge project id	developer_tools	es-ca	Id. de projecte a Sourceforge
+sourceforge project tracker	developer_tools	es-ca	Seguiment de Projecte Sourceforge
+sourceforge project tracker preferences	developer_tools	es-ca	Preferències de Seguiment de Projecte Sourceforge
+step	developer_tools	es-ca	Pas
+submit	developer_tools	es-ca	Enviar
+target language	developer_tools	es-ca	Idioma Destí
+title	developer_tools	es-ca	Títol
+translate	developer_tools	es-ca	Tradueix
+translation	developer_tools	es-ca	Traducció
+translation of phrase	developer_tools	es-ca	Traducció de frase
+update	developer_tools	es-ca	Actualitza
+update database	developer_tools	es-ca	Actualitza Base de Dades
+updates the translations of both lang-files in your database, so you can verify your work immediately	developer_tools	es-ca	Actualitza la traducció de ambdós arxius d'idioma a la vostra base de dades, perqué pogueu verificar el vostre treball d'inmediat
+version	developer_tools	es-ca	Versió
+write	developer_tools	es-ca	Escriure
+write the lang-file to the apps setup-dir	developer_tools	es-ca	Escriu l'arxiu d'idioma al directori "setup" de l'aplicació
+write to lang table	developer_tools	es-ca	Escriu a la taula d'idioma
+writing langfile for '%1' ...	developer_tools	es-ca	Escrivint arxiu d'idioma per a '%1' ...
+you must a version	developer_tools	es-ca	Heu de versionar
+you must enter a change	developer_tools	es-ca	Heu d'entrar un canvi
+you must select a project	developer_tools	es-ca	Heu de sel.leccionar un projecte
+you need to set your preferences for this app	developer_tools	es-ca	Heu d'establir les vostres preferències per a aquesta aplicació

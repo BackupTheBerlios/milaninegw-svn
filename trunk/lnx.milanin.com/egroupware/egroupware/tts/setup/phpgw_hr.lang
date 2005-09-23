@@ -1,0 +1,162 @@
+a new ticket has been reported.	tts	hr	Novi Ticket je prijavljen.
+accept	tts	hr	PRIHVATI
+accept the ticket into verification process.	tts	hr	Prihvati Ticket u postupak potvrde .
+accepted	tts	hr	PRIHVAĆENO
+action	tts	hr	Akcija (djelovanje)
+add new ticket	tts	hr	Dodaj novi Ticket
+add ticket	tts	hr	Dodaj Ticket
+additional notes	tts	hr	Dodatne bilješke
+admin options	common	hr	Administratorske opcije
+assign to	tts	hr	Dodijeli
+assigned from	tts	hr	Dodijeljeno od
+assigned to	tts	hr	Dodijeljeno
+billable hours	tts	hr	Naplativi sati
+billable hours changed	tts	hr	Promjena naplativih sati
+billable hours rate	tts	hr	Cijena naplativog sata
+billable rate	tts	hr	Naplatna cijena
+billable rate changed	tts	hr	Promjena naplatne cijene
+category changed	tts	hr	Promjena kategorije
+check here to generate the state's id automatically or enter a particular id below.	tts	hr	Automatsko stvaranje indetiteta stanja ili unos djelomičnog indetiteta ispo.
+clear form	tts	hr	Očisti formular
+close the invalid ticket.	tts	hr	Zatvori nevažeći Ticket
+closed	tts	hr	Zatvoreno
+completed	tts	hr	ZAVRŠENO
+configure the states	common	hr	Uredi stanja
+configure the transitions	common	hr	Uredi tranzicije
+create new state	tts	hr	Napravi novo stanje
+create new ticket	tts	hr	Napravi novi Ticket
+create new transition	tts	hr	Napravi novu tranziciju
+creates a new ticket, returns ticket_id	tts	hr	Stvara novi Ticket, vraća indetifikaciju Ticket-a
+creates a struct of tickets	tts	hr	Stvara strukturu Ticket-a
+date opened	tts	hr	Datum otvaranja
+default assign to	tts	hr	Početno dodijeli
+default group	tts	hr	Početna grupa
+default priority	tts	hr	Početni prioritet
+delete the listed tickets.	tts	hr	Obriši prikazane Ticket-e.
+deleting the state	tts	hr	Brisanje stanja
+deleting the transition	tts	hr	Brisanje tranzicije
+detail	tts	hr	Detalji
+duplicate	tts	hr	DUPLICIRAJ
+edit the state	tts	hr	Uredi stanje
+edit the transition	tts	hr	Uredi tranziciju
+error: the subject of the ticket is not specified.	tts	hr	GREŠKA: Nije definirana tema ovog Ticket-a
+force	tts	hr	Prisili
+global categories	tts	hr	Globalne kategorije
+group ownership changed	tts	hr	Promjena grupnog vlasništva
+history	tts	hr	Povijest
+i worked on the ticket and the work requires validation.	tts	hr	Radio sam na Ticket-u i odrađen posao zahtijeva potvrdu.
+i worked on the ticket, but did not finish.	tts	hr	Radio sam na Ticket-u, ali nisam gotov.
+in progress	tts	hr	U tijeku
+initial state	tts	hr	Početno stanje
+invalid	tts	hr	NEVAŽEĆI
+invalidate	tts	hr	NEVAŽEĆE
+keep the present state [%1].	tts	hr	Zadrži trenutno stanje [%1].
+latest note added	tts	hr	Poslijednje dodana bilješka
+list of available tickets' states.	tts	hr	Lista postojećih stanja Ticket-a.
+list of available tickets' transitions.	tts	hr	Lista postojećih tranzicija Ticket-a
+missing description	tts	hr	Nedostaje opis
+morework	tts	hr	JOŠ ZA NAPRAVITI
+needswork	tts	hr	ZAHTIJEVA RADA
+new	tts	hr	NOVO
+new ticket	tts	hr	Novi Ticket
+new tickets can be put into this state.	tts	hr	Novi Ticket-i se mogu staviti u ovo stanje.
+new value	tts	hr	Nova vrijednost
+no additional notes	tts	hr	Nema dodatnih bilješki
+no duplicate	tts	hr	BEZ DUPLIKATA
+no notes for this ticket	tts	hr	Nema bilješki za ovaj Ticket
+no states found	tts	hr	Nisam pronašao stanja
+no tickets found	tts	hr	Nisam našao Ticket-e
+no transitions found	tts	hr	Nisam našao tranzicije
+not assigned	tts	hr	Nije dodijeljeno
+not completed	tts	hr	NIJE ZAVRŠENO
+notify changes to ticket assignee by e-mail	tts	hr	Obavijesti dodijeljenog korisnika o promjeni na Ticket-u putem e-maila
+notify changes to ticket group by e-mail	tts	hr	Obavijesti dodijeljenu grupu o promjeni na Ticket-u  putem e-mail
+notify changes to ticket owner by e-mail	tts	hr	Obavijesti vlasnika o promjeni na Ticket-u  putem e-mail
+old value	tts	hr	Stara vrijednost
+open	tts	hr	Otvori
+open / closed	tts	hr	Otvoreno / Zatvoreno
+open date	tts	hr	Otvori datum
+opened	tts	hr	Otvoreno
+opened by	tts	hr	Otvorio
+original ticket details	tts	hr	Originalni detalji o Ticket-u
+perform irregular transition into the following state	tts	hr	Prevedi neregularne tranzicije u slijedeća stanja
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	hr	Molimo vas unesite temu Ticket-a, inače se novi Ticket nemože spremiti
+prio	tts	hr	Prio
+priority	tts	hr	Prioritet
+priority changed	tts	hr	Promjena prioriteta
+put the preexistent ticket into the state %1.	tts	hr	Postavi već postojeći Ticket u stanje %1.
+re-assigned	tts	hr	Ponovno dodijeljeno
+re-opened	tts	hr	Ponovno otvoreno
+refresh every (seconds)	tts	hr	Osviježi svakih (sekundi)
+reopen	tts	hr	PONOVO OTVORI
+reopened	tts	hr	PONOVNO OTVORENO
+resolve	tts	hr	RIJEŠI
+resolved	tts	hr	RIJEŠENO
+returns a struct of a tickets history	tts	hr	Vraća strukturu povijesti Ticketa-a
+returns a struct of values of a single ticket	tts	hr	Vraća strukturu vrijednosti povijesti jednog Ticket-a
+returns the additional notes attached to a ticket	tts	hr	Vraća dodatne bilješke dodane Ticket-u
+selected	tts	hr	izabrano
+show new/updated tickets on main screen	tts	hr	Prikaži nove/obnovljene Ticket-e na glavnom ekranu
+source state	tts	hr	Stanje ishodišta
+state	tts	hr	Stanje
+state changed	tts	hr	Promjena stanja
+state id	tts	hr	Napišite indetifikaciju
+state name	tts	hr	Napišite ime
+status/date closed	tts	hr	Status / Datum zatvaranja
+subject changed	tts	hr	Promjena teme
+target state	tts	hr	Ciljano stanje
+test	tts	hr	TEST
+the closed ticket requires more work. reopen it.	tts	hr	Zatvoreni Ticket zahtijeva još rada. Ponovo otvori.
+the owner of the ticket was not able to confirm the issue.	tts	hr	Vlasnik Ticket-a nije mogao potvrditi problem.
+the ticket has been accepted by the owner, who is about to work on it.	tts	hr	Vlasnik je prihvatio Ticket, tko će raditi na njemu.
+the ticket has been closed without resolution.	tts	hr	Ticket je zatvoren bez riješenja.
+the ticket has been reopened for further work.	tts	hr	Ticket je ponovno otvoren zbog daljnjeg rada.
+the ticket has been successfully resolved.	tts	hr	Ticket je uspiješno riješen.
+the ticket has been verified and has to be worked on.	tts	hr	Ticket je potvrđena i treba započeti sa radom.
+the ticket has been worked on and the work requires validation.	tts	hr	Rađeno je na Ticket-u, i rad zahtijeva potvrdu.
+the ticket has been worked on, but requires more work.	tts	hr	Rađeno je na Ticket-u, ali je potrebno još rada.
+the ticket is a duplicate of another ticket and should be closed.	tts	hr	Ticket je duplikat nekog drugog Ticket-a i trebao bi biti zatvoren.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	hr	U biti Ticket nije duplikat. Ponovo ga otvori.
+the ticket is invalid and cannot be worked on.	tts	hr	Nevažeći Ticket i na njemu se nemože raditi
+the ticket resolution was successfully validated. close the ticket.	tts	hr	Potvrda Ticket-a je uspješna. Zatvori Ticket.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	hr	Ticket je postojao prije definiranja Petri Net infrastrukture i treba mu dodijeliti stanje.
+the ticket was found a duplicate of another ticket.	tts	hr	Ticket je duplikat nekog drugog Ticket-a.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	hr	Ticket-i u listi su slijedećeg stanja %1. Molimo, vas odlučite daljnji tijek djelovanja.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	hr	Potvrda Ticket-a nije bila uspješna. Ticket zahtijeva još posla.
+ticket	tts	hr	Ticket
+ticket has been updated	tts	hr	Ticket je obnovljen
+tickets found %1	tts	hr	Nađeno %1 Ticket-a
+tickets open %1	tts	hr	Otvoreno %1 Ticket-a
+tickets total %1	tts	hr	Ukupno Ticket-a %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	hr	Za povratak na tts indeks, pritisnite <a href="%1">tu</a>
+toaccept	tts	hr	U PRIHVAT
+toclosed	tts	hr	U ZATVORITI
+toduplicate	tts	hr	U DUPLICIRATI
+toinvalid	tts	hr	U NEVAŽEĆE
+toneedswork	tts	hr	U ZAHTIJEVA RADA
+tonew	tts	hr	U NOVO
+toreopened	tts	hr	U PONOVO OTVORITI
+toresolved	tts	hr	U RIJEŠENO
+total billable	tts	hr	Ukupno naplativo
+totovalidate	tts	hr	U ZA POTVRDITI
+tovalidate	tts	hr	U POTVRDI
+toverified	tts	hr	U PROVJERENO
+transition	tts	hr	Tranzicija
+transition name	tts	hr	Ime tranzicije
+trouble ticket system	common	hr	Trouble Ticket System
+tts	common	hr	Trouble Ticket System
+tts preferences	tts	hr	Trouble Ticket System - Postavke
+undefined	tts	hr	NEDEFINIRANO
+update ticket state	tts	hr	Obnovi stanje Ticket-a
+updates ticket	tts	hr	Obnavlja Ticket
+verified	tts	hr	PROVJERENO
+verify	tts	hr	PROVJERI
+verify the ticket to work on it.	tts	hr	Provijeri Ticket za rad na njemu
+view all tickets	tts	hr	Prikaži sve Ticket-e
+view job detail	tts	hr	Prikaži detaljan opis posla
+view only my open tickets	tts	hr	Prikaži samo moje otvoreneTicket-e
+view only open tickets	tts	hr	Prikaži samo otvorene Ticket-e
+you can only close a ticket if it is assigned to you.	tts	hr	Možete zatvoriti Ticket samo ako je vama dodijeljen.
+you want to delete the state %1 and associated transitions. are you sure?	tts	hr	Želite obrisati %1 stanje i sa njim vezane tranzicije. Da li ste sigurni?
+you want to delete the state %1. are you sure?	tts	hr	Želite obrisati stanje %1. Da li ste sigurni?
+you want to delete the transition %1. are you sure?	tts	hr	Želite obrisati tranziciju %1. Da li ste sigurni?

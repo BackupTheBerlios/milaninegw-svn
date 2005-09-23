@@ -1,0 +1,368 @@
+%1 messages have been deleted	email	iw	%1 הודעות נמחקו
+(required)	email	iw	(נדרש)
+1 message has been deleted	email	iw	הוגעה 1 נמחקה
+1 message has been moved to	email	iw	הודעה 1 הועברה אל
+<b>*apply*</b> this filter	email	iw	'בצע' מסנן זה
+<b>apply all</b> filters	email	iw	בצע כל המסננים
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	iw	.html או אחר, נמצא בתוך הודעת java בלוק של תגים של קוד סקריפט,
+account	email	iw	חשבון
+account name	email	iw	שם חשבון
+account user name	email	iw	שם משתמש החשבון
+accounts	common	iw	חשבונות
+accounts:	email	iw	:חשבונות
+add to address book	email	iw	הוסף לספר כתובות
+add to addressbook	email	iw	הוסף לספר כתובות
+address book	email	iw	ספר כתובות
+after	email	iw	אחרי
+all messages	email	iw	כל ההודעות
+and	email	iw	-ו
+and stop filtering	email	iw	והפסק בינון
+answered	email	iw	נענו
+apply	email	iw	בצע
+apply filters report:	email	iw	:דוח מסננים פעילים
+apr	email	iw	אפר
+aqua fusion	email	iw	Aqua Fusion
+arrival date	email	iw	תאריך הגעה
+as	email	iw	-כ
+attach file	email	iw	צרף קובץ
+attach signature	email	iw	צרף חצימה
+attachment	email	iw	מצורף
+aug	email	iw	אוג
+bcc	email	iw	העתק מוסתר
+bcc address	email	iw	כתובת העתק מוסתר
+before	email	iw	לפני
+big	email	iw	גדול
+bigger	email	iw	גדול יותר
+biggest	email	iw	הגדול ביותר
+body	email	iw	גוף
+both	email	iw	שניהם
+button type	email	iw	סוג הכפתור
+cache server data whenever possible	email	iw	להטמין נתונים מהשרת מתי שאפשר
+cc	email	iw	העתק
+cc address	email	iw	כתובת העתק
+change font size in your e-mail pages	email	iw	שנה גודל גופן בעמודי הדוא"ל שלך
+check flags for type of mails	email	iw	בדוק דגלים עבור סודי דואר מסוימים
+choose for rename	email	iw	בחר לשינוי השם
+choose to rename	email	iw	בחר לשינוי השם
+clear cache	email	iw	נקה מטמון
+click here for more info in a new window	email	iw	הקלק כאן לקבלת מידע נוסף בחלון חדש
+click here to continue	email	iw	הקלק כאן להמשיך
+click here to edit the settings for this email account.	email	iw	.הקלק כאן כדי לערוך את הגדרות של חשבון הדוא"ל
+click here to return to your home page.	email	iw	.הקלק כאן כדי לחזור לעמוד הבית שלך
+company	email	iw	חברה
+compose	common	iw	חדש
+compose message	email	iw	הודעה חדשה
+compose new	common	iw	כתוב חדש
+contains	email	iw	מכיל
+could not open this mailbox	email	iw	לא הצלחתי לפתוח תיבת דואר זו
+create (expert)	email	iw	(צור (מומחה
+create a folder	email	iw	צור תיקיה
+current attachments (%1)	email	iw	(מצורפים נוכחיים (%1
+custom e-mail preferences	email	iw	עדיפויות דוא"ל המותאמות אישית
+custom e-mail settings	email	iw	הגדרות דוא"ל המותאמים אישית
+debugging page	email	iw	debugging עמוד
+dec	email	iw	דצמ
+default sorting order	email	iw	סדר מיון ברירת מחדל
+default:	common	iw	:ברירת מחדל
+delete (expert)	email	iw	(מחק (מומחה
+delete a folder	email	iw	מחק תיקיה
+delete account	common	iw	מחק חשבון
+deleted	email	iw	נמחקו
+deleted messages (trash) folder	email	iw	(תיקיות הודעות שנמחקו (אשפה
+deleted messages folder name	email	iw	שם תיקיה הודעות שנמחקו
+deleted messages go to trash	email	iw	הודעות נמחקות הולכות לאשפה
+deleted messages saved to folder:	email	iw	:הודעות נמחקות נשמרות לתיקית
+discard	email	iw	השלך
+does not contain	email	iw	אינו מכיל
+draft	email	iw	טיוטה
+e-mail clear cache	preferences	iw	נקה מטמון דוא"ל
+e-mail extra account	email	iw	חשבון דוא"ל נוסף
+e-mail extra accounts	email	iw	חשבונות דוא"ל נוספים
+e-mail extra accounts list	email	iw	רשימת חשבונות דוא"ל נוספים
+e-mail filters	common	iw	סנני דוא"ל
+e-mail folders	common	iw	תיקיות דוא"ל
+e-mail inbox filters list	email	iw	רשימת המסננים של תיבת דואר נכנס
+e-mail preferences	common	iw	עדיפויות דוא"ל
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	iw	לכל משתמש קיים עמוד מסכם שאפשר להציג בו מידע זה או אחר. אפשרות זו תציג רשימה קצרה של הודעות בתיבת הדואר הנכנס בחשבון המחדל של המשתמש בעמוד הבית שלו
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account onthe users summary home page.	email	iw	לכל משתמש קיים עמוד מסכם שאפשר להציג בו מידע זה או אחר. אפשרות זו תציג רשימה קצרה של הודעות בתיבת הדואר הנכנס בחשבון המחדל של המשתמש בעמוד הבית שלו
+edit filters	email	iw	ערוך מסננים
+email account name	email	iw	שם חשבון דוא"ל
+email address	email	iw	כתובת דוא"ל
+email date	email	iw	תאריך דוא"ל
+email filters	email	iw	מסנני דוא"ל
+email password	email	iw	סיסמת הדוא"ל
+email preferences	email	iw	עדיפויות דוא"ל
+email signature	email	iw	חתימת דוא"ל
+email type	common	iw	סוג דוא"ל
+enable this email account	common	iw	הפעל חשבון דוא"ל זה
+enable utf-7 encoded folder names	email	iw	UTF-8 לאפשר שמות תיקיה בקידוד
+enter the search string in the text boxes	email	iw	הכנס את מחרוזת לחיפוש בתיבות הטקסט
+enter your pop	admin	iw	שלך POP-הכנס את ה
+error moving messages to	email	iw	-שגיאה בהעברת הודעות ל
+error text not provided	email	iw	לא סופק טקסט השגיאה
+error: unknown message data	email	iw	שגיאה: נתוני הודעה לא מוכרים
+evolution style	email	iw	Evolution סגנון
+extra accounts	email	iw	חשבונות נוספים
+extra e-mail account	common	iw	חשבון דוא"ל נוסף
+extra e-mail accounts	common	iw	חשבונות דןא"ל נוספים
+extra e-mail preferences number %1	email	iw	עדיפויות חשבון דוא"ל  מספר %1
+feb	email	iw	פבר
+fewer actions	email	iw	פחות פעולות
+fewer choices	email	iw	פחות בחירוץ
+file	email	iw	קובץ
+file attachment	email	iw	קובץ מצורף
+file into	email	iw	נתוני הקובץ
+fill in as much as you can	email	iw	מלא כמה שאפשר
+filter [number] and name	email	iw	מספר] הפילטר ושמו]
+filter inbox for accounts	email	iw	מסנן תיבת דואר נכנס עבור חשבונות
+filter name	email	iw	שם המסנן
+filter name:	email	iw	:שם המסנן
+filter number	email	iw	מספר המסנן
+filters	email	iw	מסננים
+filters list	email	iw	רשימת המסננים
+flag as important	email	iw	דגל כחשוב
+flagged	email	iw	מדוגל
+folder	common	iw	תיקיה
+folder maintenance	email	iw	אחזקת תיקיות
+folder name	email	iw	שם תיקיה
+folder size	email	iw	גודל התיקיה
+folders	email	iw	תיקיות
+for the file to actually upload	email	iw	כדי שהקובץ באמת יועלה
+for these items, fill only what is different from you default e-mail preferences	common	iw	בפריטים אלה,  מלא רק מששונה מהעדיפויות של חשבון דוא"ל המחדלי שלך
+forward	email	iw	העבר
+from	email	iw	מאת
+from address	email	iw	כתובת מאת
+get size	email	iw	הביא גודל
+go	email	iw	לך
+go back	email	iw	חזור
+go back to	email	iw	חזור אל
+header field	email	iw	שדה כותרת
+hidden	email	iw	מוסתר
+hide help	email	iw	הסתר עזרה
+html messages with the iframe  tag may be klez or other worm emails.	email	iw	.או דוא"ל עם תולעת אחרת KLEZ יכול להיות IFRAME-אם תד ה html הודעות
+icon size	email	iw	גודל מלמית
+icon theme	email	iw	ערכת נושה הצלמית
+idots crystal style	email	iw	iDots סגנון הקריסטל של
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	iw	.אם מסומן שהודעות נמחקות הולכות לאשפה, ההודעות שיימחקו ילכו לתיקיה בעלת השם שתקליד בתיבה זו
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות שנשלחו הולכות תיקית פריטים שנשלחו
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	iw	.אם מסומן שהודעות נמחקות הולכות לאשפה, ההודעות שיימחקו ילכו לתיקיה בעלת השם שתקליד בתיבה זו
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות שנשלחו הולכות תיקית פריטים שנשלחו
+if applicable	email	iw	אם רלוונטי
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות שנשלחו הולכות תיקית פריטים שנשלחו
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות שנשלחו הולכות תיקית פריטים שנשלחו
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות שנשלחו הולכות תיקית פריטים שנשלחו
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות נמחקות הולכות לאשפה, ההודעות שיימחקו ילכו לתיקיה בעלת השם שתקליד
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	iw	אם מסומן שהודעות נמחקות הולכות לאשפה, ההודעות שיימחקו ילכו לתיקיה בעלת השם שתקליד
+if fileto then select destination folder	email	iw	אם שמור אל נא לבחור את תיקית היעד
+if messages match	email	iw	אם ההודעות תואמות
+if there is no obvious error, check your email account name and password first.	email	iw	.אם אין שגיאה ברורה, בדוק קודם את שם חשבון דוא"ל ואת הסיסמה
+if there is no obvious error, check your username and password first.	email	iw	.אם אין שגיאה ברורה, בדוק קודם את שם המשתמש ואת הסיסמה
+image	email	iw	תמונה
+imap mail server hostname or ip address	admin	iw	שלו IP-או כתובת ה IMAP-שם שרת ה
+imap server type	common	iw	IMAP-סוג שרת ה
+imap server type - if applicable	email	iw	אם רלוונטי - IMAP-סוג שרת ה
+important	email	iw	חשוב
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	iw	בעמוד האינדקס של דוא"ל, העמוד המציג את כל הדואר בתיקיות, אפשר למיין את הדואר לפי תאריך, כותב, גודל או נושא. אבל את כל אלה צריך לסדר מהראשון אל האחרון. אפשרות זו מגדירה מה זה ראשון ומה זה אחרון. למשל, אם מסדרים לפי תאריך, מהחדש ביותר עד לישן ביותר מציג את ההודעות החדשות ביותר ראשון, בסדר יורד, עד אחרון ההודעות שהיא הישנה ביותר
+inbox	email	iw	תיבת דואר נכנס
+input error	email	iw	שגיאת קלט
+input error:	email	iw	שגיאת קלט
+jan	email	iw	ינו
+javascript	email	iw	Java סקריפט
+jul	email	iw	יול
+jun	email	iw	יונ
+keep	email	iw	השאר
+keyword	email	iw	מילת מפתח
+keywords	email	iw	מלות מפתח
+layout 1	common	iw	סגנון 1
+layout 2	common	iw	סגנון 2
+lines	email	iw	שורות
+list messages	email	iw	הצג הודעות
+long names	email	iw	שמות ארוכים
+mail folder(uw-maildir)	email	iw	(uw-maildir) תיקית דואר
+mail server	email	iw	שרת דואר
+mail server login type	admin	iw	סוג הכניסה לשרת הדואר
+mail server type	email	iw	סוג שרת דואר
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	iw	דואר שתשלך ישתמש בכתובת זו ככתובת מאת שלך. זה יכול להיות זהה לשם הכניסה שלך למערכת או יתכן שמנהל השרת כבר הגדיר אותה. כאשר הנמען לוחץ על השב, כתובת זו תשמש לו. אם תשאיר תיבה זו ריקה המערכת תשתמש בברירת המחדל
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	iw	דואר שתשלך ישתמש בכתובת זו ככתובת מאת שלך. זה יכול להיות זהה לשם הכניסה שלך למערכת או יתכן שמנהל השרת כבר הגדיר אותה. כאשר הנמען לוחץ על השב, כתובת זו תשמש לו. אם תשאיר תיבה זו ריקה המערכת תשתמש בברירת המחדל
+manage accounts	email	iw	ניהול חשבונות
+manage folders	email	iw	ניהול תיקיות
+mar	email	iw	מרץ
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	iw	.להודעה זו קובץ מצורף שהנו סוג של קובץ להרצה שממנו משתמשי חלונות צרכים להיזהר
+message list layout	common	iw	סגנון רשימת ההודעת
+messages	email	iw	הודעות
+messages found in folder	email	iw	ההודעות בתיקיה
+messages have been moved to	email	iw	ההודעות הועברו אל
+more actions	email	iw	פעולות נוספות
+more choices	email	iw	בחירות נוספות
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	iw	רוב המשתמשים בארצות הברית ובאורופה לא צריכים אפשרות זו. אם אפשרות זו מסומנת שרת הדואר שלך
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	iw	רוב המשתמשים בארצות הברית ובאורופה לא צריכים אפשרות זו. אם אפשרות זו מסומנת שרת הדואר שלך
+move down	email	iw	הורד למטה
+move selected messages into	email	iw	העבר הודעות נבחרות לתוך
+move this message into	email	iw	העבר הודעה זה לתוך
+move up	email	iw	העלה למעלה
+mozilla modern style	email	iw	מודרני Mozilla סגנון
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	iw	mail.example.com :שם שרת הדואר שברצונך לגשת אליו. צריך להיות שם לדוגמת
+new	email	iw	חדש
+new account	email	iw	חשבון חדש
+new filter	email	iw	מסנן חדש
+new message	email	iw	הודעה חדשה
+new messages	email	iw	הודעות חדשות
+newest	common	iw	החדש ביותר
+next message	email	iw	ההודעה הבאה
+no change	email	iw	אין שינוי
+no error returned from server	email	iw	השרת לא החזיר שגיאה
+no message found in folder '%1'	email	iw	'%1'לא נמצאה הודעה בתיקיה
+no next message	email	iw	אין הודעה הבאה
+no previous message	email	iw	אין הודעה קודמת
+noia &#64; carlitus style	email	iw	Nola@Carlitus סגנון
+non-standard	email	iw	לא סטנדרטי
+not used	email	iw	לא בשימוש
+notify on delivery	email	iw	הודע עם מסירה
+nov	email	iw	נוב
+number	common	iw	מספר
+number of matches:	email	iw	:כמות התאמות
+oct	email	iw	אוק
+old	email	iw	ישן
+oldest	common	iw	הישן ביותר
+on	email	iw	-ב
+or	common	iw	או
+or enter text	email	iw	או הקלד טקסט
+or you can use custom settings for this email account	email	iw	או שניתן להשתמש בגדרות אישיות לחשבון דוא"ל זה
+organization	email	iw	ארגון
+persistent email server session	email	iw	מושב דוא"ל דביק
+phone	email	iw	טלפון
+please fill in everything you need	email	iw	נא למלא את כל שדות החובה
+please select a folder to rename	email	iw	נא לבחור תיקיה לנוי שם
+please select a message first	email	iw	נא לבחור קודם הודעה
+please submit a filename to attach	email	iw	נא ציין שם קובץ לצרף
+please type a folder name in the text box	email	iw	נא להכניס שם תיקיה שתיבת הטקסט
+previous	email	iw	הקודמת
+previous message	email	iw	ההודעה הקודמת
+printable	email	iw	ניתן להדפסה
+raw message	email	iw	הודעה גולמית
+read mail	email	iw	קרא דואר
+received headers	email	iw	כותרות שהתקבלו
+recent	email	iw	לאחרונה
+recipient	email	iw	נמען
+reject	email	iw	דחה
+rename (expert)	email	iw	(שונוי שם (מומחה
+rename a folder	email	iw	שנה שם תיקיה
+reply	email	iw	השב
+reply all	email	iw	השב לכל
+replyto	email	iw	-השב ל
+request delivery notification	email	iw	בקש הודעת מסירה
+requested filter action:	email	iw	:פעולת סינון מבוקשת
+required	email	iw	נדרש
+reset	email	iw	אפס
+result	email	iw	תוצאה
+return mails during this time period	email	iw	הודעות דואר שחזרו במהלך תקופה זו
+save deleted messages in folder named below	email	iw	שמור הודעות שנמחקו בתיקיה הרשומה מטה
+save sent messages in folder named below	email	iw	שמור הודעות שנשלחו בתיקיה הרשומה מטה
+search for mails in these folders	email	iw	חפש הודעות בתיקיות הללו
+search this folder	email	iw	חפש בתיקיה זו
+section	email	iw	מחלקה
+seen	email	iw	נראו
+select home email address	email	iw	בחר כתובת דוא"ל בבית
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	iw	בחר תיבה זו אם ברצונך שגוף הטקסט של הודעה מועברת יופיע בגוף ההודעה הנשלחת
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	iw	בחר תיבה זו אם ברצונך שגוף הטקסט של הודעה מועברת יופיע בגוף ההודעה הנשלחת
+select work email address	email	iw	בחר כתובת דוא"ל בעבודה
+select your mail server type	admin	iw	בחר את סוג שרת הדואר שלך
+select your screensize for proper showing of the javascript addressbook	email	iw	Java-בחר בגודל המסך המתאים כדי להציג נכון א ספר הכתובות ה
+select your screensize for propper showing of the javascript addressbook	email	iw	Java-בחר בגודל המסך המתאים כדי להציג נכון א ספר הכתובות ה
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	iw	Java בחר בסגנון ספר כתובות המתאים לך. הסגנון המסורתי הפשוט, או סגנון חדשי ומתוחכם המבוסס
+send	email	iw	שלח
+send deleted messages to the trash	email	iw	שלח הודעות נמחקות לאשפה
+send forwarded mail as quoted attachment	email	iw	שלח דואר מועבר כציטוט מצורף
+sender	email	iw	השולח
+sent	common	iw	נשלח
+sent folder	email	iw	תיקיית נשלחו
+sent messages folder	common	iw	התיקיה של הודעות שנשלחו
+sent messages folder name	email	iw	השם של ההתיקיה של הודעות שנשלחו
+sent messages saved in &quot;sent&quot; folder	common	iw	הודעות שנשלחו נשמרות בקיקיית &quot;פרטים שנשלחו&quot;
+sent messages saved to folder:	email	iw	הודעות שנשלחו נשמרות בקיקיית פרטים שנשלחו
+sep	email	iw	ספט
+settings	common	iw	הגדרות
+short names	email	iw	שמות קצרים
+show help	email	iw	הצג עזרה
+show long names	email	iw	הצג שמות ארוכים
+show message	email	iw	הצג הודעות
+show new messages in combobox	email	iw	הצג הודעות חדשות בתיבה משולבת
+show new messages on main screen	email	iw	הצג הודעות חדשות במסך הראשי.
+show sender's email address with name	email	iw	הצג את כתובת הדוא"ל של השולח עם השם
+show short names	email	iw	הצג שמות קצרים
+show total folder size by default	email	iw	הצג סך כל גודל התיקיה כברירת מחדל
+simple	email	iw	פשוט
+size	email	iw	גודל
+size larger than	email	iw	-הגודל גדול מ
+size smaller than	email	iw	-הגודל קטן מ
+small	email	iw	קטן
+small view	email	iw	תצוגה קטנה
+smaller	email	iw	קטן יותר
+smallest	email	iw	הקטן ביותר
+somebody	email	iw	מישהו
+sort by	email	iw	נשלח ע"י
+source accounts	email	iw	חשבונות מקור
+spell check	email	iw	בדיקת איות
+standard e-mail preferences	email	iw	הגדרות דוא"ל סנדרטיות
+stop if matched	email	iw	עצור עם נמצא התאמה
+switch accounts	email	iw	החלף חשבונות
+switch current folder to	common	iw	-החלף תיקיה נוכחית ל
+test all filters	email	iw	בדוק את כל המסננים
+test or apply all filters	email	iw	בדוק או הפעל את כל המסננים
+test run this filter	email	iw	בצע הרצת ניסיון של סנן זה
+text	email	iw	טקסט
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	iw	יישום הדוא"ל מציע שני שני תצורות שונות לעמוד האידקס, שהוא העמוד שמציג את ההודעות בתיקיה. יתכן שזה יהיה העמוד שהמשתמש צופה בו הכי הרבה, לכן מוצעות שתי תצורות
+the email application offers different button displays, these buttons can be text, images, or both.	email	iw	.יישום הדוא"ל מציע שתי תצוגות של כפתורים, טקסטואליי, גרפיים, או שניהם
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	iw	יישום הדוא"ל מציע ערכות נושא בעלות צלמניות שונות, שאלו הן קבוצות של תמונות בעלי סגנון משותף אשר משמשים את היישום.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	iw	יישום הדוא"ל מציע ערכות נושא בעלות צלמניות שונות, שאלו הן קבוצות של תמונות בעלי סגנון משותף אשר משמשים את היישום.
+the email application offers different icon image themes, these icons can be big or small.	email	iw	.יישום הדוא"ל מציע תמונות של ערכות נושא שונות. אלו יכולות להיות גדולות או קטנות
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	iw	שם הכניסה להשתמש בעת בדיקת דוא"ל עבור חשבון זה. יתכן שהוא זהה לשם הכניסה למערכת, או יתכן שמנהל השרת הגדיר זאת בשבילך. אם יש לך יותר מחשבון דואר אחד, תצטריך למלא שדה זה. אם יש לך רק חשבון דוא"ל אחד מוגדר, אז קרוב לוודאי שלא צריך למלא אותו. אם מנקים תיבה זו היא חוזרת לברירת המחדל. אם אתה רק רוצה להתאים כמה הגדרות, השאר אותה ריקה, המערכת תשתמש בערך ברירת המחדל, וערך ברירת המחדל תוצג כאן בפעם הבאה שתבקר בעמוד העדיפויות
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	iw	שם הכניסה להשתמש בעת בדיקת דוא"ל עבור חשבון זה. יתכן שהוא זהה לשם הכניסה למערכת, או יתכן שמנהל השרת הגדיר זאת בשבילך. אם יש לך יותר מחשבון דואר אחד, תצטריך למלא שדה זה. אם יש לך רק חשבון דוא"ל אחד מוגדר, אז קרוב לוודאי שלא צריך למלא אותו. אם תגדיר באן סיסמא, אזי תיבה זו תהיה ריקה בפעם הבאה שתבקר בעמוד העדיפויות. זהו תכונת אבטחה שתבטיח שהסיסמא הנוכחית שלך לא תשלח אל הדפדפן שלך לאחר הגדרתו. כדי לשנות את הסיסמהא מותאמת אישית, פשוט הקלד אותו בתיבה. צריך להגדיר אשדה זה עבור כל חשבונות הדואר הנוספות שלך. עבור חשבון המחדלי שלך, אפשר לנקות את הסיסמא המותאמת אישית על ידי הסרת הסימון ליד האפשרות &quot`השתמש בהגדרות מותאמות אישית&quot;
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	iw	הסיסמא שלך אותו יש להשתמש בעת בדיקת דוא"ל עבור חשבון זה. יתכן שהוא זהה לסיסמת הכניסה למערכת, או יתכן שמנהל השרת הגדיר זאת בשבילך. אם יש לך יותר מחשבון דואר אחד, תצטריך למלא שדה זה. אם יש לך רק חשבון דוא"ל אחד מוגדר, אז קרוב לוודאי שלא צריך למלא אותו. אם תגדיר באן סיסמא, אזי תיבה זו תהיה ריקה בפעם הבאה שתבקר בעמוד העדיפויות. זהו תכונת אבטחה שתבטיח שהסיסמא הנוכחית שלך לא תשלח אל הדפדפן שלך לאחר הגדרתו. כדי לשנות את הסיסמהא מותאמת אישית, פשוט הקלד אותו בתיבה. צריך להגדיר אשדה זה עבור כל חשבונות הדואר הנוספות שלך. עבור חשבון המחדלי שלך, אפשר לנקות את הסיסמא המותאמת אישית על ידי הסרת הסימון ליד האפשרות &quot`השתמש בהגדרות מותאמות אישית&quot;
+then check the	email	iw	-אז תבדוק את ה
+then do this	email	iw	אז בצע את
+then take this actions	email	iw	אז בצע פעותות אלו
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	iw	.אין טקסט או חלקים אחרים שאפשר להציג למשתמש. כל החלקים של הודעה זו הנם מצורפים
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	iw	.שלך IMAP אירע שגיאה בעת חיבור לשרת
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	iw	אירע שגיאה בחיבור לשרת הדואר שלך.
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	iw	.שלך POP3 אירע שגיאה בעת חיבור לשרת
+this data not supplied.	email	iw	נתונים אלה לא סופקו
+this folder is empty	email	iw	תיקיה זו ריקה
+to	email	iw	אל
+to address	email	iw	אל כתובת
+total messages	email	iw	סך כל ההודעות
+trash	email	iw	אשפה
+trash folder	email	iw	תיקיית אשפה
+unable to get source folder name	email	iw	לא מצליח לשיג את שם תיקיית המקור
+unable to get target folder name	email	iw	לא מצליח להשיג את שם תיקיית היעד
+unanswered	email	iw	ללא מענה
+undeleted	email	iw	לא נמחקו
+undisclosed recipients	email	iw	נמענים מוסתרים
+undisclosed sender	email	iw	שולח מוסתר
+unflagged	email	iw	לא מדוגלים
+unknown action	email	iw	פעולה לא מוכרת
+unknown error	email	iw	שגיאה לא מוכרת
+unknown translation	email	iw	תרגום לא מוכר
+unseen	email	iw	לא נראה
+use custom settings	email	iw	השתמש בהגדרות מותאמות אישית
+view as html	email	iw	HTML-הצג כ
+view formatted	email	iw	הצג מפורמאט
+view headers	email	iw	הצג כותרות
+view unformatted	email	iw	הצג לא מפורמאט
+warn_attachment_name_dangerous	email	iw	אזהרה: שם המצורף מסוכן
+warn_attachment_only_mail	email	iw	אזהרה: המצורף הנו רק דואר
+warn_b64_encoded_displayable	email	iw	ניתן להצגה b64 אזהרה: קידוד
+warn_has_iframe_maybe_klez	email	iw	KLEZ זהש יתכן iframe אזהרה: קיים
+warn_script_tags	email	iw	אזהרה: תגי סקריפט
+warn_style_sheet	email	iw	אזהרה: דף סגנון
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	iw	:הוספנו ספר כתובות חדש לאחרונה כדי לאפשר למשתמש לבחור ספר כתובות מתוחכם יותר  בעל תכונות
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	iw	:הוספנו ספר כתובות חדש לאחרונה כדי לאפשר למשתמש לבחור ספר כתובות מתוחכם יותר  בעל תכונות
+wrote	email	iw	כתב
+you have %1 new messages!	common	iw	!יש לך %1 הודעות חדשות
+you have 1 new message!	common	iw	!יש  לך הודעה חדשה אחת
+you have messages!	common	iw	!יש לך הודעות
+you have no new messages	common	iw	!אין לך הודעות חדשות
+you must click	email	iw	נא להקלק
+you must click %1 for the file to actually upload	email	iw	צריך להקלק %1 כדי שהקובץ נאמת יועלה
+your full name	common	iw	שמך המלא
+your message has been sent	common	iw	ההודעה שלך נשלחה

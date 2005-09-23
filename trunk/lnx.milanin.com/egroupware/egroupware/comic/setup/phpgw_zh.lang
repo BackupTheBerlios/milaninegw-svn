@@ -1,0 +1,42 @@
+%1 by %2	comic	zh	%1 by %2
+%1 by %2 (%3)	comic	zh	%1 by %2 (%3)
+are you sure you want to reset all comic dates and resolved image urls?	comic	zh	确定要复位所有的漫画日期及已解析的图片网址吗？
+censorship level	comic	zh	审查等级
+censorship override enabled	comic	zh	允许重新审查
+comic	common	zh	漫画
+comic preferences updated	comic	zh	漫画个性化配置已更新
+comics	common	zh	漫画
+comics per page	comic	zh	每页显示的漫画数
+comics scaled	comic	zh	漫画比例
+daily comic	common	zh	日常漫画
+daily comic preferences	comic	zh	日常漫画个性化配置
+daily comics	admin	zh	日常漫画
+daily comics - global options	comic	zh	日常漫画—全局配置
+daily comics data	comic	zh	日常漫画数据
+daily comics global options	comic	zh	日常漫画全局配置
+display layout	comic	zh	页面布局方式
+display options	comic	zh	其他选项
+egroupware daily comics	comic	zh	eGroupWare日常漫画
+front page comic	comic	zh	头版漫画
+front page comic scaled	comic	zh	头版漫画比例
+genre	comic	zh	风格
+global comics	admin	zh	全局漫画
+global comics	comic	zh	全局漫画
+global options	admin	zh	全局配置
+global options	comic	zh	全局配置
+global options updated	comic	zh	全局配置已更新
+image source	comic	zh	图片来源
+max file size	comic	zh	最大文件大小
+my comics	comic	zh	首选项
+no_entries	comic	zh	无条目
+parser	comic	zh	分析
+performed %1 of element	comic	zh	Performed %1 of element
+random	comic	zh	随机
+rated	comic	zh	审查等级
+remote (parse/snarf) enabled	comic	zh	Remote (parse/snarf)
+reset	comic	zh	复位
+reset comic data	admin	zh	复位漫画数据
+resolve	comic	zh	解析
+showing %1 (%2 - %3 of %4)	comic	zh	显示%1(%2到%3，共%4)
+template	comic	zh	模板
+visit %1	comic	zh	访问%1

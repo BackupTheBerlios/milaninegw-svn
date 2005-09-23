@@ -1,0 +1,69 @@
+add profile	emailadmin	fr	Ajouter un profil
+admin dn	emailadmin	fr	DN administrateur
+admin password	emailadmin	fr	Mot de passe administrateur
+admin passwort	emailadmin	fr	Mot de passe administrateur
+admin username	emailadmin	fr	Nom d'utilisateur de l'administrateur
+advanced options	emailadmin	fr	Options avancées
+alternate email address	emailadmin	fr	Adresse email alternative
+cyrus imap server	emailadmin	fr	Serveur Cyrus IMAP
+cyrus imap server administration	emailadmin	fr	Administration du serveur Cyrus IMAP
+default	emailadmin	fr	défaut
+deliver extern	emailadmin	fr	Relai de messagerie
+do you really want to delete this profile	emailadmin	fr	Voulez-vous vraiment supprimer ce profile
+domainname	emailadmin	fr	Nom de domaine
+edit email settings	emailadmin	fr	Modifier les paramètres de courier
+email account active	emailadmin	fr	Compte de messagerie actif
+email address	emailadmin	fr	Adresse de messagerie
+enable cyrus imap server administration	emailadmin	fr	Activer la gestion de Cyrus IMAP
+enable sieve	emailadmin	fr	Activer Sieve
+enter your default mail domain (from: user@domain)	emailadmin	fr	Entrez votre domaine par défaut (utilisateur@domaine.com)
+forward also to	emailadmin	fr	Transférer aussi à
+forward email's to	emailadmin	fr	Faire suivre l'adresse email
+forward only	emailadmin	fr	Seulement faire suivre
+imap admin password	admin	fr	Mot de passe de l'administrateur IMAP
+imap admin user	admin	fr	Administrateur IMAP
+imap c-client version < 2001	emailadmin	fr	IMAP C-Client Version < 2001
+imap server hostname or ip address	emailadmin	fr	Nom du serveur IMAP ou adresse IP
+imap server logintyp	emailadmin	fr	Type d'authentification IMAP
+imap server port	emailadmin	fr	Port IMAP
+imap/pop3 server name	emailadmin	fr	Nom du serveur IMAP/POP3
+in mbyte	emailadmin	fr	en Mo
+ldap basedn	emailadmin	fr	DN de base
+ldap server	emailadmin	fr	Serveur LDAP
+ldap server accounts dn	emailadmin	fr	DN contenant les comptes utilisateurs
+ldap server admin dn	emailadmin	fr	DN administrateur
+ldap server admin password	emailadmin	fr	Mot de passe administateur
+ldap server hostname or ip address	emailadmin	fr	Nom du serveur LDAP ou adresse IP
+ldap settings	emailadmin	fr	Paramètres LDAP
+leave empty for no quota	emailadmin	fr	Laisser vide pour ne pas avoir de quota
+mail settings	admin	fr	Paramètres de messagerie
+name of organisation	emailadmin	fr	Nom de l'entreprise
+no alternate email address	emailadmin	fr	Pas d'adresse email alternative
+no forwarding email address	emailadmin	fr	Pas d'adresse email de transfert
+pop3 server hostname or ip address	emailadmin	fr	Nom ou adresse IP du POP3
+pop3 server port	emailadmin	fr	Port POP3
+postfix with ldap	emailadmin	fr	Postfix avec support LDAP
+profile list	emailadmin	fr	Liste des profiles
+profile name	emailadmin	fr	Nom du profil
+qmaildotmode	emailadmin	fr	qmaildotmode
+qouta size in mbyte	emailadmin	fr	Taille du quota en Mo
+quota settings	emailadmin	fr	Paramètres de quota
+remove	emailadmin	fr	effacer
+select type of imap/pop3 server	emailadmin	fr	Selectionner le type de serveur IMAP/POP3
+select type of smtp server	emailadmin	fr	Selectionner le type de serveur SMTP
+sieve server hostname or ip address	emailadmin	fr	Nom ou adresse IP du serveur Sieve
+sieve server port	emailadmin	fr	Port Sieve
+sieve settings	emailadmin	fr	Paramètres Sieve
+smtp server name	emailadmin	fr	Nom du serveur SMTP
+smtp-server hostname or ip address	emailadmin	fr	Nom ou adresse du serveur SMTP
+smtp-server port	emailadmin	fr	Port SMTP
+standard	emailadmin	fr	Standard
+standard imap server	emailadmin	fr	Serveur IMAP standard
+standard pop3 server	emailadmin	fr	Serveur POP3 standard
+standard smtp-server	emailadmin	fr	Serveur SMTP standard
+use ldap defaults	emailadmin	fr	Utiliser les paramètres LDAP par défaut
+use smtp auth	emailadmin	fr	Utiliser l'authentification SMTP
+use tls authentication	emailadmin	fr	Utiliser l'authentification TLS
+use tls encryption	emailadmin	fr	Utiliser le cryptage TLS
+users can define their own emailaccounts	emailadmin	fr	Les utilisateurs peuvent définir leurs propres comptes de messagerie
+virtual mail manager	emailadmin	fr	Virtual MAIL ManaGeR

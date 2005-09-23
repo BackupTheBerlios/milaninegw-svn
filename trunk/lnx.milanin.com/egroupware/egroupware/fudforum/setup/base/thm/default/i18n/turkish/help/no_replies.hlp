@@ -1,0 +1,16 @@
+Yanıtlanmamış İletiler
+Tüm forumdaki yanıt yazılmamış bütün iletileri gösterir.
+
+Eğer kayıtlı bir kullanıcı iseniz, aynı zamanda "Okunmamış İletiler" seçeneğini
+de görürsünüz. Bu seçenek henüz okumamış olduğunuz iletilerin görüntülenmesini
+sağlar.
+
+Eğer kayıtlı bir kullanıcı iseniz, buna ek olarak "Bugünkü İletiler" seçeneğini
+de görürsünüz. Bu seçenek bugün içerisinde atılmış tüm iletilerin görüntülenmesini
+sağlar.
+
+Tüm bu seçenekler birbirine eklenerek çalışır, bu yüzden hangilerinin seçili olduğuna dikkaet etmelisiniz.
+örneğin "Bugünkü İletiler"i tıklattıktan sonra "Okunmamış İletiler"i tıklatırsasınız, süzgeçleri eklemiş
+olur ve sonuç olarak sadece bugün atılan iletilerden sizin tarafınızdan okunmamış olanları görüntülersiniz.
+Eğer tekrar "Bugünkü İletiler"i tıklatırsanız, süzgeçteki "Bugünkü İletiler" kısmını çıkarmış olursunuz,
+ve geriye "Okunmamış İletiler" kaldığı için, forumdaki bütün okumadığınız iletilerin görüntülenmesini sağlarsınız.

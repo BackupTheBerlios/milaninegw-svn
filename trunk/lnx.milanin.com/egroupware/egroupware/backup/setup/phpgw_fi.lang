@@ -1,0 +1,61 @@
+absolute path of the backup directory	backup	fi	Varmuuskopion hakemiston täydellinen polku (esim.:/usr/local/www/egroupware/backup/archive)
+archive type	backup	fi	Valitse arkistosi tyyppi
+backup	common	fi	Varmuuskopio
+backup administration	common	fi	Varmuuskopion hallinta
+book marks	common	fi	Suosikit
+bookmarks	common	fi	Suosikit
+configuration backup	backup	fi	Varmuuskopion konfiguraatio
+configuration localhost	backup	fi	Paikallisen isännän konfiguraatio
+create backups of your data ?	backup	fi	Tarkista tiedoistasi luodut varmuuskopiot
+create new bookmark	bookmarks	fi	Tee uusi suosikki
+daily	backup	fi	päivittäin
+data	backup	fi	Tieto
+date added	bookmarks	fi	Lisätty
+date last updated	bookmarks	fi	Päivitetty viimeksi
+date last visited	bookmarks	fi	Vierailtu viimeksi
+directory locations	admin	fi	Hakemiston sijainnit
+directory names	admin	fi	Hakemiston nimet
+e-mail notification?	backup	fi	E-MAIL ilmoitus?
+edit bookmark	bookmarks	fi	Muokkaa suosikkia
+edit this bookmark	bookmarks	fi	Muokkaa tätä suosikkia
+homedirs	admin	fi	Koti hakemistot
+import bookmarks	preferences	fi	Tuo suosikkeja
+ip or hostname	backup	fi	IP tai verkkoaseman tunnus
+keywords	bookmarks	fi	Avainsanat
+ldap	common	fi	LDAP
+ldap database	admin	fi	LDAP tietokanta
+list backup archives	backup	fi	Varmuuskopion arkistojen lista
+mail this bookmark	bookmarks	fi	Lähetä sähköpostilla
+maildir	admin	fi	Ilmoitus menee E-MAIL:iin:
+mass update:	bookmarks	fi	Joukkopäivitys:
+monthly	backup	fi	kuukausittain
+mysql	admin	fi	MySQL
+never	bookmarks	fi	Ei koskaan
+no backup archives available !	backup	fi	Varmuuskopion arkistoa ei saatavilla !
+operating system	backup	fi	Käyttöjärjestelmä
+php cgi	admin	fi	koko polku sinun PHP exec (esim.: /usr/bin/php)
+please enter the path of the needed applications in *site configuration* !	backup	fi	Kirjoita tarvitsemasi sovelluksen polku *Sivuston konfiguraatiossa' !
+please enter the path to the backup dir and/or enable showing archives in egroupware !	backup	fi	Kirjoita polku varmuuskopion hakemistolle ja/tai aktivoi näyttämään arkistoja eGroupWaressa !
+please enter username and password for remote connection !	backup	fi	Kirjoita käyttäjätunnus ja salasana etäyhteyteen !
+please select an application for transport to the remote host !	backup	fi	Valitse sovellus siirtääksesi etäisännälle !
+please set the path to the mysql database dir in *site configuration* !	backup	fi	Aseta polku MySQL tietokannan hakemistoon *Sivuston konfiguroinnissa* !
+please set the values in *site configuration* !	backup	fi	Aseta arvot *Sivuston konfiguroinnissa* !
+please specify the ip of the remote host !	backup	fi	Nimeä etäisännän ip !
+please specify the path to the backup directory !	backup	fi	Nimeä polku varmuuskopion hakemistoon !
+please specify the path to the user-homedirectories in *site configuration* !	backup	fi	Nimeä polku käyttäjän kotihakemistoon *Sivuston konfiguroinnissa*!
+program locations	admin	fi	Ohjelman sijainnit
+rating	bookmarks	fi	Luokitus
+select archive type	backup	fi	Valitse arkiston tyyppi
+send	bookmarks	fi	Lähetä
+settings	admin	fi	asetukset
+show backup archives in egroupware ?	backup	fi	Tarkista näyttääksesi varmuuskopio arkistot eGroupWaressa:
+sql	backup	fi	SQL
+the backup application is not configured for showing the archives in egroupware yet !	backup	fi	Varmuuskopio sovellusta ei ole konfiguroitu vielä näytettäväksi arkistossa eGroupWaressa !
+to e-mail address	bookmarks	fi	Sähköpostiosoitteisiin
+total visits	bookmarks	fi	vierailukertoja
+tree view	bookmarks	fi	Puunäkymä
+versions can only be a number !	backup	fi	Versio voi olla vain numero !
+view this bookmark	bookmarks	fi	Näytä suosikki
+weekly	backup	fi	viikoittain
+your sql database isnt supported by this application !	backup	fi	SQL tietokantasi ei tue sovellusta !
+zip	common	fi	zip

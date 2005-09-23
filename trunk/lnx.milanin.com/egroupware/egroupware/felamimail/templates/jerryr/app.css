@@ -1,0 +1,249 @@
+th.activetab
+{
+	color:#000000;
+	background-color:#ffffff;
+	border-top : 1px solid Silver;
+	border-left : 1px solid Silver;
+	border-right : 1px solid Silver;
+}
+
+th.inactivetab
+{
+	color:#000000;
+	background-color:#f4f2ed;
+	border-bottom : 1px solid Silver;
+}
+			
+.td_left 
+{
+   border-left : 1px solid Gray; 
+   border-top : 1px solid Gray; 
+}
+
+.input_text {
+	border : 1px solid Silver;
+}
+
+.td_right 
+{ 
+  border-right : 1px solid Gray; 
+  border-top : 1px solid Gray; 
+}
+
+.text_small { font-size: 10px; }
+.text_small_bold { font-size: 10px; font-weight : bold; }
+			
+div.activetab{ display:inline; }
+div.inactivetab{ display:none; }
+
+.quoted1 { color:#660066; }
+.quoted2 { color:#007777; }
+.quoted3 { color:#990000; }
+.quoted4 { color:#000099; }
+.quoted5 { color:#bb6600; }
+
+TR.header_row_
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	font-weight : bold;
+	background : White;
+}
+
+A.header_row_
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+	font-weight : bold;
+}
+
+TR.header_row_D
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	color: silver;
+	text-decoration : line-through;
+	font-weight : bold;
+	background : White;
+}
+	
+A.header_row_D
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+	color: silver;
+	text-decoration : line-through;
+	font-weight : bold;
+}
+	
+TR.header_row_DS, TR.header_row_ADS
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	color: silver;
+	text-decoration : line-through;
+	background : White;
+}
+
+A.header_row_DS, A.header_row_ADS
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+	color: silver;
+	text-decoration : line-through;
+}
+	
+TR.header_row_S
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+}
+
+A.header_row_S
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+}
+	
+TR.header_row_RS
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+}
+
+A.header_row_RS
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+}
+
+TR.header_row_AS,TR.header_row_RAS
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+}
+
+A.header_row_AS, A.header_row_RAS
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+}
+
+TR.header_row_FAS,  TR.header_row_FS
+{
+	color: red;
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+}
+
+A.header_row_FAS, A.header_row_FS
+{
+	color: red;
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+}
+
+TR.header_row_F
+{
+	color: red;
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	font-weight : bold;
+	background : White;
+}
+
+A.header_row_F
+{
+	color: red;
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+	font-weight : bold;
+}
+
+TR.header_row_R
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	font-weight : bold;
+	background : White;
+}
+
+A.header_row_R
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+	font-weight : bold;
+}
+
+.subjectBold
+{
+	FONT-SIZE: 12px;
+	font-weight : bold;
+	font-family : Arial;
+}
+
+.subject
+{
+	FONT-SIZE: 12px;
+	font-family : Arial;
+}
+
+.body
+{
+	FONT-SIZE: 12px;
+	font-family : Arial;
+}
+
+TR.sieveRowActive
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+}
+
+A.sieveRowActive
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;
+}
+
+TR.sieveRowInActive
+{
+	FONT-SIZE: 11px;
+	height : 20px;
+	padding: 0;
+	background : White;
+	color: Silver;
+}
+
+A.sieveRowInActive
+{
+	FONT-SIZE: 11px;
+	height : 14px;
+	padding: 0;	
+	color: Silver;
+}

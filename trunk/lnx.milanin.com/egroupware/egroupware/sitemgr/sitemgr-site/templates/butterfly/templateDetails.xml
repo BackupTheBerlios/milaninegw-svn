@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="template">
+<name>Butterfly</name>
+<creationDate>09/23/2003</creationDate>
+<author>Mauhab Zareh</author>
+<copyright>This template is released under the GNU/GPL License</copyright>
+<authorEmail>mauhabz@yahoo.com</authorEmail>
+<authorUrl>www.mauhab.com</authorUrl>
+<version>1.2</version>
+<description>Resizeable width, nice Butterfly header, blue colors</description>
+<files>
+<filename>index.php</filename>
+<filename>template_thumbnail.png</filename>
+</files>
+<images>
+<filename>images/index_1.gif</filename>
+<filename>images/index_3.gif</filename>
+<filename>images/index_5.gif</filename>
+<filename>images/index_6.gif</filename>
+<filename>images/index_7.gif</filename>
+<filename>images/index_9.gif</filename>
+<filename>images/index_12.gif</filename>
+<filename>images/index_14.gif</filename>
+<filename>images/index_15.gif</filename>
+<filename>images/index_16.gif</filename>
+<filename>images/index_17.gif</filename>
+<filename>images/index_18.gif</filename>
+<filename>images/index_19.gif</filename>
+<filename>images/index_21.gif</filename>
+<filename>images/index_27.gif</filename>
+<filename>images/index_27_bg.gif</filename>
+<filename>images/index_1_bg.gif</filename>
+<filename>images/spacer.gif</filename>
+<filename>images/file.gif</filename>
+<filename>images/time.gif</filename>
+<filename>images/search.gif</filename>
+<filename>images/home.gif</filename>
+<filename>images/arrow.png</filename>
+<filename>images/mod_title_bg.gif</filename>
+<filename>images/index_1_clean.gif</filename>
+</images>
+<css>
+<filename>css/template_css.css</filename>
+</css>
+</mosinstall>

@@ -1,0 +1,38 @@
+compose	messenger	zh	撰写
+compose global message	common	zh	撰写群发短信
+compose message	messenger	zh	撰写短信
+Compose to single user	messenger	zh	发送给单个用户
+compose to multi users	messenger	zh	发送给多个用户
+delete a message.	messenger	zh	删除短信.
+delete selected	messenger	zh	删除选择的短信
+forward	messenger	zh	转发
+forward a message	messenger	zh	转发短信
+forward a message to another user.	messenger	zh	转发该短信给另一用户
+forwarded	messenger	zh	已转发
+from	messenger	zh	发信人
+global message	messenger	zh	群发短信
+i can't find the username %1 on the system	messenger	zh	用户%1不存在
+inbox	messenger	zh	收信箱
+message from	messenger	zh	发信人
+messenger	common	zh	短信
+new	messenger	zh	新建
+read a list of messages.	messenger	zh	浏览短信.
+read a single message.	messenger	zh	阅读短信.
+read message	messenger	zh	阅读短信
+replied	messenger	zh	已回复
+reply	messenger	zh	回复
+reply to a message	messenger	zh	回复
+reply to a received message.	messenger	zh	回复
+send	messenger	zh	发送
+send a global message.	messenger	zh	群体发送
+send a message to a single recipient.	messenger	zh	发送
+send message to	messenger	zh	发送至
+sorry, %1's account is not currently active	messenger	zh	用户%1已禁用
+update a message status	messenger	zh	更新短信状态
+use select box for user list in compose	common	zh	使用下拉菜单来列出使用者
+you didn't enter anything for the message	messenger	zh	您没有输入任何信息
+you have %1 new message	common	zh	您有%1条未读短信
+you have %1 new messages	common	zh	您有%1条未读短信
+you have no messages	messenger	zh	目前没有短信
+you must enter a subject	messenger	zh	必须输入短信的主题
+you must enter the username this message is for	messenger	zh	必须指定收信人

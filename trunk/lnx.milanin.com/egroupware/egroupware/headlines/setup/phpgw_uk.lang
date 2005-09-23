@@ -1,0 +1,47 @@
+are you sure you want to delete this news site ?	headlines	uk	Ви дійсно хочете видалити цей сайт новин?
+base url	headlines	uk	Базовий URL
+basic	headlines	uk	Основний
+choose layout	headlines	uk	Виберіть вигляд
+color	headlines	uk	Кольоровий
+create new headline	headlines	uk	Створити новий рядок Заголовків
+current headlines in cache	headlines	uk	Поточні заголовки в буфері
+display	headlines	uk	Показати
+edit headline sites	headlines	uk	Редагувати сайти заголовків
+edit headlines shown by default	headlines	uk	Редагувати сайти, що показуються по замовченню
+grab new news sites	common	uk	Взяти нові сайти новин
+gray	headlines	uk	Сірий
+headline preferences	common	uk	Параметри Заголовків
+headline site management	common	uk	Керування сайтами
+headline sites	headlines	uk	Сайти Заголовків
+headlines	common	uk	Заголовки
+headlines administration	headlines	uk	Адміністрування Заголовків
+headlines administration - delete headline	headlines	uk	Адміністрування Заголовків - Видалити сайт
+headlines layout	headlines	uk	Вигляд Заголовків
+listings displayed	headlines	uk	Кількість заголовків для показу
+minutes between refresh	headlines	uk	Кількість хвилин між оновленнями
+minutes between reloads	headlines	uk	Кількість хвилин між перечитанням
+monitor	common	uk	Моніторити
+news file	headlines	uk	Файл новин
+news headlines	common	uk	Заголовки новин
+news type	headlines	uk	Тип новин
+no headlines found	headlines	uk	Заголовків не знайдено
+other preferences	preferences	uk	Інші параметри
+reload news sites	headlines	uk	Перечитати сайти новин
+reset	headlines	uk	Перевстановити
+sample	headlines	uk	Зразок
+select headline news sites	headlines	uk	Вибір сайтів Заголовків новин
+select headlines to display	common	uk	Вибір сайтів для показу
+select layout	common	uk	Вибір вигляду
+show headlines on homepage	headlines	uk	Показувати заголовки на основній сторінці
+site	headlines	uk	Сайт
+that site has already been entered	headlines	uk	Цей сайт вже введено
+unable to retrieve links	headlines	uk	Неможливо прочитати заголовки
+update headline	headlines	uk	Поновити сайт
+view headline	headlines	uk	Перегляд заголовків
+you can only enter numbers for listings display	headlines	uk	Кількість заголовків для показу має бути числом
+you can only enter numbers minutes between refresh	headlines	uk	Кількість хвилин між оновленнями має бути числом
+you must enter a base url	headlines	uk	Необхідно ввести базовий URL
+you must enter a display	headlines	uk	
+you must enter a news url	headlines	uk	Необхідно ввести URL новин
+you must enter the number of listings display	headlines	uk	Необхідно ввести  Кількість заголовків
+you must enter the number of minutes between reload	headlines	uk	Необхідно ввести Кількість хвилин між оновленнями

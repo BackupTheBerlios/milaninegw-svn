@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="template">
+	<name>bluedream</name>
+	<creationDate>23/08/2003</creationDate>
+	<author>Peek</author>
+	<copyright>This template is released under the GNU/GPL License</copyright>
+	<authorEmail>peekpt@msn.com</authorEmail>
+	<authorUrl>www.peekmambo.com</authorUrl>
+	<version>1.0</version>
+	<description>Nice blue layout for bussiness</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+	<images>
+		<filename>images/bluedream_01.gif</filename>
+		<filename>images/bluedream_02.gif</filename>
+		<filename>images/bluedream_03.gif</filename>
+		<filename>images/bluedream_04.gif</filename>
+		<filename>images/bluedream_05.gif</filename>
+		<filename>images/bluedream_06.gif</filename>
+		<filename>images/bluedream_07.gif</filename>
+		<filename>images/bluedream_08.gif</filename>
+		<filename>images/bluedream_09.gif</filename>
+		<filename>images/bluedream_10.gif</filename>
+		<filename>images/bluedream_11.gif</filename>
+		<filename>images/bluedream_12.gif</filename>
+		<filename>images/bluedream_13.gif</filename>
+		<filename>images/bluedream_14.gif</filename>
+		<filename>images/bluedream_15.gif</filename>
+		<filename>images/bluedream_16.gif</filename>
+		<filename>images/bluedream_17.gif</filename>
+		<filename>images/bluedream_18.gif</filename>
+		<filename>images/spacer.gif</filename>
+		<filename>images/without_peek_design_bluedream_15.gif</filename>
+	</images>
+	<css>
+		<filename>css/template_css.css</filename>
+	</css>
+</mosinstall>

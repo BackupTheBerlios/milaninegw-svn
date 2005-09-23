@@ -1,0 +1,49 @@
+action	forum	zh	操作
+add forum	forum	zh	添加版块
+all forums, user posts, and topics in this category will be lost!	forum	zh	该论坛下的所有版块、话题和回复将丢失！
+all user posts and topics will be lost!	forum	zh	所有话题和回复将丢失！
+all user posts, and topics in this forum will be lost!	forum	zh	该版块内所有话题和回复都将被删除!
+are you sure you want to delete this category?	forum	zh	确定要删除该论坛？
+are you sure you want to delete this forum?	forum	zh	确定要删除该版块？
+author	forum	zh	作者
+belongs to category	forum	zh	所属论坛
+category description	forum	zh	论坛说明
+category name	forum	zh	论坛名称
+change forum settings	admin	zh	更改论坛设置
+collapse threads	forum	zh	仅显示话题
+collapsed	forum	zh	仅显示话题
+create new category	forum	zh	新建论坛
+current categories and sub forums	forum	zh	当前论坛及其所有版块
+default view	forum	zh	查看方式
+edit forum	forum	zh	编辑版块
+email replies to this thread to the address above	forum	zh	以邮件方式回复至上述地址
+email replies to this thread, to the address above	forum	zh	以邮件方式回复至上述地址
+forum	common	zh	论坛
+forum administration	admin	zh	全局配置
+Forum administration	forum	zh	全局配置
+forum description	forum	zh	版块说明
+forum name	forum	zh	版块名称
+forums	common	zh	论坛
+latest reply	forum	zh	最新回复
+new category	forum	zh	新建论坛
+new forum	forum	zh	新建版块
+new topic	forum	zh	发表新话题
+no category	forum	zh	无论坛
+normal view	forum	zh	正常浏览
+post	forum	zh	发表回复
+post a message to this thread	forum	zh	添加回复
+reply to this message	forum	zh	回复此话题
+replies	forum	zh	回复
+return to admin	forum	zh	返回全局配置
+return to forums	forum	zh	返回论坛
+sub category	forum	zh	子论坛
+there are no forums in this category	forum	zh	该论坛目前没有任何版块
+threaded	forum	zh	显示话题及回复
+topic	forum	zh	话题
+unknown	forum	zh	未知
+update category	forum	zh	保存
+update forum	forum	zh	保存
+view threads	forum	zh	显示话题及回复
+view collapse	forum	zh	显示话题
+your email	forum	zh	您的EMail
+your name	forum	zh	您的名字

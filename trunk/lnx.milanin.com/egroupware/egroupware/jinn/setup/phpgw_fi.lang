@@ -1,0 +1,205 @@
+%1 site objects have been imported.	jinn	fi	%1 sivuston objektit on tuotu.
+access rights	jinn	fi	K‰yttˆoikeudet
+access rights for site not succesfully editted	jinn	fi	Sivuston k‰yttˆoikeuksia ei onnistuttu muokkaamaan
+access rights for site succesfully editted	jinn	fi	Sivuston k‰yttˆoikeudet onnistuneesti muokattu
+access rights for site-object not succesfully editted	jinn	fi	Sivuston objektin k‰yttˆoikeuksia ei onnistuttu muokkaamaan
+access rights for site-object succesfully editted	jinn	fi	sivuston objektin k‰yttˆoikeudet onnistuneesti muokattu
+access rights site-objects	jinn	fi	k‰yttˆoikeudet sivuston objekteihin
+access_rights	jinn	fi	K‰yttˆ_oikeudet
+action was not succesful. unknown error	jinn	fi	Toiminto ei ollut onnistunut. Tuntematon virhe
+action was succesful.	jinn	fi	Toiminto oli onnistunut.
+actions	jinn	fi	Toiminnot
+add	jinn	fi	Lis‰‰
+add %1st image	jinn	fi	lis‰‰ %1 kuva
+add attachent	jinn	fi	lis‰‰ liitetiedosto
+add attachment	jinn	fi	lis‰‰ liitetiedosto
+add attachment %1	jinn	fi	lis‰‰ liitetiedosto
+add edit	jinn	fi	lis‰‰ muokkaa
+add image	jinn	fi	lis‰‰ kuva
+add image %1	jinn	fi	lis‰‰ kuva %1
+add new	jinn	fi	lis‰‰ uusi
+add new entry	jinn	fi	lis‰‰ uusi merkint‰
+add object	jinn	fi	lis‰‰ objekti
+add or remove	jinn	fi	lis‰‰ tai poista
+add site	jinn	fi	lis‰‰ sivusto
+add site object	jinn	fi	lis‰‰ sivuston objekti
+add site-object	jinn	fi	lis‰‰ sivuston objekti
+admin:: edit site	jinn	fi	admin:: muokkaa sivustoa
+are you sure?	jinn	fi	Oletko varma?
+ascending	jinn	fi	nouseva
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	fi	liitetiedoston hakemistoa ei ole olemassa tai se ei ole oikein, eik‰ sit‰ ole luotu...<br>tarkista objektin lataus hakemistosta:
+automatic	jinn	fi	automaattinen
+binary	jinn	fi	bin‰‰rinen
+browse	jinn	fi	Selaa
+browse current object	jinn	fi	Selaa viimeisint‰ objektia
+browse sites	jinn	fi	selaa sivustoja
+browse through object settings	admin	fi	Selaa objekti asetuksien l‰vitse
+browse through sites	jinn	fi	Selaa sivustojen l‰vitse
+browses through sites	admin	fi	Selataan sivustojen l‰vitse
+cancel	jinn	fi	Peruuta
+category	jinn	fi	Ryhm‰
+check:	jinn	fi	tarkista
+choose	jinn	fi	Valitse
+close this window	jinn	fi	Sulje ikkuna
+column name	jinn	fi	sarakkeen nimi
+configure	jinn	fi	konfiguroi
+configure browse view	jinn	fi	konfiguroi lis‰‰ n‰kym‰‰
+configure this object list view	jinn	fi	Konfiguroi objektin lista n‰kym‰‰
+configure this tableview	jinn	fi	Konfiguroi taulukkon‰kym‰‰
+configure this view	jinn	fi	Konfiguroi t‰t‰ n‰kym‰‰
+copy	jinn	fi	kopioi
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	fi	Ei lˆytynyt yht‰‰n taulukkoa! Tarkista tietokannan nimi, tietokannan k‰ytt‰j‰nimi tai sen salasana tai luo yksi tai useampia taulukoita tietokantaan.
+create a new site now	jinn	fi	Luo uusi sivusto nyt
+current color:	jinn	fi	yleinen v‰ri:
+database connection failed! <p>please recheck your settings.	jinn	fi	tietokantaan yhteys ep‰onnistui! <P> Tarkista uudelleen asetukset.
+database connection was succesfull. <p>you can go on with the site-objects	jinn	fi	Tietokantaan yhteys onnistui. <P> Voit jatkaa sivuston objektien
+days	jinn	fi	p‰iv‰t
+default	jinn	fi	oletus
+default image type (jpg, gif, png)	admin	fi	Oletus kuva tyyppi (jpg, gif, png)
+default image width	admin	fi	Oletus kuvan leveys
+default order	jinn	fi	oletus j‰rjestys
+default thumb width	admin	fi	Oletus pienoiskuvan leveys
+default:	jinn	fi	oletus:
+delete	jinn	fi	Poista
+descending	jinn	fi	laskeva
+descrition	jinn	fi	Kuvaus
+developer links	jinn	fi	Kehitt‰j‰n linkki
+development	admin	fi	Kehitys
+development server	jinn	fi	Kehitys palvelin
+dimensions	jinn	fi	ulottuvuudet
+edit	jinn	fi	Muokkaa
+edit object	jinn	fi	Muokkaa objektia
+edit site	jinn	fi	Muokkaa sivustoa
+edit this site	jinn	fi	Muokkaa sivustoa
+edit this site object	jinn	fi	muokkaa sivuston objektia
+error path_open %1	jinn	fi	virhe avaus polussa %1
+error: the file %1 doesn't exists, please contact the webmaster	jinn	fi	VIRHE: tiedosto %1 ei ole olemassa, ota yhteytt‰ verkon tekij‰‰n
+export this site	jinn	fi	vie sivusto
+failed to copy: %1 to %2 ...	jinn	fi	kopiointi ep‰onnistui: %1 %2
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	fi	taulukon avaus ep‰onnistui. Tarkista ett‰ taulukko <i> %1 </i> on olemassa tietokannassa.
+field	jinn	fi	kentt‰
+field configuration	jinn	fi	Kent‰n konfiguraatio
+fields	jinn	fi	kent‰t
+filename	jinn	fi	tiedoston nimi
+filesize	jinn	fi	tiedoston koko
+general preferences	jinn	fi	Yleiset ominaisuudet
+general settings	admin	fi	Yleiset asetukset
+global configuration	jinn	fi	Yleinen konfiguraatio
+global site configuration	admin	fi	Yleinen sivuston konfiguraatio
+go	jinn	fi	mene
+height:	jinn	fi	Korkeus:
+hidden	jinn	fi	Piilota
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	fi	kuvan hakemistoa ei ole olemassa tai se ei ole oikein...<br> tarkista objektin lataus hakemisto
+image settings	admin	fi	Kuvan asetukset
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	fi	ImageMagick hakemisto (esim. /usr/X11R6/bin)
+import failed	jinn	fi	tuonti ep‰onnistui
+import jinn site	jinn	fi	tuo JINN sivusto
+import jinn-site	jinn	fi	tuo JINN- sivusto
+import site	jinn	fi	tuo sivusto
+import was succesfull	jinn	fi	tuonti onnistui
+import was succesfull<br>imported one site with	jinn	fi	tuonti onnistui <br> liitetty sivustoon
+index	jinn	fi	indeksi
+insert another record after saving	jinn	fi	lis‰‰ toinen tietue tallentamisen j‰lkeen
+insert jinn site parameters: <li>insert a jinn site name for display</li> <li>insert correct database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview url for uploaded elements</li>	jinn	fi	Lis‰‰ JINN sivuston parametrit: <li>Lis‰‰ JINN sivuston nimi n‰ytˆlle</li><li>lis‰‰ oikeat tietokannan asetukset</li><li>lis‰‰ oikea t‰ydellinen lataus polku</li><li>lis‰‰ vastaava esikatselun URL ladattaessa elementtej‰</li>
+insert/select jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li>	jinn	fi	Lis‰‰/valitse JINN sivuston objektien parametrit: <li>valitse JINN objektin nimi n‰ytˆlle</li><li>valitse tietokannan taulukko k‰yttˆˆn t‰m‰n objektin kanssa</li><li>jos tarpeellista vaihtoehto oikealle t‰ydelliselle lataus polulle</li><li>jos tarpeellista vastaava vaihtoehto esikatselun URLille ladattaessa elementtej‰</li>
+jinn	common	fi	JINN
+jinn editors menu	jinn	fi	JINN muokkaimen valikko
+jinn main menu	jinn	fi	JiNN p‰‰valikko
+jinn preferences	jinn	fi	JINN ominaisuudet
+list sites	jinn	fi	sivustojen lista
+months	jinn	fi	kuukaudet
+new image size limits.	jinn	fi	Uuden kuvan koko rajoitukset.
+no matchs found	jinn	fi	Sopivaa ei lˆytynyt
+no max. number	jinn	fi	ei maksimi numeroa
+normal view	jinn	fi	Normaali n‰kym‰
+only if thumnails exits	jinn	fi	Vain jos pienet kuvakkeet on olemassa
+please set your preferences for this application	jinn	fi	Aseta asetukset t‰lle sovellukselle
+preview thumbs or images in form	jinn	fi	Esikatsele pienia kuvakkeita tai kuvia lomakkeessa
+preview website	jinn	fi	Esikatsele verkkosivustoa
+real value	jinn	fi	oikea arvo
+record	jinn	fi	tietue
+record added succesfully	jinn	fi	tietue liitetty onnistuneesti
+record deleted succesfully	jinn	fi	Tietue poistettu onnistuneesti
+record not succesfully copied. unknown error	jinn	fi	Tietueen kopioiminen ei onnistunut. Tuntematon virhe
+record not succesfully deleted. unknown error	jinn	fi	Tietueen poistaminen ei onnistunut. Tuntematon virhe
+record succesfully copied	jinn	fi	Tietue onnistuneesti kopioitu
+record succesfully deleted	jinn	fi	Tietue onnistuneesti poistettu
+record succesfully editted	jinn	fi	Tietue onnistuneesti muokattu
+relation %1	jinn	fi	suhde %1
+relations for this object	jinn	fi	suhteet t‰h‰n objektiin
+remote	admin	fi	Et‰inen
+remove	jinn	fi	poistaa
+replace existing site with the same name?	jinn	fi	Korvataanko olemassa oleva samalla nimell‰?
+replaced existing site named <strong>%1</strong>.	jinn	fi	Korvaa olemassa oleva sivusto nimell‰ <strong> %1 </strong>.
+reset form	jinn	fi	palauta lomake
+save	jinn	fi	tallenna
+save and continue	jinn	fi	tallenna ja jatka
+save and finish	jinn	fi	tallenna ja lopeta
+search	jinn	fi	Etsi
+search for string	jinn	fi	etsi merkkijono
+select directory	jinn	fi	valitse hakemisto
+select jinn site file	jinn	fi	valitse JIINN sivuston tiedosto
+select site	jinn	fi	Valitse sivusto
+select_object	jinn	fi	Valitse objekti
+server type?	admin	fi	Palvelin tyyppi?
+set access right for site objects	jinn	fi	Aseta k‰yttˆoikeudet sivuston objekteille
+set access rights	admin	fi	Aseta k‰yttˆoikeudet
+set access rights for sites	jinn	fi	Aseta k‰yttˆoikeudet sivustoille
+set administrators for	jinn	fi	Aseta yll‰pit‰j‰
+set object moderator	jinn	fi	aseta objektin valvoja
+set site admin	jinn	fi	aseta sivuston admin
+show	jinn	fi	n‰yt‰
+show all columns	jinn	fi	n‰yt‰ kaikki sarakkeet
+show colomn	jinn	fi	n‰yt‰ sarake
+show upload path	admin	fi	n‰yt‰ ladattu polku
+site beheerders	jinn	fi	Sivuston yll‰pit‰j‰t
+site db host	admin	fi	Sivuston tietokannan is‰nt‰
+site db name	admin	fi	Sivuston tietokannan nimi
+site db password	admin	fi	Sivuston tietokannan salasana
+site db type	admin	fi	Sivuston tietokannan tyyppi
+site db user	admin	fi	Sivuston tietokannan k‰ytt‰j‰
+site description	admin	fi	Sivuston kuvaus
+site id	admin	fi	Sivuston id
+site media and documents	jinn	fi	Sivuston media ja dokumentit
+site name	admin	fi	Sivuston nimi
+site not succesfully added, unknown error	jinn	fi	Sivuston liitt‰minen ep‰onnistui, tuntematon virhe
+site not succesfully deleted, unknown error	jinn	fi	Sivuston poistaminen ep‰onnistui, tuntematon virhe
+site not succesfully saved, unknown error	jinn	fi	Sivuston tallentaminen ep‰onnistui, tuntematon virhe
+site object not succesfully added, unknown error	jinn	fi	Sivuston objektin liitt‰minen ep‰onnistui, tuntematon virhe
+site object not succesfully deleted, unknown error	jinn	fi	Sivuston objektin poistaminen ep‰onnistui, tuntematon virhe
+site object not succesfully saved, unknown error	jinn	fi	Sivuston objektin tallentaminen ep‰onnistui, tuntematon virhe
+site object succesfully added	jinn	fi	Sivuston objektin liitt‰minen onnistui
+site object succesfully deleted	jinn	fi	Sivuston objektin poistaminen onnistui
+site object succesfully saved	jinn	fi	Sivuston objektin tallentaminen onnistui
+site succesfully added	jinn	fi	Sivuston liitt‰minen onnistui
+site succesfully deleted	jinn	fi	sivuston poistaminen onnistui
+site succesfully saved	jinn	fi	sivuston tallentaminen onnistui
+site title	admin	fi	Sivuston otsikko
+site-objects	jinn	fi	Sivuston objektit
+sites	jinn	fi	Sivustot
+start	admin	fi	Aloita
+start at record	jinn	fi	aloita nauhoittaminen
+stop at record	jinn	fi	lopeta nauhoittaminen
+submit and import	jinn	fi	hyv‰ksy ja tuo
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	fi	Taulukonnimi <i> %1 </i> ei ole oikein. Luultavasti taulukonnimi on muuttunut tai taulukko on poistettu. Valitse uusi taulukko tai poista t‰m‰ objekti
+test database access	jinn	fi	tietokantaan p‰‰syn testaus
+the attachments subdirectory does not exist and cannot be created ...	jinn	fi	Liitetiedostojen alihakemistoa ei ole olemassa ja ei voida luoda...
+the attachments subdirectory is not writable by the webserver ...	jinn	fi	Liitetiedostojen alihakemisto ei ole kirjoitettu palvelimelle...
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	fi	Tiedosto jonka latasit nimell‰ %1 ei ole kuvatiedosto,on turmeltunut, tai tiedostotyyppi ei ole JINNin kannattama.
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn. if this error repeates, please check your imagemagick installation.  older version of imagemagick are known not work properly with jinn. be sure to install at least version 5.4.9 or higher	jinn	fi	Tiedosto jota latasit nimell‰ %1 ei ole kuvatiedosto, se on turmeltunut, tai tiedostotyyppi ei ole JINNin kannattama. Jos t‰m‰ virhe toistuu, tarkista sinun imagemagick asennus. ImageMagick vanhempi versio on tunnettu, ei toimi kunnolla JINNin kanssa. Varmista ett‰ asennat viimeisimm‰n version 5.4.9 tai korkeamman
+the max. file upload size is %1 mb.	jinn	fi	Ladattavan tiedoston maximi koko on 1Mb.
+the name of the new site is <strong>%1</strong>.	jinn	fi	Uuden sivuston nimi on <strong> %1 </strong>.
+the path to upload files is not correct, please contact your jinn administrator.	jinn	fi	Ladattavien tiedostojen polku ei ole oikein, ota yhteytt‰ JINNin vastaavaan.
+the path to upload files is not set, please contact your jinn administrator.	jinn	fi	Ladattavien tiedostojen polkua ei ole asetettu, ota yhteytt‰ JINNin vastaavaan.
+the path to upload images is not correct, please contact your jinn administrator.	jinn	fi	Ladattavien kuvien polku ei ole oikein, ota yhteytt‰ JINNin vastaavaan.
+the path to upload images is not set, please contact your jinn administrator.	jinn	fi	Ladattavien kuvien polkua ei ole asetettu, ota yhteytt‰ JINNin vastaavaan.
+there are no directories in this site you have access to.	jinn	fi	Sivustolla ei ole hakemistoja johon p‰‰sisit
+thisfile	jinn	fi	t‰m‰ tiedosto
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	fi	pienten kuvakkeiden hakemistoa ei ole olemassa tai se ei ole oikein... <br> tarkista objektin ladattu hakemisto
+thumbnail	jinn	fi	pienet kuvakkeet
+version	jinn	fi	versio
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	fi	Kun kuvia on liitetty paljon nauhoitettavaksi, lomake voi lataantua hyvin hitaasti. Voi asettaa kuville maksimi m‰‰r‰n mitk‰ kuvat n‰ytet‰‰n lomakkeella.
+when you choose 'never', only links to the images are displayed; when you choose 'only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'yes' all images are shown	jinn	fi	Kun valitset 'Ei koskaan', n‰ytet‰‰n vain linkit kuviin; kun valitset 'pienet kuvakkeet' esikatseluun n‰ytet‰‰n jos pienet kuvat kuvakkeet on olemassa; jos valitset 'Kyll‰' kaikki kuvat n‰ytet‰‰n
+width:	jinn	fi	Leveys:
+with_checked_files	jinn	fi	tarkistettujen tiedostojen kanssa
+you're not allowed to administrate media files	jinn	fi	Sinulla ei ole lupaa hallita media tiedostoja

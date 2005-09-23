@@ -1,0 +1,150 @@
+a new ticket has been reported.	tts	iw	תיקט חדש דווך
+accept	tts	iw	קבל
+accept the ticket into verification process.	tts	iw	.קבל את התיקט לתהליך האימות
+accepted	tts	iw	התקבל
+action	tts	iw	פעולה
+add new ticket	tts	iw	הוסף תיקט  חדש
+add ticket	tts	iw	הוסף תיקט
+additional notes	tts	iw	הערות נוספות
+admin options	common	iw	אפשרויות נוספות
+assign to	tts	iw	-להקצות ל
+assigned from	tts	iw	-הוקצה מ
+assigned to	tts	iw	-הוקצה ל
+billable hours	tts	iw	שעות  בחיוב
+billable hours changed	tts	iw	שינוי שעות בחיוב
+billable hours rate	tts	iw	תאריף שעות בחיוב
+billable rate	tts	iw	תאריף חיוב
+billable rate changed	tts	iw	שינוי תאריף לחיוב
+category changed	tts	iw	שינוי בקטגוריה
+check here to generate the state's id automatically or enter a particular id below.	tts	iw	.סמן כאן כדי לחולל את זיהוי המצב באופן אוטומטי או ציין זיהוי מסוימ למטה
+clear form	tts	iw	נקה טופס
+close the invalid ticket.	tts	iw	.סגור את התיקט הלא חוקי
+closed	tts	iw	נסגר
+completed	tts	iw	הושלם
+configure the states	common	iw	קנפג מצבים
+configure the transitions	common	iw	קנפג מעברים
+create new state	tts	iw	צור מצב חדש
+create new ticket	tts	iw	צור תיקט חדש
+create new transition	tts	iw	צור מעבר חדש
+creates a new ticket, returns ticket_id	tts	iw	יוצר תיקט חדש, מחזיר זיהוי התיקט
+creates a struct of tickets	tts	iw	יוצר מבנה של תיקטים
+date opened	tts	iw	תאריך פתיחה
+default assign to	tts	iw	-ברירת מחדל הוקהל
+default group	tts	iw	קבוצת מחדלית
+default priority	tts	iw	עדיפות מחדלי
+delete the listed tickets.	tts	iw	מחק תוקטים רשומים
+deleting the state	tts	iw	מחק את המצב
+deleting the transition	tts	iw	מחק את המעבר
+detail	tts	iw	פירוט
+duplicate	tts	iw	הכפל
+edit the state	tts	iw	ערוך את המצב
+edit the transition	tts	iw	ערוך את המעבר
+error: the subject of the ticket is not specified.	tts	iw	שגיאה: לציון נושא התיקט
+force	tts	iw	חייב
+global categories	tts	iw	קטגוריות גלובליות
+group ownership changed	tts	iw	שונה קבוצת בעלים
+history	tts	iw	היסטוריה
+i worked on the ticket and the work requires validation.	tts	iw	.עבדתי על תיקט, והעבודה מחייבת אישרור
+i worked on the ticket, but did not finish.	tts	iw	.עבדתי על התיקט, אך לא סיימתי
+in progress	tts	iw	בתהליך
+initial state	tts	iw	מצב התחלה
+invalid	tts	iw	לא חוקי
+invalidate	tts	iw	פסול
+keep the present state [%1].	tts	iw	.[השאיר מצב נוכחי [%1
+latest note added	tts	iw	ההערה האחרונה שנוספה
+list of available tickets' states.	tts	iw	רשימת מצבי תיקט זמינים
+list of available tickets' transitions.	tts	iw	רשימת מעברי תיקט זמינים
+missing description	tts	iw	חסר תיאור
+morework	tts	iw	עוד יבודה
+needswork	tts	iw	צריך עבודה
+new	tts	iw	חדש
+new ticket	tts	iw	תיקט חדש
+new tickets can be put into this state.	tts	iw	.אפשר להכניס תיקטים חדשים למצב זה
+new value	tts	iw	ערך חדש
+no additional notes	tts	iw	אין הערות נוספות
+no duplicate	tts	iw	אין כפולים
+no notes for this ticket	tts	iw	אין הערות לציקט זה
+no states found	tts	iw	לא נמצאו מצבים
+no tickets found	tts	iw	.לא נמצאו תיקטים
+no transitions found	tts	iw	לא נמצאי מעברים
+not assigned	tts	iw	לא נקבע
+not completed	tts	iw	לא הסתיים
+notify changes to ticket assignee by e-mail	tts	iw	הודיע בדוא"ל על שינוי במנוי על תיקט זה
+notify changes to ticket group by e-mail	tts	iw	הודיע בדוא"ל על שינוים בקבוצת התיקט
+notify changes to ticket owner by e-mail	tts	iw	הודיע בדוא"ל על שינוים בבעלות התיקט
+old value	tts	iw	הערך הקודם
+open	tts	iw	פתח
+open / closed	tts	iw	פתח / סגור
+open date	tts	iw	תאריך פתיחה
+opened	tts	iw	נפתח
+opened by	tts	iw	נפתח על ידי
+original ticket details	tts	iw	פרטי התיקט המקוריים
+perform irregular transition into the following state	tts	iw	בצע מעבר לא רגיל אל המצב הרשום מטה
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	iw	.נא להכניס נושא לתיקט, אחרת אי אפשר לשמור אותו
+prio	tts	iw	עדיפות
+priority	tts	iw	עדיפות
+priority changed	tts	iw	העדיפות שונתה
+put the preexistent ticket into the state %1.	tts	iw	.הכנס את התיקט הקיים מראש אל מצב %1
+re-assigned	tts	iw	למנות מחדש
+re-opened	tts	iw	נפתח מחדש
+refresh every (seconds)	tts	iw	(רענן כל (שניות
+reopen	tts	iw	פתח מחדש
+reopened	tts	iw	נפתח מחדש
+resolve	tts	iw	פתור
+resolved	tts	iw	פתור
+returns a struct of a tickets history	tts	iw	מחזיר מבנה של היסטורית התיקט
+returns a struct of values of a single ticket	tts	iw	מחזיר מבנה של ערכים של תיקט בודד
+returns the additional notes attached to a ticket	tts	iw	מחזיר את ההערות הנוספות המצורפות לתיקט
+selected	tts	iw	נבחר
+show new/updated tickets on main screen	tts	iw	הצג תיקטים חדשים/מעודכנים במסך הראשי
+source state	tts	iw	מצב מקור
+state	tts	iw	מדינה
+state changed	tts	iw	המצב השתנה
+state id	tts	iw	זיהוי מצב
+state name	tts	iw	שם מצב
+status/date closed	tts	iw	סטאטוס/תאריך סגירה
+subject changed	tts	iw	הנושא שונה
+target state	tts	iw	מצב יעד
+test	tts	iw	בדוק
+the closed ticket requires more work. reopen it.	tts	iw	.צריך לעבוד על תיקט סגור. פתח אותו
+the owner of the ticket was not able to confirm the issue.	tts	iw	.בעל התיקט לא היה מסוקל לאשרר את העניין
+the ticket has been accepted by the owner, who is about to work on it.	tts	iw	.התיקט התקבל אצל בעליו והוא עומד להתחיל לעבוד עליו
+the ticket has been closed without resolution.	tts	iw	.התיקט נסגר בלי שהוא נפתר
+the ticket has been reopened for further work.	tts	iw	.התיקט נפתח מחדש לעבודה מוספת
+the ticket has been successfully resolved.	tts	iw	.התיקט נפתר בהצלחה
+the ticket has been verified and has to be worked on.	tts	iw	.תיקט זה אומת וזקוק לעבודה
+the ticket has been worked on and the work requires validation.	tts	iw	.עבדו בתיקט זה והעבודה צריכה אשרור
+the ticket has been worked on, but requires more work.	tts	iw	.עבדו בתיקט זה, אך הוא עדיין זקוק לעבודה נוספת
+the ticket is a duplicate of another ticket and should be closed.	tts	iw	.תיקט זה הנו כפיל של תיקט אחר. יש לסגור אותו
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	iw	.למעשה תיקט זה אינו כפיל של תיקט אחר. יש לפתוח אותו מחדש
+the ticket is invalid and cannot be worked on.	tts	iw	.התיקט פסול ואין לעבוד אליו
+the ticket resolution was successfully validated. close the ticket.	tts	iw	.פתרון התיקט אושרר בהצלחה. יש לסגור את התיקט
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	iw	.התיקט היה קיים עוד טרם הוגדר התשתית וצריך לקבוע לו מצב
+the ticket was found a duplicate of another ticket.	tts	iw	.תיקט זה נמצא ככפיל של תיקט אחר
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	iw	.התיקטים ברשימה הבאה הנם במצב %1. נא להחליט מה לעסות אתם
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	iw	.אישרור התיקט לא הצליח. יש לבצע עבודה נוספת בו
+ticket	tts	iw	תיקט
+ticket has been updated	tts	iw	התיקט עודכן
+tickets found %1	tts	iw	נמצאו %1 תיקטים
+tickets open %1	tts	iw	%1 תיקטים פתוחים
+tickets total %1	tts	iw	סה"כ %1 תיקטים
+to go back to the tts index, click <a href= %1 >here</a>	tts	iw	ולחץ <a href="%1">כאן</a> tts-כדי לחזור לאידקס ה
+total billable	tts	iw	סה"כ בחיוב
+transition	tts	iw	מעבר
+transition name	tts	iw	שם המעבר
+trouble ticket system	common	iw	מערכת תיקטים של בעיות
+tts	common	iw	מערכת תיקטים של בעיות
+tts preferences	tts	iw	מערכת תיקטים של בעיות - העדיפויות
+update ticket state	tts	iw	מצב תיקט מעודכן
+updates ticket	tts	iw	מעדכן תיקטים
+verified	tts	iw	מאומת
+verify	tts	iw	אמת
+verify the ticket to work on it.	tts	iw	אמת את התיקט כדי לעבוד אליו
+view all tickets	tts	iw	הצג כל התיקטים
+view job detail	tts	iw	הצג פירוט עבודה
+view only my open tickets	tts	iw	הצג רק את התיקטים הפתוחים שלי
+view only open tickets	tts	iw	הצג רק את התיקטים הפתוחים
+you can only close a ticket if it is assigned to you.	tts	iw	.אתה יכול לסגור תיקט רק אם הוא הוקצה לך
+you want to delete the state %1 and associated transitions. are you sure?	tts	iw	?ביקשת למחוק את מצב %1 ואת המעברים הקשורים בו. אתה בטוח בכך
+you want to delete the state %1. are you sure?	tts	iw	?ביקשת למחוק את מצב %1. אתא בטוח בכך
+you want to delete the transition %1. are you sure?	tts	iw	?ביקשת למחוק את מעבר %1. אתא בטוח בכך

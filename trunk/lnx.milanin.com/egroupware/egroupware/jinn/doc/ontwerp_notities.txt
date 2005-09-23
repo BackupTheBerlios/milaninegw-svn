@@ -1,0 +1,189 @@
+/*************************************************************************\
+* phpGroupWare - jinn                                           *
+* http://www.phpgroupware.org                                             *
+* This application is written by Pim Snel <pim@lingewoud.nl>              *
+* --------------------------------------------                            *
+* Funding for this program was provided by http://www.lingewoud.nl        *
+* --------------------------------------------                            *
+* This program is free software; you can redistribute it and/or modify it *
+* under the terms of the GNU General Public License as published by the   *
+* Free Software Foundation; either version 2 of the License, or (at your  *
+* option) any later version.                                              *
+*                                                                         *
+* Ontwerpnotities voor jinn                                     *
+*                                                                         *
+\*************************************************************************/
+
+ontwerp databasetable voor sites
+===================================================
+- inc/class.uiadmin.inc.php: displayclass for all the admin function
+- inc/class.boadmin.inc.php: executionclass for all the admin function
+- inc/class.soadmin.inc.php: databaseclass for all the admin function
+
+
+'relations' in phpgw_jinn_site_objects:
+
+| related_field | where                                 | id_field            | display_field       | relation_type |
++===================================================================================================+
+| catagorie     | product.catagorie=prodcat.prod_cat_id | product.prod_cat_id | prodcat.prod_name   | 1             | other table
+| parentcat     | prodcat.parentcat=prodcat.prod_cat_id | prodcat.prod_cat_id | prodcat.prod_name   | 1             | same table (no diffirence)
+|               | prod_norm.norm_name                   | prod_norm.norm_name | 2                   | other table
+
+
+relation_types:
++-----------------------+
+| type | description    |
++=======================+
+|   1  | 1 with many    |
+|   2  | many with many |
++-----------------------+
+
+
+parentcat:1:prodcat.prod_cat_id:prodcat.prod_cat_name
+
+
+
+
+
+voorbeeld:
+
+1 with many
+catagorie::1:link_catagorien.id:link_catagorien.catagorie
+
+many with many
+
+
+2:id:links_catagories.link_id:catagories.id:links_catagories.catagory_id
+
+
+################## MANY WITH MANY!!!!
+################## MANY WITH MANY!!!!
+################## MANY WITH MANY!!!!
+
+SELECT prod_norm.norm_name, prod_norm.norm_name FROM prod_norm INNER JOIN product ON product.id=prod_norm.prod_id $wherestring"
+
+SELECT prod_norm.norm_name, prod_norm.norm_name FROM prod_norm INNER JOIN product ON product.id=prod_norm.prod_id WHERE product.id=1
+
+SELECT prod_norm.norm_name, prod_norm.norm_name FROM prod_norm INNER JOIN product ON product.id=prod_norm.prod_id $wherestring
+
+SELECT project.name FROM project AS INNER JOIN project_themas ON project_themas.project_id=project.id WHERE themas.id=8
+
+########################### hebbes, geloof is, yes!!!!!!!
+SELECT projecten.naam FROM projecten INNER JOIN projecten_themas ON projecten_themas.project_id=projecten.id WHERE projecten_themas.thema_id=8 LIMIT 0, 30
+
+
+SELECT * FROM dir_links
+INNER JOIN dir_links_catagories	ON dir_links_catagories.link_id = dir_links.id
+
+WHERE dir_links_catagories.catagory_id = $cid
+
+
+
+# storage of a one to many relation
+[0] relation-type =             1
+[1] raletion-fieldname =        catagorie
+[2] null
+[3] relation-foreign-key =      link_catagorien.id
+[4] display-field =             link_catagorien.catagorie
+
+# storage of a many to many relation
+[0] relation-type =             2
+[1] relation-via-primary-key =  dir_links_catagories.catagory_id
+[2] relation-via-foreign-key =  dir_links_catagories.link_id
+[3] relation-foreign-key =      dir_links.id
+[4] display-field =             dir_links.name
+
+
+
+
+
+source_key =    8
+foreign_key =
+display =       projecten.naam
+type =          2(many to many)
+
+
+
+
+################ zo krijg we de dubbele!
+################ zo krijg we de dubbele!
+################ zo krijg we de dubbele!
+
+SELECT art_nr,count(art_nr) as aantal FROM product GROUP BY art_nr HAVING count(art_nr)>1
+
+SELECT art_nr,kleurnaam,maat,catagorie,count(art_nr) as aantal FROM product GROUP BY art_nr, kleurnaam,maat,prijs_euro HAVING count(art_nr)>1
+SELECT art_nr,count(art_nr) as aantal FROM product GROUP BY art_nr, catagorie HAVING count(art_nr)>1
+
+
+
+
+
+
+
+        <table cellspacing=0 cellpadding=3 border=0>
+                <tr>
+                <td valign=top><font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"2\">alle normen<font><br>
+                        <select style=\"width:100px;\" onDblClick=SelectPlace() multiple size=5 name=allenormen>";
+
+                        makeOptions('norm','','norm_name','');
+                        //makeListbox("norm","norm_id","norm_name","");
+                        echo "</select>
+                </td>
+                <td align=center valign=top><font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"2\">voeg toe of verwijder</font><br><br>
+                        <input onClick=SelectPlace(); type=button value=\" >> \" name=add>
+                        <br>
+                        <input onClick=DeSelectPlace(); type=button value=\" << \" name=remove>
+                </td>
+                <td valign=top><font face=\"Verdana, Arial, Helvetica, sans-serif\" size=\"2\">geselecteerde normen</font><br>
+                        <select style=\"width:100px;\" onDblClick=DeSelectPlace() multiple size=5 name=normen WIDTH=100>";
+
+                        $JOINWHERE="WHERE product.id=".getRecord('product','id',$where);
+                        getOptions('norm','','norm_name',$JOINWHERE);
+                        echo "</select>
+                </td>
+                </tr>
+        </table>
+
+
+
+ 	function getOptions($table,$valueField,$displayField,$wherestring) {
+		global $mysqluser;
+		global $mysqlpwd;
+		global $mysqldb;
+
+		$conn=openDbConn($mysqldb,$mysqluser,$mysqlpwd);
+		if(!empty($wherestring)){
+			$where=$wherestring;
+		}
+
+		if(empty($valueField)){
+			$valueField=$displayField;
+		}
+
+		$SQL="SELECT prod_norm.norm_name FROM prod_norm INNER JOIN product ON product.id=prod_norm.prod_id $wherestring";
+		//die ($SQL);
+		$qry = mysql_query ($SQL,$conn);
+		$len = mysql_num_rows($qry);
+		$i=0;
+
+		while ($len>$i){
+			$rec = mysql_fetch_row ($qry);
+			echo "<option value=".trim($rec[0]).">".trim($rec[1])."</option>";
+			$i++;
+		}
+		mysql_close($conn);
+
+	}
+
+
+
+
+field_org =>                    product.id
+related_field =>                prod_norm.prod_id
+type =>                         2
+display_field =>                prod_norm.norm_name
+source_display_field =>         norm.name
+
+
+
+SELECT prod_norm.norm_name FROM prod_norm INNER JOIN product ON product.id=prod_norm.prod_id WHERE product.id=

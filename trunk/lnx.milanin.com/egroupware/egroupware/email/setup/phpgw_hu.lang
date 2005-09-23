@@ -1,0 +1,395 @@
+%1 messages have been deleted	email	hu	%1 üzenet kitörölve
+(required)	email	hu	(szükséges)
+1 message has been deleted	email	hu	1 üzenet kitörölve
+1 message has been moved to	email	hu	1 üzenet mozgatva
+<b>*apply*</b> this filter	email	hu	<b>*ALKALMAZZA*</b> ezt a szüröt
+<b>apply all</b> filters	email	hu	<b>ALKALMAZZON MINDEN</b> Szüröt
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	hu	egy script kód rész, javascript vagy egyéb van az inline html üzenetben. Nem szükségszer?en rosz, de a felhasználó lehet hogy ismerni szeretné. Ez a SCRIPT ... kód ... SCRIPT blokk, nem a "OnMouseOver" dolog.
+account	email	hu	hozzáférés
+account name	email	hu	Hozzáférés Neve
+account user name	email	hu	Hozzáférés Felhasználói Neve
+accounts	email	hu	Hozzáférések
+accounts:	email	hu	Hozzáférések:
+add to address book	email	hu	Hozzáad a cím jegyzékhez
+add to addressbook	email	hu	Hozzáad a címjegyzékhez
+address book	email	hu	Cím jegyzék
+after	email	hu	Után
+all messages	email	hu	Minden Üzenetet
+and	common	hu	és
+and stop filtering	email	hu	és megállítja a szürést
+answered	email	hu	megválaszolva
+apply	email	hu	alkalmaz
+apply filters report:	email	hu	Alkalmazza a Szürök Kimutatást:
+apr	common	hu	Ápr
+aqua fusion	email	hu	Vízi Fúzió
+arrival date	email	hu	Érkezési Dátum
+as	email	hu	mint
+attach file	email	hu	Csatolt Állomány
+attach signature	email	hu	Csatolt aláírás
+attachment	email	hu	Melléklet
+aug	common	hu	Aug
+bcc	email	hu	Titkos Másolat
+bcc address	email	hu	Titkos Másolat címe
+before	email	hu	Elött
+big	email	hu	Nagy
+bigger	email	hu	Növö
+biggest	email	hu	Nagyobb
+body	email	hu	Test
+both	email	hu	Mindkét
+button type	email	hu	Nyomógomb Típusa
+cache server data whenever possible	email	hu	cache szerver adata amikor lehetséges
+cc	email	hu	Kapja még
+cc address	email	hu	Másolat Címe
+change font size in your e-mail pages	email	hu	Módosítsd a Betü Méretét az E-Mail-jeidben
+check flags for type of mails	email	hu	Levél típus Ellenörzö Jelek
+choose for rename	email	hu	Válassz átnevezéshez
+choose to rename	email	hu	válassz átnevezéshez
+click here for more info in a new window	email	hu	kattints ide több információért egy új ablakban
+click here to continue	email	hu	Kattints ide a folytatáshoz
+click here to edit the settings for this email account.	email	hu	kattints ide hogy szerkeszd a beállításait ennek az email hozzáférésnek.
+click here to return to your home page.	email	hu	kattints ide hogy visszatérj a kezdö lapodhoz
+company	common	hu	Vállalat
+compose	email	hu	Levélírás
+compose message	email	hu	üzenet írása
+compose new	common	hu	Új levél írása
+contains	email	hu	Tartalmaz
+could not open this mailbox	email	hu	Nem tudom megnyitni ezt a levél fiókot
+create (expert)	email	hu	létrehozás (szakértö)
+create a folder	email	hu	Létrehoz egy gyüjtöt
+current attachments (%1)	email	hu	Aktuális melléklet (%1)
+custom e-mail preferences	email	hu	Egyedi E-Mail beállítások
+custom e-mail settings	email	hu	Egyedi E-Mail beállítások
+date	email	hu	Dátum
+debugging page	email	hu	Nyomkövetés Lap
+dec	common	hu	Dec
+default sorting order	email	hu	Alapértelmezett sorrend
+default:	common	hu	alapértelmezett:
+delete	email	hu	Töröl
+delete (expert)	email	hu	Törlés (szakértö)
+delete a folder	email	hu	Egy gyüjtö törlése
+delete account	common	hu	Hozzáférés Törlése
+deleted	email	hu	törölve
+deleted messages (trash) folder	email	hu	Törölt üzenetek (Szemetes) gyüjtö
+deleted messages folder name	email	hu	Törölt üzenetek gyüjtö neve
+deleted messages go to trash	email	hu	Törölt üzenetek a Szemetesbe kerülnek
+deleted messages saved to folder:	email	hu	Törölt üzenetek mentése gyüjtöbe:
+discard	email	hu	Hulladék
+does not contain	email	hu	Nem tartalmazza
+draft	email	hu	gyors
+e-mail extra account	email	hu	E-Mail Extra Hozzáférés
+e-mail extra accounts	email	hu	E-Mail Extra Hozzáférések
+e-mail extra accounts list	email	hu	E-Mail Extra Hozzáférések Listája
+e-mail filters	common	hu	E-Mail Szürök
+e-mail folders	common	hu	E-Mail Gyüjtök
+e-mail inbox filters list	email	hu	E-Mail INBOX Szürök Listája
+e-mail preferences	common	hu	E-Mail beállítások
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	hu	Minden filhasználónak van egy összesít? lapja amelyiken különböz? információk jelennek meg.Ez az opció megjelenít egy rövid email üzenetek listáját az alapértelmezett email hozzáférés INBOX-áról, a felhasználó kezd? lapján.
+edit filters	email	hu	Szürö Szerkesztése
+email	email	hu	E-Mail
+email account name	email	hu	Email hozzáférés neve
+email address	email	hu	Email cím
+email date	email	hu	Email Dátum
+email filters	email	hu	Email Szürök
+email password	email	hu	Email jelszó
+email preferences	email	hu	Email Beállítások
+email signature	email	hu	E-Mail aláírás
+email type	common	hu	E-Mail Típusa
+enable this email account	common	hu	Engedélyezi ezt az email hozzáférést
+enable utf-7 encoded folder names	email	hu	Engedélyezi az utf-7 kódolású gyüjtö neveket
+enter the search string in the text boxes	email	hu	Ird be a keresési szöveget a szöveg dobozba
+enter your default mail domain ( from: user@domain )	admin	hu	Írd be az alap levelez? tartományodat ( az user@domain-ból )
+enter your pop	admin	hu	Ird be a Te POP
+enter your smtp server hostname or ip address	admin	hu	Ird be a Te SMTP szervered hosztnevét vagy IP címét
+enter your smtp server port	admin	hu	Ird be a Te SMTP szervered portját
+error moving messages to	email	hu	Hiba az üzenet mozgatása közben
+error text not provided	email	hu	hiba szöveg nincs elhelyezve
+error: unknown message data	email	hu	Hiba: Ismeretlen üzenet adat
+evolution style	email	hu	Evolution Stílus
+extra accounts	email	hu	Extra Hozzáférések
+extra e-mail account	common	hu	Extra E-Mail Hozzáférés
+extra e-mail accounts	common	hu	Extra E-Mail Hozzáférések
+extra e-mail preferences number %1	email	hu	Extra E-Mail beállítások %1 Számú
+feb	common	hu	Feb
+fewer actions	email	hu	Néhány Ténykedés
+fewer choices	email	hu	Néhány Választás
+file	common	hu	Állomány
+file attachment	email	hu	Állomány melléklet
+file into	email	hu	Állomány Ide
+files	email	hu	Fájlok
+fill in as much as you can	email	hu	töltsd ki ahogyan tudod
+filter [number] and name	email	hu	Szürö [number] és Neve
+filter inbox for accounts	email	hu	INBOX Szürö a hozzáférésekhez
+filter name	email	hu	Szürö Neve
+filter name:	email	hu	szürö neve:
+filter number	email	hu	Szürö Száma
+filters	email	hu	Szürök
+filters list	email	hu	Szürök Listája
+flag as important	email	hu	Jelzök fontosság szerint
+flagged	email	hu	jelölt
+folder	email	hu	Gyüjtö
+folder maintenance	email	hu	Gyüjtö Kezelés
+folder name	email	hu	Gyüjtö neve
+folder size	email	hu	Gyüjtö Mérete
+folders	email	hu	Gyüjtök
+for the file to actually upload	email	hu	állomány aktuális feltölése
+for these items, fill only what is different from you default e-mail preferences	common	hu	Ezekhez a bejegyzésekhez, töltsd ki csupán azt ami különbözik a Te alap E-Mail beállításaidtól.
+forward	email	hu	Továbbküld
+from	email	hu	Feladó
+from address	email	hu	Feladó Címe
+get size	email	hu	méret mutatása
+go	email	hu	menj
+go back	email	hu	Menj Vissza
+go back to	email	hu	Menj Vissza
+header field	email	hu	Fejléc Mezök
+hidden	email	hu	rejtett
+hide help	email	hu	Rejtett Segítség
+html messages with the iframe  tag may be klez or other worm emails.	email	hu	html üzenet egy IFRAME résszel lehet hogy KLEZ vagy egyéb email féreg.
+icon size	email	hu	Icon Méret
+icon theme	email	hu	Icon Téma
+idots crystal style	email	hu	iDots Crystal Stílus
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hu	Ha egy &quot; Törölt üzenet átkerül a Trash &quot; gyüjtöbe, a Törölt üzenet oda fog ketülni amit itt megadsz. Ha ez a gyüjtö nem létezik, autómatikusan létre lesz hozva. Alapértelmezett név a &quot;Trash&quot;. Ez lesz a Te &quot;Trash&quot; gyüjtöd, de az nincs aktuálisan &quot;Trash&quot;-nek nevezve, adj meg itt egy nevet. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hu	Ha az &quot; Elküldött üzenetek gyüjtö &quot; ki van jelölve, a Te elküldött üzeneteid ott lesznek tárolva amit itt beírsz. Ha ez a gyüjtö nem létezik, autómatikusan létre lesz hozva. Alapértelmezett név a &quot;Sent&quot;. Ez lesz a Te &quot;Sent&quot; gyüjtöd, de az nincs aktuálisan &quot;Sent&quot;-nek nevezve, adj meg itt egy nevet. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hu	Ha egy &quot; Törölt üzenet átkerül a Trash &quot; gyüjtöbe, a Törölt üzenet oda fog ketülni amit itt megadsz. Ha ez a gyüjtö nem létezik, autómatikusan létre lesz hozva. Alapértelmezett név a &quot;Trash&quot;. Ez lesz a Te &quot;Trash&quot; gyüjtöd, de az nincs aktuálisan &quot;Trash&quot;-nek nevezve, adj meg itt egy nevet. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hu	Ha az &quot; Elküldött üzenetek gyüjtö &quot; ki van jelölve, a Te elküldött üzeneteid ott lesznek tárolva amit itt beírsz. Ha ez a gyüjtö nem létezik, autómatikusan létre lesz hozva. Alapértelmezett név a &quot;Sent&quot;. Ez lesz a Te &quot;Sent&quot; gyüjtöd, de az nincs aktuálisan &quot;Sent&quot;-nek nevezve, adj meg itt egy nevet. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if applicable	email	hu	Ha Alkalmazható
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	hu	Ha kijelölt, egy másolata az elküldött levelednek el lesz tárolva a &quot;Sent&quot; gyüjtöben amit megadtál a &quot;Sent üzenet gyüjtönél&quot;. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	hu	Ha kijelölt, egy másolata az elküldött levelednek el lesz tárolva a &quot;Sent&quot; gyüjtöben amit megadtál a &quot;Sent üzenet gyüjtönél&quot;. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	hu	Ha kijelölt, egy másolata az elküldött levelednek el lesz tárolva a &quot;Sent&quot; gyüjtöben amit megadtál a &quot;Sent üzenet gyüjtönél&quot;. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	hu	Ha kijelölt, egy másolata a Törölt levelednek el lesz tárolva a &quot;Trash&quot; gyüjtöben amit megadtál a &quot;Törölt üzenet (Trash) gyüjtönél&quot;. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	hu	Ha kijelölt, egy másolata a Törölt levelednek el lesz tárolva a &quot;Trash&quot; gyüjtöben amit megadtál a &quot;Törölt üzenet (Trash) gyüjtönél&quot;. Ez csupán IMAP szerverekkel dolgozik, a POP szerverek nem használják ezt.
+if fileto then select destination folder	email	hu	ha fileto akkor választ cél gyüjtöt
+if messages match	email	hu	Ha az üzenet egyezik
+if there is no obvious error, check your username and password first.	email	hu	ha ez nem egy nyílvánvaló hiba, ellenörizd a felhasználói neved és a jelszavad.
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	hu	Ha egy IMAP szervert használsz, milyen fajtájú az, leggyakrabban ezt biztosan be lehet állítani &quot;Cyrus or Courier&quot; szervernek. Technikailag, ez azt jelenti hogy a szerver pontokat használ a gyüjtö nevek különbözö részei között, úgy mint &quot;INBOX.Sent&quot;. Az IMAP szerverek másik fö faltája a University of Washington &quot;UWash&quot; IMAP szerver. Ez slash-t használ ott ahol a többi szerver pontot. Bár van egy &quot;INBOX&quot;-nak nevezett gyüjtöje, nem veszi figyelembe a &quot;Namespace&quot;-t egyéb gyüjtö neveknek. Az &quot;UW-Maildir&quot; egy kivételes kombinációja a fenti két típusnak. Ez a legkevésbé használt IMAP server típus. Ha nem vagy biztos kérdezd meg a rendszergazdát. Csupán IMAP szerverekhez használd.
+image	email	hu	Kép
+imap mail server hostname or ip address	admin	hu	IMAP levelezö szerver neve vagy IP címe
+imap server type	common	hu	IMAP Szerver Típusa
+imap server type - if applicable	email	hu	IMAP Szerver Típusa - Ha Alkalmazható
+important	email	hu	fontos
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	hu	A levelezés index lapján, a lap amelyik mutatja az összes leveledet egy gyüjtöben, a leveleket lehet rendezni dátum, szerzö, vagy tárgy szerint, ám mindegyik rendezhetö az elsötöl az utolsóig. Például, ha dátumra rendezed, a legújabb van elöl, a legrégebbi hátul.
+inbox	email	hu	Inbox
+input error	email	hu	Bemenet Hiba
+input error:	email	hu	Bemenet Hiba:
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	hu	Ha nem RFC standard a base64 kódlás egy üzenet részben, akkor az NEM egy melléklet. Ez az ellenörzés az üzenet megnézése után történik, lehet hogy megáll a megjelenítés, használd a "mutasd ezt" gombot helyette.
+jan	common	hu	Jan
+javascript	email	hu	Javascript
+jul	common	hu	Jul
+jun	common	hu	Jun
+keep	email	hu	Öriz
+keyword	email	hu	kulcsszó
+keywords	email	hu	Kulcsszavak
+layout 1	common	hu	Elrendezés 1
+layout 2	common	hu	Elrendezés 2
+lines	email	hu	Sorok
+list messages	email	hu	lista üzenetek
+long names	email	hu	hosszú nevek
+mail folder(uw-maildir)	email	hu	Mail Gyüjtö(uw-maildir)
+mail server	email	hu	Mail szerver
+mail server login type	admin	hu	Mail szerver bejelentkezés típusa
+mail server type	email	hu	Mail szerver fajtája
+mail settings	admin	hu	Levelezés Beállítások
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	hu	A levél amit küldeni fogsz használja ezt a címet mint &quot;From&quot; cím. Ez lehet ugyanaz mint a eGroupWare bejelentkezési név vagy amit a rendszergazda adott. Amikor a címzett rákattint a válasz gombra, ez a cím lesz használva. Üresen lehet hagyni ezt a bejegyzést és az alap érték lesz használva.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	hu	A levél amit küldeni fogsz használja ezt a címet mint &quot;From&quot; cím. Ez lehet ugyanaz mint a eGroupWare bejelentkezési név, vagy amit a rendszergazda adott. Amikor a címzett rákattint a válasz gombra, ez a cím lesz használva. Üresen lehet hagyni ezt a bejegyzést és az alap érték lesz használva.
+manage accounts	email	hu	Hozzáférések Kezelése
+manage folders	email	hu	Gyüjtök Kezelése
+mar	common	hu	Már
+message	email	hu	Üzeenet
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	hu	Az üzenet aminek van melléklete ami valami script féle vagy exe, ne kattints rá. Ezek általában "rossz dolgok", olyan mint bat, inf, pif, com, exe, reg, vbs és src.
+message list layout	common	hu	Üzenet Lista Elrendezés
+messages	email	hu	Üzenetek
+messages found in folder	email	hu	Üzenetek vannak a gyüjtöben
+messages have been moved to	email	hu	üzenetek mozgatva kettek
+monitor	email	hu	Monitor
+more actions	email	hu	További ténykedések
+more choices	email	hu	További Választások
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	hu	Több Amerikai és Európai felhasználó nem engedélyezi ezt. Ha ez opció ki van jelölve, akkor a Te email szervered tudja kezelni gyüjtö neveket nem US-ASCII karakter formában, alap helyzetben ez tiltva van. Csupán akkor használd ha biztosan tudod hogy mit csinálsz. Ez csupán IMAP szerverekkel dolgozik, POP szerverek nem használják.
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	hu	Több Amerikai és Európai felhasználó nem engedélyezi ezt. Ha ez opció ki van jelölve, akkor a Te email szervered tudja kezelni gyüjtö neveket nem US-ASCII karakter formában, alap helyzetben ez tiltva van. Csupán akkor használd ha biztosan tudod hogy mit csinálsz. Ez csupán IMAP szerverekkel dolgozik, POP szerverek nem használják.
+move down	common	hu	Mozgás Le
+move selected messages into	email	hu	Kiválasztott üzenetetek áthelyezése
+move this message into	email	hu	Mozgassa ezt az üzenetet
+move up	common	hu	Mozgás Fel
+mozilla modern style	email	hu	Mozilla Modern Stílus
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	hu	A levelezö szerver neve amit el akarsz érni. A név valami ilyesmi &quot;mail.example.com&quot;. Ha ezt itt üresen hagyod, akkor az alap beállítás lesz használva.
+new	common	hu	Új
+new account	email	hu	Új Hozzáférés
+new filter	email	hu	Új Szürö
+new message	email	hu	Új üzenet
+new messages	email	hu	Új üzenetek
+newest	common	hu	újabb
+next	email	hu	Következõ
+next message	email	hu	Következö Üzenet
+no change	email	hu	nincs változás
+no error returned from server	email	hu	Nincs hibajelzés a szervertöl
+no message found in folder '%1'	email	hu	Nem találtam üzenetet ebben a gyüjtöben: '%1'
+no next message	email	hu	nincs küvetkezö üzenet
+no previous message	email	hu	nincs elözö üzenet
+no subject	email	hu	Tárgy nélkül
+noia &#64; carlitus style	email	hu	Noia &#64; Carlitus Stílus
+non-standard	email	hu	Nem szabványos
+not used	email	hu	nem használt
+notify on delivery	email	hu	Értesítés továbbításkor
+nov	common	hu	Nov
+number	common	hu	Szám
+number of matches:	email	hu	egyezések száma:
+oct	common	hu	Okt
+old	email	hu	Régi
+oldest	common	hu	régebbi
+on	common	hu	Be
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	hu	
+or	common	hu	vagy
+or enter text	email	hu	vagy írj be szöveget
+organization	common	hu	Szervezet
+persistent email server session	email	hu	folyamatban lévö email szerver kapcsolatok
+phone	common	hu	Telefon
+please fill in everything you need	email	hu	Kérlek Tölts ki mindent amit Te akarsz
+please select a folder to rename	email	hu	Kérlek válassz egy gyüjtöt az átnevezéshez
+please select a message first	email	hu	Elöször válasszon ki egy üzenetet
+please submit a filename to attach	email	hu	Kérlek válassz egy állományt a csatoláshoz
+please type a folder name in the text box	email	hu	Kérlek írj egy gyüjtö nevet a szüveg dobozba
+previous	common	hu	Elözö
+previous message	email	hu	Elözö Üzenet
+printable	email	hu	nyomtatható
+raw message	email	hu	formázatlan üzenet
+read mail	email	hu	Levél Olvasása
+received headers	email	hu	Fogadott Fejlécek
+recent	email	hu	Újabb
+recipient	email	hu	Címzett
+redirect	email	hu	Átirányít
+reject	email	hu	Elutasít
+rename (expert)	email	hu	Átnevez (szakértö)
+rename a folder	email	hu	Átnevez egy Gyüjtöt
+reply	email	hu	Válaszol
+reply all	email	hu	Válasz_mindenkinek
+replyto	email	hu	Válaszol
+request delivery notification	email	hu	Kérés kézbesítési értesítés
+requested filter action:	email	hu	kért szürö tevékenység
+required	email	hu	szükséges
+reset	email	hu	Alaphelyzet
+result	email	hu	eredmény
+return mails during this time period	email	hu	Visszatérö levelek közben ez az idö tartam
+save deleted messages in folder named below	email	hu	mentsd a Törölt üzeneteket ebbe a gyüjtöbe
+save sent messages in folder named below	email	hu	mentsd a Küldött üzeneteket ebbe a gyüjtöbe
+search for mails in these folders	email	hu	Keress leveleket ezekben a gyüjtökben
+search this folder	email	hu	keress ebben a gyüjtöben
+section	common	hu	Részleg
+seen	email	hu	Látott
+select home email address	email	hu	Válassz otthoni email címet
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	hu	Válaszd ezt ha el akarod küldeni továbbküldésnél az üzenetet
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	hu	Válaszd ezt ha el akarod küldeni továbbküldésnél az üzenetet.
+select work email address	email	hu	Válassz munka email címet
+select your mail server type	admin	hu	Válaszd ki a Te mail szerver típusát
+select your screensize for proper showing of the javascript addressbook	email	hu	Válaszd a képernyö méretét hogy a Javascript címjegyzék tökéletesen megjelenjen
+select your screensize for propper showing of the javascript addressbook	email	hu	Válaszd a képernyö méretét hogy a Javascript címjegyzék tökéletesen megjelenjen
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	hu	Válaszd ki a címjegyzék stílusát.
+send	email	hu	Elküld
+send deleted messages to the trash	email	hu	Törölt üzenet a kukába
+send forwarded mail as quoted attachment	email	hu	Küldd a továbbküldött levelet mint quoted mellékletet
+sender	email	hu	Küldö
+sent	email	hu	elküldött
+sent folder	email	hu	elküldött gyüjtö
+sent messages folder	common	hu	Elküldött üzenetek gyüjtöje
+sent messages folder name	email	hu	Elküldött üzenetek gyüjtöjének a neve
+sent messages saved in &quot;sent&quot; folder	common	hu	Elküldött üzenetek mentve az &quot;elküldött&quot; gyüjtöbe
+sent messages saved to folder:	email	hu	Elküldött üzenetek mentve a gyüjtöbe:
+sep	common	hu	Szep
+settings	email	hu	Beállítások
+short names	email	hu	rövid nevek
+show help	common	hu	Segítség mutatása
+show long names	email	hu	Hosszú nevek mutatása
+show message	email	hu	üzenetek mutatása
+show new messages in combobox	email	hu	Új Üzenetek Mutatása a ComboBox-ba
+show new messages on main screen	email	hu	Új üzenetek megjelenítése a fö képernyön
+show sender's email address with name	email	hu	Mutassa a küldö email címét a nevével
+show short names	email	hu	Rövid nevek mutatása
+show total folder size by default	email	hu	Mutassa alapban a gyüjtö teljes méretét
+simple	email	hu	Egyszerü
+size	email	hu	Méret
+size larger than	email	hu	Mérete Nagyobb Mint
+size smaller than	email	hu	Mérete Kissebb Mint
+small	email	hu	Kis
+small view	email	hu	kis nézet
+smaller	email	hu	kicsi
+smallest	email	hu	kisebb
+somebody	email	hu	valaki
+sort by	email	hu	Rendezve
+spell check	email	hu	Helyesírás ellenörzés
+standard e-mail preferences	email	hu	Szabványos E-Mail beállytások
+stop if matched	email	hu	Megáll ha Egyezett
+subject	email	hu	Tárgy
+switch accounts	email	hu	Hozzáférés Cseréje
+switch current folder to	common	hu	Dosszié kiválasztása
+test all filters	email	hu	Tesztelj Minden Szüröt
+test or apply all filters	email	hu	tesztelj vagy alkalmazz MINDEN szüröt
+test run this filter	email	hu	Teszt Fut Ezen a Szürön
+text	email	hu	Szöveg
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	hu	
+the email application offers different button displays, these buttons can be text, images, or both.	email	hu	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	hu	
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	hu	
+the email application offers different icon image themes, these icons can be big or small.	email	hu	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	hu	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	hu	
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	hu	
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	hu	
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	hu	
+then do this	email	hu	Amikor ezt csinálja
+then take this actions	email	hu	Amikor tart ez a tevékenység
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	hu	
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	hu	
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	hu	
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	hu	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	hu	
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	hu	
+this data not supplied.	email	hu	Ez az adat nem szállított
+this folder is empty	email	hu	Ez az dosszié üres
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	hu	
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	hu	
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	hu	
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	hu	
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	hu	
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	hu	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	hu	
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	hu	
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	hu	
+to	email	hu	Címzett
+to address	email	hu	Címzett Címe
+total messages	email	hu	Összes Üzenet
+trash	email	hu	szemét
+trash folder	email	hu	szemét gyüjtö
+u-wash mail folder	email	hu	U-Wash Levél Gyüjtö
+u-wash mail folder - if applicable	email	hu	U-Wash Levél Gyüjtö - Ha Alkalmazható
+unable to get source folder name	email	hu	Lehetetlen megkapni a forrás gyüjtö nevét
+unable to get target folder name	email	hu	Lehetetlen megkapni a cél gyüjtö nevét
+unanswered	email	hu	Nem megválaszolt
+undeleted	email	hu	Visszaállított
+undisclosed recipients	email	hu	Címzett nincs kitöltve
+undisclosed sender	email	hu	Feladó nincs kitöltve
+unflagged	email	hu	Nem jelölt
+unknown action	email	hu	Ismeretlen cselekmény
+unknown error	email	hu	Ismeretlen hiba
+unknown translation	email	hu	ismeretlen fordítás
+unseen	email	hu	Nem látott
+use custom settings	email	hu	Testreszabott beállítások használata
+view as html	email	hu	HTML nézet
+view formatted	email	hu	Formázott nézet
+view headers	email	hu	Fejléc megtekintése
+view unformatted	email	hu	Formázatlan nézett
+warn_attachment_name_dangerous	email	hu	
+warn_attachment_only_mail	email	hu	
+warn_b64_encoded_displayable	email	hu	
+warn_has_iframe_maybe_klez	email	hu	
+warn_script_tags	email	hu	
+warn_style_sheet	email	hu	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	hu	
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	hu	
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	hu	
+wrote	email	hu	írta
+you have %1 new messages!	common	hu	Neked %1 új üzeneted van!
+you have 1 new message!	common	hu	Neked 1 új üzeneted van!
+you have messages!	common	hu	Neked üzeneted van!
+you have no new messages	common	hu	Neked nincs üzeneted van!
+you must click	email	hu	Neked kattintanod kell
+you must click %1 for the file to actually upload	email	hu	Neked kattintanod kell %1 egy állományon a feltöltéshez
+your full name	common	hu	A Te Teljes Neved
+your message has been sent	common	hu	A Te üzeneted el lett küldve!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	hu	

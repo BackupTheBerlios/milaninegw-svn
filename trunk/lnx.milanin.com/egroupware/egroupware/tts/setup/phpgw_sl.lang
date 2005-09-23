@@ -1,0 +1,173 @@
+a new ticket has been reported.	tts	sl	Sporočeno je bilo novo opravilo.
+accept	tts	sl	SPREJMI
+accept the ticket into verification process.	tts	sl	Sprejmi opravilo v potrjevanje.
+accepted	tts	sl	SPREJETO
+action	tts	sl	Sprememba
+add new ticket	tts	sl	Dodaj novo opravilo
+add ticket	tts	sl	Dodaj opravilo
+additional notes	tts	sl	Opombe
+admin options	common	sl	Upravljanje
+assign to	tts	sl	Dodeli
+assigned from	tts	sl	Dodelil
+assigned to	tts	sl	Dodeljeno
+billable hours	tts	sl	Obračunane ure
+billable hours changed	tts	sl	Sprememba obračunanih ur
+billable hours rate	tts	sl	Cena obračunane ure
+billable rate	tts	sl	Cena ure
+billable rate changed	tts	sl	Sprememba cene ure
+category changed	tts	sl	Sprememba kategorije
+check here to generate the state's id automatically or enter a particular id below.	tts	sl	Označi za avtomatično generiranje IDja stanja ali spodaj vnesi določen ID.
+clear form	tts	sl	Izprazni formo
+close the invalid ticket.	tts	sl	Zapri neveljavno opravilo.
+closed	tts	sl	Zaprto
+completed	tts	sl	DOKONČANO
+configure the states	common	sl	Urejanje stanj
+configure the transitions	common	sl	Urejanje prehodov
+create new state	tts	sl	Ustvari novo stanje
+create new ticket	tts	sl	Ustvari novo opravilo
+create new transition	tts	sl	Ustvari nov prehod
+creates a new ticket, returns ticket_id	tts	sl	Ustvari novo opravilo, vrne njegov ID
+creates a struct of tickets	tts	sl	Ustvari strukturo opravil
+date opened	tts	sl	Datum odprtja
+default assign to	tts	sl	Privzeto dodeli
+default group	tts	sl	Privzeta skupina
+default priority	tts	sl	Privzeta prioriteta
+delete the listed tickets.	tts	sl	Izbriši opravila na seznamu.
+deleting the state	tts	sl	Brisanje stanja
+deleting the transition	tts	sl	Brisanje prehoda
+detail	tts	sl	Podrobnost
+duplicate	tts	sl	PODVOJENO
+edit the state	tts	sl	Upravljanje stanja
+edit the transition	tts	sl	Upravljanej prehoda
+error: the subject of the ticket is not specified.	tts	sl	NAPAKA: Zadeva opravila ni podana.
+force	tts	sl	Prisili
+global categories	tts	sl	Skupne kategorije
+group ownership changed	tts	sl	Spremenjena kategorija lastništva
+history	tts	sl	Zgodovina
+i worked on the ticket and the work requires validation.	tts	sl	Izvedeno delo na opravilu potrebuje potrditev.
+i worked on the ticket, but did not finish.	tts	sl	Delo na opravilu ni dokončano.
+in progress	tts	sl	V teku
+initial state	tts	sl	Začetno stanje
+invalid	tts	sl	NEVELJAVNO
+invalidate	tts	sl	RAZVELJAVI
+keep the present state [%1].	tts	sl	Ohrani trenutno stanje [%1].
+latest note added	tts	sl	Dodana zadnja pripomba.
+list of available tickets' states.	tts	sl	Seznam razpoložljivih stanj opravil.
+list of available tickets' transitions.	tts	sl	Seznam razpoložljivih prehodov opravil.
+missing description	tts	sl	Manjkajoči opis
+morework	tts	sl	VEČDELA
+needswork	tts	sl	VDELU
+new	tts	sl	NOVO
+new ticket	tts	sl	Novo opravilo
+new tickets can be put into this state.	tts	sl	Novo opravilo lahko postavimo v to stanje.
+new value	tts	sl	Nova vrednost
+no additional notes	tts	sl	Ni opomb.
+no duplicate	tts	sl	NI DUPLIKAT
+no notes for this ticket	tts	sl	Ni opomb za to opravilo.
+no states found	tts	sl	Ne najdem nobenega stanja.
+no tickets found	tts	sl	Ne najdem nobenega opravila.
+no transitions found	tts	sl	Ne najdem nobenega prehoda.
+not assigned	tts	sl	Ni dodeljeno.
+not completed	tts	sl	NI DOKONČANO
+notify changes to ticket assignee by e-mail	tts	sl	Po elektronski pošti sporoči zadolženemu spremembe opravila
+notify changes to ticket group by e-mail	tts	sl	Po elektronski pošti sporoči skupini spremembe opravila
+notify changes to ticket owner by e-mail	tts	sl	Po elektronski pošti sporoči avtorju spremembe opravila
+old value	tts	sl	Stara vrednost
+open	tts	sl	Odprto
+open / closed	tts	sl	Odprto / Zaprto
+open date	tts	sl	Datum odprtja
+opened	tts	sl	Odprto
+opened by	tts	sl	Odprl
+original ticket details	tts	sl	Začetne podrobnosti opravila
+perform irregular transition into the following state	tts	sl	Izvedi neveljaven prehod stanje
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	sl	Prosimo, vnesite spremembe zadeve opravila, sicer opravila ne moremo shraniti.
+prio	tts	sl	Prio
+priority	tts	sl	Prioriteta
+priority changed	tts	sl	Sprememba prioritete
+put the preexistent ticket into the state %1.	tts	sl	Obstoječe opravilo postavite v stanje %1.
+put the preexistent ticket into the state accept.	tts	sl	Postavi opravilo v stanje SPREJETO.
+put the preexistent ticket into the state closed.	tts	sl	Postavi opravilo v stanje ZAPRTO.
+put the preexistent ticket into the state duplicate.	tts	sl	Postavi opravilo v stanje PODVOJENO.
+put the preexistent ticket into the state invalid.	tts	sl	Postavi opravilo v stanje NEVELJAVNO.
+put the preexistent ticket into the state needswork.	tts	sl	Postavi opravilo v stanje VDELU.
+put the preexistent ticket into the state new.	tts	sl	Postavi opravilo v stanje NOVO.
+put the preexistent ticket into the state reopened.	tts	sl	Postavi opravilo v stanje SPETODPRTO.
+put the preexistent ticket into the state resolved.	tts	sl	Postavi opravilo v stanje RAZRE�ENO.
+put the preexistent ticket into the state tovalidate.	tts	sl	Postavi opravilo v stanje PREVERI.
+put the preexistent ticket into the state verified.	tts	sl	Postavi opravilo v stanje PREVERJENO.
+re-assigned	tts	sl	Prevzeto
+re-opened	tts	sl	Spet odprto
+refresh every (seconds)	tts	sl	Interval osveževanja (v sekundah)
+reopen	tts	sl	SPET ODPRI
+reopened	tts	sl	SPETODPRTO
+resolve	tts	sl	RAZREŠI
+resolved	tts	sl	RAZREŠENO
+returns a struct of a tickets history	tts	sl	Vrne strukturo zgodovine opravila.
+returns a struct of values of a single ticket	tts	sl	Vrne strukturo z vrednostmi posameznega opravila.
+returns the additional notes attached to a ticket	tts	sl	Vrne dodatne podatke o opravilu.
+selected	tts	sl	označeno
+show new/updated tickets on main screen	tts	sl	pokaži nova/spremenjena opravila na začetnem zaslonu
+source state	tts	sl	Izvirno stanje
+state	tts	sl	Stanje
+state changed	tts	sl	Sprememba stanja
+state id	tts	sl	ID stanja
+state name	tts	sl	Ime stanja
+status/date closed	tts	sl	Status/Datum zaprtja
+subject changed	tts	sl	Sprememba opisa
+target state	tts	sl	Ciljno stanje
+test	tts	sl	TEST
+the closed ticket requires more work. reopen it.	tts	sl	Zaprto opravilo zahteva več dela. Odpri ga spet.
+the owner of the ticket was not able to confirm the issue.	tts	sl	Zadolženi za opravilo ga ni mogel potrditi.
+the ticket has been accepted by the owner, who is about to work on it.	tts	sl	Zadolženi je sprejel opravilo in bo delal na njem.
+the ticket has been closed without resolution.	tts	sl	Opravilo je bilo zaključeno brez razrešitve.
+the ticket has been reopened for further work.	tts	sl	Opravilo je bilo spet odprto za nadaljnje delo.
+the ticket has been successfully resolved.	tts	sl	Opravilo je bilo uspešno razrešeno.
+the ticket has been verified and has to be worked on.	tts	sl	Opravilo je bilo potrjeno in zahteva delo.
+the ticket has been worked on and the work requires validation.	tts	sl	Opravilo je bilo opravljeno. Rešitev zahteva preverjanje.
+the ticket has been worked on, but requires more work.	tts	sl	Delo na opravilu se je začelo, a še ni zaključeno.
+the ticket is a duplicate of another ticket and should be closed.	tts	sl	Opravilo je podvojitev že obstoječega opravila, zato je bilo zaprto.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	sl	Opravilo ni podvojitev obstoječega opravila. Ponovno ga odpremo.
+the ticket is invalid and cannot be worked on.	tts	sl	Opravilo ni izvedljivo.
+the ticket resolution was successfully validated. close the ticket.	tts	sl	Razrešitev je bila uspešno potrjena. Opravilo je zaključeno.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	sl	Opravilo je obstajalo, preden je bila definirana Petrijeva mreža. Potrebno mu je dodeliti stanje.
+the ticket was found a duplicate of another ticket.	tts	sl	Opravilo je podvojitev drugega opravila.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	sl	Opravila na spodnjem seznamu so v stanju %1. Prosimo, odločite se, kaj naj se zgodi z njimi.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	sl	Preverjanje razrešitve opravila je bilo neušpesno. Na opravilu je še potrebno delati.
+ticket	tts	sl	Opravilo
+ticket has been updated	tts	sl	Opravilo je bilo spremenjeno
+tickets found %1	tts	sl	Najdenih %1 opravil
+tickets open %1	tts	sl	Odprtih %1 opravil
+tickets total %1	tts	sl	Vseh opravil je %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	sl	Kliknite <a href="%1">tu</a> za vrnitev na TTS indeks.
+toaccept	tts	sl	VSPREJETO
+toclosed	tts	sl	VZAPRTO
+toduplicate	tts	sl	VPODVOJENO
+toinvalid	tts	sl	VNEVELJAVNO
+toneedswork	tts	sl	VVDELU
+tonew	tts	sl	VNOVO
+toreopened	tts	sl	VSPETODPRTO
+toresolved	tts	sl	VRAZREŽENO
+total billable	tts	sl	Skupaj obračunano
+totovalidate	tts	sl	VVPOTRDITEV
+tovalidate	tts	sl	VPOTRDITEV
+toverified	tts	sl	VPOTRJENO
+transition	tts	sl	Prehod
+transition name	tts	sl	Ime prehoda
+trouble ticket system	common	sl	Sistem Obdelave Opravil
+tts	common	sl	TTS
+tts preferences	tts	sl	Sistem Obdelave Opravil - nastavitve
+undefined	tts	sl	NEDEFINIRANO
+update ticket state	tts	sl	Spremeni stanje opravila
+updates ticket	tts	sl	Osveži opravilo
+use email notification	tts	sl	Uporabljaj obve�&#269;anje po e-po�ti
+verified	tts	sl	POTRJENO
+verify	tts	sl	POTRDI
+verify the ticket to work on it.	tts	sl	Preveri potrdilo in sprejmi delo na njem.
+view all tickets	tts	sl	Prikaži vsa opravila
+view job detail	tts	sl	Prikaži podrobnosti opravila
+view only my open tickets	tts	sl	Prikaži le moja odprta opravila
+view only open tickets	tts	sl	Preglej le odprta opravila
+you can only close a ticket if it is assigned to you.	tts	sl	Zaprete lahko le opravilo, ki vam je bilo dodeljeno.
+you want to delete the state %1 and associated transitions. are you sure?	tts	sl	Izbrisati želite stanje %1 in pripradajoče prehode. Ste prepričani?
+you want to delete the state %1. are you sure?	tts	sl	Izbrisati želite stanje %1. Ste prepričani v to?
+you want to delete the transition %1. are you sure?	tts	sl	Izbrisati želite prehod %1. Ste prepričani v to?

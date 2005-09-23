@@ -1,0 +1,390 @@
+%1 messages have been deleted	email	hr	%1 poruka(e)  je(su) obrisano(e)
+(required)	email	hr	(potrebno)
+1 message has been deleted	email	hr	1 poruka je obrisana
+1 message has been moved to	email	hr	1 poruka je prebačena u
+<b>*apply*</b> this filter	email	hr	<b>*PRIMJENI*</b> Ovaj Filter
+<b>apply all</b> filters	email	hr	<b>PRIMJENI SVE</b> Filtere
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	hr	a scrips tag block of code, javascript or otherwise, is in an inline html message. Not necessarily bad, but user may want to know. This is SCRIPT ... code ... SCRIPT blocks, not the "OnMouseOver"  stuff.
+account	email	hr	Korisnički račun
+account name	email	hr	Ime korisničkog računa
+account user name	email	hr	Ime korisnika korisničkog računa
+accounts	common	hr	Korisnički računi
+accounts:	email	hr	Korisnički računi:
+add to address book	email	hr	Dodaj u adresar
+add to addressbook	email	hr	Dodaj u Adresar
+address book	email	hr	Adresar
+after	email	hr	Poslije
+all messages	email	hr	Sve poruke
+and	email	hr	i
+and stop filtering	email	hr	i prestani filtrirati
+answered	email	hr	odgovoreno
+apply	email	hr	primjeni
+apply filters report:	email	hr	Primjeni prijavu filtera:
+apr	email	hr	Tra
+aqua fusion	email	hr	Aqua Fusion
+arrival date	email	hr	Datum dolaska
+as	email	hr	kao
+attach file	email	hr	Dodaj datoteku (privitak)
+attach signature	email	hr	Dodaj potpis
+attachment	email	hr	Privitak
+aug	email	hr	Kol
+bcc	email	hr	Slijepa kopija
+bcc address	email	hr	Adresa slijepe kopije
+before	email	hr	Prije
+big	email	hr	Veliko
+bigger	email	hr	Veće
+biggest	email	hr	Najveće
+body	email	hr	Tijelo
+both	email	hr	Oboje
+button type	email	hr	Vrsta gumba
+cache server data whenever possible	email	hr	Obnovi podatke sa poslužitelja kad god je moguće
+cc	email	hr	Kopija
+cc address	email	hr	Adresa kopije
+change font size in your e-mail pages	email	hr	Promijeni veličinu slova na stranicama Email
+check flags for type of mails	email	hr	Označi Flag za bilo koju vrstu pošte
+choose for rename	email	hr	Izaberi radi preimenovanja
+choose to rename	email	hr	izaberi radi preimenovanja
+clear cache	email	hr	Očisti privremenu memoriju
+click here for more info in a new window	email	hr	Više informacija u novom prozoru
+click here to continue	email	hr	Nastaviti
+click here to edit the settings for this email account.	email	hr	Uređivanje postavki za ovaj e-mail korisnički račun.
+click here to return to your home page.	email	hr	Povratak na početnu stranicu
+company	email	hr	Tvrtka
+compose	common	hr	Pisanje nove poruke
+compose message	email	hr	pisanje nove poruke
+compose new	common	hr	Pisanje nove poruke
+contains	email	hr	Sadrži
+could not open this mailbox	email	hr	Nisam mogao otvoriti poštanski sandučić
+create (expert)	email	hr	napravi (expert)
+create a folder	email	hr	Napravi novu mapu
+current attachments (%1)	email	hr	Trenutni privitci (%1)
+custom e-mail preferences	email	hr	Prilagođene postavke e-maila
+custom e-mail settings	email	hr	Prilagođene postavke e-maila
+debugging page	email	hr	Debugging Page
+dec	email	hr	Pro
+default sorting order	email	hr	Početno postavljen red sortiranja
+default:	common	hr	početno postavljeno:
+delete (expert)	email	hr	Obriši (expert)
+delete a folder	email	hr	Obriši mapu
+delete account	common	hr	Obriši korisnika
+deleted	email	hr	obrisano
+deleted messages (trash) folder	email	hr	Obrisane poruke (Smeće) mapa
+deleted messages folder name	email	hr	Obrisane poruke ime mape
+deleted messages go to trash	email	hr	Obrisane poruke šalji u mapu Smeće
+deleted messages saved to folder:	email	hr	Obrisane poruke spremljene u mapu:
+discard	email	hr	Obriši (odbaci)
+does not contain	email	hr	Ne sadrži
+draft	email	hr	Nezavršena poruka
+e-mail clear cache	preferences	hr	Obriši memoriju e-maila
+e-mail extra account	email	hr	Dodatan e-mail račun
+e-mail extra accounts	email	hr	Dodatni e-ail računi
+e-mail extra accounts list	email	hr	Lista dodatnih e-mail računa
+e-mail filters	common	hr	E-Mail Filteri
+e-mail folders	common	hr	E-mail Mape
+e-mail inbox filters list	email	hr	E-Mail lista filtera ulazne mape
+e-mail preferences	common	hr	E-Mail postavke
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	hr	Svaki korisnik ima stranicu sažetaka koja prikazuje raznolike informacije. Ova opcija će prikazati malu listu e-mail poruka u INBOX mapi korisnikovog početno postavljenog računa na korisnikovoj stranici sažetaka.
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account onthe users summary home page.	email	hr	Svaki korisnik ima stranicu sažetaka koja prikazuje raznolike informacije. Ova opcija će prikazati malu listu e-mail poruka u INBOX mapi korisnikovog početno postavljenog računa na korisnikovoj stranici sažetaka.
+edit filters	email	hr	Uredi filtere
+email account name	email	hr	Ime e-mail računa
+email address	email	hr	E-mail adresa
+email date	email	hr	Datum e-maila
+email filters	email	hr	E-mail Filteri
+email password	email	hr	E-Mail zaporka
+email preferences	email	hr	Postavke e-maila
+email signature	email	hr	E-mail potpis
+email type	common	hr	Tip e-maila
+enable this email account	common	hr	Osposobi ovaj e-mail račun
+enable utf-7 encoded folder names	email	hr	Omogući utf-7 kodiranje imena mapa
+enter the search string in the text boxes	email	hr	Unesite u polje teksta riječ za pretraživanje
+enter your pop	admin	hr	Unesite vaš POP
+error moving messages to	email	hr	Greška prilikom micanja poruka u
+error text not provided	email	hr	greška, tekst nije unesen
+error: unknown message data	email	hr	Greška. Nepoznati podaci u poruci
+evolution style	email	hr	Evolution stil
+extra accounts	email	hr	Dodatni računi
+extra e-mail account	common	hr	Dodatni e-mail računi
+extra e-mail accounts	common	hr	Dodatni e-mail računi
+extra e-mail preferences number %1	email	hr	Dodatne e-mail postavke broj %1
+feb	email	hr	Velj
+fewer actions	email	hr	Manje akcija
+fewer choices	email	hr	Manje izbora
+file	email	hr	Datoteka
+file attachment	email	hr	Privitak datoteke
+file into	email	hr	informacije o datoteci
+fill in as much as you can	email	hr	Upotpunite što više možete
+filter [number] and name	email	hr	Filter [broj] i ime
+filter inbox for accounts	email	hr	Postavi filter za INBOX za korisnike
+filter name	email	hr	Ime filtera
+filter name:	email	hr	ime filtera:
+filter number	email	hr	Broj filtera
+filters	email	hr	Filtri
+filters list	email	hr	Lista filtera
+flag as important	email	hr	Flag as important
+flagged	email	hr	flagged
+folder	common	hr	Mapa
+folder maintenance	email	hr	Uređivanje mapa
+folder name	email	hr	Ime mape
+folder size	email	hr	Veličina mape
+folders	email	hr	Mape
+for the file to actually upload	email	hr	za datoteku koja će se poslati na poslužitelj
+for these items, fill only what is different from you default e-mail preferences	common	hr	Ovdje unesite samo razlike od vašeg početno postavljenog e-mail računa
+forward	email	hr	Proslijedi
+from	email	hr	Pošaljitelj
+from address	email	hr	Od adresa
+get size	email	hr	dobavi veličinu
+go	email	hr	Kreni
+go back	email	hr	Vrati se
+go back to	email	hr	Vrati se u
+header field	email	hr	Polje zaglavlja
+hidden	email	hr	skriveno
+hide help	email	hr	Sakrij pomoć
+html messages with the iframe  tag may be klez or other worm emails.	email	hr	html poruke s IFRAME tagom mogu biti KLEZ ili druge poruke sa crvima (virusima).
+icon size	email	hr	Veličina ikone
+icon theme	email	hr	Tema ikone
+idots crystal style	email	hr	iDots Crystal stil
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko &quot; Obrisane poruke idu u mapu Smeće &quot; je izabrano, Obrisane poruke će iću u mapu koju ovdije napišete.Ukoliko mapa sa ovim imenom ne postoji biti će automatski stvorena. Početno postavljeno ime je &quot;Smeće&quot;. Ovo će biti vaša &quot;Smeće&quot; mapa, ali se ne mora stvarno zvati &quot;Smeće&quot;, možete ju imenovati po vašem nahođenju. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko &quot; Poslane poruke idu u mapu Poslano &quot; je izabrano, poslane poruke će iću u mapu koju ovdje napišete.Ukoliko mapa sa ovim imenom ne postoji biti će automatski stvorena. Početno postavljeno ime je &quot;Poslano&quot;. Ovo će biti vaša &quot;Smeće&quot; mapa, ali se ne mora stvarno zvati &quot;Smeće&quot;, možete ju imenovati po vašem nahođenju. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if &quot;deleted messages go to trash&quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot; this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko &quot;Obrisane poruke idu u mapu Smeće&quot; je izabrano, Obrisane poruke će iću u mapu koju ovdije napišete.Ukoliko mapa sa ovim imenom ne postoji biti će automatski stvorena. Početno postavljeno ime je &quot;Smeće&quot;. Ovo će biti vaša &quot;Smeće&quot; mapa, ali se ne mora stvarno zvati &quot;Smeće&quot;, možete ju imenovati po vašem nahođenju. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if &quot;sent messages folder&quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot; this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko &quot;Poslane poruke idu u mapu Poslano&quot; je izabrano, poslane poruke će iću u mapu koju ovdje napišete.Ukoliko mapa sa ovim imenom ne postoji biti će automatski stvorena. Početno postavljeno ime je &quot;Poslano&quot;. Ovo će biti vaša &quot;Smeće&quot; mapa, ali se ne mora stvarno zvati &quot;Smeće&quot;, možete ju imenovati po vašem nahođenju. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if applicable	email	hr	Ako se može primjeniti
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko je izabrano, kopija vaše odlazne pošte će biti spremljena u mapu &quot;Poslano&quot; čije ime određujete u polju ispod &quot;Mapa poslane pošte &quot;. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot; only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko je izabrano, kopija vaše odlazne pošte će biti spremljena u mapu &quot;Poslano&quot; čije ime određujete u polju ispod &quot;Mapa poslane pošte&quot;. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko je izabrano, kopija vaše odlazne pošte će biti spremljena u mapu &quot;Poslano&quot; čije ime određujete u polju ispod &quot;Mapa poslane pošte &quot;. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko je izabrano, obrisane poruke biti će spremljene u mapu &quot;Smeće&quot; čije ime određujete u polju ispod &quot;Mapa obrisanih poruka (Smeće) &quot; Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot;deleted messages (trash) folder&quot; only works with imap servers, pop servers do not have folders.	email	hr	Ukoliko je izabrano, obrisane poruke biti će spremljene u mapu &quot;Smeće&quot; čije ime određujete u polju ispod &quot;Mapa obrisanih poruka (Smeće)&quot; Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+if fileto then select destination folder	email	hr	if fileto then select destination folder
+if messages match	email	hr	Ako je poruke poklapaju
+if there is no obvious error, check your email account name and password first.	email	hr	ukoliko nema očite greške, prvo provijerite vaše korisničko ime i zaporku.
+if there is no obvious error, check your username and password first.	email	hr	koliko nema očite greške, prvo provijerite vaše korisničko ime i zaporku.
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	hr	Ukoliko koristite IMAP poslužitelj, najčešće se ova opcija može sigurno podesiti na &quot;Cyrus or Courier&quot;. To u praksi znači da poslužitelj za razmak između različitih imena mapa korisit točke kao npr.&quot;INBOX.Poslano&quot;. Drugi najčešći tip IMAP poslužitelja je University of Washington &quot;UWash&quot; IMAP poslužitelj. Upotrebljava kosu crtu umijesto točaka. Poslužitelj tipa &quot;UW-Maildir&quot; je rijetka kombinacija prijašnja dva tipa servera, koja se najrijeđe i koristi. Ukoliko niste sigurni koju vrstu poslužitelja imate, kontaktirajte vašeg administratora. Primjenjuje se samo na IMAP poslužiteljima.
+image	email	hr	Slika
+imap mail server hostname or ip address	admin	hr	Ime IMAP poslužitelja ili IP adresa
+imap server type	common	hr	Vrsta IMAP poslužitelja
+imap server type - if applicable	email	hr	Vrsta IMAP poslužitelja - ako se može primjeniti
+important	email	hr	važno
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	hr	Na stranici e-mail indeksa, stranici koja prikazuje sve poruke u mapi, poruke mogu biti raspoređene po datumu, pošiljaocu, veličini ili temi. ALI svako raspoređivanje mora biti od prvog do zadnjeg, ovom opcijom određujete koja će poruka biti prva. Npr. ako raspoređujete po datumu, od najnovijeg prema najstarijem prikazuje prvo zadnje primljene e-mail poruke, dok prilikom raspoređivanja u silaznom načinu prvo prikazuje najstarije poruke.
+inbox	email	hr	Dolazne poruke
+input error	email	hr	Greška ulazne pošte
+input error:	email	hr	Greška ulazne mape:
+is not set so your administrator should set email site configuration for mail server hostname or ip address	email	hr	nije postavljeno tako da bi vaš administrator trebao konfigurirati e-mail stranice za e-mail poslužitelja i IP adresu.
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	hr	Nije RFC standard da se dio poruke koji NIJE privitak kodira sa base64 kodom. PRIMJEDBA ova provjera se trenutno vrši nakon prikazivanja stranice, te bi trebala spriječiti automatsko prikazivanje stranice.
+jan	email	hr	Sij
+javascript	email	hr	Javascript
+jul	email	hr	Srp
+jun	email	hr	Lip
+keep	email	hr	Zadrži
+keyword	email	hr	Ključna riječ
+keywords	email	hr	Ključne riječi
+layout 1	common	hr	Izgled 1
+layout 2	common	hr	Izgled 2
+lines	email	hr	Linije
+list messages	email	hr	Prikaži poruke
+long names	email	hr	duga imena
+mail folder(uw-maildir)	email	hr	Mapa pošte (uw-maildir)
+mail server	email	hr	Poslužitelj pošte
+mail server login type	admin	hr	Vrsta prijave poslužitelja pošte
+mail server type	email	hr	Vrsta poslužitelja pošte
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	hr	Pošta koju šaljete će upotrebljavati ovu adresu kao &quot;Pošiljaoc&quot; adresu. Ova adresa može biti ista kao i vaše eGroupware korisničko ime, ili vam je vaš administrator može postaviti. Kasa primaoc klikne na odgovori, odgovor će biti poslan na ovu adresu. Korisiti će se vaša početno postevljena adresa ukoliko ostavite prazno.
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	hr	Pošta koju šaljete će upotrebljavati ovu adresu kao &quot;Pošiljaoc&quot; adresu. Ova adresa može biti ista kao i vaše eGroupware korisničko ime, ili vam je vaš administrator može postaviti. Kasa primaoc klikne na odgovori, odgovor će biti poslan na ovu adresu. Korisiti će se vaša početno postevljena adresa ukoliko ostavite prazno.
+manage accounts	email	hr	Uredi korisničke račune
+manage folders	email	hr	Uređivanje mapa
+mar	email	hr	Mar
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	hr	Poruka ima privitak koji je neka vrsta skripte ili exe datoteka za koju korisnici Windows-a trebaju biti upozoreni da je ne otvaraju. Ovakvi privitci obično imaju nastavak poput: bat, inf, pif, com, exe, reg, vbs, i scr
+message list layout	common	hr	Izgled liste poruka
+messages	email	hr	Poruke
+messages found in folder	email	hr	Poruke pronađene u mapi
+messages have been moved to	email	hr	Poruke su maknute u
+more actions	email	hr	Više opcija
+more choices	email	hr	Više izbora
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them / default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	hr	Večina korisnika u SAD-u i Europi ne trebaju ovo omogućiti. Ukoliko je ova opcija omogućena vaš poslužitelj može rukovati sa imenama mapa koje u sebi sadržavaju ne US-ASCII znakove. Početna postavka je onemogućeno. Upotrebljavajte ovu opciju samo ako ste sigurni da je trebate. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	hr	Večina korisnika u SAD-u i Europi ne trebaju ovo omogućiti. Ukoliko je ova opcija omogućena vaš poslužitelj može rukovati sa imenama mapa koje u sebi sadržavaju ne US-ASCII znakove. Početna postavka je onemogućeno. Upotrebljavajte ovu opciju samo ako ste sigurni da je trebate. Radi samo sa IMAP poslužiteljima, POP poslužitelji nemaju mape.
+move down	email	hr	Pomakni prema dolje
+move selected messages into	email	hr	Makni izabrane poruke u
+move this message into	email	hr	Makni ovu poruku u
+move up	email	hr	Pomakni prema gore
+mozilla modern style	email	hr	Mozilla Modern Stil
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	hr	Ime e-mail poslužitelja kojem želite pristupiti. Ime bi trebalo biti forme &quot;mail.primjer.com&quot;. Ukoliko ostavite prazno, koristiti će se početno postavljeno ime.
+new	email	hr	Nova (o)
+new account	email	hr	Novi korisnički račun
+new filter	email	hr	Novi filter
+new message	email	hr	Nova poruka
+new messages	email	hr	Nove poruke
+newest	common	hr	najnovije
+next message	email	hr	Slijedeća poruka
+no change	email	hr	Bez promjene
+no error returned from server	email	hr	Nikakva greška nije vraćena sa poslužitelja
+no message found in folder '%1'	email	hr	Nema poruka u mapi '%1'
+no next message	email	hr	Nema slijedeće poruke
+no previous message	email	hr	Nema prethodne poruke
+noia &#64; carlitus style	email	hr	Noia @ Carlitus Stil
+non-standard	email	hr	Nestandardno
+not used	email	hr	Nije upotrijebljen
+notify on delivery	email	hr	Obavijesti o primitku
+nov	email	hr	Stu
+number	common	hr	Broj
+number of matches:	email	hr	Broj poklapanja:
+oct	email	hr	Lis
+old	email	hr	Staro
+oldest	common	hr	Najstarije
+on	email	hr	Uključi
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	hr	Potrebno je samo kod University of Washington &quot;UWash&quot; IMAP poslužitelja. Početno postavljen je &quot;mail&quot; što zanči da mapae vašeg e-maila, drugačije od INBOX, se nalaze u mapi zvanoj &quot;mail&quot; direktno ispod &quot;HOME&quot; mape. Možete ostaviti prazno, čime određujete da se vaše poruke nalaze u mapi &quot;HOME&quot; , a ne u podmapi. Ukliko se vaša pošta nalazi u nekoj podmapi tada tu napišite njeno ime. Općenito nije potrebna upotreba nekih posebnih znakova (tilde ili kose crte), mapa &quot;HOME&quot; se uvijek smatra osnovnom mapom, i kosa crta između se radi automatski između mape &quot;HOME&quot; i podmape.
+or	common	hr	ili
+or enter text	email	hr	ili unesi tekst
+or you can use custom settings for this email account	email	hr	ili možete upotrijebiti prilagođene postavke za ovaj e-mail korisnički račun
+organization	email	hr	Organizacija
+persistent email server session	email	hr	persistent email server session
+phone	email	hr	Telefon
+please fill in everything you need	email	hr	Molimo vas unesite sve što trebate
+please select a folder to rename	email	hr	Molimo vas izaberite mapu za preimenovanje
+please select a message first	email	hr	Molimo vas prvo izaberite poruku
+please submit a filename to attach	email	hr	Molimo vas unesite ime datoteke za dodati
+please type a folder name in the text box	email	hr	Molimo vas unesite ime datoteke u prostor za tekst
+previous	email	hr	Prethodno
+previous message	email	hr	Prethodna poruka
+printable	email	hr	Ispisivo
+raw message	email	hr	Poruka u tekstualnom obliku
+read mail	email	hr	Pročitaj poštu
+received headers	email	hr	Primljeni zaglavlja
+recent	email	hr	Nedavno
+recipient	email	hr	Primaoc
+redirect	email	hr	Ponovno upućeno
+reject	email	hr	Odbi
+rename (expert)	email	hr	Preimenuj (expert)
+rename a folder	email	hr	Preimenuj mapu
+reply	email	hr	Odgovori
+reply all	email	hr	Odgovori svima
+replyto	email	hr	Odgovori
+request delivery notification	email	hr	Zahtijev za obavijesti o primitku
+requested filter action:	email	hr	Zahtijevano djelovanje filtera:
+required	email	hr	Potrebno
+reset	email	hr	Postavi ponovo
+result	email	hr	Rezultat
+return mails during this time period	email	hr	Vraća poštu tijekom ovog vremenskog perioda
+save deleted messages in folder named below	email	hr	Spremi obrisane poruke u mapu navedenu ispod
+save sent messages in folder named below	email	hr	Spremi poslane poruke u mapu navedenu ispod
+search for mails in these folders	email	hr	Potraži poruke u ovim mapama
+search this folder	email	hr	Potraži ovu mapu
+section	email	hr	Dio
+seen	email	hr	Viđen
+select home email address	email	hr	Odaberi kućnu e-mail adresu
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	hr	Izaberite ako želite tekst poruke koju proslijeđujete da se pojavi unutar teksta vaše poslane poruke
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message.	email	hr	Izaberite ako želite tekst poruke koju proslijeđujete da se pojavi unutar teksta vaše poslane poruke.
+select work email address	email	hr	Odaberi poslovnu e-mail adresu
+select your mail server type	admin	hr	Odaberi vrstu poslužitelja
+select your screensize for proper showing of the javascript addressbook	email	hr	Odaberite veličinu ekrana radi pravilnog prikazivanja Javascript adresara
+select your screensize for propper showing of the javascript addressbook	email	hr	Odaberite veličinu ekrana radi pravilnog prikazivanja Javascript adresara
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	hr	Izaberite stil za adresar. Tradicionalni jednostavan stil, ili novi kompleksan javascript izgled adresara.
+send	email	hr	Pošalji
+send deleted messages to the trash	email	hr	Pošalji obrisane poruke u Smeće
+send forwarded mail as quoted attachment	email	hr	Pošalji proslijeđene poruke kao citirane privitke
+sender	email	hr	Pošaljitelj
+sent	common	hr	poslano
+sent folder	email	hr	Mapa poslane pošte
+sent messages folder	common	hr	Mapa poslane pošte
+sent messages folder name	email	hr	Ime mape poslane pošte
+sent messages saved in &quot;sent&quot; folder	common	hr	Poslane poruke spremljene u &quot;Poslano&quot; mapi
+sent messages saved to folder:	email	hr	Poslane poruke spremi u mapu:
+sep	email	hr	Sep
+settings	common	hr	Postavke
+short names	email	hr	skraćena imena
+show help	email	hr	Prikaži pomoć
+show long names	email	hr	Prikaži puna imena
+show message	email	hr	prikaži poruke
+show new messages in combobox	email	hr	Prikaži nove poruke u ComboBox
+show new messages on main screen	email	hr	prikaži nove poruke na glavnom ekranu
+show sender's email address with name	email	hr	Prikaži pošiljateljevu e-mail adresu s imenom
+show short names	email	hr	Prikaži skraćena imena
+show total folder size by default	email	hr	Prikaži ukupnu veličinu mape
+simple	email	hr	Jednostavno
+size	email	hr	Veličina
+size larger than	email	hr	Veličina veća od
+size smaller than	email	hr	Veličina manja od
+small	email	hr	Malo
+small view	email	hr	smanjeni pogled
+smaller	email	hr	Manje
+smallest	email	hr	Najmanje
+somebody	email	hr	netko
+sort by	email	hr	Poredaj po
+source accounts	email	hr	izvorni korisnički račun
+spell check	email	hr	Provjera pravopisa
+standard e-mail preferences	email	hr	Standardne postavke e-maila
+stop if matched	email	hr	Zaustavi ako pronađeš poklapanja
+switch accounts	email	hr	Zamijeni korisnički račun
+switch current folder to	common	hr	Promijeni trenutnu mapu u
+test all filters	email	hr	Provijeri sve filtere
+test or apply all filters	email	hr	testiraj ili primjeni SVE filtere
+test run this filter	email	hr	Provijeri ovaj filter
+text	email	hr	Tekst
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	hr	Aplikacija za e-mail nudi 2 različita ozgleda index stranice, tj. stranice koja prikazuje e-mail mapu. Kako je ova stranica najčešće korištena, stoga su ponuđeni različiti stilovi.
+the email application offers different button displays, these buttons can be text, images, or both.	email	hr	Aplikacija za e-mail nudi različite tipove prikaza sučelja. Sučelje može biti tekst, slika ili oboje.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape6 / mozilla browser buttons. additional themes are anticipated and welcome.	email	hr	Aplikacija za e-mail nudi različite teme ikona, i grupe ikona sličnih stilova koje se mogu upotrebljavati. Trenutno su dostupne teme koje su slike bazirane na Evolution od Ximiana i Netscape 6 / Mozilla browser sučelju. Dodatne teme su očekivane i dobrodošle.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	hr	Aplikacija za e-mail nudi različite teme ikona, i grupe ikona sličnih stilova koje se mogu upotrebljavati. Trenutno su dostupne teme koje su slike bazirane na Evolution od Ximiana i Netscape 7 browser sučelju. Dodatne teme su očekivane i dobrodošle.
+the email application offers different icon image themes, these icons can be big or small.	email	hr	Aplikacija za e-mail nudi različite teme ikona, koje mogu biti različitih veličina.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	hr	Ime za prijavu koje koristite prilikom provjere za novom poštom za ovaj e-mail korisnički račun. Ime može biti isto kao i ime koje koristite za prijavu na eGroupware, ili ga može podesiti vaš administrator za vas. Ukoliko imate više e-mail korisničkih računa, morate popuniti ovo polje, no ukoliko imate samo jedan ovo polje možete ostaviti prazno. Ukoliko ispraznite ovo polje, aplikacija automatski vraća početno postavljeno ime. Ukoliko trebate samo neke vlastite postavke ostavite ovo polje prazno, i aplikacija će upotrijebiti početno postavljeno ime koje će te vidjeti slijedeći put kada budete pregledavali ovu stranicu.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. exra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	hr	Ime za prijavu koje koristite prilikom provjere za novom poštom za ovaj e-mail korisnički račun.Ukoliko imate više e-mail korisničkih računa, morate popuniti ovo polje no ukoliko imate samo jedan ovo polje možete ostaviti prazno. Ukoliko postavite vlastitu zaporku, ovo polje će biti prazno slijedeći put kada budete pregledavali ovu stranicu. Ovo je sigurnosna mogućnost jer vaša vlastita e-mail zaporka se ne šalje kada ju postavite. Kako bi promijenili vlastitu zaporku samo novu zaporku upišite u polje. Dodatni e-mail korisnički računi zahtijevaju ovu zaporku. Za vaš početno postavljen e-mail korisnički račun možete obrisati vašu vlastitu zaporku odselektiranjem &quot;Upotrijebi vlastuite postavke&quot; opcije.
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	hr	Zaporka za prijavu koje koristite prilikom provjere za novom poštom za ovaj e-mail korisnički račun.Ukoliko imate više e-mail korisničkih računa, morate popuniti ovo polje no ukoliko imate samo jedan ovo polje možete ostaviti prazno. Ukoliko postavite vlastitu zaporku, ovo polje će biti prazno slijedeći put kada budete pregledavali ovu stranicu. Ovo je sigurnosna mogućnost jer vaša vlastita e-mail zaporka se ne šalje kada ju postavite. Kako bi promijenili vlastitu zaporku samo novu zaporku upišite u polje. Dodatni e-mail korisnički računi zahtijevaju ovu zaporku. Za vaš početno postavljen e-mail korisnički račun možete obrisati vašu vlastitu zaporku odselektiranjem &quot;Upotrijebi vlastuite postavke&quot; opcije.
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	hr	Vrsta poslužitelja kojem želite pristupiti. IMAP mail poslužitelji imaju mape, poput poslano i smeće. POP poslužitelji nemaju mape. POP, POP-3, i POP3 su ista stvar. Možete enkriptirati vezu sa poslužiteljima upotrebljavajući IMAPS ili POPS, samo ako vaš poslužitelj to podržava i ako vaš eGroupware instalacija sadrži &quot;SSL&quot; verziju PHP.
+then check the	email	hr	Tada obilježite
+then do this	email	hr	Tada napravite ovo
+then take this actions	email	hr	Tada poduzmite slijedeće korake
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	hr	Nema teksta ili nekog drugog dijela e-aila za prikazati, svi dijelovi su privitci .
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	hr	Desila se greška prilikom povezivanja sa vašim IMAP poslužiteljem.<br>Molimo vas kontaktirajte vašeg administratora radi provjere imena poslužitelja, korisničkog imena i zaporke.
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	hr	Desila se greška prilikom povezivanja sa vašim mail poslužiteljem.<br>Molimo vas provjerite vaše korisničko imee i zaporku ili kontaktirajte vašeg administratora.
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	hr	Desila se greška prilikom povezivanja sa vašim POP3 poslužiteljem.<br>Molimo vas kontaktirajte vašeg administratora radi provjere imena poslužitelja, korisničkog imena i zaporke.
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	hr	Prilikom prikaza pristiglih e-mail poruka, u kolumni POŠALJITELJ može biti prikazano a) samo ime pošaljitelja, ukoliko je ime dano, b) e-mail adresa pošaljitelja uz ime pošaljitelja, ili c) adresa pošaljitelja za odgovor ukoliko je drugačija od adrese pošaljitelja uz ime pošaljitelja, ukoliko je ime dano. Obično korisnici ovdje postave na prikazivanje samo imena pošaljitelja. Ukoliko ime pošaljitelja nije dano, onda će se prikazati pošaljiteljeva adresa, ukoliko je dana druga adresa za odgovor to neće imati nikakvog utjecaja na prikaz.
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you<br>a) the senders name only, if a name was provided,<br>b) the senders from email address, in addition to the senders name, or<br>c) the senders reply to address if it is different from the senders<br>from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	hr	Prilikom prikaza pristiglih e-mail poruka, u kolumni POŠALJITELJ može biti prikazano <br>a) samo ime pošaljitelja, ukoliko je ime dano, <br>b) e-mail adresa pošaljitelja uz ime pošaljitelja, ili <br>c) adresa pošaljitelja za odgovor ukoliko je drugačija od adrese pošaljitelja uz ime pošaljitelja, ukoliko je ime dano. Obično korisnici ovdje postave na prikazivanje samo imena pošaljitelja. Ukoliko ime pošaljitelja nije dano, onda će se prikazati pošaljiteljeva adresa, ukoliko je dana druga adresa za odgovor to neće imati nikakvog utjecaja na prikaz.
+this data not supplied.	email	hr	Ovi podaci nisu uneseni
+this folder is empty	email	hr	Ova mapa je prazna
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	hr	This is really a visual template conflict issue. The eGW template already has it own CSS, and style sheets are cascading, subsequent CSS can be inherited by the page and TOTALLY B0RK the look of the template theme. Or maybe not, only certain CSS tags are really capable of this such as the css BODY property, or the A (href) properties.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as "your full name". if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use "your full name" as your from name for email messages. note that "your full name" for your email account 0 is the name you gave in the egroupware setup.	email	hr	Ovo je ime koje se prikazuje u combobox korisničkog računa. Ukoliko ovo polje ostavite prazno, vaš korisnički račun će imati standardno ime poput Korisnički Račun[1]: Ivana Ivić, gdje je Ivana Ivić ime koje ste upisali dolje pod "Vaše puno ime i prezime". Ukoliko želita da vaš korisnički račun ima neko posebno ime upišite to ime ovdje. Bez obzira na postavke, ovo ime će se upotreblajvait kao ime koje se prikazuje kao POŠALJITELJ pored vaše e-mail adrese. Primjetite da je "Vaše puno ime i prezime" za vaš e-mail korisnički račun postavljeno na 0 prilikom postavljanja eGroupWarea.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	hr	Ovo je ime koje se prikazuje u combobox korisničkog računa. Ukoliko ovo polje ostavite prazno, vaš korisnički račun će imati standardno ime poput Korisnički Račun[1]: Ivana Ivić, gdje je Ivana Ivić ime koje ste upisali dolje pod Vaše puno ime i prezime. Ukoliko želita da vaš korisnički račun ima neko posebno ime upišite to ime ovdje. Bez obzira na postavke, ovo ime će se upotreblajvait kao ime koje se prikazuje kao POŠALJITELJ pored vaše e-mail adrese. Primjetite da je Vaše puno ime i prezime za vaš e-mail korisnički račun postavljeno na 0 prilikom postavljanja eGroupWarea.
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	hr	Ovo je ime koje se prikazuje kao POŠALJITELJ. Ovo ime vaš e-mail korisnički račun dobiva automatski od phpgwapi. Dodatni korisnički računi koji su napravljeni phpgwapi-ijem dobivaju puno ime koje možete pojedinačno definirati za svaki posebni korisnički račun.
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	hr	OVA POSTAVKA TRENUTNO NEMA NIKAKVOG UTJECAJA. Korisnici mogu imati više od jednog korisničkog računa. Predviđeno je da se u budućnosti radnje poput provjere nove poruke, filtriranje i sl. izvršavaju automatski na tim korisničkim računima. Korisnici mogu poželjeti onesposobiti neke od ovih djelovanja za neke određene korisničke račune, i ovo jedan mogući način upotrebe. Isto tako administrator može onesposobiti neke korisničke račune.
+this pref currently does nothing<br>users may have more than one email account. in the future it is anticipated that automatic actions may be performedon these accounts, such as automatic new mail checks, auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use.<br>also, an admin may want to disable accounts from time to time.	email	hr	OVA POSTAVKA TRENUTNO NEMA NIKAKVOG UTJECAJA.<br>Korisnici mogu imati više od jednog korisničkog računa. Predviđeno je da se u budućnosti radnje poput provjere nove poruke, filtriranje i sl. izvršavaju automatski na tim korisničkim računima. Korisnici mogu poželjeti onesposobiti neke od ovih djelovanja za neke određene korisničke račune, i ovo jedan mogući način upotrebe. Isto tako administrator može onesposobiti neke korisničke račune.
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	hr	Ovime određujete da li želite vidijeti broj novih poruka u combo box mape prilikom prikaza indeksa.
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size.	email	hr	Ovime određujete da li želite prikazati veličinu mapa. Ukoliko nije izabrano, prikazat će vam se gumb kojim će te vidjeti punu veličinu mape.
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	hr	Ovime određujete da li želite prikazati veličinu mapa. Ukoliko nije izabrano, prikazat će vam se gumb kojim će te vidjeti punu veličinu mape...
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	hr	Ovaj tekst će se automatski umetnuti na kraj vaše poruke za ovaj korisnički račun. Trenutno html tagovi nisu podržani. Isto tako poruke koje proslijeđujete neće dobiti ovaj tekst, jer to zagušuje poruku. Poruka koju proslijeđujete vjerovatno ima potpis od originalnog pošaljitelja, što je zaista bitnije.
+to	email	hr	Prima
+to address	email	hr	Prima adresa
+total messages	email	hr	Ukupno poruka
+trash	email	hr	Smeće
+trash folder	email	hr	Mapa smeće
+u-wash mail folder	email	hr	U-Wash Mail Mapa
+u-wash mail folder - if applicable	email	hr	U-Wash Mail Mapa - ukoliko se može primjeniti
+unable to get source folder name	email	hr	Nisam u mogućnosti dobiti ime dolazne mape
+unable to get target folder name	email	hr	Nisam u mogućnosti dobiti ime odlazne mape
+unanswered	email	hr	Neodgovoreno
+undeleted	email	hr	Neobrisano
+undisclosed recipients	email	hr	Primatelj nepoznat
+undisclosed sender	email	hr	Pošaljitelj nepoznat
+unflagged	email	hr	Neoznačeno
+unknown action	email	hr	Nepoznata radnja
+unknown error	email	hr	Nepoznata greška
+unknown translation	email	hr	Nepoznat prijevod
+unseen	email	hr	Neviđeno
+use custom settings	email	hr	Upotrijebi vlastite postavke
+view as html	email	hr	Prikaži kao HTML
+view formatted	email	hr	Prikaži formatirano
+view headers	email	hr	Prikaži zaglavlja
+view unformatted	email	hr	Prikaži neformatirano
+warn_attachment_name_dangerous	email	hr	warn_attachment_name_DANGEROUS
+warn_attachment_only_mail	email	hr	warn_attachment_only_mail
+warn_b64_encoded_displayable	email	hr	warn_b64_encoded_displayable
+warn_has_iframe_maybe_klez	email	hr	warn_has_iframe_maybe_klez
+warn_script_tags	email	hr	warn_script_tags
+warn_style_sheet	email	hr	warn_style_sheet
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	hr	Nedavno je dodan ovaj novi adresar tako da korisnici mogu izabrati složeniji adresar koji nudi a)Jednostavnost, označi i klikni pretraživanje b)Najprikladnije za organizacije koje imaju veliki centralni adresar sa puno kategorija. Ovdje birate koji adresar preferirate.
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features<br>a) easy, point and click searching,<br>b) best suited for organizations with large central addressbooks with many categories.<br>you can choose here which addressbook do you prefer.	email	hr	Nedavno je dodan ovaj novi adresar tako da korisnici mogu izabrati složeniji adresar koji nudi <br>a)Jednostavnost, označi i klikni pretraživanje <br>b)Najprikladnije za organizacije koje imaju veliki centralni adresar sa puno kategorija. Ovdje birate koji adresar preferirate.
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	hr	WPostoje tri veličine za što bilji prikaz vašeg adresara: 800x600 (adresar će biti prikazan u prozoru širine 700 piksela), 1024x768 (prozor širine 800 piksela), ili 1200x1600 (prozor širine 900 piksela). Slova će se automatski prilagoditi veličini prozora.
+wrote	email	hr	Napisao je
+you have %1 new messages!	common	hr	Imate %1 novih poruka!
+you have 1 new message!	common	hr	Imate 1 novu poruku!
+you have messages!	common	hr	Imate nove poruke!
+you have no new messages	common	hr	Nemate novih poruka!
+you must click	email	hr	Morate pritisnuti
+you must click %1 for the file to actually upload	email	hr	Morate pritisnuti %1 da bi datoteka bila prebačena na poslužitelja
+your full name	common	hr	Vaše Puno ime
+your message has been sent	common	hr	Vaša poruka je poslana
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	hr	Za slijedeće opcije postavke postavlja vaš administrator. Možda ih nećete trebati mijenjati. Ukoliko trebate upotrijebiti neke postavke koje su drugačije od početno postavljenih postavki ispod tada ovo izaberete. Kada je izabrano, početno postavljene vrijednosti su onemogućene. Ukoliko ispunite nekoliko opcija i poslije se odlučite vratiti na početne postavke, ponovnim izabiranjem ove opcije brišete vaše postavke i vraćate početne. Sve opcije koje slijede imaju neku početnu vrijednost, tako da ako ih i nikada niste upisali one imaju neku početnu vrijednost.Ovaj checkbox se pojavljuje samo za vaš osnovni e-mail korisnički račun. Ukoliko postavljate dodatne e-mail korisničke račune morati će te upotpuniti ove podatke jer vam checkbox neće biti ni ponuđen..

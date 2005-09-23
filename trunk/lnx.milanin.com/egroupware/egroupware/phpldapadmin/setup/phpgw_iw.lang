@@ -1,0 +1,114 @@
+add	phpldapadmin	iw	הוסף
+add_a_jpeg_photo	phpldapadmin	iw	jpeg הוסף תמונת
+add_new	phpldapadmin	iw	הוסף חדש
+add_new_attribute	phpldapadmin	iw	חדש attribute הוסף
+add_new_attribute_tooltip	phpldapadmin	iw	ערך חדש לרשומה זו/attribute הוסף
+add_new_binary_attr	phpldapadmin	iw	בינארי חדש attribute הוסף
+add_new_binary_attr_tooltip	phpldapadmin	iw	ערך חדש מקובץ/attribute הוסף
+add_oclass_and_attrs	phpldapadmin	iw	attributes-ו ObjectClass הוסף
+add_value	phpldapadmin	iw	הוסף ערך
+add_value_tooltip	phpldapadmin	iw	זה attribute-הוסף ערך נוסף ל
+advanced_search_form_str	phpldapadmin	iw	טופס חיפוש מתקדם
+alias_for	phpldapadmin	iw	שם נרדף של
+bad_server_id	phpldapadmin	iw	זהוי שרת פגום
+base_dn	phpldapadmin	iw	DN בסיס
+binary_value	phpldapadmin	iw	ערך בינארי
+change_entry_rdn	phpldapadmin	iw	של רשומה זו RDN-שנה את ה
+chooser_link_tooltip	phpldapadmin	iw	לפי גיאוגרפיה (DN) הקלק כדי להקפיץ חלוננית דו-שיח לבחירת רשומה
+click_to_display	phpldapadmin	iw	הקלק להתציג
+contains	phpldapadmin	iw	מכיל
+copy_this_entry	phpldapadmin	iw	העקת רשומה זו
+copy_this_entry_tooltip	phpldapadmin	iw	חדש, או לשרת אחר DN-העתק אוביקט זה למקום אחר, ל
+could_not_connect	phpldapadmin	iw	LDAP-לא הצלחתי להתחבר אל שרת ה
+could_not_determine_root	phpldapadmin	iw	שלך LDAP-לא הצלחתי לקבוע את שורש עץ ה
+could_not_perform_ldap_mod_add	phpldapadmin	iw	LDAP לא הלחתי לבצע פעולת שינוי/הוספה של
+create	phpldapadmin	iw	צור
+create_a_child_entry	phpldapadmin	iw	צור רשומת בת
+create_new	phpldapadmin	iw	צור חדש
+create_new_entry_in	phpldapadmin	iw	-יוצר רשומה חדשה ב
+create_new_entry_on	phpldapadmin	iw	-יוצר רשומה חדשה ב
+current_list_of	phpldapadmin	iw	רשימה נוכחית של
+delete_attribute	phpldapadmin	iw	attribute מחק
+delete_hint	phpldapadmin	iw	רוקן את שדה הטקסק ולחץ שמור attribute רמז: כדי למחוק
+delete_this_entry	phpldapadmin	iw	מחק רשומה זו
+delete_this_entry_tooltip	phpldapadmin	iw	את תתבקש לאשר את החלטתך
+desc	phpldapadmin	iw	תיאור
+download_value	phpldapadmin	iw	הורד ערך
+ends_with	phpldapadmin	iw	-מסתיים ב
+enter_value_to_add	phpldapadmin	iw	:הכנס את הערך שברצונך להוסיף
+entry_attributes	phpldapadmin	iw	של רשומות attributes
+equals	phpldapadmin	iw	שווה
+export_subtree_to_ldif	phpldapadmin	iw	LDIF-ייצוא תת-עץ ל
+export_subtree_to_ldif_tooltip	phpldapadmin	iw	של אוביקט זה ושל כל ילדיו LDIF dump שמור
+export_to_ldif	phpldapadmin	iw	LDIF-ייצוא ל
+export_to_ldif_mac	phpldapadmin	iw	Macintosh סיום שורות בסגנון
+export_to_ldif_tooltip	phpldapadmin	iw	של אוביקט זה LDIF dump שמור
+export_to_ldif_unix	phpldapadmin	iw	Unix סיום שורות בסגנון
+export_to_ldif_win	phpldapadmin	iw	Windows סיום שורות בסגנון
+false	phpldapadmin	iw	לא נכולן
+hidden	phpldapadmin	iw	מוסתר
+hide_internal_attrs	phpldapadmin	iw	פנימיים attributes הסתר
+import	phpldapadmin	iw	ייבוא
+import_from_ldif	phpldapadmin	iw	LDIF ייבוא רשומות מקובץ
+info	phpldapadmin	iw	מידע
+inherits	phpldapadmin	iw	יורש
+internal_attributes	phpldapadmin	iw	פנימיים attributes
+internal_attrs_tooltip	phpldapadmin	iw	נקבעים אוטומטית על ידי המערכת attributes
+is_obsolete	phpldapadmin	iw	הנו מיושן objectClass
+jump_to_attr	phpldapadmin	iw	attribute קפוץ אל
+jump_to_objectclass	phpldapadmin	iw	objectClass קפוץ אל
+jump_to_this_oclass	phpldapadmin	iw	objectClass קבוץ אל הגדרת
+ldap_refuses_to_give_root	phpldapadmin	iw	שלו root-זה קונפג שלא להראות את ה LDAP נראה ששרת
+logged_in_as	phpldapadmin	iw	:נכנסת בשם
+logout	phpldapadmin	iw	יציאה מהמערכת
+logout_of_this_server	phpldapadmin	iw	צא משרת זה
+matching_rule_oid	phpldapadmin	iw	OID התאום לחוק
+new_attributes	phpldapadmin	iw	חדשים attributes
+new_required_attrs	phpldapadmin	iw	חדשים חובה attributes
+new_required_attrs_instructions	phpldapadmin	iw	זה לרשומה, עליך לציין objectClass הוראות: על מנת להוסיף
+no_updates_in_read_only_mode	phpldapadmin	iw	אי אפשר לבצע שדרוד כאשר השרת במצב לקריאה בלבד
+none	phpldapadmin	iw	ללא
+none_remove_value	phpldapadmin	iw	ללא, הסר ערך
+not_enough_login_info	phpldapadmin	iw	אין מספיק מידע כדי להכנס לשרת, בדוק את התצורה שלך
+optional_attrs	phpldapadmin	iw	attributes אופציונלים
+please_specify_in_config	phpldapadmin	iw	config.php-נא לציין זאת ב
+read_only	phpldapadmin	iw	לקריאה בלבד
+really_delete_attribute	phpldapadmin	iw	attribute באמת למחוק
+refresh	phpldapadmin	iw	רענן
+refresh_expanded_containers	phpldapadmin	iw	לרענן את כל כלי הקיבולת הפרוסים עבור
+refresh_this_entry	phpldapadmin	iw	רענן רשומה זו
+rename	phpldapadmin	iw	שנה שם
+rename_entry	phpldapadmin	iw	שנה שם הרשומה
+report_bug	phpldapadmin	iw	bug דווך על
+request_new_feature	phpldapadmin	iw	בקש תכןנה חדשה
+required_attrs	phpldapadmin	iw	attributes דרושים
+requires_to_add	phpldapadmin	iw	פעולה זו דורש שתוסיף
+save_changes	phpldapadmin	iw	שמור שינוים
+schema	phpldapadmin	iw	סכמה
+schema_for_server	phpldapadmin	iw	סכמת השרת
+search	phpldapadmin	iw	חיפוש
+search_ filter	phpldapadmin	iw	מסנן החיפוש
+search_for_entries_whose	phpldapadmin	iw	חפש רשומות אשר להם
+search_scope	phpldapadmin	iw	תןןך החיפוש
+see_open_bugs	phpldapadmin	iw	פתוחים bugs הצג
+see_open_requests	phpldapadmin	iw	הצג בקשות פתוחות
+server	phpldapadmin	iw	שרת
+show_attributes	phpldapadmin	iw	attributes הצג
+show_internal_attrs	phpldapadmin	iw	פנימיים attributes הצג
+simple_search_form_str	phpldapadmin	iw	טופס חיפוש פשוט
+sounds_like	phpldapadmin	iw	נשמע כמו
+starts_with	phpldapadmin	iw	-מחחיל ב
+syntax	phpldapadmin	iw	תחביר
+syntax_oid	phpldapadmin	iw	OID תחביר
+that_this_oclass_requires	phpldapadmin	iw	זה דורש. אפשר לעשות זאת בטופס objectClass-ש
+the_following_attributes	phpldapadmin	iw	זה LDAP הבאים נתמכים בשרת attributes-ה
+the_following_matching	phpldapadmin	iw	זה LDAP חוקי ההתאמה הבאים נתמכים בשרת
+the_following_objectclasses	phpldapadmin	iw	זה LDAP הבאים נתמכים בשרת objectClasses-ה
+the_following_syntaxes	phpldapadmin	iw	זה LDAP התחבירים הבאים נתמכים בשרת
+true	phpldapadmin	iw	נכון
+value_to	phpldapadmin	iw	-ערך ל
+values_for_attribute	phpldapadmin	iw	attribute-ערכים עבור ה
+view	phpldapadmin	iw	תצוגה
+view_schema_for	phpldapadmin	iw	הצג סכמה של
+view_server_info	phpldapadmin	iw	הצג נתונים הניתנים על יד השרת
+viewing_read_only	phpldapadmin	iw	מציג רשומה במצב לקריאה בלבד

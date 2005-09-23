@@ -1,0 +1,20 @@
+/applications.php/1.28/Tue Mar  9 21:04:10 2004//TVersion-1_0_0-branch
+/applist.php/1.11/Tue Jan 27 20:49:24 2004//TVersion-1_0_0-branch
+/check_install.php/1.21.2.8/Mon Feb 21 08:04:51 2005//TVersion-1_0_0-branch
+/config.php/1.87/Tue Jan 27 20:49:24 2004//TVersion-1_0_0-branch
+/index.php/1.128.2.3/Wed Nov 17 12:48:22 2004//TVersion-1_0_0-branch
+/lang.php/1.57.2.5/Sat Jul 31 16:15:55 2004//TVersion-1_0_0-branch
+/ldap.php/1.58/Tue Jan 27 20:49:25 2004//TVersion-1_0_0-branch
+/ldapexport.php/1.13/Sun Feb 29 22:00:12 2004//TVersion-1_0_0-branch
+/ldapimport.php/1.18/Mon Jul 12 22:06:12 2004//TVersion-1_0_0-branch
+/ldapmodify.php/1.22/Tue Jan 27 20:49:25 2004//TVersion-1_0_0-branch
+/manageheader.php/1.72/Mon May 31 11:22:39 2004//TVersion-1_0_0-branch
+/schematoy.php/1.15/Tue Jan 27 20:49:25 2004//TVersion-1_0_0-branch
+/setup_demo.php/1.44.2.2/Fri Aug 13 21:05:55 2004//TVersion-1_0_0-branch
+/sqltoarray.php/1.14.2.1/Sun Aug 15 11:48:32 2004//TVersion-1_0_0-branch
+/system_charset.php/1.9/Sun May  2 12:41:19 2004//TVersion-1_0_0-branch
+/versions.inc.php/1.3/Tue Dec 11 04:53:34 2001//TVersion-1_0_0-branch
+D/doc////
+D/inc////
+D/lang////
+D/templates////

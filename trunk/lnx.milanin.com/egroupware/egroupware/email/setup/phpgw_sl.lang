@@ -1,0 +1,356 @@
+%1 messages have been deleted	email	sl	Izbrisanih je bilo %1 sporo&#269;il
+1 message has been deleted	email	sl	1 sporo&#269;ilo je bilo izbrisano
+1 message has been moved to	email	sl	1 sporo&#269;ilo je bilo premaknjeno v
+<b>*apply*</b> this filter	email	sl	<b>uporabi</b> ta filter
+<b>apply all</b> filters	email	sl	<b>uporabi</b> vse filtre
+a scrips tag block of code, javascript or otherwise, is in an inline html message. not necessarily bad, but user may want to know. this is script ... code ... script blocks, not the "onmouseover"  stuff.	email	sl	V poslanem HTML sporo&#269;ilu je uporabljena zna&#269;ka <SCRIPT>, ki vsebuje nek program. Ni nujno, da je zlonamerna, toda smiselno je nanjo opozoriti uporabnika.
+account	email	sl	Nabiralnik
+account name	email	sl	Ime nabiralnika
+account user name	email	sl	Uporabni¹ko ime za nabiralnik
+accounts	email	sl	Nabiralniki
+accounts:	email	sl	Nabiralniki:
+add to address book	email	sl	Dodaj v adresar
+add to addressbook	email	sl	Dodaj v adresar
+address book	email	sl	Adresar
+after	email	sl	Po
+all messages	email	sl	Vsa sporo&#269;ila
+and	email	sl	in
+and stop filtering	email	sl	in kon&#269;aj presejanje
+answered	email	sl	odgovorjeno
+apply	email	sl	uporabi
+apply filters report:	email	sl	Poro&#269;ilo o uporabi sit:
+apr	email	sl	Apr
+aqua fusion	email	sl	Aqua Fusion
+arrival date	email	sl	Datum dospetja
+as	email	sl	kot
+attach file	email	sl	Dodaj datoteko
+attach signature	email	sl	Dodaj podpis
+attachment	email	sl	Priponka
+aug	email	sl	Avg
+bcc	email	sl	Prikrito
+bcc address	email	sl	Naslov za prikrito kopijo
+before	email	sl	Pred
+big	email	sl	Veliko
+bigger	email	sl	Ve&#269;je
+biggest	email	sl	Najve&#269;je
+body	email	sl	Besedilo
+both	email	sl	Oboje
+button type	email	sl	Tip gumba
+cache server data whenever possible	email	sl	Shrani podatke s stre¾nika v predpomnilnik kadarkoli je to mogo&#269;e
+cc	email	sl	Kopija
+cc address	email	sl	Naslov za kopijo
+change font size in your e-mail pages	email	sl	Spremeni velikost fonta v straneh ENabiralnika
+check flags for type of mails	email	sl	Ozna&#269;ite za tipe epo¹te
+choose for rename	email	sl	Izberite za preimenovanje
+choose to rename	email	sl	Izberite za preimenovanje
+click here for more info in a new window	email	sl	Kliknite tu za ve&#269; podatkov v novem oknu
+click here to continue	email	sl	Kliknite tu za nadaljevanje
+click here to edit the settings for this email account.	email	sl	Kliknite tu za upravljanje nastavitev tega enabiralnika
+click here to return to your home page.	email	sl	kliknite tu za vrnitev na va¹o za&#269;etno stran
+company	email	sl	Podjetje
+compose	email	sl	Sestavi
+compose message	email	sl	Sestavi sporo&#269;ilo
+compose new	common	sl	Sestavi novo
+contains	email	sl	Vsebuje
+could not open this mailbox	email	sl	Ni bilo mogo&#269;e odpreti tega nabiralnika
+create (expert)	email	sl	Ustvari (zahtevno)
+create a folder	email	sl	Ustvari mapo
+current attachments (%1)	email	sl	Trenutne priponke (%1)
+custom e-mail preferences	email	sl	Lastne nastavitve epo¹te
+custom e-mail settings	email	sl	Lastne nastavitve epo¹te
+debugging page	email	sl	Stran za razhro¹&#269;evanje
+dec	email	sl	Dec
+default sorting order	email	sl	Privzet na&#269;in urejanja
+default:	common	sl	privzeto:
+delete (expert)	email	sl	Bri¹i (zahtevno)
+delete a folder	email	sl	Bri¹i mapo
+delete account	common	sl	Bri¹i nabiralnik
+deleted	email	sl	izbrisan
+deleted messages (trash) folder	email	sl	Mapa za izbrisana sporo&#269;ila (smeti)
+deleted messages folder name	email	sl	Ime mape za izbrisana sporo&#269;ila:
+deleted messages go to trash	email	sl	Izbrisana sporo&#269;ila gredo v smeti
+deleted messages saved to folder:	email	sl	Izbrisana sporo&#269;ila shranjena v mapi:
+discard	email	sl	Zavrzi
+does not contain	email	sl	Ne vsebuje
+draft	email	sl	osnutek
+e-mail extra account	email	sl	Dodaten enabiralnik
+e-mail extra accounts	email	sl	Dodatni enabiralniki
+e-mail extra accounts list	email	sl	Seznam dodatnih nabiralnikov
+e-mail filters	common	sl	Sita epo¹te
+e-mail folders	common	sl	Mape epo¹te
+e-mail inbox filters list	email	sl	Sita dohodnih sporo&#269;il
+e-mail preferences	common	sl	Nastavitve epo¹te
+each user has a summary page which can display a variety of information. this option will show a small list of email messages in the inbox of the users default email account on the users summary home page.	email	sl	Vsak uporabnik ima stran s povzetkom, na kateri lahko prika¾e razne podatke. Ta izbira bo prikazala kratek seznam esporo&#269;il iz mape INBOX uporabnikovega privzetega enabiralnika na uporabnikovi strani s povzetkom.
+edit filters	email	sl	Upravljanje sit
+email account name	email	sl	Ime enabiralnika
+email address	email	sl	Enaslov
+email date	email	sl	Datum sporo&#269;ila
+email filters	email	sl	Sita epo¹te
+email password	email	sl	Geslo epo¹te
+email preferences	email	sl	Nastavitve epo¹te
+email signature	email	sl	Signatura epo¹te
+email type	common	sl	Tip epo¹te
+enable this email account	common	sl	Omogo&#269;i ta enabiralnik
+enable utf-7 encoded folder names	email	sl	Omogo&#269;i imena map v naboru utf-7
+enter the search string in the text boxes	email	sl	Vnesite iskani niz v vnosne vrstice
+enter your pop	admin	sl	Vnesite ime POP3 stre¾nika
+error moving messages to	email	sl	Napaka pri prenosu sporo&#269;il v
+error text not provided	email	sl	ni opisa napake
+error: unknown message data	email	sl	Napaka: neznani podatki o sporo&#269;ilu
+evolution style	email	sl	Slog Evolution
+extra accounts	email	sl	Dodatni enabiralniki
+extra e-mail account	common	sl	Dodaten enabiralnik
+extra e-mail accounts	common	sl	Dodatni enabiralniki
+feb	email	sl	Feb
+fewer actions	email	sl	Manj akcij
+fewer choices	email	sl	Manj izbir
+file	email	sl	Datoteka
+file attachment	email	sl	Priponka
+file into	email	sl	Datoteka v
+fill in as much as you can	email	sl	Napolni toliko, kot je mogo&#269;e
+filter [number] and name	email	sl	Datoteka [¹tevilka] in ime
+filter inbox for accounts	email	sl	Presej INBOX za enabiralnike
+filter name	email	sl	Ime sita:
+filter name:	email	sl	ime sita:
+filter number	email	sl	©tevilka sita
+filters	email	sl	Sita
+filters list	email	sl	Seznam sit
+flag as important	email	sl	Oznaka kot pomembno
+flagged	email	sl	ozna&#269;en
+folder	email	sl	Mapa
+folder maintenance	email	sl	Vzdr¾evanje map
+folder name	email	sl	Ime mape
+folder size	email	sl	Velikost mape
+folders	email	sl	Mape
+for the file to actually upload	email	sl	da se datoteka res nalo¾i
+for these items, fill only what is different from you default e-mail preferences	common	sl	Za te nastavitve vnesite le, kar je razli&#269;no od privzetih enastavitev
+forward	email	sl	Posreduj
+from	email	sl	Od
+from address	email	sl	Naslov po¹iljatelja
+get size	email	sl	izra&#269;unaj velikost
+go	email	sl	pojdi
+go back	email	sl	Pojdi nazaj
+go back to	email	sl	Pojdi nazaj na
+header field	email	sl	Polje za glavo
+hidden	email	sl	skrito
+hide help	email	sl	Skrij pomo&#269;
+html messages with the iframe  tag may be klez or other worm emails.	email	sl	HTML sporo&#269;ila z zna&#269;ko IFRAME so lahko sporo&#269;ila &#269;rva KLEZ ali kakega drugega.
+icon size	email	sl	Velikost ikone
+icon theme	email	sl	Tema ikone
+if &quot; deleted messages go to trash &quot; is checked, deleted message will be sent to the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;trash&quot;. this will be your &quot;trash&quot; folder, but it does not have to actually be called &quot;trash&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	sl	&#268;e je izbrano &quot; Izbrisana sporo&#269;ila gredo v smeti &quot;, potem se izbrisano sporo&#269;ilo prestavi v mapo, ki jo ozna&#269;ite tu. &#268;e ta mapa ne obstaja, se bo avtomatsko ustvarila. Privzeto ime je &quot;Trash&quot;, lahko pa jo poimenujete kakorkoli. Deluje samo z IMAP stre¾niki, POP stre¾niki nimajo map.
+if &quot; sent messages folder &quot; is checked, a copy of your sent mail will be stored in the folder name you type in this box. if this folder does not exist, it will be created for you automatically. default name is &quot;sent&quot;. this will be your &quot;sent&quot; folder, but it does not have to actually be called &quot;sent&quot;, you can name it anything. only works with imap servers, pop servers do not have folders.	email	sl	&#268;e je izbrano &quot; Mapa za poslana sporo&#269;ila &quot;, potem se kopija odposlanega sporo&#269;ila shrani v mapo, ki jo ozna&#269;ite tu. &#268;e ta mapa ne obstaja, se bo avtomatsko ustvarila. Privzeto ime je &quot;Sent&quot;, lahko pa jo poimenujete kakorkoli. Deluje samo z IMAP stre¾niki, POP stre¾niki nimajo map.
+if applicable	email	sl	&#268;e je uporabno
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder &quot;. only works with imap servers, pop servers do not have folders.	email	sl	&#268;e je izbrano, se bo kopija odposlanih sporo&#269;il shranila v mapo, ki ste jo vnesli kot &quot; mapa za odposlana sporo&#269;ila &quot;. Deluje le z IMAP stre¾niki, POP stre¾niki nimajo map.
+if checked, a copy of your sent mail will be stored in the &quot;sent&quot; folder name which you specify in the box for &quot;sent messages folder&quot;. only works with imap servers, pop servers do not have folders.	email	sl	&#268;e je izbrano, se bo kopija odposlanih sporo&#269;il shranila v mapo, ki ste jo vnesli kot &quot; mapa za odposlana sporo&#269;ila &quot;. Deluje le z IMAP stre¾niki, POP stre¾niki nimajo map.
+if checked, deleted message will be sent to the &quot;trash&quot; folder name which you specify in the box for &quot; deleted messages (trash) folder &quot;. only works with imap servers, pop servers do not have folders.	email	sl	&#268;e je izbrano, se bodo izbrisana sporo&#269;ila shranila v mapo, ki ste jo vnesli kot &quot; Mapa za izbrisana sporo&#269;ila &quot;. Deluje le z IMAP stre¾niki, POP stre¾niki nimajo map.
+if fileto then select destination folder	email	sl	izberite ciljno mapo za shranjevanje
+if messages match	email	sl	&#268;e se sporo&#269;ila ujemajo
+if there is no obvious error, check your username and password first.	email	sl	&#268;e ni o&#269;itne napake, najprej preverite uporabni¹ko ime in geslo.
+if using an imap server, what kind is it, most often this option can safely be set to &quot;cyrus or courier&quot;. technically, this means the server uses a dot between the different parts of the folder names, such as &quot;inbox.sent&quot;. the other major kind of imap server is the university of washington &quot;uwash&quot; imap server. it uses slashes instead of the dots the other servers use, and although it has a folder called &quot;inbox&quot;, it is not considered the &quot;namespace&quot; for the other folder names. the &quot;uw-maildir&quot; is a rare combination of the two above types. this is the least used kind of imap server. if you are unsure, ask your it administrator. only applies to imap servers.	email	sl	&#268;e uporabljate IMAP stre¾nik, ozna&#269;ite, katere vrste je. Navadno je to "Cyrus ali Courier", kar pomeni, da uporablja piko med imeni gnezdenih map (npr. "INBOX.Sent"). Ostali stre¾niki so tipa "UWash" (Univerza v Washingtonu), ki uporabljajo po¹evnice.Izbira UW-Maildir je redka kombinacija obeh. &#268;e niste gotovi, preverite pri upravljalcu stre¾nika epo¹te. Vse to je potrebno le pri IMAP stre¾nikih.
+image	email	sl	Podoba
+imap mail server hostname or ip address	admin	sl	Ime ali IP IMAP po¹tnega stre¾nika
+imap server type	common	sl	Tip IMAP stre¾nika
+important	email	sl	pomembno
+in the email index page, the page which lists all the mails in a folder, mail may be sorted by date, author, size, or subject, however all of these need to be ordered from first to last, this options controlls what is first and last. for example, if sorting by date, the newest to oldest displays the most recent emails first, in decending order down to the oldest emails last.	email	sl	V kazalu epo¹te je ta lahko urejena po datumu, avtorju, velikosti ali zadevi. Tu dolo&#269;ite, na kak¹en na&#269;in se bo urejalo (padajo&#269;e ali nara¹&#269;ajo&#269;e).
+inbox	email	sl	Inbox
+input error	email	sl	Napaka na vhodu
+input error:	email	sl	Napaka na vhodu:
+it is not rfc standard to base64 encode a part of a message that is not an attachment. note this check is currently done after the message is already being viewed, it should probably stop the message from being automatically displayed, i.e. give a "show this" button instead.	email	sl	
+jan	email	sl	Jan
+jul	email	sl	Jul
+jun	email	sl	Jun
+keep	email	sl	Obdr¾i
+keyword	email	sl	klju&#269;na beseda
+keywords	email	sl	Klju&#269;ne besede
+layout 1	common	sl	Izgled 1
+layout 2	common	sl	Izgled 2
+lines	email	sl	Vrstice
+list messages	email	sl	seznam sporo&#269;il
+long names	email	sl	dolga imena
+mail folder(uw-maildir)	email	sl	Mapa s po¹to (uw-maildir)
+mail server	email	sl	Po¹tni stre¾nik
+mail server login type	admin	sl	Tip prijave na po¹tni stre¾nik
+mail server type	email	sl	Tip po¹tnega stre¾nika
+mail you send will use this address as the &quot;from&quot; address. this may be the same as your egroupware login name, or the server administrator may have set it for you. when the recipient clicks reply, this address will be used. you can leave this box blank and the default value will be used.	email	sl	Po¹ta, ki jo po¹ljete, bo uporabljala ta naslov kot po¹iljateljev naslov. Ta je lahko enak va¹emu egroupware uporabni¹kemu imenu, ali pa ga mora administrator nastaviti za vas. Ko bo prejemnik uporabil Odgovori, se ob uporabil ta naslov. Polje lahko pustite prazno in se bo uporabil privzeti naslov.
+manage accounts	email	sl	Upravljanje nabiralnikov
+manage folders	email	sl	Upravljanje map
+mar	email	sl	Mar
+message has an attachment that is some kind of script or exe file that windows users should be warned not to click on it. these are filenames like attachments the end with the usual "bad stuff", such as bat, inf, pif, com, exe, reg, vbs, and scr	email	sl	Sporo&#269;ilo ima priponko, ki je neke vrste skripta ali izvr¹ljiva datoteka. Uporabniki okolja Windows morajo biti opozorjeni, da ne kliknejo nanjo. To so datoteke s kon&#269;nicami bat, inf, pif, com, exe, reg, vbs in scr.
+message list layout	common	sl	Izgled seznama sporo&#269;il
+messages	email	sl	Sporo&#269;ila
+messages found in folder	email	sl	Sporo&#269;ila najdena v mapi
+messages have been moved to	email	sl	sporo&#269;ila so bila premaknjena v
+more actions	email	sl	Ve&#269; akcij
+more choices	email	sl	Ve&#269; izbir
+most us and european users do not need to enable this. if this option is checked then your email server can handle folder names with non us-ascii charactors in them/ default is disabled, not checked. only use if you are really sure you need it. only works with imap servers, pop servers do not have folders.	email	sl	Ve&#269;ina evropskih uporabnikov ne potrebuje te storitve, zato je navadno izklju&#269;ena. &#268;e je storitev aktivirana, potem lahko va¹ stre¾nik uporablja imena map z ne-ASCII znaki. Uporabite to storitev le, &#269;e je res potrebno. Deluje le z IMAP stre¾niki, POP stre¾niki nimajo map.
+move down	email	sl	Premakni navzdol
+move selected messages into	email	sl	Premakni ozna&#269;ena sporo&#269;ila v
+move this message into	email	sl	Premakni to sporo&#269;ilo v
+move up	email	sl	Premakni navzgor
+mozilla modern style	email	sl	Slog Mozilla Modern
+name of the mail server you want to access. should be a name like &quot;mail.example.com&quot;. if you leave this box blank then the default value will be used.	email	sl	Ime po¹tnega stre¾nika, do katerega ¾elite dostopati, npr. "mail.podjetje.si". &#268;e pustite prazno, se bo uporabila privzeta vrednost.
+new	email	sl	Novo
+new account	email	sl	Nov ra&#269;un
+new filter	email	sl	Novo sito
+new message	email	sl	Novo sporo&#269;ilo
+new messages	email	sl	Nova sporo&#269;ila
+newest	common	sl	najnovej¹e
+next message	email	sl	Naslednje sporo&#269;ilo
+no change	email	sl	ni sprememb
+no error returned from server	email	sl	Stre¾nik ni vrnil nobene napake
+no message found in folder '%1'	email	sl	V mapi '%1' ni sporo&#269;il
+no next message	email	sl	ni naslednjega sporo&#269;ila
+no previous message	email	sl	ni predhodnjega sporo&#269;ila
+noia &#64; carlitus style	email	sl	Slog Noia &#64; Carlitus
+non-standard	email	sl	Nestandardno
+not used	email	sl	neuporabljeno
+notify on delivery	email	sl	Opozori ob dostavi
+nov	email	sl	Nov
+number	common	sl	©tevilka
+number of matches:	email	sl	¹tevilo zadetkov:
+oct	email	sl	Okt
+old	email	sl	Staro
+oldest	common	sl	najstarej¹e
+on	email	sl	Vklju&#269;eno
+only needed with the university of washington &quot;uwash&quot; imap server. the default value is &quot;mail&quot; which means your mail folders, other then inbox, are located in a directory called &quot;mail&quot; directly under your &quot;home&quot; directory. this box may be left empty, which means your mail folders are located in your &quot;home&quot; directory, not a subdirectory. if your mail folders are located in a subdirectory of &quot;home&quot; then put the name of that subdirectory here. generally, it is not necessary to use any special slashes or tildes, &quot;home&quot; is always considered the base directory, and the slash bewteen &quot;home&quot; and the subdirectory will be added for you automatically, do not put the slash in this box.	email	sl	Potrebno le pri IMAP tipu stre¾nika "Univerza v Washingtonu (uwash)". Privzeta vrednost je "mail", kar pomeni, da so va¹e po¹tne mape, razli&#269;ne od mape INBOX, shranjene v mapi "mail" neposredno pod va¹o doma&#269;o mapo (torej "~/mail").
+or	common	sl	ali
+or enter text	email	sl	ali vnesite besedilo
+organization	email	sl	Organizacija
+persistent email server session	email	sl	stalna seja s po¹tnim stre¾nikom
+phone	email	sl	Telefon
+please fill in everything you need	email	sl	Prosimo vnesite vse, kar je potrebno
+please select a folder to rename	email	sl	Izberite mapo za preimenovanje
+please select a message first	email	sl	Najprej izberite sporo&#269;ilo
+please submit a filename to attach	email	sl	Po¹ljite ime datoteke, ki jo ¾elite pripeti
+please type a folder name in the text box	email	sl	Prosim, vnesite ime mape v vnosno vrstico
+previous	email	sl	Predhodnji
+previous message	email	sl	Predhodnje sporo&#269;ilo
+printable	email	sl	za tiskanje
+raw message	email	sl	neoblikovano sporo&#269;ilo
+read mail	email	sl	Preberi po¹to
+received headers	email	sl	Sprejeta glava
+recent	email	sl	Pred kratkim
+recipient	email	sl	Prejemnik
+redirect	email	sl	Preusmeri
+reject	email	sl	Zavrni
+rename (expert)	email	sl	Preimenuj (zahtevno)
+rename a folder	email	sl	Preimenuj mapo
+reply	email	sl	Odgovori
+reply all	email	sl	Odgovori vsem
+replyto	email	sl	Odgovori na
+request delivery notification	email	sl	Zaprosi za potrdilo o dostavi
+requested filter action:	email	sl	Zapro¹ena akcija sita:
+required	email	sl	zahtevano
+reset	email	sl	Reset
+result	email	sl	rezultat
+return mails during this time period	email	sl	Vrni po¹to v tem &#269;asovnem intervalu
+save deleted messages in folder named below	email	sl	shrani izbrisana sporo&#269;ila v mapo z naslednjim imenom
+save sent messages in folder named below	email	sl	shrani odposlana sporo&#269;ila v mapo z naslednjim imenom
+search for mails in these folders	email	sl	Poi¹&#269;i po¹to v teh mapah
+search this folder	email	sl	Prei¹&#269;i to mapo
+section	email	sl	Sekcija
+seen	email	sl	Videno
+select home email address	email	sl	Izberite doma&#269; enaslov
+select this box if you want the text body of the message you are forwarding to appear inline in the body of your sent message	email	sl	Ozna&#269;ite, &#269;e ¾elite, da se besedilo sporo&#269;ila, ki ga posredujete, pojavi vklju&#269;eno v va¹e poslano sporo&#269;ilo.
+select work email address	email	sl	Izberite delovni enaslov
+select your mail server type	admin	sl	Izberite tip va¹ega estre¾nika
+select your screensize for proper showing of the javascript addressbook	email	sl	Da se bo Javascript imenik pravilno prikazal, izberite velikost va¹ega zaslona
+select your style for the addressbook. the traditional, simple style. or the new javascript enabled complex addressbook	email	sl	Izberite slog va¹ega adresarja. Tradicionalni, preprosti slog ali sodoben, kompleksen adresar s podporo Javascript-a.
+send	email	sl	Po¹lji
+send deleted messages to the trash	email	sl	Prestavi izbrisana sporo&#269;ila v smeti
+send forwarded mail as quoted attachment	email	sl	Po¹lji posredovana sporo&#269;ila kot priponko
+sender	email	sl	Po¹iljatelj
+sent	email	sl	poslano
+sent folder	email	sl	mapa s poslanim
+sent messages folder	common	sl	Mapa s poslanimi sporo&#269;ili
+sent messages folder name	email	sl	Ime mape s poslanimi sporo&#269;ili
+sent messages saved in &quot;sent&quot; folder	common	sl	Poslana sporo&#269;ila shranjena v mapi "sent"
+sent messages saved to folder:	email	sl	Poslana sporo&#269;ila shranjena v mapi:
+sep	email	sl	Sep
+settings	email	sl	Nastavitve
+short names	email	sl	kratka imena
+show help	email	sl	Prika¾i pomo&#269;
+show long names	email	sl	Prika¾i dolga imena
+show message	email	sl	prika¾i sporo&#269;ilo
+show new messages in combobox	email	sl	Prika¾i nova sporo&#269;ila v izbirnem seznamu
+show new messages on main screen	email	sl	Prika¾i sporo&#269;ila v osnovnem zaslonu
+show sender's email address with name	email	sl	Prika¾i po¹iljateljev enaslov z imenom
+show short names	email	sl	Prika¾i kratka imena
+show total folder size by default	email	sl	Vedno poka¾i velikost mape
+size	email	sl	Velikost
+size larger than	email	sl	Velikost ve&#269;ja od
+size smaller than	email	sl	Velikost manj¹a od
+small	email	sl	Majhno
+smaller	email	sl	Manj¹e
+smallest	email	sl	Najmanj¹e
+somebody	email	sl	nekdo
+sort by	email	sl	Uredi po
+spell check	email	sl	&#268;rkovanje
+standard e-mail preferences	email	sl	Standardne nastavitve epo¹te
+stop if matched	email	sl	Ustavi, &#269;e se ujema
+switch accounts	email	sl	Menjaj ra&#269;une
+switch current folder to	common	sl	Menjaj izbrano mapo na
+test all filters	email	sl	Preveri vse filtre
+test or apply all filters	email	sl	preveri ali uporabi VSE filtre
+test run this filter	email	sl	Preveri ta filter
+text	email	sl	Besedilo
+the email application offers 2 different layouts for the index page, that is the page that lists the emails in a folder. this page may be the page the user looks at the most and so different layouts, or looks, are offered.	email	sl	Aplikacija Epo¹ta ponuja dve razli&#269;ni obliki seznama sporo&#269;il v mapi. Ta stran je najpogosteje prikazana in zato so razli&#269;ne, uporabniku prilagojene oblike, dobrodo¹le.
+the email application offers different button displays, these buttons can be text, images, or both.	email	sl	Aplikacija Epo¹ta ponuja razli&#269;ne tipe gumbov: besedilo, ikona ali oboje.
+the email application offers different icon image themes, groups of images of a similar style which are used in this email application. currently the available themes are images based on evolution by ximian and the netscape7, mozilla browser buttons. additional themes are anticipated and welcome.	email	sl	Aplikacija Epo¹ta ponuja razli&#269;ne teme za ikone. Trenutno so na razpolago teme na osnovi sistema Evolution (Ximian) in gumbi brskalnikov Netscape 7 oz. Mozilla. Dobrodo¹le bodo tudi dodatne teme.
+the email application offers different icon image themes, these icons can be big or small.	email	sl	Ikone v aplikaciji Epo¹ta so lahko velike ali male.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you clear this box, then it goes back to the default value. if you only need some custom settings but want this one to be the default value, then leave this box blank, the default value will be used, and you will see that default value in this box the next time you come to this preferences page.	email	sl	Uporabni¹ko ime, ki se uporablja pri pobiranju po¹te iz tega nabiralnika. To je lahko isto kot va¹e prijavno ime za eGroupware, ali pa ga lahko za vas nastavi administrator. &#268;e ¾elite uporabljati ve&#269; enabiralnikov, morate izpolniti to polje. &#268;e imate le en enabiralnik, verjetno lahko pustite prazno. &#268;e izpraznite to vnosno polje, se nastavi na privzeto vrednost. Privzeto vrednost boste videli naslednji&#269;, ko se vrnete na stran za nastavitve.
+the login name to use when checking mail for this email account. this may be the same as your egroupware login name, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	sl	Uporabni¹ko ime, ki se uporablja pri pobiranju po¹te iz tega nabiralnika. To je lahko isto kot va¹e prijavno ime za eGroupware, ali pa ga lahko za vas nastavi administrator. &#268;e ¾elite uporabljati ve&#269; enabiralnikov, morate izpolniti to polje. &#268;e imate le en enabiralnik, verjetno lahko pustite prazno. &#268;e izpraznite to vnosno polje, se nastavi na privzeto vrednost. Privzeto vrednost boste videli naslednji&#269;, ko se vrnete na stran za nastavitve.
+the password to use when checking mail for this email account. this may be the same as your egroupware password, or the server administrator may have set it for you. if your have multiple email accounts set up, you will need to fill this in. if you have only one email account set up, then you can probably leave this alone. if you do set a custom password, this box will be blank the next time you come to this settings page. this is a security feature because your custom email password is not sent to your browser after you set it. to change your custom password, simply enter a new password in the box. extra email accounts require you to set this. for your default email account, you can clear your custom password by unchecking the &quot;use custom settings&quot; option.	email	sl	Geslo, ki se uporablja pri pobiranju po¹te iz tega nabiralnika. To je lahko isto kot va¹e geslo za eGroupware, ali pa ga lahko za vas nastavi administrator. &#268;e ¾elite uporabljati ve&#269; enabiralnikov, morate izpolniti to polje. &#268;e imate le en enabiralnik, verjetno lahko pustite prazno. V vsakem primeru bo ob naslednjem obisku strani z nastavitvami to polje prazno: tako je va¹e geslo varnej¹e, ker ga ne po¹iljamo nazak na va¹ ra&#269;unalnik.
+the type of mail server you want to access. imap mail servers have folders, such as the sent and trash folders. pop servers do not have folders. pop, pop-3, and pop3 are the same thing. you can have the server connection encrypted by using imaps or pops, only if the mailserver supports it and if your egroupware installation has a &quot;ssl&quot; capabable version of php.	email	sl	Tip po¹tnega stre¾nika, ki ga ¾elite uporabljati. IMAP stre¾niki imajo mape, kot npr. Sent (Poslano) in Trash (Smeti). POP stre¾niki nimajo map. POP, POP-3 in POP3 so ista stvar. &#268;e je povezava kriptirana, se uporablja IMAPS ali POPS. To je mogo&#269;e le, &#269;e stre¾nik to podpira in imate na eGroupware stre¾niku name¹&#269;en PHP s podporo SSL.
+then do this	email	sl	Potem naredi
+then take this actions	email	sl	Potem izvedi naslednje akcije
+there is no text or other part of the email to display to the user, all part(s) are attachments.	email	sl	V sporo&#269;ilu ni nobenega besedila, le priponke.
+there was an error trying to connect to your imap server.<br>please contact your admin to check the servername, username or password.	email	sl	Ob poskusu povezovanja z va¹im IMAP stre¾nikom je pri¹lo do napake. <br>Prosimo, naj va¹ upravnik stre¾nika preveri ime stre¾nika, uporabni¹ko ime in geslo.
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	sl	Ob poskusu povezovanja z va¹im po¹tnim stre¾nikom je pri¹lo do napake. <br>Prosimo, preverite uporabni¹ko ime in geslo, ali zaprosite upravnika stre¾nika za pomo&#269;.
+there was an error trying to connect to your pop3 server.<br>please contact your admin to check the servername, username or password.	email	sl	Ob poskusu povezovanja z va¹im POP3 stre¾nikom je pri¹lo do napake. <br>Prosimo, naj va¹ upravnik stre¾nika preveri ime stre¾nika, uporabni¹ko ime in geslo.
+this confusing and often misunderstood option is left over from this email apps origins as aeromail by mark cushman. when viewing a list of emails in a folder, the from column may show you a) the senders name only, if a name was provided, b) the senders from email address, in addition to the senders name, or c) the senders reply to address if it is different from the senders from address, in addition to the senders name if it was provided. typically users set this to none, which will show only the senders name. if no name was supplied by the sender, then the senders from email address will be shown, whether a seperate reply to address is provided has no effect on this, the from address is always used if the senders name is not provided.	email	sl	Ko pregledujete sporo&#269;ila, se vam lahko prika¾e a) samo ime po¹iljatelja, b) ime in FROM enaslov po¹iljatelja, c) ime in REPLY TO naslov po¹iljatelja. Navadno se uporablja nastavitev "noben", ki prika¾e le ime po¹iljatelja. &#268;e po¹iljatelj ni posredoval svojega imena, potem se uporabi FROM enaslov, REPLY TO pa se ne upo¹teva.
+this data not supplied.	email	sl	Podatki niso na razpolago
+this folder is empty	email	sl	Mapa je prazna
+this is really a visual template conflict issue. the phpgw template already has it own css, and style sheets are cascading, subsequent css can be inherited by the page and totally b0rk the look of the template theme. or maybe not, only certain css tags are really capable of this such as the css body property, or the a (href) properties.	email	sl	To je problem predloge za obliko. Predloga eGroupware ¾e ima svoj CSS, ki se pove¾e s podrejenim CSSjem. To lahko povzro&#269;i probleme.
+this is the name that appears in the account combobox. if for leave this blank, your accounts will be given a standard name like account[1]: jane doe, where jane doe is the name you give below as your full name. if you want to give an account a special name you can fill this in. no matter what, this is for your use, your emails will still use your full name as your from name for email messages. note that your full name for your email account 0 is the name you gave in the egroupware setup.	email	sl	To je ime, ki se pojavi v seznamu enabiralnikov. &#268;e ga pustite praznega, bo va¹emu nabiralniku dolo&#269;eno standardno ime, npr. Nabiralnik[1]: Janez Novak, kjer je Janez Novak ime, ki ste ga vnesli kot va¹e polno ime. Ne glede na to, kaj vnesete, bodo va¹a sporo&#269;ila vedno uporabila Va¹e polno ime za ime po¹iljatelja. 
+this is the name that appears in the users from address. the default mail account gets this value automatically from the phpgwapi. additional accounts are created with the phpgwapi supplied fullname you can specify a different fullname for each extra email account.	email	sl	To je ime, ki se pojavi v uporabnikovem OD (FROM) polju. Privzeti ra&#269;un dobi to ime avtomati&#269;no iz eGroupware nastavitev. Pri dodatnih ra&#269;unih lahko to ime nadomestite z razli&#269;nimi imeni.
+this pref currently does nothing users may have more than one email account. in the future it is anticipated that automatic actions may be performed on these accounts, such as automatic new mail checks,auto filtering, etc... perhaps the user may want to disable an account so that these automatic actions do not occur for that account. this is one possible use. also, an admin may want to disable accounts from time to time.	email	sl	TRENUTNO SE NE UPORABLJA.
+this specifies whether or not to show the number of new message in the folders combo box on the index screen.	email	sl	To pove, ali se v izbirnem seznamu sporo&#269;il prika¾e ¹tevilo novih sporo&#269;il.
+this specifies whether or not to show the total size of folders by default. if this is not checked, you will be presented with a button allowing you to display folder size..	email	sl	To pove, ali se vedno prika¾e velikost mape. &#268;E se ne, jo boste lahko izra&#269;unali s pomo&#269;jo klika na gumb.
+this text will be appended to the bottom of the users emails for this email account. currently, html tags are not supported. also, forwarded email will not get this email sig appended to it for reasons such as it clutters the email, the forwarded part probably has its own email sig from the original author, which is really the information that matters the most.	email	sl	To besedilo se bo dodalo na konec vsakega sporo&#269;ila, ki ga po¹ljete iz tega ra&#269;una. Trenutno ne podpiramo HTML zna&#269;k. Posredovana sporo&#269;ila tega besedila ne bodo dobila, saj verjetno ¾e imajo svojo signaturo.
+to	email	sl	Na
+to address	email	sl	Na naslov
+total messages	email	sl	Vseh sporo&#269;il
+trash	email	sl	smeti
+trash folder	email	sl	mapa s smetmi
+u-wash mail folder	email	sl	U-Wash po¹tna mapa
+unable to get source folder name	email	sl	Ne morem dobiti imena izvorne mape
+unable to get target folder name	email	sl	Ne morem dobiti imena ciljne mape
+unanswered	email	sl	Neodgovorjen
+undeleted	email	sl	Obnovljen
+undisclosed recipients	email	sl	Prikriti prejemniki
+undisclosed sender	email	sl	Prikriti po¹iljatelj
+unflagged	email	sl	Neutrudljiv?
+unknown action	email	sl	Neznana akcija
+unknown error	email	sl	Neznana napaka
+unknown translation	email	sl	neznan prevod
+unseen	email	sl	Neprebrano
+use custom settings	email	sl	Uporabi lastne nastavitve
+view as html	email	sl	Preglej kot HTML
+view formatted	email	sl	Preglej oblikovano
+view headers	email	sl	Preglej glave
+view unformatted	email	sl	Preglej neoblikovano
+warn_b64_encoded_displayable	email	sl	opozori_b64_nabor_prikazljiv
+warn_style_sheet	email	sl	opotori_stilno_predlogo
+we have recently added this new addressbook so that users can choose to have a more complex addressbook that features a) easy, point and click searching, b) best suited for organizations with large central addressbooks with many categories. you can choose here which addressbook do you prefer.	email	sl	Pred kratkim smo dodali ta nov adresar, tako da lahko uporabniki izberejo zahtevnej¹i adresar, ki omogo&#269;a a) enostavno iskanje z mi¹ko in je b) primeren za ve&#269;je organizacije s centralno vodenim adresarjem z veliko kategorijami. Tu lahko izberete, kak¹en adresar ¾elite.
+we have three sizes that tell us how to better render the addressbook for you: 800x600 (addressbook will popout in a 700 pixel wide box), 1024x768 (it will be a 800 box), 1200x1600 (will be a 900 box). the fonts for all html stuff will be, respectively set to xx-small, x-small and normal (no font setting).	email	sl	Podpiramo tri velikosti, za katere je prilagojen adresar. Adresar bo vedno nekoliko manj¹i, da okna ne zakrije v celoti. Prilagaja se tudi velikost pisave.
+wrote	email	sl	je napisal
+you have %1 new messages!	common	sl	Imate %1 novih sporo&#269;il!
+you have 1 new message!	common	sl	Imate eno novo sporo&#269;ilo!
+you have messages!	common	sl	Imate sporo&#269;ila!
+you have no new messages	common	sl	Nimate novih sporo&#269;il!
+you must click	email	sl	Morate klikniti
+you must click %1 for the file to actually upload	email	sl	Morate klikniti %1, da se datoteka res nalo¾i.
+your full name	common	sl	Va¹e polno ime
+your message has been sent	common	sl	Va¹e sporo&#269;ilo je bilo poslano!
+your server administrator will set the default values for the following options. you may never need to change any of them. if you do need to use settings that are different from the defaults for the options below here, then check this box. default is disabled, not checked. if you fill in some of the options, but later decide to go back to the default values, unchecking this box will erase your custom values and put back the default values. all of the following options start out with the default value, so you may see some settings below even if you have never filled them in. this checkbox only shows up for the default email account. if you are setting up additional email accounts, you will be required to fill in the following options and this checkbox will not be displayed, it will be checked for all extra email accounts.	email	sl	Upravnik va¹ega po¹tnega stre¾nika bo nastavil privzete vrednosti za naslednje nastavitve. Morda nikoli ne boste potrebovali njihovega spreminjanja. &#268;e morate uporabiti nastavitve, ki so razli&#269;ne od privzetih, potem ozna&#269;ite to polje. Privzeta vrednost je onemogo&#269;eno, neozna&#269;eno. &#268;e izpolnite nekaj vrednosti in se kasneje premislite, bo razzna&#269;enje tega polja povzro&#269;ilo izbris va¹ih vrednosti in uporabo privzetih vrednosti. Te so prikazane v spodnjih poljih, tudi &#269;e jih niste nikoli vnseli. Ta mo¾nost se uporablja le pri privzetem ra&#269;unu, pri dodatnih ra&#269;unih pa morate te podatke vedno vnesti.

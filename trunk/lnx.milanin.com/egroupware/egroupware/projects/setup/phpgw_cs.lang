@@ -1,0 +1,35 @@
+% to	projects	cs	% do
+coordinator	common	cs	Koordinátor
+costs	projects	cs	Náklady
+costs list	projects	cs	Seznam nákladù
+costtype	projects	cs	Typ nákladù
+creator	projects	cs	Tvùrce
+customer	common	cs	Zákazník
+date created	projects	cs	Datum vytvoøení
+delete project	projects	cs	smazat projekt
+discount	projects	cs	Sleva
+distance	projects	cs	Vzdálenost
+edit milestone	projects	cs	upravit mezník
+edit milestones	projects	cs	Upravit mezníky
+edit project	projects	cs	Upravit projekt
+employee	projects	cs	Zamìstnanec
+employees	projects	cs	Zamìstnanci
+entry	projects	cs	záznam
+event	projects	cs	Událost
+event %1 has been saved	projects	cs	událost %1 byla ulo¾ena
+events	projects	cs	Události
+from	projects	cs	Od
+from %1 to %2	projects	cs	od %1 do %2
+hours	projects	cs	Hodiny
+last update	projects	cs	Poslední úprava
+position	projects	cs	Pozice
+previous	projects	cs	Pøedchozí projekt
+previous project	projects	cs	Pøedchozí projekt
+project	projects	cs	Projekt
+project administrators	common	cs	Administrátoøi projektù
+project list	projects	cs	Seznam projektù
+project statistic	projects	cs	Statistika projektu
+project url	projects	cs	URL projektu
+projects	common	cs	Projekty
+remark	projects	cs	Poznámka
+result	projects	cs	Výsledek

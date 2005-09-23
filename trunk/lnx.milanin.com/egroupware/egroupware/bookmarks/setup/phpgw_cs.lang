@@ -1,0 +1,71 @@
+%1 bookmarks have been deleted	bookmarks	cs	Smazáno %1 zálo¾ek
+%1 bookmarks imported from %2 successfully.	bookmarks	cs	Úspì¹nì importováno %1 zálo¾ek z %2
+(comma separate multiple addresses)	bookmarks	cs	(èárka oddìluje více adres)
+<b>note:</b> this currently works with netscape bookmarks only	bookmarks	cs	<b>Poznámka:</b>Tato funkce pracuje pouze se zálo¾kami z Netscape
+all bookmarks	bookmarks	cs	V¹echny zálo¾ky
+and	bookmarks	cs	a
+append this message to mailed bookmarks	bookmarks	cs	Pøidat tento text k posílaným zálo¾kám
+ascending	bookmarks	cs	Vzestupnì
+book marks	common	cs	Zálo¾ky
+bookmark changed sucessfully	bookmarks	cs	Zálo¾ma úspì¹nì zmìnìna
+bookmark created successfully.	bookmarks	cs	Zálo¾ka úspì¹nì vytvoøena
+bookmark not editable	bookmarks	cs	Zálo¾ku nelze mìnit
+bookmark not readable	bookmarks	cs	Zálo¾ka neèitelná
+bookmarks	common	cs	Zálo¾ky
+bookmarks settings	bookmarks	cs	Nastavení zálo¾ek
+change bookmark	bookmarks	cs	Zmìnit zálo¾ku
+close this window to return	bookmarks	cs	Pro návrat uzavøete toto okno
+create bookmark	bookmarks	cs	Pøidat zálo¾ku
+create new bookmark	bookmarks	cs	Pøidat novou zálo¾ku
+date added	bookmarks	cs	Datum pøidáno
+date changed	bookmarks	cs	Datum zmìnìno
+date last updated	bookmarks	cs	Naposledy zmìnìna
+date last visited	bookmarks	cs	Naposledy nav¹tívena
+descending	bookmarks	cs	Sestupnì
+edit bookmark	bookmarks	cs	Upravit zálo¾ku
+edit this bookmark	bookmarks	cs	Upravit zálo¾ku
+enter the name of the netscape bookmark file<br>that you want imported into bookmarker below.	bookmarks	cs	Vlo¾te jméno souboru se zálo¾kami<br>které chcete importovat
+export bookmarks	common	cs	Exportovat zálo¾ky
+fewer	bookmarks	cs	Ménì
+filter by	bookmarks	cs	Tøídit podle
+found a link you might like	bookmarks	cs	Odkazy které Vás mohou zajímat
+from	bookmarks	cs	Od
+from category %1	bookmarks	cs	z kategorie %1
+highest	bookmarks	cs	Nejvy¹¹í
+i thought you would be interested in the following link(s):	bookmarks	cs	Myslím ¾e Vás mohou zajímat následující odkazy:
+import bookmarks	common	cs	Importovat zálo¾ky
+like	bookmarks	cs	jako
+list	bookmarks	cs	Seznam
+lowest	bookmarks	cs	Nejni¹¹í
+mail this bookmark	bookmarks	cs	Poslat tuto zálo¾ku
+mail-this-link message sent to %1.	bookmarks	cs	Odkazy pro %1 odeslány.
+mass update:	bookmarks	cs	Hromadné zmìny:
+message from	bookmarks	cs	Zpráva od
+more	bookmarks	cs	Více
+name	bookmarks	cs	Jméno
+name is required	bookmarks	cs	Jméno je povinné
+netscape bookmark file	bookmarks	cs	Soubor se zálo¾kami
+netscape bookmark filename is required!	bookmarks	cs	Jméno souboru je povinné!
+new	bookmarks	cs	Nová
+or	bookmarks	cs	nebo
+please fill out <b>to e-mail address</b>, <b>subject</b>, and <b>message</b>!	bookmarks	cs	Prosím vyplòte <b>Adresu</b>, <b>Jméno</b> a <b>Popis</b>!
+please select the categories to export	bookmarks	cs	Prosím vyberte kategorie k exportování
+query condition	bookmarks	cs	Stav dotazu
+rating	bookmarks	cs	Hodnocení
+search for:	bookmarks	cs	Hledat:
+select the format you would like to export to	bookmarks	cs	Zvolte formát do kterého chcete exportovat
+send bookmark	bookmarks	cs	Poslat zálo¾ku
+sub category	bookmarks	cs	Podkategorie
+to address %1 invalid. format must be <strong>user@domain</strong> and domain must exist!	bookmarks	cs	Adresa %1 je neplatná. Formát adresy je <strong>u¾ivatel@doména</strong> a doména musí existovat!
+to e-mail addresses	bookmarks	cs	Na adresu
+to which category should the imported folder hierarchy be attached	bookmarks	cs	Ke které kategorii se mají importované zálo¾ky pøiøadit
+total visits	bookmarks	cs	Celkem náv¹tìv
+tree view	bookmarks	cs	Stromová struktura
+unable to open temp file %1 for import.	bookmarks	cs	Nemohu importovat soubor %1, nejde otevøít
+url is required.	bookmarks	cs	URL je po¾adováno
+view bookmark	bookmarks	cs	Zobrazit zálo¾ku
+view this bookmark	bookmarks	cs	Zobrazit zálo¾ku
+warning	bookmarks	cs	Varování
+you are viewing this site outside of egroupware	bookmarks	cs	Tuto stránku prohlí¾íte mimo eGroupWare
+you must select a category	bookmarks	cs	Musíte vybrat kategorii
+you need to select a category!	bookmarks	cs	Musíte vybrat kategorii !

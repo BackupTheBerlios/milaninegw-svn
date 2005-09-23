@@ -1,0 +1,35 @@
+compose	messenger	es-ca	Redactar
+compose global message	common	es-ca	Redactar missatge global
+compose message	messenger	es-ca	Redactar missatge
+delete a message.	messenger	es-ca	Esborrar missatge.
+delete selected	messenger	es-ca	Esborrar seleccionats
+forward	messenger	es-ca	Reenviar
+forward a message	messenger	es-ca	Reenviar un missatge
+forward a message to another user.	messenger	es-ca	Reenviar un missatge a un altre usuari.
+forwarded	messenger	es-ca	Reenviat
+from	messenger	es-ca	De
+global message	messenger	es-ca	Missatge Global
+i can't find the username %1 on the system	messenger	es-ca	No es pot trobar l'usuario %1 al sistema
+inbox	messenger	es-ca	Entrada
+message from	messenger	es-ca	Missatge de
+messenger	common	es-ca	Missatgería
+new	messenger	es-ca	Nou
+read a list of messages.	messenger	es-ca	Llegir una llista de missatges
+read a single message.	messenger	es-ca	Llegir un sol missatge.
+read message	messenger	es-ca	Llegir missatge
+replied	messenger	es-ca	Contestat
+reply	messenger	es-ca	Contestar
+reply to a message	messenger	es-ca	Contestar un missatge
+reply to a received message.	messenger	es-ca	Contestar un missatge rebut.
+send	messenger	es-ca	Enviar
+send a global message.	messenger	es-ca	Enviar missatge global.
+send a message to a single recipient.	messenger	es-ca	Enviar un missatge a un sol destinatari.
+send message to	messenger	es-ca	Enviar missatge a
+sorry, %1's account is not currently active	messenger	es-ca	Disculpeu, el compte de %1 no està actiu actualment
+update a message status	messenger	es-ca	Actualitzar l'estat de un missatge
+you didn't enter anything for the message	messenger	es-ca	No heu entrat res al missatge
+you have %1 new message	messenger	es-ca	Teniu 1 missatge nou
+you have %1 new messages	messenger	es-ca	Teniu %1 missatges nous
+you have no messages	messenger	es-ca	No teniu missatges
+you must enter a subject	messenger	es-ca	Heu d'entrar un assumpte
+you must enter the username this message is for	messenger	es-ca	Heu d'entrar el nom d'usuari del destinatari

@@ -1,0 +1,59 @@
+add document to category	wiki	fi	lis‰t‰‰n dokumentti ryhm‰‰n
+added	wiki	fi	Lis‰tty
+admins	wiki	fi	Yll‰pit‰j‰t
+anonymous password	admin	fi	tuntemattoman salasana
+anonymous session type	admin	fi	tuntemattoman istunnon tyyppi
+anonymous username	admin	fi	tuntemattoman k‰ytt‰j‰tunnus
+automatically convert pages with wiki-syntax to richtext (if edited)?	admin	fi	Automaattisesti sivut vaihdetaan wiki-syntaksista RTF-tiedostomuodoksi (jos muokattu)?
+block	wiki	fi	Ryhmitt‰‰
+block / unblock hosts	common	fi	Ryhmitt‰‰/ ei ryhmitt‰‰ is‰nt‰
+blocked ip address ranges	wiki	fi	Ryhmitt‰‰ IP osoitteet
+cancel without saving	wiki	fi	Peruuta ilman tallentamista
+changed	wiki	fi	Muutettu
+columns	wiki	fi	Sarakkeet
+converts the page to richtext	wiki	fi	Muunnetaan sivu
+current version	wiki	fi	K‰ytˆss‰ oleva versio
+deleted	wiki	fi	Poistettu
+deletes this page	wiki	fi	Poistetaan t‰m‰ sivu
+difference between versions	wiki	fi	Erot versioiden v‰lill‰
+differences in	wiki	fi	Eroavaisuudet
+different languages can have different titles	wiki	fi	erilaisilla kielill‰ voi olla erilaisia otsikoita
+document last modified	wiki	fi	Viimeisin muokattu dokumentti
+edit box	wiki	fi	Muokkaa laatikko
+edit this document	wiki	fi	Muokkaa t‰m‰ dokumentti
+edit with preview	admin	fi	Muokkaa esikatselussa
+editing	wiki	fi	Muokataan
+error creating temporary file.	wiki	fi	Virhe luotaessa
+error writing to temporary file.	wiki	fi	Virhe kirjoittaessa
+everyone	wiki	fi	jokainen
+find	wiki	fi	lˆyt‰‰
+history	wiki	fi	Historia
+history lists	wiki	fi	Historia lista
+history of	wiki	fi	historia
+invalid page name.	wiki	fi	Ep‰kelpo sivun nimi
+load	wiki	fi	Ladata
+loads the named page in the given language, all change so far get lost !!!	wiki	fi	ladataan nimetty sivu annetulla kielell‰, kaikki t‰h‰n astiset muutokset menetet‰‰n !!!
+lock / unlock pages	common	fi	lukittu/lukitsematon sivu
+locked	wiki	fi	Lukittu
+please contact the %1administrator%2 for assistance.	wiki	fi	Ota yhteytt‰ %1 yll‰pit‰j‰‰n %2
+preview	wiki	fi	esikatsele
+preview of current version	wiki	fi	esikatsele voimassa olevaa versiota
+readonly	admin	fi	Vain luku
+renames page to the given name and language	wiki	fi	nime‰ uudelleen sivu jolle annoit nimen ja kielen
+rows	wiki	fi	Rivit
+save the changes and exit	wiki	fi	Tallennna muutokset ja poistu
+saves and continues editing	wiki	fi	Tallennetaan ja jatketaan muokkaamista
+site configuration	wiki	fi	Sivun konfiguroiminen
+summary	wiki	fi	Yhteenveto
+summary of change	wiki	fi	Muutosten yhteenveto
+this page can not be edited.	wiki	fi	T‰t‰ sivua ei voida muokata.
+updates the preview	wiki	fi	P‰ivitet‰‰n esikatselua
+users	wiki	fi	k‰ytt‰j‰t
+view document history	wiki	fi	katsele dokumentin historiaa
+warning: since you started editing, this document has been changed by someone else.  please merge your edits into the current version of this document.	wiki	fi	Varoitus: sen j‰lkeen kun sin‰ aloitit muokkauksen, t‰t‰ dokumenttia on muuttanut joku toinen. Tee muutokset t‰m‰n dokumentin viimeiseen  versioon.
+wiki menu	wiki	fi	wiki valikko
+yes always	admin	fi	Kyll‰ aina
+you have been denied access to this site.	wiki	fi	Sinulta on kielletty p‰‰sy t‰lle sivulle.
+you have entered an invalid user name.	wiki	fi	Olet kirjoittanut ep‰kelvon k‰ytt‰j‰tunnuksen.
+your changes	wiki	fi	sinun muutokset
+your user name is "%1".	wiki	fi	Sinun k‰ytt‰j‰tunnus on %1.

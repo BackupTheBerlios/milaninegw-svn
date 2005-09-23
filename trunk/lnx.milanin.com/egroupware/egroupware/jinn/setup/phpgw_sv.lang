@@ -1,0 +1,280 @@
+%1 has a one-to-many with %2 showing %3	jinn	sv	%1 har en-till-många med %2 visar %3
+%1 has a one-to-one relation with %2 using the configuration of object %3	jinn	sv	%1 har en-till-en relation med %2 genom konfiguration för objekt %3
+%1 site objects have been imported.	jinn	sv	%1 site objekt importerade
+access rights	jinn	sv	Åtkomst rättigheter
+access rights for site not succesfully editted	jinn	sv	Åtkomst rättigheter kunde inte sparas
+access rights for site succesfully editted	jinn	sv	Åtkomst rättigheter sparade
+access rights for site-object not succesfully editted	jinn	sv	Åtkomst rättigheter kunde inte ändras
+access rights for site-object succesfully editted	jinn	sv	Åtkomst rättigheter ändrade
+access rights site-objects	jinn	sv	Åtkomst rättigheter site objekt
+access_rights	jinn	sv	Åtkomst rättigheter
+action was not succesful. unknown error	jinn	sv	Åtgärden misslyckade pga okänt fel
+action was succesful.	jinn	sv	Åtgärd lyckades
+actions	jinn	sv	Åtgärder
+activate experimental features which are in development	jinn	sv	Aktivera experimentella (under utveckling) funktioner
+add	jinn	sv	Lägg till
+add %1st image	jinn	sv	Lägg till %1 bilder
+add attachent	jinn	sv	Bifoga bilaga
+add attachment	jinn	sv	Bifoga bilaga
+add attachment %1	jinn	sv	Bifoga bilaga %1
+add edit	jinn	sv	Lägg till redigera
+add image	jinn	sv	Lägg till bild
+add image %1	jinn	sv	Lägg till bild %1
+add new	jinn	sv	Lägg till ny
+add new entry	jinn	sv	Lägg till ny post
+add new many to many relation	jinn	sv	Lägg till ny många-till-många relation
+add new many with many relation	jinn	sv	Lägg till ny många-med-många relation
+add new one to many	jinn	sv	Lägg till ny en-till-många
+add new one with many	jinn	sv	Lägg till ny en-med-många
+add new one-to-one relation	jinn	sv	Lägg till ny en-till-en relation
+add object	jinn	sv	Lägg till objekt
+add or remove	jinn	sv	Lägg till eller radera
+add phpgw_jinn_sites	jinn	sv	Lägg till phpgw_jinn_sites
+add site	jinn	sv	Lägg till site
+add site object	jinn	sv	Lägg till site objekt
+add site-object	jinn	sv	Lägg till site objekt
+admin:: edit site	jinn	sv	admin:: redigera site
+administrator mode	jinn	sv	Administratörs läge
+administrators for site $site_name	jinn	sv	Administratörer för site $site_name
+advanced configuration	jinn	sv	Avancerade alternativ
+all from	jinn	sv	Alla från
+an error occured.	jinn	sv	Ett fel inträffade
+another	jinn	sv	Annan
+are you sure?	jinn	sv	Är du säker?
+ascending	jinn	sv	Stigande
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	sv	Katalog för bilagor exiterar inte, är inte korrekt eller kan inte skapas <br>Kontrollera objektens uppladnings katalog:
+automatic	jinn	sv	Automatiskt
+automaticly add objects for all tables	jinn	sv	Lägg till objekt för alla tabeller automatiskt
+automaticly incrementing	jinn	sv	Öka automatiskt
+available for field types	jinn	sv	Tillgänglig för fält typer
+back to record list	jinn	sv	Tillbaks till post listan
+binary	jinn	sv	Binärt
+browse	jinn	sv	Utforska
+browse current object	jinn	sv	Utforska aktuella objekt
+browse sites	jinn	sv	Utforska siter
+browse through object settings	admin	sv	Utforska objekt inställningar
+browse through sites	jinn	sv	Utforska siter
+browses through sites	admin	sv	Utforskar siter
+c_all	jinn	sv	c_all
+c_none	jinn	sv	c_none
+cancel	jinn	sv	Avbryt
+category	jinn	sv	Kategori
+check:	jinn	sv	Kontrollera:
+choose	jinn	sv	Välj
+close this window	jinn	sv	Stäng fönster
+column name	jinn	sv	Kolumn namn
+come back after new valid tablename is saved to configure plugins	jinn	sv	Återvänd när tabellnamn sparats för att konfigurera plugin
+come back in edit mode for configuring plugins	jinn	sv	Återvänd i redigerings läge för att konfigurera plugin
+come back in edit mode to configure plugins	jinn	sv	Återvänd i redigerings läge för att konfigurera plugin
+configure	jinn	sv	Alternativ
+configure browse view	jinn	sv	Konfigurera utforskar vy
+configure field plugin	jinn	sv	Konfigurera fält plugin
+configure this object list view	jinn	sv	Konfigurera objekt list vy
+configure this tableview	jinn	sv	Konfigurera tabell vy
+configure this view	jinn	sv	Konfigurera vy
+configure view of	jinn	sv	Konfigurera vy för
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	sv	Sökväg till convert från ImageMagick (ex. /usr/X11R6/bin/convert)
+copy	jinn	sv	Kopiera
+could not find any tables! check your database name, database username or database password or create one or more  tables in the database.	jinn	sv	Kunde inte hitta tabeller! Kontrollera databas namn, databas användare och databas lösenord.
+create a new site now	jinn	sv	Skapa ny site
+current color:	jinn	sv	Aktuell färg:
+database connection failed! <p>please recheck your settings.	jinn	sv	Databas kopplingen fungerar inte <p>Kontrollera inställningarna
+database connection was succesfull. <p>you can go on with the site-objects	jinn	sv	Databas kopplingen fungerar <p> Du kan gå vidare med site objekt
+days	jinn	sv	Dagar
+default	jinn	sv	Standard
+default image type (jpg, gif, png)	admin	sv	Standard bild typ (jpg, gif, png)
+default image width	admin	sv	Standard bild storlek
+default order	jinn	sv	Standard ordning
+default thumb width	admin	sv	Standard miniatyr storlek
+default:	jinn	sv	Standard:
+delete	jinn	sv	Radera
+descending	jinn	sv	Fallande
+descrition	jinn	sv	Beskrivning
+developer links	jinn	sv	Utvecklar länkar
+development	admin	sv	Utveckling
+development server	jinn	sv	Utvecklings server
+dimensions	jinn	sv	Dimensioner
+disable the wysiwyg/htmlarea plugin	jinn	sv	Inaktivera WYSIWYG/HTMLArea Plugin
+edit	jinn	sv	Redigera
+edit jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li><br><li>define field relations</li><li>configure fieldplugins</li>	jinn	sv	Redigera JiNN site objekt parametrar: <li>Välj JiNN objekt namn att visa</li> <li>Välj databas tabell att använda med objektet</li> <li>Om nödvändigt en alternativ korrekt absolut sökväg till uppladdning</li> <li>Om nödvändigt en motsvarande URL för att förhandsvisa upladdade objekt</li><br><li>Definiera fält relationer</li><li>Konfigurera fältplugins</li>
+edit object	jinn	sv	Rediger objekt
+edit site	jinn	sv	Redigera site
+edit this record	jinn	sv	Redigera post
+edit this site	jinn	sv	Redigera siten
+edit this site object	jinn	sv	Redigera site objekt
+editors for object $object_name in site $site_name	jinn	sv	Editor för objekt $object_name i site $site_name
+error path_open %1	jinn	sv	Fel path_open %1
+error: the file %1 doesn't exists, please contact the webmaster	jinn	sv	Fel: fil %1 existerar inte, kontakta administratör
+export this site	jinn	sv	Exportera siten
+failed to copy: %1 to %2 ...	jinn	sv	Kunde inte kopiera %1 till %2
+failed to open table. please check if table <i>%1</i> still exists in database	jinn	sv	Kunde inte öppna tabellen. Kontrollera om den finns i databasen
+field	jinn	sv	Fält
+field configuration	jinn	sv	Fält alternativ
+field plugin	jinn	sv	Fält plugin
+field plugin configuration	jinn	sv	Fält plugin alternativ
+field plugins	jinn	sv	Fält plugin
+field to display	jinn	sv	Visa fält
+fields	jinn	sv	Fält
+filename	jinn	sv	Filnamn
+filesize	jinn	sv	Filstorlek
+form input plugin	jinn	sv	Formulär indata plugin
+general preferences	jinn	sv	Allmänna alternativ
+general settings	admin	sv	Allmänna alternativ
+give new timestamp	jinn	sv	Ge ny tidstämpel
+global configuration	jinn	sv	Globala alternativ
+global site configuration	admin	sv	Globala site alternativ
+go	jinn	sv	Gå
+has a many to many relation with	jinn	sv	har många-till-många relation med
+has a one to many relation with	jinn	sv	har en-till-många relation med
+has a one-to-one relation with	jinn	sv	har en-till-en relation med
+height:	jinn	sv	Höjd:
+hidden	jinn	sv	Gömd
+image directory does not exist or is not correct ...<br>please check object's upload dir	jinn	sv	Katalog för bilder exiterar inte, är inte korrekt eller kan inte skapas <br>Kontrollera objektens uppladnings katalog:
+image settings	admin	sv	Bild alternativ
+imagemagick directory ( e.g. /usr/x11r6/bin )	admin	sv	ImageMagick katalog (ex. /usr/X11R6/bin)
+import failed	jinn	sv	import misslyckades
+import jinn site	jinn	sv	Importera JiNN Site
+import jinn-site	jinn	sv	Importera JiNN Site
+import site	jinn	sv	Importera site
+import was succesfull	jinn	sv	Import lyckades
+import was succesfull<br>imported one site with	jinn	sv	Import lyckades<br>Importerade en site med
+index	jinn	sv	Index
+insert another record after saving	jinn	sv	Spara och lägg till ny post
+insert jinn site parameters: <li>insert a jinn site name for display</li> <li>insert correct database settings</li> <li>insert a correct absolute upload path</li><li>insert a corresponding preview url for uploaded elements</li>	jinn	sv	Redigera JiNN site inställningar: <li>Ange JiNN site namn</li> <li>Ange databas inställningar</li> <li>Ange absolut uppladdnings sökväg</li> <li>Ange motsvarande URL för förhandsvisning av objekt</li>
+insert/select jinn site object parameters: <li>select a jinn object name for display</li> <li>select a database table to use with this object</li> <li>if necessary an alternative correct absolute upload path</li><li>if necessary a corresponding alternative preview url for uploaded elements</li>	jinn	sv	Redigera JiNN site objekt parametrar: <li>Välj JiNN objekt namn att visa</li> <li>Välj databas tabell att använda med objektet</li> <li>Om nödvändigt en alternativ korrekt absolut sökväg till uppladdning</li> <li>Om nödvändigt en motsvarande URL för att förhandsvisa upladdade objekt</li>
+jinn	common	sv	JiNN
+jinn editors menu	jinn	sv	JiNN Editor Meny
+jinn main menu	jinn	sv	JiNN Huvudmeny
+jinn preferences	jinn	sv	JiNN Alternativ
+list sites	jinn	sv	Lista siter
+many 2 many relations will not work	jinn	sv	Många-till-många relation fungerar inte
+max. number of previews in form	jinn	sv	Max. nummer av förhandsgranskningar i formulär
+maximum image width isn	jinn	sv	maximum image width isn
+maximum image width isn\	jinn	sv	maximum image width isn
+moderator mode	jinn	sv	Moderator Läge
+months	jinn	sv	Månader
+months_abbr	jinn	sv	months_abbr
+move down	jinn	sv	Flytta ner
+move to last position	jinn	sv	Flytta nederst
+move up	jinn	sv	Flytta upp
+moved record one row down.	jinn	sv	Flyttade en rad ner
+moved record one row up.	jinn	sv	Flyttade en rad upp
+moved record to last row.	jinn	sv	Flyttade nederst
+new image size limits.	jinn	sv	Nya bildstorlek begränsningar
+no matchs found	jinn	sv	Inga träffar
+no max. number	jinn	sv	Inget max nummer
+no object selected. no able to configure this view	jinn	sv	Inget objekt valt. Kan inte konfigurera vy
+no objects found for this site.	jinn	sv	Inga objekt funna för siten
+no records found	jinn	sv	Inga träffar
+normal view	jinn	sv	Normal vy
+not yet implemented	jinn	sv	Inte ännu implementerad
+notice that jinn needs imagemagick 5.4.9 or a later version	admin	sv	Observera att JiNN behöver ImageMagick 5.4.9 eller senare
+only activate this if you know what your doing. you can destroy your data using experimental features.	jinn	sv	Aktivera detta endast om du vet vad du gör. Du kan förstöra din data med experimentella funktioner.
+only if thumnails exits	jinn	sv	Bara om bildminiatyrer finns
+only one	jinn	sv	Bara en
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	sv	Sökväg till convert från ImageMagick (ex. /usr/X11R6/bin/convert)
+please contact administrator with this message	jinn	sv	Var god och kontakta administratör med detta meddelande
+please contact administrator with this message.	jinn	sv	Var god och kontakta administratör med detta meddelande
+please set your preferences for this application	jinn	sv	Gör inställningar för applikationen
+preview thumbs or images in form	jinn	sv	Förhandsgranska miniatyrer eller bilder i formuläret
+preview website	jinn	sv	Förhandsgranska webbsite
+production	admin	sv	Produktion
+real value	jinn	sv	Riktigt värde
+record	jinn	sv	Post
+record added succesfully	jinn	sv	Post tillagd
+record deleted succesfully	jinn	sv	Post raderad
+record not succesfully copied. unknown error	jinn	sv	Post kopierades INTE pga okänt fel
+record not succesfully deleted. unknown error	jinn	sv	Post raderades INTE pga okänt fel
+record succesfully copied	jinn	sv	Post kopierad
+record succesfully deleted	jinn	sv	Post raderad
+record succesfully editted	jinn	sv	Post redigerad
+registered field plugins	jinn	sv	Registrerad plugin fält
+related	jinn	sv	Relaterad
+related entries from table %1	jinn	sv	Relaterad post från tabell %1
+relation %1	jinn	sv	Relation %1
+relations	jinn	sv	Relationer
+relations for this object	jinn	sv	Relationer för objektet
+remote	admin	sv	Fjärr
+remove	jinn	sv	Radera
+replace existing site with the same name?	jinn	sv	Ersätt existerande site med samma namn?
+replaced existing site named <strong>%1</strong>.	jinn	sv	Ersatte existerande site vid namn <strong>%1</strong>.
+represented by:	jinn	sv	Representerad av:
+reset form	jinn	sv	Återställ formuläret
+save	jinn	sv	Spara
+save and continue	jinn	sv	Spara och fortsätt
+save and contiue	jinn	sv	Spara och fortsätt
+save and finish	jinn	sv	Spara och avsluta
+search	jinn	sv	Sök
+search for string	jinn	sv	Söksträng
+select directory	jinn	sv	Välj katalog
+select jinn site file	jinn	sv	Välj JiNN site fil
+select site	jinn	sv	Välj site
+select site to moderate	jinn	sv	Välj site att moderera
+select site-object to moderate	jinn	sv	Välj site objekt att moderera
+select which graphic library jinn must use	admin	sv	Välj grafisk lib JiNN  ska använda
+select_object	jinn	sv	Välj objekt
+server type?	admin	sv	Server typ
+set access right for site objects	jinn	sv	Sätt åtkomst rättigheter för site objekten
+set access rights	admin	sv	Sätt åtkomst rättigheter
+set access rights for sites	jinn	sv	Sätt åtkomst rättigheter för siter
+set administrators for	jinn	sv	Ange administratörer för
+set administrators for %1	jinn	sv	Ange administratörer för %1
+set object moderator	jinn	sv	Ange objekt moderator
+set site admin	jinn	sv	Ange site namn
+show	jinn	sv	Visa
+show all columns	jinn	sv	Visa alla kolumner
+show colomn	jinn	sv	Visa kolumn
+show extra table debugging information	jinn	sv	Visa extra tabell debug info
+show upload path	admin	sv	Visa uppladdnings sökväg
+showing	jinn	sv	Visar
+site beheerders	jinn	sv	Site administratörer
+site db host	admin	sv	Site databas host
+site db name	admin	sv	Site databas namn
+site db password	admin	sv	Site databas lösenord
+site db type	admin	sv	Site databas typ
+site db user	admin	sv	Site databas användare
+site description	admin	sv	Site beskrivning
+site id	admin	sv	Site ID
+site media and documents	jinn	sv	Site media och dokument
+site name	admin	sv	Site namn
+site not succesfully added, unknown error	jinn	sv	Site skapades INTE pga okänt fel
+site not succesfully deleted, unknown error	jinn	sv	Site raderades INTE pga okänt fel
+site not succesfully saved, unknown error	jinn	sv	Site sparades INTE pga okänt fel
+site object not succesfully added, unknown error	jinn	sv	Site Object skapades INTE pga okänt fel
+site object not succesfully deleted, unknown error	jinn	sv	Site Object raderades INTE pga okänt fel
+site object not succesfully saved, unknown error	jinn	sv	Site Object sparades INTE pga okänt fel
+site object succesfully added	jinn	sv	Site Object skapad
+site object succesfully deleted	jinn	sv	Site Object raderad
+site object succesfully saved	jinn	sv	Site Object sparad
+site succesfully added	jinn	sv	Site skapad
+site succesfully deleted	jinn	sv	Site raderad
+site succesfully saved	jinn	sv	Site sparad
+site title	admin	sv	Site titel
+site-objects	jinn	sv	Site objekt
+sites	jinn	sv	Siter
+start	admin	sv	Start
+start at record	jinn	sv	Börja med post
+stop at record	jinn	sv	Sluta med post
+submit and import	jinn	sv	Spara och importera
+t/m	jinn	sv	t/m
+tablename <i>%1</i> is not correct. probably the tablename has changed or or the table is deleted. please select a new table or delete this object	jinn	sv	Tabellnamn <i>%1</i> är ogiltigt. Ange annan tabell eller radera objektet.
+test database access	jinn	sv	Testa databas åtkomst
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn.	jinn	sv	Uppladdad bildfil %1 är inte giltig, korrupt eller av JiNN supporterad filtyp
+the file you uploaded named %1 is not an imagefile, is corrupt, or the filetype is not supported by jinn. if this error repeates, please check your imagemagick installation.  older version of imagemagick are known not work properly with jinn. be sure to install at least version 5.4.9 or higher	jinn	sv	Uppladdad bildfil %1 är inte giltig, korrupt eller av JiNN supporterad filtyp. Om felet kvarstår kontrollera din ImageMagick installation. Äldre versioner av ImageMagick är kända att inte fungera fullt ut med JiNN (kräver version 5.4.9 eller senare)
+the max. file upload size is %1 mb.	jinn	sv	Max uppladdad filstorlek är %1 mb.
+the name of the new site is <strong>%1</strong>.	jinn	sv	Namnet på den nya siten är <strong>%1</strong>.
+the resize process failed, please contact the administrator	jinn	sv	Kunde inte ändra storlek. Kontrakta administratör.
+there are no directories in this site you have access to.	jinn	sv	Du har inte åtkomst rättighet till någon katalog i siten.
+thisfile	jinn	sv	thisfile
+thumb directory does not exist or is not correct ...	jinn	sv	Bildminiatyr katalog existerar inte eller är ogiltig
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	sv	Bildminiatyr katalog existerar inte eller är ogiltig <br> Kontrollera objektens uppladdnings katalog.
+thumbnail	jinn	sv	Bildminiatyrer
+unlimited	jinn	sv	Obegränsad
+using object configuration	jinn	sv	Använda objekt alternativ
+version	jinn	sv	Version
+when a lot of images are attached to a record, the form can load very slow. you can set a maximum number of images that is show in the form.	jinn	sv	När många bilder kopplats till en post kan det ta lång tid att ladda formuläret. Du kan sätta ett max antal bilder som visas.
+when this is enables information like field length and field type is shown when editing record	jinn	sv	Om detta aktiveras visas information som fältlängd och fält typ när post redigeras
+when you choose 'never', only links to the images are displayed; when you choose 'only if thumnails exists' previews are  shown if an thumbnail of the image exists; if you choose 'yes' all images are shown	jinn	sv	När du väljer 'Aldrig' visas bara länkar till bilder. Om du väljer 'Bara om bildminiatyrer finns' visas dessa om bilden finns. Om du väljer 'Ja' visas alla bilder.
+width:	jinn	sv	Bredd:
+with_checked_files	jinn	sv	with_checked_files
+you're not allowed to administrate media files	jinn	sv	Du saknar rättighet att administrera media filer

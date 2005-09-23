@@ -1,0 +1,161 @@
+%1 site objects have been imported.	jinn	pt-br	%1 Objetos do Site foram importados.
+access rights	jinn	pt-br	Direitos de Acesso
+access rights for site not succesfully editted	jinn	pt-br	Direitos de Acesso para o site NÃO foram editados com sucesso
+access rights for site succesfully editted	jinn	pt-br	Direitos de Acesso para o site editados com sucesso
+access rights for site-object not succesfully editted	jinn	pt-br	Direitos de Acesso para objeto do site NÃO foram editados com sucesso
+access rights for site-object succesfully editted	jinn	pt-br	Direitos de Acesso para objeto do site editados com sucesso
+access rights site-objects	jinn	pt-br	Direitos de Acesso para objeto do site
+access_rights	jinn	pt-br	direitos_acesso
+add	jinn	pt-br	adicionar
+add %1st image	jinn	pt-br	adicionar imagem %1
+add attachent	jinn	pt-br	adicionar anexo
+add attachment	jinn	pt-br	adicionar anexo
+add attachment %1	jinn	pt-br	adicionar anexo %1
+add edit	jinn	pt-br	Adicionar / Editar
+add image	jinn	pt-br	adicionar imagem
+add image %1	jinn	pt-br	adicionar imagem %1
+add new	jinn	pt-br	Adicionar nova
+add new entry	jinn	pt-br	Adicionar nova entrada
+add new many with many relation	jinn	pt-br	Adicionar nova relação MUITOS com MUITOS
+add new one with many	jinn	pt-br	Adicionar nova relação UM para MUITOS
+add object	jinn	pt-br	adicionar objeto
+add or remove	jinn	pt-br	adicionar ou remover
+add site	jinn	pt-br	Adicionar Site
+add site object	jinn	pt-br	adicionar objeto do site
+add site-object	jinn	pt-br	adicionar objeto do site
+admin:: edit site	jinn	pt-br	admin:: editar site
+administrator mode	jinn	pt-br	Modo Administrador
+administrators for site $site_name	jinn	pt-br	administradores para site $site_name
+all from	jinn	pt-br	todos de
+another	jinn	pt-br	outro(a)
+are you sure?	jinn	pt-br	Você tem certeza?
+attachment directory does not exist or is not correct, nor can it be created...<br>please check object's upload dir:	jinn	pt-br	diretório de anexos não existe ou não está correto, nem pode ser criado... <br> por favor verifique dir upload do objeto:
+automatic	jinn	pt-br	automático
+binary	jinn	pt-br	binário
+browse	jinn	pt-br	Navegar
+browse current object	jinn	pt-br	Navegar objeto atual
+browse sites	jinn	pt-br	Navegar em sites
+browse through object settings	admin	pt-br	Navegar pelas configurações do objeto
+browse through sites	jinn	pt-br	Navegar pelos sites
+browses through sites	admin	pt-br	Navega pelos sites
+c_all	jinn	pt-br	c_all
+c_none	jinn	pt-br	c_none
+cancel	jinn	pt-br	Cancelar
+category	jinn	pt-br	Categoria
+check:	jinn	pt-br	verificar:
+choose	jinn	pt-br	escolher
+close this window	jinn	pt-br	fechar esta janela
+column name	jinn	pt-br	nome da coluna
+configure	jinn	pt-br	configurar
+configure browse view	jinn	pt-br	configurar visão do navegador
+configure this object list view	jinn	pt-br	Configurar esta Visão da Lista de Objetos
+configure this tableview	jinn	pt-br	Configurar esta visão
+configure this view	jinn	pt-br	Configurar esta Visão
+configure view of	jinn	pt-br	Configurar visão de
+convert exec ( e.g. /usr/x11r6/bin/convert )	admin	pt-br	caminho para Converter do ImageMagick (ex: /usr/X11R6/bin/convert)
+copy	jinn	pt-br	copiar
+database connection failed! <p>please recheck your settings.	jinn	pt-br	Conexão com banco de dados falhou! <P>Por favor verifique novamente suas configurações.
+database connection was succesfull. <p>you can go on with the site-objects	jinn	pt-br	Conexão com banco de daos realizada com sucesso! <P>Prossiga com os objetos do site
+days	jinn	pt-br	dias
+default image type (jpg, gif, png)	admin	pt-br	Tipo de imagem padrão (jpg, gif, png)
+default image width	admin	pt-br	Tamanho padrão da imagem
+default order	jinn	pt-br	ordem padrão
+default thumb width	admin	pt-br	Tamanho padrão de cursor da rolagem
+default:	jinn	pt-br	padrão:
+delete	jinn	pt-br	Excluir
+developer links	jinn	pt-br	Links para Desenvolvedor
+development	admin	pt-br	Desenvolvedor
+development server	jinn	pt-br	Servidor Desenvolvedor
+dimensions	jinn	pt-br	dimensões
+edit	jinn	pt-br	editar
+edit this site	jinn	pt-br	Editar este Objeto
+edit this site object	jinn	pt-br	Editar este Objeto do Site
+editors for object $object_name in site $site_name	jinn	pt-br	editores para objeto $object_name no site $site_name
+error path_open %1	jinn	pt-br	erro abrir caminho %1
+export this site	jinn	pt-br	exportar arquivo
+fields	jinn	pt-br	campos
+filename	jinn	pt-br	nome do arquivo
+filesize	jinn	pt-br	tamanho
+form input plugin	jinn	pt-br	plugin de importar formulário
+general preferences	jinn	pt-br	Preferências Globais
+general settings	admin	pt-br	Configurações Globais
+global configuration	jinn	pt-br	Configuração Global
+global site configuration	admin	pt-br	Configuração Global do site
+go	jinn	pt-br	ir
+height:	jinn	pt-br	Altura:
+hidden	jinn	pt-br	escondido
+image settings	admin	pt-br	Configurações da imagem
+import failed	jinn	pt-br	importação falhou
+import jinn site	jinn	pt-br	Importar Site JiNN
+import jinn-site	jinn	pt-br	Importar Site JiNN
+import site	jinn	pt-br	importar site
+import was succesfull	jinn	pt-br	Importação feita com suceso
+import was succesfull<br>imported one site with	jinn	pt-br	Importação feita com suceso<br>Importado site com
+index	jinn	pt-br	índice
+insert another record after saving	jinn	pt-br	inserir outro registro após salvar
+jinn	common	pt-br	JiNN
+jinn editors menu	jinn	pt-br	Menu de Editor do JiNN
+jinn preferences	jinn	pt-br	Preferências do JiNN
+max. number of previews in form	jinn	pt-br	Núm. máximo de previews no formulário
+moderator mode	jinn	pt-br	Modo Moderador
+months	jinn	pt-br	meses
+months_abbr	jinn	pt-br	meses_abr
+new image size limits.	jinn	pt-br	Novos limites de tamanho da imagem
+path to convert from imagemagick ( e.g. /usr/x11r6/bin )	admin	pt-br	Caminho para Converter do ImageMagick (ex: /usr/X11R6/bin/convert)
+production	admin	pt-br	Produção
+remote	admin	pt-br	Remoto
+save	jinn	pt-br	salvar
+search	jinn	pt-br	Buscar
+search for string	jinn	pt-br	pesquisar por palavra
+select directory	jinn	pt-br	selecionar diretório
+select jinn site file	jinn	pt-br	Selecionar arquivo de site JiNN
+select site	jinn	pt-br	selecionar site
+select site to moderate	jinn	pt-br	Selecionar site para moderar
+select site-object to moderate	jinn	pt-br	Selecionar objeto do site para moderar
+select_object	jinn	pt-br	Selecionar objeto
+server type?	admin	pt-br	Tipo do Servidor?
+set access right for site objects	jinn	pt-br	Definir direitos de acesso para objetos do site
+set access rights	admin	pt-br	Definir direitos de acesso
+set access rights for sites	jinn	pt-br	Definir direitos de acesso para os sites
+set administrators for	jinn	pt-br	Definir administradores para
+set object moderator	jinn	pt-br	definir moderador dos objetos
+set site admin	jinn	pt-br	definir admin do site
+show	jinn	pt-br	mostrar
+show all columns	jinn	pt-br	Mostrar todas colunas
+show colomn	jinn	pt-br	Mostrar coluna
+show upload path	admin	pt-br	Mostrar caminho de upload
+site beheerders	jinn	pt-br	Administradores do site
+site db host	admin	pt-br	Hospedeiro do banco de dados
+site db name	admin	pt-br	Nome do banco de dados
+site db password	admin	pt-br	Senha do banco de dados
+site db type	admin	pt-br	Tipo do banco de dados
+site db user	admin	pt-br	Usuário do banco de dados
+site description	admin	pt-br	Descrição do site
+site id	admin	pt-br	id do site
+site name	admin	pt-br	Nome do site
+site not succesfully added, unknown error	jinn	pt-br	Site NÃO adicionado com sucesso, erro desconhecido
+site not succesfully deleted, unknown error	jinn	pt-br	Site NÃO excluído com sucesso, erro desconhecido
+site not succesfully saved, unknown error	jinn	pt-br	Site NÃO foi salvo com sucesso, erro desconhecido
+site object not succesfully added, unknown error	jinn	pt-br	Objeto NÃO adicionado com sucesso, erro desconhecido
+site object not succesfully deleted, unknown error	jinn	pt-br	Objeto NÃO excluído com sucesso, erro desconhecido
+site object not succesfully saved, unknown error	jinn	pt-br	Objeto NÃO excluído com sucesso, erro desconhecido
+site object succesfully added	jinn	pt-br	Objeto adicionado com sucesso
+site object succesfully deleted	jinn	pt-br	Objeto excluído com sucesso
+site object succesfully saved	jinn	pt-br	Objeto salvo com sucesso
+site succesfully added	jinn	pt-br	Site adicionado com sucesso
+site succesfully deleted	jinn	pt-br	Site excluído com sucesso
+site succesfully saved	jinn	pt-br	Site salvo com sucesso
+site title	admin	pt-br	Título do site
+site-objects	jinn	pt-br	Objetos do site
+sites	jinn	pt-br	Sites
+start	admin	pt-br	Iniciar
+submit and import	jinn	pt-br	submeter e importar
+the name of the new site is <strong>%1</strong>.	jinn	pt-br	O nome do novo site é <strong>%1</strong>.
+the resize process failed, please contact the administrator	jinn	pt-br	redimensionamento falho, por favor contate o administrador
+there are no directories in this site you have access to.	jinn	pt-br	Não há diretórios neste site
+thisfile	jinn	pt-br	estearquivo
+thumb directory does not exist or is not correct ...<br>please check object's upload dir	jinn	pt-br	diretório de cursores não existe ou não está correto.... <br>por favor verifique o dir de upload do objeto
+thumbnail	jinn	pt-br	foto minimizada
+version	jinn	pt-br	versão
+width:	jinn	pt-br	Tamanho:
+you're not allowed to administrate media files	jinn	pt-br	Você não possui autorização para administrar arquivos de mídia

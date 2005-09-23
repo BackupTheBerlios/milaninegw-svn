@@ -1,0 +1,171 @@
+a new ticket has been reported.	tts	de	Ein neues Ticket wurde gemeldet.
+accept	tts	de	ANNEHMEN
+accept the ticket into verification process.	tts	de	Ticket zu dem Verifizierungsprozess annehmen.
+accepted	tts	de	ANGENOMMEN
+action	tts	de	Aktion
+add new ticket	tts	de	Neues Ticket hinzufügen
+add ticket	tts	de	Ticket hinzufügen
+additional notes	tts	de	Zusätzliche Anmerkungen
+admin options	common	de	Administratoroptionen
+assign to	tts	de	Zuweisen an
+assigned from	tts	de	Zugewiesen von
+assigned to	tts	de	Zugewiesen an
+billable hours	tts	de	Abrechenbare Stunden
+billable hours changed	tts	de	Abrechenbare Stunden geändert
+billable hours rate	tts	de	Satz für abrechenbare Stunden
+billable rate	tts	de	abrechenbarer Satz
+billable rate changed	tts	de	abrechenbarer Satz geändert
+category changed	tts	de	Kategorie geändert
+check here to generate the state's id automatically or enter a particular id below.	tts	de	Hier abhacken um die Status ID automatisch zu generieren oder eine ID darunter manuell eingeben.
+check here to generate the state\'s id automatically or enter a particular id below.	tts	de	Hier abhacken um die Status ID automatisch zu generieren oder eine ID darunter manuell eingeben.
+check here to generate the state\\\'s id automatically or enter a particular id below.	tts	de	Hier abhacken um die Status ID automatisch zu generieren oder eine ID darunter manuell eingeben.
+clear form	tts	de	Formular löschen
+close	tts	de	Schließen
+close date	tts	de	Geschlossen am
+close the invalid ticket.	tts	de	Ungültiges Ticket schließen.
+closed	tts	de	Geschlossen
+completed	tts	de	ABGESCHLOSSEN
+configure the states	common	de	Stati konfigurieren
+configure the transitions	common	de	Übergänge konfigurieren
+create new state	tts	de	Neuen Status anlegen
+create new ticket	tts	de	Neues Ticket anlegen
+create new transition	tts	de	Neuen Übergang anlegen
+creates a new ticket, returns ticket_id	tts	de	Legt ein neues Ticket an und liefert die ticket_id zurück
+creates a struct of tickets	tts	de	Legt einen Satz von Tickets an
+date opened	tts	de	Angelegt am
+default assign to	tts	de	Vorgabewert zugewiesen an
+default group	tts	de	Vorgabewert Gruppe
+default priority	tts	de	Vorgabewert Priorität
+delete the listed tickets.	tts	de	Aufgelistet Tickets löschen.
+deleting the state	tts	de	Status löschen
+deleting the transition	tts	de	Übergang löschen
+detail	tts	de	Detail
+details	tts	de	Details
+duplicate	tts	de	DOPPELT
+edit the state	tts	de	Status bearbeiten
+edit the transition	tts	de	Übergang bearbeiten
+error: the subject of the ticket is not specified.	tts	de	Fehler: Der Betreff des Tickets ist nicht spezifiziert
+force	tts	de	erzwungen
+global categories	tts	de	Globale Kategorien
+group ownership changed	tts	de	Gruppen-Eigentümer geändert
+history	tts	de	Historie
+i worked on the ticket and the work requires validation.	tts	de	Ich habe an dem Ticket gearbeitet und die Arbeit verlangt eine Überprüfung.
+i worked on the ticket, but did not finish.	tts	de	Ich habe habe an dem Ticket gearbeitet, habe es aber nicht beendet.
+in progress	tts	de	in Bearbeitung
+initial state	tts	de	Ursprünglicher Status
+invalid	tts	de	UNGÜLTIG
+invalidate	tts	de	VERWERFEN
+keep the present state [%1].	tts	de	Aktuellen Status beibehalten [%1].
+latest note added	tts	de	Letzte zugefügte Notiz
+list of available tickets' states.	tts	de	Liste der verfügbaren Ticket Stati.
+list of available tickets' transitions.	tts	de	Liste der verfügbaren Ticket Übergänge.
+list of available tickets\' states.	tts	de	Liste der verfügbaren Ticket Stati.
+list of available tickets\' transitions.	tts	de	Liste der verfügbaren Ticket Übergänge.
+list of available tickets\\\' states.	tts	de	Liste der verfügbaren Ticket Stati.
+list of available tickets\\\' transitions.	tts	de	Liste der verfügbaren Ticket Übergänge.
+missing description	tts	de	fehlende Beschreibung
+morework	tts	de	MEHRARBEIT
+needswork	tts	de	MEHRARBEIT
+new	tts	de	NEU
+new ticket	tts	de	Neues Ticket
+new tickets can be put into this state.	tts	de	Neue Tickets können diesen Status erhalten.
+new value	tts	de	Neuer Wert
+no additional notes	tts	de	Keine zusätzlichen Notizen
+no duplicate	tts	de	NICHT DOPPELT
+no notes for this ticket	tts	de	Keine Notizen für dieses Ticket
+no states found	tts	de	Keine Stati gefunden
+no tickets found	tts	de	Keine Tickets gefunden
+no transitions found	tts	de	Keine Übergänge gefunden
+not assigned	tts	de	Nicht zugewiesen
+not completed	tts	de	NICHT ABGESCHLOSSEN
+notify changes to ticket assignee by e-mail	tts	de	Ticket Änderungen an den Zugewiesenen per Mail senden
+notify changes to ticket group by e-mail	tts	de	Ticket Änderungen an die Gruppe per Mail senden
+notify changes to ticket owner by e-mail	tts	de	Ticket Änderungen an die Besitzer per Mail senden
+old value	tts	de	Alter Wert
+open	tts	de	Offen
+open / closed	tts	de	Offen / Geschlossen
+open date	tts	de	Angelegt am
+opened	tts	de	Angelegt
+opened by	tts	de	Angelegt von
+original ticket details	tts	de	Ursprüngliche Details des Tickets
+perform irregular transition into the following state	tts	de	Regelwiedriger Übergang in den folgenden Status ausführen
+please enter the subject of the ticket, otherwise the ticket cannot be stored.	tts	de	Bitte geben Sie einen Betreff für dieses Ticket an, sonst kann dieses nicht gespeichert werden.
+priority	tts	de	Priorität
+priority changed	tts	de	Priorität geändert
+put the preexistent ticket into the state %1.	tts	de	Bereits existierendes Ticket in den Status %1 bringen.
+re-assigned	tts	de	Wieder-zugewiesen
+re-opened	tts	de	Wieder-eröffnet
+refresh every (seconds)	tts	de	Auffrischen alle (Sekunden)
+reopen	tts	de	WIEDERERÖFFNEN
+reopened	tts	de	WIEDERERÖFFNET
+resolve	tts	de	LÖSEN
+resolved	tts	de	GELÖST
+returns a struct of a tickets history	tts	de	Liefert einen Satz von Ticket-Historien
+returns a struct of values of a single ticket	tts	de	Liefert einen Satz von Werten eines einzelnen Tickets
+returns the additional notes attached to a ticket	tts	de	Liefert die zusätzlichen Notizen eines Tickets
+selected	tts	de	ausgewählt
+show new/updated tickets on main screen	tts	de	Neue / geänderte Tickets auf Startseite anzeigen
+source state	tts	de	Quellstatus
+state	tts	de	Status
+state changed	tts	de	Status geändert
+state id	tts	de	Status ID
+state name	tts	de	Status Name
+status/date closed	tts	de	Status/Datum geschlossen
+subject changed	tts	de	Betreff geändert
+target state	tts	de	Zielstatus
+test	tts	de	TEST
+the closed ticket requires more work. reopen it.	tts	de	Das geschlossene Ticket erfordert mehr Arbeit. Ticket wieder-eröffnen.
+the owner of the ticket was not able to confirm the issue.	tts	de	Der Besitzer des Tickets war nicht in der Lage, die Angelegenheit zu bestätigen.
+the ticket has been accepted by the owner, who is about to work on it.	tts	de	Das Ticket wurde vom Eigentümer angenommen, der bereit ist daran zu arbeiten.
+the ticket has been closed without resolution.	tts	de	Das Ticket wurde ohne Lösung geschlossen.
+the ticket has been reopened for further work.	tts	de	Das Ticket wurde für weitere Arbeit wieder-eröffnet.
+the ticket has been successfully resolved.	tts	de	Das Ticket wurde erfolgreich gelöst.
+the ticket has been verified and has to be worked on.	tts	de	Das Ticket wurde überprüft und es wurde daran gearbeitet.
+the ticket has been worked on and the work requires validation.	tts	de	An dem Ticket wurde gearbeitet und die Arbeit erfordert eine Überprüfung.
+the ticket has been worked on, but requires more work.	tts	de	An dem Ticket wurde gearbeitet, es erfordert aber noch mehr Arbeit.
+the ticket is a duplicate of another ticket and should be closed.	tts	de	Das Ticket ist ein Doppel eines anderen Tickets und sollte geschlossen werden.
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	de	Das Ticket ist im Wesentlichen kein Doppel eines anderen Tickets. Bitte wieder-eröffnen.
+the ticket is invalid and cannot be worked on.	tts	de	Das Ticket ist ungültig und es kann nicht daran gearbeitet werden.
+the ticket resolution was successfully validated. close the ticket.	tts	de	Die Ticket Lösung wurde erfolgreich überprüft. Ticket bitte schließen.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	de	Das Ticket existierte bereits bevor die Petri-Netz Infrastrucktur definiert wurde und ihm sollte ein Status zugewiesen werden.
+the ticket was found a duplicate of another ticket.	tts	de	Das Ticket ist ein Doppel eines anderen Tickets.
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	de	Die Tickets der folgenden Liste sind im Status %1. Bitte entscheiden, was mit ihnen passieren soll.
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	de	Die Überprüfung des Tickets war nicht erfolgreich. Das Ticket erforder mehr Arbeit.
+ticket	tts	de	Ticket
+ticket has been updated	tts	de	Ticket wurde aktualisiert
+tickets found %1	tts	de	Tickets gefundene %1
+tickets open %1	tts	de	Tickets offen %1
+tickets total %1	tts	de	Tickets insgesamt: %1
+to go back to the tts index, click <a href= %1 >here</a>	tts	de	Um zur Startseite des TTS zurück zu kehren, <a href="%1">hier</a> klicken
+toaccept	tts	de	NACHANNEHMEN
+toclosed	tts	de	NACHSCHLIESEN
+toduplicate	tts	de	NACHDOPPELT
+toinvalid	tts	de	NACHUNGÜLTIG
+toneedswork	tts	de	NACHMEHRARBEIT
+tonew	tts	de	NACHNEU
+toreopened	tts	de	NACHWIEDERERÖFFNEN
+toresolved	tts	de	NACHGELÖST
+total billable	tts	de	Gesamt abrechenbar
+totovalidate	tts	de	NACHÜBERPRÜFEN
+tovalidate	tts	de	ÜBERPRÜFEN
+toverified	tts	de	NACHÜBERPRÜFT
+transition	tts	de	Übergang
+transition name	tts	de	Name des Übergang
+trouble ticket system	common	de	Trouble Ticket System
+tts	common	de	Trouble Ticket System
+tts preferences	tts	de	Trouble Ticket System - Einstellungen
+undefined	tts	de	UNDEFINIERT
+update ticket state	tts	de	Status des Tickets bearbeiten
+updates ticket	tts	de	Tickets aktualiseren
+use email notification	tts	de	Email Benachrichtigungen benutzen
+verified	tts	de	ÜBERPRÜFT
+verify	tts	de	ÜBERPRÜFEN
+verify the ticket to work on it.	tts	de	Ticket überprüfen um daran zu arbeiten.
+view all tickets	tts	de	Alle Tickets anzeigen
+view job detail	tts	de	Detailansicht
+view only my open tickets	tts	de	Nur meine offenen Tickets anzeigen
+view only open tickets	tts	de	Nur offene Tickets anzeigen
+you can only close a ticket if it is assigned to you.	tts	de	Sie können nur Tickets schließen, die ihnen zugewiesen sind.
+you want to delete the state %1 and associated transitions. are you sure?	tts	de	Sind sie sicher das Sie den Status %1 löschen möchten?
+you want to delete the state %1. are you sure?	tts	de	Sind sie sicher, dass sie den Status %1 löschen wollen?
+you want to delete the transition %1. are you sure?	tts	de	Sind sie sicher, dass sie den Übergang %1 löschen wollen?

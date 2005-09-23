@@ -1,0 +1,122 @@
+add	phpldapadmin	fr	Ajouter
+add_a_jpeg_photo	phpldapadmin	fr	Ajouter une jpegPhoto
+add_new	phpldapadmin	fr	Ajouter nouveau
+add_new_attribute	phpldapadmin	fr	Ajouter un nouvel attribut
+add_new_attribute_tooltip	phpldapadmin	fr	Ajouter un nouvel attribut/une nouvelle valeur à cette entrée
+add_new_binary_attr	phpldapadmin	fr	Ajouter Nouvel Attribut Binaire
+add_new_binary_attr_tooltip	phpldapadmin	fr	Ajouter un nouvel attribut/valeur binaire depuis un fichier
+add_oclass_and_attrs	phpldapadmin	fr	Ajouter une Classe d'Objet et Attributs
+add_value	phpldapadmin	fr	ajouter une valeur
+add_value_tooltip	phpldapadmin	fr	Ajouter une valeur additionnelle à cet attribut
+advanced_search_form_str	phpldapadmin	fr	Recherche avancée
+alias_for	phpldapadmin	fr	Alias pour
+bad_server_id	phpldapadmin	fr	Mauvais id de serveur
+base_dn	phpldapadmin	fr	Base DN
+binary_value	phpldapadmin	fr	Valeur binaire
+change_entry_rdn	phpldapadmin	fr	Modifier le RDN de cette entrée
+chooser_link_tooltip	phpldapadmin	fr	Cliquez pour afficher une boîte de dialogue pour sélectionner une entrée (DN) en mode graphique
+click_to_display	phpldapadmin	fr	Cliquer pour afficher
+contains	phpldapadmin	fr	contient
+copy_this_entry	phpldapadmin	fr	Copier cette entrée
+copy_this_entry_tooltip	phpldapadmin	fr	Copier cet objet vers un autre endroit, un nouveau DN ou un autre serveur
+could_not_connect	phpldapadmin	fr	Impossible de se connecter au serveur LDAP.
+could_not_determine_root	phpldapadmin	fr	Impossible de déterminer la racine de votre arborescence LDAP.
+could_not_perform_ldap_mod_add	phpldapadmin	fr	Impossible d'exécuter l'opération ldap_mod_add
+create	phpldapadmin	fr	créer
+create_a_child_entry	phpldapadmin	fr	Créer une sous-entrée
+create_new	phpldapadmin	fr	Créer
+create_new_entry_in	phpldapadmin	fr	Créer une nouvelle entrée dans
+create_new_entry_on	phpldapadmin	fr	Créer une nouvelle entrée sur
+current_list_of	phpldapadmin	fr	Liste actuelle de
+delete_attribute	phpldapadmin	fr	effacer l'attribut
+delete_hint	phpldapadmin	fr	Hint: <b>To delete an attribute</b>, empty the text field and click save.
+Astuce:<b>Pour effacer un attribut</b>, videz le champ texte et cliquez enregistrer.
+Hint: <b>To delete an attribute</b>, empty the text field and click save.
+Hint: <b>To delete an attribute</b>, empty the text field and click save.
+delete_this_entry	phpldapadmin	fr	Supprimer cette entrée
+delete_this_entry_tooltip	phpldapadmin	fr	Il vous sera demander confirmation
+desc	phpldapadmin	fr	Description
+distinguished_name	phpldapadmin	fr	Nom Distingué
+download_value	phpldapadmin	fr	télécharger la valeur
+ends_with	phpldapadmin	fr	finit par
+enter_value_to_add	phpldapadmin	fr	Entrez la valeur que vous désirez ajouter:
+entry_attributes	phpldapadmin	fr	Attributs de l'entrée
+equals	phpldapadmin	fr	est égal à
+export_subtree_to_ldif	phpldapadmin	fr	Exporter l'arborescence au format ldif
+export_subtree_to_ldif_tooltip	phpldapadmin	fr	Sauvegarder cet objet ainsi que tous les sous-objets au format ldif
+export_to_ldif	phpldapadmin	fr	Exporter au format LDIF
+export_to_ldif_mac	phpldapadmin	fr	Fins de ligne Macintosh
+export_to_ldif_tooltip	phpldapadmin	fr	Sauvegarder cet objet au format ldif
+export_to_ldif_unix	phpldapadmin	fr	Fins de ligne Unix
+export_to_ldif_win	phpldapadmin	fr	Fins de lignes Windows
+false	phpldapadmin	fr	faux
+hidden	phpldapadmin	fr	caché
+hide_internal_attrs	phpldapadmin	fr	Cacher les attributs internes
+import	phpldapadmin	fr	importer
+import_from_ldif	phpldapadmin	fr	Importer les entrées depuis un fichier LDIF
+inappropriate_matching_note	phpldapadmin	fr	Note: Vous aurez une erreur "occurence inappropriée" si vous n'avez pas<br />configuré une règle d'<tt>EQUITE</tt> sur votre serveur LDAP pour cet attribut.
+info	phpldapadmin	fr	info
+inherits	phpldapadmin	fr	Hérite
+internal_attributes	phpldapadmin	fr	Attributs Internes
+internal_attrs_tooltip	phpldapadmin	fr	Attributs établis automatiquement par le système
+is_obsolete	phpldapadmin	fr	Cette Classe d'objet est <b>obsolète</b>
+jump_to_attr	phpldapadmin	fr	Aller à un attribut
+jump_to_objectclass	phpldapadmin	fr	Aller à une Classe d'attribut
+jump_to_this_oclass	phpldapadmin	fr	Aller à la définitionn de cette Classe d'attribut
+ldap_refuses_to_give_root	phpldapadmin	fr	On dirait que votre serveur LDAP a été configuré pour ne pas afficher sa racine.
+logged_in_as	phpldapadmin	fr	Connecté en tant que:
+logout	phpldapadmin	fr	logout (FIXME)
+logout_of_this_server	phpldapadmin	fr	Se déconnecter de ce serveur
+matching_rule_oid	phpldapadmin	fr	Correspondance à la Règle OID
+new_attributes	phpldapadmin	fr	nouveaux attributs
+new_required_attrs	phpldapadmin	fr	Nouveaux Attributs Requis
+new_required_attrs_instructions	phpldapadmin	fr	Instructions: Pour ajouter cette Classe d'objet à cette entrée, vous devez spécifier
+new_required_attrs_note	phpldapadmin	fr	Note: vous pourriez devoir entrer un nouvel attribut<br />que cette Classe d'objet a besoin.
+no_new_attrs_available	phpldapadmin	fr	pas de nouveaux attributs pour cette entrée
+no_updates_in_read_only_mode	phpldapadmin	fr	Vous ne pouvez pas faire de mise à jour tant que le serveur est en mode lecture seule
+none	phpldapadmin	fr	aucun
+none_remove_value	phpldapadmin	fr	aucun, supprimer la valeur
+not_enough_login_info	phpldapadmin	fr	Pas assez d'information pour vous connecter au serveur. Veuillez vérifier votre configuration.
+oid	phpldapadmin	fr	OID
+optional_attrs	phpldapadmin	fr	Attributs Optionnels
+please_specify_in_config	phpldapadmin	fr	Veuillez le spécifier dans config.php
+read_only	phpldapadmin	fr	lecture seule
+really_delete_attribute	phpldapadmin	fr	Effacer vraiment l'attribut
+refresh	phpldapadmin	fr	rafraîchir
+refresh_expanded_containers	phpldapadmin	fr	Rafraîchir tous les conteneurs développés pour
+refresh_this_entry	phpldapadmin	fr	Rafraîchir cette entrée
+rename	phpldapadmin	fr	Renommer
+rename_entry	phpldapadmin	fr	Renommer l'entrée
+report_bug	phpldapadmin	fr	Signaler un bogue
+request_new_feature	phpldapadmin	fr	Demander une nouvelle fonctionnalité
+required_attrs	phpldapadmin	fr	Attributs Requis
+requires_to_add	phpldapadmin	fr	Cette action vous demande d'ajouter
+save_changes	phpldapadmin	fr	Sauver les modifications
+schema	phpldapadmin	fr	schema
+schema_for_server	phpldapadmin	fr	Schéma pour le serveur
+search	phpldapadmin	fr	chercher
+search_ filter	phpldapadmin	fr	Filtre de la recherche
+search_for_entries_whose	phpldapadmin	fr	Chercher les entrées dont
+search_scope	phpldapadmin	fr	Portée de la recherche
+see_open_bugs	phpldapadmin	fr	voir les bogues en cours
+see_open_requests	phpldapadmin	fr	voir les demandes en cours
+server	phpldapadmin	fr	Serveur
+show_attributes	phpldapadmin	fr	Montrer les attributs
+show_internal_attrs	phpldapadmin	fr	Montrer les attributs internes
+simple_search_form_str	phpldapadmin	fr	Recherche Simple
+sounds_like	phpldapadmin	fr	ressemble à
+starts_with	phpldapadmin	fr	commence par
+syntax	phpldapadmin	fr	Syntaxe
+syntax_oid	phpldapadmin	fr	Syntaxe OID
+that_this_oclass_requires	phpldapadmin	fr	que cette Classe d'objet demande. Vous pouvez le faire dans ce formulaire.
+the_following_attributes	phpldapadmin	fr	Les <b>Types d'attributs</b> suivants sont supportés par ce serveur LDAP.
+the_following_matching	phpldapadmin	fr	Les <b>règles de correspondance</b> suivantes sont supportés par ce serveur LDAP.
+the_following_objectclasses	phpldapadmin	fr	Les <b>Classes d'objets</b> suivantes sont supportées par ce serveur LDAP.
+the_following_syntaxes	phpldapadmin	fr	Les <b>syntaxes</b> suivantes sont supportées par ce serveur LDAP.
+true	phpldapadmin	fr	vrai
+value_to	phpldapadmin	fr	valeur à
+values_for_attribute	phpldapadmin	fr	valeurs pour cet attribut
+view	phpldapadmin	fr	Ajouter
+view_schema_for	phpldapadmin	fr	Voir schéma pour
+view_server_info	phpldapadmin	fr	Voir les informations entrées par l'utilisateur
+viewing_read_only	phpldapadmin	fr	Visionnage de l'entrée en mode lecture seule.

@@ -1,0 +1,122 @@
+a new ticket has been reported.	tts	cs	Byl ohlá¹en nový problém
+accept the ticket into verification process.	tts	cs	Pøijmout problém k ovìøení
+action	tts	cs	Akce
+add new ticket	tts	cs	Pøidat nový problém
+add ticket	tts	cs	Pøidat problém
+additional notes	tts	cs	Dal¹í poznámky
+admin options	common	cs	Nastavení administrátora
+assign to	tts	cs	Pøidìlit
+assigned from	tts	cs	Pøidìlil
+assigned to	tts	cs	Pøidìlen
+billable hours	tts	cs	Úètovatelné hodiny
+billable hours changed	tts	cs	Úètovatelné hodiny zmìnìny
+billable hours rate	tts	cs	Hodinová sazba
+billable rate	tts	cs	Sazba
+billable rate changed	tts	cs	Sazba zmìnìna
+category changed	tts	cs	Kategorie zmìnìna
+check here to generate the state's id automatically or enter a particular id below.	tts	cs	Za¹krtnìte pro automatické vytvoøení ID nebo vlo¾te konkrétní ID ní¾e.
+clear form	tts	cs	Vyma¾ formuláø
+close the invalid ticket.	tts	cs	Uzavøít neplatný problém
+closed	tts	cs	Uzavøen
+configure the states	common	cs	Správa stavù
+configure the transitions	common	cs	Správa pøechodù
+create new state	tts	cs	Vytvoøit nový stav
+create new ticket	tts	cs	Vytvoøit nový problém
+create new transition	tts	cs	Vytvoøit nový pøechod
+date opened	tts	cs	Otevøen
+default assign to	tts	cs	Výchozí pøiøazení
+default group	tts	cs	Výchozí skupina
+default priority	tts	cs	Výchozí priorita
+delete the listed tickets.	tts	cs	Smazat problémy.
+deleting the state	tts	cs	Ma¾u stav
+deleting the transition	tts	cs	Ma¾u pøechod
+detail	tts	cs	Podrobnosti
+edit the state	tts	cs	Upravit stav
+edit the transition	tts	cs	Upravit pøechod
+force	tts	cs	Vynutit
+global categories	tts	cs	Globální kategorie
+group ownership changed	tts	cs	Skupina vlastnictví zmìnìna
+history	tts	cs	Historie
+i worked on the ticket and the work requires validation.	tts	cs	Zpracoval jsem problém, potøebuji potvrzení (validaci)
+i worked on the ticket, but did not finish.	tts	cs	Rozpracoval jsem problém, ale nedokonèil jsem jej
+in progress	tts	cs	Rozpracován
+initial state	tts	cs	Výchozí stav
+keep the present state [%1].	tts	cs	Zachovat stávající stav [%1]
+latest note added	tts	cs	Poslední poznámka
+list of available tickets' states.	tts	cs	Seznam mo¾ných stavù
+list of available tickets' transitions.	tts	cs	Seznam mo¾ných pøechodù
+missing description	tts	cs	Chybí popis
+new ticket	tts	cs	Nový problém
+new tickets can be put into this state.	tts	cs	Tento stav lze pou¾ít pro nové problémy
+new value	tts	cs	Nová hodnota
+no additional notes	tts	cs	®ádné
+no notes for this ticket	tts	cs	Bez poznámek
+no states found	tts	cs	®ádné stavy nenalezeny
+no tickets found	tts	cs	®ádné problémy nenalezeny
+no transitions found	tts	cs	®ádné pøechody nenalezeny
+not assigned	tts	cs	Nepøiøazen
+notify changes to ticket assignee by e-mail	tts	cs	Oznámit mailem zmìny zadavateli
+notify changes to ticket group by e-mail	tts	cs	Oznámit mailem zmìny skupinì
+notify changes to ticket owner by e-mail	tts	cs	Oznámit mailem zmìny vlastníkovy
+old value	tts	cs	Stará hodnota
+open	tts	cs	Otevøen
+open / closed	tts	cs	Otevøen / Uzavøen
+open date	tts	cs	Otevøen
+opened	tts	cs	Otevøen
+opened by	tts	cs	Otevøel
+original ticket details	tts	cs	Pùvodní záznam problému
+priority	tts	cs	Priorita
+priority changed	tts	cs	Priorita zmìnìna
+put the preexistent ticket into the state %1.	tts	cs	Nastavit stav problému na %1
+re-assigned	tts	cs	Zmìna pøiøazení
+re-opened	tts	cs	Znovu otevøen
+refresh every (seconds)	tts	cs	Obèerstvit ka¾dých (sekund)
+show new/updated tickets on main screen	tts	cs	Zobrazit nové a zmìnìné problémy na hlavní obrazovce
+source state	tts	cs	Výchozí stav
+state	tts	cs	Stav
+state changed	tts	cs	Zmìna stavu
+state id	tts	cs	ID stavu
+state name	tts	cs	Název stavu
+status/date closed	tts	cs	Stav/Kdy ukonèen
+subject changed	tts	cs	Název zmìnìn
+target state	tts	cs	Cílový stav
+the closed ticket requires more work. reopen it.	tts	cs	Uzavøený problém potøebuje doøe¹it. Otevøít znovu.
+the owner of the ticket was not able to confirm the issue.	tts	cs	Vlastník problému nebyl schopen problém potvrdit.
+the ticket has been accepted by the owner, who is about to work on it.	tts	cs	Problém byl pøijat a pøiøazený vlastník jej bude øe¹it.
+the ticket has been closed without resolution.	tts	cs	Problém byl uzavøen bez vyøe¹ení
+the ticket has been reopened for further work.	tts	cs	Problém byl znovu otevøen k dal¹ímu øe¹ení
+the ticket has been successfully resolved.	tts	cs	Problém byl úspì¹nì vyøe¹en
+the ticket has been verified and has to be worked on.	tts	cs	Problém byl potvrzen a bude zpracován
+the ticket has been worked on and the work requires validation.	tts	cs	Problém byl zpracován a øe¹ení je potøeba ovìøit
+the ticket has been worked on, but requires more work.	tts	cs	Problém byl zpracovám, ale vy¾aduje více práce
+the ticket is a duplicate of another ticket and should be closed.	tts	cs	Problém je duplicitní k jinému problému a bude uzavøen
+the ticket is essentially not a duplicate of another ticket. reopen it.	tts	cs	Problém není duplicitní, znovu otevøít.
+the ticket is invalid and cannot be worked on.	tts	cs	Problém nebyl potvrzen a nebude zpracován
+the ticket resolution was successfully validated. close the ticket.	tts	cs	Øe¹ení problému bylo potvrzeno. Uzavøete problém.
+the ticket was existent before the petri net infrastructure was defined and should be assigned a state.	tts	cs	Problém byl vytvoøen pøed definováním stavového diagramu a musí se mu pøiøadit stav.
+the ticket was found a duplicate of another ticket.	tts	cs	Problém byl oznaèen jako duplikát jiného problému
+the tickets in the following list are in the state %1. please, decide what should be done with them.	tts	cs	Následující problémy jsou ve stavu %1. Rozhodnìte co s nimi
+the validation of the ticket was unsuccessfull. the ticket requires more work.	tts	cs	Øe¹ení nebylo ovìøeno, problém vy¾aduje více práce
+ticket	tts	cs	Problém
+ticket has been updated	tts	cs	Problém byl aktualizován
+tickets found %1	tts	cs	Nalezeno %1 problémù
+tickets open %1	tts	cs	%1 otevøených problémù
+tickets total %1	tts	cs	Celkem %1 problémù
+to go back to the tts index, click <a href= %1 >here</a>	tts	cs	<a href="%1">Zpìt na index Správy problémù</a>
+total billable	tts	cs	Úètovat celkem
+transition	tts	cs	Pøechod
+transition name	tts	cs	Název pøechodu
+trouble ticket system	common	cs	Sledování problémù
+tts	common	cs	Sledování problémù
+tts preferences	tts	cs	Sledování problémù - nastavení
+update ticket state	tts	cs	Aktualizovat stav problému
+updates ticket	tts	cs	Aktualizuje problém
+verify the ticket to work on it.	tts	cs	Potvrïte problém aby jej bylo mo¾né zpracovat
+view all tickets	tts	cs	Zobrazit v¹echny problémy
+view job detail	tts	cs	Zobrazit detail práce
+view only my open tickets	tts	cs	Zobraz jen moje otevøené problémy
+view only open tickets	tts	cs	Zobrazit jen otevøené problémy
+you can only close a ticket if it is assigned to you.	tts	cs	Problém mù¾ete uzavøít jen pokud vám byl pøidìlen
+you want to delete the state %1 and associated transitions. are you sure?	tts	cs	Chcete smazat stav %1 a pøíslu¹né pøechody. Opravdu to chcete udìlat?
+you want to delete the state %1. are you sure?	tts	cs	Chystáte se smazat stav %1. Opravdu to chcete udìlat?
+you want to delete the transition %1. are you sure?	tts	cs	Chystáte se smazat pøechod %1. Optavdu to chcete udìlat?

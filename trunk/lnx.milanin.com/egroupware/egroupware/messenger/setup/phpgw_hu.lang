@@ -1,0 +1,35 @@
+compose	messenger	hu	Levélírás
+compose global message	common	hu	Globális üzenet írása
+compose message	messenger	hu	Üzenet írása
+delete a message.	messenger	hu	Egy üzenet törlése
+delete selected	messenger	hu	Kiválasztott törlése
+forward	messenger	hu	Továbbküld
+forward a message	messenger	hu	Egy üzenet továbbküldése
+forward a message to another user.	messenger	hu	Egy üzenet továbbküldése egy másik felhasználóhoz
+forwarded	messenger	hu	Továbbküldött
+from	messenger	hu	Innen
+global message	messenger	hu	Globális üzenet
+i can't find the username %1 on the system	messenger	hu	Nem találom a %1 felhasználó nevet a rendszerben
+inbox	messenger	hu	Beérkezett_üzenetek
+message from	messenger	hu	Üzenet innen
+messenger	common	hu	Hírnök
+new	messenger	hu	Új
+read a list of messages.	messenger	hu	Üzenetek listájának olvasása
+read a single message.	messenger	hu	Egyedüli üzenet olvasása
+read message	messenger	hu	Üzenet olvasása
+replied	messenger	hu	Megválaszolt
+reply	messenger	hu	Válasz
+reply to a message	messenger	hu	Válasz egy üzenetre
+reply to a received message.	messenger	hu	Válasz egy fegadott üzenetre
+send	messenger	hu	Elküld
+send a global message.	messenger	hu	Egy globális üzenet elküldése
+send a message to a single recipient.	messenger	hu	Egy üzenet küldése egy egyedi címzetthez
+send message to	messenger	hu	Üzenet küldése
+sorry, %1's account is not currently active	messenger	hu	Sajnálom, %1 hozzáférése aktuálisan nem aktív
+update a message status	messenger	hu	Egy üzenet státuszának frissítése
+you didn't enter anything for the message	messenger	hu	Nem írtál semmit az üzenetbe
+you have %1 new message	messenger	hu	Neked %1 új üzeneted van
+you have %1 new messages	messenger	hu	Neked %1 új üzeneted van
+you have no messages	messenger	hu	Neked nincs üzeneted
+you must enter a subject	messenger	hu	Be kell írnod egy tárgyat
+you must enter the username this message is for	messenger	hu	Ehez az üzenethez be kell írnod a felhasználói nevet

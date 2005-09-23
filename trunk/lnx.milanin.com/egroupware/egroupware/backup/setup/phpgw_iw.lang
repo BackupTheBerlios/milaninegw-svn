@@ -1,0 +1,134 @@
+%1 bookmarks have been deleted	backup	iw	%1 סימניות נמחקו
+%1 bookmarks imported from %2 successfully.	backup	iw	%1 סימניות הובאו מ-%2 בהצלחה.
+(comma separate multiple addresses)	backup	iw	(הפרד בין כתובות מרובות בעזרת פסיק)
+<b>note:</b> this currently works with netscape bookmarks only	backup	iw	<b>הערה:</b> זה עובד כרגע רק עם סימניות של Netscape
+absolute path of the backup directory	backup	iw	: /usr/local/www/egroupware/backup/archive)המסלול האבסלוטי של מחיצת הגיבוי (לדוגמא
+absolute path of the backup directory (eg.: /usr/local/www/egroupware/backup/archive	backup	iw	המסלול האבסלוטי של מחיצת הגיבוי (לדוגמא: /usr/local/www/egroupware/backup/archive)
+absolute path of the directory of egw backup application	backup	iw	המסלול האבסלוטי של מחיצת של יישום הגיבוי  של EGW
+absolute path of the directory to store the backup script	backup	iw	המסלול האבסלוטי של מחיצת של יישום הגיבוי  של EGW
+all bookmarks	backup	iw	כל הסימניות
+and	backup	iw	ו-
+append this message to mailed bookmarks	backup	iw	הוסף הודעה זו לסימניות שנשלחות בדואר
+archive type	backup	iw	בחר את סוג הארכיב שלך
+ascending	backup	iw	בסדר עולה
+backup	common	iw	גיבוי
+backup administration	common	iw	ניהול גיבוים
+book marks	backup	iw	סימניות
+bookmark changed sucessfully	backup	iw	הסימניה שונתה בהצלחה.
+bookmark created successfully.	backup	iw	הסימניה נוצרה בהצלחה.
+bookmark deleted successfully	backup	iw	הסימניה נמחקה בהצלחה.
+bookmark not editable	backup	iw	הסימניה לא ניתנת לעריכה
+bookmark not readable	backup	iw	הסימניה לא ניתנת לקריאה
+bookmarks	backup	iw	סימניות
+bookmarks settings	backup	iw	הגדרות סימניות
+bzip2	admin	iw	bzip2
+change bookmark	backup	iw	שנה סימניה
+close this window to return	backup	iw	סגור חלון זה כדי לחזור
+configuration backup	backup	iw	תצורת גיבוי
+configuration localhost	backup	iw	Localhost תצורת
+create backups of your data ?	backup	iw	:סמן כדי ליצור גיבויים של המידע שלך
+create bookmark	backup	iw	צור סימניה
+create new bookmark	backup	iw	צור סימניה חשה
+daily	backup	iw	יומי
+data	backup	iw	מידע
+date added	backup	iw	תאריך הוספה
+date changed	backup	iw	תאריך שינוי
+date last updated	backup	iw	תאריך עדכון אחרון
+date last visited	backup	iw	תאריך ביקור אחרון
+descending	backup	iw	בסדר יורד
+directory locations	admin	iw	מיקום המחיצות
+directory names	admin	iw	שמות המחיצות
+e-mail	backup	iw	:סמן כדי לקבל הודעות בדואר אלקטרוני
+e-mail notification?	backup	iw	?הודעות דואר
+edit bookmark	backup	iw	ערוך סימניה
+edit this bookmark	backup	iw	ערוך סימניה זו
+enter the name of the netscape bookmark file<br>that you want imported into bookmarker below.	backup	iw	ציין את של קובץ סימניות של Netscape<br>שברצונך לייבא לסמן למטה
+export bookmarks	backup	iw	ייצא סימניות
+fewer	backup	iw	פחות
+filter by	backup	iw	סנן לפי
+found a link you might like	backup	iw	מצאתי קישור שאולי תוהב
+from	backup	iw	מאת
+from category %1	backup	iw	מקטגוריה %1
+highest	backup	iw	הגבוהה ביותר
+homedirs	admin	iw	מחיצות הבית
+i thought you would be interested in the following link(s):	backup	iw	חשבתי שהקישור(ים) הבאים יענינו אותך:
+import bookmarks	backup	iw	ייבא סימניות
+interval	backup	iw	תקופה
+ip or hostname	backup	iw	IP או שם מחשב
+ldap	common	iw	LDAP
+ldap database	admin	iw	LDAP בסיס נתוני
+like	backup	iw	כמו
+list	backup	iw	רשימה
+list backup archives	backup	iw	רשום ארכיבים של גיבוי
+lowest	backup	iw	הנמוך ביותר
+mail this bookmark	backup	iw	שלח סימניה זו בדואר אלקטרוני
+mail-this-link message sent to %1.	backup	iw	הודעת שלך-קישור-זה נשלח אל %1.
+maildir	admin	iw	:הודעה נשלחת בדואר אלקטרוני
+mass update:	backup	iw	עדכון מסיבי:
+message from	backup	iw	הדעה מאת
+monthly	backup	iw	חודשי
+more	backup	iw	עוד
+mysql	admin	iw	MySQL
+name	backup	iw	שם
+name is required	backup	iw	השם חובה
+netscape bookmark file	backup	iw	קובץ סימניות של Netscape
+netscape bookmark filename is required!	backup	iw	שם לקובץ הסימניות של Netscape חובה
+new	backup	iw	חדש
+nfs	backup	iw	nfs
+no backup archives available !	backup	iw	!אין ארכיבי גיבוי זמינים
+number of stored backup versions	backup	iw	:כמות הגיבויים הישנים לשמור לפני מחיקה
+operating system	backup	iw	מערכת הפעלה
+or	backup	iw	או
+pgsql	admin	iw	PostgreSQL
+php cgi	admin	iw	(/usr/bin/php :שלך (למשל php-מסלול המלא אל תוכנית ה
+please enter the path of the needed applications in *site configuration* !	backup	iw	נא ציין את המסלול אל היישומים הדרושים בתצורת אתר!
+please enter the path to the backup dir and/or enable showing archives in egroupware !	backup	iw	!eGroupWare-נא ציין את המסלול אל מחיצת הגיבוי ו/או אפשר הצגת ארכיבים ב
+please enter username and password for remote connection !	backup	iw	!נא ציין שם משתמש וסיסמא עבור קישור מרחוק
+please fill out <b>to e-mail address</b>, <b>subject</b>, and <b>message</b>!	backup	iw	נא לציין <b>כתובת דואר אלקטרוני אל</b>, <b>נושא</b>, ו-<b>הודעה</b>!
+please select an application for transport to the remote host !	backup	iw	!נא לציין שם של יישום למעבר אל המחשב המרוחק
+please select the categories to export	backup	iw	נא לבחור את הקטגוריות לייצא
+please set the path to a local dir to store the backup script !	backup	iw	!נא לקבוע את המסלול אל מחיצה מקומית לשמור בה את סקריפט הגיבוי
+please set the path to the ldap database dir in *site configuration* !	backup	iw	'ב'תצורת אתר LDAP נא לקבוע את המסלול אל בסיס נתוני
+please set the path to the mysql database dir in *site configuration* !	backup	iw	'ב'תצורת אתר MySQL נא לקבוע את המסלול אל בסיס נתוני
+please set the path to the postgresql database dir in *site configuration* !	backup	iw	'ב'תצורת אתר PostgreSQL נא לקבוע את המסלול אל בסיס נתוני
+please set the values in *site configuration* !	backup	iw	!'אנא קבע את הערכים ב- *תצורת האתר
+please specify the ip of the remote host !	backup	iw	של המחשב המרוחק IP-נא לציין את כתובת ה
+please specify the name of the maildir in *site configuration* !	backup	iw	'נא לציין את השם של מחיצת הדואר ב'תצורת אתר
+please specify the path to the backup directory !	backup	iw	נא לציין את המסלול את מחיצת הגיבוי!
+please specify the path to the user-homedirectories in *site configuration* !	backup	iw	'נא לציין את המסלול למחיצות הבית של משתמשים ב- נא לציין את שם של 'תצורת האתר
+please write down you e-mail for beeing notified	backup	iw	אנא הקלד את כתובת הדואר האלקטרוני לקבלת הודעות
+program locations	admin	iw	מיקום התוכניות
+query condition	backup	iw	תנאי שאילתא
+rating	backup	iw	דירוג
+save backup locally ?	backup	iw	:סמן כדי לשמור גיבוי לוקאלי
+search for:	backup	iw	חפש:
+select archive type	backup	iw	בחר סוג הארכיב
+select interval	backup	iw	בחר תקופה
+select the format you would like to export to	backup	iw	בחר את הפורמאט לייצוא
+send bookmark	backup	iw	שלך סימניה
+settings	admin	iw	הגדרות
+show backup archives in egroupware ?	backup	iw	:eGroupWare-סמן כדי להציג ארכיבי גיבוי ב
+smbmount	backup	iw	smbmount
+sql	backup	iw	SQL
+sub category	backup	iw	תת קטגוריה
+tar	admin	iw	tar
+tar.bz2	backup	iw	tar.bz2
+tar.gz	backup	iw	tar.gz
+the backup application is not configured for showing the archives in egroupware yet !	backup	iw	!eGroupWare-יישום הגיבוי עדיין לא קונפג לתצוגה ב
+the directory to store the backup script must be outside of the webservers *documentroot* !	backup	iw	!המחיצה בה שומרים את סקריפט הגיבוי חייבת להיות בתוך השורש של שרת הווס
+to address %1 invalid. format must be <strong>user@domain</strong> and domain must exist!	backup	iw	כתובת אל %1 אינה חוקית. הפורמאט חייב להיות <strong>user@domain</strong> והדומיין חייב להיות אמיתית!
+to e-mail addresses	backup	iw	אל כתובת דואר אלקטרוני
+to which category should the imported folder hierarchy be attached	backup	iw	לאיזה קטגוריה יש לצרף את היררכיית המחיצות המיובאות
+total visits	backup	iw	סך כל הביקורים
+tree view	backup	iw	תצוגת עץ
+unable to open temp file %1 for import.	backup	iw	לא הצלחתי לפתוח את קובץ הזמני %1 לייבוא.
+url is required.	backup	iw	URL חובה
+versions can only be a number !	backup	iw	!גירסאות יכולות להיות מספריות בלבד
+view bookmark	backup	iw	הצג סימניה
+view this bookmark	backup	iw	הצג סימניה זו
+warning	backup	iw	אזהרה
+weekly	backup	iw	שבועי
+you are viewing this site outside of egroupware	backup	iw	הנך צופה באתר זה מחוץ ל-eGroupWare
+you must select a category	backup	iw	עליך לבחור קטגוריה
+your sql database isnt supported by this application !	backup	iw	!שלך אינו נתמך על ידי יישום זה SQL-בסיס הנתונים ה
+zip	common	iw	zip

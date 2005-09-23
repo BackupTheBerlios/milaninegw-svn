@@ -1,0 +1,36 @@
+compose	messenger	sl	Ustvari
+compose global message	common	sl	Ustvari globalno sporočilo
+compose message	messenger	sl	Ustvari sporočilo
+delete a message.	messenger	sl	Izbriši sporočilo
+delete selected	messenger	sl	Izbriši označeno
+forward	messenger	sl	Posreduj
+forward a message	messenger	sl	Posreduj sporočilo
+forward a message to another user.	messenger	sl	Posreduj sporočilo drugemu uporabniku
+forwarded	messenger	sl	Posredovano
+from	messenger	sl	Pošiljatelj
+global message	messenger	sl	Globalno sporočilo
+i can't find the username %1 on the system	messenger	sl	Uporabnika %1 ne najdem
+inbox	messenger	sl	Vhodni predal
+message from	messenger	sl	Sporočilo od
+messenger	common	sl	Glasnik
+new	messenger	sl	Novo
+read a list of messages.	messenger	sl	Preberi seznam sporočil
+read a single message.	messenger	sl	Preberi posamezno sporočilo
+read message	messenger	sl	Preberi sporočilo
+replied	messenger	sl	Odgovorjeno
+reply	messenger	sl	Odgovori
+reply to a message	messenger	sl	Odgovori na sporočilo
+reply to a received message.	messenger	sl	Odgovori na sprejeto sporočilo
+send	messenger	sl	Pošlji
+send a global message.	messenger	sl	Pošlji globalno sporočilo
+send a message to a single recipient.	messenger	sl	Pošlji sporočilo posameznemu prejemniku
+send message to	messenger	sl	Pošlji sporočilo
+sorry, %1's account is not currently active	messenger	sl	Uporabniški račun %1 trenutno ni aktiven.
+update a message status	messenger	sl	Osvežite status sporočila.
+use select box for user list in compose	common	sl	Uporabi izbirni seznam za seznam uporabnikov pri ustvarjanju sporočila.
+you didn't enter anything for the message	messenger	sl	Niste vnesli sporočila.
+you have %1 new message	common	sl	Imate %1 novo sporočilo.
+you have %1 new messages	common	sl	Imate %1 novih sporočil.
+you have no messages	messenger	sl	Nimate sporočil.
+you must enter a subject	messenger	sl	Vnesti morate zadevo.
+you must enter the username this message is for	messenger	sl	Vnesti morate naslovnika.

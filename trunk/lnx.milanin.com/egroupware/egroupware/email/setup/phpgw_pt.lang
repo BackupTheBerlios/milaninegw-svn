@@ -1,0 +1,163 @@
+1 message has been deleted	email	pt	1 mensagem foi eliminada
+1 message has been moved to	email	pt	1 mensagem foi movida para
+account	email	pt	conta
+account user name	email	pt	Nome de usuário da conta
+add to addressbook	email	pt	Adicionar ao Catálogo de Endereços
+and	email	pt	e
+arrival date	email	pt	Data de chegada
+as	email	pt	como
+attach file	email	pt	Anexar arquivo
+attachment	email	pt	Anexo
+attach signature	email	pt	Anexar assinatura
+<b>apply all</b> filters	email	pt	<b>APLICAR TODOS</b> Filtros
+bcc	email	pt	bcc
+cc	email	pt	CC
+choose to rename	email	pt	escolha para renomear
+compose	email	pt	Compor
+compose new	common	pt	Compor nova
+contains	email	pt	Contêm
+could not open this mailbox	email	pt	Não foi possível abrir esta caixa de mensagem
+create a folder email	en	pt	Criar uma pasta
+create (expert)	email	pt	criar (expert)
+custom e-mail preferences	email	pt	Preferência de Email personalizadas
+custom email settings	email	pt	Configurações da conta de E-mail
+default:	common	pt	padrão:
+default sorting order	email	pt	Ordenação padrão
+delete account	common	pt	Remover conta
+delete a folder	email	pt	Remover uma pasta
+deleted messages go to trash	email	pt	Mensagens removidas vão para a Lixeira
+deleted messages (trash) folder	email	pt	Pasta de mensagens removidas (Lixeira)
+delete (expert)	email	pt	Remover (expert)
+discard	email	pt	Descartar
+does not contain	email	pt	Não Contêm
+email account name	email	pt	Nome da conta de e-mail
+email address	email	pt	Endereço eletrônico
+email date	email	pt	Data do email
+e-mail extra accounts list	email	pt	Lista de contas extras de email
+e-mail filters	common	pt	Filtros de Email
+email filters	email	pt	Filtros de email
+e-mail folders	common	pt	Pastas de Email
+e-mail inbox filters List	email	pt	Lista de Filtros de email da Caixa de Entrada
+email password	email	pt	Senha de email
+e-mail preferences	common	pt	Preferências de E-Mail
+email preferences	email	pt	Preferências de Email
+email signature	email	pt	Assinatura do E-mail
+email type	common	pt	Tipo de e-mail
+enable this email account	common	pt	Habilitar esta conta de email
+enable utf-7 encoded folder names	email	pt	Habilitar codificação utf-7 de nomes de pastas
+enter your default mail domain ( From: user@domain )	admin	pt	Digite seu domínio padrão de correio eletrônico
+enter your pop	admin	pt	Digite o endereço de seu servidor POP
+error moving messages to	email	pt	Erro movendo mensagens para
+error: unknown message data	email	pt	Erro: Data de mensagem desconhecida
+extra e-mail account	common	pt	Conta de email extra
+extra e-mail accounts	common	pt	Contas de Email Extras
+fewer actions	email	pt	Menos Ações
+fewer choices	email	pt	Menos Opções
+file	email	pt	Arquivo
+file into	email	pt	Arquivar em
+filter [number] and name	email	pt	Filtro [número] e Nome
+folder	email	pt	Caixa postal
+folder maintenance	email	pt	Manutenção de pastas
+folder name	email	pt	Nome da pasta
+folders	email	pt	Pastas
+folder size	email	pt	Tamanho da pasta
+for these items, fill only what is different from you default e-mail preferences	common	pt	Para estes items, preencha somente o que é diferente das suas preferências padrões
+forward	email	pt	Reenvio
+from	email	pt	De
+hidden	email	pt	escondido
+if applicable	email	pt	Aplicável
+if fileto then select destination folder	email	pt	se Arquivar em, selecione pasta de destino
+if messages match	email	pt	Se houver ocorrência na mensagem
+image	email	pt	Imagem
+imap mail server hostname or ip address	admin	pt	endereço do servidor IMAP
+imap server type	common	pt	Tipo de servidor IMAP
+keep	email	pt	Manter
+keywords	email	pt	Palavras-chave
+layout 1	common	pt	Layout 1
+layout 2	common	pt	Layout 2
+lines	email	pt	Linhas
+long names	email	pt	nomes longos
+mail folder(uw-maildir)	email	pt	Caixa de Entrada(uw-maildir)
+mail server	email	pt	Servidor de E-mail
+mail server login type	admin	pt	Tipo de servidor de correio para login
+mail server type	email	pt	Tipo de servidor de e-mail
+manage accounts	email	pt	Manutenção de contas
+manage folders	email	pt	Manutenção de pastas
+message list layout	common	pt	Layout de listagem de mensagens
+messages	email	pt	Mensagens
+messages have been moved to	email	pt	menagens foram movidas para
+more actions	email	pt	Mais Ações
+more choices	email	pt	Menos Ações
+move down	email	pt	Mover para baixo
+move selected messages into	email	pt	Mover mensagens para
+move this message into	email	pt	Mover esta mensagem para
+move up	email	pt	Mover para cima
+new account	email	pt	Nova Conta
+new	email	pt	Nova
+newest	common	pt	mais nova
+new filter	email	pt	Novo Filtro
+new message	email	pt	Nova Mensagem
+no error returned from server	email	pt	Nenhum erro retornado do servidor
+no next message	email	pt	sem próxima mensagem
+non-standard	email	pt	Fora do padrão
+no previous message	email	pt	sem mensagem anterior
+number	common	pt	Número
+oldest	common	pt	mais antiga
+or	common	pt	ou
+or enter text	email	pt	ou digite texto
+please fill in everything you need	email	pt	Por favor preencha tudo que for necessário
+please select a folder to rename	email	pt	Por favor selecione uma pasta para renomear
+please select a message first	email	pt	Selecione a mensagem primeiro
+please type a folder name in the text box	email	pt	Por favor digite um nome de pasta no campo
+previous	email	pt	Anterior
+raw message	email	pt	fonte da mensagem
+read mail	email	pt	Ler Email
+redirect	email	pt	Redirecionar
+reject	email	pt	Rejeitar
+rename a folder	email	pt	Renomear uma pasta
+rename (expert)	email	pt	Renomear (expert)
+reply all	email	pt	Responder a todos
+reply	email	pt	Responder
+replyto	email	pt	Responder para
+reset	email	pt	Limpar
+result	email	pt	resultado
+search this folder	email	pt	procurar nesta pasta
+section	email	pt	Seção do E-mail
+select your mail server type	admin	pt	Selecione o tipo de servidor de correio
+send deleted messages to the trash	email	pt	Enviar mensagens excluídas para a lixeira
+send	email	pt	Enviar
+sent messages folder	common	pt	Pasta mensagens enviadas
+sent messages saved in &quot;sent&quot; folder	common	pt	Mensagens enviadas salvas na pasta &quot;enviadas&quot;
+short names	email	pt	nomes curtos
+show new messages on main screen	email	pt	Exibir novas mensagens
+show sender's email address with name	email	pt	Exibir email do remetente com o nome
+size	email	pt	Tamanho
+somebody	email	pt	alguém
+sort by	email	pt	Ordenar por
+standard e-mail preferences	email	pt	Preferências padrões de Email
+stop if matched	email	pt	Parar se houver ocorrência
+switch accounts	email	pt	Trocar de contas
+switch current folder to	common	pt	Alterar a pasta corrente para
+then take this actions	email	pt	Então executar estas ações
+there was an error trying to connect to your mail server.<br>please, check your username and password, or contact your admin.	email	pt	Houve um erro ao tentar conectar no servidor de e-mail.<br>Por favor verifique seu usuário e sua senha ou entre em contato com o administrador do sistema.
+this data not supplied.	email	pt	Este dado não foi digitado
+this folder is empty	email	pt	Esta pasta está vazia
+to	email	pt	Para
+total messages	email	pt	Total de mensagens
+undisclosed recipients	email	pt	Destinatários não exibidos
+undisclosed sender	email	pt	Remetende não exibido
+unknown action	email	pt	Ação desconhecida
+unknown error	email	pt	Erro desconhecido
+use custom settings	email	pt	Usar configurações personalizadas
+u-wash mail folder	email	pt	Pasta de Email U-Wash
+view as html	email	pt	Exibir como HTML
+view formatted	email	pt	Exibir formatado
+view headers	email	pt	Exibir cabeçalhos
+view unformatted	email	pt	Exibir não formatado
+%1 messages have been deleted	email	pt	%1 mensagens foram removidas
+you have 1 new message!	common	pt	Você tem 1 nova mensagem !
+you have messages!	common	pt	Você tem mensagens !
+you have no new messages	common	pt	Você não tem nenhuma nova mensagem !
+you have %1 new messages!	common	pt	Você tem %1 novas mensagens!
+your full name	common	pt	Seu nome completo
+your message has been sent	common	pt	Sua mesagem foi enviada

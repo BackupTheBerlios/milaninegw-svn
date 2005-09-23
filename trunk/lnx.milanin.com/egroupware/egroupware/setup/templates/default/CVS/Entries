@@ -1,0 +1,22 @@
+/applications.tpl/1.6/Thu Oct  9 23:08:04 2003//TVersion-1_0_0-branch
+/applist.tpl/1.2/Wed Sep 26 23:56:22 2001//TVersion-1_0_0-branch
+/arraydl.tpl/1.3/Thu Nov 13 12:25:56 2003//TVersion-1_0_0-branch
+/config.tpl/1.18.2.1/Sat Aug 21 12:14:47 2004//TVersion-1_0_0-branch
+/config_post_script.tpl/1.3/Thu Aug 28 14:30:37 2003//TVersion-1_0_0-branch
+/config_pre_script.tpl/1.3/Thu Oct  9 23:08:04 2003//TVersion-1_0_0-branch
+/footer.tpl/1.4/Tue Apr 20 19:29:40 2004//TVersion-1_0_0-branch
+/head.tpl/1.14.2.1/Fri Jul 23 14:21:57 2004//TVersion-1_0_0-branch
+/lang_main.tpl/1.4.8.1/Sat Jul 31 16:15:56 2004//TVersion-1_0_0-branch
+/ldap.tpl/1.4/Tue May 14 13:19:01 2002//TVersion-1_0_0-branch
+/login_main.tpl/1.6/Mon Apr 19 12:37:50 2004//TVersion-1_0_0-branch
+/login_stage_header.tpl/1.6/Sun Jan 18 21:03:56 2004//TVersion-1_0_0-branch
+/manageheader.tpl/1.14/Tue May  4 09:08:28 2004//TVersion-1_0_0-branch
+/msg_alert_msg.tpl/1.1.10.1/Sat Jul 31 16:15:56 2004//TVersion-1_0_0-branch
+/schema.tpl/1.3/Wed Sep 26 23:56:22 2001//TVersion-1_0_0-branch
+/setup_db_blocks.tpl/1.8.2.1/Wed Jul 21 13:28:31 2004//TVersion-1_0_0-branch
+/setup_demo.tpl/1.9/Mon Mar 29 06:20:04 2004//TVersion-1_0_0-branch
+/setup_main.tpl/1.6/Sun May  2 12:11:35 2004//TVersion-1_0_0-branch
+/sqltoarray.tpl/1.4/Tue Jan  6 13:45:10 2004//TVersion-1_0_0-branch
+/system_charset.tpl/1.2/Tue Jan  6 13:45:10 2004//TVersion-1_0_0-branch
+D/css////
+D/images////
