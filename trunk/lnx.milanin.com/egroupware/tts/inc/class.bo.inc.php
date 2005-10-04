@@ -304,7 +304,6 @@
 		{
 			// So where on the same page with our transactions
 			$this->historylog->db = &$this->db;
-			echo "<!--".$ticket['groupnotification']."-->";
 
 			$ticket    = $params;
 			$ticket_id = $params['id'];
@@ -350,14 +349,14 @@
 				$fields_updated = True;
 				$this->db->query("update phpgw_tts_tickets set ticket_assignedto='" . $ticket['assignedto']
 					. "' where ticket_id='$ticket_id'",__LINE__,__FILE__);
-				$this->historylog->add('N',$ticket_id,$ticket['groupnotification']);
+				$this->historylog->add('A',$ticket_id,$ticket['assignedto']);
 			}
                         if ($oldgroupnotification != $ticket['groupnotification'])
                         {
 				$fields_updated = True;
 				$this->db->query("update phpgw_tts_tickets set ticket_groupnotification='" . $ticket['groupnotification']
 					. "' where ticket_id='$ticket_id'",__LINE__,__FILE__);
-				$this->historylog->add('A',$ticket_id,$ticket['assignedto']);
+				$this->historylog->add('N',$ticket_id,$ticket['groupnotification']);
                         }
 			if ($oldpriority != $ticket['priority'])
 			{

@@ -84,7 +84,6 @@
 FROM `phpgw_tts_tickets` , `phpgw_tts_states`
 WHERE `state_id` = `ticket_state`
 AND `ticket_id` ='$ticket_id'");
-      //$GLOBALS['phpgw']->db->query("select * from phpgw_tts_tickets where ticket_id='$ticket_id'");
       $GLOBALS['phpgw']->db->next_record();
 
       $group_id = $GLOBALS['phpgw']->db->f('ticket_group');
@@ -136,13 +135,12 @@ AND `ticket_id` ='$ticket_id'");
 
       $body .= "\n\n".lang('Original Ticket Details').":\n".$GLOBALS['phpgw']->db->f('ticket_details')."\n\n";
       $body .= "\n\nTicket: http://".$_SERVER['SERVER_NAME']."/egroupware/tts/viewticket_details.php?ticket_id=".$ticket_id."\n\n";
-      
 
 //      if($GLOBALS['phpgw']->db->f('t_timestamp_closed'))
 //      {
 //        $body .= 'Date Closed: '.$GLOBALS['phpgw']->common->show_date($GLOBALS['phpgw']->db->f('t_timestamp_closed'))."\n\n";
 //      }
-      $body .= stripslashes(strip_tags($GLOBALS['phpgw']->db->f('ticket_detail')))."\nt_groupnotification [".$t_groupnotification."]\n";
+      $body .= stripslashes(strip_tags($GLOBALS['phpgw']->db->f('ticket_detail')));
 
 
       // do we need to email all the users in the group assigned to this ticket?
@@ -150,23 +148,24 @@ AND `ticket_id` ='$ticket_id'");
       {
         // select group recipients
         $members  = $GLOBALS['phpgw']->accounts->member($group_id);
-        $body .= "Got in group, members is:".print_r($members,TRUE);
       }
 
       // do we need to email the owner of this ticket?
       if ($GLOBALS['phpgw']->config->config_data['ownernotification'])
       {
         // add owner to recipients
-		$members[] = array('account_id' => $GLOBALS['phpgw']->db->f('ticket_owner'));
-		$body .= "Got in owner, members is:".print_r($members,TRUE);
+        if (!in_array($GLOBALS['phpgw']->db->f('ticket_owner'),$group_members)) {
+	$members[] = array('account_id' => $GLOBALS['phpgw']->db->f('ticket_owner'));
+        }
       }
 
       // do we need to email the user who is assigned to this ticket?
-      if ($GLOBALS['phpgw']->config->config_data['assignednotification'])
+      if ($GLOBALS['phpgw']->config->config_data['assignednotification'] )
       {
         // add assigned to recipients
-      $body .= "Got in assigned, members is:".print_r($members,TRUE);
-        $members[] = array('account_id' => $t_assigned);
+        if (!in_array($t_assigned,$group_members)) {
+          $members[] = array('account_id' => $t_assigned);
+        }
       }
 
       $toarray = Array();
