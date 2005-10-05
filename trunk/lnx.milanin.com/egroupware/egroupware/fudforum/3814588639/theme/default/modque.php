@@ -1134,7 +1134,7 @@ function send_notifications($to, $msg_id, $thr_subject, $poster_login, $id_type,
 {
 	if (isset($to['EMAIL']) && (is_string($to['EMAIL']) || (is_array($to['EMAIL']) && count($to['EMAIL'])))) {
 		$do_email = 1;
-		$goto_url['email'] = '/egroupware/fudforum/3814588639/index.php?t=rview&goto='.$msg_id;
+		$goto_url['email'] = 'http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=rview&goto='.$msg_id;
 		if ($GLOBALS['FUD_OPT_2'] & 64) {
 
 			$obj = db_sab("SELECT p.total_votes, p.name AS poll_name, m.reply_to, m.subject, m.id, m.post_stamp, m.poster_id, m.foff, m.length, m.file_id, u.alias, m.attach_cnt, m.attach_cache, m.poll_cache FROM phpgw_fud_msg m LEFT JOIN phpgw_fud_users u ON m.poster_id=u.id LEFT JOIN phpgw_fud_poll p ON m.poll_id=p.id WHERE m.id=".$msg_id." AND m.apr=1");
@@ -1176,7 +1176,7 @@ function send_notifications($to, $msg_id, $thr_subject, $poster_login, $id_type,
 		$subj = 'New reply to '.$thr_subject.' by '.$poster_login;
 
 		if (!isset($body_email) && isset($do_email)) {
-			$unsub_url['email'] = '/egroupware/fudforum/3814588639/index.php?t=rview&th='.$id.'&notify=1&opt=off';
+			$unsub_url['email'] = 'http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=rview&th='.$id.'&notify=1&opt=off';
 			$body_email = 'To view unread replies goto '.$goto_url['email'].'\n\nIf you do not wish to receive further notifications about replies in this topic, please go here: '.$unsub_url['email'];
 		}
 
@@ -1194,7 +1194,7 @@ function send_notifications($to, $msg_id, $thr_subject, $poster_login, $id_type,
 			$body_icq = 'To view the topic goto:\n'.$goto_url['icq'].'\n\nTo stop receiving notifications about new topics in this forum, please go here:\n'.$unsub_url['icq'];
 		}
 		if (!isset($body_email) && isset($do_email)) {
-			$unsub_url['email'] = '/egroupware/fudforum/3814588639/index.php?t=rview&unsub=1&frm_id='.$id;
+			$unsub_url['email'] = 'http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?nt=rview&unsub=1&frm_id='.$id;
 			$body_email = 'To view the topic goto:\n'.$goto_url['email'].'\n\nTo stop receiving notifications about new topics in this forum, please go here: '.$unsub_url['email'];
 		}
 	}

@@ -3774,7 +3774,7 @@ function post_to_smiley($text)
 						$modl[] = $r[0];
 					}
 					if ($modl) {
-						send_email($NOTIFY_FROM, $modl, 'New message in forum "'.$frm->name.'" pending approval', 'A new message titled "'.$msg_post->subject.'" was just posted in a forum that you moderate. To review this message go to: /egroupware/fudforum/3814588639/index.php?t=modque\n\nThis is an automated process, do not reply to this message.\n', '');
+						send_email($NOTIFY_FROM, $modl, 'New message in forum "'.$frm->name.'" pending approval', 'A new message titled "'.$msg_post->subject.'" was just posted in a forum that you moderate. To review this message go to: http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=modque\n\nThis is an automated process, do not reply to this message.\n', '');
 					}
 				}
 				$data = file_get_contents($INCLUDE.'theme/'.$usr->theme_name.'/usercp.inc');
