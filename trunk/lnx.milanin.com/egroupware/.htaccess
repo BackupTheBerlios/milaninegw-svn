@@ -1,9 +1,0 @@
-#
-# Set 
-#
-# AllowOverride FileInfo
-# 
-# to enable parsing off this file
-# This is needed for UTF-8 support.
-#
-# AddDefaultCharset Off

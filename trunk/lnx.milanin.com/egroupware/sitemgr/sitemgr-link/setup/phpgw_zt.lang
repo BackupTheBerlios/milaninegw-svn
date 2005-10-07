@@ -1,5 +1,0 @@
-before the public web site can be viewed, you must configure the various locations and preferences.  please go to the sitemgr setup page by following this link:	sitemgr-link	zt	您必須設定各種區域與偏好來讓資訊能夠對外公開，請到網站管理員設定：
-note that you may get this message if your preferences are incorrect.  for example, if config.inc.php is not found in the directory that you specified.	sitemgr-link	zt	您如果沒有設定完成就會一直出現這個訊息，例如 config.inc.php 不在您指定的資料夾中
-sitemgr setup page	sitemgr-link	zt	網站管理設定頁面
-you need to make sure the sitemgr-link app is in the phpgroupware directory.  if you made a symbolic link... it isn't working.	sitemgr-link	zt	您必須確定網站連結應用程式在eGroupWare的資料夾中，不能夠只是透過連結指標。
-your administrator has not yet setup the web content manager for public viewing.  go bug your administrator to get their butt in gear.	sitemgr-link	zt	您的系統管理員尚未設定網站內容，您可以主動求助於他！
