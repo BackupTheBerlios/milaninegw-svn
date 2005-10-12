@@ -27,7 +27,7 @@
 	{
 		die("You need to make sure the elgg-link app is in the eGroupWare directory.");
 	}
-	$location=$_SERVER['SERVER_NAME'].'/members/profile/index.php?profile_name='.$GLOBALS['phpgw_info']['user']['account_lid'];
+	$location=$_SERVER['SERVER_NAME'].'/members/'.$GLOBALS['phpgw_info']['user']['account_lid'];
 	header("Location: http://$location");
 	
 ?>
