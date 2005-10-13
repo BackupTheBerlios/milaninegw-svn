@@ -202,7 +202,7 @@ form			{
 					padding: 7px;
 				}
 .infobox caption	{
-					background-color: #D0DADC;
+					background-color: #EDF1F1;
 					color: #bf2868;
 					vertical-align: middle;
 					text-align: center;
