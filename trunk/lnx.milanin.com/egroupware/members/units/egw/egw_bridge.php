@@ -60,7 +60,6 @@ function egw_is_new_user(){
   
   $sql = "SELECT ident FROM users WHERE ident = ".$id;
   $result = db_query($sql);
-  echo $sql;
   if (!$result[0]){
     $row=egw_get_account_info($id);
   
@@ -70,7 +69,6 @@ function egw_is_new_user(){
         $row->password."','".
         $row->email."','".
         $row->name."')";
-        echo $sql;
     $result = db_query($sql);
     if (!$result) echo mysql_error();
     
