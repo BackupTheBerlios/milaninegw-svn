@@ -173,7 +173,7 @@ form			{
 					text-decoration: underline;
 				}
 .actionbox		{
-					background-color: #eeeeee;
+					background-color: #ffffff;
 					border: 1px;
 					border-color: #000000;
 					border-style: solid;
@@ -195,7 +195,7 @@ form			{
 					
 				}
 .infobox		{
-					background-color: #eeeeee;
+					background-color: #ffffff;
 					border: 1px;
 					border-color: #000000;
 					border-style: solid;
