@@ -44,6 +44,9 @@
 		
 	// Invite-a-friend
 		require(path . "units/invite/main.php");
+		
+	// Member's Home page
+		require(path . "units/home/main.php");
 	//Egroupware bridge
                 if (egw_bridge) require(path . "units/egw/egw_bridge.php");
 ?>

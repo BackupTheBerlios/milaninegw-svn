@@ -28,7 +28,7 @@ $template['pageshell'] .= <<< END
 <script language="javascript" type="text/javascript">
 tinyMCE.init({
 	mode : "exact",
-	elements: "new_weblog_post,profiledetails[biography],profiledetails[careergoals],profiledetails[skills],new_weblog_comment",
+	elements: "home[data],new_weblog_post,profiledetails[biography],profiledetails[careergoals],profiledetails[skills],new_weblog_comment",
 	language: "it"
 });
 </script>
