@@ -51,6 +51,9 @@
 				case "longtext":
 						$run_result = nl2br(stripslashes($parameter[0]));
 						break;
+                                case "evenlongertext":
+						$run_result = nl2br(stripslashes($parameter[0]));
+						break;
 				case "keywords":
 						/* $keywords = stripslashes($parameter[0]);
 						preg_match_all("/\[\[([A-Za-z0-9 ]+)\]\]/i",$keywords,$keyword_list);

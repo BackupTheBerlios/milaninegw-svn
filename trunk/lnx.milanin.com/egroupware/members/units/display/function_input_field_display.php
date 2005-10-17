@@ -72,6 +72,9 @@
 				case "longtext":
 						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 200px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
+                                case "evenlongertext":
+						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 500px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
+						break;
 				case "richtext":
 						// Rich text editor:
 						$run_result .= <<< END

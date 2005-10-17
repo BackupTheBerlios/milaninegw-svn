@@ -2,7 +2,7 @@
 
 	// Initial profile data
 
-		$data['profile:details'][] = array("Who am I?","biography","longtext","A short introduction to you.");
+		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
 		$data['profile:details'][] = array("Email address","emailaddress","email");
 		$data['profile:details'][] = array("Work telephone","workphone","text");
@@ -23,7 +23,7 @@
 		$data['profile:details'][] = array("Company / Institution","organisation","text");
 		$data['profile:details'][] = array("Job Title","jobtitle","text");
 		$data['profile:details'][] = array("Job Description","jobdescription","text");
-		$data['profile:details'][] = array("Career Goals","careergoals","longtext","Freeform: let colleagues and potential employers know what you'd like to get out of your career.");
+		$data['profile:details'][] = array("Career Goals","careergoals","evenlongertext","Freeform: let colleagues and potential employers know what you'd like to get out of your career.");
 		$data['profile:details'][] = array("Level of Education","educationlevel","text");
 		$data['profile:details'][] = array("High School","highschool","text");
 		$data['profile:details'][] = array("University / College","university","text");

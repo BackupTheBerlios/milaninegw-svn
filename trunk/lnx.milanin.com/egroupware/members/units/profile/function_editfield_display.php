@@ -23,7 +23,7 @@ END;
 		}
 		$column1 = run("display:input_field",array("profiledetails[" . $parameter[1] . "]",$value->value,$parameter[2],$parameter[1],$value->ident,$page_owner));
 
-		$column2 = "<label>Access level:<br />";
+		$column2 = "<label>Access level:";
 		$column2 .= run("display:access_level_select",array("profileaccess[".$parameter[1] . "]",$value->access)) . "</label>";
 		
 		$run_result .= run("templates:draw", array(

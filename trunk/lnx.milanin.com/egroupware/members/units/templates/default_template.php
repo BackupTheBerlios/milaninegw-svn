@@ -28,7 +28,7 @@ $template['pageshell'] .= <<< END
 <script language="javascript" type="text/javascript">
 tinyMCE.init({
 	mode : "exact",
-	elements: "home[data],new_weblog_post,profiledetails[biography],profiledetails[careergoals],profiledetails[skills],new_weblog_comment",
+	elements: "home[data],new_weblog_post,profiledetails[biography],profiledetails[careergoals],new_weblog_comment",
 	language: "it"
 });
 </script>
@@ -371,13 +371,13 @@ END;
 
 <table width="95%" class="profiletable" align="center" style="margin-bottom: 3px">
 	<tr>
-		<td width="20%" class="fieldname">
+		<td rowspan="2" width="15%" class="fieldname">
 			{{name}}
 		</td>
-		<td width="50%">
+		<td width="85%">
 			{{column1}}
-		</td>
-		<td width="30%">
+		</td></tr><tr>
+		<td width="85%">
 			{{column2}}
 		</td>
 	</tr>

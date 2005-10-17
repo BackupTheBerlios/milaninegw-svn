@@ -15,6 +15,7 @@
 			foreach($data['profile:details'] as $field) {
 				$body .= run("profile:editfield:display",$field);
 			}
+			
 	
 		}
 	
