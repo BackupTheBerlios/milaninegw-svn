@@ -11,6 +11,29 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 	<?php include ("includes/metadata.php"); ?>
 	<link href="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/favicon.ico" />
+	<script type="text/javascript">
+          function toggleLayer(whichLayer)
+          {
+            if (document.getElementById)
+            {
+          // this is the way the standards work
+              var style2 = document.getElementById(whichLayer).style;
+          style2.display = style2.display? "":"block";
+            }
+            else if (document.all)
+            {
+          // this is the way old msie versions work
+              var style2 = document.all[whichLayer].style;
+          style2.display = style2.display? "":"block";
+            }
+            else if (document.layers)
+            {
+          // this is the way nn4 works
+              var style2 = document.layers[whichLayer].style;
+          style2.display = style2.display? "":"block";
+            }
+          }
+        </script>
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 	<a name="up" id="up"></a>

@@ -550,9 +550,14 @@ a.pagenav:hover {
 	font-size: 8pt;
 }
 tr.header {
-        background: url("http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg";
-        background-image: url("http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg";
+        background: url("http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
+        background-image: url("http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
         }
 img.logo {
         border: 2px solid #990041;
+}
+div#OnlinersList
+{
+margin: 0px 20px 0px 20px;
+display: none;
 }
