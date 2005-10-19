@@ -10,6 +10,7 @@
 		$data['profile:details'][] = array("Mobile telephone","mobphone","text");
 		$data['profile:details'][] = array("Official website address","workweb","web","The URL to your official website, if you have one.");
 		$data['profile:details'][] = array("Personal website address","personalweb","web","The URL to your personal website, if you have one.");
+		$data['profile:details'][] = array("LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
 		$data['profile:details'][] = array("ICQ number","icq","icq");
 		$data['profile:details'][] = array("MSN chat","msn","msn");
 		$data['profile:details'][] = array("AIM screenname","aim","aim");

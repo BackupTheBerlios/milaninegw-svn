@@ -109,6 +109,11 @@
 						}
 						$run_result = "<a href=\"" . $run_result . "\" target=\"_blank\">" . $run_result . "</a>";
 						break;
+                                case "linkedin":
+						$run_result = $parameter[0];
+						$run_result = "<a href=\"https://www.linkedin.com/profile?viewProfile=&key=" 
+                                                . $run_result . "\" target=\"_blank\"><img src=\"/logos/linkedin-logo-smaller.gif\"/></a>";
+						break;
 			}
 			
 		}

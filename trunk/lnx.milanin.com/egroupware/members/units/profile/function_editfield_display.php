@@ -2,8 +2,7 @@
 
 	global $page_owner;
 
-	if (sizeof($parameter) >= 2) {
-	
+	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin' ) {
 		$value = db_query("select * from profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
 		$value = $value[0];
 		
@@ -21,6 +20,7 @@ END;
 		if (sizeof($parameter) < 3) {
 			$parameter[2] = "text";
 		}
+		
 		$column1 = run("display:input_field",array("profiledetails[" . $parameter[1] . "]",$value->value,$parameter[2],$parameter[1],$value->ident,$page_owner));
 
 		$column2 = "<label>Access level:";

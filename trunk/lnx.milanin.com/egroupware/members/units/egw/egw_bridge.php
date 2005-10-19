@@ -54,7 +54,8 @@ function egw_get_account_info($id){
        'account_status AS active,'.
        'account_type AS user_type,'.
        'CONCAT(account_firstname,\' \',account_lastname) AS name,'.
-       'account_email AS email '.
+       'account_email AS email,'.
+       'account_linkedin AS linkedin '.
        'FROM '.$egw['db_name'].'.'.$egw['db_tables_accounts'].
        ' WHERE account_id ='.$id;
   $result = db_query($sql);
@@ -84,6 +85,16 @@ function egw_is_new_user(){
         $row->email."','".
         $row->name."')";
     $result = db_query($sql);
+    if (!$result) echo mysql_error();
+    
+    $sql = "INSERT INTO profile_data (ident, owner, access, name, value) values(".
+        '\'\','.
+        $row->ident.",".
+        '\'PUBLIC\','.
+        '\'linkedin\','.
+        '\''.$row->linkedin.'\')';
+    $result = db_query($sql);
+    
     if (!$result) echo mysql_error();
     
     return 1;
