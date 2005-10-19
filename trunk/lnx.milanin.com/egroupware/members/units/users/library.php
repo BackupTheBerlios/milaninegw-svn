@@ -39,7 +39,7 @@
     }
 
     // Already logged in, we're done
-      if($_SESSION['userid'] > 0) return 1;
+      //if($_SESSION['userid'] > 0) return 1;
       if (egw_bridge && egw_get_id_by_lid() > 0){
         egw_is_new_user();
         $egw_user=egw_get_account_info(egw_get_id_by_lid());
