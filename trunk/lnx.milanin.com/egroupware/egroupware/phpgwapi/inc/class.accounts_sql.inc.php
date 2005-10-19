@@ -101,6 +101,7 @@
 			$this->data['person_id']         = $this->db->f('person_id');
 			$this->data['account_primary_group'] = $this->db->f('account_primary_group');
 			$this->data['email']             = $this->db->f('account_email');
+			$this->data['linkedin']          = $this->db->f('account_linkedin');
 
 			return $this->data;
 		}
@@ -120,6 +121,7 @@
 				'person_id'         => $this->data['person_id'],
 				'account_primary_group' => $this->data['account_primary_group'],
 				'account_email'     => $this->data['email'],
+				'account_linkedin'     => $this->data['linkedin'],
 			),array(
 				'account_id'        => $this->account_id
 			),__LINE__,__FILE__);
@@ -222,6 +224,7 @@
 					'person_id'         => $this->db->f('person_id'),
 					'account_primary_group' => $this->db->f('account_primary_group'),
 					'account_email'     => $this->db->f('account_email'),
+					'account_linkedin'     => $this->db->f('account_linkedin'),
 				);
 			}
 			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
