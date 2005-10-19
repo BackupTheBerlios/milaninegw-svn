@@ -5,7 +5,7 @@ Copyright: Tabolsky Michael (www.gfdsa.org) and Valeria (lera.gfdsa.org)
 License: GPL (http://www.gnu.org/licenses/gpl.html)
 */
 //Here goes config to access egw DB
-$egw['db_name']='Sql73134-3';
+$egw['db_name']='Sql73134_1';
 $egw['db_user']='Sql73134';
 $egw['db_password']='4e455633';
 $egw['db_tables_accounts']='phpgw_accounts';
