@@ -69,6 +69,7 @@
 					'teaser'  => @htmlspecialchars($this->db->f('news_teaser', True),ENT_COMPAT,$GLOBALS['phpgw']->translation->charset()),
 					'content' => $this->db->f('news_content',True),
 					'is_html' => ($this->db->f('is_html') ? True : False),
+					'cat_id'  => $this->db->f('news_cat'),
 				);
 			}
 			return $news;

@@ -115,10 +115,12 @@
 
 			foreach($news as $newsitem)
 			{
+				//echo $newsitem['cat_id'];
 				$var = Array(
 					'subject' => $newsitem['subject'],
 					'submitedby' => 'Submitted by ' . $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']) . ' on ' . $GLOBALS['phpgw']->common->show_date($newsitem['date']),
 					'content' => $newsitem['content'],
+					'category' => lang('category').": ".$this->bo->catbo->id2name($newsitem['cat_id']),
 				);
 
 				$this->template->set_var($var);

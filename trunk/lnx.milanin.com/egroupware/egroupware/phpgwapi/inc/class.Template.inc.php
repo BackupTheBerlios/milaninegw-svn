@@ -72,7 +72,7 @@
 			}
 			if (!is_dir($root))
 			{
-				$this->halt("set_root: $root is not a directory.");
+				$this->halt("set_root: [$root] is not a directory.");
 				return false;
 			}
 			$this->root = $root;

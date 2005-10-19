@@ -54,7 +54,7 @@
 	** performance. 
 	** Your choices are 'db' or 'php4'
 	*/
-	$GLOBALS['phpgw_info']['server']['sessions_type'] = 'php4';
+	$GLOBALS['phpgw_info']['server']['sessions_type'] = 'db';
 
 	/* Select which login template set you want, most people will use default */
 	$GLOBALS['phpgw_info']['login_template_set'] = 'idots';

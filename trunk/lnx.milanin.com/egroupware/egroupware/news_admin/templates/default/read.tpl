@@ -16,15 +16,21 @@
     <td align="left" width="99%">
      <b>{subject}</b>&nbsp;
     </td>
-    <td align="left" width="1%" bgcolor="#FFFFFF">
+    <td align="left" width="1%" >
      &nbsp;
     </td>
    </tr>
    <tr>
-    <td width="100%" colspan="3">
+    <td width="100%" colspan="3" bgcolor="#efefef">
      {submitedby}
      <p>{content}</p>
-     <p>&nbsp;</p>
+     
+	 <p>{category}</p>
+	 
+    </td>
+   </tr>
+   <tr>
+   	<td colspan="3" style="border-top:1px solid #c7c3c7;">&nbsp;
     </td>
    </tr>
 <!-- END row -->
