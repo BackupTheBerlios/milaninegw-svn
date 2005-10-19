@@ -36,10 +36,27 @@ class module_members_count extends Module
                 }
                 
                 $return['online']= $GLOBALS['phpgw']->session->list_sessions(0,'','session_logintime');
+		$drop='<div id="OnlinersList">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                 ';
+		$online=Array();
+		foreach ($return['online'] as $onliner){
+                  if (!in_array($onliner['session_lid'],$online)){
+                    $online[]=$onliner['session_lid'];
+                    $drop.="<tr><td><a href=\"/members/".$onliner['session_lid']."\">".
+                    $GLOBALS['phpgw']->accounts->id2name($GLOBALS['phpgw']->accounts->name2id($onliner['session_lid'])).
+                    "</a></td></tr>\n";
+                  }
+                }
+                $drop.="</table>
+				</div>";
 		
                 return "<table class=\"moduletable\"><!--tr><th colspan=\"2\">".lang("Members")."</th></tr--><tr>\n<td>".lang("Registered").
                         "</td><td>".$return['total']."</td></tr>\n".
-                        "<tr><td>".lang("Online")."</td><td>".sizeof($return['online'])."</td></tr><tr><th colspan=\"2\"></th></tr>\n</table>";
+                        "<tr><td>".
+                        "<a href='' title='Show List' onClick=\"toggleLayer('OnlinersList')\">".lang("Online")."</a></td>".
+                        "<td>".sizeof($return['online'])."</td></tr><tr><th colspan=\"2\">".
+                        $drop."</th></tr>\n</table>";
 	}
 
 }
