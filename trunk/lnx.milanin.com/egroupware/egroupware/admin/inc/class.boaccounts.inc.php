@@ -588,6 +588,7 @@
 					'loginshell'            => $_POST['loginshell'],
 					'account_expires_never' => $_POST['never_expires'],
 					'email'                 => $_POST['account_email'],
+					'linkedin'              => $_POST['account_linkedin'],
 					/* 'file_space' => $_POST['account_file_space_number'] . "-" . $_POST['account_file_space_type'] */
 				);
 				if ($userData['account_primary_group'] && (!isset($userData['account_groups']) || !in_array($userData['account_primary_group'],$userData['account_groups'])))

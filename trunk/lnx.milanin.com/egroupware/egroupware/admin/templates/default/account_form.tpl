@@ -45,8 +45,13 @@
 			     <td>{lang_email}</td>
 			     <td>{account_email}</td>
 			    </tr>
+			    
+                            <tr class="row_off">
+			     <td colspan="2" align="right">{lang_linkedin}</td>
+			     <td colspan="2">{account_linkedin}</td>
+			    </tr>
 	
-			    <tr class="row_off">
+			    <tr class="row_on">
 			     <td>{lang_groups}</td>
 			     <td>{groups_select}&nbsp;</td>
 			     <td>{lang_primary_group}</td>
