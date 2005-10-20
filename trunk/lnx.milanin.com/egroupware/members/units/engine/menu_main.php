@@ -1,11 +1,11 @@
 <?php
 
-/*	$run_result .= run("templates:draw", array(
+	$run_result .= run("templates:draw", array(
 						'context' => 'menuitem',
 						'name' => 'Home',
-						'location' => '/'
+						'location' => '/egroupware'
 #url . 'home.php'
 					)
 					);
-*/
+
 ?>
