@@ -86,6 +86,7 @@
 			$config = CreateObject('phpgwapi.config','felamimail');
 			$config->read_repository();
 			$this->profileID = $config->config_data['profileID'];
+			print "<?--".$this->profileID."-->";
 			
 		}
 		
@@ -398,6 +399,7 @@
 			$felamimailConfig = $config->config_data;
 			
 			#_debug_array($felamimailConfig);
+                        
 			
 			if(!isset($felamimailConfig['profileID']))
 			{
@@ -1058,7 +1060,7 @@
 			
 			if(!$this->mailPreferences['emailConfigValid'])
 			{
-				return lang('no valid emailprofile selected!!');
+				return lang('no valid emailprofile selected!!')."<pre>".print_r($this->mailPreferences,1)."</pre>";
 			}
 			
 			if($_folderName == '' && !$_adminConnection)

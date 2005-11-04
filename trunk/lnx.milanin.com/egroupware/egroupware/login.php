@@ -112,7 +112,10 @@
 			case 5:
 				return '<font color="FF0000">' . lang('Bad login or password') . '</font>';
 				break;
-			case 98:
+			case 97:
+				return '<font color="FF0000">' . lang('You did not yet agree with the privacy policy') . '</font>';
+				break;
+                        case 98:
 				return '<font color="FF0000">' . lang('Account is expired') . '</font>';
 				break;
 			case 99:
@@ -352,6 +355,18 @@
 	$tmpl->set_var('registration_url',$GLOBALS['phpgw_info']['server']['webserver_url'] . '/registration/');
 	$tmpl->set_var('version',$GLOBALS['phpgw_info']['server']['versions']['phpgwapi']);
 	$tmpl->set_var('cd',check_logoutcode($_GET['cd']));
+	if ($_GET['cd']==97){
+          /*$GLOBALS['phpgw']->db->query('select data from other_data where lang=\''.
+                                          $GLOBALS['phpgw_info']['user']['preferences']['common']['lang'].
+                                          '\' and name = \'privacy_confirmation_text\'');*/
+          
+          $GLOBALS['phpgw']->db->query('select data from other_data where name = \'privacy_confirmation_text\'');
+          $GLOBALS['phpgw']->db->next_record;
+          $tmpl->set_var('privacy_confirmation','<tr><td colspan=4><pre>'.
+                          $GLOBALS['phpgw']->db->Query_ID->fields['data'].
+                          '</pre></td></tr><tr><td colspan=3 align="right">'.lang('i agree').
+                          ':&nbsp</td><td align="left"><input name="privacy_confirmed" id="privacy_confirmed" type="checkbox" value="1"/></td></tr>');
+        }
 	$tmpl->set_var('cookie',$last_loginid);
 
 	$tmpl->set_var('lang_username',lang('username'));

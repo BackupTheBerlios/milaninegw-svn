@@ -82,20 +82,22 @@
 			</td>
 		</tr>
 		<tr>
-			<td  colspan="3">
+			<td  colspan="4">
 				<input type="hidden" name="passwd_type" value="text">
 				<input type="hidden" name="account_type" value="u">
 			</td>
-			<td rowspan="4">
+			<!--td rowspan="5">
 				<img src="phpgwapi/templates/{template_set}/images/password.png" />
-			</td>
+			</td-->
 		</tr>
+		
 <!-- BEGIN language_select -->
 		<tr>
 			<td align="right">{lang_language}:&nbsp;</td>
 			<td align="left" colspan="2">{select_language}</td>
 		</tr>
 <!-- END language_select -->
+		{privacy_confirmation}
 		<tr>
 			<td align="right">{lang_username}:&nbsp;</td>
 			<td align="left"><input name="login" value="{cookie}" style="width: 100px; border: 1px solid silver;"></td>

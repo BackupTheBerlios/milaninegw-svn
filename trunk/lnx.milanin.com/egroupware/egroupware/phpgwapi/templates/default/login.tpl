@@ -37,6 +37,7 @@
 				<TR bgcolor="#e6e6e6">
 					<TD colspan="3" align="CENTER">{cd}</TD>
 				</TR>
+                                {privacy_confirmation}
 				<TR bgcolor="#e6e6e6">
 					<TD align="RIGHT"><font color="#000000">{lang_username}:&nbsp;</font></TD>
 					<TD><input name="login" value="{cookie}"></TD>

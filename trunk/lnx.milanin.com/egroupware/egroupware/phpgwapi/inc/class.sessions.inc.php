@@ -473,11 +473,17 @@
 			$user_ip = $this->getuser_ip();
 				
 			$this->account_id = $GLOBALS['phpgw']->accounts->name2id($this->account_lid);
-
+                        //Privacy confirmation
+                        $this->db=$GLOBALS['phpgw']->db;
+                        $this->db->query('select state from privacy_confirmations where owner =\''.$this->account_id.'\'');
+                        $this->db->next_record;
+                        if ($this->db->Query_ID->fields['state']==1){
+                            $this->privacy_confirmed=1;
+                        }
 			if (($blocked = $this->login_blocked($login,$user_ip)) ||	// too many unsuccessful attempts
 				$GLOBALS['phpgw_info']['server']['global_denied_users'][$this->account_lid] ||
 				!$GLOBALS['phpgw']->auth->authenticate($this->account_lid, $this->passwd, $this->passwd_type) ||
-				$this->account_id && $GLOBALS['phpgw']->accounts->get_type($this->account_id) == 'g')
+				$this->account_id && $GLOBALS['phpgw']->accounts->get_type($this->account_id) == 'g' )
 			{
 				$this->reason = $blocked ? 'blocked, too many attempts' : 'bad login or password';
 				$this->cd_reason = $blocked ? 99 : 5;
@@ -485,6 +491,16 @@
 				$this->log_access($this->reason,$login,$user_ip,0);	// log unsuccessfull login
 				return False;
 			}
+			if (!$this->privacy_confirmed){
+                          if (!$_POST['privacy_confirmed']==1){
+                            $this->reason = 'Not confirmed to privacy';
+                            $this->cd_reason = 97;
+                            return False;
+                          }else{
+                            $GLOBALS['phpgw']->db->query('insert into privacy_confirmations (id,owner,date,state) values (\'\','
+                                                          .$this->account_id.','.time().',1)');
+                          }
+                        }
 
 			if (!$this->account_id && $GLOBALS['phpgw_info']['server']['auto_create_acct'] == True)
 			{

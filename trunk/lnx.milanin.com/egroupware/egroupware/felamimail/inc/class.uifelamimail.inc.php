@@ -432,7 +432,8 @@
 			
 			$profileList = $boemailadmin->getProfileList();
 			$profileID = $this->bofelamimail->getEMailProfile();
-			
+			//print "<!--".print_r(,1)."-->";
+                        echo "<!--\$profileID $profileID-->";
 			$this->display_app_header();
 			
 			$this->t->set_file(array("body" => "selectprofile.tpl"));

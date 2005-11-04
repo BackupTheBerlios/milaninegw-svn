@@ -1740,7 +1740,7 @@
 				}
 
 				$notes  = '<TEXTAREA cols="60" name="entry[notes]" rows="4">' . $notes . '</TEXTAREA>';
-				$label  = '<TEXTAREA cols="60" name="entry[label]" rows="6">' . $label . '</TEXTAREA>';
+				$label  = '<TEXTAREA cols="60" name="entry[label]" rows="60">' . $label . '</TEXTAREA>';
 				$pubkey = '<TEXTAREA cols="60" name="entry[pubkey]" rows="6">' . $pubkey . '</TEXTAREA>';
 			}
 			else
