@@ -366,8 +366,12 @@
                           $GLOBALS['phpgw']->db->Query_ID->fields['data'].
                           '</pre></td></tr><tr><td colspan=3 align="right">'.lang('i agree').
                           ':&nbsp</td><td align="left"><input name="privacy_confirmed" id="privacy_confirmed" type="checkbox" value="1"/></td></tr>');
+          $tmpl->set_var('divLoginboxStyle','divPrivacyLoginbox');
+        } else {
+          $tmpl->set_var('divLoginboxStyle','divLoginbox');
         }
 	$tmpl->set_var('cookie',$last_loginid);
+	
 
 	$tmpl->set_var('lang_username',lang('username'));
 	$tmpl->set_var('lang_password',lang('password'));

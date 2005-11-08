@@ -67,7 +67,7 @@
 <!-- <table class=sidebox cellspacing=1 cellpadding=0  border=1  align=center> -->
 
 
-	<table class="divLoginbox" cellspacing="0" cellpadding="0" border="0" align="center">
+	<table class="{divLoginboxStyle}" cellspacing="0" cellpadding="0" border="0" align="center">
 	<tr> 
 		<td class="divLoginboxHeader" style="border-bottom: #9c9c9c 1px solid;" align="center">{website_title}</td>
 	</tr>
