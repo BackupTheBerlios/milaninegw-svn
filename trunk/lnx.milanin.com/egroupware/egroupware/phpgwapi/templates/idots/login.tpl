@@ -10,21 +10,6 @@
 <link rel="icon" href="phpgwapi/templates/idots/images/favicon.ico" type="image/x-ico">
 <link rel="shortcut icon" href="phpgwapi/templates/idots/images/favicon.ico">
 <title>{website_title} - Login</title>
-<style type="text/css">
-
-/*body 
-{
-	height:100%;
-}
-*/
-
-
-#divMain
-{
-	height:85%;
-}
-
-</style>
 
 		<!-- this solves the internet explorer png-transparency bug, but only for ie 5.5 and higher --> 
 		<!--[if gte ie 5.5000]>
@@ -36,7 +21,7 @@
 <body bgcolor="#ffffff">
 <div id="divLogo"><a href="{logo_url}" target="_blank"><img src="{logo_file}" border="0" alt="{logo_title}" title="{logo_title}"/></a></div>
 
-<div id="divMain"style= "background-repeat:no-repeat;background-position: center center;background-image:url(./phpgwapi/templates/idots/images/login-background.jpg)">
+<div id="{divMain}">
 	<div id="divAppIconBar">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
