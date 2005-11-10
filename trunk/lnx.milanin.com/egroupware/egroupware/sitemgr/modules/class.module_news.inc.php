@@ -62,7 +62,8 @@
 				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
 			}
 			$bonews = CreateObject('news_admin.bonews');
-
+			$cat = createobject('phpgwapi.categories','','news_admin');
+			$my_cat = $cat->return_single($arguments['category']);
 			$this->template = Createobject('phpgwapi.Template',$this->find_template_dir());
 			$this->template->set_file('news','newsblock.tpl');
 			$this->template->set_block('news','NewsBlock','newsitem');
@@ -125,7 +126,10 @@
 					'<a href="' . $this->link($link_data) . '">' . lang('More news') . '</a>'
 				);
 			}
-			return $this->template->parse('out','news');
+			return '<div class="contentheading" width="100%">'
+                                .$my_cat[0]['name']
+                                .'</div>'
+                                .$this->template->parse('out','news');
 		}
 
 		function render($newsitem)
