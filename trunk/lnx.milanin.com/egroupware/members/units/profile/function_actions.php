@@ -8,7 +8,7 @@
 		
 			if (isset($_POST))			
 			if (isset($_POST['profiledetails'])) {
-				db_query("delete from profile_data where owner = '".$page_owner."' and not name = 'linkedin'");
+				db_query("delete from profile_data where owner = '".$page_owner."' and name != 'linkedin'");
 				foreach($_POST['profiledetails'] as $field => $value) {
 
 					if ($value != "") {
