@@ -292,6 +292,57 @@
 			return $account_search[$serial]['data'];
 		}
 
+function get_count($_type='both')
+
+{
+$count=accounts_::get_count($_type);
+return $count;
+
+
+}
+
+function get_online_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+
+{
+			//echo "<p>accounts::get_online_list(".print_r($_type,True).",start='$start',sort='$sort',order='$order',query='$query',offset='$offset')</p>\n";
+			$this->setup_cache();
+			$account_list = &$this->cache['account_list'];
+
+			// For XML-RPC
+			if (is_array($_type))
+			{
+				$p      = $_type;
+				$_type  = $p['type'];
+				$start  = $p['start'];
+				$order  = $p['order'];
+				$query  = $p['query'];
+				$offset = $p['offset'];
+				$query_type = $p['query_type'];
+			}
+			else
+			{
+				$p = array(
+					'type' => $_type,
+					'start' => $start,
+					'order' => $order,
+					'query' => $query,
+					'offset' => $offset,
+					'query_type' => $query_type ,
+				);
+			}
+			$serial = serialize($p);
+
+			if (isset($account_list[$serial]))
+			{
+				$this->total = $account_list[$serial]['total'];
+			}
+			else
+			{
+				$account_list[$serial]['data'] = accounts_::get_online_list($_type,$start,$sort,$order,$query,$offset,$query_type);
+				$account_list[$serial]['total'] = $this->total;
+			}
+			return $account_list[$serial]['data'];
+		}
 
 		function get_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 		{
