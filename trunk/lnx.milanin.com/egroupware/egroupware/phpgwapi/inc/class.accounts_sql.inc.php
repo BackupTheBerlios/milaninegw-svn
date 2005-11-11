@@ -136,6 +136,130 @@
 			$this->db->delete($this->table,array('account_id'=>$account_id),__LINE__,__FILE__);
 			$this->db->unlock();
 		}
+		function get_count($_type='both')
+
+{
+
+			switch($_type)
+			{
+				case 'accounts':
+					$whereclause = "WHERE account_type = 'u'";
+					break;
+				case 'groups':
+					$whereclause = "WHERE account_type = 'g'";
+					break;
+				default:
+					$whereclause = '';
+			}
+			
+			
+			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
+			$this->db->next_record();
+			$total = $this->db->f(0);
+			return $total;
+		}
+
+		function get_online_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+
+{
+			if (! $sort)
+			{
+				$sort = "DESC";
+			}
+
+			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
+			{
+				$orderclause = "ORDER BY $order $sort";
+			}
+			else
+			{
+				$orderclause = "ORDER BY account_lid ASC";
+			}
+
+			switch($_type)
+			{
+				case 'accounts':
+					$whereclause = "WHERE account_type = 'u'";
+					break;
+				case 'groups':
+					$whereclause = "WHERE account_type = 'g'";
+					break;
+				default:
+					$whereclause = '';
+			}
+
+			if ($query)
+			{
+				if ($whereclause)
+				{
+					$whereclause .= ' AND ( ';
+				}
+				else
+				{
+					$whereclause = ' WHERE ( ';
+				}
+				switch($query_type)
+				{
+					case 'all':
+					default:
+						$query = '%'.$query;
+						// fall-through
+					case 'start':
+						$query .= '%';
+						// fall-through
+					case 'exact':
+						$query = $this->db->quote($query);
+						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
+						break;
+					case 'firstname':
+					case 'lastname':
+					case 'lid':
+					case 'email':
+						$query = $this->db->quote('%'.$query.'%');
+						$whereclause .= " account_$query_type LIKE $query )";
+						break;
+				}
+			}
+
+			$sql = "SELECT distinct `account_id`, `account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, `account_lastlogin`, `account_lastloginfrom`, `account_lastpwd_change`, `account_status`, `account_expires`, `account_type`, `person_id`, `account_primary_group`, `account_email`, `account_linkedin`  FROM `phpgw_sessions`, `phpgw_accounts` $whereclause and session_lid=account_lid and session_action NOT LIKE 'egroupware/login.php' and session_flags = 'N' $orderclause";
+			
+			
+			
+			if ($offset)
+			{
+				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);
+			}
+			elseif (is_numeric($start))
+			{
+				$this->db->limit_query($sql,$start,__LINE__,__FILE__);
+			}
+			else
+			{
+				$this->db->query($sql,__LINE__,__FILE__);
+			}
+
+			while ($this->db->next_record())
+			{
+				$accounts[] = Array(
+					'account_id'        => $this->db->f('account_id'),
+					'account_lid'       => $this->db->f('account_lid'),
+					'account_type'      => $this->db->f('account_type'),
+					'account_firstname' => $this->db->f('account_firstname'),
+					'account_lastname'  => $this->db->f('account_lastname'),
+					'account_status'    => $this->db->f('account_status'),
+					'account_expires'   => $this->db->f('account_expires'),
+					'person_id'         => $this->db->f('person_id'),
+					'account_primary_group' => $this->db->f('account_primary_group'),
+					'account_email'     => $this->db->f('account_email'),
+					'account_linkedin'     => $this->db->f('account_linkedin'),
+				);
+			}
+			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
+			$this->db->next_record();
+			$this->total = $this->db->f(0);
+
+			return $accounts;
+		}
 
 		function get_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 		{
