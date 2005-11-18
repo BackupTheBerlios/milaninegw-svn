@@ -1,5 +1,5 @@
 <?php
-	/**************************************************************************\
+	/**************************************************************************
 	* eGroupWare API - Accounts manager for SQL                                *
 	* Written by Joseph Engo <jengo@phpgroupware.org>                          *
 	*        and Dan Kuykendall <seek3r@phpgroupware.org>                      *
@@ -22,7 +22,7 @@
 	* You should have received a copy of the GNU Lesser General Public License *
 	* along with this library; if not, write to the Free Software Foundation,  *
 	* Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA            *
-	\**************************************************************************/
+	**************************************************************************/
 	/* $Id: class.accounts_sql.inc.php,v 1.114.2.4 2004/08/31 15:16:56 mgalgoci Exp $ */
 
 	/*!
@@ -158,6 +158,16 @@
 			$total = $this->db->f(0);
 			return $total;
 		}
+		
+		function get_online_count($_type='both')
+
+{
+			
+			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions");
+			$this->db->next_record();
+			$total = $this->db->f(0);
+			return $total;
+		}		
 
 		function get_online_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 
@@ -169,7 +179,7 @@
 
 			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
 			{
-				$orderclause = "ORDER BY $order $sort";
+				$orderclause = "ORDER BY $order $sort, account_lid ASC";
 			}
 			else
 			{
@@ -221,9 +231,9 @@
 				}
 			}
 
-			$sql = "SELECT distinct `account_id`, `account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, `account_lastlogin`, `account_lastloginfrom`, `account_lastpwd_change`, `account_status`, `account_expires`, `account_type`, `person_id`, `account_primary_group`, `account_email`, `account_linkedin`  FROM `phpgw_sessions`, `phpgw_accounts` $whereclause and session_lid=account_lid and session_action NOT LIKE 'egroupware/login.php' and session_flags = 'N' $orderclause";
+			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause $orderclause";
 			
-			
+
 			
 			if ($offset)
 			{
@@ -243,6 +253,7 @@
 				$accounts[] = Array(
 					'account_id'        => $this->db->f('account_id'),
 					'account_lid'       => $this->db->f('account_lid'),
+					'account_pwd'       => $this->db->f('account_pwd'),
 					'account_type'      => $this->db->f('account_type'),
 					'account_firstname' => $this->db->f('account_firstname'),
 					'account_lastname'  => $this->db->f('account_lastname'),
