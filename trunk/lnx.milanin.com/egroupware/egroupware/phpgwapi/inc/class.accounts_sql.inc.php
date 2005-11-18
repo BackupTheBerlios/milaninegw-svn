@@ -143,10 +143,10 @@
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u'";
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 35 AND account_status = 'A'";
 					break;
 				case 'groups':
-					$whereclause = "WHERE account_type = 'g'";
+					$whereclause = "WHERE account_type = 'g' AND";
 					break;
 				default:
 					$whereclause = '';
@@ -189,7 +189,7 @@
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u'";
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 35 AND account_status = 'A' AND account_lid != 'anonymous'";
 					break;
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
