@@ -164,9 +164,7 @@
 {
 			
 			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions". 
-                        //" WHERE session_dla <= '" .
-                        //(time() - $GLOBALS['phpgw_info']['server']['sessions_timeout']).
-                                 " WHERE session_flags !='A' AND session_lid != 7");
+                                 " WHERE session_flags !='A' AND session_lid != 'admin'");
                                 
 			$this->db->next_record();
 			$total = $this->db->f(0);
