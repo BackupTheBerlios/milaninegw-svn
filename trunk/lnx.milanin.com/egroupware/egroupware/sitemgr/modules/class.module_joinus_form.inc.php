@@ -57,8 +57,8 @@
 					
 					$query = "INSERT INTO phpgw_accounts 
 					(`account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, 
-					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`)
-					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '$p_email', '-1', 0)";
+					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`)
+					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '$p_email', '-1', 0,'')";
 					
 					$result = mysql_query ($query, $mysql_link) or die ($query."<br>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
@@ -93,7 +93,7 @@
 					$mailer->ClearAddresses();
 
 					
-					$content .= "<h3>Your registration completed successfully</h3>";
+					$content .= "<h3>Your request for registration were sent successfully</h3>";
 					unset ($_POST);
 						
 				}
