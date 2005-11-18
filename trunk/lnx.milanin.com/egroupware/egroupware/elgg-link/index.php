@@ -46,7 +46,7 @@ $members_reg_count=$GLOBALS['phpgw']->accounts->get_count('accounts');
 
 $members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts');
 
-		echo "<table><tr class=divSideboxEntry><th colspan=11>".lang("Members")." online: ".$members_online_count." <p>".lang("Registered")." total: ".$members_reg_count."<p></th></tr>n";
+		echo "<table><tr class=divSideboxEntry><th colspan=11>".lang("Members")." online: ".$members_online_count." <p>".lang("Registered")." total: ".$members_reg_count."<p></th></tr>\n";
 		foreach ($members['online'] as $member){
                   if ($member['account_status'] == "A") {
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
@@ -98,7 +98,7 @@ $pages_count = round($members_reg_count/$offset_page);
 if (($pages_count*$offset_page) < $members_reg_count){    
 $pages_count = $pages_count +1;          
 }
-echo "<p><table><tr class=divSideboxEntry><th colspan=11>Pages: ".$pages_count."</th></tr>n";
+echo "<p><table><tr class=divSideboxEntry><th colspan=11>Pages: ".$pages_count."</th></tr>\n";
 echo "<tr class=divSideboxEntry colspan=".$pages_count.">";
 
 for($x = 0;$x < $pages_count;$x++)
