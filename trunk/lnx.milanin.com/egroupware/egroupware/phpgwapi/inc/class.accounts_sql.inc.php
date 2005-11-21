@@ -163,9 +163,21 @@
 
 {
 			
-			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions". 
-                                 " WHERE session_flags !='A' AND session_lid != 'admin'");
-                                
+			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions WHERE session_flags !='A' AND session_lid != 'admin'");
+
+			//$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions". 
+      //                           " WHERE session_flags !='A' AND session_lid != 'admin'");
+
+			$this->db->next_record();
+			$total = $this->db->f(0);
+			return $total;
+		}		
+		
+		function get_guest_count($_type='both')
+
+{
+			
+			$this->db->query("SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A'");
 			$this->db->next_record();
 			$total = $this->db->f(0);
 			return $total;
@@ -232,6 +244,8 @@
 						break;
 				}
 			}
+
+//$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause and account_lid not like 'anonymous' $orderclause";
 
 			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
 			
