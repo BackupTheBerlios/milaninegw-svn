@@ -72,7 +72,7 @@ $members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts');
 
 $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
 
-		echo "<table><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
+		echo "<table align=\"center\"><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
 		foreach ($members['online'] as $member){
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
                     $linkedIn_user_location='https://www.linkedin.com/profile?viewProfile=&key='.$member[account_linkedin];
@@ -83,37 +83,44 @@ $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
                     if ($member['account_pwd'] != null)
                     $user_status="<b>";
  
-                    echo "<td>";
-                    echo ($member['account_pwd'] != null) ? "<img src='/egroupware/fudforum/3814588639/theme/default/images/online.gif'>": "<img src='/egroupware/fudforum/3814588639/theme/default/images/offline.gif'>";
-                    echo "</td>";
+                    echo "<td>\n";
+                    echo ($member['account_pwd'] != null) ? "<img src='/egroupware/elgg-link/templates/default/images/online.gif'>": "<img src='/egroupware/elgg-link/templates/default/images/offline.gif'>";
+                    echo "</td>\n";
 
-                    echo "<td>&nbsp;</td>";
+                    echo "<td>&nbsp;</td>\n";
 
-                    echo "<td>".$user_status.($member['account_firstname'])." ".($member['account_lastname'])."</td>";
-                    
-                    echo "<td>&nbsp;</td>";
-                    
-                    echo "<td><a href=".($user_location)." title='view profile: ".($member['account_lid'])."' target=_blank>";
-                    echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_about.gif'>";
-                    echo "</a></td>";
-                    
-                    echo "<td>&nbsp;</td>";
-
-                    echo "<td><a href=".($linkedIn_user_location)." title='view LinkedIn profile: ".($member['account_lid'])."' target=_blank>";
-                    echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/linkedin_logo.gif'>";
-                    echo "</a></td>";
-                    
-                    echo "<td>&nbsp;</td>";
-                    
-                    echo "<td><a href=".($emailuser_location)." title='send e-mail to: ".($member['account_lid'])."' target=_blank>";
-                    echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_email.gif'>";
-                    echo "</a></td>";
-                    
-                    echo "<td>&nbsp;</td>";
-                    
-                    echo "<td><a href=".($pmuser_location)." title='send private message to: ".($member['account_lid'])."' target=_blank>";
-                    echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif'>";
-                    echo "</a></td>";
+                    echo "<td>"
+                    echo "<i>" if $member['account_status'] == 'A';
+                    echo $user_status.($member['account_firstname'])." ".($member['account_lastname']);
+                    echo echo "</i>" if $member['account_status'] == 'A';
+                    echo "</td>\n";
+                    if $member['account_status'] != 'A'{
+                      echo "<td>&nbsp;</td>\n";
+                      
+                      echo "<td><a href=".($user_location)." title='view profile: ".($member['account_lid'])."' target=_blank>";
+                      echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_about.gif'>";
+                      echo "</a></td>\n";
+                      
+                      echo "<td>&nbsp;</td>\n";
+  
+                      echo "<td><a href=".($linkedIn_user_location)." title='view LinkedIn profile: ".($member['account_lid'])."' target=_blank>";
+                      echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/linkedin_logo.gif'>";
+                      echo "</a></td>\n";
+                      
+                      echo "<td>&nbsp;</td>\n";
+                      
+                      echo "<td><a href=".($emailuser_location)." title='send e-mail to: ".($member['account_lid'])."' target=_blank>";
+                      echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_email.gif'>";
+                      echo "</a></td>\n";
+                      
+                      echo "<td>&nbsp;</td>\n";
+                      
+                      echo "<td><a href=".($pmuser_location)." title='send private message to: ".($member['account_lid'])."' target=_blank>";
+                      echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif'>";
+                      echo "</a></td>\n";
+                    }else{
+                      echo '<td colspan="8" align="right">'.lang("inactive")."</td>\n"
+                    }
                     echo "</tr>";
                 }
                 echo "</table>";
