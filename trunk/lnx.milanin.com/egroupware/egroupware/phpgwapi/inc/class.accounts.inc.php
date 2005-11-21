@@ -1,5 +1,5 @@
 <?php
-	/**************************************************************************
+	/**************************************************************************\
 	* eGroupWare API - Accounts manager shared functions                       *
 	* Written by Joseph Engo <jengo@phpgroupware.org>                          *
 	*        and Bettina Gille [ceb@phpgroupware.org]                          *
@@ -21,7 +21,7 @@
 	* You should have received a copy of the GNU Lesser General Public License *
 	* along with this library; if not, write to the Free Software Foundation,  *
 	* Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA            *
-	**************************************************************************/
+	\**************************************************************************/
 	/* $Id: class.accounts.inc.php,v 1.19.2.3 2004/08/25 20:04:48 lkneschke Exp $ */
 
 	if (empty($GLOBALS['phpgw_info']['server']['account_repository']))
@@ -92,11 +92,11 @@
 		// enables the session-cache
 		var $use_session_cache = True;
 
-		/**************************************************************************
+		/**************************************************************************\
 		* Standard constructor for setting $this->account_id                       *
 		* This constructor sets the account id, if string is sent, converts to id  *
 		* I might move this to the accounts_shared if it stays around              *
-		**************************************************************************/
+		\**************************************************************************/
 		function accounts($account_id = '', $account_type='')
 		{
 			// enable the caching in the session onyl for ldap
@@ -155,7 +155,7 @@
 				// setting up the session-cache
 				$GLOBALS['phpgw_info']['accounts']['cache'] = $GLOBALS['phpgw']->session->appsession('accounts_cache','phpgwapi');
 				$GLOBALS['phpgw_info']['accounts']['session_cache_setup'] = True;
-				//echo "accounts::setup_cache() cache=<pre>".print_r($GLOBALS['phpgw_info']['accounts']['cache'],True)."</pre>n";
+				//echo "accounts::setup_cache() cache=<pre>".print_r($GLOBALS['phpgw_info']['accounts']['cache'],True)."</pre>\n";
 			}
 			if (!isset($this->cache))
 			{
@@ -200,7 +200,7 @@
 		 */
 		function search($param)
 		{
-			//echo "<p>accounts::search(".print_r($param,True).")</p>n";
+			//echo "<p>accounts::search(".print_r($param,True).")</p>\n";
 			$this->setup_cache();
 			$account_search = &$this->cache['account_search'];
 			
@@ -251,7 +251,7 @@
 				{
 					$this->total = $account_search[$serial2]['total'];
 				}
-				//echo "accounts_::get_list($param[type],$param[start],$param[sort],$param[order],$param[query],$param[offset],$param[query_type]) returned<pre>".print_r($account_search[$serial2],True)."</pre>n";
+				//echo "accounts_::get_list($param[type],$param[start],$param[sort],$param[order],$param[query],$param[offset],$param[query_type]) returned<pre>".print_r($account_search[$serial2],True)."</pre>\n";
 				if ($app || $group)	// limit the search on accounts with run-rights for app or a group
 				{
 					$valid = array();
@@ -266,7 +266,7 @@
 						if (!$members) $members = array();
 						$valid = !$app ? $members : array_intersect($valid,$members);	// use the intersection
 					}
-					//echo "<p>limiting result to app='app' and/or group=$group valid-ids=".print_r($valid,true)."</p>n";
+					//echo "<p>limiting result to app='app' and/or group=$group valid-ids=".print_r($valid,true)."</p>\n";
 					$offset = $param['offset'] ? $param['offset'] : $GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
 					$stop = $start + $offset;
 					$n = 0;
@@ -288,32 +288,32 @@
 					$account_search[$serial]['total'] = $this->total;
 				}
 			}
-			//echo "<p>accounts::search('$serial')=<pre>".print_r($account_search[$serial]['data'],True).")</pre>n";
+			//echo "<p>accounts::search('$serial')=<pre>".print_r($account_search[$serial]['data'],True).")</pre>\n";
 			return $account_search[$serial]['data'];
 		}
 
 function get_count($_type='both')
-
 {
 $count=accounts_::get_count($_type);
 return $count;
-
-
 }
 
 function get_online_count($_type='both')
-
 {
 $count=accounts_::get_online_count($_type);
 return $count;
+}
 
-
+function get_guest_count($_type='both')
+{
+$count=accounts_::get_guest_count($_type);
+return $count;
 }
 
 function get_online_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 
 {
-			//echo "<p>accounts::get_online_list(".print_r($_type,True).",start='$start',sort='$sort',order='$order',query='$query',offset='$offset')</p>n";
+			//echo "<p>accounts::get_online_list(".print_r($_type,True).",start='$start',sort='$sort',order='$order',query='$query',offset='$offset')</p>\n";
 			$this->setup_cache();
 			$account_list = &$this->cache['account_list'];
 
@@ -355,7 +355,7 @@ function get_online_list($_type='both',$start = '',$sort = '', $order = '', $que
 
 		function get_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 		{
-			//echo "<p>accounts::get_list(".print_r($_type,True).",start='$start',sort='$sort',order='$order',query='$query',offset='$offset')</p>n";
+			//echo "<p>accounts::get_list(".print_r($_type,True).",start='$start',sort='$sort',order='$order',query='$query',offset='$offset')</p>\n";
 			$this->setup_cache();
 			$account_list = &$this->cache['account_list'];
 
@@ -414,7 +414,7 @@ function get_online_list($_type='both',$start = '',$sort = '', $order = '', $que
 		*/
 		function cache_invalidate($account_id)
 		{
-			//echo "<p>accounts::cache_invalidate($account_id)</p>n";
+			//echo "<p>accounts::cache_invalidate($account_id)</p>\n";
 			$GLOBALS['phpgw_info']['accounts']['cache'] = array();
 		}
 
@@ -634,7 +634,7 @@ function get_online_list($_type='both',$start = '',$sort = '', $order = '', $que
 			{
 				$cache = $accounts;
 			}
-			//echo "<p>accounts::split_accounts(".print_r($app_users,True).",'$use') = <pre>".print_r($accounts,True)."</pre>n";
+			//echo "<p>accounts::split_accounts(".print_r($app_users,True).",'$use') = <pre>".print_r($accounts,True)."</pre>\n";
 
 			switch($use)
 			{
