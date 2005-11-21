@@ -89,12 +89,12 @@ $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
 
                     echo "<td>&nbsp;</td>\n";
 
-                    echo "<td>"
-                    echo "<i>" if $member['account_status'] == 'A';
+                    echo "<td>";
+                    if ($member['account_status'] != 'A'){ echo "<i>"; };
                     echo $user_status.($member['account_firstname'])." ".($member['account_lastname']);
-                    echo echo "</i>" if $member['account_status'] == 'A';
+                    if ($member['account_status'] != 'A') {echo "</i>";};
                     echo "</td>\n";
-                    if $member['account_status'] != 'A'{
+                    if ($member['account_status'] == 'A'){
                       echo "<td>&nbsp;</td>\n";
                       
                       echo "<td><a href=".($user_location)." title='view profile: ".($member['account_lid'])."' target=_blank>";
@@ -104,7 +104,7 @@ $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
                       echo "<td>&nbsp;</td>\n";
   
                       echo "<td><a href=".($linkedIn_user_location)." title='view LinkedIn profile: ".($member['account_lid'])."' target=_blank>";
-                      echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/linkedin_logo.gif'>";
+                      echo "<img src='/egroupware/elgg-link/templates/default/images/linkedin_logo.gif'>";
                       echo "</a></td>\n";
                       
                       echo "<td>&nbsp;</td>\n";
@@ -119,7 +119,7 @@ $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
                       echo "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif'>";
                       echo "</a></td>\n";
                     }else{
-                      echo '<td colspan="8" align="right">'.lang("inactive")."</td>\n"
+                      echo '<td colspan="8" align="right">'.lang("inactive")."</td>\n";
                     }
                     echo "</tr>";
                 }
