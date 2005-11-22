@@ -35,6 +35,66 @@
 				case "password":
 						$run_result .= "<input type=\"password\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
+				
+				case "title_selectbox":
+
+
+    $run_result .= "<select name=\"".$parameter[0]."\" onload=\"getInvitationMsg()\" onchange=\"getInvitationMsg()\"  style=\"width: 95%\" id=\"".$parameter[0]."\" >";
+    
+    $risultato = mysql_query("SELECT * FROM `template_elements` where `template_id` = ".$parameter[3]." order by name asc");
+    //get sql data to js
+    $run_result .= <<< END
+   <script language="JavaScript" type="text/javascript">
+				<!--
+				  var template_id = new Array();
+          var template_name = new Array();
+          var template_content = new Array();
+          var template_count = 0
+          template_id[0]=0;
+				  template_name[0]="";
+				  template_content[0]="";
+				-->
+			</script>
+END;
+
+while ($riga = mysql_fetch_object($risultato)) {
+   $run_result .= <<< END
+   <script language="JavaScript" type="text/javascript">
+				<!--
+				template_id[template_count]=template_count;
+				template_name[template_count]="$riga->name";
+				template_content[template_count]="$riga->content";
+				template_count++;
+				-->
+			</script>
+END;
+ // create options  
+   $run_result .= $riga->name;
+}
+
+mysql_free_result($risultato);
+
+$run_result .= "</select>";
+//js to view title-body msg
+$run_result .= <<< END
+<script language="JavaScript" type="text/javascript">
+				<!--
+				function getInvitationMsg()
+				{
+				  for (var iSelect = 0; iSelect < document.invite_form.invite_title.length; iSelect++) {
+				  if (document.invite_form.invite_title[iSelect].selected == true)
+				   break;
+				  }
+				  document.invite_form.invite_text.value=template_content[iSelect];
+				  return true;
+				}
+				-->
+			</script>
+END;
+break;	
+						
+							
+						
 				case "mediumtext":
 						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
