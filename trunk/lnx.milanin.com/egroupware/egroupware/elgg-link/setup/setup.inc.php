@@ -12,7 +12,7 @@
 	/* $Id: setup.inc.php,v 1.8 2004/07/02 22:40:39 ralfbecker Exp $ */
 
 	$setup_info['elgg-link']['name']      = 'elgg-link';
-	$setup_info['elgg-link']['title']     = 'Link to Profiles';
+	$setup_info['elgg-link']['title']     = 'Members List';
 	$setup_info['elgg-link']['version']   = '0.0.1';
 	$setup_info['elgg-link']['app_order'] = 1;
 	$setup_info['elgg-link']['tables']    = array();
