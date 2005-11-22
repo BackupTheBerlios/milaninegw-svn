@@ -280,7 +280,7 @@
 			{
 				while ($this->db->next_record())
 				{
-					$title = $app_name = $this->db->f('app_name');
+					$title = $app_name = $this->db->f('app_title');
 
 					if (@is_array($GLOBALS['phpgw_info']['user']['preferences']) &&
 					    ($t = lang($app_name)) != $app_name.'*')
