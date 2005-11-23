@@ -29,22 +29,19 @@ class module_members_count extends Module
 	function get_content(&$arguments,$properties) 
 	{
                 
-                $this->db=$GLOBALS['phpgw']->db;
-                $this->db->query("SELECT COUNT(*) members FROM `phpgw_accounts` WHERE `account_type` = 'u' and `account_status` = 'A'");
-                while($row = $this->db->row(True)){
-                  $return['total']=$row['members'];
-                }
+                $return['total']=$GLOBALS['phpgw']->accounts->get_count('accounts');
                 
-                $return['online']= $GLOBALS['phpgw']->session->list_sessions(0,'','session_logintime');
+                $return['online']= $GLOBALS['phpgw']->accounts->get_online_count('accounts');
 		$drop='<div id="OnlinersList">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
                                  ';
-		$online=Array();
-		foreach ($return['online'] as $onliner){
-                  if (!in_array($onliner['session_lid'],$online)){
-                    $online[]=$onliner['session_lid'];
-                    $drop.="<tr><td><a href=\"/members/".$onliner['session_lid']."\">".
-                    $GLOBALS['phpgw']->accounts->id2name($GLOBALS['phpgw']->accounts->name2id($onliner['session_lid'])).
+                $order_by='session_id';
+		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page);
+		echo '<!--'.print_r($online,1).'-->';
+		foreach ($online as $onliner){
+                  if (($onliner['account_pwd']>0)){
+                    $drop.="<tr><td><a href=\"/members/".$onliner['account_lid']."\">".
+                    $onliner['account_firstname']." ".$onliner['account_lastname'].
                     "</a></td></tr>\n";
                   }
                 }
@@ -55,7 +52,7 @@ class module_members_count extends Module
                         "</td><td>".$return['total']."</td></tr>\n".
                         "<tr><td>".
                         "<a href='#' title='Show List' onClick=\"toggleLayer('OnlinersList')\">".lang("Online")."</a></td>".
-                        "<td>".sizeof($return['online'])."</td></tr><tr><th colspan=\"2\">".
+                        "<td>".$return['online']."</td></tr><tr><th colspan=\"2\">".
                         $drop."</th></tr>\n</table>";
 	}
 
