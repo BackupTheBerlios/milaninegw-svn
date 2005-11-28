@@ -256,6 +256,8 @@
 			$menu_title = lang('General Menu');
 
 			$file['Home'] = $GLOBALS['phpgw_info']['navbar']['home']['url'];
+			$file['My Profile'] = '/members/profile/edit.php';
+			
 			if($GLOBALS['phpgw_info']['user']['apps']['preferences'])
 			{
 				$file['Preferences'] = $GLOBALS['phpgw_info']['navbar']['preferences']['url'];
