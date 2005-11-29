@@ -17,8 +17,13 @@
 			$profile_id = (int) run("users:name_to_id", $_SESSION['username']);
 		} else {
 			$profile_id = -1;
+			
 		}
-
+                if ($profile_id==-1){
+                  header('Location: http://'.$_SERVER['SERVER_NAME'].'/');
+		  exit;
+                }
+                
 		global $page_owner;
 		
 		$page_owner = $profile_id;
