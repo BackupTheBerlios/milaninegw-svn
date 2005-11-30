@@ -335,6 +335,7 @@
 					'loginshell'            => $_POST['loginshell'],
 					'account_expires_never' => $_POST['never_expires'],
 					'account_email'         => $_POST['account_email'],
+					'linkedin'              => $_POST['account_linkedin'],
 					/* 'file_space' => $_POST['account_file_space_number'] . "-" . $_POST['account_file_space_type'] */
 				);
 				
