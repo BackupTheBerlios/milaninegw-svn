@@ -37,7 +37,6 @@ class module_members_count extends Module
                                  ';
                 $order_by='session_id';
 		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page);
-		echo '<!--'.print_r($online,1).'-->';
 		foreach ($online as $onliner){
                   if (($onliner['account_pwd']>0)){
                     $drop.="<tr><td><a href=\"/members/".$onliner['account_lid']."\">".
