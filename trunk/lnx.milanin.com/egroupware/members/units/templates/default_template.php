@@ -65,10 +65,20 @@ $template['pageshell'] .= <<< END
   </tr>
   <tr>
     <td height="100" colspan="5" align="center" valign="middle">
-      Copyright &copy; 2004-2005 ELGG      <br />
-      <a href="{{url}}content/about.php">About ELGG</a> | <a href="{{url}}content/faq.php">FAQ</a> | <a href="{{url}}content/privacy.php">Privacy Policy</a> | <a href="{{url}}content/run_your_own.php">Run your own ELGG</a></td>
+      Copyright &copy; 2004-2005 ELGG      </td>
+<tr>
+<td height="100" colspan="5" align="center" valign="middle">
+      <table align="center" class="infobox" width="100%">
+<tr><td><a href="http://www.milanin.com">http://www.milanin.com</a></td></tr>
+<tr><td>Sede legale Via Tanaro, 22</td></tr>
+<tr><td>20128 Milano</td></tr>
+<tr><td>CF 97413780152</td></tr>
+<tr><td><a href="mailto:info@milanin.com">info@milanin.com</a></td></tr>
+</table>
+      </td>
   </tr>
 </table>
+
 </body>
 </html>
 	
