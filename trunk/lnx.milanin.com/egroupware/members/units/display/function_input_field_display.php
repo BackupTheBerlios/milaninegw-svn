@@ -36,12 +36,11 @@
 						$run_result .= "<input type=\"password\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
 				
-				case "title_selectbox":
+				case "selectbox":
 
+    $run_result .= "<select ".$parameter[0]."  style=\"width: 95%\" id=\"".$parameter[0]."\" >";
 
-    $run_result .= "<select name=\"".$parameter[0]."\" onload=\"getInvitationMsg()\" onchange=\"getInvitationMsg()\"  style=\"width: 95%\" id=\"".$parameter[0]."\" >";
-    
-    $risultato = mysql_query("SELECT * FROM `template_elements` where `template_id` = ".$parameter[3]." order by name asc");
+    $risultato = mysql_query($parameter[3]);
     //get sql data to js
     $run_result .= <<< END
    <script language="JavaScript" type="text/javascript">
@@ -74,11 +73,25 @@ END;
 
 mysql_free_result($risultato);
 
-$run_result .= "</select>";
+$run_result .= "</select>"; 
+
 //js to view title-body msg
 $run_result .= <<< END
 <script language="JavaScript" type="text/javascript">
 				<!--
+				function getInvitationLang()
+				{
+				  for (var iSelect = 0; iSelect < document.invite_form.invite_lang.length; iSelect++) {
+				  if (document.invite_form.invite_lang[iSelect].selected == true)
+				   break;
+				  }
+				  document.invite_form.inv_msg_lang.value = document.invite_form.invite_lang[iSelect].value;
+				  document.invite_form.inv_msg_lang.value = document.invite_form.invite_lang[iSelect].value;
+				  document.invite_form.inv_idx_lang.value = iSelect;
+				  document.invite_form.submit();
+				  
+				}
+				
 				function getInvitationMsg()
 				{
 				  for (var iSelect = 0; iSelect < document.invite_form.invite_title.length; iSelect++) {
@@ -86,6 +99,12 @@ $run_result .= <<< END
 				   break;
 				  }
 				  document.invite_form.invite_text.value=template_content[iSelect];
+				}
+				
+				function doInvite()
+				{
+				  document.invite_form.action.value='invite_invite';
+				  document.invite_form.submit();
 				  return true;
 				}
 				-->
