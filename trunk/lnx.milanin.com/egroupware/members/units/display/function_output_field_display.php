@@ -79,8 +79,11 @@
 						}
 						$run_result = $keywords; */
 						$where = run("users:access_level_sql_where",$_SESSION['userid']);
-						$tags = db_query("select * from tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by tag asc");
+						echo "<!-- select * from tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by tag asc\n";
+						
+						$tags = db_query("select * from tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by ident asc");
 						$keywords = "";
+						echo "tags: ".print_r($tags,1)."-->\n";
 						if (sizeof($tags) > 0) {
 							foreach($tags as $key => $tag) {
 								if ($key > 0) {
@@ -97,6 +100,7 @@
 								}
 							}
 						}
+						
 						$run_result = $keywords;
 						break;
 				case "email":

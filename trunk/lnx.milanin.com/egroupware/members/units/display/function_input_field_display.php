@@ -134,7 +134,7 @@ break;
 						}
 						$parameter[1] = $keywords;
 						*/
-						$tags = db_query("select * from tags where tagtype = '".$parameter[3]."' and ref = '".$parameter[4]."' and owner = " . $parameter[5] . " order by tag asc");
+						$tags = db_query("select * from tags where tagtype = '".$parameter[3]."' and ref = '".$parameter[4]."' and owner = " . $parameter[5] . " order by ident asc");
 						$keywords = "";
 						if (sizeof($tags) > 0) {
 							foreach($tags as $key => $tag) {
