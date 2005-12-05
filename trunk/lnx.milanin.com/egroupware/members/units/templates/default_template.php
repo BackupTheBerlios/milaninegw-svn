@@ -156,12 +156,13 @@ form			{
 					color: #000000;
 					background-color: #ffa800;
 				}
-.messages		{
-					background-color: #000000;
-					color: #ffffff;
-					padding: 0px;
-					margin: 0px;
-				}
+.messages        {
+                    background-color: #EDF1F1;
+		    font-weight: bold;
+		    color: #000000;
+		    padding: 0px;
+		    margin: 0px;
+		    }
 .messages ul	{
 					padding: 0px;
 					margin: 0px;
