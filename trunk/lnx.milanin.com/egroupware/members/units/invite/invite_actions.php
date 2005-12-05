@@ -6,7 +6,8 @@
 		
 	// Get site name
 	
-		$sitename = sitename;
+		//$sitename = sitename;
+		$sitename = "MilanIn";
 
 	// If $_REQUEST['action'] is specified, see what we can do ...
 	
@@ -15,6 +16,10 @@
 			switch($_REQUEST['action']) {
 				
 				// Add a new invite code
+				case "invite_sel_lang":	
+				
+				
+				break;
 					case "invite_invite":		if (
 														isset($_REQUEST['invite_name'])
 														&& isset($_REQUEST['invite_email'])
@@ -41,7 +46,7 @@
 																	$subjectline = "$sitename account verification";
 																	$from_email = email;
 																} else {
-																	$greetingstext = $_SESSION['name'] . " has invited you to join $sitename, a learning landscape system.";
+																	$greetingstext = $_SESSION['name'] . " has invited you to join $sitename.";
 																	$subjectline = $_SESSION['name'] . " has invited you to join $sitename";
 																	$from_email = $_SESSION['email'];
 																}
