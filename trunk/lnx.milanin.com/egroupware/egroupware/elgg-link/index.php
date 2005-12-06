@@ -66,6 +66,8 @@ $members['online']=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $sta
 
 $members_reg_count=$GLOBALS['phpgw']->accounts->get_count('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
 
+$members_reg_count1=$GLOBALS['phpgw']->accounts->get_count('accounts');
+
 $members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
 
 $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
@@ -119,7 +121,8 @@ $search_str1 .= "</tr></table></form>";
 			$aar[] = 'all';
 			
 $search_str = "<form name='mySearchform' ><table align=\"center\"><tr class=divSideboxEntry  colspan=".(sizeOf($aar) + 4).">";
-$search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$order_by." title='go to page 1'><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' border='0' title='First' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($prev_page -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($prev_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='Previous' hspace='2' /></a></td>";
+$search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page 1'><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' border='0' title='First' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($prev_page -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($prev_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='Previous' hspace='2' /></a></td>";
+
 
 
 
@@ -129,13 +132,13 @@ $search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$ord
         $search_str .= "<td class='letter_box'>";
 				if($char == 'all')
 				{
-					$search_str .= "<a href=index.php?query=&query_type=>";
+					$search_str .= "<a href=index.php?order_by=".$order_by."&query=&query_type=>";
 					$search_str .= $char;
 					$search_str .= "</a>";
 				}
 				else
 				{
-					$search_str .= "<a href=index.php?query=".$char."&query_type=lastname>";
+					$search_str .= "<a href=index.php?order_by=".$order_by."&query=".$char."&query_type=lastname>";
 					$search_str .= $char;
 					$search_str .= "</a>";
 				}
@@ -143,18 +146,26 @@ $search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$ord
 			}
 			unset($aar);
 			unset($char);
-$search_str .= "<td align='right'><a href=index.php?start_from=".(($next_page -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($next_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='Next' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($pages_count -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($pages_count)."'><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='Last' hspace='2' /></a></td>";			
+$search_str .= "<td align='right'><a href=index.php?start_from=".(($next_page -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($next_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='Next' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($pages_count -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($pages_count)."'><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='Last' hspace='2' /></a></td>";			
 $search_str .= "</tr></table></form>";
 		
 
     echo $search_str1;
     echo $search_str;
-		echo "<table align=\"center\"><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
+		echo "<table align=\"center\"><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count1."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
+
+if (sizeOf($members['online']) < 1){
+echo "<tr colspan=5 align=center>Your request returned no result.</tr>"; 
+
+} else {
+    if ($members_reg_count1 > $members_reg_count){
+    echo "<tr colspan=5 align=center>Your request returned ".$members_reg_count." results.</tr>";
+     }
 		foreach ($members['online'] as $member){
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
                     $linkedIn_user_location='https://www.linkedin.com/profile?viewProfile=&key='.$member[account_linkedin];
-                    $emailuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/index.php?menuaction=email.uicompose.compose&fldball[folder]=INBOX&fldball[acctnum]=0&sort=1&order=1&start=0';
-                    $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=ppost&';
+$emailuser_location='http://'.$_SERVER['SERVER_NAME'].'email/compose.php?to='.$member[account_email];
+                                       $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=ppost&';
                     $user_status="";
                     echo "<tr class=divSideboxEntry>";
                     if ($member['account_pwd'] != null)
@@ -200,6 +211,8 @@ $search_str .= "</tr></table></form>";
                     }
                     echo "</tr>";
                 }
+                
+}                
                 echo "</table>";
 
 
@@ -213,7 +226,7 @@ for($x = 0;$x < $pages_count;$x++)
  echo "<td>".($x + 1)."</td>";
  }
  else 
- echo "<td><a href=index.php?start_from=".$next_page."&order_by=".$order_by." title='go to page ".($x + 1)."'>".($x + 1)."</a></td>";
+ echo "<td><a href=index.php?start_from=".$next_page."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($x + 1)."'>".($x + 1)."</a></td>";
 
  }
 echo "</tr>"; 
