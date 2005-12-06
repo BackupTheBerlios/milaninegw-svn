@@ -35,11 +35,11 @@
 		echo parse_navbar();
 
 $offset_page=$GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
-
 $start_page=0;
 if ($_GET['start_from'] != null) {
 $start_page=$_GET['start_from'];
 }
+$current_page=0;
 $order_by='session_id';
 if ($_GET['order_by'] != null) {
 $order_by=$_GET['order_by'];
@@ -49,6 +49,44 @@ $order_type='asc';
 if ($order_by == "session_id") {
 $order_type='desc';
 }
+
+$query_type='';
+if ($_GET['query_type'] != null) {
+$query_type=$_GET['query_type'];
+}
+
+
+$query='';
+if ($_GET['query'] != null) {
+$query=$_GET['query'];
+}
+
+
+$members['online']=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
+
+$members_reg_count=$GLOBALS['phpgw']->accounts->get_count('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
+
+$members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
+
+$guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
+
+$pages_count = round($members_reg_count/$offset_page);  
+if (($pages_count*$offset_page) < $members_reg_count){    
+$pages_count = $pages_count +1;          
+}
+
+for($x = 0;$x < $pages_count;$x++){
+ if (($offset_page * $x) == $start_page)
+ $current_page = ($x + 1);
+}
+$prev_page=1;
+if ($current_page > 1)
+$prev_page = $current_page -1;
+
+$next_page=$pages_count;
+if (($current_page +1) < $pages_count)
+$next_page = $current_page +1;
+
 
 $select_str = "<form name='myform'>Order by: <select name='order_by' onChange='myform.submit();'><option value='session_id' ";
 if ($order_by == "session_id") {
@@ -62,16 +100,55 @@ $select_str .= ">First Name</option><option value='account_lastname' ";
 if ($order_by == "account_lastname") {
 $select_str .= "selected='true'";
 }
-$select_str .= ">Last Name</option></select></form>";
+$select_str .= ">Last Name</option></select> <input type=submit value='Go' title=Go></form>";
+
+
+
+//search box
+$search_str1 = "<form name='mySearchform' ><table align=\"center\"><tr colspan=".(sizeOf($aar) - 3)."><td><input type='text' name='query' value=''></td><td><select name='query_type'><option value='all'>All</option><option value='firstname'>Name</option><option value='lastname'>Surname</option></select></td><td><input type='submit' name='Search' value='Search'></td>";
+$search_str1 .= "</tr></table></form>";
+
+			/* Setup query for 1st char of fullname, company, lastname using user lang */
+			$chars = lang('alphabet');
+			if($chars == 'alphabet*')
+			{
+				$chars = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z';
+			}
+			$aar = explode(',', $chars);
+			unset($chars);
+			$aar[] = 'all';
+			
+$search_str = "<form name='mySearchform' ><table align=\"center\"><tr class=divSideboxEntry  colspan=".(sizeOf($aar) + 4).">";
+$search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$order_by." title='go to page 1'><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' border='0' title='First' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($prev_page -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($prev_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='Previous' hspace='2' /></a></td>";
+
+
+
+
+			foreach($aar as $char)
+			{
+        $search_str .= "<td class='letter_box'>";
+				if($char == 'all')
+				{
+					$search_str .= "<a href=index.php?query=&query_type=>";
+					$search_str .= $char;
+					$search_str .= "</a>";
+				}
+				else
+				{
+					$search_str .= "<a href=index.php?query=".$char."&query_type=lastname>";
+					$search_str .= $char;
+					$search_str .= "</a>";
+				}
+			$search_str .= "</td>";	
+			}
+			unset($aar);
+			unset($char);
+$search_str .= "<td align='right'><a href=index.php?start_from=".(($next_page -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($next_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='Next' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($pages_count -1) * $offset_page)."&order_by=".$order_by." title='go to page ".($pages_count)."'><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='Last' hspace='2' /></a></td>";			
+$search_str .= "</tr></table></form>";
 		
-$members['online']=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page);
 
-$members_reg_count=$GLOBALS['phpgw']->accounts->get_count('accounts');
-
-$members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts');
-
-$guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
-
+    echo $search_str1;
+    echo $search_str;
 		echo "<table align=\"center\"><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
 		foreach ($members['online'] as $member){
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
@@ -125,20 +202,24 @@ $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
                 }
                 echo "</table>";
 
-$pages_count = round($members_reg_count/$offset_page);  
-if (($pages_count*$offset_page) < $members_reg_count){    
-$pages_count = $pages_count +1;          
-}
-echo "<p><table><tr class=divSideboxEntry><th colspan=11>Pages: ".$pages_count."</th></tr>\n";
+
+echo "<table><tr class=divSideboxEntry><th colspan=11>Total pages: ".$pages_count."</th></tr>";
 echo "<tr class=divSideboxEntry colspan=".$pages_count.">";
 
 for($x = 0;$x < $pages_count;$x++)
  {
  $next_page = ($offset_page * $x);
- echo "<td><a href=index.php?start_from=".$next_page."&order_by=".$order_by." title='go to page ".($x + 1)."'>".($x + 1)."</a></td>";
+ if ($next_page == $start_page){
+ echo "<td>".($x + 1)."</td>";
  }
-echo "</tr>";       
-echo "</table>";                       
+ else 
+ echo "<td><a href=index.php?start_from=".$next_page."&order_by=".$order_by." title='go to page ".($x + 1)."'>".($x + 1)."</a></td>";
+
+ }
+echo "</tr>"; 
+echo "<tr class=divSideboxEntry colspan=".$pages_count.">";  
+echo "Current page:".$current_page; 
+echo "</tr></table>";                       
                
 		$GLOBALS['phpgw']->common->phpgw_footer();
 
