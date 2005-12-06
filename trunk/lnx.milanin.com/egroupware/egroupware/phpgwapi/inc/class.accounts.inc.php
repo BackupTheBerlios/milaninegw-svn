@@ -292,15 +292,15 @@
 			return $account_search[$serial]['data'];
 		}
 
-function get_count($_type='both')
+function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 {
-$count=accounts_::get_count($_type);
+$count=accounts_::get_count($_type,$start,$sort,$order,$query,$offset,$query_type);
 return $count;
 }
 
-function get_online_count($_type='both')
+function get_online_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 {
-$count=accounts_::get_online_count($_type);
+$count=accounts_::get_online_count($_type,$start,$sort,$order,$query,$offset,$query_type);
 return $count;
 }
 

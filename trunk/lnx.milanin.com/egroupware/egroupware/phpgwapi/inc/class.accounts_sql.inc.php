@@ -136,21 +136,76 @@
 			$this->db->delete($this->table,array('account_id'=>$account_id),__LINE__,__FILE__);
 			$this->db->unlock();
 		}
-		function get_count($_type='both')
+		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 
 {
+
+			if (! $sort)
+			{
+				$sort = "DESC";
+			}
+
+			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
+			{
+				$orderclause = "ORDER BY $order $sort, account_lid ASC";
+			}
+			else
+			{
+				$orderclause = "ORDER BY account_lid ASC";
+			}
 
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35";
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;
 				case 'groups':
-					$whereclause = "WHERE account_type = 'g' AND";
+					$whereclause = "WHERE account_type = 'g'";
 					break;
 				default:
 					$whereclause = '';
 			}
+
+			if ($query)
+			{
+				if ($whereclause)
+				{
+					$whereclause .= ' AND ( ';
+				}
+				else
+				{
+					$whereclause = ' WHERE ( ';
+				}
+				switch($query_type)
+				{
+					case 'all':
+					default:
+						$query = '%'.$query;
+						// fall-through
+					case 'start':
+						$query .= '%';
+						// fall-through
+					case 'exact':
+						$query = $this->db->quote($query);
+						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
+						break;
+					case 'firstname':
+					  $query = $this->db->quote($query."%");
+						$whereclause .= " account_firstname LIKE $query )";
+						break;
+					case 'lastname':
+						$query = $this->db->quote($query."%");
+						$whereclause .= " account_lastname LIKE $query )";
+						break;
+
+					case 'lid':
+					case 'email':
+						$query = $this->db->quote('%'.$query.'%');
+						$whereclause .= " account_$query_type LIKE $query )";
+						break;
+				}
+			}
+
 			
 			
 			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
@@ -159,11 +214,37 @@
 			return $total;
 		}
 		
-		function get_online_count($_type='both')
-
+		function get_online_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 {
+			if (! $sort)
+			{
+				$sort = "DESC";
+			}
+
+			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
+			{
+				$orderclause = "ORDER BY $order $sort, account_lid ASC";
+			}
+			else
+			{
+				$orderclause = "ORDER BY account_lid ASC";
+			}
+
+			switch($_type)
+			{
+				case 'accounts':
+					$whereclause = "WHERE session_lid != 'anonymous' AND session_flags !='A' AND session_lid != 'admin'";
+					break;
+				case 'groups':
+					$whereclause = "WHERE ";
+					break;
+				default:
+					$whereclause = '';
+			}
+
+						
 			
-			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions WHERE session_flags !='A' AND session_lid != 'admin'");
+			$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions $whereclause");
 
 			//$this->db->query("SELECT count(distinct session_lid) FROM phpgw_sessions". 
       //                           " WHERE session_flags !='A' AND session_lid != 'admin'");
@@ -237,6 +318,10 @@
 						break;
 					case 'firstname':
 					case 'lastname':
+						$query = $this->db->quote($query."%");
+						$whereclause .= " account_lastname LIKE $query )";
+						break;
+
 					case 'lid':
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
