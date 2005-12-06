@@ -6,7 +6,6 @@ $inv_msg_lang=$_REQUEST['inv_msg_lang'];
 $inv_idx_lang=0;
 if ($_REQUEST['inv_idx_lang'] != null) {
 $inv_idx_lang=$_REQUEST['inv_idx_lang'];
-echo $inv_idx_lang;
 }
 	// Ask for details to invite a friend
 	

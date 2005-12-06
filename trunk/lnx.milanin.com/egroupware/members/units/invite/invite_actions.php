@@ -40,7 +40,8 @@
 																if ($_REQUEST['invite_text'] != "") {
 																	$invitetext = "They included the following message:\n\n----------\n" . stripslashes($_REQUEST['invite_text']) . "\n----------";
 																}
-																$url = url . "_invite/join.php?invitecode=" . $code;
+																$url = "http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/?page_name=Joinus&ic=" . $code;
+																//$url = url . "_invite/join.php?invitecode=" . $code;
 																if (!logged_on) {
 																	$greetingstext = "Thank you for registering with $sitename.";
 																	$subjectline = "$sitename account verification";
