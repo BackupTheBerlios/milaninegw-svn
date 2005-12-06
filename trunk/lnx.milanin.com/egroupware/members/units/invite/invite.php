@@ -7,6 +7,14 @@ $inv_idx_lang=0;
 if ($_REQUEST['inv_idx_lang'] != null) {
 $inv_idx_lang=$_REQUEST['inv_idx_lang'];
 }
+$invite_name="";
+if ($_REQUEST['invite_name'] != null) {
+$invite_name=$_REQUEST['invite_name'];
+}
+$invite_email="";
+if ($_REQUEST['inv_idx_lang'] != null) {
+$invite_email=$_REQUEST['invite_email'];
+}
 	// Ask for details to invite a friend
 	
 	
@@ -21,13 +29,13 @@ END;
 		$run_result .= run("templates:draw", array(
 														'context' => 'databox1',
 														'name' => 'Their name',
-														'column1' => run("display:input_field",array("invite_name","","text"))
+														'column1' => run("display:input_field",array("invite_name",$invite_name,"text"))
 							)
 							);
 		$run_result .= run("templates:draw", array(
 														'context' => 'databox1',
 														'name' => 'Their email address',
-														'column1' => run("display:input_field",array("invite_email","","text"))
+														'column1' => run("display:input_field",array("invite_email",$invite_email,"text"))
 							)
 							);
 
