@@ -16,10 +16,10 @@
 <tr>
 <th>
 <table width="100%">
-<tr><td><a href="http://www.milanin.com">http://www.milanin.com</a></td></tr>
-<tr><td>Sede legale Via Tanaro, 22</td></tr>
-<tr><td>20128 Milano</td></tr>
-<tr><td>CF 97413780152</td></tr>
+<tr><td><a href="http://www.milanin.com">http://www.milanin.com</a>
+- Sede legale Via Tanaro, 22
+- 20128 Milano
+- CF 97413780152</td></tr>
 <tr><td><a href="mailto:info@milanin.com">info@milanin.com</a></td></tr>
 </table>
 </th>
