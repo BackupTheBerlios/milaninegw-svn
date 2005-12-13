@@ -68,16 +68,21 @@ $template['pageshell'] .= <<< END
       Copyright &copy; 2004-2005 ELGG      </td>
 <tr>
 <td height="100" colspan="5" align="center" valign="middle">
-      <table align="center" class="infobox" width="100%">
-<tr><td><a href="http://www.milanin.com">http://www.milanin.com</a></td></tr>
-<tr><td>Sede legale Via Tanaro, 22</td></tr>
-<tr><td>20128 Milano</td></tr>
-<tr><td>CF 97413780152</td></tr>
-<tr><td><a href="mailto:info@milanin.com">info@milanin.com</a></td></tr>
-</table>
-      </td>
-  </tr>
-</table>
+      <table width="100%" align="center" class="infobox" style="text-align:center">
+<tbody><tr><th>Copyright &copy; 2005-2006 B.C. Milan In</th>
+</tr>
+<tr>
+<th>
+  <table width="100%" style="text-align:center">
+  <tr><td><a href="http://www.milanin.com">http://www.milanin.com</a>
+- Sede legale Via Tanaro, 22
+- 20128 Milano
+- CF 97413780152
+- <a href="mailto:info@milanin.com">info@milanin.com</a></td></tr>
+  </table>
+</th>
+</tr>
+</tbody></table> 
 
 </body>
 </html>
