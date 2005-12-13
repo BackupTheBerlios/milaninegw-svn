@@ -431,4 +431,23 @@ a.textSidebox
 	text-align:center;
 	width:99%;
 }
-
+.infobox		{
+					background-color: #ffffff;
+					border: 1px;
+					border-color: #000000;
+					border-style: solid;
+					padding: 7px;
+}
+.infobox caption	{
+					background-color: #EDF1F1;
+					color: #bf2868;
+					vertical-align: middle;
+					text-align: center;
+					padding: 4px;
+					font-weight: bold;
+					border: 1px;
+					border-color: #000000;
+					border-style: solid;
+					border-bottom: 0px;
+					font-size: 1.1em;
+}
