@@ -25,8 +25,10 @@
 			tinyMCE.init({
 				theme : "advanced",
 				//language : "de",
-				mode : "exact",
-				elements : "news[content],entry[label]",
+				//mode : "exact",
+				//elements : "news[content],entry[label]",
+                                mode: "specific_textareas",
+                                editor_selector : "tinyMCE",
 				plugins : "table",
 				theme_advanced_buttons1_add : "forecolor,backcolor",
 				theme_advanced_buttons3_add_before : "tablecontrols,separator",
