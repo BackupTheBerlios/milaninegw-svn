@@ -182,7 +182,7 @@ function convert_bdate($val, $month_fmt)
 		$polls = '';
 	}
 
-	$usrinfo_private_msg = ($FUD_OPT_1 & 1024 && _uid) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td nowrap class="GenText">Private Message:</td><td class="GenText"><a href="/egroupware/fudforum/3814588639/index.php?t=ppost&amp;'._rsid.'&amp;toi='.$u->id.'" class="GenLink"><img src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" /></a></td></tr>' : '';
+	$usrinfo_private_msg = ($FUD_OPT_1 & 1024 && _uid) ? '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td nowrap class="GenText">Private Message:</td><td class="GenText"><a href="/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to=;'._rsid.'&amp;message_to='.$u->alias.'" class="GenLink"><img src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" /></a></td></tr>' : '';
 
 	if ($u->users_opt & 1024) {
 		$gender = '<tr class="'.alt_var('search_alt','RowStyleA','RowStyleB').'"><td nowrap class="GenText">Gender:</td><td class="GenText">Male</td></tr>';

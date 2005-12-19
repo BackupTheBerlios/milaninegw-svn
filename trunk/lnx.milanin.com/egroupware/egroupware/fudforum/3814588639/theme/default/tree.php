@@ -383,7 +383,7 @@ function tmpl_drawmsg($obj, $usr, $perms, $hide_controls, &$m_num, $misc)
 		if ($obj->user_id) {
 			$user_profile = '<a class="GenLink" href="/egroupware/fudforum/3814588639/index.php?t=usrinfo&amp;id='.$obj->user_id.'&amp;'._rsid.'"><img alt="" src="/egroupware/fudforum/3814588639/theme/default/images/msg_about.gif" /></a>';
 			$email_link = ($o1 & 4194304 && $a & 16) ? '<a class="GenLink" href="/egroupware/fudforum/3814588639/index.php?t=email&amp;toi='.$obj->user_id.'&amp;'._rsid.'"><img alt="" src="/egroupware/fudforum/3814588639/theme/default/images/msg_email.gif" /></a>' : '';
-			$private_msg_link = $o1 & 1024 ? '<a class="GenLink" href="/egroupware/fudforum/3814588639/index.php?t=ppost&amp;toi='.$obj->user_id.'&amp;'._rsid.'"><img alt="Send a private message to this user" title="Send a private message to this user" src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" /></a>' : '';
+			$private_msg_link = $o1 & 1024 ? '<a class="GenLink" href="/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to=;'._rsid.'&amp;message_to='.$user_login.'&amp;'._rsid.'"><img alt="Send a private message to this user" title="Send a private message to this user" src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" /></a>' : '';
 			$dmsg_user_info = '<br /><b>Posts:</b> '.$obj->posted_msg_count.'<br />
 <b>Registered:</b> '.strftime("%B %Y", $obj->join_date).'
 '.$location;

@@ -222,7 +222,7 @@ function read_msg_body($off, $len, $file_id)
 	$find_user_data = '';
 	$c = uq('SELECT home_page, users_opt, alias, join_date, posted_msg_count, id FROM phpgw_fud_users WHERE ' . $qry . ' id>1 ORDER BY ' . $ord . ' ' . $lmt);
 	while ($r = db_rowobj($c)) {
-		$pm_link = ($FUD_OPT_1 & 1024 && _uid) ? '<a href="/egroupware/fudforum/3814588639/index.php?t=ppost&amp;'._rsid.'&amp;toi='.$r->id.'" class="GenLink"><img src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" alt="" /></a>' : '';
+		$pm_link = ($FUD_OPT_1 & 1024 && _uid) ? '<a href="/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to=;'._rsid.'&amp;message_to='.$u->alias.'" class="GenLink"><img src="/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif" alt="" /></a>' : '';
 		$homepage_link = $r->home_page ? '<a class="GenLink" href="'.$r->home_page.'" target="_blank"><img alt="" src="/egroupware/fudforum/3814588639/theme/default/images/homepage.gif" /></a>' : '';
 		$email_link = ($FUD_OPT_2 & 1073741824 && $r->users_opt & 16) ? '<a href="/egroupware/fudforum/3814588639/index.php?t=email&amp;toi='.$r->id.'&amp;'._rsid.'" class="GenLink"><img src="/egroupware/fudforum/3814588639/theme/default/images/msg_email.gif" alt="" /></a>' : '';
 
