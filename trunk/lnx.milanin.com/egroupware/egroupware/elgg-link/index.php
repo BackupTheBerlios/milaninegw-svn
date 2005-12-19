@@ -165,7 +165,7 @@ echo "<tr colspan=5 align=center>Your request returned no result.</tr>";
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
                     $linkedIn_user_location='https://www.linkedin.com/profile?viewProfile=&key='.$member[account_linkedin];
 $emailuser_location='http://'.$_SERVER['SERVER_NAME'].'email/compose.php?to='.$member[account_email];
-                                       $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/fudforum/3814588639/index.php?t=ppost&';
+                                       $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to='.$member['account_lid'].'&';
                     $user_status="";
                     echo "<tr class=divSideboxEntry>";
                     if ($member['account_pwd'] != null)
