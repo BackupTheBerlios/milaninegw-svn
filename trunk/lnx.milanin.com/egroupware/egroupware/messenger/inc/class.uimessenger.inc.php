@@ -195,6 +195,7 @@
 		function compose()
 		{
 			$message = $_POST['message'];
+			$message_to = get_var('message_to', array('GET','POST'));
 
 			if($_POST['cancel'])
 			{
@@ -211,6 +212,9 @@
 				{
 					$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
 				}
+			}
+			if (isset($message_to) && $message_to != ""){
+				$message['to']=$message_to;
 			}
 			// recipient dropdown field stuff added by tobi (gabele@uni-sql.de)
 			$tobox = '<input name="message[to]" value="' . $message['to'] . '" size="30">';
