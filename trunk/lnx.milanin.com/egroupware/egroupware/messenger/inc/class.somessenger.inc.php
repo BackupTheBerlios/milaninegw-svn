@@ -123,7 +123,7 @@
                               . lang('the mail server returned').':<BR>'
                               . "err_code: '".$GLOBALS['phpgw']->send->err['code']."';<BR>"
                               . "err_msg: '".htmlspecialchars($GLOBALS['phpgw']->send->err['msg'])."';<BR>\n"
-                              . "err_desc: '".$GLOBALS['phpgw']->err['desc']."'.<P>\n"                              );
+                              . "err_desc: '".$GLOBALS['phpgw']->err['desc']."'.<P>\n";
                               $GLOBALS['phpgw']->common->phpgw_exit();
                             }
                           }
