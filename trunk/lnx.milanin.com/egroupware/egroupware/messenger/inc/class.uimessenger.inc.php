@@ -56,7 +56,9 @@
 			{
 				$GLOBALS['phpgw']->template->set_var('nextmatchs_right',$extras['nextmatchs_right']);
 			}
-
+                        if ($extras['folder_name']){
+                          $GLOBALS['phpgw']->template->set_var('lang_folder_name',lang($extras['folder_name']));
+                        }
 			$GLOBALS['phpgw']->template->fp('app_header','global_header');
 
 			$GLOBALS['phpgw']->common->phpgw_header();
@@ -100,7 +102,7 @@
 			$extra_menuaction = '&menuaction=messenger.uimessenger.inbox';
 			$extra_header_info['nextmatchs_left']  = $this->nextmatchs->left('/index.php',$start,$total,$extra_menuaction);
 			$extra_header_info['nextmatchs_right'] = $this->nextmatchs->right('/index.php',$start,$total,$extra_menuaction);
-
+                        $extra_header_info['folder_name'] = 'inbox';
 			$this->display_headers($extra_header_info);
 
 			$GLOBALS['phpgw']->template->set_file('_inbox','inbox.tpl');
@@ -160,6 +162,7 @@
 			$extra_menuaction = '&menuaction=messenger.uimessenger.archive';
 			$extra_header_info['nextmatchs_left']  = $this->nextmatchs->left('/index.php',$start,$total,$extra_menuaction);
 			$extra_header_info['nextmatchs_right'] = $this->nextmatchs->right('/index.php',$start,$total,$extra_menuaction);
+			$extra_header_info['folder_name'] = 'archive';
 
 			$this->display_headers($extra_header_info);
 

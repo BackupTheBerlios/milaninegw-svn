@@ -1,7 +1,7 @@
 <!-- BEGIN global_header -->
 <table border="0" width="100%">
  <tr bgcolor="{th_bg}">
-  <td>&nbsp;</td>
+  <td>&nbsp;{lang_folder_name}</td>
  </tr>
  <tr>
   <td>
