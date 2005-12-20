@@ -110,7 +110,9 @@
                             $subject=lang('new')." ".lang('message from')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
-                            $body  = $message['content'];
+                            $body  = lang('subject').": ".$message['subject']."\n\n-----\n".
+                            $message['content'].
+                            "\n-----\n";
                             $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');
                             $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '');
                             /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
