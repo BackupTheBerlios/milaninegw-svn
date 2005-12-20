@@ -89,7 +89,8 @@
 
 		function send_message($message, $global_message = False)
 		{
-			if($global_message)
+			$GLOBALS['phpgw']->config->config_data['mailnotification']=1;
+                        if($global_message)
 			{
 				$this->owner = -1;
 			}
@@ -104,6 +105,29 @@
 				. $message['to'] . "','" . $this->owner . "','N','" . time() . "','"
 				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
 				. "')",__LINE__,__FILE__);
+			 if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
+                            $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
+                            $subject=lang('new')." ".lang('message from')." ".
+                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
+                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
+                            $body  = $message['content'];
+                            $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');
+                            $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '');
+                            /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+				. "message_date, message_subject, message_content) VALUES ('"
+				. "14" . "','" . $this->owner . "','N','" . time() . "','"
+				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content']."$to, $subject, $body, '', '', ''")."')",__LINE__,__FILE__);*/
+                            if (!$rc)
+                            {
+                              echo  lang('Your message could <B>not</B> be sent!<BR>')."\n"
+                              . lang('the mail server returned').':<BR>'
+                              . "err_code: '".$GLOBALS['phpgw']->send->err['code']."';<BR>"
+                              . "err_msg: '".htmlspecialchars($GLOBALS['phpgw']->send->err['msg'])."';<BR>\n"
+                              . "err_desc: '".$GLOBALS['phpgw']->err['desc']."'.<P>\n"                              );
+                              $GLOBALS['phpgw']->common->phpgw_exit();
+                            }
+                          }
+
 			return True;
 		}
 
