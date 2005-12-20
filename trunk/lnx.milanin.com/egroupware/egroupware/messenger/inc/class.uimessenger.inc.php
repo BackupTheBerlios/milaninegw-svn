@@ -20,6 +20,7 @@
 		var $template;
 		var $public_functions = array(
 			'inbox'          => True,
+                        'archive'        => True,
 			'compose'        => True,
 			'compose_global' => True,
 			'compose_multiple'=> True,
@@ -140,7 +141,66 @@
 
 			$GLOBALS['phpgw']->template->pfp('out','list');
 		}
+                function archive()
+                {
+			$start = get_var('start',array('GET','POST'));
+			$order = get_var('order',array('GET','POST'));
+			$sort  = get_var('sort',array('GET','POST'));
+			$total = $this->bo->total_messages();
 
+			$extra_menuaction = '&menuaction=messenger.uimessenger.archive';
+			$extra_header_info['nextmatchs_left']  = $this->nextmatchs->left('/index.php',$start,$total,$extra_menuaction);
+			$extra_header_info['nextmatchs_right'] = $this->nextmatchs->right('/index.php',$start,$total,$extra_menuaction);
+
+			$this->display_headers($extra_header_info);
+
+			$GLOBALS['phpgw']->template->set_file('_inbox','inbox.tpl');
+			$GLOBALS['phpgw']->template->set_block('_inbox','list');
+			$GLOBALS['phpgw']->template->set_block('_inbox','row');
+			$GLOBALS['phpgw']->template->set_block('_inbox','row_empty');
+
+			$this->set_common_langs();
+			$GLOBALS['phpgw']->template->set_var('sort_date','<a href="' . $this->nextmatchs->show_sort_order($sort,'message_date',$order,'/index.php','','&menuaction=messenger.uimessenger.archive',False) . '" class="topsort">' . lang('Date') . '</a>');
+			$GLOBALS['phpgw']->template->set_var('sort_subject','<a href="' . $this->nextmatchs->show_sort_order($sort,'message_subject',$order,'/index.php','','&menuaction=messenger.uimessenger.archive',False) . '" class="topsort">' . lang('Subject') . '</a>');
+			$GLOBALS['phpgw']->template->set_var('sort_from','<a href="' . $this->nextmatchs->show_sort_order($sort,'message_from',$order,'/index.php','','&menuaction=messenger.uimessenger.archive',False) . '" class="topsort">' . lang('From') . '</a>');
+
+			$params = array(
+				'start' => $start,
+				'order' => $order,
+				'sort'  => $sort
+			);
+			$messages = $this->bo->read_archive($params);
+
+			while(is_array($messages) && list(,$message) = each($messages))
+{
+				$status = $message['status'] . '-';
+				if($message['status'] == 'N' || $message['status'] == 'O')
+{
+					$status = '&nbsp;';
+}
+
+				$GLOBALS['phpgw']->template->set_var('row_from',$message['from']);
+				$GLOBALS['phpgw']->template->set_var('row_date',$message['date']);
+				$GLOBALS['phpgw']->template->set_var('row_subject','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.read_message&message_id=' . $message['id']) . '">' . $message['subject'] . '</a>');
+				$GLOBALS['phpgw']->template->set_var('row_status',$status);
+				$GLOBALS['phpgw']->template->set_var('row_checkbox','<input type="checkbox" name="messages[]" value="' . $message['id'] . '">');
+
+				$GLOBALS['phpgw']->template->fp('rows','row',True);
+}
+
+			if(!is_array($messages))
+{
+				$GLOBALS['phpgw']->template->set_var('lang_empty',lang('You have no messages'));
+				$GLOBALS['phpgw']->template->fp('rows','row_empty',True);
+}
+			else
+{
+				$GLOBALS['phpgw']->template->set_var('form_action',$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.delete'));
+				$GLOBALS['phpgw']->template->set_var('button_delete','<input type="image" src="' . PHPGW_IMAGES . '/delete.gif" name="delete" title="' . lang('Delete selected') . '" border="0">');
+}
+
+			$GLOBALS['phpgw']->template->pfp('out','list');
+}
 		function set_compose_read_blocks()
 		{
 			$GLOBALS['phpgw']->template->set_file('_form','form.tpl');

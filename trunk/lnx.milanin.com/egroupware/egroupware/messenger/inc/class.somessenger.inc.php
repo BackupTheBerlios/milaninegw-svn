@@ -52,7 +52,7 @@
 			}
 
 			$this->db->limit_query('SELECT * FROM ' . $this->table . " WHERE message_owner='" . $this->owner
-				. "' $sortmethod",$start,__LINE__,__FILE__);
+				. "' and message_folder = 'inbox' $sortmethod",$start,__LINE__,__FILE__);
 			while($this->db->next_record())
 			{
 				$messages[] = array(
@@ -66,7 +66,34 @@
 			}
 			return $messages;
 		}
+                function read_archive($start,$order,$sort)
+                {
+			$messages = array();
 
+			if($sort && $order)
+{
+				$sortmethod = " ORDER BY $order $sort";
+}
+			else
+{
+				$sortmethod = ' ORDER BY message_date ASC';
+}
+
+			$this->db->limit_query('SELECT * FROM ' . $this->table . " WHERE message_owner='" . $this->owner
+				. "' and message_folder = 'archive' $sortmethod",$start,__LINE__,__FILE__);
+			while($this->db->next_record())
+{
+				$messages[] = array(
+					'id'      => $this->db->f('message_id'),
+					'from'    => (int)$this->db->f('message_from'),
+					'status'  => $this->db->f('message_status'),
+					'date'    => $this->db->f('message_date'),
+					'subject' => $this->db->f('message_subject'),
+					'content' => $this->db->f('message_content')
+				);
+}
+			return $messages;
+                }
 		function read_message($message_id)
 		{
 			$this->db->query('SELECT * FROM ' . $this->table . " WHERE message_id='"
@@ -110,7 +137,9 @@
                             $subject=lang('new')." ".lang('message from')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
-                            $body  = lang('subject').": ".$message['subject']."\n\n-----\n".
+                            $body  = lang('inbox').
+                            ": http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n".
+                            lang('subject').": ".$message['subject']."\n\n-----\n".
                             $message['content'].
                             "\n-----\n";
                             $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');

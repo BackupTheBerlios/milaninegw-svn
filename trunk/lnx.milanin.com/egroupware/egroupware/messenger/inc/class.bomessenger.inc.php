@@ -246,7 +246,72 @@
 
 			return $_messages;
 		}
+                function read_archive($values)
+{
+			$start = $values['start'];
+			$order = $values['order'];
+			$sort  = $values['sort'];
 
+			$messages = $this->so->read_archive((int)$start,$order,$sort);
+
+			while(is_array($messages) && list(,$message) = each($messages))
+{
+				if($message['from'] == -1)
+{
+					$cached['-1']       = -1;
+					$cached_names['-1'] = lang('Global Message');
+}
+
+				// Cache our results, so we don't query the same account multiable times
+				if(!$cached[$message['from']])
+{
+					$acct = CreateObject('phpgwapi.accounts',$message['from']);
+					$acct->read_repository();
+					$cached[$message['from']]       = $message['from'];
+					$cached_names[$message['from']] = $GLOBALS['phpgw']->common->display_fullname($acct->data['account_lid'],$acct->data['firstname'],$acct->data['lastname']);
+}
+
+				/*
+ ** N - New
+ ** R - Replied
+ ** O - Old (read)
+ ** F - Forwarded
+     */
+				if($message['status'] == 'N')
+{
+					$message['subject'] = '<b>' . $message['subject'] . '</b>';
+					//$message['status'] = 'N';
+					$message['date'] = '<b>' . $GLOBALS['phpgw']->common->show_date($message['date']) . '</b>';
+					$message['from'] = '<b>' . $cached_names[$message['from']] . '</b>';
+}
+				else
+{
+					$message['date'] = $GLOBALS['phpgw']->common->show_date($message['date']);
+					$message['from'] = $cached_names[$message['from']];
+}
+
+				if($message['status'] == 'O')
+{
+					//$message['status'] = '&nbsp;';
+}
+
+				$_messages[] = array(
+					'id'      => $message['id'],
+					'from'    => $message['from'],
+					'status'  => $message['status'],
+					'date'    => $message['date'],
+					'subject' => $message['subject'],
+					'content' => $message['content']
+				);
+}
+
+			if(@is_null($_messages))
+{
+				return array();
+}
+
+			return $_messages;
+                      }
 		function read_message($message_id)
 		{
 			$message = $this->so->read_message((int)$message_id);
