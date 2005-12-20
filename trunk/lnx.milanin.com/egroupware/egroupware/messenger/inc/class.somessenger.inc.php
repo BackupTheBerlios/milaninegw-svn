@@ -134,7 +134,7 @@
 				. "')",__LINE__,__FILE__);
 			 if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
                             $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
-                            $subject=lang('new')." ".lang('message from')." ".
+                            $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
                             $body  = lang('inbox').
@@ -143,7 +143,7 @@
                             $message['content'].
                             "\n-----\n";
                             $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');
-                            $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '');
+                            $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '','Messenger <messenger@'.$_SERVER['SERVER_NAME'].'>');
                             /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
 				. "14" . "','" . $this->owner . "','N','" . time() . "','"
@@ -196,4 +196,10 @@
 				. "message_owner='" . $this->owner . "'",__LINE__,__FILE__);
 			return True;
 		}
+		function archive_message($message_id)
+                {
+			$this->db->query('UPDATE ' . $this->table . " SET message_folder='archive' WHERE message_id='$message_id' AND "
+				. "message_owner='" . $this->owner . "'",__LINE__,__FILE__);
+			return True;
+                }
 	}

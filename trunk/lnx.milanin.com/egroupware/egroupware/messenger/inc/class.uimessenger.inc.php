@@ -27,7 +27,8 @@
 			'read_message'   => True,
 			'reply'          => True,
 			'forward'        => True,
-			'delete'         => True
+			'delete'         => True,
+			'archive_message'=> True
 		);
 
 		function uimessenger()
@@ -41,6 +42,8 @@
 			$GLOBALS['phpgw']->template->set_file('_header','messenger_header.tpl');
 			$GLOBALS['phpgw']->template->set_block('_header','global_header');
 			$GLOBALS['phpgw']->template->set_var('lang_inbox','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.inbox') . '">' . lang('Inbox') . '</a>');
+			$GLOBALS['phpgw']->template->set_var('lang_archive','<a href="' .
+			$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.archive') . '">' . lang('archive') . '</a>');
 			$GLOBALS['phpgw']->template->set_var('lang_compose','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose') . '">' . lang('Compose to single-user') . '</a>');
 			$GLOBALS['phpgw']->template->set_var('lang_compose_multiple','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_multiple') . '">' . lang('Compose to multi-users') . '</a>');
 
@@ -80,7 +83,13 @@
 
 			$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
 		}
+                function archive_message()
+                {
+			$messages = get_var('messages', array('GET','POST'));
+			$this->bo->archive_message($messages);
 
+			$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
+                }
 		function inbox()
 		{
 			$start = get_var('start',array('GET','POST'));
@@ -405,7 +414,9 @@
 			$GLOBALS['phpgw']->template->set_var('link_delete','<a href="'
 				. $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.delete&messages%5B%5D=' . $message['id'])
 				. '">' . lang('Delete') . '</a>');
-
+                        $GLOBALS['phpgw']->template->set_var('link_archive','<a href="'
+				. $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.archive_message&messages%5B%5D=' . $message['id']).
+				 '">' . lang('Archive') . '</a>');
 			$GLOBALS['phpgw']->template->set_var('link_reply','<a href="'
 				. $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.reply&message_id=' . $message['id'])
 				. '">' . lang('Reply') . '</a>');

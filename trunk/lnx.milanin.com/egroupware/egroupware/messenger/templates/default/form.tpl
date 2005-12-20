@@ -60,7 +60,7 @@
 <!-- END form_to -->
 
 <!-- BEGIN form_read_buttons -->
-{link_reply}&nbsp;|&nbsp;{link_forward}&nbsp;|&nbsp;{link_delete}&nbsp;
+{link_reply}&nbsp;|&nbsp;{link_forward}&nbsp;|&nbsp;{link_archive}&nbsp;|&nbsp;{link_delete}&nbsp;
 <!-- END form_read_buttons -->
 
 <!-- BEGIN form_read_buttons_for_global -->

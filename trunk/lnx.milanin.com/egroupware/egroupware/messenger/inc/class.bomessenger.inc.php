@@ -376,7 +376,22 @@
 
 			return True;
 		}
+                function archive_message($messages='')
+                {
+			if(!is_array($messages))
+                        {
+				return False;
+                        }
 
+			$this->so->db->transaction_begin();
+			while(list(,$message_id) = each($messages))
+                        {
+				$this->so->archive_message($message_id);
+                        }
+			$this->so->db->transaction_commit();
+
+			return True;
+                }
 		function reply($message_id='',$n_message='')
 		{
 			if(!$message_id)
