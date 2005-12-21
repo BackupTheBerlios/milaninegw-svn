@@ -69,8 +69,8 @@ END;
 		<td align="center" valign="top">
 			<a href="{$url}{$info->username}/">
 			<img src="{$url}_icons/data/{$icon}" width="{$width}" height="{$height}" alt="{$username}" border="0" /></a><br />
-			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}'s Profile {$usermenu}{$rsslink}</span>
-			<span class="userdetails">{$homelink}</span>
+			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}'s Profile {$usermenu}</span>
+			<span class="userdetails">{$homelink}</span><span>{$rsslink}</span>
 		</td>
 		
 END;
