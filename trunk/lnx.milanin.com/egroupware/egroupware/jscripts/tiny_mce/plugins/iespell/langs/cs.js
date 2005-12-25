@@ -1,4 +1,12 @@
-// UK lang variables
+/**
+ * Czech lang variables 
+ * encoding: utf-8
+ *  
+ * $Id: cs.js,v 1.4 2005/10/18 13:59:42 spocke Exp $ 
+ */  
 
-tinyMCELang['lang_iespell_desc'] = 'Spustit kontrolu pravopisu';
-tinyMCELang['lang_iespell_download'] = "ieSpell nedetekován. Kliknìte na OK a otevøete stahovací stránku."
+tinyMCE.addToLang('',{
+iespell_desc : 'Spustit kontrolu pravopisu',
+iespell_download : "ieSpell nedetekovÃ¡n. KliknÄ›te na OK a otevÅ™ete stahovacÃ­ strÃ¡nku."
+});
+
