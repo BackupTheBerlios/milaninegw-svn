@@ -29,6 +29,7 @@
 				//elements : "news[content],entry[label]",
                                 mode: "specific_textareas",
                                 editor_selector : "tinyMCE",
+				safari_warning : false,
 				plugins : "table",
 				theme_advanced_buttons1_add : "forecolor,backcolor",
 				theme_advanced_buttons3_add_before : "tablecontrols,separator",
