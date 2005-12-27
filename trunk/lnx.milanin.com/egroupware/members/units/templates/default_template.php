@@ -24,10 +24,11 @@
 END;
 if ($_SESSION['userid']>0){
 $template['pageshell'] .= <<< END
-<script language="javascript" type="text/javascript" src="/members/jscripts/tiny_mce/tiny_mce.js"></script>
+<script language="javascript" type="text/javascript" src="/egroupware/jscripts/tiny_mce/tiny_mce.js"></script>
 <script language="javascript" type="text/javascript">
 tinyMCE.init({
 	mode : "exact",
+	safari_warning : false,
 	elements: "home[data],new_weblog_post,profiledetails[biography],profiledetails[careergoals],new_weblog_comment",
 	language: "it"
 });
