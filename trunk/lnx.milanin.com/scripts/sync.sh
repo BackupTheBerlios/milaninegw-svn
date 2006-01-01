@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -cr --exclude=CVS --exclude=header.inc.php --exclude='*~' --exclude=.svn $1 $2
+rsync -vcr --exclude=CVS --exclude=header.inc.php --exclude='*~' --exclude=.svn --exclude='includes.php' --exclude='egw_bridge.php' $1 $2
