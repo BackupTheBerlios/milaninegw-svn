@@ -21,6 +21,13 @@
 			// echo "<b>" . $run_context . "</b>&nbsp;&nbsp;" . $sql_query . "<br />";
 			if ($sql_query != "") {
 				// echo "<!-- $sql_query -->\n";
+                                preg_match_all('/(?:from|into|join|update)\s+(\w+?)\s/i',$sql_query,$tables);
+                                //echo "<pre>".$sql_query."\n".print_r($tables,1)."\n";
+                                foreach ($tables[1] as $tbl){
+                                  //echo "replacing ".$tbl." with ".tbl_prefix.$tbl."\n";
+                                  $sql_query=preg_replace("/$tbl/",tbl_prefix.$tbl,$sql_query);
+                                }
+                                //echo "launching: ".$sql_query."\n</pre>";
 				if ($result = @mysql_query($sql_query)) {
 					$data = array();
 					if (!is_bool($result)) {

@@ -30,6 +30,8 @@
 			define("db_pass", "4e455633");
 		// Database name
 			define("db_name", "Sql73134_3");
+		// Tables names prefix
+                        define("tbl_prefix","members_");
 		// Groupware database name
 			define("db_gw_name", "Sql73134_1");
 				
