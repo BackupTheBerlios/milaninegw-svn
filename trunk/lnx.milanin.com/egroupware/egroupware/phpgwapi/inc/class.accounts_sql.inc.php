@@ -220,7 +220,7 @@
 			{
 				$sort = "DESC";
 			}
-
+$data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
 			{
 				$orderclause = "ORDER BY $order $sort, account_lid ASC";
@@ -257,8 +257,9 @@
 		function get_guest_count($_type='both')
 
 {
+$sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A' and session_logintime > ".(time() - $GLOBALS['phpgw_info']['server']['sessions_timeout']);
 			
-			$this->db->query("SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A'");
+			$this->db->query($sql);
 			$this->db->next_record();
 			$total = $this->db->f(0);
 			return $total;
@@ -317,11 +318,22 @@
 						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
 						break;
 					case 'firstname':
+						$query = $this->db->quote($query."%");
+						$whereclause .= " account_firstname LIKE $query )";
+						break;
+
 					case 'lastname':
 						$query = $this->db->quote($query."%");
 						$whereclause .= " account_lastname LIKE $query )";
 						break;
-
+            case 'account_status':
+						//$query = $this->db->quote($query);
+						if ($query == 'A'){
+						$whereclause .= " account_status = 'A' )";
+						}else{
+						$whereclause .= " account_status != 'A' )";
+						}
+						break;
 					case 'lid':
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
@@ -333,8 +345,6 @@
 //$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause and account_lid not like 'anonymous' $orderclause";
 
 			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
-			
-
 			
 			if ($offset)
 			{
