@@ -20,7 +20,6 @@
 		'noapi'      => False
 	);
 	$parentdir = dirname(dirname($_SERVER['SCRIPT_FILENAME']));
-	// $parentdir = 'C:\Programmi\apache\Apache2\htdocs\egroupware';
 
 
 
@@ -61,6 +60,13 @@ if ($_GET['query'] != null) {
 $query=$_GET['query'];
 }
 
+$regstatus='all';
+
+if (($_GET['regstatus'] != null)&&($_GET['regstatus'] != 'all')) {
+    $query=$_GET['regstatus'];
+    $regstatus=$_GET['regstatus'];
+    $query_type='account_status';
+}
 
 $members['online']=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, $query, $offset_page, $query_type);
 
@@ -90,7 +96,8 @@ if (($current_page +1) < $pages_count)
 $next_page = $current_page +1;
 
 
-$select_str = "<form name='myform'>Order by: <select name='order_by' onChange='myform.submit();'><option value='session_id' ";
+$select_str = "<form name='myform'>";
+$select_str .= "<table align=\"left\" ><tr ><td>Order by: </td><td colspan=4><select name='order_by' onChange='myform.submit();'><option value='session_id' ";
 if ($order_by == "session_id") {
 $select_str .= "selected='true'";
 }
@@ -102,7 +109,25 @@ $select_str .= ">First Name</option><option value='account_lastname' ";
 if ($order_by == "account_lastname") {
 $select_str .= "selected='true'";
 }
-$select_str .= ">Last Name</option></select> <input type=submit value='Go' title=Go></form>";
+$select_str .= ">Last Name</option></select> <input type=submit value='Go' title=Go></td></tr>";
+
+$select_str .= "<tr><td>Registration status</td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"A\" ";
+
+if ($regstatus == "A") {
+$select_str .= " CHECKED ";
+}
+$select_str .= ">Active </td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"P\"";
+
+if ($regstatus == "P") {
+$select_str .= " CHECKED ";
+}
+$select_str .= ">Passive </td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"all\" ";
+
+if ($regstatus == "all") {
+$select_str .= " CHECKED ";
+}
+$select_str .= ">All </td></tr></table>";
+$select_str .= "</form>";
 
 
 
@@ -120,7 +145,7 @@ $search_str1 .= "</tr></table></form>";
 			unset($chars);
 			$aar[] = 'all';
 			
-$search_str = "<form name='mySearchform' ><table align=\"center\"><tr class=divSideboxEntry  colspan=".(sizeOf($aar) + 4).">";
+$search_str = "<table align=\"center\"><tr class=divSideboxEntry  colspan=".(sizeOf($aar) + 4).">";
 $search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page 1'><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' border='0' title='First' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($prev_page -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($prev_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='Previous' hspace='2' /></a></td>";
 
 
@@ -147,24 +172,31 @@ $search_str .= "<td align='right'><a href=index.php?start_from=0&order_by=".$ord
 			unset($aar);
 			unset($char);
 $search_str .= "<td align='right'><a href=index.php?start_from=".(($next_page -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($next_page +1)."'><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='Next' hspace='2' /></a></td><td align='right'><a href=index.php?start_from=".(($pages_count -1) * $offset_page)."&order_by=".$order_by."&query=".$query."&query_type=".$query_type." title='go to page ".($pages_count)."'><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='Last' hspace='2' /></a></td>";			
-$search_str .= "</tr></table></form>";
-		
+$search_str .= "</tr></table>";
 
+
+		
+    echo "<form name='mySearchform' >";
+    echo $search_str2;
     echo $search_str1;
+    
     echo $search_str;
-		echo "<table align=\"center\"><tr class=divSideboxEntry><th colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count1."<br></th><th colspan=5 align=right>".$select_str."</th></tr>";
+    echo "</form>";
+    
+		echo "<table align=\"center\"><tr class=divSideboxHeader><td align=\"left\" colspan=6>".lang("Members")." online: ".$members_online_count." <br>".lang("Anonymous")." : ".$guests_online_count."<br>".lang("Registered")." total: ".$members_reg_count1."<br></td><td align=\"left\" colspan=5>".$select_str."</td></tr>";
 
 if (sizeOf($members['online']) < 1){
 echo "<tr colspan=5 align=center>Your request returned no result.</tr>"; 
 
 } else {
+    //show result count message if any search 
     if ($members_reg_count1 > $members_reg_count){
-    echo "<tr colspan=5 align=center>Your request returned ".$members_reg_count." results.</tr>";
+    echo "<tr align=\"center\" class=divSideboxHeader colspan=11>Your request returned ".$members_reg_count." results. </tr>";
      }
 		foreach ($members['online'] as $member){
                     $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
                     $linkedIn_user_location='https://www.linkedin.com/profile?viewProfile=&key='.$member[account_linkedin];
-$emailuser_location='http://'.$_SERVER['SERVER_NAME'].'email/compose.php?to='.$member[account_email];
+		                $emailuser_location='http://'.$_SERVER['SERVER_NAME'].'/email/compose.php?to='.$member[account_email];
                                        $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to='.$member['account_lid'].'&';
                     $user_status="";
                     echo "<tr class=divSideboxEntry>";
@@ -216,7 +248,7 @@ $emailuser_location='http://'.$_SERVER['SERVER_NAME'].'email/compose.php?to='.$m
                 echo "</table>";
 
 
-echo "<table><tr class=divSideboxEntry><th colspan=11>Total pages: ".$pages_count."</th></tr>";
+echo "<table align=\"center\"><th class=divSideboxHeader colspan=11>Total pages: ".$pages_count."<br>Current page:".$current_page." </th>";
 echo "<tr class=divSideboxEntry colspan=".$pages_count.">";
 
 for($x = 0;$x < $pages_count;$x++)
@@ -230,9 +262,6 @@ for($x = 0;$x < $pages_count;$x++)
 
  }
 echo "</tr>"; 
-echo "<tr class=divSideboxEntry colspan=".$pages_count.">";  
-echo "Current page:".$current_page; 
-echo "</tr></table>";                       
                
 		$GLOBALS['phpgw']->common->phpgw_footer();
 
