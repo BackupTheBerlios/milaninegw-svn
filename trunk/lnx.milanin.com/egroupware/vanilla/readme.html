@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+	<head>
+		<title>Vanilla - Read Me</title>
+      <style type="text/css">
+         body {
+            background: #F5F5F5;
+            margin: 0px;
+            padding: 0px;
+         }
+         body, div {
+            font-family: Verdana, Trebuchet MS, Arial;
+            font-size: 12px;
+            line-height: 170%;
+         }
+         h1 {
+            padding: 0px;
+            margin: 0px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-size: 18px;
+         }
+         h2 {
+            padding: 0px;
+            margin: 0px;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-size: 14px;
+            text-indent: 6px;
+         }
+         a, a:link, a:visited {
+            text-decoration: underline;
+            color: #97D330;
+         }
+         a:hover {
+            text-decoration: underline;
+            color: #000;
+         }
+         .Warnings {
+            margin-top: 30px;
+            padding: 8px;
+            background: #E3FEB3;
+            border-top: 1px solid #97D330;
+            border-bottom: 1px solid #97D330;
+         }
+         .Warnings,
+         .Warnings div {
+            color: #5D8F06;
+            font-size: 11px;
+         }
+         .Warnings strong {
+            display: block;
+            font-size: 12px;
+            padding-bottom: 4px;
+         }
+         .Banner {
+            padding: 20px;
+         }
+         .Body {
+            background: #fff;
+            border-top: 2px solid #97D330;
+            border-bottom: 2px solid #97D330;
+            padding: 26px;
+            padding-top: 0px;
+         }
+         .Body p,
+         .Body code {
+            margin-left: 10px;
+         }
+         pre, code {
+            background: #f5f5f5;
+            border-left: 4px solid #ddd;
+            padding: 8px;
+         }
+         .Contents {
+            max-width: 600px;
+         }
+         ul ul {
+            margin-bottom: 10px;
+         }
+         .Form {
+            background: #eee;
+            padding: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+         }
+         dl {
+            margin: 0px;
+            padding: 0px;
+         }
+         dt {
+            padding-top: 5px;
+            position: absolute;
+         }
+         dd {
+            padding-left: 170px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+         }
+         .Form input {
+            width: 200px;
+         }
+         .Button a, .Button a:link, .Button a:visited, .Button a:hover {
+            font-size: 16px;
+            text-decoration: underline;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-weight: bold;
+         }
+         .Button a, .Button a:link, .Button a:visited {
+            color: orange;
+         }
+         .Button a:hover {
+            color: #97D330;
+         }         
+         .Foot {
+            padding: 10px;
+            padding-left: 20px;
+            color: #ddd;
+            font-size: 11px;
+         }
+         .Foot a, .Foot a:link, .Foot a:visited {
+            color: #ccc;
+            text-decoration: none;
+         }
+         .Foot a:hover {
+            color: #555;
+            text-decoration: none;         
+         }
+      </style>
+   </head>
+   <body>
+      <div class="Banner">
+         <img src="./images/vanilla_installer.gif" height="53" width="346" border="0" alt="Lussumo Vanilla" />
+      </div>
+      <div class="Body">
+         <div class="Contents">
+            <div class="Warnings">
+               <strong>Warning</strong>
+               <p>By accepting, downloading, and/or installing this product, you indemnify and hold harmless Lussumo Software and it's creator Mark O'Sullivan. You accept that this product may contain harmful or damaging code.</p>
+            </div>
+            
+            <h1>Upgrading Your Existing Installation</h1>
+            <p>If you have an existing installation of Vanilla, <a href="upgrade.html">upgrade instructions can be found here</a>, otherwise continue reading for fresh-install instructions.</p>
+				
+            <h1>Automated Installation</h1>
+            <h2>Installer</h2>
+            <p>An installer is available. If you are viewing this file through your web server (ie. not through your filesystem), <a href="installer.php">you can access the installer here</a>.</p>
+            <p>If you would rather do a manual installation, follow the instructions below.</p>
+            
+            <h1>Manual Installation</h1>
+            <h2>Database</h2>
+            <p>Contained in the root directory of this application is a vanilla.sql file. You can use an existing database (if you have one), or you can create a new database named whatever you like. You can install this database using the following command:</p>
+            <blockquote>
+               <code>mysql -u your_database_username -p your_database_name < vanilla.sql</code>
+            </blockquote>
+            <p>The database is an empty shell, containing a single administrative user in the system with the username "Admin" and the password "Admin".</p>
+            
+            <h2>Files</h2>
+            <p>Place the application files where you want the forum to appear on your system. Then follow the following instructions:</p>
+            <ol>
+               <li>Open the appg/settings.php file</li>
+               <li>On line 15, specify the host name of your mysql database (dbHOST).</li>
+               <li>On line 16, specify the name of your database (dbNAME).</li>
+               <li>On line 17, specify the username of the user with access to your database (dbUSER).</li>
+               <li>On line 18, specify the password of the user with access to your database (dbPASSWORD).</li>
+               <li>On line 21, specify the ABSOLUTE path to the vanilla directory you created (agAPPLICATION_PATH).</li>
+               <li>On line 30, specify the web-path to the application. Eg www.yourdomain.com/vanilla (agDOMAIN).</li>
+               <li>On line 35, specify the domain to which you would like to have Vanilla cookies assigned (agCOOKIE_DOMAIN).</li>
+            </ol>
+            
+            <p>Vanilla is going to need read AND write access to the following files:</p>
+            <ul>
+               <li>appg/settings.php</li>
+               <li>appg/extensions.php</li>
+               <li>appg/language.php</li>
+            </ul>
+            <p>Vanilla is also going to need read access to the following folder:</p>
+            <ul>
+               <li>languages/</li>
+            </ul>
+            <p>And finally, the filebrowser and thumbnailer will need read AND write access to the following folder:</p>
+            <ul>
+               <li>images/</li>
+            </ul>
+            <p>If you are running a *nix server and you have command line access, you can achieve these permissions by navigating to the Vanilla folder. Once you are sitting in the same folder as this readme.html file, run the following commands:</p>
+            <blockquote>
+               <pre>chmod 666 appg/settings.php
+chmod 666 appg/language.php
+chmod 666 appg/extensions.php
+chmod 755 languages/
+chmod 757 images/</pre>
+            </blockquote>
+            
+            
+            <h1>What Next?</h2>
+            <p>There is a whole world of configuration you can do with Vanilla, and we highly recommend that you head on over to the <a href="http://lussumo.com/docs/">Lussumo Documentation</a> site to read the Vanilla documentation. You can do everything from changing the the banner text on your forum to completely altering the look and functionality of your forum with extensions.</p>
+            <p>If you've followed the instructions, you should be able to <a href="signin.php">sign in now</a>.</p>
+            
+            <h2>Troubleshooting</h2>
+            <p>If you are having problems getting Vanilla set up, first of all be sure to check out the <a href="http://lussumo.com/docs/">Lussumo Documentation</a>. If the documentation doesn't do it for you, we've got a community of users who are always ready, willing, and able to help out with your requests over at our <a href="http://lussumo.com/community">Community Forums</a>.</p>
+            
+            <h1>Reporting Bugs</h1>
+            <h2>Please READ and FOLLOW these guidelines when reporting bugs</h2>
+            <ul>
+               <li><strong>Check and ask at lussumo.com/community</strong> for fixes to your problems before emailing in bug reports.</li>
+               <li><strong>Email bugs</strong> to support [at] lussumo [dot] com.</li>
+               <li>
+                  <strong>Document your bugs</strong>. Good documentation includes:
+                  <ul>
+                     <li>Your system configuration: operating system &amp; version, web server &amp; version, mysql version, php version, etc.</li>
+                     <li>Any urls you were accessing when you encountered errors (DO NOT report a page name. Give a proper url).</li>
+                     <li>If you encountered the error when submitting a form of some kind, tell us exactly what you had put in every single input on the form.</li>
+                     <li>Screen captures of bugs can often help to rectify the problem very quickly.</li>
+                  </ul>
+               </li>
+            </ul>
+            <p>The bottom line is: When it comes to debugging, the more you can provide, the easier it will be to duplicate and rectify the problem.</p>
+         </div>
+      </div>
+      <div class="Foot">
+         <a href="http://lussumo.com">Lussumo</a> <a href="http://getvanilla.com">Vanilla</a> & <a href="http://thefilebrowser.com">Filebrowser</a> Copyright &copy; 2001 - 2005
+      </div>   
+   </body>
+</html>

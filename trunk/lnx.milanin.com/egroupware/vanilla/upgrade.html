@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+	<head>
+		<title>Vanilla - Upgrade Instructions</title>
+      <style type="text/css">
+         body {
+            background: #F5F5F5;
+            margin: 0px;
+            padding: 0px;
+         }
+         body, div {
+            font-family: Verdana, Trebuchet MS, Arial;
+            font-size: 12px;
+            line-height: 170%;
+         }
+         h1 {
+            padding: 0px;
+            margin: 0px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-size: 18px;
+         }
+         h2 {
+            padding: 0px;
+            margin: 0px;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-size: 14px;
+            text-indent: 6px;
+         }
+         a, a:link, a:visited {
+            text-decoration: underline;
+            color: #97D330;
+         }
+         a:hover {
+            text-decoration: underline;
+            color: #000;
+         }
+         .Warnings {
+            margin-top: 30px;
+            padding: 8px;
+            background: #E3FEB3;
+            border-top: 1px solid #97D330;
+            border-bottom: 1px solid #97D330;
+         }
+         .Warnings,
+         .Warnings div {
+            color: #5D8F06;
+            font-size: 11px;
+         }
+         .Warnings strong {
+            display: block;
+            font-size: 12px;
+            padding-bottom: 4px;
+         }
+         .Banner {
+            padding: 20px;
+         }
+         .Body {
+            background: #fff;
+            border-top: 2px solid #97D330;
+            border-bottom: 2px solid #97D330;
+            padding: 26px;
+            padding-top: 0px;
+         }
+         .Body p,
+         .Body code {
+            margin-left: 10px;
+         }
+         pre, code {
+            background: #f5f5f5;
+            border-left: 4px solid #ddd;
+            padding: 8px;
+         }
+         .Highlight {
+            background: #ffb;
+            color: #777;
+         }
+         .Contents {
+            max-width: 600px;
+         }
+         ul ul {
+            margin-bottom: 10px;
+         }
+         .Form {
+            background: #eee;
+            padding: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+         }
+         dl {
+            margin: 0px;
+            padding: 0px;
+         }
+         dt {
+            padding-top: 5px;
+            position: absolute;
+         }
+         dd {
+            padding-left: 170px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+         }
+         .Form input {
+            width: 200px;
+         }
+         .Button a, .Button a:link, .Button a:visited, .Button a:hover {
+            font-size: 16px;
+            text-decoration: underline;
+            font-family: Trebuchet MS, Arial, Tahoma, Verdana;
+            font-weight: bold;
+         }
+         .Button a, .Button a:link, .Button a:visited {
+            color: orange;
+         }
+         .Button a:hover {
+            color: #97D330;
+         }         
+         .Foot {
+            padding: 10px;
+            padding-left: 20px;
+            color: #ddd;
+            font-size: 11px;
+         }
+         .Foot a, .Foot a:link, .Foot a:visited {
+            color: #ccc;
+            text-decoration: none;
+         }
+         .Foot a:hover {
+            color: #555;
+            text-decoration: none;         
+         }
+      </style>
+   </head>
+   <body>
+      <div class="Banner">
+         <img src="./images/vanilla_installer.gif" height="53" width="346" border="0" alt="Lussumo Vanilla" />
+      </div>
+      <div class="Body">
+         <div class="Contents">
+            <div class="Warnings">
+               <strong>Warning</strong>
+               <p>These upgrade instructions apply to an upgrade from Vanilla 0.9.0 (or greater) to 0.9.2. If you have a different version of Vanilla installed, following these instructions may break your existing installation. We highly recommend that you back up your database and files before you attempt to perform these changes.</p>
+            </div>
+            
+            <h1>Database Changes</h1>
+            <p>There was a minor change made to the database in this release, so you will need to run the following SQL script on your database:</p>
+
+            <code>alter table LUM_Role add CanViewIps enum('1','0') not null default '0';</code>
+            
+            <h1>File Updates</h1>
+            <p>Every single file in Vanilla was changed in this upgrade. As a result, you will need to manually make changes to a couple of small files, and over-write all other files.</p>
+            
+            <h2>File Changes</h2>
+            <dl>
+               <dt>languages/English.php</dt>
+               <dd>If you have altered your languages/English.php file, or created your own custom language file, rather than overwrite your customized language file with our new version, compare with our new version. All changes made to the language file are appended and documented at the end of the file. Make sure that any new codes are copied over into your existing language file.
+               <br />Change the very first line in the file from <span class="Highlight">&lt;?</span> to <span class="Highlight">&lt;?php</span>.</p>
+               <dt>appg/headers.php</dt>
+               <dd>Change the first line from <span class="Highlight">&lt;?</span> to <span class="Highlight">&lt;?php</span>.</dd>
+               <dt>appg/settings.php</dt>
+               <dd>Change the first line from <span class="Highlight">&lt;?</span> to <span class="Highlight">&lt;?php</span>.
+                  <br />Add the following code below line 32: <span class="Highlight">define("agDISCUSSIONS_PER_FEED", "20");</span>.
+                  <br />Upgrade your version number on line 85 from 0.9.1 to 0.9.2.</dd>
+            </dl>
+            
+            <h2>File Replacements</h2>
+            <p>The following files and folders can be completely overwritten with the new versions:</p>
+            <ul>
+               <li>appg/init_ajax.php</li>
+               <li>appg/init_external.php</li>
+               <li>appg/init_internal.php</li>
+               <li>The entire /controls directory</li>
+               <li>The entire /extensions directory</li>
+               <li>The entire /feeds directory</li>
+               <li>The entire /images directory</li>
+               <li>The entire /js directory</li>
+               <li>The entire /library directory</li>
+               <li>The entire /styles directory</li>
+               <li>The entire /tools directory</li>
+               <li>All files in the base directory (account.php, apply.php, etc)</li>
+            </ul>
+            
+            <h1>Support &amp; Troubleshooting</h1>
+            <p>As always, if you are having trouble, please visit the <a href="http://lussumo.com/community">Lussumo Community Forum</a> or the <a href="http://lussumo.com/docs">Lussumo Documentation</a> for help.</p>
+         </div>
+      </div>
+      <div class="Foot">
+         <a href="http://lussumo.com">Lussumo</a> <a href="http://getvanilla.com">Vanilla</a> & <a href="http://thefilebrowser.com">Filebrowser</a> Copyright &copy; 2001 - 2005
+      </div>   
+   </body>
+</html>
