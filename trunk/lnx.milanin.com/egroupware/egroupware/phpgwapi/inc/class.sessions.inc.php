@@ -625,7 +625,7 @@
 			$block_time = time() - $GLOBALS['phpgw_info']['server']['block_time'] * 60;
 			
 			$ip = $this->db->db_addslashes($ip);
-			$this->db->query("SELECT count(*) FROM phpgw_access_log WHERE account_id=0 AND ip='$ip' AND li > $block_time",__LINE__,__FILE__);
+			$this->db->query("SELECT count(*) FROM phpgw_access_log WHERE account_id=0 AND ip='$ip' AND li > $block_time AND loginid not like 'anonymous%'",__LINE__,__FILE__);
 			$this->db->next_record();
 			if (($false_ip = $this->db->f(0)) > $GLOBALS['phpgw_info']['server']['num_unsuccessful_ip'])
 			{
@@ -633,7 +633,7 @@
 				$blocked = True;
 			}
 			$login = $this->db->db_addslashes($login);
-			$this->db->query("SELECT count(*) FROM phpgw_access_log WHERE account_id=0 AND (loginid='$login' OR loginid LIKE '$login@%') AND li > $block_time",__LINE__,__FILE__);
+			$this->db->query("SELECT count(*) FROM phpgw_access_log WHERE account_id=0 AND (loginid='$login' OR loginid LIKE '$login@%') AND li > $block_time  AND loginid not like 'anonymous%'",__LINE__,__FILE__);
 			$this->db->next_record();
 			if (($false_id = $this->db->f(0)) > $GLOBALS['phpgw_info']['server']['num_unsuccessful_id'])
 			{
