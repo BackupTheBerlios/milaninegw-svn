@@ -92,11 +92,11 @@
 
 			$acct = CreateObject('phpgwapi.accounts',$GLOBALS['phpgw']->accounts->name2id($message['to']));
 			$acct->read_repository();
-			if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($message['to'],'account_lid'))
+			/*if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($message['to'],'account_lid'))
 			{
 				$errors[] = lang("Sorry, %1's account is not currently active",$message['to']);
 			}
-
+*/
 			if(!$message['subject'])
 			{
 				$errors[] = lang('You must enter a subject');
@@ -153,10 +153,10 @@
 
 				    $acct = CreateObject('phpgwapi.accounts',$GLOBALS['phpgw']->accounts->name2id($to));
 				    $acct->read_repository();
-				    if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($to,'account_lid'))
+				    /*if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($to,'account_lid'))
 				    {
 				      $errors[] = lang("Sorry, %1's account is not currently active",$to);
-				    }
+				    }*/
 			      }
 			} 
      
