@@ -24,12 +24,14 @@
 
 	if($GLOBALS['phpgw']->acl->check('run',1,'admin'))
 	{
-		$menu_title = $GLOBALS['phpgw_info']['apps'][$appname]['title'] . ' '. lang('Menu');
 		$file = Array(
 			'Compose global message' => $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_global')
 		);
 
-		display_sidebox($appname,$menu_title,$file);
 	}
+	$menu_title = $GLOBALS['phpgw_info']['apps'][$appname]['title'] . ' '. lang('Menu');
+	$file['Archive'] = $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.archive');
+	display_sidebox($appname,$menu_title,$file);
+	
 }
 ?>

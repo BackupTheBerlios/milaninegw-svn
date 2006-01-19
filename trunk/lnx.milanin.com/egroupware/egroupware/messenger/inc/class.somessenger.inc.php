@@ -164,6 +164,7 @@
 
 		function send_multiple_message($message, $global_message = False)
 		{
+                        $GLOBALS['phpgw']->config->config_data['mailnotification']=1;
 			if($global_message)
 			{
 				$this->owner = -1;
@@ -173,6 +174,7 @@
 			   if(!ereg('^[0-9]+$',$to))
 			   {
 				$to = $GLOBALS['phpgw']->accounts->name2id($to,'account_lid');
+				$mail_to[]=$GLOBALS['phpgw']->accounts->id2name($to, 'account_email');
 			   }
 			   $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
@@ -180,6 +182,28 @@
 				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
 				. "')",__LINE__,__FILE__);
 			}
+			if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
+                            $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
+                            $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".
+                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
+                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
+                            $body  = lang('inbox').
+                            ": http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n".
+                            lang('subject').": ".$message['subject']."\n\n-----\n".
+                            $message['content'].
+                            "\n-----\n";
+                            $to=$GLOBALS['phpgw']->accounts->id2name($this->owner,'account_email');
+                            $rc = $GLOBALS['phpgw']->send->msg('email', '', $subject, $body, '', '', join(",",$mail_to),'Messenger <messenger@'.$_SERVER['SERVER_NAME'].'>');
+                            if (!$rc)
+                            {
+                              echo  lang('Your message could <B>not</B> be sent!<BR>')."\n"
+                              . lang('the mail server returned').':<BR>'
+                              . "err_code: '".$GLOBALS['phpgw']->send->err['code']."';<BR>"
+                              . "err_msg: '".htmlspecialchars($GLOBALS['phpgw']->send->err['msg'])."';<BR>\n"
+                              . "err_desc: '".$GLOBALS['phpgw']->err['desc']."'.<P>\n";
+                              $GLOBALS['phpgw']->common->phpgw_exit();
+                            }
+                          }
 			return True;
 		}
 		function total_messages($extra_where_clause = '')
