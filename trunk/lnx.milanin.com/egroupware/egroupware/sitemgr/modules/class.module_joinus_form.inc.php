@@ -92,8 +92,31 @@
 
 					$mailer->ClearAddresses();
 
+					$msg = "Your request for registration is sent to the administration and you will be contacted shortly".
+                                        "about your application's progress. Please keep your temporary ID: $account_lid ,".
+                                        " in order to easily track the process.\nThank you for your interest.\n\nB.C. Milan IN\n\n\n".
+                                        "http://www.milanin.com\nSede legale Via Tanaro, 22\n20128 Milano\nCF 97413780152\n".
+                                        "info@milanin.com\n";
 					
-					$content .= "<h3>Your request for registration were sent successfully</h3>";
+					$mailer = new send();
+					$mailer->Subject = "Your application for club membership";  // change it 
+					$mailer->Body = $msg;
+					
+					$mailer->From = "messenger@milanin.com";  // change it
+					$mailer->FromName = "B.C. Milan IN Administration";  // change it
+					 
+					//$mailer->AddAddress("piercarlo.pozzati@milanin.com"); // change it 
+					$mailer->AddAddress($p_email);
+					
+					if(!$mailer->Send())
+{
+						$content .= 'There was a problem sending mail to '.$p_email.'!';
+						$content .= $mailer->ErrorInfo;
+}
+
+					$mailer->ClearAddresses();
+					
+					$content .= "<h3>Your application for the membership were sent successfully, the administration is notified, and you will be contacted shortly. <br/>We thank you for your interest</h3>";
 					unset ($_POST);
 						
 				}
