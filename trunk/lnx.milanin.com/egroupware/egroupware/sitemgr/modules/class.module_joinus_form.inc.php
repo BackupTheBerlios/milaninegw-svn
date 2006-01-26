@@ -92,18 +92,20 @@
 
 					$mailer->ClearAddresses();
 
-					$msg = "Your request for registration is sent to the administration and you will be contacted shortly".
-                                        "about your application's progress. Please keep your temporary ID: $account_lid ,".
-                                        " in order to easily track the process.\nThank you for your interest.\n\nB.C. Milan IN\n\n\n".
-                                        "http://www.milanin.com\nSede legale Via Tanaro, 22\n20128 Milano\nCF 97413780152\n".
-                                        "info@milanin.com\n";
+					$msg = "Gentile Collega,\n
+abbiamo ricevuto la tua richiesta di iscrizione al Business Club Milan IN.\n
+Nel giro di qualche giorno riceverai da Pier Carlo Pozzati (presidente del Club) la richiesta di collegamento LinkedIn: ti preghiamo di accettarla, dal momento che questa una condizione essenziale per completare la tua iscrizione.\n
+Una volta accettata questa richiesta ti verr inviata una welcome letter contenete le istruzioni per il sito, username e password per accedere.\n
+Nel caso invece questa richiesta fosse stata inviata per errore ti preghiamo di segnalarlo a silvia.lenich@milanin.com.\n
+Grazie per il tuo interesse per il nostro Club e a presto!\n
+Silvia Lenich\nSegreteria Business Club Milan IN\n";
 					
 					$mailer = new send();
-					$mailer->Subject = "Your application for club membership";  // change it 
+					$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
 					$mailer->Body = $msg;
 					
-					$mailer->From = "messenger@milanin.com";  // change it
-					$mailer->FromName = "B.C. Milan IN Administration";  // change it
+					$mailer->From = "iscrizioni@milanin.com";  // change it
+					$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
 					 
 					//$mailer->AddAddress("piercarlo.pozzati@milanin.com"); // change it 
 					$mailer->AddAddress($p_email);
