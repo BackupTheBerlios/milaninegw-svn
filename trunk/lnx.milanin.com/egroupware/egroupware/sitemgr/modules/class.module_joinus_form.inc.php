@@ -123,7 +123,8 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 
 					$mailer->ClearAddresses();
 					
-					$content .= "<h3>Your application for the membership has been sent, the administration is notified, and you will be contacted shortly. <br/>We thank you for your interest</h3>";
+					$content .= lang("joinus success");
+                                        /*"<h3>Your application for the membership has been sent, the administration is notified, and you will be contacted shortly. <br/>We thank you for your interest</h3>";*/
 					unset ($_POST);
 						
 				}
