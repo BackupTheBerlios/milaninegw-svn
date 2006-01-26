@@ -70,16 +70,21 @@
 					
 					$date = date("d.m.Y H:i");
 					$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
-					$msg = "There was a new post from Milan-IN Web Site on $date\nUser Data\nName: $p_name $p_surname\n Phone: $p_phone\n e-mail: $p_email\n URL to LinkedIn: $p_url\n $p_msg\n\n\n Follow this link to view new user profile\n $link";
+					$msg = "A new application for membership has been received by Milan IN Web Site on $date\n".
+                                        "User Data follows:\n".
+                                        "---- First Name ----\n$p_name\n ----\n---- Last Name ----\n$p_surname\n----\n".
+                                        "---- Phone ----\n$p_phone\n----\n---- e-mail ----\n$p_email\n---- URL to LinkedIn ----\n$p_url\n".
+                                        "---- Comment ----\n$p_msg\n----\n".
+                                        "\n Follow this link to view and edit the new user account:\n $link\n";
 					
 					require_once(PHPGW_API_INC.'/class.send.inc.php');
 					
 					$mailer = new send();
-					$mailer->Subject = "New member request";  // change it 
+					$mailer->Subject = "New membership application";  // change it 
 					$mailer->Body = $msg;
 					
-					$mailer->From = "webmaster@milanin.com";  // change it
-					$mailer->FromName = "MilanIn webmaster";  // change it
+					$mailer->From = "messenger@milanin.com";  // change it
+					$mailer->FromName = "Milan IN website";  // change it
 					 
 					//$mailer->AddAddress("piercarlo.pozzati@milanin.com"); // change it 
 					$mailer->AddAddress($arguments['recepient']);
