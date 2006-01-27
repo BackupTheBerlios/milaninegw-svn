@@ -43,8 +43,8 @@
 				if (isset($p_ic)){
                                           mysql_select_db ($arguments['members_db_name']) or die("cannot select db:".mysql_error($mysql_link));
                                           $invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
-                                          "FROM `".$arguments['invitations_table'].'`i '.
-                                          'join phpgw_accounts a on i.owner=a.account_id '.
+                                          "FROM ".$arguments['members_db_name'].".`".$arguments['invitations_table'].'`i '.
+                                          'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
                                           'WHERE (i.code =\''.$g_ic.'\')';
                                           $invite_result=mysql_query ($invite_query, $mysql_link) 
                                             or die ($invite_query."<br>".mysql_error($mysql_link));
@@ -53,9 +53,8 @@
                                           
                                           if (isset($invitation['ident'])){
                                             $p_email=$invitation['email'];
-                                            $p_msg=lang('invited by').":\n".$invitation['inviter'].
-                                                   "\nhttp://".$_SERVER['SERVER_NAME']."/members/".$invitation['account_lid']."\n";
-                                            $remove_invitation_query='DELETE FROM '.$arguments['invitations_table'].
+                                            $remove_invitation_query='DELETE FROM '.$arguments['members_db_name'].".".
+                                                                      $arguments['invitations_table'].
                                                                      ' WHERE ident='.$invitation['ident'];
                                           } else {
                                             $log.=lang("invitation not found");
@@ -88,7 +87,7 @@
 					$result = mysql_query ($query, $mysql_link) or die ($query."<br>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
 					$result = mysql_query ($remove_invitation_query, $mysql_link) 
-                                          or die ($query."<br>".mysql_error($mysql_link));
+                                          or die ($remove_invitation_query."<br>".mysql_error($mysql_link));
 					mysql_close($mysql_link);	
 					
 					
@@ -97,8 +96,10 @@
 					
 					$date = date("d.m.Y H:i");
 					$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
-					$msg = "A new application for membership has been received by Milan IN Web Site on $date\n".
-                                        "User Data follows:\n".
+					$msg = "A new application for membership has been received by Milan IN Web Site on $date\n".(
+                                        (isset($p_ic)) ? lang('invited by').":\n".$invitation['inviter'].
+                                                   "\nhttp://".$_SERVER['SERVER_NAME']."/members/".$invitation['account_lid']."\n" : "")
+                                        ."User Data follows:\n".
                                         "---- First Name ----\n$p_name\n ----\n---- Last Name ----\n$p_surname\n----\n".
                                         "---- Phone ----\n$p_phone\n----\n---- e-mail ----\n$p_email\n---- URL to LinkedIn ----\n$p_url\n".
                                         "---- Comment ----\n$p_msg\n----\n".
@@ -167,7 +168,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 					mysql_select_db ($arguments['members_db_name']) or die(mysql_error());
 					$invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
                                         "FROM `".$arguments['invitations_table'].'`i '.
-                                        'join phpgw_accounts a on i.owner=a.account_id '.
+                                        'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
                                         'WHERE (i.code =\''.$g_ic.'\')';
                                         $invite_result=mysql_query ($invite_query, $mysql_link) 
                                           or die ($invite_query."<br>".mysql_error($mysql_link));
@@ -177,10 +178,10 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                         if (isset($invitation['ident'])){
                                         
                                           $content .= "<p class='error'>$log </p>";
-                                          $content .= '<p>'.lang('invitation found').' '.lang('from').
+                                          $content .= '<p><h3>'.lang('invitation found').': '.lang('from').
                                             ' <a href="/members/'.$invitation['account_lid'].'">'.
                                             $invitation['inviter'].'</a> '.
-                                            lang('to').' <b>'.$invitation['name'].'</b></p>';
+                                            lang('to').' <b>'.$invitation['name'].'</b></h3></p>';
                                           $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
                                           $content .= '<form name="joinus" method="post" action="">';
                                           $content .= '<input name="ic" value="'.$invitation['code'].'" type="hidden" />';
@@ -201,7 +202,10 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td>'.lang('phone number').'</td>
                                                   <td><input type="text" name="phone" value='.$p_phone.'></td>
                                           </tr>
-                                          
+                                          <tr>
+                                                  <td>Reason for requesting Club Membership <font color="red">*</font></td>
+                                                  <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
+                                          </tr>
                                           <tr>
                                             <td colspan="2">
                                                   <input type="submit" class="button" name="btn_submit" value="'.lang('send').'">
@@ -210,7 +214,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           </table>';
                                           $content .= '</form>';
                                           }else{
-                                            $content.=lang('invitation not found');
+                                            $content.='<h3><font color="red">'.lang('invitation not found').'</font></h3>';
                                           }
                                         }else{  
                                           $content .=  "<p class='error'>$log </p>";
