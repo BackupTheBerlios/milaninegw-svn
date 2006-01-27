@@ -16,7 +16,9 @@
 		function module_joinus_form()
 		{
 			$this->arguments = array(
-				'recepient' => array('type' => 'textfield', 'label' => lang('Where to send request')),
+				'recepient' => array('type' => 'textfield','label' => lang('Where to send request')),
+                                'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
+                                'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') )
 			);
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
@@ -29,39 +31,64 @@
 				//print_r ($arguments['recepient']);
 				
 				extract ($_POST, EXTR_PREFIX_ALL, 'p');
+				extract ($_GET, EXTR_PREFIX_ALL, 'g');
 				
 				$log ="";
 				$content = "";
+				$mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
+                                $GLOBALS['phpgw_domain']['default']['db_user'], 
+                                $GLOBALS['phpgw_domain']['default']['db_pass']) 
+                                  or die( "Unable to connect to SQL server");
 				
+				if (isset($p_ic)){
+                                          mysql_select_db ($arguments['members_db_name']) or die("cannot select db:".mysql_error($mysql_link));
+                                          $invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
+                                          "FROM `".$arguments['invitations_table'].'`i '.
+                                          'join phpgw_accounts a on i.owner=a.account_id '.
+                                          'WHERE (i.code =\''.$g_ic.'\')';
+                                          $invite_result=mysql_query ($invite_query, $mysql_link) 
+                                            or die ($invite_query."<br>".mysql_error($mysql_link));
+                                          $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
+                                          mysql_free_result($invite_result);
+                                          
+                                          if (isset($invitation['ident'])){
+                                            $p_email=$invitation['email'];
+                                            $p_msg=lang('invited by').":\n".$invitation['inviter'].
+                                                   "\nhttp://".$_SERVER['SERVER_NAME']."/members/".$invitation['account_lid']."\n";
+                                            $remove_invitation_query='DELETE FROM '.$arguments['invitations_table'].
+                                                                     ' WHERE ident='.$invitation['ident'];
+                                          } else {
+                                            $log.=lang("invitation not found");
+                                          }
+                                }
 				if (isset($p_btn_submit))
 				{
 					if (empty ($p_name) || empty ($p_surname) ||  empty ($p_email) || empty ($p_msg))
 						$log .= lang('you must fill in all of the required fields')."<br>";
 					
-					if (!preg_match ("/.+@.+\.[a-z]+/", $p_email))
-						$log .= lang('you have entered an invalid email address')."<br>";
+					if (!preg_match ("/.+@.+\.[a-z]+/", strtolower($p_email)))
+						$log .= lang('you have entered an invalid email address').": [".$p_email."] <br>";
 					
 					if (strlen ($p_name)<2 || strlen ($p_surname)<2)
 						$log .= lang('too short name')."<br>";
 				}
+				
 				if (isset($p_btn_submit) && empty ($log))
 				{
 					
-					/// Dtart Database INSERT
-					
-					$mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'], $GLOBALS['phpgw_domain']['default']['db_user'], $GLOBALS['phpgw_domain']['default']['db_pass']) or die( "Unable to connect to SQL server");
-					mysql_select_db ($GLOBALS['phpgw_domain']['default']['db_name']) or die(mysql_error());
-					
 					$account_lid = strtolower($p_name.".".$p_surname);
 					$account_pwd = md5 (strtolower ($p_name) );
-					
+                                        
+                                        mysql_select_db ($GLOBALS['phpgw_domain']['default']['db_name']) or die(mysql_error());
 					$query = "INSERT INTO phpgw_accounts 
 					(`account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, 
 					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`)
-					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '$p_email', '-1', 0,'')";
+					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '".strtolower($p_email)."', '-1', 0,'')";
 					
 					$result = mysql_query ($query, $mysql_link) or die ($query."<br>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
+					$result = mysql_query ($remove_invitation_query, $mysql_link) 
+                                          or die ($query."<br>".mysql_error($mysql_link));
 					mysql_close($mysql_link);	
 					
 					
@@ -131,40 +158,96 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 				
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
-					$content .=  "<p class='error'>$log </p>";
-					$content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
-					$content .= '<form name="joinus" method="post" action="">';
-					$content .= '<table>';
-					$content .= '
-					<tr>
-						<td>'.lang('Name').' <font color="red">*</font> </td>
-						<td><input type="text" name="name" value='.$p_name.'></td>
-					</tr>
-					<tr>
-						<td>'.lang('last name').' <font color="red">*</font></td>
+                                        if (isset($g_ic)){
+                                          $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
+                                          $GLOBALS['phpgw_domain']['default']['db_user'],
+                                          $GLOBALS['phpgw_domain']['default']['db_pass']) 
+                                          or die( "Unable to connect to SQL server");
+                                          
+					mysql_select_db ($arguments['members_db_name']) or die(mysql_error());
+					$invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
+                                        "FROM `".$arguments['invitations_table'].'`i '.
+                                        'join phpgw_accounts a on i.owner=a.account_id '.
+                                        'WHERE (i.code =\''.$g_ic.'\')';
+                                        $invite_result=mysql_query ($invite_query, $mysql_link) 
+                                          or die ($invite_query."<br>".mysql_error($mysql_link));
+                                        $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
+                                        mysql_free_result($invite_result);
+                                        
+                                        if (isset($invitation['ident'])){
+                                        
+                                          $content .= "<p class='error'>$log </p>";
+                                          $content .= '<p>'.lang('invitation found').' '.lang('from').
+                                            ' <a href="/members/'.$invitation['account_lid'].'">'.
+                                            $invitation['inviter'].'</a> '.
+                                            lang('to').' <b>'.$invitation['name'].'</b></p>';
+                                          $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
+                                          $content .= '<form name="joinus" method="post" action="">';
+                                          $content .= '<input name="ic" value="'.$invitation['code'].'" type="hidden" />';
+                                          $content .= '<table>';
+                                          $content .= '<tr>
+                                          <td>'.lang('Name').'<font color="red">*</font> </td>
+						<td><input type="text" name="name" value=></td>
+                                          </tr>
+                                          <tr>
+						<td>'.lang('last name').'<font color="red">*</font></td>
 						<td><input type="text" name="surname" value='.$p_surname.'></td>
-					</tr>
-					<tr>
-						<td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
-						<td><input type="text" name="url" value='.$p_url.'></td>
-					</tr>
-					<tr>
-						<td>'.lang('phone number').'</td>
-						<td><input type="text" name="phone" value='.$p_phone.'></td>
-					</tr>
-					<tr>
-						<td>'.lang('email').'<font color="red">*</font></td>
-						<td><input type="text" name="email" value='.$p_email.'></td>
-					</tr>
-					<tr>
-						<td>Reason for requesting Club Membership <font color="red">*</font></td>
-						<td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" class="button" name="btn_submit" value="'.lang('send').'"></td>
-					</tr>
-					</table>';
-					$content .= '</form>';
+                                          </tr>
+                                          <tr>
+                                                  <td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
+                                                  <td><input type="text" name="url" value='.$p_url.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang('phone number').'</td>
+                                                  <td><input type="text" name="phone" value='.$p_phone.'></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <td colspan="2">
+                                                  <input type="submit" class="button" name="btn_submit" value="'.lang('send').'">
+                                              </td>
+                                          </tr>
+                                          </table>';
+                                          $content .= '</form>';
+                                          }else{
+                                            $content.=lang('invitation not found');
+                                          }
+                                        }else{  
+                                          $content .=  "<p class='error'>$log </p>";
+                                          $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
+                                          $content .= '<form name="joinus" method="post" action="">';
+                                          $content .= '<table>';
+                                          $content .= '
+                                          <tr>
+                                                  <td>'.lang('Name').' <font color="red">*</font> </td>
+                                                  <td><input type="text" name="name" value='.$p_name.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang('last name').' <font color="red">*</font></td>
+                                                  <td><input type="text" name="surname" value='.$p_surname.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
+                                                  <td><input type="text" name="url" value='.$p_url.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang('phone number').'</td>
+                                                  <td><input type="text" name="phone" value='.$p_phone.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang('email').'<font color="red">*</font></td>
+                                                  <td><input type="text" name="email" value='.$p_email.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>Reason for requesting Club Membership <font color="red">*</font></td>
+                                                  <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
+                                          </tr>
+                                          <tr>
+                                                  <td colspan="2"><input type="submit" class="button" name="btn_submit" value="'.lang('send').'"></td>
+                                          </tr>
+                                          </table>';
+                                          $content .= '</form>';
+                                        }
 				}
 				
 				return $content;
