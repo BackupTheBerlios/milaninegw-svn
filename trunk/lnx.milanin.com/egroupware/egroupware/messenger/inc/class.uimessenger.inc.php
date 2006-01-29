@@ -393,6 +393,7 @@
 
 			$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
 			$GLOBALS['phpgw']->template->set_var('button_cancel','<input type="submit" name="cancel" value="' . lang('Cancel') . '">');
+			$GLOBALS['phpgw']->template->set_var('cc_to_self','<input type="checkbox" name="message[cc_to_self]" />'.lang("cc to self"));
 
 			$GLOBALS['phpgw']->template->fp('to','form_to');
 			$GLOBALS['phpgw']->template->fp('buttons','form_buttons');
