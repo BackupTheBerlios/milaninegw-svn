@@ -55,6 +55,7 @@ class Context {
 		
 		$this->CommentFormats = array();
 		$this->CommentFormats[] = "Text";
+		$this->CommentFormats[] = "Html";
 		
 		// Create an object factory
       $this->ObjectFactory = new ObjectFactory();

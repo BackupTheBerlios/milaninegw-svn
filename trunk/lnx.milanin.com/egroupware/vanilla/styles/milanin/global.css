@@ -588,7 +588,9 @@
 	}
                 .CommentHeader {
                   padding: 8px;
-                  padding-bottom: 2px;
+                  padding-bottom: 12px;
+/*                   height: 40px; */
+                  
 /*                   border-bottom: 1px solid #DEDEDF; */
                 }
 	/* Some special formatting for comments */
@@ -618,6 +620,7 @@
 		.CommentTime {
 			color: #aaa;
 			float: left;
+			margin-left: 10px;
 		}
 		.CommentTime em {
 			font-style: normal;
@@ -625,7 +628,8 @@
 			padding-left: 4px;
 		}
 		.CommentAuthor {
-			margin-top: 5px;
+/* 			margin-top: 5px; */
+/* 			margin-bottom: 5px; */
 			font-size: 13px;
 			font-weight: bold;
 			margin-right: 8px;
@@ -635,7 +639,8 @@
 		}
 		.CommentWhisper,
 		.CommentTime {
-			margin-top: 7px;
+/* 			margin-top: 7px; */
+/* 			margin-left: 48px; */
 			font-size: 11px;
 		}
 		.CommentWhisper {
@@ -647,21 +652,23 @@
 		.CommentBody {
                         display: block;
 			font-size: 12px;
-			padding: 8px;
-			padding-top: 20px;
+/* 			padding: 8px; */
+/* 			padding-top: 20px; */
 			margin-top: 24px;
 			margin-bottom: 24px;
 			color: #333;
-			position: relative;
+/* 			position: relative; */
 			float: none;
 		}
 		.CommentBodyHidden {
                         display: none;
-			font-size: 12px;
-			padding: 8px;
-			padding-top: 0px;
-			margin-top: 24px;
-			color: #333;
+/* 			font-size: 12px; */
+/* 			padding: 8px; */
+/* 			padding-top: 0px; */
+/* 			margin-top: 24px; */
+/* 			color: #333; */
+/* 			position: relative; */
+/* 			float: none; */
                 }
 		.ShowHide {
                         color: #333;
@@ -725,7 +732,7 @@
 		  top: 50%;
 		  margin: -16px 0 0 -40px;
 		  display: block;
-		  height: 32px;
+		  height: 40px;
 		  width: 32px;
 		  background: #fff center center no-repeat;
 		}		
@@ -741,8 +748,9 @@
 			font-weight: bold;
 			font-size: 14px;
 			border-bottom: 1px solid #ddd;
-			overflow: hidden;
+/* 			overflow: hidden; */
 			color: #68878A;
+			text-align: left;
 		}
 		.PageList {
 			margin: 0px;

@@ -333,7 +333,7 @@ function FormatStringForDatabaseInput($inValue, $bStripHtml = "0") {
 
 // Takes a user defined string and formats it for page display. 
 // You can optionally remove html from the string.
-function FormatStringForDisplay($inValue, $bStripHtml = true) {
+function FormatStringForDisplay($inValue, $bStripHtml = false) {
 	$sReturn = ForceString($inValue, "");
 	// $sReturn = stripslashes($sReturn);
 	if ($bStripHtml) {

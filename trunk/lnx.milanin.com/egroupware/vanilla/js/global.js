@@ -15,6 +15,7 @@ if(document.all && !document.getElementById) {
          return document.all[id];
     }
 }
+var request = false;
 
 function toggleLayer(whichLayer)
           {
@@ -92,7 +93,44 @@ function SubmitForm(FormName, Sender) {
 	document[FormName].submit();
 }
 function toggleCommentBody(ID){
-  SwitchElementClass("Comment_"+ID, "CommBodySwitcher_"+ID, "CommentBodyHidden", "CommentBody", "Show", "Hide");
+  var Element = document.getElementById("CommentBody_"+ID);
+  if (Element.innerHTML==""){
+    try {
+      request = new XMLHttpRequest();
+    } catch (trymicrosoft) {
+      try {
+        request = new ActiveXObject("Msxml2.XMLHTTP");
+      } catch (othermicrosoft) {
+        try {
+          request = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (failed) {
+          request = false;
+        }
+      }
+    }
+    if (!request)
+    alert("Error initializing XMLHttpRequest!");
+    request.open("GET", "comment.php?CommentID="+ID, true);
+    request.onreadystatechange = function(){
+//       alert("called updateCommentBody!");
+//       alert("state = "+request.readyState);
+      if (request.readyState == 4) {
+//         alert("state is 4!");
+        if (request.status == 200) {
+          var Element = document.getElementById("CommentBody_"+ID);
+          var response = request.responseText;
+//           alert("answer is " + request.responseText);
+          Element.innerHTML = response;
+        } else {
+          alert("status is " + request.status);
+        }
+        SwitchElementClass("CommentBody_"+ID, "CommBodySwitcher_"+ID, "CommentBodyHidden", "CommentBody", "Show", "Hide");
+      }
+    }
+    request.send(null);
+  } else {
+    SwitchElementClass("CommentBody_"+ID, "CommBodySwitcher_"+ID, "CommentBodyHidden", "CommentBody", "Show", "Hide");
+  }
 }
 
 function SwitchElementClass(ElementToChangeID, SenderID, StyleA, StyleB, CommentA, CommentB) {

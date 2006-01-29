@@ -93,7 +93,8 @@ class Comment {
 	}
 	
 	function FormatPropertiesForDisplay($Context, $ForFormDisplay = "0") {
-		if (!$Context->Session->User->Setting("HtmlOn", 1)) $this->ShowHtml = 0;
+// 		if (!$Context->Session->User->Setting("HtmlOn", 1)) 
+                $this->ShowHtml = 1;
 		if ($this->Deleted) $this->ShowHtml = 0;
 		if (!$this->AuthCanPostHtml) $this->ShowHtml = 0;
 		if ($this->AuthBlocked) $this->ShowHtml = 0;

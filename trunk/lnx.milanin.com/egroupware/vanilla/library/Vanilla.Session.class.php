@@ -104,7 +104,7 @@ class Session {
 		}
 
 		// Handle Work-Safe Mode Switches
-		$HtmlOn = ForceIncomingString("h", "");
+		$HtmlOn = ForceIncomingString("h", "1");
 		if ($HtmlOn != "" && $this->UserID > 0) {
 			if (!$um) {
 				$um = $Context->ObjectFactory->NewContextObject($Context, "UserManager", $Context);
