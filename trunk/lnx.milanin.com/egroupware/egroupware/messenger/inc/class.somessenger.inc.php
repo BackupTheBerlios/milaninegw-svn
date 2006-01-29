@@ -132,6 +132,13 @@
 				. $message['to'] . "','" . $this->owner . "','N','" . time() . "','"
 				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
 				. "')",__LINE__,__FILE__);
+			if ($message['cc_to_self']) {
+                            $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+				. "message_date, message_subject, message_content) VALUES ('"
+				. $this->owner . "','" . $this->owner . "','N','" . time() . "','"
+				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+				. "')",__LINE__,__FILE__);
+                        }
 			 if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
                             $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
                             $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".

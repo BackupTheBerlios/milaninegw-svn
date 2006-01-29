@@ -55,7 +55,7 @@
 <!-- BEGIN form_to -->
   <tr bgcolor="{row_off}">
    <td>{lang_to}</td>
-   <td>{value_to}&nbsp;</td>
+   <td>{value_to}&nbsp;{cc_to_self}</td>
   </tr>
 <!-- END form_to -->
 
