@@ -14,19 +14,19 @@ END;
 $qry = "SELECT * FROM template_elements where name like 'msg%:title%:".$parameter[0]."'";
 
 
-$result = mysql_query($qry) or die ("<center> ERROR: ".mysql_error()."</center>");
-while ($riga = mysql_fetch_object($result)) {
-   $run_result .= <<< END
+$result = db_query($qry) or die ("<center> ERROR: ".mysql_error()."</center>");
+for ($i=0;$i<sizeof($result);$i++)
+   {
+   $run_result .= '
    <script language="JavaScript" type="text/javascript">
 				<!--
-				template_content[i]="$riga->content";
+				template_content[i]="'.$result[$i]->content.'";
 				i++;
 				-->
 			</script>
-END;
+';
 }
         
-mysql_free_result($result);
 ?>
 
 
