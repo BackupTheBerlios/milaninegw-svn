@@ -4,9 +4,18 @@
 	
 	// Actions
 		$function['invite:init'][] = path . "units/invite/invite_actions.php";
+	// languages
+		$function['invite:invite_lang'][] = path . "units/invite/function_default_invite_message_lang.php";
+		$function['invite:invite_title'][] = path . "units/invite/function_default_invite_message_title.php";
+		$function['invite:invite_body'][] = path . "units/invite/function_default_invite_message_body.php";
 	
 	// Introductory text
 		$function['content:invite:invite'][] = path . "content/invite/invite.php";
+
+  // Invitation letter language select
+		$function['invite:invite_lang_select'][] = path . "units/invite/function_invite_lang_select.php";
+		$function['invite:invite_title_select'][] = path . "units/invite/function_invite_title_select.php";
+		$function['invite:invite_text_select'][] = path . "units/invite/function_invite_text_select.php";
 		
 	// Allow user to invite a friend
 		$function['invite:invite'][] = path . "units/invite/invite.php";

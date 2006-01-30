@@ -1,9 +1,23 @@
+<script language="JavaScript" type="text/javascript">
+				<!--
+				function getInvitationMsg()
+				{
+				  for (var iSelect = 0; iSelect < document.invite_form.inv_idx_title.length; iSelect++) {
+				  if (document.invite_form.inv_idx_title[iSelect].selected == true)
+				   break;
+				  }
+				  document.invite_form.invite_text.value=template_content[iSelect];
+				  return true;
+				}
+				-->
+			</script>
 <?php
-$inv_msg_lang=7;
+
+$inv_msg_lang=title1;
 if ($_REQUEST['inv_msg_lang'] != null) {
 $inv_msg_lang=$_REQUEST['inv_msg_lang'];
 }
-$inv_idx_lang=0;
+$inv_idx_lang=language1;
 if ($_REQUEST['inv_idx_lang'] != null) {
 $inv_idx_lang=$_REQUEST['inv_idx_lang'];
 }
@@ -39,20 +53,17 @@ END;
 							)
 							);
 
-//reserve template ident 6-10 for multilang invitation 
-		$run_result .= run("templates:draw", array(
-														'context' => 'databox1',
-														'name' => 'Message language',
-														'column1' => run("display:input_field",array(" name='invite_lang' onchange='getInvitationLang()' ",$_REQUEST['inv_msg_lang'],"selectbox", "SELECT * FROM `templates` where `ident` > 5 and `ident` < 11"))
-							)
-							);
+  $run_result .= run("templates:draw", array(
+												'context' => 'databox1',
+												'name' => "Message language",
+												'column1' => run("invite:invite_lang_select",array("inv_idx_lang",$inv_idx_lang))
+											)
+											);
 
-
-//array("invite_title","","title_selectbox", "7") "7" is Italian lang title template identifier(might be different if any use). If the user lang is different, add templates into DB 
 		$run_result .= run("templates:draw", array(
 														'context' => 'databox1',
 														'name' => 'Message title',
-														'column1' => run("display:input_field",array(" name='invite_title' onchange='getInvitationMsg()'","","selectbox", "SELECT * FROM `template_elements` where `template_id` = ".$inv_msg_lang." order by name asc"))
+														'column1' => run("invite:invite_title_select",array("inv_idx_title",$inv_idx_lang, $inv_msg_lang))
 							)
 							);
 
@@ -60,11 +71,12 @@ END;
 		$run_result .= run("templates:draw", array(
 														'context' => 'databox1',
 														'name' => 'An optional message',
-														'column1' => run("display:input_field",array("invite_text","","longtext"))
+														'column1' => run("display:input_field",array("invite_text","","longtext", "readonly=true"))
 							)
 							);
 
-							
+//$run_result .= run("invite:invite_text_select", array($inv_idx_lang, $inv_msg_lang));
+$run_result .= run("invite:invite_body", array($inv_idx_lang));							
 		$run_result .= run("templates:draw", array(
 														'context' => 'databox1',
 														'name' => '&nbsp;',
@@ -77,15 +89,9 @@ END;
 			
 		
 		</form>
-<script language="JavaScript" type="text/javascript">
+ <script language="JavaScript" type="text/javascript">
 <!--
-
-getInvitationMsg();	
-document.invite_form.invite_lang[
-END;
-$run_result .=$inv_idx_lang;
-$run_result .= <<< END
-].selected = true;
+getInvitationMsg();
 -->
 </script>		
 END;
