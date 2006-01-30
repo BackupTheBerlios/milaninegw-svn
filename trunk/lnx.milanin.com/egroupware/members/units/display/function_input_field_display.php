@@ -34,84 +34,7 @@
 						break;
 				case "password":
 						$run_result .= "<input type=\"password\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
-						break;
-				
-				case "selectbox":
-
-    $run_result .= "<select ".$parameter[0]."  style=\"width: 95%\" id=\"".$parameter[0]."\" >";
-
-    $risultato = mysql_query($parameter[3]);
-    //get sql data to js
-    $run_result .= <<< END
-   <script language="JavaScript" type="text/javascript">
-				<!--
-				  var template_id = new Array();
-          var template_name = new Array();
-          var template_content = new Array();
-          var template_count = 0
-          template_id[0]=0;
-				  template_name[0]="";
-				  template_content[0]="";
-				-->
-			</script>
-END;
-
-while ($riga = mysql_fetch_object($risultato)) {
-   $run_result .= <<< END
-   <script language="JavaScript" type="text/javascript">
-				<!--
-				template_id[template_count]=template_count;
-				template_name[template_count]="$riga->name";
-				template_content[template_count]="$riga->content";
-				template_count++;
-				-->
-			</script>
-END;
- // create options  
-   $run_result .= $riga->name;
-}
-
-mysql_free_result($risultato);
-
-$run_result .= "</select>"; 
-
-//js to view title-body msg
-$run_result .= <<< END
-<script language="JavaScript" type="text/javascript">
-				<!--
-				function getInvitationLang()
-				{
-				  for (var iSelect = 0; iSelect < document.invite_form.invite_lang.length; iSelect++) {
-				  if (document.invite_form.invite_lang[iSelect].selected == true)
-				   break;
-				  }
-				  document.invite_form.inv_msg_lang.value = document.invite_form.invite_lang[iSelect].value;
-				  document.invite_form.inv_msg_lang.value = document.invite_form.invite_lang[iSelect].value;
-				  document.invite_form.inv_idx_lang.value = iSelect;
-				  document.invite_form.submit();
-				  
-				}
-				
-				function getInvitationMsg()
-				{
-				  for (var iSelect = 0; iSelect < document.invite_form.invite_title.length; iSelect++) {
-				  if (document.invite_form.invite_title[iSelect].selected == true)
-				   break;
-				  }
-				  document.invite_form.invite_text.value=template_content[iSelect];
-				}
-				
-				function doInvite()
-				{
-				  document.invite_form.action.value='invite_invite';
-				  document.invite_form.submit();
-				  return true;
-				}
-				-->
-			</script>
-END;
-break;	
-						
+						break;						
 							
 						
 				case "mediumtext":
@@ -146,12 +69,12 @@ break;
 						}
 						$parameter[1] = $keywords;
 						// $parameter[1] = var_export($parameter,true);
-						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
+						$run_result .= "<textarea  name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
 				case "longtext":
-						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 200px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
+						$run_result .= "<textarea ".$parameter[3]." name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 200px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
-                                case "evenlongertext":
+       case "evenlongertext":
 						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 500px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
 				case "richtext":
