@@ -332,6 +332,7 @@
 				'lang_firstname'     => $this->nextmatchs->show_sort_order($sort,'account_firstname',$order,'/index.php',lang('first name'),$link_data),
 				'lang_email'         => $this->nextmatchs->show_sort_order($sort,'account_email',$order,'/index.php',lang('email'),$link_data),
 				'lang_linkedin' => lang('LinkedIn ID'),
+				'lang_membership_date' => lang('Member since'),
 				'lang_edit'    => lang('edit'),
 				'lang_delete'  => lang('delete'),
 				'lang_view'    => lang('view'),
@@ -714,6 +715,7 @@
 				'lang_action'  => lang('View user account'),
 				'lang_loginid' => lang('LoginID'),
 				'lang_linkedin' => lang('LinkedIn ID'),
+				'lang_membership_date' => lang('Member since'),
 				'lang_account_active'   => lang('Account active'),
 				'lang_lastname'      => lang('Last Name'),
 				'lang_groups'        => lang('Groups'),
@@ -735,6 +737,7 @@
 			$var['account_lastname']  = $userData['lastname'];
 			$var['account_linkedin']  = '<a href="https://www.linkedin.com/profile?viewProfile=&key='
                                                     .$userData['linkedin'].'">'.$userData['linkedin'].'</a>';
+                        $var['account_membership_date']= $userData['membership_date'];
 
 			$acl = CreateObject('phpgwapi.acl',(int)$_GET['account_id']);
 			$var['anonymous']         = $acl->check('anonymous',1,'phpgwapi') ? '&nbsp;&nbsp;X' : '&nbsp;';
@@ -1084,6 +1087,7 @@
 				'lang_account_active' => lang('Account active'),
 				'lang_email'     => lang('email'),
 				'lang_linkedin'     => lang('LinkedIn ID'),
+				'lang_membership_date' => lang('Member since'),
 				'lang_password'  => lang('Password'),
 				'lang_reenter_password' => lang('Re-Enter Password'),
 				'lang_lastname'  => lang('Last Name'),
@@ -1166,7 +1170,9 @@
 				'account_firstname' => '<input name="account_firstname" value="' . $userData['firstname'] . '">',
 				'account_lastname'  => '<input name="account_lastname" value="' . $userData['lastname'] . '">',
 				'account_email'     => '<input name="account_email" size="32" value="' . $userData['email'] . '">',
-				'account_linkedin'     => 'https://www.linkedin.com/profile?viewProfile=&key=<input name="account_linkedin" size="10" value="' . $userData['linkedin'] . '">',
+				'account_linkedin'     => 'https://www.linkedin.com/profile?viewProfile=&key=<input name="account_linkedin" size="10" value="' . $userData['linkedin'] . '" />',
+				'account_membership_date' =>$jscal->input('membership_date',$userData['membership_date']<0?'':($userData['membership_date']?$userData['membership_date']:time()+(60*60*24*7))),
+//'<input name="account_membership_date" size="10" value="'.$userData['membership_date'].'" />',
 				'account_passwd'    => $userData['account_passwd'],
 				'account_passwd_2'  => $userData['account_passwd_2'],
 				'account_file_space' => $account_file_space

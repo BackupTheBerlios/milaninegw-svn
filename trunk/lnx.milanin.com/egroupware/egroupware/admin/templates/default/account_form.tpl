@@ -47,8 +47,10 @@
 			    </tr>
 			    
                             <tr class="row_off">
-			     <td colspan="2" align="right">{lang_linkedin}</td>
-			     <td colspan="2">{account_linkedin}</td>
+			     <td>{lang_linkedin}</td>
+			     <td>{account_linkedin}</td>
+			     <td>{lang_membership_date}</td>
+			     <td>{account_membership_date}</td>
 			    </tr>
 	
 			    <tr class="row_on">
