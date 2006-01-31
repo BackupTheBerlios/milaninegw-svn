@@ -511,7 +511,7 @@
 		function get_messenger_users()
 		{
 			$users = array();
-			$accounts = $GLOBALS['phpgw']->accounts->get_list('accounts');
+			$accounts = $GLOBALS['phpgw']->accounts->get_list('accounts','','', '', '', '','real_only');
 			foreach ($accounts as $account)
 			{
 				$GLOBALS['phpgw']->acl->account_id = $account['account_id'];
