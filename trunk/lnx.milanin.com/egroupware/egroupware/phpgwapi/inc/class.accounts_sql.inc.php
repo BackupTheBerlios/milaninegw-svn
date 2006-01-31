@@ -411,7 +411,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					$whereclause = '';
 			}
 
-			if ($query)
+			if ($query || $query_type)
 			{
 				if ($whereclause)
 				{
@@ -437,6 +437,9 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					case 'firstname':
 					case 'lastname':
 					case 'lid':
+                                        case 'real_only':
+                                                $whereclause .= " account_primary_group != 35 AND account_primary_group != 6 )";
+                                                break;
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
 						$whereclause .= " account_$query_type LIKE $query )";
