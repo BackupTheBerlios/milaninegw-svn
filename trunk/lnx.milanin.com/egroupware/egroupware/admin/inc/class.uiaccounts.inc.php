@@ -1171,7 +1171,7 @@
 				'account_lastname'  => '<input name="account_lastname" value="' . $userData['lastname'] . '">',
 				'account_email'     => '<input name="account_email" size="32" value="' . $userData['email'] . '">',
 				'account_linkedin'     => 'https://www.linkedin.com/profile?viewProfile=&key=<input name="account_linkedin" size="10" value="' . $userData['linkedin'] . '" />',
-				'account_membership_date' =>$jscal->input('membership_date',$userData['membership_date']<0?'':($userData['membership_date']?$userData['membership_date']:time()+(60*60*24*7))),
+				'account_membership_date' =>$jscal->input('membership_date',$userData['membership_date']<0?'':($userData['membership_date']?$userData['membership_date']:time())),
 //'<input name="account_membership_date" size="10" value="'.$userData['membership_date'].'" />',
 				'account_passwd'    => $userData['account_passwd'],
 				'account_passwd_2'  => $userData['account_passwd_2'],
