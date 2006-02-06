@@ -81,13 +81,15 @@
                                         mysql_select_db ($GLOBALS['phpgw_domain']['default']['db_name']) or die(mysql_error());
 					$query = "INSERT INTO phpgw_accounts 
 					(`account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, 
-					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`)
-					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '".strtolower($p_email)."', '-1', 0,'')";
+					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`,`account_membership_date`)
+					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '".strtolower($p_email)."', '-1', 0,'',CURDATE())";
 					
 					$result = mysql_query ($query, $mysql_link) or die ($query."<br>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
-					$result = mysql_query ($remove_invitation_query, $mysql_link) 
+					if ($remove_invitation_query != ""){
+                                          $result = mysql_query ($remove_invitation_query, $mysql_link) 
                                           or die ($remove_invitation_query."<br>".mysql_error($mysql_link));
+                                        }
 					mysql_close($mysql_link);	
 					
 					
