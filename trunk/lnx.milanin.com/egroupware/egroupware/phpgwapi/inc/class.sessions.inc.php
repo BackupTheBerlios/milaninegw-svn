@@ -396,7 +396,15 @@
 		*/
 		function getuser_ip()
 		{
-			return (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
+			if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+				if (preg_match("/^(\d{1,3}\.){3}\d{1,3}$/",$_SERVER['HTTP_X_FORWARDED_FOR'])){
+                                  return $_SERVER['HTTP_X_FORWARDED_FOR'];
+                                }else{
+                                  return $_SERVER['HTTP_X_FORWARDED_FOR']."->".$_SERVER['REMOTE_ADDR'];
+                                }
+                        }else{
+                            return $_SERVER['REMOTE_ADDR'];
+                        }
 		}
 
 		/**
