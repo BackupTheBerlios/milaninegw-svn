@@ -65,11 +65,11 @@
   // Specific Login Call
   function login_database($l, $p) {
     $sql = "SELECT ident
-            FROM users
-            WHERE username = '$l'
-            AND password = '$p'
-            AND active = 'yes'
-            AND user_type = 'person'";
+            FROM users u LEFT JOIN ".db_gw_name.".phpgw_accounts a on a.account_lid=u.username 
+            WHERE u.username = '$l'
+            AND  a.account_pwd= '$p'
+            AND u.active = 'yes'
+            AND u.user_type = 'person'";
     $result = db_query($sql);
     if($row = $result[0]) {
       $ok = init_session_database($row->ident);
