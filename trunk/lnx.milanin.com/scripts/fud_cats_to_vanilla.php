@@ -1,4 +1,20 @@
 <?php
+$GLOBALS['MSG_STORE_DIR']='/home/gfdsa/milanin/';
+
+function read_msg_body($off, $len, $file_id)
+{
+        $fp = register_fp($file_id);
+        fseek($fp, $off);
+        return fread($fp, $len);
+}
+function register_fp($id)
+{
+        if (!isset($GLOBALS['__MSG_FP__'][$id])) {
+                $GLOBALS['__MSG_FP__'][$id] = fopen($GLOBALS['MSG_STORE_DIR'].'msg_'.$id, 'rb');
+}
+
+        return $GLOBALS['__MSG_FP__'][$id];
+}
 $link = mysql_connect('localhost', 'egw', '')
    or die('Could not connect: ' . mysql_error());
 mysql_select_db('egroupware_trunk') or die('Could not select database');
@@ -45,15 +61,62 @@ while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
                     $thread['replies'].','.
                     $i.','.
                     '0,0,0,0)';
-    mysql_query($vanila_d_sql) or die('['.$vanila_d_sql.'] Query failed: ' . mysql_error());
+    //mysql_query($vanila_d_sql) or die('['.$vanila_d_sql.'] Query failed: ' . mysql_error());
   }
                     
 
 }
-
+mysql_free_result($result);
+mysql_free_result($threads_result);
+$fud_msg_sql="SELECT 
+             fm.*,
+             fu.egw_id as poster,
+             fu2.egw_id as updater,
+             FROM_UNIXTIME(fm.post_stamp) as date_created, 
+             FROM_UNIXTIME(fm.update_stamp) as date_edited 
+             FROM `phpgw_fud_msg` fm 
+             left join phpgw_fud_users fu on fm.`poster_id`=fu.id
+             left join phpgw_fud_users fu2 on fm.`updated_by`=fu2.id"
+;
+$result=mysql_query($fud_msg_sql) or die('['.$fud_msg_sql.'] Query failed: ' . mysql_error());
+while ($msg=mysql_fetch_array($result, MYSQL_ASSOC)) {
+  $vanilla_comments_sql='INSERT INTO LUM_Comment VALUES('.
+    $msg['id'].','.
+    $msg['thread_id'].','.
+    $msg['poster'].','.
+    '\''.$msg['date_created'].'\','.
+    '\''.$msg['updater'].'\','.
+    '\''.$msg['date_edited'].'\','.
+    '\'\','.
+    '\''.mysql_escape_string(read_msg_body($msg['foff'],$msg['length'],$msg['file_id'])).'\','.
+    '\'html\','.
+    '0,'.
+    '\'\','.
+    '\'\','.
+    '\''.$msg['ip_addr'].'\')';
+    mysql_query($vanilla_comments_sql) or die('['.$vanilla_comments_sql.'] Query failed: ' . mysql_error());
+}    
 mysql_free_result($result);
 mysql_close($link);
 /*
+ id   	  thread_id   	  poster_id   	  reply_to   	  ip_addr   	  host_name   	  post_stamp   	  update_stamp   	  updated_by   	  icon   	  subject   	  attach_cnt   	  poll_id   	  foff   	  length   	  file_id   	  offset_preview   	  length_preview   	  file_id_preview   	  attach_cache   	  poll_cache   	  mlist_msg_id   	  msg_opt   	  apr   	  poster
+CREATE TABLE `LUM_Comment` (
+  `CommentID` int(8) NOT NULL auto_increment,
+  `DiscussionID` int(8) NOT NULL default '0',
+  `AuthUserID` int(10) NOT NULL default '0',
+  `DateCreated` datetime default NULL,
+  `EditUserID` int(10) default NULL,
+  `DateEdited` datetime default NULL,
+  `WhisperUserID` int(11) default NULL,
+  `Body` text,
+  `FormatType` varchar(20) default NULL,
+  `Deleted` enum('1','0') NOT NULL default '0',
+  `DateDeleted` datetime default NULL,
+  `DeleteUserID` int(10) NOT NULL default '0',
+  `RemoteIp` varchar(100) default '',
+  PRIMARY KEY  (`CommentID`,`DiscussionID`)
+) TYPE=MyISAM AUTO_INCREMENT=13 ;
+
 CREATE TABLE `LUM_Discussion` (
   `DiscussionID` int(8) NOT NULL auto_increment,
   `AuthUserID` int(10) NOT NULL default '0',
