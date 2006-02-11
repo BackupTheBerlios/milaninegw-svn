@@ -18,7 +18,8 @@
 			$this->arguments = array(
 				'recepient' => array('type' => 'textfield','label' => lang('Where to send request')),
                                 'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
-                                'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') )
+                                'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') ),
+                                'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u') )
 			);
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
@@ -105,6 +106,7 @@
                                         "---- First Name ----\n$p_name\n ----\n---- Last Name ----\n$p_surname\n----\n".
                                         "---- Phone ----\n$p_phone\n----\n---- e-mail ----\n$p_email\n---- URL to LinkedIn ----\n$p_url\n".
                                         "---- Comment ----\n$p_msg\n----\n".
+                                        "---- How did ----\n$p_how_did_u\n----\n".
                                         "\n Follow this link to view and edit the new user account:\n $link\n";
 					
 					require_once(PHPGW_API_INC.'/class.send.inc.php');
@@ -161,6 +163,8 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 				
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
+                                  $how_did_u=explode(",",$arguments['how_did_u']);
+                                  echo "<!-- how_did_u: ".print_r($how_did_u,1)."\n".$arguments['how_did_u']."-->";
                                         if (isset($g_ic)){
                                           $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
                                           $GLOBALS['phpgw_domain']['default']['db_user'],
@@ -178,7 +182,6 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                         mysql_free_result($invite_result);
                                         
                                         if (isset($invitation['ident'])){
-                                        
                                           $content .= "<p class='error'>$log </p>";
                                           $content .= '<p><h3>'.lang('invitation found').': '.lang('from').
                                             ' <a href="/members/'.$invitation['account_lid'].'">'.
@@ -207,6 +210,14 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           <tr>
                                                   <td>Reason for requesting Club Membership <font color="red">*</font></td>
                                                   <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
+                                                  <td><select name="how_did_u"><option value=""></option>';
+                                          foreach ($how_did_u as $opt){
+                                            $content.='<option value="'.lang($q).'">'.lang($q).'</option>'."\n";
+                                          }
+                                          $content.='</select></td>
                                           </tr>
                                           <tr>
                                             <td colspan="2">
@@ -247,6 +258,13 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           <tr>
                                                   <td>Reason for requesting Club Membership <font color="red">*</font></td>
                                                   <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
+                                          </tr><tr>
+                                                  <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
+                                                  <td><select name="how_did_u"><option value=""></option>';
+                                          foreach ($how_did_u as $opt){
+                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+}
+                                          $content.='</select></td>
                                           </tr>
                                           <tr>
                                                   <td colspan="2"><input type="submit" class="button" name="btn_submit" value="'.lang('send').'"></td>
