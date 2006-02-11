@@ -304,7 +304,6 @@
 		{
 			// So where on the same page with our transactions
 			$this->historylog->db = &$this->db;
-			echo "<!--".$ticket['groupnotification']."-->";
 
 			$ticket    = $params;
 			$ticket_id = $params['id'];
