@@ -128,7 +128,9 @@ class CommentGrid extends ControlCollection {
 						}
 						$ShowIcon = 0;
 						if ($this->Context->Session->User->Setting("HtmlOn", 1)) $ShowIcon = 1;
-						$sReturn .= "<div onclick=\"toggleCommentBody('".$Comment->CommentID."')\" class=\"ShowHide\" id=\"CommBodySwitcher_".$Comment->CommentID."\">Show</div>\n";
+						$sReturn .= "<div onclick=\"toggleCommentBody('".$Comment->CommentID."')\" class=\"ShowHide\" id=\"CommBodySwitcher_".$Comment->CommentID."\">".
+                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? "Hide" : "Show").
+                                                "</div>\n";
 						$sReturn .= "<div class=\"CommentAuthor".($ShowIcon?" CommentAuthorWithIcon":"")."\">";
 						if ($ShowIcon) $sReturn .= "<span class=\"CommentIcon\" style=\"background-image:url('".(($Comment->AuthIcon!=="") ? $Comment->AuthIcon : "images/def_icon.png")."')\"></span>";
 						echo "<!-- icon is: [".$Comment->AuthIcon."]-->";
@@ -161,7 +163,11 @@ class CommentGrid extends ControlCollection {
 						}
 						$sReturn .= "</div>";
 						if ($Comment->AuthRoleDesc != "") $sReturn .= "<div class=\"CommentNotice\">".$Comment->AuthRoleDesc."</div>";
-						$sReturn .= "</div><div class=\"CommentBodyHidden\" id=\"CommentBody_".$Comment->CommentID."\"></div>";
+						$sReturn .= "</div><div class=\"".
+                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? "CommentBody" : "CommentBodyHidden").
+                                                "\" id=\"CommentBody_".$Comment->CommentID."\">".
+                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? $Comment->Body : "").
+                                                "</div>";
 						//id=\"Comment_".$Comment->CommentID."\">".$Comment->Body."</div>";
 						if ($Comment->WhisperUserID > 0 && $Comment->WhisperUserID == $this->Context->Session->UserID) $sReturn .= "<div class=\"WhisperBack\"><a href=\"Javascript:WhisperBack('".$Comment->DiscussionID."', '".str_replace("'", "\'", $Comment->AuthUsername)."');\">".$this->Context->GetDefinition("WhisperBack")."</a></div>";
 					$sReturn .= "</div>";
