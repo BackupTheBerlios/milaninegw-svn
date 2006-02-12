@@ -46,6 +46,8 @@ class Session {
 			return ForceInt(@$_SESSION[$Name], 0);
 		} elseif ($DataType == "bool") {
 			return ForceBool(@$_SESSION[$Name], 0);
+                } elseif ($DataType == "Array") {
+			return ForceArray(@$_SESSION[$Name], Array());
 		} else {
 			return ForceString(@$_SESSION[$Name], "");
 		}

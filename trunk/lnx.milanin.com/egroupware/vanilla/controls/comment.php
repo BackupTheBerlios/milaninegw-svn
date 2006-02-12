@@ -14,20 +14,24 @@
 class GetComment {
 
   function get_body(&$Context,$CommentID) {
-    
     $this->Context=&$Context;
     $this->Name="GetComment";
     //if (!$s) 
     $s = $this->Context->ObjectFactory->NewContextObject($this->Context, "SqlBuilder");
     $s->SetMainTable("Comment", "m");
     $s->AddSelect("Body", "m");
+    $s->AddJoin("Discussion","d","DiscussionID","m","DiscussionID","left join");
+    $s->AddJoin("categories","c","cat_id","d","CategoryID","left join","phpgw_");
     $s->AddWhere("CommentID", $CommentID, "=");
+    $s->AddWhere("c.cat_owner","(".
+        implode(",",array_keys($this->Context->Session->GetVariable("UserGroups","Array"))).
+        ")","IN","and","",0);
     $result = $this->Context->Database->Select($this->Context, $s, $this->Name, "GetCommentBodyById", "An error occurred while attempting to retrieve the requested comment.");
     if ($this->Context->Database->RowCount($result) == 0) $this->Context->WarningCollector->Add($this->Context->GetDefinition("ErrCommentNotFound"));
     while ($rows = $this->Context->Database->GetRow($result)) {
       $CommentBody=$rows['Body'];
     }
-    return $CommentBody;
+    return (isset($CommentBody)) ? $CommentBody : '<p><font color="red"><b>Access to comment denied, or comment not found</b></font></p>';
   }
 }
 ?>

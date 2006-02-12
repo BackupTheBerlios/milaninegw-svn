@@ -127,10 +127,11 @@ class CommentGrid extends ControlCollection {
 							</div>";
 						}
 						$ShowIcon = 0;
-						if ($this->Context->Session->User->Setting("HtmlOn", 1) && $Comment->AuthIcon != "") $ShowIcon = 1;
+						if ($this->Context->Session->User->Setting("HtmlOn", 1)) $ShowIcon = 1;
 						$sReturn .= "<div onclick=\"toggleCommentBody('".$Comment->CommentID."')\" class=\"ShowHide\" id=\"CommBodySwitcher_".$Comment->CommentID."\">Show</div>\n";
 						$sReturn .= "<div class=\"CommentAuthor".($ShowIcon?" CommentAuthorWithIcon":"")."\">";
-						if ($ShowIcon) $sReturn .= "<span class=\"CommentIcon\" style=\"background-image:url('".$Comment->AuthIcon."')\"></span>";
+						if ($ShowIcon) $sReturn .= "<span class=\"CommentIcon\" style=\"background-image:url('".(($Comment->AuthIcon!=="") ? $Comment->AuthIcon : "images/def_icon.png")."')\"></span>";
+						echo "<!-- icon is: [".$Comment->AuthIcon."]-->";
 						$sReturn .= "<a href=\"account.php?u=".$Comment->AuthUserID."\">".$Comment->AuthFullName."</a></div>";
 						if ($Comment->WhisperUserID > 0) {
 							$sReturn .= "<div class=\"CommentWhisper\">".$this->Context->GetDefinition("To")." ";

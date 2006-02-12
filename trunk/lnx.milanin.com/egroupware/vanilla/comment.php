@@ -6,7 +6,7 @@
 * You should have received a copy of the GNU General Public License along with Vanilla; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 * The latest source code for Vanilla is available at www.lussumo.com
 * Contact Mark O'Sullivan at mark [at] lussumo [dot] com
-* The code of milaninegw modification is hosted on developer.berlios.de/projects/milaninegw
+ * The code of milaninegw modification is hosted on developer.berlios.de/projects/milaninegw218947238
 *
 *
 * Description: get a single comment or comment's body by id
