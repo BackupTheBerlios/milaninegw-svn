@@ -19,17 +19,18 @@
   </tr>
 
 {from}
-{to}
+
 {date}
 {status}
 
   <tr bgcolor="{row_off}">
-   <td>{lang_subject}</td>
-   <td>{value_subject}&nbsp;</td>
+   <td colspan="2">{lang_subject}
+   {value_subject}&nbsp;</td>
   </tr>
 
   <tr bgcolor="{row_off}">
-   <td colspan="2" align="left">{value_content}&nbsp;</td>
+   <td  align="left">{value_content}&nbsp;</td>
+  {to}
   </tr>
 
 {buttons}
@@ -53,10 +54,7 @@
 <!-- END form_from -->
 
 <!-- BEGIN form_to -->
-  <tr bgcolor="{row_off}">
-   <td>{lang_to}</td>
-   <td>{value_to}&nbsp;{cc_to_self}</td>
-  </tr>
+   <td valign="top">{lang_to}<br/>{value_to}<br/>{cc_to_self}</td>
 <!-- END form_to -->
 
 <!-- BEGIN form_read_buttons -->

@@ -378,7 +378,7 @@
 				}
 			}
 
-				$tobox = "\n".'   <select name="message[to][]" multiple="1" size="7">'."\n".$str.'   </select>';
+				$tobox = "\n".'   <select name="message[to][]" multiple="1" height="100%">'."\n".$str.'   </select>';
 	
 			$this->display_headers();
 			$this->set_compose_read_blocks();
