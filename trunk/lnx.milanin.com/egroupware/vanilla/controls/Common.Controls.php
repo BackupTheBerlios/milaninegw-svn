@@ -161,10 +161,10 @@ class DiscussionForm extends PostBackControl {
 				.$this->Get_Warnings()
 				."<dl>"
 					.$this->Context->ObjectFactory->RenderControlStrings("DiscussionForm", "GetCommentForm")
-					."<dt class=\"CommentInputLabel\">
+					./*"<dt class=\"CommentInputLabel\">
 						".$this->Context->GetDefinition("EnterYourComments")."
 						<a id=\"CommentBoxController\" href=\"Javascript:ToggleCommentBox();\">".($this->Context->Session->User->Setting("ShowLargeCommentBox")?$this->Context->GetDefinition("SmallInput"):$this->Context->GetDefinition("BigInput"))."</a>
-					</dt>
+					</dt>*/"
 					<dd class=\"CommentInput\">
 						<textarea name=\"Body\" class=\"".($this->Context->Session->User->Setting("ShowLargeCommentBox")?"LargeCommentBox":"SmallCommentBox")."\" id=\"CommentBox\">".$Comment->Body."</textarea>"
 						.$this->GetPostFormatting($Comment->FormatType)
@@ -251,7 +251,7 @@ class DiscussionForm extends PostBackControl {
 	}
 	
 	function GetPostFormatting($SelectedFormatType) {
-		$FormatCount = count($this->Context->StringManipulator->Formatters);
+		/*$FormatCount = count($this->Context->StringManipulator->Formatters);
 		if ($this->Context->Session->User->Setting("ShowFormatSelector", 1) && $FormatCount > 1) {
 			$f = $this->Context->ObjectFactory->NewObject($this->Context, "Radio");
 			$f->Name = "FormatType";
@@ -268,9 +268,9 @@ class DiscussionForm extends PostBackControl {
 			if (!array_key_exists($FormatTypeToUse, $this->Context->StringManipulator->Formatters)) {
 				$FormatTypeToUse = agDEFAULTSTRINGFORMAT;
 			}
-			
-			return "<input type=\"hidden\" name=\"FormatType\" value=\"".$FormatTypeToUse."\" />";
-		}
+		*/	
+			return "<input type=\"hidden\" name=\"FormatType\" value=\"Html\" />";
+		//}
 	}
 	
 	function Render() {

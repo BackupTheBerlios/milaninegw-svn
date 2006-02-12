@@ -66,11 +66,24 @@ $Head->AddScript("./js/data.js");
 $Head->AddScript("./js/protect.js");
 $Head->AddScript("./js/autocomplete.js");
 $Head->AddScript("./js/sort.js");
+$Head->AddScript("/egroupware/jscripts/tiny_mce/tiny_mce.js");
 $Head->AddStyleSheet($Context->StyleUrl."global.css", "screen");
 $Head->AddStyleSheet("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css", "screen");
 $Head->AddStyleSheet($Context->StyleUrl."global.handheld.css", "handheld");
 $Head->AddString("<link rel=\"alternate\" type=\"application/atom+xml\" href=\"".PrependString("http://", AppendFolder(agDOMAIN, "feeds/?Type=atom"))."\" title=\"".$Context->GetDefinition("Atom")." ".$Context->GetDefinition("Feed")."\" />");
-
+$Head->AddString('<script language="javascript" type="text/javascript">
+                  tinyMCE.init({
+				theme : "advanced",
+                                mode: "exact",
+                                elements: "CommentBox",
+				plugins : "table",
+				theme_advanced_buttons1_add : "forecolor,backcolor",
+				theme_advanced_buttons3_add_before : "tablecontrols,separator",
+				theme_advanced_styles : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1", // Theme specific setting CSS classes
+				debug : false
+			});
+		</script>'
+);
 // BUILD THE MAIN MENU
 $Menu->AddTab($Context->GetDefinition("Discussions"), "discussions", "./", "DiscussionsTab");
 if (agUSE_CATEGORIES) $Menu->AddTab($Context->GetDefinition("Categories"), "categories", "categories.php", "CategoriesTab");

@@ -1452,14 +1452,14 @@
 			}
 			.SmallCommentBox,
 			.LargeCommentBox {
-				width: 460px;
+				width: 100%;
 				font-size: 12px;
 			}
 			.SmallCommentBox {
-				height: 130px;
+				height: 430px;
 			}
 			.LargeCommentBox {
-				height: 400px;
+				height: 700px;
 			}
 		
 		/* FormatType: A radio list of the various comment formatting options. */

@@ -63,6 +63,7 @@ include(agAPPLICATION_PATH."appg/extensions.php");
 // Every page will require some basic definitions for the header.
 $Head->AddScript("./js/global.js");
 $Head->AddScript("./js/vanilla.js");
+$Head->AddScript("/egroupware/jscripts/tiny_mce/tiny_mce.js");
 $Head->AddStyleSheet($Context->StyleUrl."signin.css", "screen");
 $Head->AddStyleSheet($Context->StyleUrl."signin.handheld.css", "handheld");
 
