@@ -8,6 +8,6 @@
 		<meta name="REVISIT-AFTER" content="1 DAYS" />
 		<meta name="RATING" content="GENERAL" />
 		<meta name="GENERATOR" content="eGroupWare Web Site Manager" />
-		<meta name="keywords" content="eGroupWare" />
+		<meta name="keywords" content="community, business networking, make business contacts, business connections, connections,friends, links, social networking" />
 		<meta name="language" content="{lang}" />
 		{editmode_styles}
