@@ -1,6 +1,6 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*).html$ /egroupware/sitemgr/sitemgr-site/?page_name=$1 [L]
-#RewriteRule ^(.*)$ /egroupware/sitemgr/sitemgr-site/?page_name=$1 [L]
+#RewriteRule ^(.*).html$ /egroupware/sitemgr/sitemgr-site/?page_name=$1 [L]
+RewriteRule ^(.*)$ /egroupware/sitemgr/sitemgr-site/?page_name=$1 [L]
 
