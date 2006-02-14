@@ -213,7 +213,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           </tr>
                                           <tr>
                                                   <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
-                                                  <td><select name="how_did_u"><option value=""></option>';
+                                                  <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
                                             $content.='<option value="'.lang($q).'">'.lang($q).'</option>'."\n";
                                           }
@@ -260,7 +260,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
                                           </tr><tr>
                                                   <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
-                                                  <td><select name="how_did_u"><option value=""></option>';
+                                                  <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
                                             $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
 }
