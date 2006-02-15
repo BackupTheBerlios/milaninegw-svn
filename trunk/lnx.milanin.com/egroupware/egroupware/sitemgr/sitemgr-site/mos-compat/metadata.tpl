@@ -1,4 +1,10 @@
-		<meta http-equiv="expires" content="0" />
+		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+                </script>
+                <script type="text/javascript">
+                  _uacct = "UA-72063-5";
+                  urchinTracker();
+                </script>
+                <meta http-equiv="expires" content="0" />
 		<meta name="RESOURCE-TYPE" content="DOCUMENT" />
 		<meta name="DISTRIBUTION" content="GLOBAL" />
 		<meta name="AUTHOR" content="{sitename}" />
