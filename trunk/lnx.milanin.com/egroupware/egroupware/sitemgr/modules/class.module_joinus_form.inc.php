@@ -28,8 +28,6 @@
 	
 		function get_content(&$arguments,$properties)
 		{
-				//print_r ($_POST);
-				//print_r ($arguments['recepient']);
 				
 				extract ($_POST, EXTR_PREFIX_ALL, 'p');
 				extract ($_GET, EXTR_PREFIX_ALL, 'g');
@@ -164,7 +162,6 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
                                   $how_did_u=explode(",",$arguments['how_did_u']);
-                                  echo "<!-- how_did_u: ".print_r($how_did_u,1)."\n".$arguments['how_did_u']."-->";
                                         if (isset($g_ic)){
                                           $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
                                           $GLOBALS['phpgw_domain']['default']['db_user'],
