@@ -84,7 +84,7 @@
 		*/
 		function read_repository()
 		{
-			$this->db->select($this->table,"`account_id`,`account_lid`, `account_firstname`, `account_lastname`, `account_lastlogin`, `account_lastloginfrom`, `account_lastpwd_change`, `account_status`, `account_expires`, `account_type`, `account_primary_group`, `account_email`, `account_linkedin`, DATE_FORMAT(`account_membership_date`,'%d/%m/%y') as account_membership_date",array('account_id'=>$this->account_id),__LINE__,__FILE__);
+			$this->db->select($this->table,'*',array('account_id'=>$this->account_id),__LINE__,__FILE__);
 			$this->db->next_record();
 
 			$this->data['userid']            = $this->db->f('account_lid');
@@ -102,7 +102,6 @@
 			$this->data['account_primary_group'] = $this->db->f('account_primary_group');
 			$this->data['email']             = $this->db->f('account_email');
 			$this->data['linkedin']          = $this->db->f('account_linkedin');
-			$this->data['membership_date']          = $this->db->f('account_membership_date');
 
 			return $this->data;
 		}
@@ -123,7 +122,6 @@
 				'account_primary_group' => $this->data['account_primary_group'],
 				'account_email'     => $this->data['email'],
 				'account_linkedin'     => $this->data['linkedin'],
-				'account_membership_date' => $this->data['membership_date'],
 			),array(
 				'account_id'        => $this->account_id
 			),__LINE__,__FILE__);
@@ -141,7 +139,6 @@
 		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 
 {
-
 			if (! $sort)
 			{
 				$sort = "DESC";
@@ -161,6 +158,12 @@
 				case 'accounts':
 					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;
+				case 'accounts_a':
+					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
+				case 'accounts_p':
+					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
 					break;
@@ -192,14 +195,15 @@
 						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
 						break;
 					case 'firstname':
-					  $query = $this->db->quote($query."%");
+						$query = $this->db->quote($query."%");
 						$whereclause .= " account_firstname LIKE $query )";
 						break;
+
 					case 'lastname':
 						$query = $this->db->quote($query."%");
 						$whereclause .= " account_lastname LIKE $query )";
 						break;
-
+            
 					case 'lid':
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
@@ -208,9 +212,9 @@
 				}
 			}
 
+			$sql = "select count(distinct b.account_id) FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
 			
-			
-			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
+			$this->db->query($sql);
 			$this->db->next_record();
 			$total = $this->db->f(0);
 			return $total;
@@ -289,6 +293,13 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 				case 'accounts':
 					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;
+				case 'accounts_a':
+					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
+				case 'accounts_p':
+					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
+					
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
 					break;
@@ -328,14 +339,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 						$query = $this->db->quote($query."%");
 						$whereclause .= " account_lastname LIKE $query )";
 						break;
-            case 'account_status':
-						//$query = $this->db->quote($query);
-						if ($query == 'A'){
-						$whereclause .= " account_status = 'A' )";
-						}else{
-						$whereclause .= " account_status != 'A' )";
-						}
-						break;
 					case 'lid':
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
@@ -346,7 +349,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 
 //$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause and account_lid not like 'anonymous' $orderclause";
 
-			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
+			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
 			
 			if ($offset)
 			{
@@ -376,7 +379,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					'account_primary_group' => $this->db->f('account_primary_group'),
 					'account_email'     => $this->db->f('account_email'),
 					'account_linkedin'     => $this->db->f('account_linkedin'),
-					'account_membership_date'  => $this->db->f('account_membership_date'),
 				);
 			}
 			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
@@ -414,7 +416,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					$whereclause = '';
 			}
 
-			if ($query || $query_type)
+			if ($query)
 			{
 				if ($whereclause)
 				{
@@ -440,9 +442,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					case 'firstname':
 					case 'lastname':
 					case 'lid':
-                                        case 'real_only':
-                                                $whereclause .= " account_primary_group != 35 AND account_primary_group != 6 )";
-                                                break;
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
 						$whereclause .= " account_$query_type LIKE $query )";
@@ -477,7 +476,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					'account_primary_group' => $this->db->f('account_primary_group'),
 					'account_email'     => $this->db->f('account_email'),
 					'account_linkedin'     => $this->db->f('account_linkedin'),
-					'account_membership_date'     => $this->db->f('account_membership_date'),
 				);
 			}
 			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
@@ -569,8 +567,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 				'person_id'				=> $account_info['person_id'],
 				'account_primary_group'	=> $account_info['account_primary_group'],
 				'account_email'			=> $account_info['account_email'],
-				'account_linkedin'              => $_POST['account_linkedin'],
-				'account_membership_date'              => $_POST['account_membership_date']
+				'account_linkedin'              => $_POST['account_linkedin']
 			);
 			if (isset($account_info['account_id']) && (int)$account_info['account_id'] && !$this->id2name($account_info['account_id']))
 			{
