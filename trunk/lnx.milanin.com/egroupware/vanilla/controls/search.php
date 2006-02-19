@@ -145,81 +145,61 @@ class SearchForm extends PostBackControl {
          ".$this->TypeRadio->Get()."
          </form>
       </div>
-      <table id=\"AdvancedSearch\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"display: none;\">
+      <table id=\"AdvancedSearch\" class=\"AdvancedSearchTable\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"display: none;\">
          <tr>
-            <td colspan=\"4\" class=\"SearchTitle\">".$this->Context->GetDefinition("DiscussionTopicSearch")."</td>
+            <td colspan=\"2\" class=\"SearchTitle\">".$this->Context->GetDefinition("DiscussionTopicSearch")."</td>
          </tr>
-			<tr class=\"SearchLabels\" id=\"TitleLabels\">
-            <td>");
+			<tr>
+            <td class=\"SearchLabels\">");
       $this->PostBackParams->Add("Type", "Discussions");
       $this->PostBackParams->Add("Advanced", "1");
       $this->Render_PostBackForm("frmSearch", "get");
 		$Colspan = "";
-		if (agUSE_CATEGORIES) $Colspan = " colspan=\"2\"";
+		//if (agUSE_CATEGORIES) $Colspan = " colspan=\"2\"";
       $this->Context->Writer->Add($this->Context->GetDefinition("FindDiscussionsContaining")."</td>");
-            if (agUSE_CATEGORIES) $this->Context->Writer->Add("<td>".$this->Context->GetDefinition("InTheCategory")."</td>");
-            $this->Context->Writer->Add("<td>".$this->Context->GetDefinition("WhereTheAuthorWas")."</td>
-            <td".$Colspan.">&nbsp;</td>
-         </tr>
-         <tr class=\"SearchInputs\" id=\"TitleInputs\">
-            <td><input type=\"text\" name=\"Keywords\" value=\"".($this->Search->Type == "Topics"?$this->Search->Query:"")."\" class=\"AdvancedSearchInput\" id=\"SearchKeywords\" /></td>");
-            if (agUSE_CATEGORIES) {
-	            $this->CategorySelect->SelectedID = ($this->Search->Type == "Topics" ? $this->Search->Categories : "");
-					$this->Context->Writer->Add("<td>"
+      $this->Context->Writer->Add("<td class=\"SearchInputs\"><input type=\"text\" name=\"Keywords\" value=\"".($this->Search->Type == "Topics"?$this->Search->Query:"")."\" class=\"AdvancedSearchInput\" id=\"SearchKeywords\" /></td></tr>");
+            if (agUSE_CATEGORIES){ 
+             $this->Context->Writer->Add("<tr><td class=\"SearchLabels\">".$this->Context->GetDefinition("InTheCategory")."</td>");
+             $this->CategorySelect->SelectedID = ($this->Search->Type == "Topics" ? $this->Search->Categories : "");
+					$this->Context->Writer->Add("<td class=\"SearchInputs\">"
 					.$this->CategorySelect->Get()
 					."</td>");
-				}
-            $this->Context->Writer->Add("<td>
+            $this->Context->Writer->Add("</tr>");
+            }
+            $this->Context->Writer->Add("<tr><td class=\"SearchLabels\">".$this->Context->GetDefinition("WhereTheAuthorWas")."</td>");
+            $this->Context->Writer->Add("<td class=\"SearchInputs\">
                <input type=\"text\" name=\"AuthUsername\" value=\"".($this->Search->Type == "Topics"?$this->Search->AuthUsername:"")."\" class=\"AdvancedUserInput\" id=\"UsernameKeywords\" onKeyUp=\"return stac.LoadData(this, event, 'SearchTopicsACContainer');\" onblur=\"stac.HideAutoComplete();\" autocomplete=\"off\" />
                <div id=\"SearchTopicsACContainer\" class=\"AutoCompleteContainer\" style=\"display: none;\"></div>
-            </td>
-            <td><input type=\"submit\" name=\"btnSubmit\" value=\"".$this->Context->GetDefinition("Search")."\" class=\"SearchButton\" id=\"SearchButton\" /></form></td>
-         </tr>
-         <tr>
+            </td></tr>");
+            $this->Context->Writer->Add("<tr><td colspan=\"2\" class=\"SearchInputs\"><input type=\"submit\" name=\"btnSubmit\" value=\""
+              .$this->Context->GetDefinition("Search")."\" class=\"SearchButton\" id=\"SearchButton\" /></form></td></tr>");
+         
+         $this->Context->Writer->Add("<tr>
             <td colspan=\"4\" class=\"SearchTitle\">".$this->Context->GetDefinition("DiscussionCommentSearch")."</td>
          </tr>
-			<tr class=\"SearchLabels\" id=\"CommentLabels\">
-            <td>");
+			<tr id=\"CommentLabels\">
+            <td class=\"SearchLabels\">");
       $this->PostBackParams->Set("Type", "Comments");
       $this->Render_PostBackForm("frmSearch", "get");
       $this->Context->Writer->Add($this->Context->GetDefinition("FindCommentsContaining")."</td>");
-            if (agUSE_CATEGORIES) $this->Context->Writer->Add("<td>".$this->Context->GetDefinition("InTheCategory")."</td>");
-            $this->Context->Writer->Add("<td>".$this->Context->GetDefinition("WhereTheAuthorWas")."</td>
-            <td".$Colspan.">&nbsp;</td>
-         </tr>
-         <tr class=\"SearchInputs\" id=\"CommentInputs\">
-            <td><input type=\"text\" name=\"Keywords\" value=\"".($this->Search->Type == "Comments"?$this->Search->Query:"")."\" class=\"AdvancedSearchInput\" id=\"SearchKeywords\" /></td>");
-				if (agUSE_CATEGORIES) {
-	            $this->CategorySelect->SelectedID = ($this->Search->Type == "Comments" ? $this->Search->Categories : "");
-					$this->Context->Writer->Add("<td>"
+      $this->Context->Writer->Add("<td class=\"SearchInputs\"><input type=\"text\" name=\"Keywords\" value=\"".($this->Search->Type == "Comments"?$this->Search->Query:"")."\" class=\"AdvancedSearchInput\" id=\"SearchKeywords\" /></td></tr>");
+            if (agUSE_CATEGORIES) {
+              $this->Context->Writer->Add("<tr><td class=\"SearchLabels\">".$this->Context->GetDefinition("InTheCategory")."</td>");
+              $this->CategorySelect->SelectedID = ($this->Search->Type == "Comments" ? $this->Search->Categories : "");
+					$this->Context->Writer->Add("<td class=\"SearchInputs\">"
 					.$this->CategorySelect->Get()
-					."</td>");
-				}
-            $this->Context->Writer->Add("<td>
+					."</td></tr>\n");
+            }
+            $this->Context->Writer->Add("<tr><td class=\"SearchLabels\">".$this->Context->GetDefinition("WhereTheAuthorWas")."</td>");
+            $this->Context->Writer->Add("<td class=\"SearchInputs\">
                <input type=\"text\" name=\"AuthUsername\" value=\"".($this->Search->Type == "Comments"?$this->Search->AuthUsername:"")."\" class=\"AdvancedUserInput\" id=\"UsernameKeywords\" onKeyUp=\"return scac.LoadData(this, event, 'SearchCommentsACContainer');\" onblur=\"scac.HideAutoComplete();\" autocomplete=\"off\" />
                <div id=\"SearchCommentsACContainer\" class=\"AutoCompleteContainer\" style=\"display: none;\"></div>
-            </td>
-            <td".$Colspan."><input type=\"submit\" name=\"btnSubmit\" value=\"".$this->Context->GetDefinition("Search")."\" class=\"SearchButton\" id=\"SearchButton\" /></form></td>
-         </tr>
-         <tr>
-            <td colspan=\"4\" class=\"SearchTitle\">".$this->Context->GetDefinition("UserAccountSearch")."</td>
-         </tr>
-			<tr class=\"SearchLabels\" id=\"UserLabels\">
-            <td>");
-      $this->PostBackParams->Set("Type", "Users");
-      $this->Render_PostBackForm("frmSearch", "get");
-      $this->Context->Writer->Add($this->Context->GetDefinition("FindUserAccountsContaining")."</td>
-            <td>".$this->Context->GetDefinition("InTheRole")."</td>
-            <td>".$this->Context->GetDefinition("SortResultsBy")."</td>
-            <td>&nbsp;</td>
-         </tr>
-         <tr class=\"SearchInputs\" id=\"UserInputs\">
-            <td><input type=\"text\" name=\"Keywords\" value=\"".($this->Search->Type == "Users"?$this->Search->Query:"")."\" class=\"AdvancedSearchInput\" id=\"SearchKeywords\" /></td>
-            <td>".$this->RoleSelect->Get()."</td>
-            <td>".$this->OrderSelect->Get()."</td>
-            <td><input type=\"submit\" name=\"btnSubmit\" value=\"".$this->Context->GetDefinition("Search")."\" class=\"SearchButton\" id=\"SearchButton\" /></form></td>
-         </tr>
-      </table>");
+            </td></tr>");
+            $this->Context->Writer->Add("<tr><td colspan=\"2\" class=\"SearchInputs\"><input type=\"submit\" name=\"btnSubmit\" value=\""
+              .$this->Context->GetDefinition("Search")."\" class=\"SearchButton\" id=\"SearchButton\" /></form></td></tr>");
+              
+        
+      $this->Context->Writer->Add("</table>");
    }
 	
 	function Render_NoPostBack() {

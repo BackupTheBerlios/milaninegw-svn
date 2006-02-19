@@ -369,7 +369,8 @@ class Head extends Control {
 					}
 				}
       $this->Context->Writer->Write("</head>
-         <body".$this->Context->BodyAttributes.">");
+         <body".$this->Context->BodyAttributes.
+          '><table align="center" table width="898"  border="0" cellpadding="0" cellspacing="0"><tr><td>'."\n");
    }
 }
 
@@ -522,7 +523,7 @@ class Panel extends Control {
 // Ends the page body
 class PageEnd extends Control {
 	function Render() {
-		$this->Context->Writer->Write("</body>
+		$this->Context->Writer->Write("</td></tr></table></body>
 		</html>");
 	}
 }

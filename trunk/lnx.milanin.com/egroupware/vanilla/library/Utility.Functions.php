@@ -292,6 +292,7 @@ function FormatHtmlStringForNonDisplay($inValue) {
 function FormatHtmlStringInline($inValue, $StripSlashes = "0") {
 	$sReturn = ForceString($inValue, "");
 	if (ForceBool($StripSlashes, 0)) $sReturn = stripslashes($sReturn);
+	$sReturn = preg_replace("/<([^>])+>|&([^;])+/", "", $sReturn);
 	$sReturn = htmlspecialchars($sReturn);
 	$sReturn = str_replace("\r\n", " ", $sReturn);
 	return $sReturn;

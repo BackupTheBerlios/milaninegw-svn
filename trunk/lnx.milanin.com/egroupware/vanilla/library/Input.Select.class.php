@@ -49,7 +49,7 @@ class Select {
 	function Get() {
 		$sReturn = "<select name=\"".$this->Name."\" class=\"".$this->CssClass."\" ".$this->Attributes.">\r\n";
 		for ($i = 0 ; $i < count($this->aOptions); $i++) {
-			$sReturn .= "<option value=\"".$this->aOptions[$i]["IdValue"]."\" ";
+			$sReturn .= "<option value=\"".htmlentities($this->aOptions[$i]["IdValue"])."\" ";
 		
 			if (is_array($this->SelectedID)) {
 				$numrows = count($this->SelectedID);
@@ -63,7 +63,7 @@ class Select {
 				if ($this->aOptions[$i]["IdValue"] == $this->SelectedID) $sReturn .= " selected=\"selected\"";
 			}
 			if ($this->aOptions[$i]["Attributes"] != "") $sReturn .= $this->aOptions[$i]["Attributes"];
-			$sReturn .= ">".$this->aOptions[$i]["DisplayValue"]."</option>\r\n";
+			$sReturn .= ">".htmlentities($this->aOptions[$i]["DisplayValue"])."</option>\r\n";
 		}
 		$sReturn .= "</select>\r\n";
 		return $sReturn;

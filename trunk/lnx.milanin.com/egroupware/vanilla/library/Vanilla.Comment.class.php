@@ -333,14 +333,14 @@ class CommentManager {
 		$s->SearchFields = array("m.Body");
 		$s->DefineSearch();
 		$s->AddSelect("Name", "t", "Discussion");
-		$s->AddJoin("phpgw_category", "c", "Cat_id", "t", "CategoryID", "left join");
+		$s->AddJoin("phpgw_categories", "c", "Cat_id", "t", "CategoryID", "left join","");
 		$s->AddSelect("CategoryID", "t");
-		$s->AddSelect("Name", "c", "Category");
+		$s->AddSelect("cat_Name", "c", "Category");
 		
 		// If the current user is not admin only show active discussions & comments
-		if (!$this->Context->Session->User->AdminCategories || !$this->Context->Session->User->Setting("ShowDeletedComments")) $s->AddWhere("m.Deleted", "0", "=");
+		if (!$this->Context->Session->User->AdminCategories || !$this->Context->Session->User->Setting("ShowDeletedComments")) $s->AddWhere("m.Deleted", "1", "!=");
 		if (!$this->Context->Session->User->AdminCategories || !$this->Context->Session->User->Setting("ShowDeletedDiscussions")) $s->AddWhere("t.Active", "1", "=");			
-
+                $s->AddWhere("c.cat_owner",join(",",array_keys($_SESSION['UserGroups'])).")","in (","and","",0.0);
 		if ($Search->Categories != "") {
 			$Cats = explode(",",$Search->Categories);
 			$CatCount = count($Cats);

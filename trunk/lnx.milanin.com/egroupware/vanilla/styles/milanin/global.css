@@ -15,8 +15,8 @@
 		background: #F5F9FF;
 		margin-top: 0px;
 /* 		margin-left: 20px; */
-/* 		margin-right: 20px; */
-                text-align: center;
+/* 		margin-right: 20px; 
+                text-align: center;*/
 		
 	}
 	body, div, table, td {
@@ -136,7 +136,7 @@
 			padding-bottom: 20px;
 			margin-left: auto;
                         margin-right: auto;
-                        width: 80%;
+                        width: 100%;
 		}
 		
 		/* Head: The banner/menu container. */
@@ -550,10 +550,11 @@
 
 	/* Discussion: Container for a discussion on the discussion index page. */
 	.Discussion {
-		margin: 0px;
+		margin: 3px;
 		border-bottom: 1px solid #ddd;
 		padding-bottom: 8px;
 		padding-left: 8px;
+		border: 1px solid #859ba0;
 	}
 	.DiscussionTopic {
 		padding-top: 8px;
@@ -563,21 +564,22 @@
 		background: url('ico.bookmark.2.gif') top right no-repeat;
 	}
 	.NewComments { background: #ffd; }
-	.NoNewComments { background: #FFFEEC; }
+	.NoNewComments { background: #EDF1F1; }
 	
 
 	/* Category: Container for a category on the category page. */
 	.Category {
-		margin: 0px;
+		margin: 3px;
 		border-bottom: 1px solid #ddd;
 		padding: 8px;
 		padding-top: 6px;
+		border: 1px solid #859ba0;
 	}
 	.CategoryDescription {
 		display: block;
 		padding: 4px;
 	}
-	.UnblockedCategory { background: #f5f9ff; }
+	.UnblockedCategory { background: #EDF1F1; }
 
   
 	/* Comment: Container for a comment on the comment page. */
@@ -1303,6 +1305,7 @@
 	/* SearchForm: Elements specific to the Search page. */
 		.SearchForm {
 			margin: 10px;
+			height: 50px;
 		}
 		.SearchInput {
 			color: #333;
@@ -1333,25 +1336,29 @@
 			font-size: 10px;
 			margin-left: 10px;
 		}
-		
+		.AdvancedSearchTable {
+                	padding-top: 14px;
+			padding-bottom: 14px;
+                }
 		/* SearchTitle: Appears above the different search types on the
 		  advanced search form.*/
 		.SearchTitle {
 			font-weight: bold;
 			font-size: 14px;
-			padding: 4px;
-			padding-top: 10px;
+			padding: 0px;
+			padding-top: 4px;
 		}
-		.SearchLabels td {
+		.SearchLabels {
 			padding-left: 4px;
 			padding-right: 4px;
-			padding-top: 6px;
+			padding-top: 4px;
+			padding-bottom: 4px;
 			background: #f3f3f3;
 		}
-		.SearchInputs td {
+		.SearchInputs  {
 			padding: 4px;
-			padding-top: 0px;
-			padding-bottom: 8px;
+			padding-top: 4px;
+			padding-bottom: 4px;
 			background: #f3f3f3;
 		}
 		.AdvancedUserInput {
