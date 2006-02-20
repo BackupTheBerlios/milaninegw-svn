@@ -48,7 +48,7 @@ $template['pageshell'] .= <<< END
     <td id="pagetop"><a href="{{url}}"><!--img src="{{url}}_templates/default/graphics/purplecrayon.gif" alt="Elgg" width="227" height="70" border="0" /--></a></td>
   </tr>
 </table>
-<table align="center" width="898"  border="0" cellpadding="0" cellspacing="0" background="http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/blocks_bg1.gif">
+<table align="center" width="898"  border="0" cellpadding="0" cellspacing="0" background="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/blocks_bg1.gif">
   <tr>
     <td colspan="5" align="left" valign="top" id="mainbody">{{menu}}{{messageshell}}</td>
   </tr>
@@ -133,7 +133,7 @@ form			{
 #pagetop		{
 					background-color: #FFFFFF;
                                         height: 120px;
-                                        background-image: url("http://lnx.milanin.com/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
+                                        background-image: url("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
                                         background-repeat: no-repeat;
   
 				}

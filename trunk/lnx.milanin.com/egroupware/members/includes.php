@@ -13,7 +13,7 @@
 			define("sitename", "Business Club MilanIN");
 		// External URL to the site (eg http://milanin.gfdsa.org/)
 		// NB: **MUST** have a final slash at the end
-			define("url", "http://lnx.milanin.com/members/");
+			define("url", "http://www.milanin.com/members/");
 		// Physical path to the files (eg /home/elggserver/httpdocs/)
 		// NB: **MUST** have a final slash at the end
 			define("path", "/web/htdocs/www.milanin.com/home/members/");
