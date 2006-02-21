@@ -35,20 +35,20 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
           }
         </script>
 </head>
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body>
 	<a name="up" id="up"></a>
 	<center>
-	<table width="898"  border="0" cellpadding="0" cellspacing="0" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/generic_header.jpg">
+            <table width="898"  border="0" cellpadding="0" cellspacing="0" style="background: url('<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/generic_header.jpg')">
 		<tr>
 			<td width="160">
-                <img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="160" height="120" align="left" hspace="0" vspace="0"/>
+                <img alt="" src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="160" height="120" align="left" hspace="0" vspace="0"/>
 			</td>
 			<td class="sitetitle" align="left" width="738">
 				<?php echo $mosConfig_sitename; ?>
 			</td>
 		</tr>
 		<tr>
-			<td background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/blocks_bg1.gif" colspan="2">
+            <td style="background: url('<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/blocks_bg1.gif')" colspan="2">
 			<table width="898" cellpadding="0" cellspacing="0" border="0">
 			<tr>
 				<td width="174" align="left"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="165" height="30" /></td>
