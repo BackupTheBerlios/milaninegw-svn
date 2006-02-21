@@ -30,9 +30,9 @@
 		echo parse_navbar();
 
 		
-include('function_javascript.php');
+include('inc/function_javascript.php');
 
-include('function_search_str.php');
+include('inc/function_search_str.php');
 
 
 	// You must be logged on to view this!
