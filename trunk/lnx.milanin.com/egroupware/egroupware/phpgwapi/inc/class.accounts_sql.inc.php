@@ -299,7 +299,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 				case 'accounts_p':
 					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;	
-					
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
 					break;
