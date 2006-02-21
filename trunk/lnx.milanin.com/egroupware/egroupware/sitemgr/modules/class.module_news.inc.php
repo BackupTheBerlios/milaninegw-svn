@@ -37,7 +37,7 @@
 		{
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
 			{
-				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
+				return lang("Application '%1' is not installed !!!<br/>Please install it, to be able to use the block.",'news_admin');
 			}
 			//we could put this into the module's constructor, but by putting it here, we make it execute only when the block is edited,
 			//and not when it is generated for the web site, thus speeding the latter up slightly
@@ -59,7 +59,7 @@
 		{
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
 			{
-				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
+				return lang("Application '%1' is not installed !!!<br/>Please install it, to be able to use the block.",'news_admin');
 			}
 			$bonews = CreateObject('news_admin.bonews');
 			$cat = createobject('phpgwapi.categories','','news_admin');

@@ -26,7 +26,7 @@
 			if ($GLOBALS['sitemgr_info']['sitelanguages'])
 			{
 				$content = '<form name="langselect" method="post" action="">';
-				$content .= '<select onChange="location.href=this.value" name="language">';
+				$content .= '<select onchange="location.href=this.value" name="language">';
 				foreach ($GLOBALS['sitemgr_info']['sitelanguages'] as $lang)
 				{
 					$selected='';

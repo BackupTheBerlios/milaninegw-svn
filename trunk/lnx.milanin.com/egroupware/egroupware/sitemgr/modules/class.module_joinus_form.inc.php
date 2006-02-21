@@ -46,7 +46,7 @@
                                           'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
                                           'WHERE (i.code =\''.$g_ic.'\')';
                                           $invite_result=mysql_query ($invite_query, $mysql_link) 
-                                            or die ($invite_query."<br>".mysql_error($mysql_link));
+                                            or die ($invite_query."<br/>".mysql_error($mysql_link));
                                           $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
                                           mysql_free_result($invite_result);
                                           
@@ -62,13 +62,13 @@
 				if (isset($p_btn_submit))
 				{
 					if (empty ($p_name) || empty ($p_surname) ||  empty ($p_email) || empty ($p_msg))
-						$log .= lang('you must fill in all of the required fields')."<br>";
+						$log .= lang('you must fill in all of the required fields')."<br/>";
 					
 					if (!preg_match ("/.+@.+\.[a-z]+/", strtolower($p_email)))
-						$log .= lang('you have entered an invalid email address').": [".$p_email."] <br>";
+						$log .= lang('you have entered an invalid email address').": [".$p_email."] <br/>";
 					
 					if (strlen ($p_name)<2 || strlen ($p_surname)<2)
-						$log .= lang('too short name')."<br>";
+						$log .= lang('too short name')."<br/>";
 				}
 				
 				if (isset($p_btn_submit) && empty ($log))
@@ -83,11 +83,11 @@
 					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`,`account_membership_date`)
 					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '".strtolower($p_email)."', '-1', 0,'',CURDATE())";
 					
-					$result = mysql_query ($query, $mysql_link) or die ($query."<br>".mysql_error($mysql_link));
+					$result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
 					if ($remove_invitation_query != ""){
                                           $result = mysql_query ($remove_invitation_query, $mysql_link) 
-                                          or die ($remove_invitation_query."<br>".mysql_error($mysql_link));
+                                          or die ($remove_invitation_query."<br/>".mysql_error($mysql_link));
                                         }
 					mysql_close($mysql_link);	
 					
@@ -174,7 +174,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                         'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
                                         'WHERE (i.code =\''.$g_ic.'\')';
                                         $invite_result=mysql_query ($invite_query, $mysql_link) 
-                                          or die ($invite_query."<br>".mysql_error($mysql_link));
+                                          or die ($invite_query."<br/>".mysql_error($mysql_link));
                                         $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
                                         mysql_free_result($invite_result);
                                         

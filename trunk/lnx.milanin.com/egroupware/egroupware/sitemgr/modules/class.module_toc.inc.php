@@ -40,20 +40,20 @@
 					$children = $objbo->getCatLinks((int) $category_id,false);
 					if (count($children))
 					{
-						$content .= '<br><br><b>' . lang('Subcategories') . ':</b><br>';
+						$content .= '<br/><br/><b>' . lang('Subcategories') . ':</b><br/>';
 						foreach ($children as $cat_id => $child)
 						{
-							$content .= '<br>&nbsp;&nbsp;&nbsp;&middot;&nbsp;<b>'.$child['link'].'</b> '.
+							$content .= '<br/>&nbsp;&nbsp;&nbsp;&middot;&nbsp;<b>'.$child['link'].'</b> '.
 								$objbo->getEditIconsCat($cat_id).' &ndash; '.$child['description'];
 						}
 					}
-					$content .= '<br><br><b>' . lang('Pages') . ':</b><br>';
+					$content .= '<br/><br/><b>' . lang('Pages') . ':</b><br/>';
 					$links = $objbo->getPageLinks($category_id,true);
 					if (count($links)>0)
 					{
 						foreach($links as $page_id => $pg)
 						{
-							$content .= "\n<br>".
+							$content .= "\n<br/>".
 								'&nbsp;&nbsp;&nbsp;&middot;&nbsp;'.$pg['link'].' '.$objbo->getEditIconsPage($page_id,$cat_id);
 							if (!empty($pg['subtitle']))
 							{
@@ -74,7 +74,7 @@
 			}
 			else
 			{
-				$content = '<b>' . lang('Choose a category') . ':</b><br>';
+				$content = '<b>' . lang('Choose a category') . ':</b><br/>';
 				$links = $objbo->getCatLinks();
 				if (count($links)>0)
 				{
@@ -83,10 +83,10 @@
 						$buffer = str_pad('', $cat['depth']*24,'&nbsp;').'&middot;&nbsp;';
 						if (!$cat['depth'])
 						{
-							$buffer = '<br>'.$buffer;
+							$buffer = '<br/>'.$buffer;
 						}
 						$content .= "\n".$buffer.$cat['link'].' '.$objbo->getEditIconsCat($cat_id).
-							' &mdash; <i>'.$cat['description'].'</i><br>';
+							' &mdash; <i>'.$cat['description'].'</i><br/>';
 					}
 				}
 				else

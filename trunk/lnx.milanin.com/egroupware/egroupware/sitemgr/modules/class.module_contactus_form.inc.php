@@ -37,13 +37,13 @@
 				if (isset($p_btn_submit))
 				{
 					if (empty ($p_name) || empty ($p_email) || empty ($p_msg))
-						$log .= lang('you must fill in all of the required fields')."<br>";
+						$log .= lang('you must fill in all of the required fields')."<br/>";
 					
 					if (!preg_match ("/.+@.+\.[a-z]+/", $p_email))
-						$log .= lang('you have entered an invalid email address')."<br>";
+						$log .= lang('you have entered an invalid email address')."<br/>";
 					
 					if (strlen ($p_name)<2)
-						$log .= lang('too short name')."<br>";
+						$log .= lang('too short name')."<br/>";
 				}
 				
 				$recepients = explode (",", $arguments['recepient_list']);
