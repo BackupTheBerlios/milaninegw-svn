@@ -126,7 +126,7 @@
 					'<a href="' . $this->link($link_data) . '">' . lang('More news') . '</a>'
 				);
 			}
-			return '<div class="contentheading" width="100%">'
+			return '<div class="contentheading">'
                                 .$my_cat[0]['name']
                                 .'</div>'
                                 .$this->template->parse('out','news');
