@@ -260,7 +260,11 @@ a.contentpagetitle:hover {
 .contentpaneopen {
 	width: 100%;
 	}
-
+.newscontainer {
+	border: 1px solid #859ba0;
+	background: #EDF1F1;
+	padding: 4px;
+	}
 .contentheading {
 	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 10pt;
