@@ -41,7 +41,7 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
             <table width="898"  border="0" cellpadding="0" cellspacing="0" style="background: url('<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/generic_header.jpg')">
 		<tr>
 			<td width="160">
-                <img alt="" src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="160" height="120" align="left" hspace="0" vspace="0"/>
+                <img alt=""  alt="" src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="160" height="120" align="left" hspace="0" vspace="0"/>
 			</td>
 			<td class="sitetitle" align="left" width="738">
 				<?php echo $mosConfig_sitename; ?>
@@ -51,9 +51,9 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
             <td style="background: url('<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/blocks_bg1.gif')" colspan="2">
 			<table width="898" cellpadding="0" cellspacing="0" border="0">
 			<tr>
-				<td width="174" align="left"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="165" height="30" /></td>
+				<td width="174" align="left"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="165" height="30" /></td>
 				<td width="391" align="left"><?php include "pathway.php"; ?></td>
-				<td width="178" align="right"><?php echo (strftime (_DATE_FORMAT_LC)); ?><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="18" height="5" /></td>
+				<td width="178" align="right"><?php echo (strftime (_DATE_FORMAT_LC)); ?><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="18" height="5" /></td>
 <?php /* til I find time to get a search working - RalfBecker 2004/05/05
 				<form action='<?php echo sefRelToAbs("index.php"); ?>' method='post'>
 				<td width="155" align="left">
@@ -78,13 +78,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="152">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="148" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="148" height="4" /></td>
 					</tr>
 					</table>
 					<br>
@@ -101,13 +101,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="152">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="146" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="146" height="4" /></td>
 					</tr>
 					</table>	
 					<?php } ?>
@@ -127,13 +127,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="100%">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd" width="99%"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd" width="99%"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
 					</tr>
 					</table>	
 					<br>
@@ -151,13 +151,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="100%">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd" width="99%"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd" width="99%"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
 					</tr>
 					</table>	
 					<br>
@@ -176,13 +176,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="100%">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd" width="99%"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd" width="99%"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="99%" height="4" /></td>
 					</tr>
 					</table>	
 					<?php } ?>
@@ -203,13 +203,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="171">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="147" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="147" height="4" /></td>
 					</tr>
 					</table>
 					<br>
@@ -228,13 +228,13 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 								</tr>
 							</table>
 						</td>	
-						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
 					</tr>
 					</table>
 					<table border="0" cellspacing="0" cellpadding="0" width="171">
 					<tr>
-						<td><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
-						<td bgcolor="#becbcd"><img src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="147" height="4" /></td>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="147" height="4" /></td>
 					</tr>
 					</table>					
 					<?php } ?>
