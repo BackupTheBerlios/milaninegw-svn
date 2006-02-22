@@ -37,12 +37,16 @@ class module_members_count extends Module
                                  ';
                 $order_by='session_id';
 		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page);
-		foreach ($online as $onliner){
-                  if (($onliner['account_pwd']>0)){
-                    $drop.="<tr><td><a href=\"/members/".$onliner['account_lid']."\">".
-                    $onliner['account_firstname']." ".$onliner['account_lastname'].
-                    "</a></td></tr>\n";
+		if (sizeof($online)>0){
+                  foreach ($online as $onliner){
+                    if (($onliner['account_pwd']>0)){
+                      $drop.="<tr><td><a href=\"/members/".$onliner['account_lid']."\">".
+                      $onliner['account_firstname']." ".$onliner['account_lastname'].
+                      "</a></td></tr>\n";
+                    }
                   }
+                } else {
+                  $drop.="";
                 }
                 $drop.="</table>
 				</div>";
