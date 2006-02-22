@@ -238,9 +238,9 @@ a.textSidebox
 	border-color:#7e7e7e;
 	border-width:1px;
 	border-style:solid;
-	background-repeat:no-repeat;
-        background-position: center center;
-        background-image:url('./phpgwapi/templates/idots/images/login-background.jpg');
+/*         background-repeat:no-repeat; */
+/*         background-position: center center; */
+/*         background-image:url('/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/blocks_bg1.gif'); */
         height:85%;
 }
 #divPrivacyMain
@@ -252,7 +252,7 @@ a.textSidebox
 	border-width:1px;
 	border-style:solid;
         background-position: center center;
-        background-image:url('./phpgwapi/templates/idots/images/login-background.jpg');
+        background-image:url('/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/blocks_bg1.gif');
 }
 #divLogo
 {
