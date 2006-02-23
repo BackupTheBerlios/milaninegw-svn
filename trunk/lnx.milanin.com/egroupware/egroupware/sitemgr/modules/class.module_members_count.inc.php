@@ -36,7 +36,7 @@ class module_members_count extends Module
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
                                  ';
                 $order_by='session_id';
-		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page);
+		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page,'',FALSE);
 		if (sizeof($online)>0){
                   foreach ($online as $onliner){
                     if (($onliner['account_pwd']>0)){
