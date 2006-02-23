@@ -76,19 +76,21 @@
 
 		function check_for_missing_fields($message)
 		{
-			$acctid = $GLOBALS['phpgw']->accounts->name2id($message['to']);
-
-			if(!$acctid)
-			{
-				if($message['to'])
-				{
-					$errors[] = lang("I can't find the username %1 on the system",$message['to']);
-				}
-				else
-				{
-					$errors[] = lang('You must enter the username this message is for');
-				}
-			}
+			if (!$message['bcast_only']){
+                          $acctid = $GLOBALS['phpgw']->accounts->name2id($message['to']);
+  
+                          if(!$acctid)
+                          {
+                                  if($message['to'])
+                                  {
+                                          $errors[] = lang("I can't find the username %1 on the system",$message['to']);
+                                  }
+                                  else
+                                  {
+                                          $errors[] = lang('You must enter the username this message is for');
+                                  }
+                          }
+                        }
 
 			$acct = CreateObject('phpgwapi.accounts',$GLOBALS['phpgw']->accounts->name2id($message['to']));
 			$acct->read_repository();
@@ -133,33 +135,34 @@
 			{
 				return False;
 			}
-			 if(count($message['to']) == 0)
-			{
-			      $errors[] = lang('You must enter the username this message is for');
-			}
-			else
-			{   
-			      foreach($message['to'] as $to)
-			      {  
-			            $acctid = $GLOBALS['phpgw']->accounts->name2id($to);
-
-				    if(!$acctid)
-				    {
-				      if($to)
-				      { 
-					$errors[] = lang("I can't find the username %1 on the system",$to);
-				      }
-			            }
-
-				    $acct = CreateObject('phpgwapi.accounts',$GLOBALS['phpgw']->accounts->name2id($to));
-				    $acct->read_repository();
-				    /*if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($to,'account_lid'))
-				    {
-				      $errors[] = lang("Sorry, %1's account is not currently active",$to);
-				    }*/
-			      }
-			} 
-     
+			if (!$message['bcast_only']){
+                          if(count($message['to']) == 0)
+                          {
+                                $errors[] = lang('You must enter the username this message is for');
+                          }
+                          else
+                          {   
+                                foreach($message['to'] as $to)
+                                {  
+                                      $acctid = $GLOBALS['phpgw']->accounts->name2id($to);
+  
+                                      if(!$acctid)
+                                      {
+                                        if($to)
+                                        { 
+                                          $errors[] = lang("I can't find the username %1 on the system",$to);
+                                        }
+                                      }
+  
+                                      $acct = CreateObject('phpgwapi.accounts',$GLOBALS['phpgw']->accounts->name2id($to));
+                                      $acct->read_repository();
+                                      /*if($acct->is_expired() && $GLOBALS['phpgw']->accounts->name2id($to,'account_lid'))
+                                      {
+                                        $errors[] = lang("Sorry, %1's account is not currently active",$to);
+                                      }*/
+                                }
+                          } 
+                        }
 			if(!$message['subject'])
 			{
 				$errors[] = lang('You must enter a subject');

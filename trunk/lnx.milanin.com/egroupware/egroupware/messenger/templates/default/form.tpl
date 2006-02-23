@@ -54,7 +54,7 @@
 <!-- END form_from -->
 
 <!-- BEGIN form_to -->
-   <td valign="top">{lang_to}<br/>{value_to}<br/>{cc_to_self}</td>
+   <td valign="top">{lang_to}<br/>{value_to}<br/>{cc_to_self}<br/>{bcast_only}</td>
 <!-- END form_to -->
 
 <!-- BEGIN form_read_buttons -->

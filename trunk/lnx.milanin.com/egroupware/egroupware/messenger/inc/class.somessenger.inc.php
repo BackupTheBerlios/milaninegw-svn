@@ -176,26 +176,40 @@
 			{
 				$this->owner = -1;
 			}
-			if ($message['cc_to_self']) {
+			if ($message['bcast_only'] && 
+                              $GLOBALS['phpgw']->acl->get_specific_rights(
+				$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group')){
+                          foreach ($GLOBALS['phpgw']->accounts->get_list('accounts','','', '', '', '',$query_type='real_only') as $to){
+                                $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+				. "message_date, message_subject, message_content) VALUES ('"
+				. $to['account_id'] . "','" . $this->owner . "','N','" . time() . "','"
+				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+                                  ."')",__LINE__,__FILE__);
+                          }
+                          $mail_to[]=$GLOBALS['phpgw']->accounts->id2name(
+                            $GLOBALS['phpgw']->accounts->name2id('broadcaster'),'account_email');
+                        }else{
+                          if ($message['cc_to_self']) {
+                              $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+                                  . "message_date, message_subject, message_content) VALUES ('"
+                                  . $this->owner . "','" . $this->owner . "','N','" . time() . "','"
+                                  . addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+                                  . "')",__LINE__,__FILE__);
+                          }
+                          foreach($message['to'] as $to)
+                          {
+                            if(!ereg('^[0-9]+$',$to))
+                            {
+                                  $to = $GLOBALS['phpgw']->accounts->name2id($to,'account_lid');
+                                  $mail_to[]=$GLOBALS['phpgw']->accounts->id2name($to, 'account_email');
+                            }
                             $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
-				. "message_date, message_subject, message_content) VALUES ('"
-				. $this->owner . "','" . $this->owner . "','N','" . time() . "','"
-				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
-				. "')",__LINE__,__FILE__);
+                                  . "message_date, message_subject, message_content) VALUES ('"
+                                  . $to . "','" . $this->owner . "','N','" . time() . "','"
+                                  . addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+                                  . "')",__LINE__,__FILE__);
+                          }
                         }
-			foreach($message['to'] as $to)
-			{
-			   if(!ereg('^[0-9]+$',$to))
-			   {
-				$to = $GLOBALS['phpgw']->accounts->name2id($to,'account_lid');
-				$mail_to[]=$GLOBALS['phpgw']->accounts->id2name($to, 'account_email');
-			   }
-			   $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
-				. "message_date, message_subject, message_content) VALUES ('"
-				. $to . "','" . $this->owner . "','N','" . time() . "','"
-				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
-				. "')",__LINE__,__FILE__);
-			}
 			if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
                             $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
                             $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".

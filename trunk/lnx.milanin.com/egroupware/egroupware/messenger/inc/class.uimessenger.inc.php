@@ -356,6 +356,9 @@
 
 			// recipient dropdown field stuff added by tobi (gabele@uni-sql.de)
 			$sndid = array();
+			$broadcaster=$GLOBALS['phpgw']->acl->get_specific_rights(
+				$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group');
+			
 			
 			if(count($message['to']) != 0)
 			{  
@@ -367,7 +370,7 @@
 			
 
 			$myownid=$GLOBALS['phpgw_info']['user']['account_id'];
-			
+
 			$users = $this->bo->get_messenger_users();
 			$str = '';
 			foreach($users as $user)
@@ -394,7 +397,12 @@
 			$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
 			$GLOBALS['phpgw']->template->set_var('button_cancel','<input type="submit" name="cancel" value="' . lang('Cancel') . '">');
 			$GLOBALS['phpgw']->template->set_var('cc_to_self','<input type="checkbox" name="message[cc_to_self]" />'.lang("cc to self"));
-
+                        if ($broadcaster){
+					$GLOBALS['phpgw']->template->set_var('bcast_only',
+                                          '<input type="checkbox" name="message[bcast_only]" />'.lang("bcast_only"));
+					echo '<!-- oh broadcast! -->';
+					
+                        }
 			$GLOBALS['phpgw']->template->fp('to','form_to');
 			$GLOBALS['phpgw']->template->fp('buttons','form_buttons');
 			$GLOBALS['phpgw']->template->pfp('out','form');
