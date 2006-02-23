@@ -357,7 +357,6 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 			}
 			$joiner= ($offline) ? " LEFT " : "";
 
-//$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause and account_lid not like 'anonymous' $orderclause";
 
 			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
 			
@@ -392,9 +391,9 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 					'account_membership_date'  => $this->db->f('account_membership_date'),
 				);
 			}
-			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
+			/*$this->db->query("SELECT count(*) FROM $this->table $whereclause");
 			$this->db->next_record();
-			$this->total = $this->db->f(0);
+			$this->total = $this->db->f(0);*/
 
 			return $accounts;
 		}
