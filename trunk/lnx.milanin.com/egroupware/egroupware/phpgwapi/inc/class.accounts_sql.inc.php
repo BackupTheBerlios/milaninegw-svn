@@ -273,7 +273,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 			return $total;
 		}		
 
-		function get_online_list($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+		function get_online_list($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
 
 {
 			if (! $sort)
@@ -340,7 +340,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 						$query = $this->db->quote($query."%");
 						$whereclause .= " account_lastname LIKE $query )";
 						break;
-            case 'account_status':
+                                        case 'account_status':
 						//$query = $this->db->quote($query);
 						if ($query == 'A'){
 						$whereclause .= " account_status = 'A' )";
@@ -355,10 +355,11 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 						break;
 				}
 			}
+			$joiner= ($offline) ? " LEFT " : "";
 
 //$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin` FROM `phpgw_accounts` as b left JOIN `phpgw_sessions` as s on `account_lid`=`session_lid` $whereclause and account_lid not like 'anonymous' $orderclause";
 
-			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
+			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
 			
 			if ($offset)
 			{
