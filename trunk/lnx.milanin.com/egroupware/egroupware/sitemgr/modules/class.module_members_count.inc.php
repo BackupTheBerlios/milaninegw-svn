@@ -39,7 +39,7 @@ class module_members_count extends Module
 		$online=$GLOBALS['phpgw']->accounts->get_online_list('accounts', $start_page, $order_type, $order_by, '', $offset_page,'',FALSE);
 		if (sizeof($online)>0){
                   foreach ($online as $onliner){
-                    if (($onliner['account_pwd']>0)){
+                    if (($onliner['account_pwd']>0) && ($GLOBALS['phpgw_info']['user']['userid'] != 'anonymous') ){
                       $drop.="<tr><td><a href=\"/members/".$onliner['account_lid']."\">".
                       $onliner['account_firstname']." ".$onliner['account_lastname'].
                       "</a></td></tr>\n";
