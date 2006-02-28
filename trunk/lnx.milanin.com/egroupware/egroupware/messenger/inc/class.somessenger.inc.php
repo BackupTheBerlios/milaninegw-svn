@@ -130,13 +130,13 @@
 			$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
 				. $message['to'] . "','" . $this->owner . "','N','" . time() . "','"
-				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+				. $message['subject'] . "','" . $message['content']
 				. "')",__LINE__,__FILE__);
 			if ($message['cc_to_self']) {
                             $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
 				. $this->owner . "','" . $this->owner . "','N','" . time() . "','"
-				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+				. $message['subject'] . "','" . $message['content']
 				. "')",__LINE__,__FILE__);
                         }
 			 if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
@@ -146,15 +146,16 @@
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
                             $body  = lang('inbox').
                             ": http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n".
-                            lang('subject').": ".$message['subject']."\n\n-----\n".
-                            $message['content'].
+                            lang('subject').": ".stripslashes($message['subject'])."\n\n-----\n".
+                            stripslashes($message['content']).
                             "\n-----\n";
                             $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');
                             $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '','Messenger <messenger@'.$_SERVER['SERVER_NAME'].'>');
                             /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
 				. "14" . "','" . $this->owner . "','N','" . time() . "','"
-				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content']."$to, $subject, $body, '', '', ''")."')",__LINE__,__FILE__);*/
+				. $message['subject'] . "','" . $message['content']."$to, $subject, $body, '', '', ''")."')",__LINE__,__FILE__;
+                            */
                             if (!$rc)
                             {
                               echo  lang('Your message could <B>not</B> be sent!<BR>')."\n"
@@ -180,22 +181,15 @@
                               $GLOBALS['phpgw']->acl->get_specific_rights(
 				$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group')){
                           foreach ($GLOBALS['phpgw']->accounts->get_list('accounts','','', '', '', '',$query_type='real_only') as $to){
-                                $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+                                /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
 				. "message_date, message_subject, message_content) VALUES ('"
 				. $to['account_id'] . "','" . $this->owner . "','N','" . time() . "','"
 				. addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
-                                  ."')",__LINE__,__FILE__);
+                                  ."')",__LINE__,__FILE__);*/
                           }
                           $mail_to[]=$GLOBALS['phpgw']->accounts->id2name(
                             $GLOBALS['phpgw']->accounts->name2id('broadcaster'),'account_email');
                         }else{
-                          if ($message['cc_to_self']) {
-                              $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
-                                  . "message_date, message_subject, message_content) VALUES ('"
-                                  . $this->owner . "','" . $this->owner . "','N','" . time() . "','"
-                                  . addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
-                                  . "')",__LINE__,__FILE__);
-                          }
                           foreach($message['to'] as $to)
                           {
                             if(!ereg('^[0-9]+$',$to))
@@ -210,6 +204,13 @@
                                   . "')",__LINE__,__FILE__);
                           }
                         }
+                        if ($message['cc_to_self']) {
+                              $this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
+                                  . "message_date, message_subject, message_content) VALUES ('"
+                                  . $this->owner . "','" . $this->owner . "','N','" . time() . "','"
+                                  . addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
+                                  . "')",__LINE__,__FILE__);
+                        }
 			if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
                             $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
                             $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".
@@ -217,11 +218,16 @@
                               $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
                             $body  = lang('inbox').
                             ": http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n".
-                            lang('subject').": ".$message['subject']."\n\n-----\n".
-                            $message['content'].
+                            lang('subject').": ".stripslashes($message['subject'])."\n\n-----\n".
+                            stripslashes($message['content']).
                             "\n-----\n";
                             $to=$GLOBALS['phpgw']->accounts->id2name($this->owner,'account_email');
-                            $rc = $GLOBALS['phpgw']->send->msg('email', '', $subject, $body, '', '', join(",",$mail_to),'Messenger <messenger@'.$_SERVER['SERVER_NAME'].'>');
+                            $rc = $GLOBALS['phpgw']->send->msg('email', 
+                                                'Messenger <noreply@'.$GLOBALS['phpgw_info']['server']['mail_suffix'].'>', 
+                                                $subject, 
+                                                $body, '', '',
+                                                join(",",$mail_to),
+                                                'Messenger <noreply@'.$GLOBALS['phpgw_info']['server']['mail_suffix'].'>');
                             if (!$rc)
                             {
                               echo  lang('Your message could <B>not</B> be sent!<BR>')."\n"
