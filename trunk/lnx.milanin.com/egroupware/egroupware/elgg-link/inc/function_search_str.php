@@ -79,17 +79,20 @@ $select_str .= ">".lang("elg_all")."</td></tr></table>";
 return $select_str;
 }
 
-function table_header_result_count_str($sizeOf, $query_result_count)
-{
+function table_header_result_count_str($sizeOf, $query, $query_result_count)
+{ 
+if ($query !="") { 
 if ($sizeOf < 1){
 $res_str = "<tr colspan=5 align=center>".lang("elg_returned_no_result").".</tr>"; 
 
 } else {
     //show result count message if any search 
 $res_str = "<tr align=\"center\" class=divSideboxHeader colspan=9>".lang("elg_returned_result")." ".$query_result_count." ".lang("elg_result").". </tr>";
+}
 }  
   return $res_str;
 }
+
 function table_result_str($members)
 {
   foreach ($members as $member)
