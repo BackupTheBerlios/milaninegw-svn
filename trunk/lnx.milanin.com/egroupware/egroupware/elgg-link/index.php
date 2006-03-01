@@ -66,8 +66,8 @@ if ($_REQUEST['regstatus'] != null) {
 $regstatus=$_REQUEST['regstatus'];
 }
 //do calc
-//$offset_page=$GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
-$offset_page=4;
+$offset_page=$GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
+//$offset_page=4;
 
 $members['online']=$GLOBALS['phpgw']->accounts->get_online_list($regstatus, $start_from, $order_type, $order_by, $query, $offset_page, $query_type);
 
