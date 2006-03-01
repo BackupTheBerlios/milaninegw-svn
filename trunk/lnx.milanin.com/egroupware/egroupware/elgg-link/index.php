@@ -66,8 +66,8 @@ if ($_REQUEST['regstatus'] != null) {
 $regstatus=$_REQUEST['regstatus'];
 }
 //do calc
-$offset_page=$GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
-
+//$offset_page=$GLOBALS['phpgw_info']['user']['preferences']['common']['maxmatchs'];
+$offset_page=4;
 
 $members['online']=$GLOBALS['phpgw']->accounts->get_online_list($regstatus, $start_from, $order_type, $order_by, $query, $offset_page, $query_type);
 
@@ -107,8 +107,8 @@ END;
 
 <table align="center">
 END;
-
-$body .= table_header_result_count_str(sizeOf($members['online']), $query_result_count);
+ 
+$body .= table_header_result_count_str(sizeOf($members['online']), $query, $query_result_count);
 $body .= table_header_search_str($members_online_count, $guests_online_count, $members_reg_count);
 if (sizeOf($members['online']) > 0)
 $body .= table_result_str($members['online']);
