@@ -42,21 +42,34 @@ return $search_str;
 }
 function input_text_search_str($query)
 {
-$search_str = "<table align=\"center\"><tr colspan=".(sizeOf($aar) - 3)."><td><input type='text' name='query' value='".$query."'></td><td><select name='query_type'><option value='all'>".lang("elg_all")."</option><option value='firstname'>".lang("elg_first_name")."</option><option value='lastname'>".lang("elg_last_name")."</option></select></td><td><input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td>";
-$search_str .= "</tr></table>";
+$search_str = "<table align=\"center\"><tr><td>
+		<input type='text' name='query' value='".$query."'></td>
+		<td><select name='query_type'><option value='all'>"
+		.lang("elg_all")."</option>
+		<option value='firstname'>"
+		.lang("elg_first_name")."</option>
+		<option value='lastname'>".lang("elg_last_name").
+		"</option></select></td><td>
+		<input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td>";
+$search_str .= "</tr></table>\n";
 return $search_str;
 }
 
 function table_header_search_str($members_online_count, $guests_online_count, $members_reg_count)
 {
-$search_str = "<tr class=divSideboxHeader><td align=\"left\" colspan=3>".lang("elg_members")." online: ".$members_online_count." <br>".lang("elg_anonymous")." : ".$guests_online_count."<br>".lang("elg_registered")." total: ".$members_reg_count."<br></td><td align=\"left\" colspan=6>".table_header_select_str()."</td></tr>";  
+$search_str = "<tr class=divSideboxHeader><td align=\"left\" colspan=\"2\">".
+		lang("elg_members")." online: ".$members_online_count." <br/>".
+		lang("elg_anonymous")." : ".$guests_online_count."<br/>".
+		lang("elg_registered")." total: ".$members_reg_count.
+		"<br/></td><td align=\"left\" colspan=\"3\">".
+		table_header_select_str()."</td></tr>\n";  
 return $search_str;
 }
 
 function table_header_select_str()
 {
 
-$select_str .= "<table align=\"left\" ><tr ><td>".lang("elg_order_by").": </td><td colspan=4><select name='order_by' onChange='userSearchform.submit();'><option value='session_id' ";
+$select_str .= "<table align=\"left\" ><tr ><td>".lang("elg_order_by").": </td><td colspan=\"4\"><select name='order_by' onChange='userSearchform.submit();'><option value='session_id' ";
 
 $select_str .= ">".lang("elg_online_status")."</option><option value='account_firstname' ";
 
@@ -73,7 +86,7 @@ $select_str .= ">".lang("elg_active")."</td><td><INPUT TYPE=\"radio\" NAME=\"reg
 $select_str .= ">".lang("elg_inactive")."</td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"accounts\" ";
 
 
-$select_str .= ">".lang("elg_all")."</td></tr></table>";
+$select_str .= ">".lang("elg_all")."</td></tr></table>\n";
   
   
 return $select_str;
@@ -83,11 +96,11 @@ function table_header_result_count_str($sizeOf, $query, $query_result_count)
 { 
 if ($query !="") { 
 if ($sizeOf < 1){
-$res_str = "<tr colspan=5 align=center>".lang("elg_returned_no_result").".</tr>"; 
+$res_str = "<tr align=center><td colspan=\"5\" ><b>".lang("elg_returned_no_result").".</b></td></tr>"; 
 
 } else {
     //show result count message if any search 
-$res_str = "<tr align=\"center\" class=divSideboxHeader colspan=9>".lang("elg_returned_result")." ".$query_result_count." ".lang("elg_result").". </tr>";
+$res_str = "<tr align=\"center\" class=divSideboxHeader ><td  colspan=\"5\"><b>".lang("elg_returned_result")." ".$query_result_count." ".lang("elg_result").".</b></td> </tr>\n";
 }
 }  
   return $res_str;
@@ -105,11 +118,10 @@ function table_result_str($members)
                     if ($member['account_pwd'] != null)
                     $user_status="<b>";
  
-                    $res_str .= "<td>\n";
+                    $res_str .= "<td width=\"18px\">\n";
                     $res_str .= ($member['account_pwd'] != null) ? "<img src='/egroupware/elgg-link/templates/default/images/online.gif'>": "<img src='/egroupware/elgg-link/templates/default/images/offline.gif'>";
                     $res_str .= "</td>\n";
 
-                    $res_str .= "<td>&nbsp;</td>\n";
 
                     $res_str .= "<td>";
                     if ($member['account_status'] != 'A'){ echo "<i>"; };
@@ -117,25 +129,22 @@ function table_result_str($members)
                     if ($member['account_status'] != 'A') {echo "</i>";};
                     $res_str .= "</td>\n";
                     if ($member['account_status'] == 'A'){
-                      $res_str .= "<td>&nbsp;</td>\n";
                       
                       $res_str .= "<td><a href=".($user_location)." title='".lang("elg_view_profile").": ".($member['account_lid'])."' target=_blank>";
                       $res_str .= "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_about.gif'>";
                       $res_str .= "</a></td>\n";
                       
-                      $res_str .= "<td>&nbsp;</td>\n";
   
                       $res_str .= "<td><a href=".($linkedIn_user_location)." title='".lang("elg_view_linkedIn_profile").": ".($member['account_lid'])."' target=_blank>";
                       $res_str .= "<img src='/egroupware/elgg-link/templates/default/images/linkedin_logo.gif'>";
                       $res_str .= "</a></td>\n";
                       
-                      $res_str .= "<td>&nbsp;</td>\n";
                                             
                       $res_str .= "<td><a href=".($pmuser_location)." title='".lang("elg_send_private_message_to").": ".($member['account_lid'])."' target=_blank>";
                       $res_str .= "<img src='/egroupware/fudforum/3814588639/theme/default/images/msg_pm.gif'>";
                       $res_str .= "</a></td>\n";
                     }else{
-                      $res_str .= '<td colspan="8" align="right">'.lang("elg_inactive")."</td>\n";
+                      $res_str .= '<td colspan="4" align="right">'.lang("elg_inactive")."</td>\n";
                     }
                     $res_str .= "</tr>";
                 }  
@@ -145,20 +154,20 @@ function table_result_str($members)
 
 function pages_str($pages_count, $offset_page, $start_page, $current_page)
 {
-$res_str .= "<table align=\"center\"><th class=divSideboxHeader colspan=11>".lang("elg_total_pages").": ".$pages_count."<br>".lang("elg_current_page").":".$current_page." </th>";
-$res_str .= "<tr class=divSideboxEntry colspan=".$pages_count.">";
+$res_str .= "<table align=\"center\"><tr><th class=\"divSideboxHeader\">".lang("elg_total_pages").": ".$pages_count."<br/>".lang("elg_current_page").":".$current_page." </th></tr>\n";
+$res_str .= "<tr class=divSideboxEntry><td><table><tr>\n";
 
 for($x = 0;$x < $pages_count;$x++)
  {
  $next_page = ($offset_page * $x);
  if ($next_page == $start_page){
- $res_str .= "<td>".($x + 1)."</td>";
+ $res_str .= "\t<td>".($x + 1)."</td>\n";
  }
  else 
- $res_str .= "<td><a href=\"javascript:doQuery('', ".$next_page.");\" title='".lang("elg_go_to_page")." ".($x + 1)."'>".($x + 1)."</a></td>";
+ $res_str .= "\t<td><a href=\"javascript:doQuery('', ".$next_page.");\" title='".lang("elg_go_to_page")." ".($x + 1)."'>".($x + 1)."</a></td>\n";
 
  }
-$res_str .= "</tr></table>"; 
+$res_str .= "</tr></table></tr></table>\n"; 
 
     return $res_str;
 }
