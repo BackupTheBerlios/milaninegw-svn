@@ -132,7 +132,7 @@
 
 				$GLOBALS['phpgw']->template->set_var('row_from',$message['from']);
 				$GLOBALS['phpgw']->template->set_var('row_date',$message['date']);
-				$GLOBALS['phpgw']->template->set_var('row_subject','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.read_message&message_id=' . $message['id']) . '">' . $message['subject'] . '</a>');
+				$GLOBALS['phpgw']->template->set_var('row_subject','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.read_message&message_id=' . $message['id']) . '">' . stripslashes($message['subject']) . '</a>');
 				$GLOBALS['phpgw']->template->set_var('row_status',$status);
 				$GLOBALS['phpgw']->template->set_var('row_checkbox','<input type="checkbox" name="messages[]" value="' . $message['id'] . '">');
 
@@ -193,7 +193,7 @@
 
 				$GLOBALS['phpgw']->template->set_var('row_from',$message['from']);
 				$GLOBALS['phpgw']->template->set_var('row_date',$message['date']);
-				$GLOBALS['phpgw']->template->set_var('row_subject','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.read_message&message_id=' . $message['id']) . '">' . $message['subject'] . '</a>');
+				$GLOBALS['phpgw']->template->set_var('row_subject','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.read_message&message_id=' . $message['id']) . '">' . stripslashes($message['subject']) . '</a>');
 				$GLOBALS['phpgw']->template->set_var('row_status',$status);
 				$GLOBALS['phpgw']->template->set_var('row_checkbox','<input type="checkbox" name="messages[]" value="' . $message['id'] . '">');
 
@@ -254,7 +254,7 @@
 			$GLOBALS['phpgw']->template->set_var('header_message',lang('Compose global message'));
 
 			$GLOBALS['phpgw']->template->set_var('form_action',$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_global'));
-			$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . $message['subject'] . '">');
+			$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . stripslashes($message['subject']) . '">');
 			$GLOBALS['phpgw']->template->set_var('value_content','<textarea name="message[content]" rows="20" wrap="hard" cols="76">' . $message['content'] . '</textarea>');
 
 			$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
@@ -321,7 +321,7 @@
 
 			$GLOBALS['phpgw']->template->set_var('form_action',$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose'));
 			$GLOBALS['phpgw']->template->set_var('value_to',$tobox);
-			$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . $message['subject'] . '" size="30">');
+			$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . stripslashes($message['subject']) . '" size="30">');
 			$GLOBALS['phpgw']->template->set_var('value_content','<textarea name="message[content]" rows="20" wrap="hard" cols="76">' . $message['content'] . '</textarea>');
 
 			$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
@@ -420,7 +420,7 @@
 			$GLOBALS['phpgw']->template->set_var('header_message',lang('Read message'));
 
 			$GLOBALS['phpgw']->template->set_var('value_from',$message['from']);
-			$GLOBALS['phpgw']->template->set_var('value_subject',$message['subject']);
+			$GLOBALS['phpgw']->template->set_var('value_subject',stripslashes($message['subject']));
 			$GLOBALS['phpgw']->template->set_var('value_date',$message['date']);
 			$GLOBALS['phpgw']->template->set_var('value_content','<pre>' . $GLOBALS['phpgw']->strip_html($message['content']) . '</pre>');
 
