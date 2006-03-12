@@ -17,4 +17,5 @@
 	global $hooks_string;
 
 	$lastlogin = $GLOBALS['phpgw']->session->appsession('account_previous_login','phpgwapi');
+	$hooks_string['vanilla']='Wow, vanilla: ['.$lastlogin.']<br/>';
 	
