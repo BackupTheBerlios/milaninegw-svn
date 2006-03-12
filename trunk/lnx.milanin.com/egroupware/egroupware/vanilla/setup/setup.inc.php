@@ -16,17 +16,18 @@
 
 	/* Basic information about this app */
 	$setup_info['vanilla']['name']      = 'vanilla';
-	$setup_info['vanilla']['title']     = 'Vanilla';
+	$setup_info['vanilla']['title']     = 'Discussions Board';
 	$setup_info['vanilla']['version']   = '0.9.2.6-milaninegw';
-	$setup_info['vanilla']['app_order'] = '4';
+	$setup_info['vanilla']['app_order'] = 4;
 	$setup_info['vanilla']['enable']    = 1;
 
 	/* The tables this app creates */
 
 	/* The hooks this app includes, needed for hooks registration */
-	$setup_info['vanilla']['hooks'][] = 'preferences';
-	$setup_info['vanilla']['hooks'][] = 'home';
 	$setup_info['vanilla']['hooks'][] = 'admin';
+	$setup_info['vanilla']['hooks'][] = 'home';
+	$setup_info['vanilla']['hooks'][] = 'preferences';
+	$setup_info['vanilla']['hooks'][] = 'settings';
 	$setup_info['vanilla']['hooks'][] = 'sidebox_menu';
 
 	/* Dependencies for this app to work */
