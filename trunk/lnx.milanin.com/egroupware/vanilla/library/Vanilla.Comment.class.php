@@ -215,10 +215,10 @@ class CommentManager {
 		$s->AddSelect("Blocked", "cb", "CommentBlocked", "coalesce", "0");
 		$s->AddSelect("'".agICONSPREFIX."'", "", "AuthIcon", "concat", "i.filename");
 		$s->AddJoin("phpgw_accounts", "a", "account_id", "m", "AuthUserID", "left join","");
-		$s->AddJoin("User","ou","UserID","a","account_lid","left join");
+		$s->AddJoin("User","ou","UserID","a","account_id","left join");
 		$s->AddJoin("Role", "r", "RoleID", "ou", "RoleID", "left join");
-		$s->AddJoin("phpgw_accounts", "e", "account_lid", "m", "EditUserID", "left join","");
-		$s->AddJoin("phpgw_accounts", "d", "account_lid", "m", "DeleteUserID", "left join","");
+		$s->AddJoin("phpgw_accounts", "e", "account_id", "m", "EditUserID", "left join","");
+		$s->AddJoin("phpgw_accounts", "d", "account_id", "m", "DeleteUserID", "left join","");
 		$s->AddJoin("UserBlock", "ab", "BlockedUserID and ab.BlockingUserID = ".$this->Context->Session->UserID, "m", "AuthUserID", "left join");
 		$s->AddJoin("CommentBlock", "cb", "BlockedCommentID and cb.BlockingUserID = ".$this->Context->Session->UserID, "m", "CommentID", "left join");
 		$s->AddJoin("Discussion", "t", "DiscussionID", "m", "DiscussionID", "inner join");
