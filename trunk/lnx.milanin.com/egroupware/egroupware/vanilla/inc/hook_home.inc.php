@@ -83,7 +83,8 @@
                   while ($GLOBALS['phpgw']->db->next_record())
                   {
 		    $portalbox->data[] = array(
-                                            'text' => $GLOBALS['phpgw']->db->f('Category')."  ". 
+                                            'text' => $GLOBALS['phpgw']->db->f('DateLastActive')."  ".
+                                             $GLOBALS['phpgw']->db->f('Category')."  ".
                                              $GLOBALS['phpgw']->db->f('Name')." ".
                                              lang("from")." ".$GLOBALS['phpgw']->db->f('LastFullName')." ".
                                              $GLOBALS['phpgw']->db->f('LastViewCountComments')."/".$GLOBALS['phpgw']->db->f('CountComments'),
