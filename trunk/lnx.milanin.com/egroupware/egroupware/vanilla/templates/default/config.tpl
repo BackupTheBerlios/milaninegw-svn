@@ -1,40 +1,42 @@
 <!-- BEGIN header -->
-<form method="POST" action="{action_url}">
+<div style="border: 1px solid; width: 100%;">{save_messages}</div><br/>
+<form method="POST" action="?menuaction=vanilla.uivanilla.save_config">
 <table border="0" align="center">
-   <tr class="th">
-	   <td colspan="2"><font color="{th_text}">&nbsp;<b>{title}</b></font></td>
-   </tr>
-   <tr bgcolor="{th_err}">
-    <td colspan="2">&nbsp;<b>{error}</b></font></td>
-   </tr>
+
 <!-- END header -->
+
+
+<!-- BEGIN cat_watchers -->
+<tr><td>
+
+<div style="border: 1px solid">
+<table border="0" align="center">
+<tr>
+  <th>{lang_cat_watchers}</th>
+  <td>{lang_yes}</td>
+  <td>{lang_no}</td>
+</tr>
+{cat_watchers_list}
+</table>
+</div>
+</tr></td>
+<!-- END cat_watchers -->
+
+<!-- BEGIN cat_watcher -->
+  <tr class="{row_class}">
+    <td>{cat_name}</td>
+    <td>{cat_watch_yes}</td>
+    <td>{cat_watch_no}</td>
+  </tr>
+<!-- END cat_watcher -->
+
 <!-- BEGIN body -->
-   <tr class="th">
-    <td colspan="2">&nbsp;<b>{lang_Messenger}</b></font></td>
-   </tr>
-   <tr class="row_off">
-    <td>{lang_Use_select_box_for_user_list_in_compose}.</td>
-    <td>
-     <select name="newsettings[use_selectbox]">
-      <option value="" {selected_use_selectbox_False}>{lang_No}</option>
-      <option value="True" {selected_use_selectbox_True}>{lang_Yes}</option>
-     </select>
-    </td>
-   </tr>
+
 <!-- END body -->
 
+
 <!-- BEGIN footer -->
-  <tr class="th">
-    <td colspan="2">
-&nbsp;
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <input type="submit" name="submit" value="{lang_submit}">
-      <input type="submit" name="cancel" value="{lang_cancel}">
-    </td>
-  </tr>
+<tr><td colspan="2" align="right"><input type="submit" value="{lang_save}"/></td></tr>
 </table>
 </form>
 <!-- END footer -->

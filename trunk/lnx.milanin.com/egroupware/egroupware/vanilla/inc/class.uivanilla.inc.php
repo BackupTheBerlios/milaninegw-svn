@@ -23,6 +23,8 @@
                         'discussions'        => True,
 			'read_post'   => True,
 			'reply_post'          => True,
+			'config'          => True,
+			'save_config'          => True,
 		);
 
 		function uivanilla()
@@ -53,6 +55,9 @@
 			$GLOBALS['phpgw']->template->set_var('lang_subject',lang('Subject'));
 			$GLOBALS['phpgw']->template->set_var('lang_content',lang('Message'));
 			$GLOBALS['phpgw']->template->set_var('lang_date',lang('Date'));
+			$GLOBALS['phpgw']->template->set_var('lang_save',lang('Save'));
+			$GLOBALS['phpgw']->template->set_var('lang_yes',lang('Yes'));
+			$GLOBALS['phpgw']->template->set_var('lang_no',lang('No'));
 		}
 
 		
@@ -90,5 +95,54 @@
                         $extra_menuaction = '&menuaction=vanilla.uivanilla.info';
 			$GLOBALS['phpgw']->template->pfp('out','discussions');
 		}
+		
+		function config($save_result=NULL)
+                {
+                        $GLOBALS['phpgw']->template->set_file('_config','config.tpl');
+                        $GLOBALS['phpgw']->template->set_block('_config','header');
+                        $GLOBALS['phpgw']->template->set_block('_config','footer');
+                        $GLOBALS['phpgw']->template->set_block('_config','cat_watcher');
+                        $GLOBALS['phpgw']->template->set_block('_config','cat_watchers');
+                        
+                        $GLOBALS['phpgw']->template->set_var('lang_category',lang('Category'));
+			$GLOBALS['phpgw']->template->set_var('lang_watch',lang('Watch'));
+			$GLOBALS['phpgw']->template->set_var('lang_cat_watchers',lang('Categories watching'));
+                        if (!is_null($save_result))
+                        {
+                            $GLOBALS['phpgw']->template->set_var('save_messages',(($save_result) ? lang('Saved config') : lang('Failed to save config')));
+                        }
+                        $this->set_common_langs();
+                        $this->display_headers();
+                        
+                        $row_class='row_on';
+                        foreach ($this->bo->read_category_watchers() as $cat_watcher){
+                          $GLOBALS['phpgw']->template->set_var('cat_name',$cat_watcher['cat_name']);
+                          $GLOBALS['phpgw']->template->set_var('cat_watch_yes','<input type="radio" value="1" name="cat_watch['
+                                  .$cat_watcher['cat_id'].']" id="cat_watch_'.$cat_watcher['cat_id'].'_yes" '
+                                  .($cat_watcher['cat_watch']==0 ? '' : 'checked="checked"').' >'
+                          );
+                          $GLOBALS['phpgw']->template->set_var('cat_watch_no','<input type="radio" value="0" name="cat_watch['
+                                  .$cat_watcher['cat_id'].']" id="cat_watch_'.$cat_watcher['cat_id'].'_no" '
+                                  .($cat_watcher['cat_watch']==0 ? 'checked="checked"' : '').' >'
+                          );
+                                  $GLOBALS['phpgw']->template->set_var('row_class',$row_class);
+                          $GLOBALS['phpgw']->template->fp('cat_watchers_list','cat_watcher',TRUE);
+                          $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
+                        }
+                        
+                        $GLOBALS['phpgw']->template->pfp('out','header');
+                        $GLOBALS['phpgw']->template->pfp('out','cat_watchers');
+                        $GLOBALS['phpgw']->template->pfp('out','footer');
+                        $GLOBALS['phpgw']->common->phpgw_footer();
+                }
+                
+                function save_config()
+                {
+//                    print_r($_POST);
+                  //Categories save 
+                  $this->config($this->bo->save_cat_watchers($_POST['cat_watch']));
+                  
+                }
+                  
 
 	}

@@ -86,4 +86,37 @@
 		}
                 return $discussions;
               }
+              function read_category_watchers(){
+                $query="select c.cat_id,c.cat_name,coalesce(cw.CategoryID,0) as cat_watch
+                        from phpgw_categories c 
+                        left join LUM_UserCategoryWatch cw on cw.CategoryID=c.cat_id and cw.UserID=".$this->owner." ".
+                        "where cat_appname = 'vanilla' and cat_owner in (".join(",", $this->owner_groups).")";
+                $this->db->query($query,__LINE__,__FILE__);
+                while ($this->db->next_record())
+                {
+                  $categories[] = array(
+                                    'cat_id'=> $this->db->f('cat_id'),
+                                    'cat_name'=> $this->db->f('cat_name'),
+                                    'cat_watch'=> ($this->db->f('cat_watch') != 0 ? 0 : 1 )
+                                    );
+                }
+                return $categories;
+              }
+              function write_category_watchers($cat_watchers=Array())
+              {
+                $this->clear_category_watchers();
+                foreach ( array_keys($cat_watchers) as $cat_id)
+                {
+                  if ($cat_watchers[$cat_id]==0){
+                    $query="INSERT INTO LUM_UserCategoryWatch VALUES(".$this->owner.",".$cat_id.')';
+                    $this->db->query($query,__LINE__,__FILE__);
+                  }
+                }
+                return True;
+              }
+              function clear_category_watchers()
+              {
+                $query='DELETE FROM LUM_UserCategoryWatch Where UserID ='.$this->owner;
+                $this->db->query($query,__LINE__,__FILE__);
+              }
 }

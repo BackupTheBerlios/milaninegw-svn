@@ -37,6 +37,14 @@
                 {
                   return $this->so->top_discussions('t.CountComments');
                 }
+                function read_category_watchers()
+                {
+                  return $this->so->read_category_watchers();
+                }
+                function save_cat_watchers($cat_watchers)
+                {
+                  return $this->so->write_category_watchers($cat_watchers);
+                }
 
 
 	}
