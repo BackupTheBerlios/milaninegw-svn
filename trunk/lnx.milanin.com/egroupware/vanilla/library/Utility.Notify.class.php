@@ -62,6 +62,7 @@ class Notify {
           $mailer->Host     = $mailer_settings['smtp_server'];
           $mailer->Mailer   = "smtp";
           $mailer->Body    = $Body;
+          $mailer->Subject = $Subject;
           $mailer->AddAddress(agSUPPORT_EMAIL,agSUPPORT_NAME);
           foreach ($Rcpts as $bcc){
             $mailer->AddBCC($bcc);
