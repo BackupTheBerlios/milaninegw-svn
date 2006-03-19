@@ -1,7 +1,7 @@
 <!-- BEGIN discussions -->
 <table border="0" width="100%">
  <tr bgcolor="{th_bg}">
-  <td colspan="2">&nbsp;vanilla</td>
+  <td>{board_link}</td><td>{config_link}</td>
  </tr>
  <tr bgcolor="{th_bg}">
   <td>{lang_latest_discussions}</td>

@@ -71,6 +71,10 @@
 			$GLOBALS['phpgw']->template->set_block('_info','latest_discussion');
 			$GLOBALS['phpgw']->template->set_block('_info','popular_discussion');
 			$this->set_common_langs();
+			$GLOBALS['phpgw']->template->set_var('board_link','<a href="/vanilla">'.lang("Go to")." ".lang("Discussions").'</a>');
+			$GLOBALS['phpgw']->template->set_var('config_link',
+                            '<a href="'.$GLOBALS['phpgw_info']['server']['webserver_url'].'/index.php?menuaction=vanilla.uivanilla.config">'
+                            .lang("Go to")." ".lang("Settings").'</a>');
 			
                         $row_class='row_on';
                         foreach ($this->bo->latest_discussions() as $discussion){
