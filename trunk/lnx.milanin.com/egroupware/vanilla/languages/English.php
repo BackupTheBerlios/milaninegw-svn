@@ -731,4 +731,8 @@ $Context->Dictionary["AvailableFeeds"] = "Choose a syndication format:";
 $Context->Dictionary["AvailableFeedNotes"] = "";
 $Context->Dictionary["FailedFeedAuthenticationTitle"] = "Failed Authentication";
 $Context->Dictionary["FailedFeedAuthenticationText"] = "Feeds for this forum require user authentication.";
+$Context->Dictionary["NewDiscussionInCategory"] = "A new Discussion started in Category";
+$Context->Dictionary["WithSubject"] = "with the following subject";
+$Context->Dictionary["NewDiscussionIn"] = "New Discussion in";
+$Context->Dictionary["FollowTheLink"] = "Follow the link to see it";
 ?>

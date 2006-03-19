@@ -511,6 +511,11 @@ class DiscussionManager {
 							$s->AddFieldNameValue("CountComments", 0);
 							$Discussion->DiscussionID = $this->Context->Database->Insert($this->Context, $s, $this->Name, "NewDiscussion", "An error occurred while creating a new discussion.");
 							$Discussion->Comment->DiscussionID = $Discussion->DiscussionID;
+							if ($this->Context->WarningCollector->Count() == 0){
+                                                          $n=$this->Context->ObjectFactory->NewContextObject($this->Context, "Notify");
+                                                          $n->NotifyDiscussion($Discussion->DiscussionID,$this);
+                                                        }
+							
 						} else {
 							$s->AddWhere("DiscussionID", $Discussion->DiscussionID, "=");
 							$this->Context->Database->Update($this->Context, $s, $this->Name, "NewDiscussion", "An error occurred while updating the discussion.");

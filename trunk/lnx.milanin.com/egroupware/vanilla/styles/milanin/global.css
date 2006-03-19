@@ -586,7 +586,9 @@
 	.Comment {
 		padding: 8px;
 		padding-bottom: 2px;
-		border-bottom: 1px solid #DEDEDF;
+		margin: 4px;
+		border: 1px solid #859ba0;
+		background: #EDF1F1;
 	}
                 .CommentHeader {
                   padding: 8px;

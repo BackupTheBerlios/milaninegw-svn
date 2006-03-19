@@ -25,6 +25,7 @@ include(sgLIBRARY."Utility.Context.class.php");
 include(sgLIBRARY."Utility.Page.class.php");
 include(sgLIBRARY."Utility.Writer.class.php");
 include(sgLIBRARY."Utility.Control.class.php");
+include(sgLIBRARY."Utility.Notify.class.php");
 include(sgLIBRARY."Vanilla.Functions.php");
 include(sgLIBRARY."Vanilla.Session.class.php");
 include(sgLIBRARY."Vanilla.User.class.php");

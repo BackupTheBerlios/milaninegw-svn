@@ -19,6 +19,7 @@ define("dbPASSWORD", "");
 
 // Path Settings
 define("agAPPLICATION_PATH", "/var/www/egroupware/vanilla/"); 
+define("agEGW_APPLICATION_PATH", agAPPLICATION_PATH."../egroupware"); 
 define("sgLIBRARY", agAPPLICATION_PATH."library/");
 define("agEXTENSIONS", agAPPLICATION_PATH."extensions/");
 define("agLANGUAGES", agAPPLICATION_PATH."languages/");
