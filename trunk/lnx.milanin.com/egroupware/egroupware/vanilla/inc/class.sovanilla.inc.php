@@ -118,7 +118,7 @@
                                     'disc_newcomm'=> $this->db->f('NewComments'),
                                     );
                 }
-                if (sizeof($discs<1)){
+                if (sizeof($discs)<1){
                       $discs[] = array(
                                     'disc_id'=> 0,
                                     'disc_name'=> lang("No Discussions"),
