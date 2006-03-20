@@ -117,9 +117,9 @@
 			{
 				//echo $newsitem['cat_id'];
 				$var = Array(
-					'subject' => $newsitem['subject'],
+					'subject' => stripslashes($newsitem['subject']),
 					'submitedby' => 'Submitted by ' . $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']) . ' on ' . $GLOBALS['phpgw']->common->show_date($newsitem['date']),
-					'content' => $newsitem['content'],
+					'content' => stripslashes($newsitem['content']),
 					'category' => lang('category').": ".$this->bo->catbo->id2name($newsitem['cat_id']),
 				);
 
@@ -192,7 +192,7 @@
 			foreach($newslist as $newsitem)
 			{
 				$portalbox->data[] = array(
-					'text' => $newsitem['subject'] . ' - ' . lang('Submitted by') . ' ' . $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']) . ' ' . lang('on') . ' ' . $GLOBALS['phpgw']->common->show_date($newsitem['date']),
+					'text' => stripslashes($newsitem['subject']) . ' - ' . lang('Submitted by') . ' ' . $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']) . ' ' . lang('on') . ' ' . $GLOBALS['phpgw']->common->show_date($newsitem['date']),
 					'link' => $GLOBALS['phpgw']->link('/index.php','menuaction=news_admin.uinews.show_news&news_id=' . $newsitem['id'])
 				);
 			}
@@ -246,7 +246,7 @@
 			foreach($news as $newsitem)
 			{
 				$var = Array(
-					'subject'=> $newsitem['subject'],
+					'subject'=> stripslashes($newsitem['subject']),
 					'submitedby' => 'Submitted by ' . $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']) . ' on ' . $GLOBALS['phpgw']->common->show_date($newsitem['date']),
 					'content'    => nl2br($newsitem['content'])
 				);
