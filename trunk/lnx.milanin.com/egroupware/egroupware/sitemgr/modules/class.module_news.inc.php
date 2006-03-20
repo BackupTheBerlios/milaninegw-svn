@@ -37,7 +37,7 @@
 		{
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
 			{
-				return lang("Application '%1' is not installed !!!<br/>Please install it, to be able to use the block.",'news_admin');
+				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
 			}
 			//we could put this into the module's constructor, but by putting it here, we make it execute only when the block is edited,
 			//and not when it is generated for the web site, thus speeding the latter up slightly
@@ -59,7 +59,7 @@
 		{
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
 			{
-				return lang("Application '%1' is not installed !!!<br/>Please install it, to be able to use the block.",'news_admin');
+				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
 			}
 			$bonews = CreateObject('news_admin.bonews');
 			$cat = createobject('phpgwapi.categories','','news_admin');
@@ -126,7 +126,7 @@
 					'<a href="' . $this->link($link_data) . '">' . lang('More news') . '</a>'
 				);
 			}
-			return '<div class="contentheading">'
+			return '<div class="contentheading" width="100%">'
                                 .$my_cat[0]['name']
                                 .'</div>'
                                 .$this->template->parse('out','news');
@@ -135,10 +135,10 @@
 		function render($newsitem)
 		{
 			$this->template->set_var(array(
-				'news_title' => $newsitem['subject'],
+				'news_title' => stripslashes($newsitem['subject']),
 				'news_submitter' => $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']),
 				'news_date' => $GLOBALS['phpgw']->common->show_date($newsitem['date']),
-				'news_content' => $newsitem['content']
+				'news_content' => stripslashes($newsitem['content'])
 			));
 			$this->template->parse('newsitem','NewsBlock',True);
 		}
