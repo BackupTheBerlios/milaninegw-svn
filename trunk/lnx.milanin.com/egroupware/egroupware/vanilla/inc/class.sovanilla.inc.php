@@ -107,7 +107,7 @@
                         (d.CountComments - dw.CountComments) NewComments
                         FROM `LUM_UserBookmark` b
                         JOIN LUM_Discussion d ON b.DiscussionID = d.DiscussionID
-                        LEFT JOIN LUM_UserDiscussionWatch dw ON dw.DiscussionID = d.DiscussionID 
+                        LEFT JOIN LUM_UserDiscussionWatch dw ON dw.DiscussionID = d.DiscussionID and dw.UserID=b.UserID
                         WHERE b.UserID=".$this->owner;
                 $this->db->query($query,__LINE__,__FILE__);
                 while ($this->db->next_record())
