@@ -58,6 +58,7 @@
 			$GLOBALS['phpgw']->template->set_var('lang_save',lang('Save'));
 			$GLOBALS['phpgw']->template->set_var('lang_yes',lang('Yes'));
 			$GLOBALS['phpgw']->template->set_var('lang_no',lang('No'));
+			$GLOBALS['phpgw']->template->set_var('lang_remove',lang('Remove'));
 		}
 
 		
@@ -107,13 +108,18 @@
                         $GLOBALS['phpgw']->template->set_block('_config','footer');
                         $GLOBALS['phpgw']->template->set_block('_config','cat_watcher');
                         $GLOBALS['phpgw']->template->set_block('_config','cat_watchers');
+                        $GLOBALS['phpgw']->template->set_block('_config','disc_watcher');
+                        $GLOBALS['phpgw']->template->set_block('_config','disc_watchers');
                         
                         $GLOBALS['phpgw']->template->set_var('lang_category',lang('Category'));
 			$GLOBALS['phpgw']->template->set_var('lang_watch',lang('Watch'));
 			$GLOBALS['phpgw']->template->set_var('lang_cat_watchers',lang('Categories watching'));
+			$GLOBALS['phpgw']->template->set_var('lang_disc_watchers',lang('Discussions watching'));
                         if (!is_null($save_result))
                         {
-                            $GLOBALS['phpgw']->template->set_var('save_messages',(($save_result) ? lang('Saved config') : lang('Failed to save config')));
+                            $GLOBALS['phpgw']->template->set_var('save_messages','<div style="border: 1px solid; width: 100%;">'.
+                              (($save_result) ? lang('Saved config') : lang('Failed to save config')).
+                              '</div>');
                         }
                         $this->set_common_langs();
                         $this->display_headers();
@@ -134,8 +140,25 @@
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
                         
+                        $row_class='row_on';
+                        foreach ($this->bo->read_disc_watchers() as $disc_watcher){
+                          $GLOBALS['phpgw']->template->set_var('disc_name',$disc_watcher['disc_name']);
+                          if ($disc_watcher['disc_id']>0)
+                          {
+                            $GLOBALS['phpgw']->template->set_var('disc_watch_remove',
+                                  '<input type="checkbox" value="0" name="disc_watch['
+                                  .$disc_watcher['disc_id'].']" id="disc_watch_'.$disc_watcher['disc_id'].'_remove" >');
+                          }else{
+                            $GLOBALS['phpgw']->template->set_var('disc_watch_remove','');
+                          }
+                                  $GLOBALS['phpgw']->template->set_var('row_class',$row_class);
+                          $GLOBALS['phpgw']->template->fp('disc_watchers_list','disc_watcher',TRUE);
+                          $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
+                        }
+                        
                         $GLOBALS['phpgw']->template->pfp('out','header');
                         $GLOBALS['phpgw']->template->pfp('out','cat_watchers');
+                        $GLOBALS['phpgw']->template->pfp('out','disc_watchers');
                         $GLOBALS['phpgw']->template->pfp('out','footer');
                         $GLOBALS['phpgw']->common->phpgw_footer();
                 }
@@ -144,7 +167,9 @@
                 {
 //                    print_r($_POST);
                   //Categories save 
-                  $this->config($this->bo->save_cat_watchers($_POST['cat_watch']));
+                  $this->config(($this->bo->save_cat_watchers($_POST['cat_watch'])+
+                                 $this->bo->save_disc_watchers($_POST['disc_watch']))
+                  );
                   
                 }
                   

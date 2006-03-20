@@ -102,6 +102,31 @@
                 }
                 return $categories;
               }
+              function read_disc_watchers(){
+                $query="SELECT b.DiscussionID, d.Name,
+                        (d.CountComments - dw.CountComments) NewComments
+                        FROM `LUM_UserBookmark` b
+                        JOIN LUM_Discussion d ON b.DiscussionID = d.DiscussionID
+                        LEFT JOIN LUM_UserDiscussionWatch dw ON dw.DiscussionID = d.DiscussionID 
+                        WHERE b.UserID=".$this->owner;
+                $this->db->query($query,__LINE__,__FILE__);
+                while ($this->db->next_record())
+                {
+                  $discs[] = array(
+                                    'disc_id'=> $this->db->f('DiscussionID'),
+                                    'disc_name'=> $this->db->f('Name'),
+                                    'disc_newcomm'=> $this->db->f('NewComments'),
+                                    );
+                }
+                if (sizeof($discs<1)){
+                      $discs[] = array(
+                                    'disc_id'=> 0,
+                                    'disc_name'=> lang("No Discussions"),
+                                    'disc_newcomm'=>0,
+                                    );
+                }
+                return $discs;
+              }
               function write_category_watchers($cat_watchers=Array())
               {
                 $this->clear_category_watchers();
@@ -109,6 +134,17 @@
                 {
                   if ($cat_watchers[$cat_id]==0){
                     $query="INSERT INTO LUM_UserCategoryWatch VALUES(".$this->owner.",".$cat_id.')';
+                    $this->db->query($query,__LINE__,__FILE__);
+                  }
+                }
+                return True;
+              }
+              function write_disc_watchers($disc_watchers=Array())
+              {
+                foreach ( array_keys($disc_watchers) as $disc_id)
+                {
+                  if ($disc_watchers[$disc_id]==0){
+                    $query="DELETE FROM LUM_UserBookmark WHERE UserID=".$this->owner." and DiscussionID=".$disc_id;
                     $this->db->query($query,__LINE__,__FILE__);
                   }
                 }

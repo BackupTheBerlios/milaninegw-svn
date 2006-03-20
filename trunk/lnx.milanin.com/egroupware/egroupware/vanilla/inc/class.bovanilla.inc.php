@@ -41,9 +41,17 @@
                 {
                   return $this->so->read_category_watchers();
                 }
+                function read_disc_watchers()
+                {
+                  return $this->so->read_disc_watchers();
+                }
                 function save_cat_watchers($cat_watchers)
                 {
                   return $this->so->write_category_watchers($cat_watchers);
+                }
+                function save_disc_watchers($disc_watchers)
+                {
+                  return $this->so->write_disc_watchers($disc_watchers);
                 }
 
 
