@@ -148,7 +148,8 @@ class CommentGrid extends ControlCollection {
 							}
 							$sReturn .= "</div>\n";
 						}
-						$sReturn .= "<div class=\"CommentTime\">".TimeDiff($Comment->DateCreated);
+						$sReturn .= "<div class=\"CommentTime\">#".$Comment->CommentID.
+                                                            " ".TimeDiff($Comment->DateCreated);
 						if ($Comment->DateEdited != "") $sReturn .= " <em>".$this->Context->GetDefinition("Edited")."</em>\n";
 					$sReturn .= "</div>
 					<div class=\"CommentOptions\">";
