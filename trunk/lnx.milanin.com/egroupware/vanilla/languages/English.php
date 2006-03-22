@@ -735,4 +735,5 @@ $Context->Dictionary["NewDiscussionInCategory"] = "A new Discussion started in C
 $Context->Dictionary["WithSubject"] = "with the following subject";
 $Context->Dictionary["NewDiscussionIn"] = "New Discussion in";
 $Context->Dictionary["FollowTheLink"] = "Follow the link to see it";
+$Context->Dictionary["NewCommentIn"] = "A comment in Bookmarked Discussion: ";
 ?>

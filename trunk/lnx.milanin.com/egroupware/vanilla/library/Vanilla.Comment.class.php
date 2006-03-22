@@ -214,6 +214,7 @@ class CommentManager {
 		$s->AddSelect("Blocked", "ab", "AuthBlocked", "coalesce", "0");
 		$s->AddSelect("Blocked", "cb", "CommentBlocked", "coalesce", "0");
 		$s->AddSelect("'".agICONSPREFIX."'", "", "AuthIcon", "concat", "i.filename");
+		$s->AddSelect("Name","t","Discussion");
 		$s->AddJoin("phpgw_accounts", "a", "account_id", "m", "AuthUserID", "left join","");
 		$s->AddJoin("User","ou","UserID","a","account_id","left join");
 		$s->AddJoin("Role", "r", "RoleID", "ou", "RoleID", "left join");
@@ -444,6 +445,8 @@ class CommentManager {
 				}
 			}
 		}
+		$n=$this->Context->ObjectFactory->NewContextObject($this->Context, "Notify");
+                $n->NotifyComment($Comment->CommentID,$this);
 		return $this->Context->WarningCollector->Iif($Comment,false);
 	}
 	
