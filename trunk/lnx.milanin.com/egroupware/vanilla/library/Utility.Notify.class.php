@@ -45,6 +45,7 @@ class Notify {
           $s->AddSelect("account_email","a");
           $s->AddJoin("accounts","a","account_id","ub","UserID","left join","phpgw_");
           $s->AddWhere("ub.DiscussionID",$DiscussionID,"=");
+          $s->AddWhere("ub.UserID",$this->Context->Session->UserID,"!=");
           $Data=$this->Context->Database->Select($this->Context, 
                                                   $s, 
                                                   $this->Name, 
@@ -54,7 +55,8 @@ class Notify {
           {
             $Watchers[]=$Row['account_email'];
           }
-          return $Watchers;
+          
+          return (isset($Watchers)) ? $Watchers : Array();
         }
         
         function GetCategoryWatchers($CategoryID)
@@ -66,6 +68,7 @@ class Notify {
           $s->AddJoin("categories","c","cat_owner","acl","acl_location","join","phpgw_");
           $s->AddJoin("UserCategoryWatch","cw","CategoryID","c","cat_id and cw.UserId=acl.acl_account","left join");
           $s->AddWhere("acl.acl_appname","phpgw_group","=");
+          $s->AddWhere("acl.acl_account",$this->Context->Session->UserID,"!=");
           $s->AddWhere("c.cat_id",$CategoryID,"=","and","","0");
           $s->AddWhere("ISNULL(cw","CategoryID)",".","and","","0");
           $Data=$this->Context->Database->Select($this->Context, 
@@ -93,18 +96,20 @@ class Notify {
           $mailer->Body    = $Body;
           $mailer->Subject = $Subject;
           //$mailer->AddAddress(agSUPPORT_EMAIL,agSUPPORT_NAME);
-          foreach ($Rcpts as $bcc){
-            $mailer->AddBCC($bcc);
-          }
-          $mailer->SetLanguage("en",agEGW_APPLICATION_PATH.'/phpgwapi/setup/');
+          if (sizeof($Rcpts)>0){
+            foreach ($Rcpts as $bcc){
+              $mailer->AddBCC($bcc);
+            }
+            $mailer->SetLanguage("en",agEGW_APPLICATION_PATH.'/phpgwapi/setup/');
 
-          if (!$mailer->Send())
-          {
+            if (!$mailer->Send())
+            {
 //               echo "<!--There has been a mail error sending: \n".$mailer->ErrorInfo."-->";
               return False;
-          }
-          $mailer->ClearAddresses();
-          $mailer->ClearAttachments();
+            }
+            $mailer->ClearAddresses();
+            $mailer->ClearAttachments();
+          } 
           return True;
           
         }
