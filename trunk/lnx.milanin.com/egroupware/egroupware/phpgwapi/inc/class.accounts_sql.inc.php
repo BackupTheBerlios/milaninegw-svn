@@ -241,7 +241,7 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE session_lid != 'anonymous' AND session_flags !='A' AND session_lid != 'admin'";
+					$whereclause = "WHERE session_flags != 'A' AND session_lid != 'anonymous' AND session_flags !='A' AND session_lid != 'admin'";
 					break;
 				case 'groups':
 					$whereclause = "WHERE ";
@@ -293,13 +293,13 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
 					break;
 				case 'accounts_a':
-					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
 					break;	
 				case 'accounts_p':
-					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
 					break;	
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
@@ -359,7 +359,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 
 
 			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
-			
+			echo '<!--'.$sql.'-->';
 			if ($offset)
 			{
 				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);
