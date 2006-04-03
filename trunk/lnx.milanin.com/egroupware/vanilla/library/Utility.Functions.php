@@ -548,9 +548,9 @@ function UnserializeAssociativeArray($InSerialArray) {
 
 // Instantiate a simple validator
 function Validate($InputName, $IsRequired, $Value, $MaxLength, $ValidationExpression, &$Context) {
-        echo "<!-- in the Validate -->\n";
+//         echo "<!-- in the Validate -->\n";
 	$Validator = $Context->ObjectFactory->NewContextObject($Context, "Validator");
-	echo "<!-- Validator constructed -->\n";
+// 	echo "<!-- Validator constructed -->\n";
 	$Validator->InputName = $InputName;
 	$Validator->isRequired = $IsRequired;
 	$Validator->Value = $Value;

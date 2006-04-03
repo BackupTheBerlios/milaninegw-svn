@@ -123,7 +123,11 @@ class DiscussionForm extends PostBackControl {
 			if ($ResultComment) {
 				// Saved successfully, so send back to the discussion
             // print_r($this->Discussion);
+                                if ($_POST['CommentID']!=0){
 				header("location:comments.php?DiscussionID=".$ResultComment->DiscussionID."&page=".$this->Discussion->LastPage.($ResultComment->CommentID > 0 ? "#Comment_".$ResultComment->CommentID:"#pgbottom"));
+                                }else{
+                                  header("location:comment.php?CommentID=".$ResultComment->CommentID."&FullComment");
+                                }
 				die();
 			}
 		} 
@@ -171,7 +175,7 @@ class DiscussionForm extends PostBackControl {
 					."</dd>"
 				."</dl>
 				<div class=\"FormButtons CommentButtons\">
-					<input type=\"button\" name=\"btnSave\" value=\"".($Comment->CommentID > 0?$this->Context->GetDefinition("SaveYourChanges"):$this->Context->GetDefinition("AddYourComments"))."\" class=\"Button SubmitButton\" onclick=\"SubmitForm('frmPostComment', this);\" />";
+					<input type=\"button\" name=\"btnSave\" value=\"".($Comment->CommentID > 0?$this->Context->GetDefinition("SaveYourChanges"):$this->Context->GetDefinition("AddYourComments"))."\" class=\"Button SubmitButton\" onclick=\"SubmitReply('frmPostComment', this);\" />";
 					if ($this->PostBackAction == "SaveComment" || ($this->PostBackAction == "" && $Comment->CommentID > 0)) {
 						if ($this->Comment->DiscussionID > 0) {
 							$sReturn .= "<a href=\"./comments.php?DiscussionID=".$this->Comment->DiscussionID."\" class=\"CancelButton\">".$this->Context->GetDefinition("Cancel")."</a>";

@@ -117,7 +117,7 @@ class MySQL extends Database {
    // Returns a dataset (kills page execution if there is an error)
    function Select(&$Context, $SqlBuilder, $SenderObject, $SenderMethod, $ErrorMessage, $KillOnFail = "1") {
       $KillOnFail = ForceBool($KillOnFail, 0);
-                echo "<!--[".$SqlBuilder->GetSelect()."]-->\n";
+//                 echo "<!--[".$SqlBuilder->GetSelect()."]-->\n";
 		$DataSet = mysql_query($SqlBuilder->GetSelect(), $this->Connection);
 		if (!$DataSet) {
 			$Context->ErrorManager->AddError($Context, $SenderObject, $SenderMethod, $ErrorMessage, mysql_error($this->Connection), $KillOnFail);

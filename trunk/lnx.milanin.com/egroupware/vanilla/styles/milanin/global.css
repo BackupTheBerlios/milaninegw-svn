@@ -680,6 +680,13 @@
                         margin-left:10px;
                         cursor: pointer;
                 }
+                .CommentQuote {
+                        color: #333;
+                        margin-left:10px;
+                        text-align: left;
+                        position: relative;
+                        cursor: pointer;
+                }
 		.CommentHidden {
 			margin-bottom: 4px;
 		}
@@ -1432,6 +1439,9 @@
 		.SubmitButton {
 			margin-bottom: 10px;
 		}
+		.QuoteButton {
+			margin-bottom: 10px;
+                }
 		/* DiscussionBox: The discussion title input. */
 		.DiscussionBox {
 			width: 460px;

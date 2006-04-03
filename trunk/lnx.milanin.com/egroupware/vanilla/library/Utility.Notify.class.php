@@ -16,7 +16,6 @@ class Notify {
         {
           $this->Name='Notify';
           $this->Context = &$Context;
-          
         }
 
         function NotifyComment($CommentID,$CommentManager)

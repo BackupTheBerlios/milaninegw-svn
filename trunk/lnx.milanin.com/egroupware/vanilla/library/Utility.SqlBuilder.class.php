@@ -173,7 +173,7 @@ class SqlBuilder {
 		$sReturn .= $this->Limit;
 		$this->WriteDebug($sReturn, "purple");
 		return $sReturn;
-		echo "<!--[".$sReturn."-->";
+// 		echo "<!--[".$sReturn."-->";
 	}
 
 	// returns an update statement

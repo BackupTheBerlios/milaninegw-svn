@@ -501,14 +501,14 @@ class UserManager {
 	
 	function CreateUser($User) {
 		$User->FormatPropertiesForDatabaseInput();
-                echo "<!--validation starting-->\n";
+//                 echo "<!--validation starting-->\n";
 		// Instantiate a new validator for each field
 		Validate($this->Context->GetDefinition("FirstNameLower"), 1, $User->FirstName, 50, "", $this->Context);
 		Validate($this->Context->GetDefinition("LastNameLower"), 1, $User->LastName, 50, "", $this->Context);
 		Validate($this->Context->GetDefinition("EmailLower"), 1, $User->Email, 200, "(.+)@(.+)\.(.+)", $this->Context);
 		Validate($this->Context->GetDefinition("UsernameLower"), 1, $User->Name, 20, "", $this->Context);
 		//Validate($this->Context->GetDefinition("PasswordLower"), 1, $User->NewPassword, 50, "", $this->Context);
-		echo "<!--validation successful-->\n";
+// 		echo "<!--validation successful-->\n";
 		//if ($User->Discovery == "") $this->Context->WarningCollector->Add($this->Context->GetDefinition("ErrDiscovery"));
 		//if ($User->NewPassword != $User->ConfirmPassword) $this->Context->WarningCollector->Add($this->Context->GetDefinition("ErrPasswordsMatchBad"));
 		//if (!$User->AgreeToTerms) $this->Context->WarningCollector->Add($this->Context->GetDefinition("ErrAgreeTOS"));
@@ -523,7 +523,7 @@ class UserManager {
 		$result = $this->Context->Database->Select($this->Context, $s, $this->Name, "CreateUser", "A fatal error occurred while validating your input.");
 		$MatchCount = $this->Context->Database->RowCount($result);
 		if ($MatchCount > 0) $this->Context->WarningCollector->Add($this->Context->GetDefinition("ErrUsernameTaken"));
-		echo "<!--validation successful again [".$this->Context->WarningCollector->Count()."] -->\n";
+// 		echo "<!--validation successful again [".$this->Context->WarningCollector->Count()."] -->\n";
 		// If validation was successful
 		if ($this->Context->WarningCollector->Count() == 0) {
 			$s->Clear();
@@ -545,7 +545,7 @@ class UserManager {
 			$s->AddFieldNameValue("UtilizeEmail", 0);
 			$s->AddFieldNameValue("RemoteIP", GetRemoteIp(1));
 			$User->UserID = $this->Context->Database->Insert($this->Context, $s, $this->Name, "CreateUser", "An error occurred while creating a new user.");
-			echo "<!--inserted successfuly -->\n";	
+// 			echo "<!--inserted successfuly -->\n";	
 			$Urh = $this->Context->ObjectFactory->NewObject($this->Context, "UserRoleHistory");
 			$Urh->UserID = $User->UserID;
 			$Urh->AdminUserID = 0;
@@ -697,12 +697,12 @@ class UserManager {
                                 $rows['NewPassword'] = md5(rand());
                                 $rows['ConfirmPassword']=$rows['NewPassword'];
                                 $rows['RoleID']='1';
-                                echo "<!--[".print_r($rows,1)."]-->\n";
+//                                 echo "<!--[".print_r($rows,1)."]-->\n";
 				$User->GetPropertiesFromDataSet($rows);
                             }
-                            echo "<!-- a new one, creating -->\n";
+//                             echo "<!-- a new one, creating -->\n";
                             $this->CreateUser($User);
-                            echo "<!-- a new one  created -->\n";
+//                             echo "<!-- a new one  created -->\n";
                         }
 		} else {
 			while ($rows = $this->Context->Database->GetRow($UserData)) {

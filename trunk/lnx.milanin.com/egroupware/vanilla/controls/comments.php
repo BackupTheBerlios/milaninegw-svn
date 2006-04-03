@@ -111,6 +111,7 @@ class CommentGrid extends ControlCollection {
 				$Comment = $this->Context->ObjectFactory->NewObject($Context, "Comment");
 				$RowNumber = 0;
 				$CommentID = 0;
+				$sReturn.="<div class=\"CommentGrid\" id=\"CommentGrid\">\n";
 				while ($Row = $this->Context->Database->GetRow($this->CommentData)) {
 					$RowNumber++;			
 					$Comment->Clear();
@@ -133,7 +134,7 @@ class CommentGrid extends ControlCollection {
                                                 "</div>\n";
 						$sReturn .= "<div class=\"CommentAuthor".($ShowIcon?" CommentAuthorWithIcon":"")."\">";
 						if ($ShowIcon) $sReturn .= "<span class=\"CommentIcon\" style=\"background-image:url('".(($Comment->AuthIcon!=="") ? $Comment->AuthIcon : "images/def_icon.png")."')\"></span>";
-						echo "<!-- icon is: [".$Comment->AuthIcon."]-->";
+// 						echo "<!-- icon is: [".$Comment->AuthIcon."]-->";
 						$sReturn .= "<a href=\"account.php?u=".$Comment->AuthUserID."\">".$Comment->AuthFullName."</a></div>";
 						if ($Comment->WhisperUserID > 0) {
 							$sReturn .= "<div class=\"CommentWhisper\">".$this->Context->GetDefinition("To")." ";
@@ -158,22 +159,28 @@ class CommentGrid extends ControlCollection {
 							if ($Comment->AuthUserID == $this->Context->Session->UserID || $this->Context->Session->User->AdminCategories) {
 								if ((!$this->Discussion->Closed && $this->Discussion->Active) || $this->Context->Session->User->AdminCategories) $sReturn .= "<div class=\"CommentEdit\"><a href=\"post.php?CommentID=".$Comment->CommentID."\">".$this->Context->GetDefinition("Edit")."</a></div>\n";
 								if ($this->Context->Session->User->AdminCategories) $sReturn .= "<div class=\"CommentHide\"><a href=\"javascript:ManageComment('".($Comment->Deleted?"0":"1")."', '".$this->Discussion->DiscussionID."', '".$Comment->CommentID."', '".$this->Context->GetDefinition("ShowConfirm")."', '".$this->Context->GetDefinition("HideConfirm")."');\">".$this->Context->GetDefinition($Comment->Deleted?"Show":"Hide")."</a></div>\n";
-                                                        }/*
-							if ($this->Context->Session->User->Setting("HtmlOn", 1) && !$Comment->Deleted) $sReturn .= "<div class=\"CommentBlockUser\"><a id=\"BlockUser_".$Comment->AuthUserID."_Comment_".$Comment->CommentID."\" href=\"javascript:BlockUser('".$Comment->AuthUserID."', '".FlipBool($Comment->AuthBlocked)."', '".$this->Context->GetDefinition("UnblockUser")."', '".$this->Context->GetDefinition("UnblockUserTitle")."', '".$this->Context->GetDefinition("BlockUser")."', '".$this->Context->GetDefinition("BlockUserTitle")."', '".$this->Context->GetDefinition("UnblockComment")."', '".$this->Context->GetDefinition("UnblockCommentTitle")."', '".$this->Context->GetDefinition("BlockComment")."', '".$this->Context->GetDefinition("BlockCommentTitle")."');\" title=\"".$this->Context->GetDefinition(GetBool(!$Comment->AuthBlocked,"BlockUserHtml","AllowUserHtml"))."\">".$this->Context->GetDefinition(GetBool(!$Comment->AuthBlocked,"BlockUser","UnblockUser"))."</a></div>";
-							$sReturn .= "<div class=\"CommentBlockComment\"><a id=\"BlockComment_".$Comment->CommentID."\" href=\"javascript:BlockComment('".$Comment->CommentID."', '".$ShowHtml."', 1, false, '".$this->Context->GetDefinition("UnblockComment")."', '".$this->Context->GetDefinition("UnblockCommentTitle")."', '".$this->Context->GetDefinition("BlockComment")."', '".$this->Context->GetDefinition("BlockCommentTitle")."');\" title=\"".$this->Context->GetDefinition(GetBool($ShowHtml,"BlockHtml","AllowHtml"))."\">".$this->Context->GetDefinition(GetBool($ShowHtml,"BlockComment","UnblockComment"))."</a></div>";*/
+                                                        }
 						}
 						$sReturn .= "</div>";
 						if ($Comment->AuthRoleDesc != "") $sReturn .= "<div class=\"CommentNotice\">".$Comment->AuthRoleDesc."</div>";
 						$sReturn .= "</div><div class=\"".
                                                 ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? "CommentBody" : "CommentBodyHidden").
                                                 "\" id=\"CommentBody_".$Comment->CommentID."\">".
-                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? $Comment->Body : "").
-                                                "</div>";
+                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? $Comment->Body : "");
+                                                $sReturn.= ($RowNumber>=$this->Discussion->LastViewCountComments) ? 
+                                                  "<p><input type=\"button\"  onclick=\"addQuoteToCommentBody(".
+                                                  $Comment->CommentID.
+                                                  ")\" class=\"Button QuoteButton\" id=\"CommentQuote_".$Comment->CommentID."\" value=\"".
+                                                  $this->Context->GetDefinition("Quote")."\" /></p>" :
+                                                  "";
+                                                $sReturn.="</div>";
+                                                
+                                                
 						//id=\"Comment_".$Comment->CommentID."\">".$Comment->Body."</div>";
 						if ($Comment->WhisperUserID > 0 && $Comment->WhisperUserID == $this->Context->Session->UserID) $sReturn .= "<div class=\"WhisperBack\"><a href=\"Javascript:WhisperBack('".$Comment->DiscussionID."', '".str_replace("'", "\'", $Comment->AuthUsername)."');\">".$this->Context->GetDefinition("WhisperBack")."</a></div>";
 					$sReturn .= "</div>";
 				}
-				$sReturn .= $PageList
+				$sReturn .= "</div>\n".$PageList
 				."<div class=\"PageDetails\">".$PageDetails."</div>";
 				if ($this->ShowForm) {
 					$sReturn .= "<a name=\"addcomments\"></a>

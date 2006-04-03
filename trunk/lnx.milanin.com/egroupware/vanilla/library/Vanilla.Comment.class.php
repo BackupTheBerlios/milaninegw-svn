@@ -215,7 +215,7 @@ class CommentManager {
 		$s->AddSelect("Blocked", "cb", "CommentBlocked", "coalesce", "0");
 		$s->AddSelect("'".agICONSPREFIX."'", "", "AuthIcon", "concat", "i.filename");
 		$s->AddSelect("Name","t","Discussion");
-		$s->AddJoin("phpgw_accounts", "a", "account_id", "m", "AuthUserID", "left join","");
+		$s->AddJoin("accounts", "a", "account_id", "m", "AuthUserID", "left join","phpgw_");
 		$s->AddJoin("User","ou","UserID","a","account_id","left join");
 		$s->AddJoin("Role", "r", "RoleID", "ou", "RoleID", "left join");
 		$s->AddJoin("phpgw_accounts", "e", "account_id", "m", "EditUserID", "left join","");

@@ -67,7 +67,7 @@ $Head->AddScript("./js/data.js");
 $Head->AddScript("./js/protect.js");
 $Head->AddScript("./js/autocomplete.js");
 $Head->AddScript("./js/sort.js");
-$Head->AddScript("/egroupware/jscripts/tiny_mce/tiny_mce.js");
+$Head->AddScript("/egroupware/jscripts/tiny_mce/tiny_mce_src.js");
 $Head->AddStyleSheet($Context->StyleUrl."global.css", "screen");
 $Head->AddStyleSheet("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css", "screen");
 $Head->AddStyleSheet($Context->StyleUrl."global.handheld.css", "handheld");
@@ -78,9 +78,15 @@ $Head->AddString('<script language="javascript" type="text/javascript">
                                 mode: "exact",
                                 elements: "CommentBox",
 				plugins : "table",
+				entity_encoding: "raw",
+				cleanup : false,
+				content_css : "/egroupware/jscripts/tiny_mce/themes/advanced/vanilla.css",
 				theme_advanced_buttons1_add : "forecolor,backcolor",
+// 				add_form_submit_trigger : false,
+// 				submit_patch : false,
+                                force_br_newlines : true,
 				theme_advanced_buttons3_add_before : "tablecontrols,separator",
-				theme_advanced_styles : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1", // Theme specific setting CSS classes
+				theme_advanced_styles : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1",
 				debug : false
 			});
 		</script>'

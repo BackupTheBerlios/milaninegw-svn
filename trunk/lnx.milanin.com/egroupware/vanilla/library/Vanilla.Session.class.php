@@ -18,7 +18,7 @@ class Session {
 	// Ensure that there is an active session. 
 	// If there isn't an active session, send the user to the SignIn Url
 	function Check($RedirectUrl) {
-                echo "<!--\n".$this->UserID."\n-->\n";
+//                 echo "<!--\n".$this->UserID."\n-->\n";
 		if (($this->UserID == 0 && !agPUBLIC_BROWSING) || ($this->UserID > 0 && !$this->User->CanLogin)) {
 			// Fully define the current url
 			$CurrentPage = ForceString(@$_SERVER['PHP_SELF'], "index.php");

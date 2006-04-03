@@ -109,9 +109,9 @@ class CategoryManager {
 		
 		$s->AddWhere("coalesce(crb.Blocked, 0)", "0", "=", "and", "", 0, 0);
 		$s->AddWhere("c.cat_owner",join(",",array_keys($_SESSION['UserGroups'])).")","in (","and","",0.0);
-		echo "<!--session: [".join(",",array_keys($_SESSION['UserGroups']))."]-->";
+// 		echo "<!--session: [".join(",",array_keys($_SESSION['UserGroups']))."]-->";
 		return $s;
-		echo "<!--[".print_r($s,1)."]-->";
+// 		echo "<!--[".print_r($s,1)."]-->";
 		
 	}
 
