@@ -3822,7 +3822,7 @@
 				$endtime = $starttime;
 			}
 			$owner = $this->bo->owner;
-			foreach($participants as $part => $fullname)
+/*			foreach($participants as $part => $fullname)
 			{
 				$str .= '<tr align="center">'
 					. '<td width="15%" align="left"><font color="'.$this->theme['bg_text'].'" face="'.$this->theme['font'].'" size="-2">'.$fullname.'</font></td>';
@@ -3880,7 +3880,7 @@
 				}
 				$str .= '</tr>'
 					. '<tr><td height="1" colspan="'.((24 * $interval) + 1).'" bgcolor="#999999"><img src="'.$pix.'"></td></tr>';
-			}
+			}*/
 			$this->bo->owner = $owner;
 			$this->bo->so->owner = $owner;
 			$this->bo->so->open_box($owner);

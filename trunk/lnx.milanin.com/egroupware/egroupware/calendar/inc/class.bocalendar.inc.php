@@ -2739,7 +2739,8 @@
 							));
 							break;
 					}
-					$returncode = $send->msg('email',$to,$subject,$body,''/*$msgtype*/,'','','',$sender, $content_type/*,$boundary*/);
+					//$returncode = $send->msg('email',$to,$subject,$body,''/*$msgtype*/,'','','',$sender, $content_type/*,$boundary*/);
+					$returncode= True;
 					//echo "<p>send(to='$to', sender='$sender'<br>subject='$subject') returncode=$returncode<br>".nl2br($body)."</p>\n";
 
 					if (!$returncode)	// not nice, but better than failing silently
@@ -3123,10 +3124,13 @@
 				$participants = array();
 				foreach($event['participants'] as $user => $short_status)
 				{
-					if($GLOBALS['phpgw']->accounts->exists($user))
-					{
-						$participants[$user] = $GLOBALS['phpgw']->common->grab_owner_name($user).' ('.$this->get_long_status($short_status).')';
-					}
+                                        if ($event['owner']==$this->owner || $this->owner==$user || $short_status=='A'){
+                                          if($GLOBALS['phpgw']->accounts->exists($user))
+                                          {
+                                                  $participants[$user] = $GLOBALS['phpgw']->common->grab_owner_name($user).
+                                                    ' ('.$this->get_long_status($short_status).')';
+                                          }
+                                        }
 				}
 			}
 			$var['participants'] = Array(
