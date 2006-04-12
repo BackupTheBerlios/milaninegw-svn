@@ -16,9 +16,8 @@
 			switch($_REQUEST['action']) {
 				
 				// Add a new invite code
-				case "invite_sel_lang":	
-				
-				
+				case "invite_preview":	
+				//echo "!!!!!";
 				break;
 					case "invite_invite":		if (
 														isset($_REQUEST['invite_name'])
@@ -28,6 +27,7 @@
 														&& $_REQUEST['invite_email'] != ""
 													) {
 														$email = addslashes(stripslashes($_REQUEST['invite_email']));
+														$salut =  stripslashes($_REQUEST['inv_salut']);
 														$strippedname = stripslashes($_REQUEST['invite_name']);
 														$name = addslashes($strippedname);
 														$invitations = db_query("select count(ident) as num_invitations from invitations where email = '$email'");
@@ -52,7 +52,7 @@
 																	$from_email = $_SESSION['email'];
 																}
 																$emailmessage = <<< END
-Dear {$strippedname},
+{$inv_salut} {$strippedname},
 
 {$greetingstext} {$invitetext}
 
@@ -71,12 +71,15 @@ END;
 																mail($email,$subjectline,$emailmessage,"From: $sitename <".$from_email.">");
 															} else {
 																$messages[] = "User " . $accounts[0]->username . " already has that email address. Invitation not sent.";
+																$_REQUEST['action'] = "invite_edit";
 															}
 														} else {
 															$messages[] = "Someone with that email address has already been invited to the system. Invitation not sent.";
+															$_REQUEST['action'] = "invite_edit";
 														}
 													} else {
 														$messages[] = "Invitation failed: you must specify both a name and an email address.";
+														$_REQUEST['action'] = "invite_edit";
 													}
 												break;
 				// Join using an invitation

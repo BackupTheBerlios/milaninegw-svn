@@ -10,7 +10,8 @@ $invite_lang1 = run("invite:invite_title", array($parameter[1]));
 //echo sizeof($invite_lang1['lang']);
 	if (sizeof($invite_lang1['lang']) > 0) {
 		foreach($invite_lang1['lang'] as $lang) {
-			if ("title".$parameter[2].":language:".$parameter[1] == $lang[1] && $parameter[2] != "") {
+		 // echo "??".$parameter[2]."--".$lang[1]."!!!";
+			if ($parameter[2] == $lang[1] && $parameter[2] != "") {
 				$selected = "selected = \"selected\"";
 			} else {
 				$selected = "";
