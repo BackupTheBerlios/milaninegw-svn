@@ -20,7 +20,8 @@
 			
 		}
                 if ($profile_id==-1){
-                  header('Location: http://'.$_SERVER['SERVER_NAME'].'/');
+		  header('Location: '.((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http")
+		                            .'://'.$_SERVER['SERVER_NAME'].'/');
 		  exit;
                 }
                 
