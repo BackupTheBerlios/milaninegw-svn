@@ -13,7 +13,8 @@
 			define("sitename", "Business Club MilanIN");
 		// External URL to the site (eg http://milanin.gfdsa.org/)
 		// NB: **MUST** have a final slash at the end
-			define("url", "http://www.milanin.com/members/");
+			define("url",((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http")
+		                                . "://".$_SERVER['SERVER_NAME']."/members/");
 		// Physical path to the files (eg /home/elggserver/httpdocs/)
 		// NB: **MUST** have a final slash at the end
 			define("path", "/web/htdocs/www.milanin.com/home/members/");
