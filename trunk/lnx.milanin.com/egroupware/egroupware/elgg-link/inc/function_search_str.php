@@ -110,9 +110,11 @@ function table_result_str($members)
 {
   foreach ($members as $member)
 {
-                    $user_location='http://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
+                    $user_location=((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http")
+		    	.'://'.$_SERVER['SERVER_NAME'].'/members/'.$member['account_lid'];
                     $linkedIn_user_location='https://www.linkedin.com/profile?viewProfile=&key='.$member[account_linkedin];
-                                       $pmuser_location='http://'.$_SERVER['SERVER_NAME'].'/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to='.$member['account_lid'].'&';
+                                       $pmuser_location=((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http")
+				       	.'://'.$_SERVER['SERVER_NAME'].'/egroupware/index.php?menuaction=messenger.uimessenger.compose&message_to='.$member['account_lid'].'&';
                     $user_status="";
                     $res_str .= "<tr class=divSideboxEntry>";
                     if ($member['account_pwd'] != null)
