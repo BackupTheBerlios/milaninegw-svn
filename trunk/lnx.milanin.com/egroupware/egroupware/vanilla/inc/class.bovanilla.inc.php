@@ -53,6 +53,14 @@
                 {
                   return $this->so->write_disc_watchers($disc_watchers);
                 }
+                function get_settings()
+                {
+                  return $this->so->get_settings();
+                }
+                function save_settings($settings)
+                {
+                  return $this->so->save_settings($settings);
+                }
 
 
 	}

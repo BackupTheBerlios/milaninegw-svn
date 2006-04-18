@@ -16,7 +16,7 @@
 
 	$title = $appname;
 	$file = Array(
-		'Site Configuration' => $GLOBALS['phpgw']->link('/index.php','menuaction=admin.uiconfig.index&appname=' . $appname),
+		'Site Configuration' => $GLOBALS['phpgw']->link('/index.php','menuaction=uivanilla.admin'),
 	);
 
 	display_section($appname,$title,$file);

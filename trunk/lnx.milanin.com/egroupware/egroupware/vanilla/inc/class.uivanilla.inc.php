@@ -110,11 +110,14 @@
                         $GLOBALS['phpgw']->template->set_block('_config','cat_watchers');
                         $GLOBALS['phpgw']->template->set_block('_config','disc_watcher');
                         $GLOBALS['phpgw']->template->set_block('_config','disc_watchers');
+                        $GLOBALS['phpgw']->template->set_block('_config','setting');
+                        $GLOBALS['phpgw']->template->set_block('_config','settings');
                         
                         $GLOBALS['phpgw']->template->set_var('lang_category',lang('Category'));
 			$GLOBALS['phpgw']->template->set_var('lang_watch',lang('Watch'));
 			$GLOBALS['phpgw']->template->set_var('lang_cat_watchers',lang('Categories watching'));
 			$GLOBALS['phpgw']->template->set_var('lang_disc_watchers',lang('Discussions watching'));
+			$GLOBALS['phpgw']->template->set_var('lang_settings',lang('Discussions preferences'));
                         if (!is_null($save_result))
                         {
                             $GLOBALS['phpgw']->template->set_var('save_messages','<div style="border: 1px solid; width: 100%;">'.
@@ -156,9 +159,25 @@
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
                         
+                        $settings=$this->bo->get_settings();
+                        
+                        $GLOBALS['phpgw']->template->set_var('setting_name',lang('Comments order'));
+                        $GLOBALS['phpgw']->template->set_var('setting_value',
+                                          '<select name="settings[comments_order]" id="settings[comments_order]">'.
+                                          '<option value="desc" '.
+                                          ($settings['comments_order']=='desc' ? 'selected="selected"':'').
+                                          '>'.lang('Newest first').'</option>'.
+                                          '<option value="asc"'.
+                                          ($settings['comments_order']=='asc' ? 'selected="selected"':'').
+                                          '>'.lang('Oldest first').'</option>'.
+                                          '</select>'
+                                          );
+                        $GLOBALS['phpgw']->template->fp('settings','setting',TRUE);
+                        
                         $GLOBALS['phpgw']->template->pfp('out','header');
                         $GLOBALS['phpgw']->template->pfp('out','cat_watchers');
                         $GLOBALS['phpgw']->template->pfp('out','disc_watchers');
+                        $GLOBALS['phpgw']->template->pfp('out','settings');
                         $GLOBALS['phpgw']->template->pfp('out','footer');
                         $GLOBALS['phpgw']->common->phpgw_footer();
                 }
@@ -168,10 +187,23 @@
 //                    print_r($_POST);
                   //Categories save 
                   $this->config(($this->bo->save_cat_watchers($_POST['cat_watch'])+
-                                 $this->bo->save_disc_watchers($_POST['disc_watch']))
+                                 $this->bo->save_disc_watchers($_POST['disc_watch'])+
+                                 $this->bo->save_settings($_POST['settings']))
                   );
-                  
                 }
+                function admin()
+                {
+                  $GLOBALS['phpgw']->template->set_file('_config','admin.tpl');
+                  $GLOBALS['phpgw']->template->set_block('_config','header');
+                  $GLOBALS['phpgw']->template->set_block('_config','footer');
                   
+                  $GLOBALS['phpgw']->template->set_block('_config','setting');
+                  $GLOBALS['phpgw']->template->set_block('_config','site_settings');
+                  
+                  $GLOBALS['phpgw']->template->pfp('out','header');
+                  $GLOBALS['phpgw']->template->pfp('out','site_settings');
+                  $GLOBALS['phpgw']->template->pfp('out','footer');
+                  $GLOBALS['phpgw']->common->phpgw_footer();
+                }
 
 	}

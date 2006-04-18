@@ -51,8 +51,32 @@
   </tr>
 <!-- END disc_watcher -->
 
-<!-- BEGIN body -->
+<!-- BEGIN settings -->
+<tr><td colspan="2" valign="top">
+<div style="border: 1px solid">
+<table border="0" align="center">
+<tr><th colspan="2">{lang_settings}</th></tr>
+{settings_list}  
+</table>
+</div>
+</td>
+<!-- END settings -->
 
+<!-- BEGIN setting -->
+<tr class="{row_class}">
+<th>{setting_name}</th>
+<td>{setting_value}</td>
+</tr>
+<!-- END setting -->
+
+<!-- BEGIN body -->
+<tr><td colspan="2" valign="top">
+<div style="border: 1px solid">
+<table border="0" align="center">
+{site_settings_list}  
+</table>
+</div>
+</td>
 <!-- END body -->
 
 
