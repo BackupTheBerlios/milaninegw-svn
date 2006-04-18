@@ -42,8 +42,8 @@ function GetDiscussion(&$Context, $Discussion, $FirstRow = "0") {
    if ($Discussion->WhisperUserID > 0) {
 		$Discussion->Name = @$Discussion->WhisperUsername.": ".$Discussion->Name;
 	}
-	$UnreadQS = GetUnreadQuerystring($Discussion);
-	$LastQS = GetLastCommentQuerystring($Discussion);
+	$UnreadQS = ($Context->Session->User->Settings['comments_order']=='asc') ? GetUnreadQuerystring($Discussion) : '';
+	$LastQS = ($Context->Session->User->Settings['comments_order']=='asc') ? GetLastCommentQuerystring($Discussion):'';
 	$sReturn = "<dl class=\"Discussion".$Discussion->Status.($FirstRow?" FirstDiscussion":"").($Discussion->CountComments == 1?" NoReplies":"").(agUSE_CATEGORIES?" Category_".$Discussion->CategoryID:"")."\">
 		<dt class=\"DataItemLabel DiscussionTopicLabel\">".$Context->GetDefinition("DiscussionTopic")."</dt>
 		<dd class=\"DataItem DiscussionTopic\">".DiscussionPrefix($Discussion)."<a href=\"comments.php?DiscussionID=".$Discussion->DiscussionID.($Context->Session->User->Setting("JumpToLastReadComment", 1)?$UnreadQS:"")."\">".$Discussion->Name."</a></dd>";

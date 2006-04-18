@@ -25,7 +25,7 @@ class Session {
 			$QueryString = ForceString(@$_SERVER['QUERY_STRING'], "");
 			if ($QueryString != "") $QueryString = "?".$QueryString;
 			$ReturnUrl = urlencode($CurrentPage.$QueryString);
-			header("location: ".$RedirectUrl."&ReturnUrl=".$ReturnUrl);
+			header("location: ".$RedirectUrl."&phpgw_forward=../".$ReturnUrl);
 		}
 	}
 	
@@ -93,6 +93,8 @@ class Session {
                           $GrpTmp[$GrpID]=$this->User->UserGroups[$GrpID];
                         }
 			$this->SetVariable("UserGroups",@$GrpTmp);
+			$this->SetVariable("Settings",$this->User->Settings);
+
 			// If the session data retrieval failed for some reason, dump the user
 			if (!$this->User) {
 				$this->User = $Context->ObjectFactory->NewContextObject($Context, "User");
@@ -105,7 +107,7 @@ class Session {
 			$this->User->Clear();
 		}
 
-		// Handle Work-Safe Mode Switches
+		/*/ Handle Work-Safe Mode Switches
 		$HtmlOn = ForceIncomingString("h", "1");
 		if ($HtmlOn != "" && $this->UserID > 0) {
 			if (!$um) {
@@ -117,7 +119,7 @@ class Session {
 			} else {
 				$um->HideHtml($this->UserID);
 			}
-		}		
+		}*/		
 	}
 }
 ?>

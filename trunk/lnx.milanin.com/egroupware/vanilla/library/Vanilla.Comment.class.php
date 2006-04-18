@@ -307,7 +307,7 @@ class CommentManager {
 		$s->EndWhereGroup();
 		
 		$s->AddWhere("m.DiscussionID", $DiscussionID, "=");
-		$s->AddOrderBy("DateCreated", "m", "asc");
+		$s->AddOrderBy("DateCreated", "m", $this->Context->Session->User->Settings["comments_order"]);
 		if ($RowsPerPage > 0) $s->AddLimit($FirstRecord, $RowsPerPage);
 
 		return $this->Context->Database->Select($this->Context, $s, $this->Name, "GetCommentList", "An error occurred while attempting to retrieve the requested comments.");

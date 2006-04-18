@@ -30,7 +30,7 @@ define("agAPPLICATION_TITLE", "B.C. Milan IN forum");
 define("agBANNER_TITLE", "B.C. Milan IN forum"); 
 define("agDEFAULT_STYLE", "styles/milanin/"); 
 define("agDOMAIN", "egroupware/vanilla"); 
-define("agSAFE_REDIRECT", "signin.php?PageAction=SignOut"); 
+define("agSAFE_REDIRECT", "/egroupware/login.php?cd=10"); 
 define("agDISCUSSIONS_PER_PAGE", "30"); 
 define("agDISCUSSIONS_PER_FEED", "20"); 
 define("agCOMMENTS_PER_PAGE", "30"); 

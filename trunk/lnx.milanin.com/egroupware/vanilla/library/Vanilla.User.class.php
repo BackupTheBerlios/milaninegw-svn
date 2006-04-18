@@ -192,7 +192,6 @@ class User {
 		} else {
 			$this->DisplayIcon = $this->Icon;
 		}
-		
 		$this->Settings = "";
 		$this->Settings = ForceString(@$DataSet["Settings"],"");
 		$this->Settings = UnserializeAssociativeArray($this->Settings);
@@ -687,6 +686,7 @@ class UserManager {
 
 		$User = $this->Context->ObjectFactory->NewContextObject($this->Context, "User");
 		$UserData = $this->Context->Database->Select($this->Context, $s, $this->Name, "GetUserById", "An error occurred while attempting to retrieve the requested user.");
+		
 		if ($this->Context->Database->RowCount($UserData) == 0) {
                         $t_s = $this->EGW_GetUserById($UserID);
                         $EGW_UserData = $this->Context->Database->Select($this->Context, $t_s, $this->Name, "EGW_GetUserById", "An error occurred while attempting to retrieve the requested user from EGW.");
@@ -705,6 +705,11 @@ class UserManager {
 //                             echo "<!-- a new one  created -->\n";
                         }
 		} else {
+                        $s->Clear();
+                        $s = $this->GetUserBuilder();
+                        $s->AddSelect("Settings","u");
+                        $s->AddWhere("UserID", $UserID, "=");
+                        $UserData = $this->Context->Database->Select($this->Context, $s, $this->Name, "GetUserById", "An error occurred while attempting to retrieve the requested user.");
 			while ($rows = $this->Context->Database->GetRow($UserData)) {
 				$User->GetPropertiesFromDataSet($rows);
 			}
@@ -1130,6 +1135,7 @@ AND acc.account_id =14 */
 	}
 	
 	function ShowHtml() {
+                echo '<!-- ShowHtml called -->';
 		return $this->SwitchUserSetting("HtmlOn", 1);
 	}
 	

@@ -111,6 +111,14 @@ class CommentGrid extends ControlCollection {
 				$Comment = $this->Context->ObjectFactory->NewObject($Context, "Comment");
 				$RowNumber = 0;
 				$CommentID = 0;
+				if ($this->Context->Session->User->Settings['comments_order'] == 'desc')
+                                {
+                                  $LastViewCountComments=$this->CommentDataCount - $this->Discussion->LastViewCountComments;
+                                }else{
+                                  $LastViewCountComments=$this->Discussion->LastViewCountComments;
+                                }
+                                echo '<!-- $LastViewCountComments is: '.$LastViewCountComments.','.
+                                      $this->Context->Session->User->Settings['comments_order'].'-->';
 				$sReturn.="<div class=\"CommentGrid\" id=\"CommentGrid\">\n";
 				while ($Row = $this->Context->Database->GetRow($this->CommentData)) {
 					$RowNumber++;			
@@ -129,9 +137,17 @@ class CommentGrid extends ControlCollection {
 						}
 						$ShowIcon = 0;
 						if ($this->Context->Session->User->Setting("HtmlOn", 1)) $ShowIcon = 1;
-						$sReturn .= "<div onclick=\"toggleCommentBody('".$Comment->CommentID."')\" class=\"ShowHide\" id=\"CommBodySwitcher_".$Comment->CommentID."\">".
-                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? "Hide" : "Show").
-                                                "</div>\n";
+						$sReturn .= "<div onclick=\"toggleCommentBody('".$Comment->CommentID."')\" class=\"ShowHide\" id=\"CommBodySwitcher_".$Comment->CommentID."\">";
+						if ($this->Context->Session->User->Settings['comments_order'] == 'asc')
+                                                {
+                                                  $sReturn .= 
+                                                  ( ($RowNumber>=$LastViewCountComments) ? "Hide" : "Show").
+                                                  "</div>\n";
+                                                }else{
+                                                  $sReturn .= 
+                                                  ( ($RowNumber<=$LastViewCountComments) ? "Hide" : "Show").
+                                                  "</div>\n";
+                                                }
 						$sReturn .= "<div class=\"CommentAuthor".($ShowIcon?" CommentAuthorWithIcon":"")."\">";
 						if ($ShowIcon) $sReturn .= "<span class=\"CommentIcon\" style=\"background-image:url('".(($Comment->AuthIcon!=="") ? $Comment->AuthIcon : "images/def_icon.png")."')\"></span>";
 // 						echo "<!-- icon is: [".$Comment->AuthIcon."]-->";
@@ -163,16 +179,32 @@ class CommentGrid extends ControlCollection {
 						}
 						$sReturn .= "</div>";
 						if ($Comment->AuthRoleDesc != "") $sReturn .= "<div class=\"CommentNotice\">".$Comment->AuthRoleDesc."</div>";
-						$sReturn .= "</div><div class=\"".
-                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? "CommentBody" : "CommentBodyHidden").
-                                                "\" id=\"CommentBody_".$Comment->CommentID."\">".
-                                                ( ($RowNumber>=$this->Discussion->LastViewCountComments) ? $Comment->Body : "");
-                                                $sReturn.= ($RowNumber>=$this->Discussion->LastViewCountComments) ? 
-                                                  "<p><input type=\"button\"  onclick=\"addQuoteToCommentBody(".
-                                                  $Comment->CommentID.
-                                                  ")\" class=\"Button QuoteButton\" id=\"CommentQuote_".$Comment->CommentID."\" value=\"".
-                                                  $this->Context->GetDefinition("Quote")."\" /></p>" :
-                                                  "";
+						$sReturn .= "</div><div class=\"";
+						if ($this->Context->Session->User->Settings['comments_order'] == 'asc')
+                                                {
+                                                  $sReturn .= ( ($RowNumber>=$LastViewCountComments) ? "CommentBody" : "CommentBodyHidden").
+                                                  "\" id=\"CommentBody_".$Comment->CommentID."\">";
+                                                }else{
+                                                  $sReturn .= ( ($RowNumber<=$LastViewCountComments) ? "CommentBody" : "CommentBodyHidden").
+                                                  "\" id=\"CommentBody_".$Comment->CommentID."\">";
+                                                }
+                                                if ($this->Context->Session->User->Settings['comments_order'] == 'asc')
+                                                {
+                                                  $sReturn .= ( ($RowNumber>=$LastViewCountComments) ? $Comment->Body.
+                                                              "<p><input type=\"button\"  onclick=\"addQuoteToCommentBody(".
+                                                              $Comment->CommentID.
+                                                              ")\" class=\"Button QuoteButton\" id=\"CommentQuote_".
+                                                              $Comment->CommentID."\" value=\"".
+                                                              $this->Context->GetDefinition("Quote")."\" /></p>" : "");
+                                                }else{ 
+                                                  $sReturn .= ( ($RowNumber<=$LastViewCountComments) ? $Comment->Body.
+                                                              "<p><input type=\"button\"  onclick=\"addQuoteToCommentBody(".
+                                                              $Comment->CommentID.
+                                                              ")\" class=\"Button QuoteButton\" id=\"CommentQuote_".
+                                                              $Comment->CommentID."\" value=\"".
+                                                              $this->Context->GetDefinition("Quote")."\" /></p>" : "");
+                                                }
+                                                
                                                 $sReturn.="</div>";
                                                 
                                                 
