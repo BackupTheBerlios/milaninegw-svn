@@ -81,10 +81,33 @@
 					$query = "INSERT INTO phpgw_accounts 
 					(`account_lid`, `account_pwd`, `account_firstname`, `account_lastname`, 
 					`account_type`, `account_primary_group`, `account_email`, `account_expires`, `person_id`, `account_status`,`account_membership_date`)
-					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 18, '".strtolower($p_email)."', '-1', 0,'',CURDATE())";
+					VALUES ('$account_lid', '$account_pwd', '$p_name', '$p_surname', 'u', 8, '".strtolower($p_email)."', '-1', 0,'',CURDATE())";
 					
 					$result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
 					$user_id =  mysql_insert_id($mysql_link);
+					$query="INSERT into phpgw_acl (".
+                                               "`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) ".
+                                               "VALUES ('phpgw_group',8,".$user_id.",1)";
+                                        $result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
+                                        $query="INSERT into phpgw_acl (".
+                                               "`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) ".
+                                               "VALUES ('phpgw_group',18,".$user_id.",1)";
+                                        $result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
+					//$query = "INSERT into phpgw_fud_users 
+					$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
+			
+			$query="INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id) VALUES("
+                        .time().", "
+                        .time().",
+                        1,
+                        '$account_lid', 
+                        '$account_lid', 
+                        '$account_email', 
+                        '$account_pwd', 
+                        '$p_name $p_surname',
+                        $users_opt, $user_id)";
+                                        $result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
+                                        
 					if ($remove_invitation_query != ""){
                                           $result = mysql_query ($remove_invitation_query, $mysql_link) 
                                           or die ($remove_invitation_query."<br/>".mysql_error($mysql_link));
