@@ -33,6 +33,6 @@
 		$function['users:access_level_sql_where'][] = path . "units/groups/function_access_level_sql_where.php";
 		
 	// Menu button
-		$function['menu:main'][] = path . "units/groups/menu_main.php";
+		//$function['menu:main'][] = path . "units/groups/menu_main.php";
 		
 ?>
