@@ -30,7 +30,7 @@ include("appg/init_internal.php");
 
 	// Build the control panel
 	AddDiscussionOptionsToPanel($Context, $Panel);
-   AddAppendixToPanel($Context, $Panel, "Category");
+   //AddAppendixToPanel($Context, $Panel, "Category");
 	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 

@@ -57,7 +57,7 @@ $Context->PageTitle = $CommentGrid->Discussion->Name;
 		AddSearchesToPanel($Context, $Panel, $SearchManager, agPANEL_SEARCH_COUNT);
 	}
 
-	AddAppendixToPanel($Context, $Panel, "Comments");
+	//AddAppendixToPanel($Context, $Panel, "Comments");
 	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 

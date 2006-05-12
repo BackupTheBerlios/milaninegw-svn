@@ -41,7 +41,7 @@ include("appg/init_internal.php");
 	AddDiscussionsToPanel($Context, $Panel, $DiscussionManager, "GetDiscussionsByUserID", agPANEL_USERDISCUSSIONS_COUNT, $Context->GetDefinition("YourDiscussions"), "Recent", $Context->Session->User->Setting("ShowRecentDiscussions"));
 	AddDiscussionsToPanel($Context, $Panel, $DiscussionManager, "GetViewedDiscussionsByUserID", agPANEL_HISTORY_COUNT, $Context->GetDefinition("History"), "History", $Context->Session->User->Setting("ShowBrowsingHistory"));
 	AddSearchesToPanel($Context, $Panel, $SearchManager, agPANEL_SEARCH_COUNT);
-	AddAppendixToPanel($Context, $Panel, "Discussion");
+	//AddAppendixToPanel($Context, $Panel, "Discussion");
 	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 		
