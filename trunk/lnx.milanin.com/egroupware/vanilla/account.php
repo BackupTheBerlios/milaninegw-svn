@@ -57,7 +57,7 @@ include("appg/init_internal.php");
 
 	// Build the control panel
 	AddAccountOptionsToPanel($Context, $Panel, $AccountUser);
-	AddTextModeToPanel($Context, $Panel);
+	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 
 	// Create the account profile

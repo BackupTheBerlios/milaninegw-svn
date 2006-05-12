@@ -42,7 +42,7 @@ include("appg/init_internal.php");
 	AddDiscussionsToPanel($Context, $Panel, $DiscussionManager, "GetViewedDiscussionsByUserID", agPANEL_HISTORY_COUNT, $Context->GetDefinition("History"), "History", $Context->Session->User->Setting("ShowBrowsingHistory"));
 	AddSearchesToPanel($Context, $Panel, $SearchManager, agPANEL_SEARCH_COUNT);
 	AddAppendixToPanel($Context, $Panel, "Discussion");
-	AddTextModeToPanel($Context, $Panel);
+	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 		
 	// Add the discussion grid to the body

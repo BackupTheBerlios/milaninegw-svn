@@ -58,7 +58,7 @@ $Context->PageTitle = $CommentGrid->Discussion->Name;
 	}
 
 	AddAppendixToPanel($Context, $Panel, "Comments");
-	AddTextModeToPanel($Context, $Panel);
+	//AddTextModeToPanel($Context, $Panel);
 	AddGuestInfoToPanel($Context, $Panel);
 
 	// Add the comment form to the comment grid
