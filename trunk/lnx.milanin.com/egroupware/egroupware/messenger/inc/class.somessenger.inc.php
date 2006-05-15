@@ -141,14 +141,19 @@
                         }
 			 if ($GLOBALS['phpgw']->config->config_data['mailnotification']) {
                             $GLOBALS['phpgw']->send = CreateObject('phpgwapi.send');
-                            $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message from')." ".
-                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
-                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname');
-                            $body  = lang('inbox').
-                            ": http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n".
-                            lang('subject').": ".stripslashes($message['subject'])."\n\n-----\n".
-                            stripslashes($message['content']).
-                            "\n-----\n";
+                            $subject="[".$GLOBALS['phpgw_info']['server']['site_title']."] ".lang('new')." ".lang('message');
+			    
+                            $body  = lang_for('hello').' '.
+			    $GLOBALS['phpgw']->accounts->id2name($message['to'],'account_firstname').",\n\n".
+			    $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_firstname')." ".
+                              $GLOBALS['phpgw']->accounts->id2name($this->owner,'account_lastname')." ".
+			      lang_for('has_sent')."\n".
+                            "http://".$_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=messenger.uimessenger.inbox"."\n\n".
+			    lang_for('msg_below')."\n\n".
+                            lang_for('subject').": ".stripslashes($message['subject'])."\n\n-----\n".
+                            stripslashes(get_fragment($message['content'],64)).
+                            "\n-----\n".lang_for('thank_you');
+			    
                             $to=$GLOBALS['phpgw']->accounts->id2name($message['to'], 'account_email');
                             $rc = $GLOBALS['phpgw']->send->msg('email', $to, $subject, $body, '', '', '','Messenger <messenger@'.$_SERVER['SERVER_NAME'].'>');
                             /*$this->db->query('INSERT INTO ' . $this->table . ' (message_owner, message_from, message_status, '
