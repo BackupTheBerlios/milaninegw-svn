@@ -175,6 +175,86 @@
 			}
 			return $ret;
 		}
+		
+		function translate_for($key, $userid, $vars=false,$not_found='*' )
+		{
+			//Finding lang of userid
+			$query="SELECT `preference_value`
+			FROM `phpgw_preferences`
+			WHERE `preference_owner` =14
+			AND preference_app = 'common'";
+			$this->db->query($query
+			,__LINE__,__FILE__);
+			if ($this->db->next_record()){
+				$prefs=unserialize($this->db->f(0));
+				$userid_lang=(isset($prefs['lang'])) ? $prefs['lang'] : NULL;
+			}
+			//fallback to default if not found
+			if (!isset($userid_lang)){
+				$query="SELECT `preference_value`
+				FROM `phpgw_preferences`
+				WHERE `preference_owner` =-2
+				AND preference_app = 'common'";
+				$this->db->query($query
+				,__LINE__,__FILE__);
+				if ($this->db->next_record()){
+					$prefs=unserialize($this->db->f(0));
+					//fallback to english
+					$userid_lang=(isset($prefs['lang'])) ? $prefs['lang'] : 'en';
+				}
+			}
+			//looking for content
+			$query="SELECT content FROM phpgw_lang WHERE lang='".$userid_lang."' AND app_name='".
+				$GLOBALS['phpgw_info']['flags']['currentapp']."' AND  message_id='$key'";
+			$this->db->query($query,__LINE__,__FILE__);
+			if ($this->db->next_record()){
+                            $content=$this->db->f(0);
+			}
+			//fallback to common
+			if (!isset($content)){
+				$query="SELECT content FROM phpgw_lang WHERE lang='".$userid_lang."' AND app_name='common' AND message_id='$key'";
+                        	$this->db->query($query,__LINE__,__FILE__);
+                        	if ($this->db->next_record()){
+                            		$content=$this->db->f(0);
+                        	}
+			}
+			//fallback to $key
+			return (isset($content)) ? $content : $key.$not_found;
+			/*
+			if (!is_array(@$GLOBALS['lang']) || !count($GLOBALS['lang']))
+			{
+				$this->init();
+			}
+			$ret = $key.$not_found;	// save key if we dont find a translation
+
+			if (isset($GLOBALS['lang'][$key]))
+			{
+				$ret = $GLOBALS['lang'][$key];
+			}
+			else
+			{
+				$new_key = strtolower(trim(substr($key,0,MAX_MESSAGE_ID_LENGTH)));
+
+				if (isset($GLOBALS['lang'][$new_key]))
+				{
+					// we save the original key for performance
+					$ret = $GLOBALS['lang'][$key] = $GLOBALS['lang'][$new_key];
+				}
+			}
+			if (is_array($vars) && count($vars))
+			{
+				if (count($vars) > 1)
+				{
+					$ret = str_replace($this->placeholders,$vars,$ret);
+				}
+				else
+				{
+					$ret = str_replace('%1',$vars[0],$ret);
+				}
+			}
+			return $ret;*/
+		}
+
 
 		/*!
 		@function add_app
