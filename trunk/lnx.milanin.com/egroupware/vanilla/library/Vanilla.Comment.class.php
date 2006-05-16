@@ -401,6 +401,8 @@ class CommentManager {
 						if (!$SkipValidation) {
 							$UserManager = $this->Context->ObjectFactory->NewContextObject($this->Context, "UserManager");
 							$UserManager->UpdateUserCommentCount($this->Context->Session->UserID);
+							$UserManager->RemoveBookmark($this->Context->Session->UserID, $Comment->DiscussionID);
+							$UserManager->AddBookmark($this->Context->Session->UserID, $Comment->DiscussionID);
 						}
 						
 						// Format the values for db input
