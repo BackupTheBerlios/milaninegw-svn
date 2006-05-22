@@ -59,10 +59,10 @@ class Parameters {
 			if(is_array($val)) {
 				$nmrows = count($val);
 				for ($i = 0; $i < $nmrows; ++$i) {
-					$sReturn .= "<input type=\"hidden\" name=\"".$key."[]\" value=\"".$val[$i]."\" />\r\n";
+					$sReturn .= "<input type=\"hidden\" name=\"".$key."[]\" id=\"hidden[".$key."]\" value=\"".$val[$i]."\" />\r\n";
 				}
 			} else {
-				$sReturn .= "<input type=\"hidden\" name=\"".$key."\" value=\"".$val."\" />\r\n";
+				$sReturn .= "<input type=\"hidden\" name=\"".$key."\" id=\"hidden[".$key."]\" value=\"".$val."\" />\r\n";
 			}
 		}
 		reset($this->aParameters);

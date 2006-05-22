@@ -290,9 +290,34 @@ function post_reply(commentbox,Sender)
 //         document.reload();
         /*alert*/(request.responseText);
         var CommentsGrid=document.getElementById("CommentGrid");
-        CommentsGrid.innerHTML+=request.responseText;
+        var CommentID=document.getElementById("hidden[CommentID]");
+        var DiscussionID=document.getElementById("hidden[DiscussionID]");
+        if (CommentID.value != 0){
+          window.location="comments.php?DiscussionID="+DiscussionID.value;
+        }else{
+        if (CommentsGrid){
+          CommentsGrid.innerHTML+=request.responseText;
+        }
+        
         Sender.disabled=false;
         Sender.value="Add Your Comment";
+	tinyMCE.init({
+                                theme : "advanced",
+                                mode: "exact",
+                                elements: "CommentBox",
+                                plugins : "table",
+                                entity_encoding: "raw",
+                                cleanup : false,
+                                content_css : "/egroupware/jscripts/tiny_mce/themes/advanced/vanilla.css",
+                                theme_advanced_buttons1_add : "forecolor,backcolor",
+//                              add_form_submit_trigger : false,
+//                              submit_patch : false,
+                                force_br_newlines : true,
+                                theme_advanced_buttons3_add_before : "tablecontrols,separator",
+                                theme_advanced_styles : "Header 1=header1;Header 2=header2;Header 3=header3;Table Row=tableRow1",
+                                debug : false
+                        })
+        }
       }catch (e){
         alert(e)
       }

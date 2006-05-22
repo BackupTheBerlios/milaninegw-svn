@@ -158,7 +158,7 @@ class PostBackControl extends Control {
 	
 	function Get_PostBackForm($FormName = "", $PostBackMethod = "post", $TargetUrl = "") {
 		$TargetUrl = ForceString($TargetUrl, $this->Context->SelfUrl);
-		if ($FormName != "") $FormName = " name=\"".$FormName."\"";
+		if ($FormName != "") $FormName = " name=\"".$FormName."\" id=\"".$FormName."\"";
 		return "<form".$FormName." method=\"".$PostBackMethod."\" action=\"".$TargetUrl."\">"
 			.$this->PostBackParams->GetHiddenInputs();
 	}
