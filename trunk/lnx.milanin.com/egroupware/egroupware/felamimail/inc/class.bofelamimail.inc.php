@@ -86,7 +86,7 @@
 			$config = CreateObject('phpgwapi.config','felamimail');
 			$config->read_repository();
 			$this->profileID = $config->config_data['profileID'];
-			print "<?--".$this->profileID."-->";
+			//print "<?--".$this->profileID."-->";
 			
 		}
 		
