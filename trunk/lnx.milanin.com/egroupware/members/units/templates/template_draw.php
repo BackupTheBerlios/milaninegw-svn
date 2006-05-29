@@ -42,7 +42,7 @@
 		} else {
 			$template_context = addslashes($parameter['context']);
 				if (!isset($page_template_cache[$parameter['context']])) {
-					$result = db_query("select * from template_elements where template_id = $template_id and name = '$template_context'");
+					$result = db_query("select * from ".tbl_prefix."template_elements where template_id = $template_id and name = '$template_context'");
 					$page_template_cache[$parameter['context']] = $result;
 				} else {
 					$result = $page_template_cache[$parameter['context']];

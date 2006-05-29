@@ -35,7 +35,7 @@
 												if ($exists) {
 													$templatetitle = addslashes($_REQUEST['templatetitle']);
 													db_query("update templates set name = '$templatetitle' where ident = $id");
-													db_query("delete from template_elements where template_id = $id");
+													db_query("delete from ".tbl_prefix."template_elements where template_id = $id");
 													foreach($_REQUEST['template'] as $name => $content) {
 														$slashname = addslashes($name);
 														$slashcontent = addslashes($content);
@@ -56,7 +56,7 @@
 												$exists = $exists[0]->template_exists;
 												if ($exists) {
 													db_query("update ".tbl_prefix."users set template_id = -1 where template_id = $id");
-													db_query("delete from template_elements where template_id = $id");
+													db_query("delete from ".tbl_prefix."template_elements where template_id = $id");
 													db_query("delete from templates where ident = $id");
 													$messages[] = "Your template was deleted.";
 												}
@@ -76,7 +76,7 @@
 													$exists = $exists[0]->template_exists;
 													var_export($exists);
 													if ($exists) {
-														$elements = db_query("select * from template_elements where template_id = $based_on");
+														$elements = db_query("select * from ".tbl_prefix."template_elements where template_id = $based_on");
 														if (sizeof($elements) > 0) {
 															foreach($elements as $element) {
 																db_query("insert into ".tbl_prefix."template_elements set name = '".$element->name."', content = '".$element->content."', template_id = '".$new_template_id."'");

@@ -38,7 +38,7 @@
 		if ($template_id == -1) {
 			$current_template = $template;
 		} else {
-			$result = db_query("select * from template_elements where template_id = $template_id");
+			$result = db_query("select * from ".tbl_prefix."template_elements where template_id = $template_id");
 			if (sizeof($result) > 0) {
 				foreach($result as $element) {
 					$current_template[stripslashes($element->name)] = stripslashes($element->content);

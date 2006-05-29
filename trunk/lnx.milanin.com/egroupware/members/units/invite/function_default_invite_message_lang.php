@@ -1,5 +1,5 @@
 <?php
-$qry = "SELECT * FROM template_elements where name like 'language%'";
+$qry = "SELECT * from ".tbl_prefix."template_elements where name like 'language%'";
 $result = db_query($qry) or die ("<center> ERROR: ".mysql_error()."</center>");
          for ($i=0;$i<sizeof($result);$i++)
        {
