@@ -34,7 +34,7 @@ END;
 				$mainurl = htmlentities(url . $username . "/files/");
 				echo <<< END
   <channel xml:base='$mainurl'>
-    <title>$name : ".tbl_prefix."files./title>
+    <title>$name : Files</title>
     <description>Files for $name, hosted on $sitename.</description>
     <language>en-gb</language>
     <link>$mainurl</link>
