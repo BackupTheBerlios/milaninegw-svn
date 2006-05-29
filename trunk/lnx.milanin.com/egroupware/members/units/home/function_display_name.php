@@ -3,7 +3,7 @@
 	global $profile_id;
 	$profile_id = (int) $profile_id;
 		
-		$result = db_query("select value from home_data where  owner = $profile_id AND name = 'title'");
+		$result = db_query("select value from ".tbl_prefix."home_data where  owner = $profile_id AND name = 'title'");
 	if ($result[0]->value){
           $run_result = $result[0]->value;
         }else{

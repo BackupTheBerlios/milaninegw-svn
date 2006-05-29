@@ -9,10 +9,10 @@
 		$body = "<form action=\"".url . $profile_username ."/home/\" method=\"post\">";
 	
 		// Cycle through all defined profile detail fields and display them
-                $result = db_query("select value from home_data where  owner = $page_owner AND name = 'title'");
+                $result = db_query("select value from ".tbl_prefix."home_data where  owner = $page_owner AND name = 'title'");
                 $body .='<p>Title: <input type="text" name="home[title]" id="home[title]" style="width: 85%;" value=\''.$result[0]->value.'\'/>'."</p>\n";
 		
-                $result = db_query("select value from home_data where  owner = $page_owner AND name = 'body'");
+                $result = db_query("select value from ".tbl_prefix."home_data where  owner = $page_owner AND name = 'body'");
                 $body .= '<p>Page Content:<br/><textarea name="home[data]" id="home[data]" style="width: 95%; height: 500px">'.$result[0]->value."</textarea></p>\n";
 		$body .= <<< END
 
