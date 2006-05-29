@@ -8,7 +8,7 @@
 	
 		$archives = db_query("SELECT distinct 
 									EXTRACT(YEAR_MONTH FROM FROM_UNIXTIME(posted)) as archivestamp
-									FROM `weblog_posts` 
+									FROM ".tbl_prefix."weblog_posts 
 									WHERE weblog = $profile_id
 									order by posted desc");
 
