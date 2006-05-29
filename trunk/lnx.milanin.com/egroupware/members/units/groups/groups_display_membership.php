@@ -1,7 +1,6 @@
 <?php
 
-	// Display existing groups
-
+	// Display existing ".tbl_prefix."groups.
 		$groupdata = run("groups:get:external", array($_SESSION['userid']));
 		if (sizeof($groupdata) > 0) {
 

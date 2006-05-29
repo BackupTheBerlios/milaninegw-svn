@@ -21,7 +21,7 @@
 													) {
 														$name = addslashes($_REQUEST['new_folder_name']);
 														$access = addslashes($_REQUEST['new_folder_access']);
-														db_query("	insert into file_folders
+														db_query("	insert into ".tbl_prefix."file_folders
 																	set 	parent = $folder,
 																			name = '$name',
 																			access = '$access',
@@ -37,7 +37,7 @@
 															if (sizeof($keyword_list) > 0) {
 																foreach($keyword_list as $key => $list_item) {
 																	$list_item = addslashes(trim($list_item));
-																	db_query("insert into tags set tagtype = 'folder', access = '$access', tag = '$list_item', ref = $insert_id, owner = " . $_SESSION['userid']);
+																	db_query("insert into ".tbl_prefix."tags set tagtype = 'folder', access = '$access', tag = '$list_item', ref = $insert_id, owner = " . $_SESSION['userid']);
 																}
 															}
 														}
@@ -69,10 +69,10 @@
 																$messages[] = "There was an error uploading the file. Possibly the file was too large, or the upload was interrupted.";
 															} else {
 																
-																$total_quota = db_query("select sum(size) as sum from files where owner = " . $page_owner);
+																$total_quota = db_query("select sum(size) as sum from ".tbl_prefix."files where owner = " . $page_owner);
 																$total_quota = $total_quota[0]->sum;
 																
-																$max_quota = db_query("select file_quota from users where ident = " . $page_owner);
+																$max_quota = db_query("select file_quota from ".tbl_prefix."users where ident = " . $page_owner);
 																$max_quota = $max_quota[0]->file_quota;
 																
 																if ($total_quota + $_FILES['new_file']['size'] > $max_quota) {
@@ -104,7 +104,7 @@
 																	
 																		$new_filename = addslashes($new_filename);
 																			
-																		db_query("insert into files 	set owner = ".$_SESSION['userid'].",
+																		db_query("insert into ".tbl_prefix."files 	set owner = ".$_SESSION['userid'].",
 																											files_owner = ".$page_owner.",
 																											folder = $folderid,
 																											originalname = '$original_filename',
@@ -124,7 +124,7 @@
 																			if (sizeof($keyword_list) > 0) {
 																				foreach($keyword_list as $key => $list_item) {
 																					$list_item = addslashes(trim($list_item));
-																					db_query("insert into tags set tagtype = 'file', access = '$access', tag = '$list_item', ref = $file_id, owner = " . $page_owner);
+																					db_query("insert into ".tbl_prefix."tags set tagtype = 'file', access = '$access', tag = '$list_item', ref = $file_id, owner = " . $page_owner);
 																				}
 																			}
 																		}
@@ -135,7 +135,7 @@
 																				foreach($metadata as $name => $value) {
 																					$name = addslashes($name);
 																					$value = addslashes($value);
-																					db_query("insert into file_metadata
+																					db_query("insert into ".tbl_prefix."file_metadata
 																								set name = '$name',
 																								value = '$value',
 																								file_id = $file_id");
@@ -181,17 +181,17 @@
 														$file_access = addslashes($_REQUEST['edit_file_access']);
 														$file_keywords = addslashes($_REQUEST['edit_file_keywords']);
 														$file_description = addslashes($_REQUEST['edit_file_description']);
-														$file_info = db_query("select owner, files_owner from files where ident = $file_id");
+														$file_info = db_query("select owner, files_owner from ".tbl_prefix."files where ident = $file_id");
 														$file_info = $file_info[0];
 														$files_username = run("users:id_to_name", $file_info->files_owner);
 														if ($file_info->owner == $_SESSION['userid'] || $file_info->files_owner == $_SESSION['userid']) {
-															db_query("update files set 
+															db_query("update ".tbl_prefix."files set 
 																						folder = $file_folder,
 																						title = '$file_title',
 																						access = '$file_access',
 																						description = '$file_description'
 																						where ident = $file_id");
-															db_query("delete from tags where tagtype = 'file' and ref = $file_id");
+															db_query("delete from ".tbl_prefix."tags where tagtype = 'file' and ref = $file_id");
 															if ($file_keywords != "") {
 																$value = $file_keywords;
 																$value = str_replace("\n","",$value);
@@ -201,7 +201,7 @@
 																if (sizeof($keyword_list) > 0) {
 																	foreach($keyword_list as $key => $list_item) {
 																		$list_item = (trim($list_item));
-																		db_query("insert into tags set tagtype = 'file', access = '$file_access', tag = '$list_item', ref = $file_id, owner = " . $_SESSION['userid']);
+																		db_query("insert into ".tbl_prefix."tags set tagtype = 'file', access = '$file_access', tag = '$list_item', ref = $file_id, owner = " . $_SESSION['userid']);
 																	}
 																}
 															}
@@ -224,7 +224,7 @@
 														&& isset($_REQUEST['edit_folder_parent'])
 													) {
 														$edit_folder_id = (int) $_REQUEST['edit_folder_id'];
-														$edit_owner = db_query("select owner from file_folders where ident = $edit_folder_id");
+														$edit_owner = db_query("select owner from ".tbl_prefix."file_folders where ident = $edit_folder_id");
 														if ($edit_owner[0]->owner == $_SESSION['userid']) {
 															$edit_parent_id = (int) $_REQUEST['edit_folder_parent'];
 															db_query("update file_folders
@@ -232,7 +232,7 @@
 																				access = '".addslashes($_REQUEST['edit_folder_access'])."',
 																				parent = ".$edit_parent_id."
 																				where ident = $edit_folder_id");
-															db_query("delete from tags where tagtype = 'folder' and ref = $edit_folder_id");
+															db_query("delete from ".tbl_prefix."tags where tagtype = 'folder' and ref = $edit_folder_id");
 															if ($_REQUEST['edit_folder_keywords'] != "") {
 																$edit_value = $_REQUEST['edit_folder_keywords'];
 																$edit_value = str_replace("\n","",$edit_value);
@@ -242,7 +242,7 @@
 																if (sizeof($edit_keyword_list) > 0) {
 																	foreach($edit_keyword_list as $key => $list_item) {
 																		$list_item = addslashes(trim($list_item));
-																		db_query("insert into tags set tagtype = 'folder', access = '".addslashes($_REQUEST['edit_folder_access'])."', tag = '$list_item', ref = $edit_folder_id, owner = " . $_SESSION['userid']);
+																		db_query("insert into ".tbl_prefix."tags set tagtype = 'folder', access = '".addslashes($_REQUEST['edit_folder_access'])."', tag = '$list_item', ref = $edit_folder_id, owner = " . $_SESSION['userid']);
 																	}
 																}
 															}
@@ -257,14 +257,14 @@
 													) {
 														$id = (int) $_REQUEST['delete_folder_id'];
 														if ($id > -1) {
-															$folder = db_query("select * from file_folders where ident = $id and (owner = " . $_SESSION['userid'] . " or files_owner = " . $_SESSION['userid'] . ")");
+															$folder = db_query("select * from ".tbl_prefix."file_folders where ident = $id and (owner = " . $_SESSION['userid'] . " or files_owner = " . $_SESSION['userid'] . ")");
 															if (sizeof($folder) > 0) {
 																$folder = $folder[0];
 																$files_username = run("users:id_to_name", $folder->files_owner);
 																db_query("update file_folders set parent = " . $folder->parent . " where parent = $id");
-																db_query("update files set folder = " . $folder->parent . " where folder = $id");
-																db_query("delete from file_folders where ident = $id");
-																db_query("delete from tags where tagtype = 'folder' and ref = $id");
+																db_query("update ".tbl_prefix."files set folder = " . $folder->parent . " where folder = $id");
+																db_query("delete from ".tbl_prefix."file_folders where ident = $id");
+																db_query("delete from ".tbl_prefix."tags where tagtype = 'folder' and ref = $id");
 																global $redirect_url;
 																$redirect_url = url . $files_username . "/files/";
 																if ($folder->parent > -1) {
@@ -283,13 +283,13 @@
 													) {
 														$id = (int) $_REQUEST['delete_file_id'];
 														if ($id > -1) {
-															$file = db_query("select * from files where ident = $id and (owner = " . $_SESSION['userid'] . " or files_owner = " . $_SESSION['userid'] . ")");
+															$file = db_query("select * from ".tbl_prefix."files where ident = $id and (owner = " . $_SESSION['userid'] . " or files_owner = " . $_SESSION['userid'] . ")");
 															if (sizeof($file) > 0) {
 																$file = $file[0];
 																$files_username = run("users:id_to_name", $file->files_owner);
 																@unlink(stripslashes($file->location));
-																db_query("delete from files where ident = $id");
-																db_query("delete from tags where tagtype = 'file' and ref = $id");
+																db_query("delete from ".tbl_prefix."files where ident = $id");
+																db_query("delete from ".tbl_prefix."tags where tagtype = 'file' and ref = $id");
 																$redirect_url = url . $files_username . "/files/";
 																if ($file->folder > -1) {
 																	$redirect_url .= $file->folder;

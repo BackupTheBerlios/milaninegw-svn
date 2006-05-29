@@ -4,9 +4,9 @@
 	
 	if ($page_owner != -1) {
 		if (run("users:type:get", $page_owner) == "person") {
-			$result = db_query("select users.ident from users
-										where users.owner = $page_owner
-										and users.user_type = 'community'
+			$result = db_query("select ".tbl_prefix."users.ident from ".tbl_prefix."users
+										where ".tbl_prefix."users.owner = $page_owner
+										and ".tbl_prefix."users.user_type = 'community'
 										limit 8");
 			$friends = array();
 			if (sizeof($result) > 0) {

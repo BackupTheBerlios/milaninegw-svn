@@ -1,16 +1,15 @@
 <?php
 
-	// Given a user ID as a parameter, will display a list of friends
-
+	// Given a user ID as a parameter, will display a list of ".tbl_prefix."friends.
 	$url = url;
 	
 	if (isset($parameter[0])) {
 
 		$user_id = (int) $parameter[0];
 		
-		$result = db_query("select users.*, friends.ident as friendident from friends
-									left join users on users.ident = friends.friend
-									where friends.owner = $user_id and users.user_type = 'person'");
+		$result = db_query("select ".tbl_prefix."users.*, ".tbl_prefix."friends.ident as friendident from ".tbl_prefix."friends
+									left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend
+									where ".tbl_prefix."friends.owner = $user_id and ".tbl_prefix."users.user_type = 'person'");
 
 		$body = <<< END
 	<table class="userlist">
@@ -21,7 +20,7 @@ END;
 			foreach($result as $key => $info) {
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {
@@ -55,9 +54,9 @@ END;
 			}
 		} else {
 			if ($user_id == $_SESSION['userid']) {
-				$body .= "<td>You don't have any friends listed! To add a user as a friend, click the 'friend' button underneath a user's icon.</td>";
+				$body .= "<td>You don't have any ".tbl_prefix."friends.listed! To add a user as a friend, click the 'friend' button underneath a user's icon.</td>";
 			} else {
-				$body .= "<td>This user doesn't currently have any friends listed. Maybe if you list them as a friend, it'll start the ball rolling ..?</td>";
+				$body .= "<td>This user doesn't currently have any ".tbl_prefix."friends.listed. Maybe if you list them as a friend, it'll start the ball rolling ..?</td>";
 			}
 		}
 		$body .= <<< END

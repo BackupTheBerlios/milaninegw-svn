@@ -32,14 +32,14 @@ END;
 			foreach($parameter[1] as $key => $ident) {
 				$ident = (int) $ident;
 				// if (!isset($_SESSION['user_info_cache'][$ident])) {
-					$info = db_query("select * from users where ident = $ident");
+					$info = db_query("select * from ".tbl_prefix."users where ident = $ident");
 					$_SESSION['user_info_cache'][$ident] = $info[0];
 					$info = $info[0];
 				// }
 				$info = $_SESSION['user_info_cache'][$ident];
 				if ($info->icon != -1 && $info->icon != NULL) {
 					// if (!isset($_SESSION['icon_cache'][$info->icon]) || (time() - $_SESSION['icon_cache'][$info->icon]->created > 60)) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = $ident");
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = $ident");
 						//$_SESSION['icon_cache'][$info->icon]->created = time();
 						if (sizeof($icon) == 1) {
 							//$_SESSION['icon_cache'][$info->icon]->data = $icon[0]->filename;

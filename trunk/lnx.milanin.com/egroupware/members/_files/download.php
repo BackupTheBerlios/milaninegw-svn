@@ -18,7 +18,7 @@
 			
 	// ... and the file exists ...
 			
-			$file = db_query("select * from files where ident = $id");
+			$file = db_query("select * from ".tbl_prefix."files where ident = $id");
 			if (sizeof($file) > 0) {
 				
 				$file = $file[0];

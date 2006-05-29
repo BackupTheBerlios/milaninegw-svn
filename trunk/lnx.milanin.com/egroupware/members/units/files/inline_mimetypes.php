@@ -1,6 +1,6 @@
 <?php
 
-	// Mime-types for files that will display in the browser as opposed to download
+	// Mime-types for ".tbl_prefix."files.that will display in the browser as opposed to download
 
 		$data['mimetype:inline'][] = "image/jpeg";
 		$data['mimetype:inline'][] = "image/gif";

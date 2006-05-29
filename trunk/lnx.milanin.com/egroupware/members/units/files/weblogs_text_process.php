@@ -1,7 +1,6 @@
 <?php
 
-	// Replace {{file:$id}} with links to files
-	
+	// Replace {{file:$id}} with links to ".tbl_prefix."files.	
 		if (isset($parameter)) {
 			$functionbody = <<< END
 			

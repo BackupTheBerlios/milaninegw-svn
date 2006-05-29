@@ -1,7 +1,6 @@
 <?php
 
-	// Get groups
-	
+	// Get ".tbl_prefix."groups.	
 		$groups = run("groups:get",array($_SESSION['userid']));
 		
 		if (sizeof($groups) > 0) {

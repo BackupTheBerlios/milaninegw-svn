@@ -28,7 +28,7 @@
 	
 		if ($folder != -1) {
 			
-			$this_folder = db_query("select * from file_folders where ident = $folder and files_owner = $page_owner");
+			$this_folder = db_query("select * from ".tbl_prefix."file_folders where ident = $folder and files_owner = $page_owner");
 			$this_folder = $this_folder[0];
 		
 			$folder_name = stripslashes($this_folder->name);
@@ -46,7 +46,7 @@
 			$parent = (int) $this_folder->parent;
 			
 			if ($parent != -1) {
-				$parent_details = db_query("select * from file_folders where ident = $parent and files_owner = $page_owner");
+				$parent_details = db_query("select * from ".tbl_prefix."file_folders where ident = $parent and files_owner = $page_owner");
 				$parent_details = $parent_details[0];
 				$display_parent = $parent;
 			} else {
@@ -63,7 +63,7 @@
 		
 	// Firstly, get a list of folders
 	
-		$folders = db_query("select * from file_folders where parent = $folder and (" . run("users:access_level_sql_where") . ") and files_owner = $page_owner");
+		$folders = db_query("select * from ".tbl_prefix."file_folders where parent = $folder and (" . run("users:access_level_sql_where") . ") and files_owner = $page_owner");
 	
 	// Display folders we actually have access to
 	
@@ -110,11 +110,10 @@ END;
 			}
 		}
 	
-	// Then get a list of files
-	
-		$files = db_query("select * from files where folder = $folder and files_owner = $page_owner");	
+	// Then get a list of ".tbl_prefix."files.	
+		$files = db_query("select * from ".tbl_prefix."files where folder = $folder and files_owner = $page_owner");	
 
-	// View files we actually have access to
+	// View ".tbl_prefix."files.we actually have access to
 
 		if (sizeof($files) > 0) {
 			
@@ -168,7 +167,7 @@ END;
 			
 		}
 		
-	// Deliver an apologetic message if there aren't any files or folders
+	// Deliver an apologetic message if there aren't any ".tbl_prefix."files.or folders
 	
 		if (sizeof($files) ==0 && sizeof($folders) == 0) {
 			

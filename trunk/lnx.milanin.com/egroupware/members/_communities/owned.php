@@ -10,7 +10,7 @@
 		run("profile:init");
 		run("friends:init");
 
-	// Whose friends are we looking at?
+	// Whose ".tbl_prefix."friends.are we looking at?
 		global $page_owner;
 		
 	// You must be logged on to view this!

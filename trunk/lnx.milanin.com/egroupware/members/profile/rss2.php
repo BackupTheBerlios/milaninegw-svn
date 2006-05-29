@@ -22,7 +22,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0'   xmlns:dc='http://purl.org/dc/elements/1.1/'>
 END;
-			$info = db_query("select * from users where ident = $profile_id");
+			$info = db_query("select * from ".tbl_prefix."users where ident = $profile_id");
 			if (sizeof($info) > 0) {
 				$info = $info[0];
 				$name = htmlentities(stripslashes($info->name));
@@ -39,10 +39,10 @@ END;
 			// WEBLOGS
 
 				if (!isset($_REQUEST['tag'])) {
-					$entries = db_query("select * from weblog_posts where weblog = $page_owner and access = 'PUBLIC' order by posted desc limit 10");
+					$entries = db_query("select * from ".tbl_prefix."weblog_posts where weblog = $page_owner and access = 'PUBLIC' order by posted desc limit 10");
 				} else {
 					$tag = addslashes($_REQUEST['tag']);
-					$entries = db_query("select weblog_posts.* from tags left join weblog_posts on weblog_posts.ident = tags.ref where weblog_posts.weblog = $page_owner and weblog_posts.access = 'PUBLIC' and tags.tag = '$tag' and tags.tagtype = 'weblog' order by weblog_posts.posted desc limit 10");
+					$entries = db_query("select ".tbl_prefix."weblog_posts.* from ".tbl_prefix."tags left join ".tbl_prefix."weblog_posts.on ".tbl_prefix."weblog_posts.ident = tags.ref where ".tbl_prefix."weblog_posts.weblog = $page_owner and ".tbl_prefix."weblog_posts.access = 'PUBLIC' and tags.tag = '$tag' and tags.tagtype = 'weblog' order by ".tbl_prefix."weblog_posts.posted desc limit 10");
 				}
 				if (sizeof($entries) > 0) {
 					foreach($entries as $entry) {
@@ -50,7 +50,7 @@ END;
 						$link = url . $username . "/weblog/" . $entry->ident . ".html";
 						$body = htmlentities(run("weblogs:text:process",stripslashes($entry->body)));
 						$pubdate = gmdate("D, d M Y H:i:s T", $entry->posted);
-						$keywords = db_query("select * from tags where tagtype = 'weblog' and ref = '".$entry->ident."'");
+						$keywords = db_query("select * from ".tbl_prefix."tags where tagtype = 'weblog' and ref = '".$entry->ident."'");
 						$keywordtags = "";
 						if (sizeof($keywords) > 0) {
 							foreach($keywords as $keyword) {
@@ -68,13 +68,12 @@ END;
 					}
 				}
 				
-			// FILES
-			
+			// ".tbl_prefix."files.			
 				if (!isset($_REQUEST['tag'])) {
-					$files = db_query("select * from files where files_owner = $page_owner and access = 'PUBLIC' order by time_uploaded desc limit 10");
+					$files = db_query("select * from ".tbl_prefix."files where files_owner = $page_owner and access = 'PUBLIC' order by time_uploaded desc limit 10");
 				} else {
 					$tag = addslashes($_REQUEST['tag']);
-					$files = db_query("select files.* from tags left join files on files.ident = tags.ref where files.files_owner = $page_owner and files.access = 'PUBLIC' and tags.tagtype = 'file' and tags.tag = '$tag' order by files.time_uploaded desc limit 10");
+					$files = db_query("select ".tbl_prefix."files.* from ".tbl_prefix."tags left join ".tbl_prefix."files.on ".tbl_prefix."files.ident = tags.ref where ".tbl_prefix."files.files_owner = $page_owner and ".tbl_prefix."files.access = 'PUBLIC' and tags.tagtype = 'file' and tags.tag = '$tag' order by ".tbl_prefix."files.time_uploaded desc limit 10");
 				}
 				if (sizeof($files) > 0) {
 					foreach($files as $file) {
@@ -87,7 +86,7 @@ END;
 						if ($mimetype == false) {
 							$mimetype = "application/octet-stream";
 						}
-						$keywords = db_query("select * from tags where tagtype = 'file' and ref = '".$file->ident."'");
+						$keywords = db_query("select * from ".tbl_prefix."tags where tagtype = 'file' and ref = '".$file->ident."'");
 						$keywordtags = "";
 						if (sizeof($keywords) > 0) {
 							foreach($keywords as $keyword) {

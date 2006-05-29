@@ -1,6 +1,6 @@
 <?php
 
-	//	ELGG manage friends and groups page
+	//	ELGG manage ".tbl_prefix."friends.and ".tbl_prefix."groups.page
 
 	// Run includes
 		require("../includes.php");
@@ -10,13 +10,13 @@
 		run("profile:init");
 		run("friends:init");
 
-	// Whose friends are we looking at?
+	// Whose ".tbl_prefix."friends.are we looking at?
 		global $page_owner;
 		
 	// You must be logged on to view this!
 	//	protect(1);
 		
-		$title = run("profile:display:name") . " :: Friends";
+		$title = run("profile:display:name") . " :: ".tbl_prefix."friends.;
 								
 		echo run("templates:draw:page", array(
 					$title, run("friends:editpage")

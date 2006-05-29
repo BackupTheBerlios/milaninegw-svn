@@ -17,13 +17,13 @@ $sitename = sitename;
 				<option value="">ROOT</option>
 END;
 			} else {
-				$current_folder = db_query("select name from file_folders where owner = $userid and ident = $folderid");
+				$current_folder = db_query("select name from ".tbl_prefix."file_folders where owner = $userid and ident = $folderid");
 				$name = strtoupper(stripslashes($current_folder[0]->name));
 				$body = <<< END
 					<option value="">{$prefix} {$name}</option>
 END;
 			}
-			$files = db_query("select * from files where owner = $userid and folder = $folderid");
+			$files = db_query("select * from ".tbl_prefix."files where owner = $userid and folder = $folderid");
 			if (sizeof($files) > 0) {
 				foreach($files as $file) {
 					$name = stripslashes($file->name);
@@ -35,7 +35,7 @@ END;
 				}
 			}
 			
-			$folders = db_query("select * from file_folders where owner = $userid and parent = $folderid");
+			$folders = db_query("select * from ".tbl_prefix."file_folders where owner = $userid and parent = $folderid");
 			if (sizeof($folders) > 0) {
 				foreach($folders as $folder) {
 					$body .= viewfolder($folder->ident, $userid, $level + 1);

@@ -2,7 +2,7 @@
 
 	global $page_owner;
 
-	// Actions to perform on the friends screen
+	// Actions to perform on the ".tbl_prefix."friends.screen
 	
 		if (isset($_REQUEST['action'])) {
 			switch($_REQUEST['action']) {
@@ -19,15 +19,15 @@
 													$messages[] = "Error! The community name cannot be blank.";
 												} else {
 													$username = strtolower(addslashes($_REQUEST['comm_username']));
-													$usernametaken = db_query("select count(ident) as taken from users where username = '$username'");
+													$usernametaken = db_query("select count(ident) as taken from ".tbl_prefix."users where username = '$username'");
 													$usernametaken = $usernametaken[0]->taken;
 													if ($usernametaken > 0) {
 														$messages[] = "The username '$username' is already taken by another user. You will need to pick a different one.";
 													} else {
 														$name = addslashes($_REQUEST['comm_name']);
-														db_query("insert into users set name = '$name', username = '$username', user_type = 'community', owner = " . $_SESSION['userid']);
+														db_query("insert into ".tbl_prefix."".tbl_prefix."users set name = '$name', username = '$username', user_type = 'community', owner = " . $_SESSION['userid']);
 														$ident = db_id();
-														db_query("insert into friends set owner = ". $_SESSION['userid'] .", friend = $ident");
+														db_query("insert into ".tbl_prefix."".tbl_prefix."friends.set owner = ". $_SESSION['userid'] .", friend = $ident");
 														$messages[] = "Your community was created and you were added as its first member.";
 													}
 												}

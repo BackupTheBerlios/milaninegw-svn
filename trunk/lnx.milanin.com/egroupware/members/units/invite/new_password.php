@@ -7,7 +7,7 @@
 		if (isset($_REQUEST['passwordcode'])) {
 			
 			$code = addslashes($_REQUEST['passwordcode']);
-			$details = db_query("select password_requests.ident as passcodeid, users.* from password_requests left join users on users.ident = password_requests.owner where password_requests.code = '$code'");
+			$details = db_query("select password_requests.ident as passcodeid, ".tbl_prefix."users.* from password_requests left join ".tbl_prefix."users on ".tbl_prefix."users.ident = password_requests.owner where password_requests.code = '$code'");
 			if (sizeof($details) > 0) {
 				$details = $details[0];
 				
@@ -43,7 +43,7 @@ Regards,
 The $sitename Team"), "From: $sitename <".email.">");
 				
 				$newpassword = md5(($newpassword));
-				db_query("update users set password = '$newpassword' where ident = " . $details->ident);
+				db_query("update ".tbl_prefix."users set password = '$newpassword' where ident = " . $details->ident);
 				db_query("delete from password_requests where owner = " . $details->ident);
 
 			} else {

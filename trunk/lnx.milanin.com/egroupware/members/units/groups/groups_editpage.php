@@ -1,9 +1,8 @@
 <?php
 
-	// Display existing groups
-	
+	// Display existing ".tbl_prefix."groups.	
 		$run_result .= <<< END
-		<h2>Existing groups</h2>
+		<h2>Existing ".tbl_prefix."groups./h2>
 END;
 
 ?>

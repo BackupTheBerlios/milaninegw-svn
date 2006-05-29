@@ -20,7 +20,7 @@
             // Parameter passed, assume an existing tag
             if ($var != "")
             {
-                $result = db_query("select * from tags where ident = '$var'");
+                $result = db_query("select * from ".tbl_prefix."tags where ident = '$var'");
             
                 $this->ident   = $result[0]->ident;
                 $this->tag     = $result[0]->tag;
@@ -124,7 +124,7 @@
         {
             if ($this->exists == true)
             {
-                db_query("delete from tags where ident = '$this->ident'");
+                db_query("delete from ".tbl_prefix."tags where ident = '$this->ident'");
 
                 if (db_affected_rows() > 0)
                 {
@@ -149,7 +149,7 @@
             // Always delete existing tags
             if ($this->exists == false)
             {
-                db_query("insert into tags set 
+                db_query("insert into ".tbl_prefix."tags set 
                           tagtype = 'weblog', 
                           access = '$this->access', 
                           tag = '$this->tag', 

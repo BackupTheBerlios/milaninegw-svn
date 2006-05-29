@@ -10,7 +10,7 @@
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 		$searchline = str_replace("access", "weblog_posts.access", $searchline);
 		$searchline = str_replace("owner", "weblog_posts.weblog", $searchline);
-		$refs = db_query("select weblog_posts.owner, weblog_posts.weblog, weblog_posts.ident, weblog_posts.title, users.name, tags.ref from tags left join weblog_posts on weblog_posts.ident = ref left join users on users.ident = tags.owner where $searchline order by weblog_posts.posted desc limit 50");
+		$refs = db_query("select ".tbl_prefix."weblog_posts.owner, ".tbl_prefix."weblog_posts.weblog, ".tbl_prefix."weblog_posts.ident, ".tbl_prefix."weblog_posts.title, ".tbl_prefix."users.name, tags.ref from ".tbl_prefix."tags left join ".tbl_prefix."weblog_posts.on ".tbl_prefix."weblog_posts.ident = ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where $searchline order by ".tbl_prefix."weblog_posts.posted desc limit 50");
 		
 		if (sizeof($refs) > 0) {
 			foreach($refs as $post) {

@@ -19,7 +19,7 @@
     return $currentaccess;
   }
 	
-  // Protect users to a certain access level
+  // Protect ".tbl_prefix."users.to a certain access level
   function protect($level, $owner = -1) {
     if (accesslevel($owner) < $level) {
       run("access_denied");
@@ -47,7 +47,7 @@
       }
     // Check to see if there's a persistent cookie
     if($ticket = md5($_COOKIE[AUTH_COOKIE])) {
-      $sql = "SELECT ident, code FROM users WHERE code = '$ticket'";
+      $sql = "SELECT ident, code from ".tbl_prefix."users WHERE code = '$ticket'";
       $result = db_query($sql);
       if($row = $result[0]) {
         if($ticket == $row->code) {
@@ -65,7 +65,7 @@
   // Specific Login Call
   function login_database($l, $p) {
     $sql = "SELECT ident
-            FROM users u LEFT JOIN ".db_gw_name.".phpgw_accounts a on a.account_lid=u.username 
+            from ".tbl_prefix."users u LEFT JOIN ".db_gw_name.".phpgw_accounts a on a.account_lid=u.username 
             WHERE u.username = '$l'
             AND  a.account_pwd= '$p'
             AND u.active = 'yes'
@@ -90,7 +90,7 @@
     if(!$id) return 0;
 
     $sql = "SELECT * 
-            FROM users 
+            from ".tbl_prefix."users 
             WHERE ident = $id
             AND active = 'yes'
             AND user_type = 'person'";
@@ -105,7 +105,7 @@
       if ($iconid == -1) {
         $_SESSION['icon'] = "default.png";
       } else {
-        $icon = db_query("select filename from icons where ident = $iconid");
+        $icon = db_query("select filename from ".tbl_prefix."icons where ident = $iconid");
         $_SESSION['icon'] = $icon[0]->filename;
       }
       $_SESSION['icon_quota'] = (int) $row->icon_quota;
@@ -124,7 +124,7 @@
     $md5ticket = md5($ticket);
 
     // Update MD5 of authticket
-    $sql = "UPDATE users SET code = '$md5ticket' WHERE ident = $id";
+    $sql = "update ".tbl_prefix."users SET code = '$md5ticket' WHERE ident = $id";
     db_query($sql);
 
     setcookie(AUTH_COOKIE, $ticket, time()+AUTH_COOKIE_LENGTH, '/');

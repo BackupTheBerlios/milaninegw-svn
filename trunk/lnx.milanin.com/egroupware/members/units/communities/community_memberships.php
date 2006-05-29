@@ -4,11 +4,11 @@
 /*	
 	if ($page_owner != -1) {
 		if (run("users:type:get", $page_owner) == "person") {
-			$result = db_query("select users.ident from friends
-										left join users on users.ident = friends.friend
-										where friends.owner = $page_owner
-										and users.user_type = 'community'
-										group by friends.friend
+			$result = db_query("select ".tbl_prefix."users.ident from ".tbl_prefix."friends
+										left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend
+										where ".tbl_prefix."friends.owner = $page_owner
+										and ".tbl_prefix."users.user_type = 'community'
+										group by ".tbl_prefix."friends.friend
 										limit 8");
 				
 			$friends = array();
@@ -27,10 +27,10 @@
 						);			
 			$run_result .= "</div>";
 		} else if (run("users:type:get", $page_owner) == "community") {
-			$result = db_query("select users.ident from friends
-										left join users on users.ident = friends.owner
-										where friends.friend = $page_owner
-										group by friends.owner
+			$result = db_query("select ".tbl_prefix."users.ident from ".tbl_prefix."friends
+										left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.owner
+										where ".tbl_prefix."friends.friend = $page_owner
+										group by ".tbl_prefix."friends.owner
 										limit 8");
 			$friends = array();
 			if (sizeof($result) > 0) {

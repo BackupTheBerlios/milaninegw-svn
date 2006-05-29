@@ -8,7 +8,7 @@
 		
 			if (isset($_POST))			
 			if (isset($_POST['profiledetails'])) {
-				db_query("delete from profile_data where owner = '".$page_owner."' and name != 'linkedin'");
+				db_query("delete from ".tbl_prefix."profile_data where owner = '".$page_owner."' and name != 'linkedin'");
 				foreach($_POST['profiledetails'] as $field => $value) {
 
 					if ($value != "") {
@@ -18,12 +18,12 @@
 						$access = addslashes($_POST['profileaccess'][$field]);
 						$owner = (int) $page_owner;
 						
-						db_query("insert into profile_data set name = '$field', value = '$value', access = '$access', owner = '$owner'");
+						db_query("insert into ".tbl_prefix."profile_data set name = '$field', value = '$value', access = '$access', owner = '$owner'");
 						$insert_id = (int) db_id();
 						
 						foreach($data['profile:details'] as $datatype) {
 							if ($datatype[1] == $field && $datatype[2] == "keywords") {
-								db_query("delete from tags where tagtype = '$field' and owner = '$owner'");
+								db_query("delete from ".tbl_prefix."tags where tagtype = '$field' and owner = '$owner'");
 								$keywords = "";
 								$value = str_replace("\n","",$value);
 								$value = str_replace("\r","",$value);
@@ -36,7 +36,7 @@
 										}
 										$keywords .= ($list_item);
 										$list_item = (trim($list_item));
-										db_query("insert into tags set tagtype = '$field', access = '$access', tag = '$list_item', ref = $insert_id, owner = $owner");
+										db_query("insert into ".tbl_prefix."tags set tagtype = '$field', access = '$access', tag = '$list_item', ref = $insert_id, owner = $owner");
 									}
 								}
 								$value = $keywords;

@@ -9,7 +9,7 @@
     // Return userinfo
     function getElggUserInfo($username)
     {        
-        $info = db_query("select * from users where username = '$username'");
+        $info = db_query("select * from ".tbl_prefix."users where username = '$username'");
         
         return $info;
     }
@@ -51,7 +51,7 @@
         $user_id = userNameToId($username);
         $number = (int) $number_of_posts;
         
-        $posts = db_query("select * from weblog_posts where owner = $user_id order by posted desc limit $number");
+        $posts = db_query("select * from ".tbl_prefix."weblog_posts where owner = $user_id order by posted desc limit $number");
         
         return $posts;
     }
@@ -61,7 +61,7 @@
     {
         $post_id = (int) $postid;
         
-        $post = db_query("select * from weblog_posts where ident = $post_id");
+        $post = db_query("select * from ".tbl_prefix."weblog_posts where ident = $post_id");
         
         return $post;
     }
@@ -71,7 +71,7 @@
     {
         $user_id = (int) userNameToId($username);
         
-        db_query("insert into weblog_posts set title = '$title', 
+        db_query("insert into ".tbl_prefix."weblog_posts set title = '$title', 
                   body = '$content', access = '$access', 
                   posted = ".time().", owner = $user_id");
 
@@ -92,7 +92,7 @@
         $post_id = (int) $postid;
         $result = false;
         
-        db_query("update weblog_posts set title = '$title', 
+        db_query("update ".tbl_prefix."weblog_posts.set title = '$title', 
                   body = '$content', access = '$access', 
                   posted = ".time()." where ident = $post_id");
 
@@ -112,11 +112,11 @@
         $result = false;
         
         // Delete tags
-        db_query("delete from tags where tagtype = 'weblog' and ref = $id");
+        db_query("delete from ".tbl_prefix."tags where tagtype = 'weblog' and ref = $id");
         // Delete additional comments
-        db_query("delete from weblog_comments where post_id = $id");
+        db_query("delete from ".tbl_prefix."weblog_comments where post_id = $id");
         // Delete entry
-        db_query("delete from weblog_posts where ident = $id");
+        db_query("delete from ".tbl_prefix."weblog_posts where ident = $id");
 
         if (db_affected_rows() > 0)
         {
@@ -133,7 +133,7 @@
     {
         $user_id = userNameToId($username);
         
-        $result = db_query("select ident from file_folders 
+        $result = db_query("select ident from ".tbl_prefix."file_folders 
                             where parent = -1 
                             and name = 'weblog storage' 
                             and owner = $user_id");
@@ -148,7 +148,7 @@
         else
         {
             // Bummer, we need to create the folder
-            db_query("insert into file_folders
+            db_query("insert into ".tbl_prefix."file_folders
                       set parent = -1,
                       name = 'weblog storage',
                       access = 'PUBLIC',
@@ -222,10 +222,10 @@
         $file_size = filesize($storage_dir.$new_filename);
         
         // Check for quota
-        $total_quota = db_query("select sum(size) as sum from files where owner = $user_id");
+        $total_quota = db_query("select sum(size) as sum from ".tbl_prefix."files where owner = $user_id");
         $total_quota = $total_quota[0]->sum;
 
-        $max_quota = db_query("select file_quota from users where ident = $user_id");
+        $max_quota = db_query("select file_quota from ".tbl_prefix."users where ident = $user_id");
         $max_quota = $max_quota[0]->file_quota;
 
         if ($total_quota + $file_size > $max_quota)
@@ -242,7 +242,7 @@
         else
         {
 
-            db_query("insert into files set owner = ".$user_id.",
+            db_query("insert into ".tbl_prefix."files set owner = ".$user_id.",
                       folder = $folder_id,
                       originalname = '$name',
                       title = '$name',

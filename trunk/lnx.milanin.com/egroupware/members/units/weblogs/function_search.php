@@ -12,7 +12,7 @@
 			$searchline = "tagtype = 'weblog' and owner = $owner and tag = '".addslashes($parameter[1])."'";
 			$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 			$searchline = str_replace("owner","tags.owner",$searchline);
-			$refs = db_query("select ref from tags where $searchline");
+			$refs = db_query("select ref from ".tbl_prefix."tags where $searchline");
 			$searchline = "";
 			if (sizeof($refs) > 0) {
 	
@@ -22,7 +22,7 @@
 					}
 					$searchline .= "weblog_posts.ident = " . $ref->ref;
 				}
-				$posts = db_query("select users.name, users.username, weblog_posts.title, weblog_posts.ident, weblog_posts.weblog, weblog_posts.owner, weblog_posts.posted from weblog_posts left join users on users.ident = weblog_posts.owner where ($searchline) order by posted desc");
+				$posts = db_query("select ".tbl_prefix."users.name, ".tbl_prefix."users.username, ".tbl_prefix."weblog_posts.title, ".tbl_prefix."weblog_posts.ident, ".tbl_prefix."weblog_posts.weblog, ".tbl_prefix."weblog_posts.owner, ".tbl_prefix."weblog_posts.posted from ".tbl_prefix."weblog_posts left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."weblog_posts.owner where ($searchline) order by posted desc");
 				$run_result .= "<h2>Weblog posts by " . stripslashes($posts[0]->name) . " in category '".$parameter[1]."'</h2>\n<ul>";
 				foreach($posts as $post) {
 					$run_result .= "<li>";
@@ -40,15 +40,15 @@
 		$searchline = "tagtype = 'weblog' and tag = '".addslashes($parameter[1])."'";
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 		$searchline = str_replace("owner","tags.owner",$searchline);
-		$sql = "select distinct users.* from tags left join users on users.ident = tags.owner where ($searchline)";
+		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where ($searchline)";
 		if ($parameter[0] == "weblog") {
-			$sql .= " and users.ident != " . $owner;
+			$sql .= " and ".tbl_prefix."users.ident != " . $owner;
 		}
 		$users = db_query($sql);
 		
 		if (sizeof($users) > 0) {
 			if ($parameter[0] == "weblog") {
-				$run_result .= "<h2>Other users with weblog posts in category '".$parameter[1]."'</h2>\n";
+				$run_result .= "<h2>Other ".tbl_prefix."users.with weblog posts in category '".$parameter[1]."'</h2>\n";
 			} else {
 				$run_result .= "<h2>Users with weblog posts in category '".$parameter[1]."'</h2>\n";
 			}
@@ -58,7 +58,7 @@
 	
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {

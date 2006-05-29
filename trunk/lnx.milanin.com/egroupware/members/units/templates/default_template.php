@@ -33,7 +33,9 @@ tinyMCE.init({
 	language: "it"
 });
 </script>
+
 END;
+/**/
 }
 $template['pageshell'] .= <<< END
 <link href="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />

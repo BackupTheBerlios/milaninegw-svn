@@ -1,8 +1,7 @@
 <?php
 
     /*
-     *  Functions related to users
-     */
+     *  Functions related to ".tbl_prefix."users.     */
 
     include path . "units/rpc/libelgg/library.php";
     

@@ -12,16 +12,16 @@
 			if (isset($_POST['defaulticon'])) {
 				$icondefault = (int) $_POST['defaulticon'];
 				if ($icondefault == -1) {
-					db_query("update users set icon = -1 where ident = " . $page_owner);
+					db_query("update ".tbl_prefix."users set icon = -1 where ident = " . $page_owner);
 					$_SESSION['icon'] = "default.png";
 				} else {
-					$iconfilename = db_query("select filename from icons where ident = $icondefault and owner = " . $page_owner);
+					$iconfilename = db_query("select filename from ".tbl_prefix."icons where ident = $icondefault and owner = " . $page_owner);
 					if (sizeof($iconfilename) == 1) {
 						$iconfilename = $iconfilename[0]->filename;
 						if ($page_owner == $_SESSION['userid']) {
 							$_SESSION['icon'] = $iconfilename;
 						}
-						db_query("update users set icon = $icondefault where ident = " . $page_owner);
+						db_query("update ".tbl_prefix."users set icon = $icondefault where ident = " . $page_owner);
 					}
 				}
 			}
@@ -32,7 +32,7 @@
 				foreach($_POST['description'] as $iconid => $newdescription) {
 					$iconid = (int) $iconid;
 					$newdescription = addslashes($newdescription);
-					$result = db_query("select description from icons where ident = $iconid and owner = " . $page_owner);
+					$result = db_query("select description from ".tbl_prefix."icons where ident = $iconid and owner = " . $page_owner);
 					if (sizeof($result) > 0) {
 						if ($result[0]->description != $newdescription) {
 							db_query("update icons set description = '$newdescription' where ident = $iconid");
@@ -48,13 +48,13 @@
 					foreach($_POST['icons_delete'] as $delete_icon) {
 						echo "!";
 						$delete_icon = (int) $delete_icon;
-						$result = db_query("select filename from icons where ident = $delete_icon and owner = " . $page_owner);
+						$result = db_query("select filename from ".tbl_prefix."icons where ident = $delete_icon and owner = " . $page_owner);
 						if (sizeof($result) == 1) {
-							db_query("delete from icons where ident = $delete_icon");
+							db_query("delete from ".tbl_prefix."icons where ident = $delete_icon");
 							@unlink(path . "_icons/data/" . $result[0]->filename);
 						}
 						if ($result[0]->filename = $_SESSION['icon']) {
-							db_query("update users set icon = -1 where ident = " . $page_owner);
+							db_query("update ".tbl_prefix."users set icon = -1 where ident = " . $page_owner);
 							if ($page_owner == $_SESSION['userid']) {
 								$_SESSION['icon'] = "default.png";
 							}
@@ -78,7 +78,7 @@
 				$templocation = $_FILES['iconfile']['tmp_name'];
 				
 				if ($ok == true) {
-					$numicons = db_query("select count(ident) as numicons from icons where owner = " . $page_owner);
+					$numicons = db_query("select count(ident) as numicons from ".tbl_prefix."icons where owner = " . $page_owner);
 					$numicons = (int) $numicons[0]->numicons;
 					if ($numicons >= $_SESSION['icon_quota']) {
 						$ok = false;
@@ -95,7 +95,7 @@
 				if ($ok == true) {
 					if ($imageattr[0] > 100 || $imageattr[1] > 100) {
 						// $ok = false;
-						// $messages[] = "The uploaded icon file was too large. Files must have maximum dimensions of 100x100.";
+						// $messages[] = "The uploaded icon file was too large. ".tbl_prefix."files.must have maximum dimensions of 100x100.";
 						require_once(path . 'units/phpthumb/phpthumb.class.php');
   						$phpThumb = new phpThumb();
   						$phpThumb->setSourceFilename($templocation);
@@ -128,10 +128,10 @@
 					if (move_uploaded_file($_FILES['iconfile']['tmp_name'], $save_location)) {
 						
 						$filedescription = addslashes($_POST['icondescription']);
-						db_query("insert into icons set filename = '$save_file', owner = " . $page_owner . ", description = '$filedescription'");
+						db_query("insert into ".tbl_prefix."icons set filename = '$save_file', owner = " . $page_owner . ", description = '$filedescription'");
 						if ($_POST['icondefault'] == "yes") {
 							$ident = (int) db_id();
-							db_query("update users set icon = $ident where ident = " . $page_owner);
+							db_query("update ".tbl_prefix."users set icon = $ident where ident = " . $page_owner);
 							$_SESSION['icon'] = $save_file;
 						}
 						$messages[] = "Your icon was uploaded successfully.";

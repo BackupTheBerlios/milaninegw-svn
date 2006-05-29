@@ -6,13 +6,13 @@
 	
 		A brief explanation:
 		
-		Communities are a specialisation of users. Each community is just another
-		row in the users table, albeit with user_type set to 'community', which
+		Communities are a specialisation of ".tbl_prefix."users. Each community is just another
+		row in the ".tbl_prefix."users.table, albeit with user_type set to 'community', which
 		allows it to have all the features of a regular user.
 		
 		Friendships are stored in the same way too, but displayed as memberships.
-		The 'owner' field of the users table stores the moderator for a community
-		(for regular users it's set to -1).
+		The 'owner' field of the ".tbl_prefix."users.table stores the moderator for a community
+		(for regular ".tbl_prefix."users.it's set to -1).
 		
 		TO DO:
 		
@@ -27,7 +27,7 @@
 	// Communities actions
 		$function['communities:init'][] = path . "units/communities/communities_actions.php";
 		
-	// Communities modifications of friends actions
+	// Communities modifications of ".tbl_prefix."friends.actions
 		$function['friends:init'][] = path . "units/communities/communities_actions.php";
 	
 	// Communities bar down the right hand side

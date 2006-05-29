@@ -15,7 +15,7 @@
 			$searchline = "tagtype = '".addslashes($parameter[0])."' and tag = '".addslashes($parameter[1])."'";
 			$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 			$searchline = str_replace("owner","tags.owner",$searchline);
-			$result = db_query("select distinct users.* from tags left join users on users.ident = tags.owner where $searchline");
+			$result = db_query("select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where $searchline");
 
 			$parameter[1] = stripslashes($parameter[1]);
 			
@@ -38,7 +38,7 @@ END;
 	
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {

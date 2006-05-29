@@ -16,7 +16,7 @@
 
             if ($var != "")
             {
-                $comment = db_query("select * from weblog_comments where ident = '$var'"); 
+                $comment = db_query("select * from ".tbl_prefix."weblog_comments where ident = '$var'"); 
 
                 $this->ident      = $comment[0]->ident;
                 $this->post_id    = $comment[0]->post_id;
@@ -64,7 +64,7 @@
 
         function delete()
         {
-            db_query("delete from weblog_comments where ident = '$this->ident'");
+            db_query("delete from ".tbl_prefix."weblog_comments where ident = '$this->ident'");
 
             if (db_affected_rows() > 0)
             {

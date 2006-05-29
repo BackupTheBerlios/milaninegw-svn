@@ -14,7 +14,7 @@
 //                                                          //
 // phpThumb() cache filename converter                      //
 // based on an idea by Josh Gruenberg (joshgÿtwcny*rr*com)  //
-// Can convert cached files from phpThumb() v1.2.4 and      //
+// Can convert cached ".tbl_prefix."files.from phpThumb() v1.2.4 and      //
 // newer (v1.1.2 introduced caching, but the cached         //
 // filenames weren't structured in a manner suitable for    //
 // conversion until v1.2.4)                                 //
@@ -228,7 +228,7 @@ if (!empty($_POST['cachedir'])) {
 		echo '"<b>'.htmlentities($cachedir).'</b>" is not a directory!<br>';
 	}
 	if ($skipped > 0) {
-		echo '<i>skipped '.$skipped.' files</i><br>';
+		echo '<i>skipped '.$skipped.' ".tbl_prefix."files./i><br>';
 	}
 	echo '<hr>';
 }

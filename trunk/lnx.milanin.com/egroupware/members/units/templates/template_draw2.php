@@ -23,7 +23,7 @@
 				$template_id = -1;
 			} else {
 				// if (!isset($_SESSION['template_id_cache'][$page_owner])) {
-					$template_id = db_query("select template_id from users where ident = " . $page_owner);
+					$template_id = db_query("select template_id from ".tbl_prefix."users where ident = " . $page_owner);
 					if (sizeof($template_id) > 0) {
 						$template_id = $page_template_id[0]->template_id;
 					} else {

@@ -15,8 +15,8 @@
 		$searchline_files = str_replace("owner", "files.owner", $searchline_files);
 		$searchline_folders = str_replace("access", "file_folders.access", $searchline_folders);
 		$searchline_folders = str_replace("owner", "file_folders.owner", $searchline_folders);
-		$file_refs = db_query("select files.*, users.username, users.name as fullname, ref from tags left join files on files.ident = tags.ref left join users on users.ident = tags.owner where $searchline_files limit 50");
-		$folder_refs = db_query("select file_folders.*, users.username, users.name as fullname, ref from tags left join file_folders on file_folders.ident = tags.ref left join users on users.ident = tags.owner where $searchline_folders limit 50");
+		$file_refs = db_query("select ".tbl_prefix."files.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as fullname, ref from ".tbl_prefix."tags left join ".tbl_prefix."files on ".tbl_prefix."files.ident = tags.ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where $searchline_files limit 50");
+		$folder_refs = db_query("select file_folders.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as fullname, ref from ".tbl_prefix."tags left join file_folders on file_folders.ident = tags.ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where $searchline_folders limit 50");
 		$searchline = "";
 		if (sizeof($folder_refs) > 0) {
 			foreach($folder_refs as $folder) {

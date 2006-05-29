@@ -23,7 +23,7 @@
 	// Get all posts in the system that we can see
 	
 		$where = run("users:access_level_sql_where",$_SESSION['userid']);
-		$posts = db_query("select * from weblog_posts 
+		$posts = db_query("select * from ".tbl_prefix."weblog_posts 
 							where ($where) 
 							and weblog = $profile_id 
 							and posted >= ".gmmktime(0,0,0,$month,1,$year)."

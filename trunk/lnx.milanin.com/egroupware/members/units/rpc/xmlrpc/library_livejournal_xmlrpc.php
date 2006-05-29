@@ -5,17 +5,17 @@
      */
 
     /*
-        checkfriends - Checks to see if your friends list has been updated since a specified time.
+        checkfriends - Checks to see if your ".tbl_prefix."friends.list has been updated since a specified time.
         consolecommand - Run an administrative command.
         editevent - Edit or delete a user's past journal entry
-        editfriendgroups - Edit the user's defined groups of friends.
-        editfriends - Add, edit, or delete friends from the user's friends list.
-        friendof - Returns a list of which other LiveJournal users list this user as their friend.
+        editfriendgroups - Edit the user's defined ".tbl_prefix."groups.of ".tbl_prefix."friends.
+        editfriends - Add, edit, or delete ".tbl_prefix."friends.from the user's ".tbl_prefix."friends.list.
+        friendof - Returns a list of which other LiveJournal ".tbl_prefix."users.list this user as their friend.
         getchallenge - Generate a server challenge string for authentication.
         getdaycounts - This mode retrieves the number of journal entries per day.
         getevents - Download parts of the user's journal.
-        getfriends - Returns a list of which other LiveJournal users this user lists as their friend.
-        getfriendgroups - Retrieves a list of the user's defined groups of friends.
+        getfriends - Returns a list of which other LiveJournal ".tbl_prefix."users.this user lists as their friend.
+        getfriendgroups - Retrieves a list of the user's defined ".tbl_prefix."groups.of ".tbl_prefix."friends.
         login - validate user's password and get base information needed for client to function
         postevent - The most important mode, this is how a user actually submits a new log entry to the server.
         sessionexpire - Expires session cookies.
@@ -74,10 +74,9 @@
         }
 */
         // Always return a struct containing keys, fill according to parameters:
-        // - friendsgroup
-        // - friendsof
-        // - friends
-
+        // - ".tbl_prefix."friends.roup
+        // - ".tbl_prefix."friends.f
+        // - ".tbl_prefix."friends.
         $result = array();
         $result['friends'] = array();
         $limit = "";
@@ -126,7 +125,7 @@
 
         $friends = array();
 
-        // Only if the user has friends...
+        // Only if the user has ".tbl_prefix."friends...
         if(count($user_friends) > 0)
         {
             foreach ($user_friends as $friend_id)

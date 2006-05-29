@@ -4,7 +4,7 @@
 		
 		$tag = addslashes($parameter);
 		
-		$searchline = "select distinct tag, match(tag) against ('".$tag."') as score from tags where ";
+		$searchline = "select distinct tag, match(tag) against ('".$tag."') as score from ".tbl_prefix."tags where ";
 		$searchline .= "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ")";
 		$searchline .= " and (match(tag) against ('".$tag."') > 0) limit 10";
 		

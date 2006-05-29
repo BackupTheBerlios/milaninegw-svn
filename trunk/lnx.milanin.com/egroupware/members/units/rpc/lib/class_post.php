@@ -23,7 +23,7 @@
             // Parameter passed, assume an existing post
             if ($post_id != "")
             {
-                $post = db_query("select * from weblog_posts where ident = '$post_id'");
+                $post = db_query("select * from ".tbl_prefix."weblog_posts where ident = '$post_id'");
 
                 $this->ident     = $post[0]->ident;
                 $this->owner     = $post[0]->owner;
@@ -43,7 +43,7 @@
                     $this->exists = true;
                 }
 
-                $post_tags = db_query("select ident from tags where ref = '$post_id'");
+                $post_tags = db_query("select ident from ".tbl_prefix."tags where ref = '$post_id'");
 
                 // An aray of Tag objects
                 foreach ($post_tags as $tag)
@@ -51,7 +51,7 @@
                     $this->tags[] = $tag->ident;
                 }
 
-                $post_comments = db_query("select ident from weblog_comments where post_id = '$post_id'");
+                $post_comments = db_query("select ident from ".tbl_prefix."weblog_comments where post_id = '$post_id'");
 
                 foreach ($post_comments as $comment)
                 {
@@ -277,7 +277,7 @@
                 // Remove comments
                 $this->deleteComments();
 
-                db_query("delete from weblog_posts where ident = '$this->ident'");
+                db_query("delete from ".tbl_prefix."weblog_posts where ident = '$this->ident'");
 
                 if (db_affected_rows() > 0)
                 {
@@ -308,7 +308,7 @@
                 }
 
                 // Owner is still unmutable
-                db_query("update weblog_posts set 
+                db_query("update ".tbl_prefix."weblog_posts.set 
                           title = '$this->title', 
                           body = '$this->body', 
                           access = '$this->access', 
@@ -325,7 +325,7 @@
             }
             else
             {
-                db_query("insert into weblog_posts set 
+                db_query("insert into ".tbl_prefix."weblog_posts set 
                           title = '$this->title',
                           body = '$this->body',
                           weblog = $this->blog_id, 

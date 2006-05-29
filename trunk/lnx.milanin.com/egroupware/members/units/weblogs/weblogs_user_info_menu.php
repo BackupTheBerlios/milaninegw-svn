@@ -5,7 +5,7 @@
         $sitename = sitename;
         $url = url;
 
-		$posts = db_query("select count(ident) as x from weblog_posts where (".run("users:access_level_sql_where",$profile_id).") and owner = $profile_id");
+		$posts = db_query("select count(ident) as x from ".tbl_prefix."weblog_posts where (".run("users:access_level_sql_where",$profile_id).") and owner = $profile_id");
 		$posts = $posts[0]->x;
 
 		if (logged_on || (isset($page_owner) && $page_owner != -1)) {

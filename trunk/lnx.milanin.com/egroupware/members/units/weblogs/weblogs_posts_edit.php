@@ -2,7 +2,7 @@
 
 	// $username = $_SESSION['username'];
 	
-	$post = db_query("select * from weblog_posts where ident = " . $parameter);
+	$post = db_query("select * from ".tbl_prefix."weblog_posts where ident = " . $parameter);
 	$post = $post[0];
 	
 	$url = url;

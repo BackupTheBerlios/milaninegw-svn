@@ -13,7 +13,7 @@
 			
 			$author = "";
 			
-			$stuff = db_query("select users.* from users where ident = ".$post->owner);
+			$stuff = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."users where ident = ".$post->owner);
 			$stuff = $stuff[0];
 			
 			$author->fullname = stripslashes($stuff->name);
@@ -21,7 +21,7 @@
 			if ($stuff->icon == -1) {
 				$author->icon = "default.png";
 			} else {
-					$icon = db_query("select filename from icons where ident = ".$stuff->icon);
+					$icon = db_query("select filename from ".tbl_prefix."icons where ident = ".$stuff->icon);
 					$author->icon = $icon[0]->filename;
 			}
 			
@@ -31,7 +31,7 @@
 		if (!isset($post->authors[$post->weblog])) {
 				$community = "";
 				
-				$stuff2 = db_query("select users.* from users where ident = ".$post->weblog);
+				$stuff2 = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."users where ident = ".$post->weblog);
 				$stuff2 = $stuff2[0];
 				
 				$community->fullname = stripslashes($stuff2->name);
@@ -39,7 +39,7 @@
 				if ($stuff2->icon == -1) {
 					$community->icon = "default.png";
 				} else {
-						$icon = db_query("select filename from icons where ident = ".$stuff2->icon);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = ".$stuff2->icon);
 						$community->icon = $icon[0]->filename;
 				}
 				
@@ -88,7 +88,7 @@ END;
 		}
 				
 		if (!isset($_SESSION['comment_cache'][$post->ident]) || (time() - $_SESSION['comment_cache'][$post->ident]->created > 120)) {
-			$numcomments = db_query("select count(ident) as numcomments from weblog_comments where post_id = " . $post->ident);
+			$numcomments = db_query("select count(ident) as numcomments from ".tbl_prefix."weblog_comments where post_id = " . $post->ident);
 			$_SESSION['comment_cache'][$post->ident]->created = time();
 			$_SESSION['comment_cache'][$post->ident]->data = $numcomments[0]->numcomments;
 		}
@@ -98,7 +98,7 @@ END;
 
 		if (isset($individual) && ($individual == 1)) {
 			
-			$comments = db_query("select * from weblog_comments where post_id = " . $post->ident . " order by posted asc");
+			$comments = db_query("select * from ".tbl_prefix."weblog_comments where post_id = " . $post->ident . " order by posted asc");
 			
 			$commentsbody = "";
 			
@@ -115,7 +115,7 @@ END;
 END;
 					}
 					if ($comment->owner>0){
-                                          $owners_realname=db_query("select username, name FROM users WHERE ident = ".$comment->owner);
+                                          $owners_realname=db_query("select username, name from ".tbl_prefix."users WHERE ident = ".$comment->owner);
                                           $owners_link=' <a href="'.url.$owners_realname[0]->username.'/">'.$comment->postedname.'</a> ';
                                         }else{
                                           $owners_link=$comment->postedname;

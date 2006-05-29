@@ -20,13 +20,13 @@
 			global $run_context;
 			// echo "<b>" . $run_context . "</b>&nbsp;&nbsp;" . $sql_query . "<br />";
 			if ($sql_query != "") {
-				// echo "<!-- $sql_query -->\n";
-                                preg_match_all('/(?:from|into|join|update)\s+(\w+?)\s/i',$sql_query,$tables);
+//				 echo "<!-- $sql_query -->\n\r";
+                                //preg_match_all('/(?:from|into|join|update)\s+(\w+?)\s/i',$sql_query,$tables);
                                 //echo "<pre>".$sql_query."\n".print_r($tables,1)."\n";
-                                foreach ($tables[1] as $tbl){
+                                //foreach ($tables[1] as $tbl){
                                   //echo "replacing ".$tbl." with ".tbl_prefix.$tbl."\n";
-                                  $sql_query=preg_replace("/$tbl/",tbl_prefix.$tbl,$sql_query);
-                                }
+                                  //$sql_query=preg_replace("/$tbl/",tbl_prefix.$tbl,$sql_query);
+                                //}
                                 //echo "launching: ".$sql_query."\n</pre>";
 				if ($result = @mysql_query($sql_query)) {
 					$data = array();
@@ -38,7 +38,7 @@
 					$querycache[$sql_query] = $data;
 					return $data;
 				} else {
-					// echo $sql_query . " :: " . @mysql_error() . "<br />\n";
+					 echo '<!--'.$sql_query . " :: " . @mysql_error() . " -->\n";
 					$querycache[$sql_query] = FALSE;
 					return FALSE;
 				}

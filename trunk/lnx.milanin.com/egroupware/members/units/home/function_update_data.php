@@ -7,14 +7,14 @@ if (isset($_POST['home']['title']) && isset($_POST['home']['data'])) {
     if (isset($result[0]->ident) && $result[0]->ident>0){
       $body_sql="update home_data set value='".$_POST['home']['data']."' where ident =".$result[0]->ident;
     }else{
-      $body_sql="insert into home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'body','".$_POST['home']['data']."')";
+      $body_sql="insert into ".tbl_prefix."home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'body','".$_POST['home']['data']."')";
     }
   //Do we have a page title already ?
     $result = db_query("select ident from home_data where owner = $page_owner AND name = 'title'");
     if (isset($result[0]->ident)){
       $title_sql="update home_data set value='".$_POST['home']['title']."' where ident =".$result[0]->ident;
     }else{
-      $title_sql="insert into home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'title','".$_POST['home']['title']."')";
+      $title_sql="insert into ".tbl_prefix."home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'title','".$_POST['home']['title']."')";
     }
   //Should be ready to sql...
     db_query($body_sql);

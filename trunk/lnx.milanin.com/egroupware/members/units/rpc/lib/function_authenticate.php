@@ -66,7 +66,7 @@
     
     if (isset($username))
     {
-        $result = db_query("select password from users where username = '$username'");
+        $result = db_query("select password from ".tbl_prefix."users where username = '$username'");
         
         if (sizeof($result) > 0)
         {

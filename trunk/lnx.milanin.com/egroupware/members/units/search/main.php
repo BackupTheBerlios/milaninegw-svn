@@ -11,8 +11,7 @@
 	// Suggest tags
 		$function['search:tags:suggest'][] = path . "units/search/search_suggest_tags.php";
 		
-	// Suggest users
-		$function['search:users:suggest'][] = path . "units/search/search_suggest_users.php";
+	// Suggest ".tbl_prefix."users.		$function['search:users:suggest'][] = path . "units/search/search_suggest_users.php";
 		
 	// Suggest RSS
 		$function['search:rss:suggest'][] = path . "units/search/search_suggest_rss.php";

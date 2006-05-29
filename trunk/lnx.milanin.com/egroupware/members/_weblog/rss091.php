@@ -24,7 +24,7 @@
 
 <rss version="0.91">
 END;
-			$info = db_query("select * from users where ident = $page_owner");
+			$info = db_query("select * from ".tbl_prefix."users where ident = $page_owner");
 			if (sizeof($info) > 0) {
 				$info = $info[0];
 				$name = htmlentities(stripslashes($info->name));
@@ -38,7 +38,7 @@ END;
     <language>en-gb</language>
     <link>$mainurl</link>
 END;
-				$entries = db_query("select * from weblog_posts where weblog = $page_owner and access = 'PUBLIC' order by posted desc limit 10");
+				$entries = db_query("select * from ".tbl_prefix."weblog_posts where weblog = $page_owner and access = 'PUBLIC' order by posted desc limit 10");
 				if (sizeof($entries) > 0) {
 					foreach($entries as $entry) {
 						$title = htmlentities(stripslashes($entry->title));

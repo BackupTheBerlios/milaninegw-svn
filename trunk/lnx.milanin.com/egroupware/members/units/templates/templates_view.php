@@ -1,6 +1,6 @@
 <?php
 
-		$user_template = db_query("select template_id from users where ident = " . $_SESSION['userid']);
+		$user_template = db_query("select template_id from ".tbl_prefix."users where ident = " . $_SESSION['userid']);
 		$user_template = $user_template[0]->template_id;
               $sitename = sitename;
 		$panel = <<< END

@@ -355,7 +355,7 @@ class phpthumb {
 							$DeletedKeys[] = $oldcachefile;
 						}
 					} else {
-						// there are few enough files to keep the rest
+						// there are few enough ".tbl_prefix."files.to keep the rest
 						break;
 					}
 				}
@@ -375,7 +375,7 @@ class phpthumb {
 								$DeletedKeys[] = $oldcachefile;
 							}
 						} else {
-							// the rest of the files are new enough to keep
+							// the rest of the ".tbl_prefix."files.are new enough to keep
 							break;
 						}
 					}
@@ -396,8 +396,7 @@ class phpthumb {
 							$DeletedKeys[] = $oldcachefile;
 						}
 					} else {
-						// the total filesizes are small enough to keep the rest of the files
-						break;
+						// the total ".tbl_prefix."files.zes are small enough to keep the rest of the ".tbl_prefix."files.						break;
 					}
 				}
 				foreach ($DeletedKeys as $oldcachefile) {
@@ -1145,7 +1144,7 @@ class phpthumb {
 						}
 						$mask_filename = $this->ResolveFilenameToAbsolute($parameter);
 						if (@is_readable($mask_filename) && ($fp_mask = @fopen($mask_filename, 'rb'))) {
-							$MaskImageData = fread($fp_mask, filesize($mask_filename));
+							$MaskImageData = fread($fp_mask,filesize($mask_filename));
 							fclose($fp_mask);
 							if ($gdimg_mask = $this->ImageCreateFromStringReplacement($MaskImageData)) {
 								$this->is_alpha = true;

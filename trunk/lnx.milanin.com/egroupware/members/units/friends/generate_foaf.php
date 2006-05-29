@@ -2,7 +2,7 @@
 
 	$user_id = (int) $parameter;
 	
-	$user = db_query("select * from users where ident = $user_id");
+	$user = db_query("select * from ".tbl_prefix."users where ident = $user_id");
 	
 	if (sizeof($user) > 0) {
 
@@ -14,7 +14,7 @@
 		$shamail = sha1("mailto:" . $user->email);
 		
 		if ($user->icon != -1) {
-			$icon = db_query("select * from icons where ident = " . $user->icon);
+			$icon = db_query("select * from ".tbl_prefix."icons where ident = " . $user->icon);
 			$icon = $icon[0];
 			$iconstring = "<foaf:depiction rdf:resource=\"". url . "_icons/data/".$icon->filename."\" />";
 		} else {
@@ -41,7 +41,7 @@
 		{$iconstring}
 END;
 
-		$friends = db_query("select users.* from friends left join users on users.ident = friends.friend where friends.owner = " . $user->ident);
+		$friends = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."friends left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend where ".tbl_prefix."friends.owner = " . $user->ident);
 		if (sizeof($friends) > 0) {
 			foreach($friends as $friend) {
 				$name = htmlentities(stripslashes($friend->name));
@@ -50,7 +50,7 @@ END;
 				$personalurl = url . $username . "/";
 				$foafurl = $personalurl . "foaf/";
 				if ($friend->icon != -1) {
-					$icon = db_query("select * from icons where ident = " . $friend->icon);
+					$icon = db_query("select * from ".tbl_prefix."icons where ident = " . $friend->icon);
 					$icon = $icon[0];
 					$iconstring = "<foaf:depiction rdf:resource=\"". url . "_icons/data/".$icon->filename."\" />";
 				} else {

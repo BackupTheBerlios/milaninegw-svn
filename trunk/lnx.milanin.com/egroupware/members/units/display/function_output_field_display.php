@@ -63,10 +63,10 @@
 							sort($keyword_list);
 							$where = run("users:access_level_sql_where",$_SESSION['userid']);
 							foreach($keyword_list as $key => $list_item) {
-								$numberofkeywords = db_query("select count(ident) as number from profile_data where ($where) and name = '".$parameter[2]."' and value like \"%[[".$list_item."]]%\"");
+								$numberofkeywords = db_query("select count(ident) as number from ".tbl_prefix."profile_data where ($where) and name = '".$parameter[2]."' and value like \"%[[".$list_item."]]%\"");
 								$number = $numberofkeywords[0]->number;
 								if ($number > 1) {
-									$keywords .= "<a href=\"/profile/search.php?".$parameter[2]."=".$list_item."\" title=\"$number users\">";
+									$keywords .= "<a href=\"/profile/search.php?".$parameter[2]."=".$list_item."\" title=\"$number ".tbl_prefix."users.">";
 								}
 								$keywords .= $list_item;
 								if ($number > 1) {
@@ -79,17 +79,17 @@
 						}
 						$run_result = $keywords; */
 						$where = run("users:access_level_sql_where",$_SESSION['userid']);
-						echo "<!-- select * from tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by tag asc\n";
+						//echo "<!-- select * from ".tbl_prefix."tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by tag asc\n";
 						
-						$tags = db_query("select * from tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by ident asc");
+						$tags = db_query("select * from ".tbl_prefix."tags where ($where) and tagtype = '".addslashes($parameter[2])."' and ref = ".$parameter[4]." order by ident asc");
 						$keywords = "";
-						echo "tags: ".print_r($tags,1)."-->\n";
+						//echo "tags: ".print_r($tags,1)."-->\n";
 						if (sizeof($tags) > 0) {
 							foreach($tags as $key => $tag) {
 								if ($key > 0) {
 									$keywords .= ", ";
 								}
-								$numberoftags = db_query("select count(ident) as number from tags where tag = '".$tag->tag."'");
+								$numberoftags = db_query("select count(ident) as number from ".tbl_prefix."tags where tag = '".$tag->tag."'");
 								$numberoftags = $numberoftags[0]->number;
 								if ($numberoftags > 1) {
 									$keywords .= "<a href=\"".url."search/index.php?".$parameter[2]."=".urlencode(stripslashes($tag->tag))."&ref=".$parameter[4]."&owner=".$parameter[5]."\" >";

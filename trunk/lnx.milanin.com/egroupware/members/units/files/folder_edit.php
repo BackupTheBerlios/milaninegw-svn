@@ -9,7 +9,7 @@
 		global $this_folder;
 		global $folder_name;
 		$folder_name = htmlentities($folder_name);
-		$folder_details = db_query("select * from file_folders where ident = " . $this_folder);
+		$folder_details = db_query("select * from ".tbl_prefix."file_folders where ident = " . $this_folder->ident);
 		$folder_details = $folder_details[0];
 		if ($folder_details->owner == $_SESSION['userid'] || $folder_details->files_owner == $_SESSION['userid']) {
 		$run_result .= <<< END
@@ -87,7 +87,7 @@ END;
 	}
 	$run_result .= <<< END
 	<h2>
-		Upload files and folders
+		Upload files.and folders
 	</h2>
 	<form action="" method="post">
 END;
@@ -166,14 +166,14 @@ END;
 						$body .= "Used space: ";
 					}
 					
-					// $quota = db_query("select sum(size) as totalsize from files where owner = ".$_SESSION['userid']);
-					$quota = db_query("select sum(size) as totalsize from files where files.files_owner = ". $page_owner);
+					// $quota = db_query("select sum(size) as totalsize from ".tbl_prefix."files where owner = ".$_SESSION['userid']);
+					$quota = db_query("select sum(size) as totalsize from ".tbl_prefix."files where ".tbl_prefix."files.files_owner = ". $page_owner);
 					$quota = $quota[0]->totalsize;
 					$body .= round(($quota / 1000000),4);
 					$body .= "Mb of a total ";
 
-					// $quota = db_query("select file_quota from users where ident = " . $_SESSION['userid']);
-					$quota = db_query("select file_quota from users where ident = " . $page_owner);
+					// $quota = db_query("select file_quota from ".tbl_prefix."users where ident = " . $_SESSION['userid']);
+					$quota = db_query("select file_quota from ".tbl_prefix."users where ident = " . $page_owner);
 					$quota = $quota[0]->file_quota;
 					$body .= round(($quota / 1000000),4) . "Mb.";
 	$body .= <<< END

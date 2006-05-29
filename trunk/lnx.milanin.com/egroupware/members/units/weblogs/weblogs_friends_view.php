@@ -14,7 +14,7 @@
 		}
 		$weblog_offset = (int) $weblog_offset;
 		
-	// Get all posts in the system by our friends that we can see
+	// Get all posts in the system by our ".tbl_prefix."friends.that we can see
 	
 		$friends = run("friends:get",array($page_owner));
 		
@@ -36,11 +36,11 @@
 		$where1 = run("users:access_level_sql_where",$_SESSION['userid']);
 		// if (!isset($_SESSION['friends_posts_cache']) || (time() - $_SESSION['friends_posts_cache']->created > 60)) {
 			// $_SESSION['friends_posts_cache']->created = time();
-			// $_SESSION['friends_posts_cache']->data = db_query("select * from weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
+			// $_SESSION['friends_posts_cache']->data = db_query("select * from ".tbl_prefix."weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
 		// }
 		// $posts = $_SESSION['friends_posts_cache']->data;
-		$posts = db_query("select * from weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
-		$numberofposts = db_query("select count(ident) as numberofposts from weblog_posts where ($where1) and ($where2)");
+		$posts = db_query("select * from ".tbl_prefix."weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
+		$numberofposts = db_query("select count(ident) as numberofposts from ".tbl_prefix."weblog_posts where ($where1) and ($where2)");
 		$numberofposts = $numberofposts[0]->numberofposts;
 		
 		if (sizeof($posts > 0)) {

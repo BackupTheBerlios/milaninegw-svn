@@ -25,7 +25,7 @@
 																$userdetails_ok = "no";
 															} else {
 																$email = addslashes($email);
-																db_query("update users set email = '$email' where ident = $id");
+																db_query("update ".tbl_prefix."users set email = '$email' where ident = $id");
 																if ($_SESSION['userid'] == $page_owner) {
 																	$_SESSION['email'] = stripslashes($email);
 																}
@@ -36,7 +36,7 @@
 														if ($userdetails_ok == "yes") {
 															$messages[] = "Name updated.";
 															$id = (int) $page_owner;
-															db_query("update users set name = '$name' where ident = $id");
+															db_query("update ".tbl_prefix."users set name = '$name' where ident = $id");
 															if ($_SESSION['userid'] == $page_owner) {
 																$_SESSION['name'] = stripslashes($name);
 															}
@@ -56,7 +56,7 @@
 																$messages[] = "Password not changed: Your password can only consist of letters or numbers.";
 															} else {
 																$messages[] = "Your password was updated.";
-																db_query("update users set password = '".md5($password1)."' where ident = " . $page_owner);
+																db_query("update ".tbl_prefix."users set password = '".md5($password1)."' where ident = " . $page_owner);
 															}
 														} else {
 															$messages[] = "Password not changed: The password and its verification string did not match.";

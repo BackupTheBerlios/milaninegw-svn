@@ -30,7 +30,7 @@
          *
          * <p>Will set all weblog properties, if the provided weblog id exist 
          * (which effectively will be a user id, regardless if one is dealing 
-         * with a person or a community - for Elgg both are users).</p>
+         * with a person or a community - for Elgg both are ".tbl_prefix."users..</p>
          * 
          * @param int $user_id The user id.
          * @param int $blog_id The weblog id.
@@ -46,7 +46,7 @@
             }
             elseif (is_string($user_id))
             {
-                $query = db_query("select ident from users where username = $user_id");
+                $query = db_query("select ident from ".tbl_prefix."users where username = $user_id");
                 $this->user_id = $query->ident;
             }
 
@@ -56,25 +56,25 @@
             }
             elseif (is_string($blog_id))
             {
-                $query = db_query("select ident from users where username = $blog_id");
+                $query = db_query("select ident from ".tbl_prefix."users where username = $blog_id");
                 $this->ident = $query->ident;
             }
 
             // Are we dealing with a person or a community?
             if (run("users:type:get", $this->ident) == "person")
             {
-                $result = db_query("select users.name, 
-                                    users.username, 
-                                    weblog_posts.ident, 
-                                    weblog_posts.weblog, 
-                                    weblog_posts.access, 
-                                    weblog_posts.posted, 
-                                    weblog_posts.title 
-                                    from users, weblog_posts 
-                                    where users.ident = '$this->user_id' 
-                                    and weblog_posts.owner = '$this->user_id' 
-                                    and weblog_posts.weblog = '$this->user_id'
-                                    order by weblog_posts.posted desc");
+                $result = db_query("select ".tbl_prefix."users.name, 
+                                    ".tbl_prefix."users.username, 
+                                    ".tbl_prefix."weblog_posts.ident, 
+                                    ".tbl_prefix."weblog_posts.weblog, 
+                                    ".tbl_prefix."weblog_posts.access, 
+                                    ".tbl_prefix."weblog_posts.posted, 
+                                    ".tbl_prefix."weblog_posts.title 
+                                    from ".tbl_prefix."users, ".tbl_prefix."weblog_posts.
+                                    where ".tbl_prefix."users.ident = '$this->user_id' 
+                                    and ".tbl_prefix."weblog_posts.owner = '$this->user_id' 
+                                    and ".tbl_prefix."weblog_posts.weblog = '$this->user_id'
+                                    order by ".tbl_prefix."weblog_posts.posted desc");
 
                 $this->user_name     = $result[0]->name;
                 $this->user_username = $result[0]->username;
@@ -89,7 +89,7 @@
                 $this->community = true;
 
                 // Get the owner
-                $sql_owner = db_query("select owner from users where ident = $this->ident");
+                $sql_owner = db_query("select owner from ".tbl_prefix."users where ident = $this->ident");
                 $this->blog_owner = $sql_owner[0]->owner;
 
                 // Inject an SQL restriction if the user is not owner
@@ -97,18 +97,18 @@
                 
                 if ($this->blog_owner != $this->user_id)
                 {
-                    $sql_insert = " and weblog_posts.owner = $this->user_id ";
+                    $sql_insert = " and ".tbl_prefix."weblog_posts.owner = $this->user_id ";
                 }
 
-                $result = db_query("select users.name, 
-                                    users.username,
-                                    users.owner, 
-                                    weblog_posts.ident 
-                                    from users, weblog_posts 
-                                    where users.ident = $this->ident 
-                                    and weblog_posts.weblog = $this->ident
+                $result = db_query("select ".tbl_prefix."users.name, 
+                                    ".tbl_prefix."users.username,
+                                    ".tbl_prefix."users.owner, 
+                                    ".tbl_prefix."weblog_posts.ident 
+                                    from ".tbl_prefix."users, ".tbl_prefix."weblog_posts.
+                                    where ".tbl_prefix."users.ident = $this->ident 
+                                    and ".tbl_prefix."weblog_posts.weblog = $this->ident
                                     $sql_insert
-                                    order by weblog_posts.posted desc");
+                                    order by ".tbl_prefix."weblog_posts.posted desc");
 
                 $this->blog_name     = $result[0]->name;
                 $this->blog_username = $result[0]->username;

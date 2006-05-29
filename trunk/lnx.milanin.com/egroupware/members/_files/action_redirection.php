@@ -1,6 +1,6 @@
 <?php
 
-	//	ELGG files perform-action-then-redirect page
+	//	ELGG ".tbl_prefix."files.perform-action-then-redirect page
 
 	// Run includes
 		require("../includes.php");

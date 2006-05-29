@@ -1,6 +1,6 @@
 <?php
 
-	//	ELGG manage files page
+	//	ELGG manage ".tbl_prefix."files.page
 
 	// Run includes
 		require("../includes.php");
@@ -10,14 +10,12 @@
 		run("profile:init");
 		run("files:init");
 
-	// Whose files are we looking at?
+	// Whose ".tbl_prefix."files.are we looking at?
 
 		global $page_owner;
 		$title = run("profile:display:name") . " :: Files";
-
 		$body = run("content:files:view");
 		$body .= run("files:view");
-		
 		echo run("templates:draw:page", array(
 					$title,
 					run("templates:draw", array(

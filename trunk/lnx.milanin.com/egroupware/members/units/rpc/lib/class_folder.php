@@ -24,11 +24,11 @@
             {
                 if (is_numeric($var))
                 {
-                    $folder= db_query("select * from file_folders where ident = '$var'");
+                    $folder= db_query("select * from ".tbl_prefix."file_folders where ident = '$var'");
                 }
                 else
                 {
-                    $folder= db_query("select * from file_folders where name = '$var'");
+                    $folder= db_query("select * from ".tbl_prefix."file_folders where name = '$var'");
                 }
 
                 $this->ident       = $folder[0]->ident;
@@ -44,21 +44,21 @@
                     $this->exists = true;
                 }
 
-                $folder_childs = db_query("select * from file_folders where parent = '$var'");
+                $folder_childs = db_query("select * from ".tbl_prefix."file_folders where parent = '$var'");
 
                 foreach ($folder_childs as $child)
                 {
                     $this->child_folders[] = $child->ident;
                 }
 
-                $file_childs = db_query("select * from files where parent = '$var'");
+                $file_childs = db_query("select * from ".tbl_prefix."files where parent = '$var'");
 
                 foreach ($file_childs as $child)
                 {
                     $this->child_files[] = $child->ident;
                 }
 
-                $folder_tags = db_query("select ident from tags where ref = '$var'");
+                $folder_tags = db_query("select ident from ".tbl_prefix."tags where ref = '$var'");
 
                 // An aray of Tag objects
                 foreach ($post_tags as $tag)
@@ -264,7 +264,7 @@
             }
             else
             {
-                db_query("insert into file_folders 
+                db_query("insert into ".tbl_prefix."file_folders 
                           set parent = $this->parent,
                           name = '$this->name',
                           access = '$this->access',
@@ -294,8 +294,7 @@
         {
             // TODO refactor to handle more sophisticated operations like cut, paste, move
 
-            // Also delete all subfolders and files
-            db_query("delete from file_folders where ident = $this->ident");
+            // Also delete all subfolders and ".tbl_prefix."files.            db_query("delete from ".tbl_prefix."file_folders where ident = $this->ident");
 
             // Delete tags
             $this->deleteTags();

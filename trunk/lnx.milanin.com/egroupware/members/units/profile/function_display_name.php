@@ -7,7 +7,7 @@
 	
 	if (!isset($name_cache[$profile_id]) || (time() - $name_cache[$profile_id]->created > 60)) {
 		
-		$result = db_query("select name from users where ident = '$profile_id'");
+		$result = db_query("select name from ".tbl_prefix."users where ident = '$profile_id'");
 		// echo stripslashes($result[0]->name);
 	
 		$name_cache[$profile_id]->created = time();

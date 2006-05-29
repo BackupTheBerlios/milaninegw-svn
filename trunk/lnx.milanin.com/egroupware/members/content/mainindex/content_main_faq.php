@@ -29,7 +29,7 @@
 </ul>
 <h3>Friends</h3>
 <ul>
-	<li>How do I link to my friends?</li>
+	<li>How do I link to my ".tbl_prefix."friends.</li>
 	<li>What constitutes a friend I can link to?</li>
 </ul>
 <h3>Customise</h3>

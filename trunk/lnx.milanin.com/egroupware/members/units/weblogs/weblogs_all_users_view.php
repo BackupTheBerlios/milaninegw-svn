@@ -17,11 +17,11 @@
 		$where1 = run("users:access_level_sql_where",$_SESSION['userid']);
 		// if (!isset($_SESSION['friends_posts_cache']) || (time() - $_SESSION['friends_posts_cache']->created > 60)) {
 			// $_SESSION['friends_posts_cache']->created = time();
-			// $_SESSION['friends_posts_cache']->data = db_query("select * from weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
+			// $_SESSION['friends_posts_cache']->data = db_query("select * from ".tbl_prefix."weblog_posts where ($where1) and ($where2) order by posted desc limit $weblog_offset,25");
 		// }
 		// $posts = $_SESSION['friends_posts_cache']->data;
-		$posts = db_query("select * from weblog_posts where ($where1) order by posted desc limit $weblog_offset,25");
-		$numberofposts = db_query("select count(ident) as numberofposts from weblog_posts where ($where1)");
+		$posts = db_query("select * from ".tbl_prefix."weblog_posts where ($where1) order by posted desc limit $weblog_offset,25");
+		$numberofposts = db_query("select count(ident) as numberofposts from ".tbl_prefix."weblog_posts where ($where1)");
 		$numberofposts = $numberofposts[0]->numberofposts;
 		
 		if (sizeof($posts > 0)) {

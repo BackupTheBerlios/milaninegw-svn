@@ -25,7 +25,7 @@
 
             if ($var != "")
             {
-                $file = db_query("select * from files where ident = $var");
+                $file = db_query("select * from ".tbl_prefix."files where ident = $var");
 
                 $this->ident         = $var;
                 $this->owner         = $file[0]->owner;
@@ -245,7 +245,7 @@
             $user = run('users:instance', array('user_id' => $this->owner));
             
             $quotum = $user->getFileQuota();
-            $quotum_used = db_query("select sum(size) as sum from files where owner = $this->owner");
+            $quotum_used = db_query("select sum(size) as sum from ".tbl_prefix."files where owner = $this->owner");
             $quotum_used = $quotum_used[0]->sum;
 
             if ($quotum_used + $size > $quotum)
@@ -309,7 +309,7 @@
         {
             if ($this->exists == false)
             {
-                db_query("insert into files set owner = $this->owner,
+                db_query("insert into ".tbl_prefix."files set owner = $this->owner,
                           files_owner = $this->files_owner,
                           folder = $this->folder,
                           originalname = '$this->originalname',
@@ -340,7 +340,7 @@
             }
             else
             {
-                db_query("update files set 
+                db_query("update ".tbl_prefix."files.set 
                           folder = $this->folder,
                           title = '$this->title',
                           description = 'Automated upload',

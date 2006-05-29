@@ -7,9 +7,9 @@
 	$url = url;
 		
 	// Get all icons associated with a user
-		$icons = db_query("select * from icons where owner = $page_owner");
+		$icons = db_query("select * from ".tbl_prefix."icons where owner = $page_owner");
 		if ($page_owner != $_SESSION['userid']) {
-			$currenticon = db_query("select icons.filename, users.icon from users left join icons on icons.ident = users.icon where users.ident = $page_owner");
+			$currenticon = db_query("select icons.filename, ".tbl_prefix."users.icon from ".tbl_prefix."users left join icons on icons.ident = ".tbl_prefix."users.icon where ".tbl_prefix."users.ident = $page_owner");
 			$currenticon = $currenticon[0]->filename;
 		} else {
 			$currenticon = $_SESSION['icon'];

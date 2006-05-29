@@ -2,7 +2,7 @@
 
 	// Get communities
 	
-		$communities = db_query("select * from users where owner = " . $_SESSION['userid']);
+		$communities = db_query("select * from ".tbl_prefix."users where owner = " . $_SESSION['userid']);
 	
 		if (sizeof($communities) > 0) {
 			foreach($communities as $community) {
@@ -12,11 +12,11 @@
 			}
 		}
 		
-		$communities = db_query("select users.* from friends 
-										left join users on users.ident = friends.friend 
-										where users.user_type = 'community' 
-										and users.owner <> " . $_SESSION['userid'] . "
-										and friends.owner = " . $_SESSION['userid']);
+		$communities = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."friends 
+										left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend 
+										where ".tbl_prefix."users.user_type = 'community' 
+										and ".tbl_prefix."users.owner <> " . $_SESSION['userid'] . "
+										and ".tbl_prefix."friends.owner = " . $_SESSION['userid']);
 		
 		if (sizeof($communities) > 0) {
 			foreach($communities as $community) {
@@ -26,6 +26,6 @@
 			}
 		}
 		
-		$communities = db_query("select * from users where owner = " . $_SESSION['userid']);
+		$communities = db_query("select * from ".tbl_prefix."users where owner = " . $_SESSION['userid']);
 
 ?>

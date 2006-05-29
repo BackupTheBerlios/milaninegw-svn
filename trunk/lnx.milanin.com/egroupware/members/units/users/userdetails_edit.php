@@ -8,7 +8,7 @@
 		$name = htmlentities($_SESSION['name']);
 		$email = htmlentities($_SESSION['email']);
 	} else {
-		$info = db_query("select * from users where ident = $page_owner");
+		$info = db_query("select * from ".tbl_prefix."users where ident = $page_owner");
 		$info = $info[0];
 		$name = htmlentities(stripslashes($info->name));
 		$email = htmlentities(stripslashes($info->email));
@@ -40,7 +40,7 @@ END;
 		Your email address
 	</h3>
 	<p>
-		This will not be displayed to other users; you can choose to make an email address available via the profile screen.
+		This will not be displayed to other ".tbl_prefix."users. you can choose to make an email address available via the profile screen.
 	</p>
 	
 END;

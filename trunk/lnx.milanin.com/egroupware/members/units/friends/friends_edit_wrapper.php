@@ -2,7 +2,7 @@
 
 		global $page_owner;
 		
-		$title = run("profile:display:name") . " :: Friends";
+		$title = run("profile:display:name") . " :: ".tbl_prefix."friends.;
 
 		$body = run("content:friends:manage");
 		$body .= run("friends:edit",array($page_owner));

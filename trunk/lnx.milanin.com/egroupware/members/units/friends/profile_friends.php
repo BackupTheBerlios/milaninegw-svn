@@ -3,11 +3,11 @@
 	global $page_owner;
 	/*
 	if ($page_owner != -1 && run("users:type:get", $page_owner) == "person") {
-		$result = db_query("select users.ident from friends
-									left join users on users.ident = friends.friend
-									where friends.owner = $page_owner
-									and users.user_type = 'person'
-									group by friends.friend
+		$result = db_query("select ".tbl_prefix."users.ident from ".tbl_prefix."friends
+									left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend
+									where ".tbl_prefix."friends.owner = $page_owner
+									and ".tbl_prefix."users.user_type = 'person'
+									group by ".tbl_prefix."friends.friend
 									limit 8");
 			
 		$friends = array();
@@ -30,7 +30,7 @@
 		} else {
 			$run_result .= run("users:infobox",
 												array(
-														"Your Friends",
+														"Your ".tbl_prefix."friends.,
 														$friends,
 														"<a href=\"".url.$_SESSION['username']."/friends/\">Friends Screen</a>
 														 (<a href=\"".url.$_SESSION['username']."/foaf/\">FOAF</a>)"

@@ -33,10 +33,10 @@
 														$invitations = db_query("select count(ident) as num_invitations from invitations where email = '$email'");
 														$invitations = $invitations[0]->num_invitations;
 														if ($invitations == 0) {
-															$accounts = db_query("select ident, username from users where email = '$email'");
+															$accounts = db_query("select ident, username from ".tbl_prefix."users where email = '$email'");
 															if (sizeof($accounts) ==0) {
 																$code = substr(md5(time() . $_SESSION['username']),0,7);
-																db_query("insert into invitations set name = '$name', email = '$email', code='$code', added = " . time() . ", owner = " . $_SESSION['userid']);
+																db_query("insert into ".tbl_prefix."invitations set name = '$name', email = '$email', code='$code', added = " . time() . ", owner = " . $_SESSION['userid']);
 																if ($_REQUEST['invite_text'] != "") {
 																	$invitetext = "They included the following message:\n\n----------\n" . stripslashes($_REQUEST['invite_text']) . "\n----------";
 																}
@@ -105,7 +105,7 @@ END;
 																	$messages[] = "Error! Your username must contain letters and numbers only, cannot be blank, and must be between 3 and 12 characters in length.";
 																} else {
 																	$username = strtolower(addslashes($_REQUEST['join_username']));
-																	$usernametaken = db_query("select count(ident) as taken from users where username = '$username'");
+																	$usernametaken = db_query("select count(ident) as taken from ".tbl_prefix."users where username = '$username'");
 																	$usernametaken = $usernametaken[0]->taken;
 																	if ($usernametaken > 0) {
 																		$messages[] = "The username '$username' is already taken by another user. You will need to pick a different one.";
@@ -115,18 +115,18 @@ END;
 																		$password = addslashes(md5($_REQUEST['join_password1']));
 																		$details = $details[0];
 																		$email = $details->email;
-																		db_query("insert into users set name = '$name',
+																		db_query("insert into ".tbl_prefix."".tbl_prefix."users set name = '$name',
 																									password='$password',
 																									username = '$username',
 																									email = '$email'");
 																		$ident = db_id();
 																		$owner = (int) $details->owner;
 																		if ($owner != -1) {
-																			db_query("insert into friends set owner = $owner, friend = $ident");
-																			db_query("insert into friends set owner = $ident, friend = $owner");
+																			db_query("insert into ".tbl_prefix."".tbl_prefix."friends.set owner = $owner, friend = $ident");
+																			db_query("insert into ".tbl_prefix."".tbl_prefix."friends.set owner = $ident, friend = $owner");
 																		}
 																		if ($owner != 1) {
-																			db_query("insert into friends set owner = $ident, friend = 1");
+																			db_query("insert into ".tbl_prefix."".tbl_prefix."friends.set owner = $ident, friend = 1");
 																		}
 																		$_SESSION['messages'][] = "Your account was created! You can now log in using the username and password you supplied. You have been sent an email containing these details for reference purposes.";
 																		db_query("delete from invitations where code = '$code'");
@@ -156,11 +156,11 @@ The $sitename Team"), "From: $sitename <".email.">");
 												break;
 				// Request a new password
 					case "invite_password_request":		if (isset($_REQUEST['password_request_name'])) {
-														$users = db_query("select ident, email from users where username = '".addslashes($_REQUEST['password_request_name'])."' and user_type = 'person'");
+														$users = db_query("select ident, email from ".tbl_prefix."users where username = '".addslashes($_REQUEST['password_request_name'])."' and user_type = 'person'");
 														if (sizeof($users) > 0) {
 															$code = substr(md5(time() . $_REQUEST['password_request_name']),0,7);
 															$ident = $users[0]->ident;
-															db_query("insert into password_requests set code = '$code', owner = $ident");
+															db_query("insert into ".tbl_prefix."password_requests set code = '$code', owner = $ident");
 															$url = url . "_invite/new_password.php?passwordcode=" . $code;
 															mail(stripslashes($users[0]->email), "Verify your $sitename account password request", wordwrap("
 A request has been received to generate your account at

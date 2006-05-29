@@ -32,12 +32,12 @@
             if (is_numeric($var))
             {
                 // Numeric, we probably received a userid
-                $info = db_query("select * from users where ident = '$var'");
+                $info = db_query("select * from ".tbl_prefix."users where ident = '$var'");
             }
             elseif(is_string($var))
             {
                 // String, we probably recieved a username
-                $info = db_query("select * from users where username = '$var'");
+                $info = db_query("select * from ".tbl_prefix."users where username = '$var'");
             }
 
             if (sizeof($info) > 0)
@@ -58,11 +58,11 @@
                 $this->lastname        = preg_replace('/^.*\s/', '', $name);
                 
                 // Load the weblog id's, starting with communities
-                $communities = db_query("select users.ident from friends 
-                                         left join users on users.ident = friends.friend 
-                                         where friends.owner = $this->ident 
-                                         and users.user_type = 'community' 
-                                         group by friends.friend");
+                $communities = db_query("select ".tbl_prefix."users.ident from ".tbl_prefix."friends 
+                                         left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend 
+                                         where ".tbl_prefix."friends.owner = $this->ident 
+                                         and ".tbl_prefix."users.user_type = 'community' 
+                                         group by ".tbl_prefix."friends.friend");
 
                 $this->blogs = array();
 
@@ -207,7 +207,7 @@
             {
                 // A bit awkward, but create a list of folder id's. Needed for the xml-rpc
                 // code to determine a default upload folder
-                $folders = db_query("select ident from file_folders 
+                $folders = db_query("select ident from ".tbl_prefix."file_folders 
                                      where files_owner = $this->ident");
 
                 $this->folders = array();
@@ -232,7 +232,7 @@
         {
             $id = "";
 
-            $folder = db_query("select from file_folders 
+            $folder = db_query("select from ".tbl_prefix."file_folders 
                                 where name = '$name' 
                                 and files_owner = $this->ident");
 
@@ -264,10 +264,10 @@
                 $inject_limit = " limit $limit";
             }
 
-            $result = db_query("select friends.friend as user_id from friends 
-                                left join users on users.ident = friends.friend 
-                                where friends.owner = $this->ident and
-                                users.user_type = 'person'
+            $result = db_query("select ".tbl_prefix."friends.friend as user_id from ".tbl_prefix."friends 
+                                left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend 
+                                where ".tbl_prefix."friends.owner = $this->ident and
+                                ".tbl_prefix."users.user_type = 'person'
                                 $inject_limit");
             $friends = array();
 
@@ -294,10 +294,10 @@
                 $inject_limit = " limit $limit";
             }
 
-            $result = db_query("select users.ident as user_id from friends 
-                                 left join users on users.ident = friends.owner
+            $result = db_query("select ".tbl_prefix."users.ident as user_id from ".tbl_prefix."friends 
+                                 left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.owner
                                  where friend = $this->ident and
-                                 users.user_type = 'person'
+                                 ".tbl_prefix."users.user_type = 'person'
                                  $inject_limit");
 
             $friend_of = array();

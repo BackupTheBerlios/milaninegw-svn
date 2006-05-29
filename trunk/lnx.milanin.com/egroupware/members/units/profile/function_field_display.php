@@ -7,7 +7,7 @@
 	
 	if (sizeof($field) >= 2) {
 	
-		// $value = db_query("select * from profile_data where name = '".$field[1]."' and owner = '$profile_id'");
+		// $value = db_query("select * from ".tbl_prefix."profile_data where name = '".$field[1]."' and owner = '$profile_id'");
 		
 		$value->value = "";
 		$value->access = "";

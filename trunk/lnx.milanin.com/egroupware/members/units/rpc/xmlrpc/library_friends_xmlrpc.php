@@ -1,8 +1,7 @@
 <?php
 
     /*
-     *  Functions related to friends
-     */
+     *  Functions related to ".tbl_prefix."friends.     */
      
     // TODO: implement error handling
 
@@ -19,7 +18,7 @@
     // Add the handlers to the global handlers array
     $handlers = $handlers + $handlers_foaf;
 
-    // Return all friends of a user via an associative array, 
+    // Return all ".tbl_prefix."friends.of a user via an associative array, 
     // where key is the user_id and value is the username
 
     function getFriends($params)
@@ -52,7 +51,7 @@
     
     }
     
-    // Add a friend to user's friends list
+    // Add a friend to user's ".tbl_prefix."friends.list
     
     function addFriend($params)
     {
@@ -65,7 +64,7 @@
 
     }
     
-    // Remove a foe from user's friends list
+    // Remove a foe from user's ".tbl_prefix."friends.list
     
     function removeFriend($params)
     {

@@ -1,8 +1,7 @@
 <?php
 
 	/*
-	*	View files
-	*/
+	*	View ".tbl_prefix."files.	*/
 
 	// Get owner and current folder
 	
@@ -10,10 +9,9 @@
 		global $folder;
 			
 	// Check to ensure we have access to this folder, if we're not in the root
-	
 		if ($folder != -1) {
 			
-			$access = db_query("select access from file_folders where files_owner = $owner and ident = $folder");
+			$access = db_query("select access from ".tbl_prefix."file_folders where files_owner = $owner and ident = $folder");
 			if (sizeof($access) > 0) {
 				$access = $access[0]->access;
 				$accessible = run("users:access_level_check",$access);

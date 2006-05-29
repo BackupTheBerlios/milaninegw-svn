@@ -6,11 +6,11 @@
 		
 		if (logged_on && $page_owner != -1) {
 		
-			$posts = db_query("select count(ident) as x from files where (".run("users:access_level_sql_where",$profile_id).") and files_owner = $profile_id");
+			$posts = db_query("select count(ident) as x from ".tbl_prefix."files where (".run("users:access_level_sql_where",$profile_id).") and files_owner = $profile_id");
 			$posts = $posts[0]->x;
 		
 			if ($_SESSION['userid'] == $profile_id) {
-				$title = "Your Files";
+				$title = "Your files.";
 			} else {
 				$title = "Files";
 			}

@@ -3,7 +3,7 @@
 	global $page_owner;
 
 	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin' ) {
-		$value = db_query("select * from profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
+		$value = db_query("select * from ".tbl_prefix."profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
 		$value = $value[0];
 		
 		$name = <<< END

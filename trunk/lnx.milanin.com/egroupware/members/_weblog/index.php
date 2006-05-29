@@ -4,7 +4,6 @@
 
 	// Run includes
 		require("../includes.php");
-		
 		run("profile:init");
 		run("friends:init");
 		run("weblogs:init");

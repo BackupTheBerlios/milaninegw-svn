@@ -11,8 +11,8 @@
 		$accessline = str_replace("owner","tags.owner",$accessline);
 		$searchline_files = "$accessline and tagtype = 'file' and owner = $owner and tag = '".addslashes($parameter[1])."'";
 		$searchline_folders = "$accessline and tagtype = 'folder' and owner = $owner and tag = '".addslashes($parameter[1])."'";
-		$file_refs = db_query("select ref from tags where $searchline_files");
-		$folder_refs = db_query("select ref from tags where $searchline_folders");
+		$file_refs = db_query("select ref from ".tbl_prefix."tags where $searchline_files");
+		$folder_refs = db_query("select ref from ".tbl_prefix."tags where $searchline_folders");
 		$searchline = "";
 		if (sizeof($folder_refs) > 0) {
 			foreach($folder_refs as $folder) {
@@ -21,8 +21,8 @@
 				}
 				$searchline .= "file_folders.ident = " . $folder->ref;
 			}
-			$folders = db_query("select file_folders.name, users.name as userfullname, users.username, file_folders.ident from file_folders 
-								left join users on users.ident = file_folders.owner where ($searchline) 
+			$folders = db_query("select file_folders.name, ".tbl_prefix."users.name as userfullname, ".tbl_prefix."users.username, file_folders.ident from ".tbl_prefix."file_folders 
+								left join ".tbl_prefix."users on ".tbl_prefix."users.ident = file_folders.owner where ($searchline) 
 								order by name asc");
 			$run_result .= "<h2>Folders owned by " . stripslashes($folders[0]->userfullname) . " in category '".$parameter[1]."'</h2>\n";
 			foreach($folders as $folder) {
@@ -47,8 +47,8 @@
 				}
 				$searchline .= "files.ident = " . $file->ref;
 			}
-			$files = db_query("select files.*, users.username, users.name as userfullname from files
-								left join users on users.ident = files.owner where ($searchline) 
+			$files = db_query("select ".tbl_prefix."files.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as userfullname from ".tbl_prefix."files
+								left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."files.owner where ($searchline) 
 								order by title asc")
 								or die(mysql_error());
 			$run_result .= "<h2>Files owned by " . stripslashes($files[0]->userfullname) . " in category '".$parameter[1]."'</h2>\n";
@@ -73,9 +73,9 @@
 		$searchline = "(tagtype = 'file' or tagtype = 'folder') and tag = '".addslashes($parameter[1])."'";
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 		$searchline = str_replace("owner","tags.owner",$searchline);
-		$sql = "select distinct users.* from tags left join users on users.ident = tags.owner where ($searchline)";
+		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where ($searchline)";
 		if ($parameter[0] == "file") {
-			$sql .= " and users.ident != " . $owner;
+			$sql .= " and ".tbl_prefix."users.ident != " . $owner;
 		}
 		$users = db_query($sql);
 		
@@ -87,7 +87,7 @@
 	
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {

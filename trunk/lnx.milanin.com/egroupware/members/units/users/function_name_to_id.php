@@ -10,7 +10,7 @@
 			
 			$parameter = addslashes($parameter);
 			if (!isset($name_to_id_table[$parameter])) {
-				$result = db_query("select ident from users where username = '$parameter'");
+				$result = db_query("select ident from ".tbl_prefix."users where username = '$parameter'");
 				$name_to_id_table[$parameter] = $result[0]->ident;
 			}
 			$run_result = $name_to_id_table[$parameter];

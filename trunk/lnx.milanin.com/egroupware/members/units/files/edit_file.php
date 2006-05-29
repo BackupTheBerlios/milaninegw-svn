@@ -8,7 +8,7 @@
 	if (isset($_REQUEST['edit_file_id'])) {
 		$file_id = (int) $_REQUEST['edit_file_id'];
 	
-		$file_details = db_query("select files.*, users.username from files left join users on users.ident = files.owner where files.ident = $file_id and files.owner = " . $_SESSION['userid']);
+		$file_details = db_query("select ".tbl_prefix."files.*, ".tbl_prefix."users.username from ".tbl_prefix."files left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."files.owner where ".tbl_prefix."files.ident = $file_id and files_owner = " . $_SESSION['userid']);
 		if (sizeof($file_details) > 0) {
 			$file = $file_details[0];
 			

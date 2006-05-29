@@ -19,7 +19,7 @@
 			$post = (int) $_REQUEST['post'];
 			
 			$where = run("users:access_level_sql_where",$_SESSION['userid']);
-			$post = db_query("select * from weblog_posts where ($where) and ident = $post");
+			$post = db_query("select * from ".tbl_prefix."weblog_posts where ($where) and ident = $post");
 			$post = $post[0];
 			
 			global $page_owner;

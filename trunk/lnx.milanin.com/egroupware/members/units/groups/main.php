@@ -8,11 +8,10 @@
 		$function['groups:init'][] = path . "units/groups/groups_init.php";
 		$function['groups:init'][] = path . "units/groups/groups_actions.php";
 		
-	// Add user-owned groups to access levels
+	// Add user-owned ".tbl_prefix."groups.to access levels
 		$function['init'][] = path . "units/groups/groups_access_levels.php";
 
-	// Function to retrieve groups
-		$function['groups:get'][] = path . "units/groups/get_groups.php";
+	// Function to retrieve ".tbl_prefix."groups.		$function['groups:get'][] = path . "units/groups/get_groups.php";
 		$function['groups:get:external'][] = path . "units/groups/get_groups_external.php";
 		$function['groups:getmembership'][] = path . "units/groups/get_groups_membership.php";
 		

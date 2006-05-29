@@ -3,7 +3,7 @@
 	// Display popular tags
 	
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ")";
-		$tags = db_query("select distinct tag, count(ident) as number from tags where tags.access = 'PUBLIC' group by tag order by rand() limit 200")
+		$tags = db_query("select distinct tag, count(ident) as number from ".tbl_prefix."tags where tags.access = 'PUBLIC' group by tag order by rand() limit 200")
 			or die(mysql_error());
 		if (sizeof($tags) > 0) {
 			

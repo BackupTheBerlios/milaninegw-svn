@@ -5,7 +5,7 @@
 	
 	if (!isset($parameter)) {
 	// Get template details
-		$template_id = db_query("select template_id from users where ident = " . $_SESSION['userid']);
+		$template_id = db_query("select template_id from ".tbl_prefix."users where ident = " . $_SESSION['userid']);
 		if (sizeof($template_id) > 0) {
 			$template_id = $template_id[0]->template_id;
 		} else {

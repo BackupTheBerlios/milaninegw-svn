@@ -9,8 +9,8 @@
 <p> 1. You must be 13 years and older to use this site.<br />
    2. You are responsible for any activity that occurs under your screen name.<br />
    3. You are responsible for keeping your password secure.<br />
-   4. You must not abuse, harass, threaten, impersonate or intimidate other $sitename users.<br />
-   5. You may not use the $sitename service for any illegal or unauthorized purpose. International users agree to comply with all local laws regarding online conduct and acceptable content.<br />
+   4. You must not abuse, harass, threaten, impersonate or intimidate other $sitename ".tbl_prefix."users.<br />
+   5. You may not use the $sitename service for any illegal or unauthorized purpose. International ".tbl_prefix."users.agree to comply with all local laws regarding online conduct and acceptable content.<br />
    6. You are solely responsible for your conduct and any data, text, information, screen names, graphics, photos, profiles, audio and video clips, links ('Content')that you submit, post, and display on the $sitename service.<br />
    7. $sitename is intended for personal use, not a business solution. Professional or corporate uses of $sitename are at your own risk.<br />
    8. You must not modify, adapt or hack $sitename or modify another website so as to falsely imply that it is associated with $sitename.<br />

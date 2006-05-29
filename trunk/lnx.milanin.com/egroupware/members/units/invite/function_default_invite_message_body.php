@@ -17,7 +17,7 @@ $qry = "SELECT * FROM template_elements where name like 'msg%:title%:".$paramete
 
 $result = db_query($qry) or die ("<center> ERROR: ".mysql_error()."</center>");
 
-$sql1 = "SELECT count(*) as count FROM users"; 
+$sql1 = "SELECT count(*) as count from ".tbl_prefix."users"; 
 $db = db_query($sql1);
 
 for ($i=0;$i<sizeof($result);$i++)

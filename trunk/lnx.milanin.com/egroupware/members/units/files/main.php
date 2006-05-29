@@ -24,8 +24,8 @@
 		$function['files:mimetype:inline'][] = path . "units/files/files_mimetype_inline.php";
 		$function['files:mimetype:determine'][] = path . "units/files/files_mimetype_determine.php";
 		
-	// View files
-		$function['files:view'][] = path . "units/files/files_view.php";
+	// View ".tbl_prefix."files.		
+        $function['files:view'][] = path . "units/files/files_view.php";
 
 	// View the contents of a specific folder
 		$function['files:folder:view'][] = path . "units/files/folder_view.php";
@@ -49,7 +49,7 @@
 	// Load default template
 		$function['init'][] = path . "units/files/default_templates.php";
 
-	// Allow users to embed files in weblog posts
+	// Allow ".tbl_prefix."users.to embed ".tbl_prefix."files.in weblog posts
 		$function['weblogs:posts:add:fields'][] = path . "units/files/weblogs_posts_add_fields.php";
 		$function['weblogs:text:process'][] = path . "units/files/weblogs_text_process.php";
 					

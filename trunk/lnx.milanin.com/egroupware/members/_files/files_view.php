@@ -1,8 +1,7 @@
 <?php
 
 	/*
-	*	View files
-	*/
+	*	View ".tbl_prefix."files.	*/
 
 	// Get current folder	
 	

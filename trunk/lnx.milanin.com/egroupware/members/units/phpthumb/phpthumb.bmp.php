@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////////////////////
 //                                                             //
 // module.graphic.bmp.php                                      //
-// module for analyzing BMP Image files                        //
+// module for analyzing BMP Image ".tbl_prefix."files.                       //
 // dependencies: NONE                                          //
 //                                                            ///
 /////////////////////////////////////////////////////////////////

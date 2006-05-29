@@ -1,7 +1,6 @@
 <?php
 
-	// Displays editing instructions for individual groups
-	
+	// Displays editing instructions for individual ".tbl_prefix."groups.	
 	$friends = run("friends:get",array($_SESSION['userid']));
 	$memberlist = "";
 	$i = 0;
@@ -15,7 +14,7 @@ END;
 				<tr>
 					<td width="50%" valign="top">
 						<form action="index.php#{$parameter[0]->ident}" method="post">
-							Your friends:<br />
+							Your ".tbl_prefix."friends.<br />
 							<select name="friends[]" size="5" multiple="multiple">
 END;
 							if (sizeof($friends) > 0) {

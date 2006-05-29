@@ -40,15 +40,14 @@ $PHPTHUMB_CONFIG['cache_directory'] = path.'_files/cache/';                     
 $PHPTHUMB_CONFIG['cache_disable_warning'] = false; // If [cache_directory] is non-existant or not writable, and [cache_disable_warning] is false, an error image will be generated warning to either set the cache directory or disable the warning (to avoid people not knowing about the cache)
 
 // * Cache culling: phpThumb can automatically limit the contents of the cache directory
-// based on last-access date and/or number of files and/or total filesize.
+// based on last-access date and/or number of ".tbl_prefix."files.and/or total ".tbl_prefix."files.ze.
 $PHPTHUMB_CONFIG['cache_maxage'] = null;         // never delete cached thumbnails based on last-access time
 //$PHPTHUMB_CONFIG['cache_maxage'] = 86400 * 30; // delete cached thumbnails that haven't been accessed in more than [30 days] (value is maximum time since last access in seconds to avoid deletion)
 
 //$PHPTHUMB_CONFIG['cache_maxsize'] = null;   // never delete cached thumbnails based on byte size of cache directory
-$PHPTHUMB_CONFIG['cache_maxsize'] = 1048576000; // delete least-recently-accessed cached thumbnails when more than [10MB] of cached files are present (value is maximum bytesize of all cached files)
+$PHPTHUMB_CONFIG['cache_maxsize'] = 1048576000; // delete least-recently-accessed cached thumbnails when more than [10MB] of cached ".tbl_prefix."files.are present (value is maximum bytesize of all cached ".tbl_prefix."files.
 
-$PHPTHUMB_CONFIG['cache_maxfiles'] = null;  // never delete cached thumbnails based on number of cached files
-//$PHPTHUMB_CONFIG['cache_maxfiles'] = 500; // delete least-recently-accessed cached thumbnails when more than [500] cached files are present (value is maximum number of cached files to keep)
+$PHPTHUMB_CONFIG['cache_maxfiles'] = null;  // never delete cached thumbnails based on number of cached ".tbl_prefix."files.//$PHPTHUMB_CONFIG['cache_maxfiles'] = 500; // delete least-recently-accessed cached thumbnails when more than [500] cached ".tbl_prefix."files.are present (value is maximum number of cached ".tbl_prefix."files.to keep)
 
 
 // * Source image cache configuration
@@ -57,7 +56,7 @@ $PHPTHUMB_CONFIG['cache_source_directory'] = dirname(__FILE__).'/cache/source/';
 
 
 // * Temp directory configuration
-// phpThumb() may need to create temp files. Usually the system temp dir is writable and can be used.
+// phpThumb() may need to create temp ".tbl_prefix."files. Usually the system temp dir is writable and can be used.
 // Leave this value as NULL in most cases. If you get errors about "failed to open <filename> for writing"
 // you should change this to a full pathname to a directory you do have write access to.
 //$PHPTHUMB_CONFIG['temp_directory'] = '/tmp/';
@@ -96,7 +95,7 @@ if (phpthumb_functions::version_compare_replacement(phpversion(), '4.3.2', '>=')
 // attempt to detect ImageMagick's presence with `which`
 if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
 	// Windows: set absolute pathname
-	$PHPTHUMB_CONFIG['imagemagick_path'] = 'C:\\Program Files\\ImageMagick-6.0.6-Q16\\convert.exe';
+	$PHPTHUMB_CONFIG['imagemagick_path'] = 'C:\\Program ".tbl_prefix."files.\ImageMagick-6.0.6-Q16\\convert.exe';
 } else {
 	// *nix: set absolute pathname to "convert", or leave as null if "convert" is in the path
 	//$PHPTHUMB_CONFIG['imagemagick_path'] = '/usr/local/bin/convert';
@@ -138,8 +137,7 @@ $PHPTHUMB_CONFIG['border_hexcolor']     = '000000'; // Default border color - us
 $PHPTHUMB_CONFIG['background_hexcolor'] = 'FFFFFF'; // Default background color when thumbnail aspect ratio does not match fixed-dimension box - usual HTML-style hex color notation (overridden with 'bg' parameter)
 
 // * Watermark configuration
-$PHPTHUMB_CONFIG['ttf_directory'] = '.'; // Base directory for TTF font files
-//$PHPTHUMB_CONFIG['ttf_directory'] = 'c:/windows/fonts';
+$PHPTHUMB_CONFIG['ttf_directory'] = '.'; // Base directory for TTF font ".tbl_prefix."files.//$PHPTHUMB_CONFIG['ttf_directory'] = 'c:/windows/fonts';
 
 
 $PHPTHUMB_CONFIG['high_security_enabled']  = false; // if enabled, requires 'high_security_password' set to at least 5 characters, and requires the use of phpThumbURL() function (at the bottom of phpThumb.config.php) to generate hashed URLs

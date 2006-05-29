@@ -18,7 +18,7 @@
 														$title = addslashes($_REQUEST['new_weblog_title']);
 														$body = addslashes($_REQUEST['new_weblog_post']);
 														$access = addslashes($_REQUEST['new_weblog_access']);
-														db_query("insert into weblog_posts
+														db_query("insert into ".tbl_prefix."weblog_posts
 																	set title = '$title',
 																		body = '$body',
 																		access = '$access',
@@ -35,7 +35,7 @@
 															if (sizeof($keyword_list) > 0) {
 																foreach($keyword_list as $key => $list_item) {
 																	$list_item = addslashes(trim($list_item));
-																	db_query("insert into tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $insert_id, owner = " . $_SESSION['userid']);
+																	db_query("insert into ".tbl_prefix."tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $insert_id, owner = " . $_SESSION['userid']);
 																}
 															}
 														}
@@ -60,17 +60,16 @@
 														$body = addslashes($_REQUEST['new_weblog_post']);
 														$access = addslashes($_REQUEST['edit_weblog_access']);
 														$exists = db_query("select count(ident) as post_exists
-																					from weblog_posts
+																					from ".tbl_prefix."weblog_posts
 																					where ident = $id and
 																					owner = ".$_SESSION['userid']);
 														$exists = $exists[0]->post_exists;
 														if ($exists) {
-															db_query("update weblog_posts
-																		set title = '$title',
+															db_query("update ".tbl_prefix."weblog_posts.																		set title = '$title',
 																			body = '$body',
 																			access = '$access'
 																		where ident = $id");
-															db_query("delete from tags where tagtype = 'weblog' and ref = $id");
+															db_query("delete from ".tbl_prefix."tags where tagtype = 'weblog' and ref = $id");
 															if ($_REQUEST['edit_weblog_keywords'] != "") {
 																$value = $_REQUEST['edit_weblog_keywords'];
 																$value = str_replace("\n","",$value);
@@ -80,7 +79,7 @@
 																if (sizeof($keyword_list) > 0) {
 																	foreach($keyword_list as $key => $list_item) {
 																		$list_item = addslashes(trim($list_item));
-																		db_query("insert into tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $id, owner = " . $_SESSION['userid']);
+																		db_query("insert into ".tbl_prefix."tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $id, owner = " . $_SESSION['userid']);
 																	}
 																}
 															}
@@ -95,11 +94,11 @@
 														&& isset($_REQUEST['delete_post_id'])
 													) {
 														$id = (int) $_REQUEST['delete_post_id'];
-														$post_info= db_query("select * from weblog_posts where ident = $id");
+														$post_info= db_query("select * from ".tbl_prefix."weblog_posts where ident = $id");
 														if ($post_info[0]->owner == $_SESSION['userid']) {
-															db_query("delete from weblog_posts where ident = $id");
-															db_query("delete from weblog_comments where post_id = $id");
-															db_query("delete from tags where tagtype = 'weblog' and ref = $id");
+															db_query("delete from ".tbl_prefix."weblog_posts where ident = $id");
+															db_query("delete from ".tbl_prefix."weblog_comments where post_id = $id");
+															db_query("delete from ".tbl_prefix."tags where tagtype = 'weblog' and ref = $id");
 															$messages[] = "Your weblog post was deleted.";
 														} else {
 															$messages[] = "You do not appear to own this weblog post. It was not deleted.";
@@ -118,7 +117,7 @@
 													) {
 														$post_id = (int) $_REQUEST['post_id'];
 														$where = run("users:access_level_sql_where",$_SESSION['userid']);
-														$post = db_query("select ident from weblog_posts where ($where) and ident = $post_id");
+														$post = db_query("select ident from ".tbl_prefix."weblog_posts where ($where) and ident = $post_id");
 														if (sizeof($post) > 0) {
 															
 															$post_id = (int) $_REQUEST['post_id'];
@@ -126,7 +125,7 @@
 															$postedname = ($_SESSION['userid']>0) ? addslashes($_REQUEST['postedname']) : addslashes(htmlentities($_REQUEST['postedname']))." ( <b>Anonymous</b> )";
 															$owner = (int) $_SESSION['userid'];
 															$posted = time();
-															db_query("insert into weblog_comments
+															db_query("insert into ".tbl_prefix."weblog_comments
 																		set body = '$body',
 																			posted = $posted,
 																			postedname = '$postedname',
@@ -134,10 +133,7 @@
 																			post_id = $post_id");
 															$messages[] = "Your comment has been added.";
 //Sendmail
-$post_owner=db_query('SELECT users . *
-FROM weblog_posts, users
-WHERE users.ident = weblog_posts.owner
-AND weblog_posts.ident ='.$post_id);
+$post_owner=db_query("SELECT ".tbl_prefix."users.* from ".tbl_prefix."weblog_posts, ".tbl_prefix."users WHERE ".tbl_prefix."users.ident = ".tbl_prefix."weblog_posts.owner AND ".tbl_prefix."weblog_posts.ident =".$post_id);
 
 ini_set("sendmail_from", "BC MilanIN <admin@milanin.com>");
 $mail_msg="A new comment was posted to your weblog entry: ".url.$post_owner[0]->username.'/weblog/'.$post_id.'.html';
@@ -152,15 +148,15 @@ mail($post_owner[0]->email,"[BC MilanIN] A new comment added to your weblog", $m
 															&& isset($_REQUEST['weblog_comment_delete'])
 														) {
 															$comment_id = (int) $_REQUEST['weblog_comment_delete'];
-															$commentinfo = db_query("select weblog_comments.*, weblog_posts.owner as postowner,
-																					 weblog_posts.ident as postid
-																					 from weblog_comments
-																					 left join weblog_posts on weblog_posts.ident = weblog_comments.post_id
+															$commentinfo = db_query("select weblog_comments.*, ".tbl_prefix."weblog_posts.owner as postowner,
+																					 ".tbl_prefix."weblog_posts.ident as postid
+																					 from ".tbl_prefix."weblog_comments
+																					 left join ".tbl_prefix."weblog_posts.on ".tbl_prefix."weblog_posts.ident = weblog_comments.post_id
 																					 where weblog_comments.ident = $comment_id");
 															$commentinfo = $commentinfo[0];
 															if ($_SESSION['userinfo'] == $commentinfo->owner
 																|| $_SESSION['userinfo'] == $comentinfo->postowner) {
-																	db_query("delete from weblog_comments where ident = $comment_id");
+																	db_query("delete from ".tbl_prefix."weblog_comments where ident = $comment_id");
 																	$messages[] = "Your comment was deleted.";
 																	$redirect_url = url . run("users:id_to_name",$commentinfo->postowner) . "/weblog/" . $commentinfo->postid . ".html";
 																	define('redirect_url',$redirect_url);

@@ -8,9 +8,9 @@
 
 		$user_id = (int) $parameter[0];
 		
-		$result = db_query("select users.*, friends.ident as friendident from friends
-									left join users on users.ident = friends.friend
-									where friends.owner = $user_id and users.user_type = 'community'");
+		$result = db_query("select ".tbl_prefix."users.*, ".tbl_prefix."friends.ident as friendident from ".tbl_prefix."friends
+									left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend
+									where ".tbl_prefix."friends.owner = $user_id and ".tbl_prefix."users.user_type = 'community'");
 									
 		$body = <<< END
 	<table class="userlist">
@@ -21,7 +21,7 @@ END;
 			foreach($result as $key => $info) {
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {

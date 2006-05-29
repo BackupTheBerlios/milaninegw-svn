@@ -8,10 +8,10 @@
 			$user_id = (int) $parameter[0];
 			
 			if (run("users:type:get", $user_id) == "community") {
-				$result = db_query("select count(users.ident) as friend from friends 
-									left join users on users.ident = friends.friend
-									where friends.owner = " . $_SESSION['userid'] . "
-									  and friends.friend = $user_id");
+				$result = db_query("select count(".tbl_prefix."users.ident) as friend from ".tbl_prefix."friends 
+									left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.friend
+									where ".tbl_prefix."friends.owner = " . $_SESSION['userid'] . "
+									  and ".tbl_prefix."friends.friend = $user_id");
 				$result = $result[0]->friend;
 				if ($result == 0) {
 					$run_result = "

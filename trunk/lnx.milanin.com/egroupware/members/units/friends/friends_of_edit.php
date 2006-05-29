@@ -1,16 +1,15 @@
 <?php
 
-	// Given a user ID as a parameter, will display a list of friends
-
+	// Given a user ID as a parameter, will display a list of ".tbl_prefix."friends.
 	$url = url;
 	
 	if (isset($parameter[0])) {
 
 		$user_id = (int) $parameter[0];
 		
-		$result = db_query("select users.* from friends
-									left join users on users.ident = friends.owner
-									where friend = $user_id and users.user_type = 'person'");
+		$result = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."friends
+									left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."friends.owner
+									where friend = $user_id and ".tbl_prefix."users.user_type = 'person'");
 
 		$body = <<< END
 
@@ -23,7 +22,7 @@ END;
 			foreach($result as $key => $info) {
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {
@@ -60,7 +59,7 @@ END;
 			}
 		} else {
 			if ($user_id == $_SESSION['userid']) {
-				$body .=  "<td>Nobody's listed you as a friend! Maybe you need to start chatting to some other users?</td>";
+				$body .=  "<td>Nobody's listed you as a friend! Maybe you need to start chatting to some other ".tbl_prefix."users.</td>";
 			} else {
 				$body .= "<td>This user isn't currently listed as anyone's friend. Maybe you could be the first?</td>";
 			}

@@ -9,7 +9,7 @@
 		run("friends:init");
 		run("weblogs:init");
 		
-		$title = run("profile:display:name") . " :: Weblog Friends";		
+		$title = run("profile:display:name") . " :: Weblog ".tbl_prefix."friends.;		
 
 		$body = run("content:weblogs:view");
 		$body .= run("weblogs:friends:view");

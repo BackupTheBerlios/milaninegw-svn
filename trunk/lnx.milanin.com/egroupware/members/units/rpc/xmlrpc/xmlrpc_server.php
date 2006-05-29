@@ -16,7 +16,7 @@
         806 	No Such Item
         807 	Not Allowed to Alter Item
         808 	Invalid media type
-        809 	File is too large (max. upload filesize)
+        809 	File is too large (max. upload ".tbl_prefix."files.ze)
         810 	Other error on newMediaObject (message will contain more info about what happened)
         other codes < 100 	Errors encountered by the Useful Inc. XML-RPC implementation
         other codes > 100 	Errors encountered by the XML parser

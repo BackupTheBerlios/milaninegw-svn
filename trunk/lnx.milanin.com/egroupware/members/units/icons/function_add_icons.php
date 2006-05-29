@@ -3,10 +3,10 @@
 	global $page_owner;
 
 	// Allow the user to add more icons
-		$numicons = db_query("select count(ident) as iconnum from icons where owner = " . $page_owner);
+		$numicons = db_query("select count(ident) as iconnum from ".tbl_prefix."icons where owner = " . $page_owner);
 		$numicons = $numicons[0]->iconnum;
 		if ($page_owner != $_SESSION['userid']) {
-			$iconquota = db_query("select icon_quota from users where ident = " . $page_owner);
+			$iconquota = db_query("select icon_quota from ".tbl_prefix."users where ident = " . $page_owner);
 			$iconquota = $iconquota[0]->icon_quota;
 		} else {
 			$iconquota = $_SESSION['icon_quota'];

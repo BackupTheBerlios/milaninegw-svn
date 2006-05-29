@@ -19,12 +19,12 @@
 			$profile_id = -1;
 			
 		}
-                if ($profile_id==-1){
+/*                if ($profile_id==-1){
 		  header('Location: '.((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http")
 		                            .'://'.$_SERVER['SERVER_NAME'].'/');
 		  exit;
                 }
-                
+*/                
 		global $page_owner;
 		
 		$page_owner = $profile_id;

@@ -13,7 +13,7 @@
     // XML-RPC server
         $function['rpc:xmlrpc:server'][] = path . "units/rpc/xmlrpc/xmlrpc_server.php";
 
-    // Users class
+    // ".tbl_prefix."users.class
         $function['users:instance'][] = path . "units/rpc/lib/function_load_user.php";
 
     // Weblog class

@@ -17,7 +17,7 @@
 												$exists = $exists[0]->template_exists;
 											}
 											if ($exists) {
-												db_query("update users set template_id = $id where ident = " . $_SESSION['userid']);
+												db_query("update ".tbl_prefix."users set template_id = $id where ident = " . $_SESSION['userid']);
 												$messages[] = "Your current template has been changed.";
 											}
 										}
@@ -40,7 +40,7 @@
 														$slashname = addslashes($name);
 														$slashcontent = addslashes($content);
 														if ($content != "" && $content != $template[$name]) {
-															db_query("insert into template_elements set name='$slashname', content = '$slashcontent', template_id = $id");
+															db_query("insert into ".tbl_prefix."template_elements set name='$slashname', content = '$slashcontent', template_id = $id");
 														}
 													}
 													$messages[] = "Your template has been updated.";
@@ -55,7 +55,7 @@
 												$exists = db_query("select count(ident) as template_exists from templates where ident = $id and owner = ".$_SESSION['userid']);
 												$exists = $exists[0]->template_exists;
 												if ($exists) {
-													db_query("update users set template_id = -1 where template_id = $id");
+													db_query("update ".tbl_prefix."users set template_id = -1 where template_id = $id");
 													db_query("delete from template_elements where template_id = $id");
 													db_query("delete from templates where ident = $id");
 													$messages[] = "Your template was deleted.";
@@ -69,7 +69,7 @@
 											) {
 												$based_on = (int) $_REQUEST['template_based_on'];
 												$name = addslashes($_REQUEST['new_template_name']);
-												db_query("insert into templates set name = '$name', public = 'no', owner = " . $_SESSION['userid']);
+												db_query("insert into ".tbl_prefix."templates set name = '$name', public = 'no', owner = " . $_SESSION['userid']);
 												$new_template_id = db_id();
 												if ($based_on != -1) {
 													$exists = db_query("select count(ident) as template_exists from templates where ident = $based_on and (owner = ".$_SESSION['userid']." or public = 'yes')");
@@ -79,7 +79,7 @@
 														$elements = db_query("select * from template_elements where template_id = $based_on");
 														if (sizeof($elements) > 0) {
 															foreach($elements as $element) {
-																db_query("insert into template_elements set name = '".$element->name."', content = '".$element->content."', template_id = '".$new_template_id."'");
+																db_query("insert into ".tbl_prefix."template_elements set name = '".$element->name."', content = '".$element->content."', template_id = '".$new_template_id."'");
 															}
 														}
 													}

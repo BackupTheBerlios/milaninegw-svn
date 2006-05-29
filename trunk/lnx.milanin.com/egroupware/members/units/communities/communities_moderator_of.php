@@ -8,8 +8,8 @@
 
 		$user_id = (int) $parameter[0];
 		
-		$result = db_query("select users.* from users
-									where users.owner = $user_id and users.user_type = 'community'");
+		$result = db_query("select ".tbl_prefix."users.* from ".tbl_prefix."users
+									where ".tbl_prefix."users.owner = $user_id and ".tbl_prefix."users.user_type = 'community'");
 									
 		$body = <<< END
 	<table class="userlist">
@@ -20,7 +20,7 @@ END;
 			foreach($result as $key => $info) {
 					// $info = $info[0];
 					if ($info->icon != -1) {
-						$icon = db_query("select filename from icons where ident = " . $info->icon . " and owner = " . $info->ident);
+						$icon = db_query("select filename from ".tbl_prefix."icons where ident = " . $info->icon . " and owner = " . $info->ident);
 						if (sizeof($icon) == 1) {
 							$icon = $icon[0]->filename;
 						} else {

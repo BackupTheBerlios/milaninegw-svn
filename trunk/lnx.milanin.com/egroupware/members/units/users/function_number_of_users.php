@@ -6,11 +6,11 @@
 
 		$body = "There are ";
 
-		$result = db_query("select count(ident) as numusers from users where active = 'yes'");
+		$result = db_query("select count(ident) as numusers from ".tbl_prefix."users where active = 'yes'");
 		$result = $result[0]->numusers;
-		$body .= $result . " active users.<br /> (";
+		$body .= $result . " active ".tbl_prefix."users.<br /> (";
 		
-		$result = db_query("select count(ident) as numusers from users where active = 'yes' and code != ''");
+		$result = db_query("select count(ident) as numusers from ".tbl_prefix."users where active = 'yes' and code != ''");
 		$body .= $result[0]->numusers . " logged on.)";
 		
 		$run_result .= run("templates:draw",array(

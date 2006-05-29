@@ -1,6 +1,6 @@
 <?php
 
-	//	ELGG files RSS 2.0 page
+	//	ELGG ".tbl_prefix."files.RSS 2.0 page
 
 	// Run includes
 		require("../includes.php");
@@ -26,7 +26,7 @@
 <rss version='2.0'   xmlns:dc='http://purl.org/dc/elements/1.1/'>
 
 END;
-			$info = db_query("select * from users where ident = $page_owner");
+			$info = db_query("select * from ".tbl_prefix."users where ident = $page_owner");
 			if (sizeof($info) > 0) {
 				$info = $info[0];
 				$name = htmlentities(stripslashes($info->name));
@@ -34,16 +34,16 @@ END;
 				$mainurl = htmlentities(url . $username . "/files/");
 				echo <<< END
   <channel xml:base='$mainurl'>
-    <title>$name : Files</title>
+    <title>$name : ".tbl_prefix."files./title>
     <description>Files for $name, hosted on $sitename.</description>
     <language>en-gb</language>
     <link>$mainurl</link>
 END;
 				if (!isset($_REQUEST['tag'])) {
-					$files = db_query("select * from files where files_owner = $page_owner and access = 'PUBLIC' order by time_uploaded desc limit 10");
+					$files = db_query("select * from ".tbl_prefix."files where files_owner = $page_owner and access = 'PUBLIC' order by time_uploaded desc limit 10");
 				} else {
 					$tag = addslashes($_REQUEST['tag']);
-					$files = db_query("select files.* from tags left join files on files.ident = tags.ref where files.files_store = $page_owner and files.access = 'PUBLIC' and tags.tagtype = 'file' and tags.tag = '$tag' order by files.time_uploaded desc limit 10");
+					$files = db_query("select ".tbl_prefix."files.* from ".tbl_prefix."tags left join ".tbl_prefix."files.on ".tbl_prefix."files.ident = tags.ref where ".tbl_prefix."files.files_store = $page_owner and ".tbl_prefix."files.access = 'PUBLIC' and tags.tagtype = 'file' and tags.tag = '$tag' order by ".tbl_prefix."files.time_uploaded desc limit 10");
 				}
 				if (sizeof($files) > 0) {
 					foreach($files as $file) {
@@ -56,7 +56,7 @@ END;
 						if ($mimetype == false) {
 							$mimetype = "application/octet-stream";
 						}
-						$keywords = db_query("select * from tags where tagtype = 'file' and ref = '".$file->ident."'");
+						$keywords = db_query("select * from ".tbl_prefix."tags where tagtype = 'file' and ref = '".$file->ident."'");
 						$keywordtags = "";
 						if (sizeof($keywords) > 0) {
 							foreach($keywords as $keyword) {

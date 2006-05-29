@@ -1,11 +1,10 @@
 <?php
 
-	// Allow users to post to a weblog if they have permission
+	// Allow ".tbl_prefix."users.to post to a weblog if they have permission
 	
 		if (run("permissions:check", "weblog")) {
 			
-			$title = <<< END
-				<script language="javascript" type="text/javascript">
+            /*<script language="javascript" type="text/javascript">
 					function show(whichLayer) {
 							if (document.getElementById)
 							{
@@ -46,15 +45,17 @@
 								style2.display = style2.display? "":"none";
 							}
 					}
-				</script> 
+				</script>*/ 
+			$title = "
 				<p>
-					<a href="javascript:show('add_weblog_post');">Click here to post to this weblog.</a>
-				</p>
-			
-END;
-			
-			$body = <<< END
-			<div id="add_weblog_post" style="display:none; width: 90%">
+					<a href=\"".url."_weblog/edit.php\">Click here to post to this weblog.</a>
+				</p>";
+
+
+
+
+/*			$body = <<< END
+			<div id="add_weblog_post" style="display:block; width: 90%">
 			
 END;
 			$body .= run("weblogs:posts:add");
@@ -65,13 +66,13 @@ END;
 				</p>
 			
 END;
-			
+		
 			$body .= <<< END
 			
 			</div>
 			
 END;
-
+*/
 			$run_result .= run("templates:draw", array(
 									'context' => 'databoxvertical',
 									'name' => $title,

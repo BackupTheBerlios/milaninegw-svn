@@ -5,9 +5,9 @@ Copyright: Tabolsky Michael (www.gfdsa.org) and Valeria (lera.gfdsa.org)
 License: GPL (http://www.gnu.org/licenses/gpl.html)
 */
 //Here goes config to access egw DB
-$egw['db_name']='Sql73134_1';
-$egw['db_user']='Sql73134';
-$egw['db_password']='4e455633';
+$egw['db_name']=db_name;//'Sql73134_1';
+$egw['db_user']=db_user;//'Sql73134';
+$egw['db_password']=db_password;//'4e455633';
 $egw['db_tables_accounts']='phpgw_accounts';
 $egw['db_tables_sessions']='phpgw_sessions';
 $egw['session_storage']='db';
@@ -55,8 +55,8 @@ function egw_get_account_info($id){
        'account_type AS user_type,'.
        'CONCAT(account_firstname,\' \',account_lastname) AS name,'.
        'account_email AS email,'.
-       'account_linkedin AS linkedin '.
-       'DATE_FORMAT(`account_membership_date`,\'%d/%m/%y\') as membership_date '
+       'account_linkedin AS linkedin ,'.
+       'DATE_FORMAT(`account_membership_date`,\'%d/%m/%y\') as membership_date '.
        'FROM '.$egw['db_name'].'.'.$egw['db_tables_accounts'].
        ' WHERE account_id ='.$id;
   $result = db_query($sql);
@@ -69,17 +69,17 @@ function egw_get_account_info($id){
   }
 }
 
-//Creates new record in the users table based on object passed from egw_get_account_info
+//Creates new record in the ".tbl_prefix."users.table based on object passed from egw_get_account_info
 function egw_is_new_user(){
   global $egw;
   $id=egw_get_id_by_lid();
   
-  $sql = "SELECT ident FROM users WHERE ident = ".$id;
+  $sql = "SELECT ident from ".tbl_prefix."users WHERE ident = ".$id;
   $result = db_query($sql);
   if (!$result[0]){
     $row=egw_get_account_info($id);
   
-    $sql="INSERT INTO users (ident, username, password, email, name) values(".
+    $sql="insert into ".tbl_prefix."".tbl_prefix."users (ident, username, password, email, name) values(".
         $row->ident.",'".
         $row->username."','".
         $row->password."','".
@@ -88,7 +88,7 @@ function egw_is_new_user(){
     $result = db_query($sql);
     if (!$result) echo mysql_error();
     
-    $sql = "INSERT INTO profile_data (ident, owner, access, name, value) values(".
+    $sql = "insert into ".tbl_prefix."".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
         '\'\','.
         $row->ident.",".
         '\'PUBLIC\','.
@@ -96,7 +96,7 @@ function egw_is_new_user(){
         '\''.$row->linkedin.'\')';
     $result = db_query($sql);
     if (!$result) echo mysql_error();
-    $sql = "INSERT INTO profile_data (ident, owner, access, name, value) values(".
+    $sql = "insert into ".tbl_prefix."".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
         '\'\','.
         $row->ident.",".
         '\'PUBLIC\','.

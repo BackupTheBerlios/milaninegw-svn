@@ -5,7 +5,7 @@
 		if (isset($parameter)) {
 			
 			$fileid = (int) $parameter;
-			$file = db_query("select * from files where ident = $fileid");
+			$file = db_query("select * from ".tbl_prefix."files where ident = $fileid");
 			if (sizeof($file) > 0) {
 				if (run("users:access_level_check",$file[0]->access) || $file[0]->owner == $_SESSION['userid']) {
 					if (!in_array(run("files:mimetype:inline",$file[0]->location), $data['mimetype:inline'])) {
