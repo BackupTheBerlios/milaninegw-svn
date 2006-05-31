@@ -27,8 +27,8 @@
 
 $menu_title = $GLOBALS['phpgw_info']['apps'][$appname]['title'] . ' '. lang('Menu');
 	$file = Array(
-		'read news' => $GLOBALS['phpgw']->link('/news_admin/index.php'),
-		'Add New Article' => $GLOBALS['phpgw']->link('/index.php','menuaction=news_admin.uinews.add')
+		'read news' => $GLOBALS['phpgw']->link('/news_admin/index.php')
+		//'Add New Article' => $GLOBALS['phpgw']->link('/index.php','menuaction=news_admin.uinews.add')
 	);
 	display_sidebox($appname,$menu_title,$file);
  
