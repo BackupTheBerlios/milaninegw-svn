@@ -79,7 +79,7 @@ function egw_is_new_user(){
   if (!$result[0]){
     $row=egw_get_account_info($id);
   
-    $sql="insert into ".tbl_prefix."".tbl_prefix."users (ident, username, password, email, name) values(".
+    $sql="insert into ".tbl_prefix."users (ident, username, password, email, name) values(".
         $row->ident.",'".
         $row->username."','".
         $row->password."','".
@@ -88,7 +88,7 @@ function egw_is_new_user(){
     $result = db_query($sql);
     if (!$result) echo mysql_error();
     
-    $sql = "insert into ".tbl_prefix."".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
+    $sql = "insert into ".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
         '\'\','.
         $row->ident.",".
         '\'PUBLIC\','.
@@ -96,7 +96,7 @@ function egw_is_new_user(){
         '\''.$row->linkedin.'\')';
     $result = db_query($sql);
     if (!$result) echo mysql_error();
-    $sql = "insert into ".tbl_prefix."".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
+    $sql = "insert into ".tbl_prefix."profile_data (ident, owner, access, name, value) values(".
         '\'\','.
         $row->ident.",".
         '\'PUBLIC\','.
