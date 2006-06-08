@@ -90,7 +90,7 @@
 		</tr>
 		<tr>
 			<td align="right">{lang_password}:&nbsp;</td>
-			<td align="left"><input name="passwd" type="password" onChange="this.form.submit()" style="width: 100px; border: 1px solid silver;"></td>
+			<td align="left"><input name="passwd" type="password" style="width: 100px; border: 1px solid silver;"></td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
