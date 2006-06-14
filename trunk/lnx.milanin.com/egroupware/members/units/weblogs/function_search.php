@@ -11,7 +11,7 @@
 			$owner = (int) $_REQUEST['owner'];
 			$searchline = "tagtype = 'weblog' and owner = $owner and tag = '".addslashes($parameter[1])."'";
 			$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
-			$searchline = str_replace("owner","tags.owner",$searchline);
+			$searchline = str_replace("owner",tbl_prefix."tags.owner",$searchline);
 			$refs = db_query("select ref from ".tbl_prefix."tags where $searchline");
 			$searchline = "";
 			if (sizeof($refs) > 0) {
@@ -39,8 +39,8 @@
 		}
 		$searchline = "tagtype = 'weblog' and tag = '".addslashes($parameter[1])."'";
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
-		$searchline = str_replace("owner","tags.owner",$searchline);
-		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where ($searchline)";
+		$searchline = str_replace("owner",tbl_prefix."tags.owner",$searchline);
+		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix.tags.owner where ($searchline)";
 		if ($parameter[0] == "weblog") {
 			$sql .= " and ".tbl_prefix."users.ident != " . $owner;
 		}

@@ -8,7 +8,7 @@
 		$search_exclusions[] = "folder";
 		$owner = (int) $_REQUEST['owner'];
 		$accessline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ")";
-		$accessline = str_replace("owner","tags.owner",$accessline);
+		$accessline = str_replace("owner",tbl_prefix."tags.owner",$accessline);
 		$searchline_files = "$accessline and tagtype = 'file' and owner = $owner and tag = '".addslashes($parameter[1])."'";
 		$searchline_folders = "$accessline and tagtype = 'folder' and owner = $owner and tag = '".addslashes($parameter[1])."'";
 		$file_refs = db_query("select ref from ".tbl_prefix."tags where $searchline_files");
@@ -72,8 +72,8 @@
 		}
 		$searchline = "(tagtype = 'file' or tagtype = 'folder') and tag = '".addslashes($parameter[1])."'";
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
-		$searchline = str_replace("owner","tags.owner",$searchline);
-		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where ($searchline)";
+		$searchline = str_replace("owner",tbl_prefix."tags.owner",$searchline);
+		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where ($searchline)";
 		if ($parameter[0] == "file") {
 			$sql .= " and ".tbl_prefix."users.ident != " . $owner;
 		}

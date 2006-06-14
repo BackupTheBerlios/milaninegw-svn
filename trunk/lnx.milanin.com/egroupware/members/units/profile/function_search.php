@@ -14,8 +14,8 @@
 			
 			$searchline = "tagtype = '".addslashes($parameter[0])."' and tag = '".addslashes($parameter[1])."'";
 			$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
-			$searchline = str_replace("owner","tags.owner",$searchline);
-			$result = db_query("select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = tags.owner where $searchline");
+			$searchline = str_replace("owner",tbl_prefix."tags.owner",$searchline);
+			$result = db_query("select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where $searchline");
 
 			$parameter[1] = stripslashes($parameter[1]);
 			
