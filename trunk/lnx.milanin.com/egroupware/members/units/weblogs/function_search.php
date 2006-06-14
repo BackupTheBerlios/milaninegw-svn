@@ -40,7 +40,7 @@
 		$searchline = "tagtype = 'weblog' and tag = '".addslashes($parameter[1])."'";
 		$searchline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ") and " . $searchline;
 		$searchline = str_replace("owner",tbl_prefix."tags.owner",$searchline);
-		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix.tags.owner where ($searchline)";
+		$sql = "select distinct ".tbl_prefix."users.* from ".tbl_prefix."tags left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where ($searchline)";
 		if ($parameter[0] == "weblog") {
 			$sql .= " and ".tbl_prefix."users.ident != " . $owner;
 		}
