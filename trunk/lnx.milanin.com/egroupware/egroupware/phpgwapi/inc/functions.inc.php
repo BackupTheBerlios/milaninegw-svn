@@ -39,16 +39,6 @@
 
 	include(PHPGW_API_INC.'/common_functions.inc.php');
 	
-	function get_fragment($str, $n, $delim='...') { // {{{
-   		$len = strlen($str);
-		if ($len > $n) {
-       			preg_match('/(.{' . $n . '}.*?)\b/', $str, $matches);
-       			return rtrim($matches[1]) . $delim;
-   		}
-   		else {
-       			return $str;
-   		}
-	}
 	/*!
 	 @function lang
 	 @abstract function to handle multilanguage support
@@ -64,20 +54,6 @@
 			$vars = array($m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9,$m10);
 		}
 		$value = $GLOBALS['phpgw']->translation->translate("$key",$vars);
-		return $value;
-	}
-	function lang_for( $key, $userid=NULL)
-	{
-		
-		if(is_array($m1))
-		{
-			$vars = $m1;
-		}
-		else
-		{
-			$vars = array($m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9,$m10);
-		}
-		$value = $GLOBALS['phpgw']->translation->translate_for($key,(isset($userid))?$userid:$GLOBALS['phpgw_info']['user']['userid'],$vars);
 		return $value;
 	}
 
@@ -172,7 +148,7 @@
 		$GLOBALS['phpgw']->db->Debug = 1;
 	}
 	$GLOBALS['phpgw']->db->Halt_On_Error = 'no';
-	$GLOBALS['phpgw']->db->connect(
+	 $GLOBALS['phpgw']->db->connect(
 		$GLOBALS['phpgw_info']['server']['db_name'],
 		$GLOBALS['phpgw_info']['server']['db_host'],
 		$GLOBALS['phpgw_info']['server']['db_port'],

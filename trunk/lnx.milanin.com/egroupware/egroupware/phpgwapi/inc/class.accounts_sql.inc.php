@@ -241,7 +241,7 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE session_flags != 'A' AND session_lid != 'anonymous' AND session_flags !='A' AND session_lid != 'admin'";
+					$whereclause = "WHERE session_lid != 'anonymous' AND session_flags !='A' AND session_lid != 'admin'";
 					break;
 				case 'groups':
 					$whereclause = "WHERE ";
@@ -264,14 +264,173 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 		
 		function get_guest_count($_type='both')
 
-{
-$sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A' and session_logintime > ".(time() - $GLOBALS['phpgw_info']['server']['sessions_timeout']);
+                {
+                $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A' and session_logintime > ".(time() - $GLOBALS['phpgw_info']['server']['sessions_timeout']);
 			
 			$this->db->query($sql);
 			$this->db->next_record();
 			$total = $this->db->f(0);
 			return $total;
 		}		
+                function get_online_members($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
+
+{
+			if (! $sort)
+			{
+				$sort = "DESC";
+			}
+
+			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
+			{
+				$orderclause = "ORDER BY account_session DESC, $order $sort,account_firstname ASC, account_lastname ASC";
+			}
+			else
+			{
+				$orderclause = "ORDER BY  account_session ASC, account_lid ASC";
+			}
+
+			switch($_type)
+			{
+				case 'accounts':
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;
+				case 'accounts_a':
+					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
+				case 'accounts_p':
+					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					break;	
+				case 'groups':
+					$whereclause = "WHERE account_type = 'g'";
+					break;
+				default:
+					$whereclause = '';
+			}
+
+			if ($query)
+			{
+				if ($whereclause)
+				{
+					$whereclause .= ' AND ( ';
+				}
+				else
+				{
+					$whereclause = ' WHERE ( ';
+				}
+				switch($query_type)
+				{
+					case 'all':
+					default:
+						$query = '%'.$query;
+						// fall-through
+					case 'start':
+						$query .= '%';
+						// fall-through
+					case 'exact':
+						$query = $this->db->quote($query);
+						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
+						break;
+					case 'firstname':
+						$query = $this->db->quote($query."%");
+						$whereclause .= " account_firstname LIKE $query )";
+						break;
+
+					case 'lastname':
+						$query = $this->db->quote($query."%");
+						$whereclause .= " account_lastname LIKE $query )";
+						break;
+                                        case 'account_status':
+						//$query = $this->db->quote($query);
+						if ($query == 'A'){
+						$whereclause .= " account_status = 'A' )";
+						}else{
+						$whereclause .= " account_status != 'A' )";
+						}
+						break;
+					case 'lid':
+					case 'email':
+						$query = $this->db->quote('%'.$query.'%');
+						$whereclause .= " account_$query_type LIKE $query )";
+						break;
+				}
+			}
+			$joiner= ($offline) ? " LEFT " : "";
+
+
+			$sql = "select distinct
+                                b.account_id, 
+                                b.`account_lid`, 
+                                
+                                    IF(
+                                        
+                                          UNIX_TIMESTAMP()-`s`.`session_logintime`
+                                         
+                                        <= ".
+                                        $GLOBALS['phpgw_info']['server']['sessions_timeout'].
+                                        ",1,0
+                                      )
+                                     as account_session, 
+                                b.`account_firstname`, 
+                                b.`account_lastname`, 
+                                b.`account_lastlogin`, 
+                                b.`account_lastloginfrom`, 
+                                b.`account_lastpwd_change`, 
+                                b.`account_status`, 
+                                b.`account_expires`, 
+                                b.`account_type`, 
+                                b.`account_primary_group`,
+                                b.`account_email`,
+                                b.`account_linkedin`,
+                                pdo.`value` as account_occupation,
+                                pdi.`value` as account_industry,
+                                DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date 
+                                FROM `phpgw_accounts` as b".
+                                $joiner."JOIN `phpgw_sessions` as s 
+                                  on `account_lid`=REPLACE(`session_lid`,'@default','') ".
+                                "LEFT JOIN members_profile_data pdo on b.account_id = pdo.owner  AND pdo.name='occupation' ".
+                                "LEFT JOIN members_profile_data pdi on b.account_id = pdi.owner  AND pdi.name='industry' ".
+                                $whereclause." ".
+                                $orderclause;
+                        echo $sql;
+			if ($offset)
+			{
+				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);
+			}
+			elseif (is_numeric($start))
+			{
+				$this->db->limit_query($sql,$start,__LINE__,__FILE__);
+			}
+			else
+			{
+				$this->db->query($sql,__LINE__,__FILE__);
+			}
+
+			while ($this->db->next_record())
+			{
+				$accounts[] = Array(
+					'account_id'        => $this->db->f('account_id'),
+					'account_lid'       => $this->db->f('account_lid'),
+					'account_session'       => $this->db->f('account_session'),
+					'account_type'      => $this->db->f('account_type'),
+					'account_firstname' => $this->db->f('account_firstname'),
+					'account_lastname'  => $this->db->f('account_lastname'),
+					'account_status'    => $this->db->f('account_status'),
+					'account_expires'   => $this->db->f('account_expires'),
+					'person_id'         => $this->db->f('person_id'),
+					'account_primary_group' => $this->db->f('account_primary_group'),
+					'account_email'     => $this->db->f('account_email'),
+					'account_linkedin'     => $this->db->f('account_linkedin'),
+					'account_membership_date'  => $this->db->f('account_membership_date'),
+					'account_occupation'=> $this->db->f('account_occupation'),
+				);
+				$this->total = $this->total+1;
+			}
+			/*$this->db->query("SELECT count(*) FROM $this->table $whereclause");
+			$this->db->next_record();
+			$this->total = $this->db->f(0);*/
+
+			return $accounts;
+		}
 
 		function get_online_list($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
 
@@ -293,13 +452,13 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
+					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;
 				case 'accounts_a':
-					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
+					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;	
 				case 'accounts_p':
-					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous' AND (session_flags != 'A' OR ISNULL(session_flags))";
+					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;	
 				case 'groups':
 					$whereclause = "WHERE account_type = 'g'";
@@ -359,7 +518,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 
 
 			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
-			echo '<!--'.$sql.'-->';
+			
 			if ($offset)
 			{
 				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);
@@ -475,6 +634,7 @@ $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags=
 			{
 				$this->db->query($sql,__LINE__,__FILE__);
 			}
+            //echo $sql;
 			while ($this->db->next_record())
 			{
 				$accounts[] = Array(

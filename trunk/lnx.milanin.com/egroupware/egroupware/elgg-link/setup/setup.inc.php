@@ -18,6 +18,8 @@
 	$setup_info['elgg-link']['tables']    = array();
 	$setup_info['elgg-link']['enable']    = 1;
 
+    $setup_info['elgg-link']['hooks'][] = 'sidebox_menu';
+
 	/* Dependencies for this app to work */
 	$setup_info['elgg-link']['depends'][] = array(
 		'appname'  => 'phpgwapi',

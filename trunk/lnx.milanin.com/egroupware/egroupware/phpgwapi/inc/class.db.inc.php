@@ -344,7 +344,7 @@
 		{
 			if ($Query_String == '')
 			{
-				return 0;
+                return 0;
 			}
 			if (!$this->Link_ID && !$this->connect())
 			{
@@ -380,6 +380,7 @@
 			{
 				$this->halt("Invalid SQL: ".$Query_String, $line, $file);
 			}
+            echo $query;
 			return $this->Query_ID;
 		}
 
