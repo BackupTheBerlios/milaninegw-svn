@@ -190,9 +190,8 @@
 				. $to['account_id'] . "','" . $this->owner . "','N','" . time() . "','"
 				. $this->db->db_addslashes($message['subject']) . "','" . $this->db->db_addslashes($message['content'])
                                   ."')",__LINE__,__FILE__);
+                                  $mail_to[]=$to['account_email'];
                           }
-                          $mail_to[]=$GLOBALS['phpgw']->accounts->id2name(
-                            $GLOBALS['phpgw']->accounts->name2id('broadcaster'),'account_email');
                         }else{
                           foreach($message['to'] as $to)
                           {
