@@ -93,6 +93,10 @@
                                                "`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) ".
                                                "VALUES ('phpgw_group',18,".$user_id.",1)";
                                         $result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
+                                        $query="INSERT into phpgw_acl (".
+                                               "`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) ".
+                                               "VALUES ('preferences','changepassword',".$user_id.",1)";
+                                        $result = mysql_query ($query, $mysql_link) or die ($query."<br/>".mysql_error($mysql_link));
 					//$query = "INSERT into phpgw_fud_users 
 					$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
 			
