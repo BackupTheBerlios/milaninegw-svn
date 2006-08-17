@@ -65,7 +65,7 @@
 																					owner = ".$_SESSION['userid']);
 														$exists = $exists[0]->post_exists;
 														if ($exists) {
-															db_query("update ".tbl_prefix."weblog_posts.																		set title = '$title',
+														db_query("update ".tbl_prefix."weblog_posts set title = '$title',
 																			body = '$body',
 																			access = '$access'
 																		where ident = $id");
