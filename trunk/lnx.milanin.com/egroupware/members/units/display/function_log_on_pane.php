@@ -19,53 +19,8 @@
 
 		$body = <<< END
 		
-		<form action="/egroupware/login.php" method="post">
+		<a href="/egroupware/login.php" caption="Login">Login</a>
 END;
-		$body .= run("templates:draw",array(
-						'template' => -1,
-						'context' => 'infobox',
-						'name' => 'Log On',
-						'contents' => '
-			<table>
-				<tr>
-					<td align="right">
-						<label>Username&nbsp;<input type="text" name="login" id="username" style="size: 200px" />
-						</label>
-					</td>
-				</tr>
-				<tr>
-					<td align="right">
-						<label>Password&nbsp;<input type="password" name="passwd" id="password" style="size: 200px" />
-						</label>
-					</td>
-				</tr>
-				<tr>
-					<td align="right">
-                                                <label><input type="checkbox" name="remember" checked="checked" /> Remember Login</label>
-					</td>
-				</tr>
-				<tr>
-					<td align="right">
-						<input type="hidden" name="action" value="log_on" />
-						<label>Log on: <input type="submit" name="submit" value="Go" /></label><br />
-						<small>
-							<a href="' . $url . '_invite/register.php">Register</a> |
-							<a href="' . $url . '_invite/forgotten_password.php">Forgotten password</a>
-						</small>
-					</td>
-				</tr>
-			
-			</table>
-			
-
-'
-					)
-					);
-		
-                $body .= '<input type="hidden" name="passwd_type" value="text"/>
-<input type="hidden" name="account_type" value="u"/>
-<input type="hidden" name="phpgw_forward" value="..'.$_SERVER['PHP_SELF'].'"/></form>';
-
 		$run_result .= $body;
 			
 	}
