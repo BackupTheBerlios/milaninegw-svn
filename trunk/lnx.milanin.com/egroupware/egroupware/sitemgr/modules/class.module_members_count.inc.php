@@ -32,7 +32,7 @@ class module_members_count extends Module
                 $return['total']=$GLOBALS['phpgw']->accounts->get_count('accounts');
                 
                 $return['online']= $GLOBALS['phpgw']->accounts->get_online_count('accounts');
-		i/*$drop='<div id="OnlinersList">
+		/*$drop='<div id="OnlinersList">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
                                  ';
                 $order_by='session_id';
