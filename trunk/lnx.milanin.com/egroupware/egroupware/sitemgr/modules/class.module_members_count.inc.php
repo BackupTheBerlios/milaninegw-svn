@@ -54,9 +54,8 @@ class module_members_count extends Module
                 return "<table class=\"moduletable\"><!--tr><th colspan=\"2\">".lang("Members")."</th></tr--><tr>\n<td>".lang("Registered").
                         "</td><td>".$return['total']."</td></tr>\n".
                         "<tr><td>".
-                        "<a href='#' title='Show List' onclick=\"toggleLayer('OnlinersList')\">".lang("Online")."</a></td>".
-                        "<td>".$return['online']."</td></tr><tr><th colspan=\"2\">".
-                        $drop."</th></tr>\n</table>";
+                        lang("Online")."</td>".
+                        "<td>".$return['online']."</td></tr>\n</table>";
 	}
 
 }
