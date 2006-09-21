@@ -32,7 +32,7 @@ class module_members_count extends Module
                 $return['total']=$GLOBALS['phpgw']->accounts->get_count('accounts');
                 
                 $return['online']= $GLOBALS['phpgw']->accounts->get_online_count('accounts');
-		$drop='<div id="OnlinersList">
+		i/*$drop='<div id="OnlinersList">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
                                  ';
                 $order_by='session_id';
@@ -50,7 +50,7 @@ class module_members_count extends Module
                 }
                 $drop.="</table>
 				</div>";
-		
+		*/
                 return "<table class=\"moduletable\"><!--tr><th colspan=\"2\">".lang("Members")."</th></tr--><tr>\n<td>".lang("Registered").
                         "</td><td>".$return['total']."</td></tr>\n".
                         "<tr><td>".
