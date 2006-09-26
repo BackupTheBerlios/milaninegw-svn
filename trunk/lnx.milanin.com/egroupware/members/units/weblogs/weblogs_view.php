@@ -42,20 +42,22 @@
 			
 			if ($numberofposts - ($weblog_offset + 25) > 0) {
 				$display_weblog_offset = $weblog_offset + 25;
+				//<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">&lt;&lt; Previous 25</a>
 				$run_result .= <<< END
 				
-				<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">&lt;&lt; Previous 25</a>
+				<a href="skip={$display_weblog_offset}">&lt;&lt; Previous 25</a>
 				
 END;
 			}
 			if ($weblog_offset > 0) {
 				$display_weblog_offset = $weblog_offset - 25;
+				//<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">Next 25 &gt;&gt;</a>
 				if ($display_weblog_offset < 0) {
 					$display_weblog_offset = 0;
 				}
 				$run_result .= <<< END
 				
-				<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">Next 25 &gt;&gt;</a>
+				<a href="skip={$display_weblog_offset}">Next 25 &gt;&gt;</a>
 				
 END;
 			}
