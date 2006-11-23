@@ -28,7 +28,11 @@
 </div>
 <br/>
 <!-- END NewsBlock -->
+<!-- BEGIN NewsPaging -->
+<div align="center">{content}</div>
+<!-- END NewsPaging -->
 <!-- BEGIN RssBlock -->
 <a href="{rsslink}" target="_blank"><img src="images/M_images/rss.png" alt="RSS" /></a>
 <!-- END RssBlock -->
+
 

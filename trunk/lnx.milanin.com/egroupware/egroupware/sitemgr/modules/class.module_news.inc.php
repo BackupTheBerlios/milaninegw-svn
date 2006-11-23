@@ -11,6 +11,198 @@
 
 	/* $Id: class.module_news.inc.php,v 1.10 2004/05/24 12:20:52 ralfbecker Exp $ */
 
+	function DebugLog($object, $responseEnd = false)
+	{
+		if(DEBUG == false) return;
+		print "<pre>";
+		print_r($object);
+		print "</pre>";
+		if($responseEnd) exit;
+	}
+	
+	class cPageSplitter
+{
+	// Draw the line like in the example below
+	// Example: << 8-15 16-23 >>
+	
+	var $leftArrow, $rightArrow; // 	<< and >> - link to the prev next tab.
+	var $rowPerPage; // count of the items on the current page
+	var $activePageLinkClass, $passivePageLinkClass;//css classes
+	var $countPages; // count of the links to pages - caclulated all
+	var $url, $params;			//		index.php and &param1=value1&paaram2=value2... - first param is p=pageIndex for page
+	var $currentPageIndex; //current page 
+	var $rowCount; //Count of rows
+	
+	var $currentTabIndex;
+	var $countTabs;
+	var $countPagesPerTab; // 0 all links are visible. show tab with appropriate link
+
+	/********Cunstructor*********/
+	
+	/*function SetRowCount($rowCount=0, $rowPerPage = 0)
+	{
+		$this->rowCount = ($rowCount > 0) ? $rowCount : 0;
+		$this->rowPerPage = ($rowPerPage > 0) ? $rowPerPage : 25;
+		$this->countPagesPerTab = ($this->countPagesPerTab > 0) ? $this->countPagesPerTab : 100;
+	}
+	function SetCounts($rowPerPage, $countPagesPerTab, $currentPageIndex=-1)
+	{
+		$this->rowPerPage = ($this->rowPerPage>0) ? $this->rowPerPage : 10;
+		$this->countPagesPerTab = ($this->countPagesPerTab>0) ? $this->countPagesPerTab : 5;
+		$this->currentPageIndex = ($this->currentPageIndex<0) ? $currentPageIndex : $this->currentPageIndex;
+	}*/
+	
+	function cPageSplitter($currentPageIndex = 0, $rowPerPage=10, $rowCount = 0)
+	{
+		$this->SetInt($currentPageIndex);
+		$this->currentPageIndex = $currentPageIndex < 0 ? 0 : $currentPageIndex;
+		$this->SetDefaults($rowPerPage, $rowCount);
+	}
+	
+	function Prepare()
+	{
+		if ($this->rowCount == 0)
+			return 2;
+		
+		if ($this->rowCount < $this->currentPageIndex * $this->rowPerPage) 
+			return 1;
+
+		$this->countPages = $this->rowCount / (($this->countPagesPerTab == 0 ? 1 : $this->countPagesPerTab) * $this->rowPerPage);
+		$this->SetInt($this->countPages);
+		
+		$this->currentTabIndex = $this->countPagesPerTab == 0 ? 0 : $this->currentPageIndex / $this->countPagesPerTab;
+		$this->SetInt($this->currentTabIndex);
+
+		return 0;
+	}
+	
+	function WriteOut($lineType="")
+	{
+		switch ($this->Prepare())
+		{
+		   case 0:
+		   	   //it is ok - render it
+			   {
+			   		switch ($lineType)
+					{
+						case ""		: return $this->Standard(); break;
+						case "form" : return $this->FormStandard(); break;
+					}
+			   }
+		       break;
+		   case 1: 
+		       return '<b>- - -</b>';
+		       break;
+		   case 2: 
+		       return '<b>- - -</b>'; 
+		       break;
+		}
+	}
+	
+	function SetInt(&$value)
+	{
+		settype($value, "integer");
+	}
+	
+	function SetDefaults($rowPerPage=10, $rowCount = 0)
+	{
+		$this->SetInt($rowPerPage); $this->SetInt($rowCount);
+		$this->rowPerPage = $rowPerPage <= 0 ? 10 : $rowPerPage;
+		$this->rowCount = $rowCount < 0 ? 0 : $rowCount;
+		$this->SetCountPagePerTab();
+		$this->SetArrows();
+	}
+	
+	function SetCountPagePerTab($countPagesPerTab = 0)
+	{
+		$this->SetInt($countPagesPerTab);
+		$this->countPagesPerTab = $countPagesPerTab < 0 ? 0 : $countPagesPerTab;
+	}
+	
+	function SetArrows($left="&lt;&lt;", $right="&gt;&gt;")
+	{
+		$this->leftArrow = $left;
+		$this->rightArrow = $right;
+	}
+	
+	function SetLinkStyles($passive, $active)
+	{
+		$this->passivePageLinkClass = $passive;
+		$this->activePageLinkClass = $active;
+	}
+	
+	function SetUrl($url)
+	{
+		$this->url = $url;
+	}
+	
+	function SetParams($params)
+	{
+		$params = preg_replace ("/(([\&|\?]*)p=(\d*))/i", "", $params);
+		$params = preg_replace ("/^&/", "", $params);
+		$params = "&".$params;
+		$this->params = $params;
+	}
+
+	function Standard()
+	{
+		$result = "";
+		
+		if($this->currentTabIndex > 0)
+			$result.="<a href=\"".$this->url."?p=".($this->currentPageIndex-1).$this->params."\">".$this->leftArrow."</a>&nbsp;";
+
+		for($i = $this->currentTabIndex*$this->countPagesPerTab;  $i < ($this->currentTabIndex + 1) * $this->countPagesPerTab;  $i++)
+		{
+			$l = ($i+1) * $this->rowPerPage;
+			if ($l > $this->rowCount)
+				$l = $this->rowCount;
+			
+			$cssClass = ($i==$this->currentPageIndex) ? ' class="'.$this->activePageLinkClass.'"' : ' class="'.$this->passivePageLinkClass.'"';
+			if(trim($cssClass) == 'class=""') $cssClass ="";
+			
+			$result.="<a href=\"".$this->url."?p=".($i).$this->params."\"".$cssClass.">".($i*$this->rowPerPage+1)."-".($l)."</a> &nbsp;";
+			
+			if ($l>=$this->rowCount) 
+				break;
+		}
+
+		if ( ($this->currentTabIndex + 1) * $this->countPagesPerTab * $this->rowPerPage + 1 < $this->rowCount ) 
+			$result.="<a href=\"".$this->url."?p=".$i.$this->params."\">".$this->rightArrow."</a>&nbsp;";
+
+		return $result;
+	}
+
+	function FormStandard()
+	{
+		$result = "";
+		
+		if($this->currentTabIndex > 0)
+			$result.='<a href="#" class="'.$this->passivePageLinkClass.'" onclick="DoPaging(this, '.($this->currentPageIndex-1).')">'.$this->leftArrow.'</a>&nbsp;';
+		
+		for($i = $this->currentTabIndex*$this->countPagesPerTab;  $i < ($this->currentTabIndex + 1) * $this->countPagesPerTab;  $i++)
+		{
+			$l = ($i+1) * $this->rowPerPage;
+			if ($l > $this->rowCount)
+				$l = $this->rowCount;
+			
+			$cssClass = ($i==$this->currentPageIndex) ? ' class="'.$this->activePageLinkClass.'"' : ' class="'.$this->passivePageLinkClass.'"';
+			if(trim($cssClass) == 'class=""') $cssClass ="";
+			
+			$result.="<a href=\"#\"".$cssClass." onclick=\"DoPaging(this, $i)\">".($i+1)."</a> ";
+			
+			if ($l>=$this->rowCount) 
+				break;
+		}
+
+		if ( ($this->currentTabIndex + 1) * $this->countPagesPerTab * $this->rowPerPage + 1 <= $this->rowCount ) 
+			$result.='<a href="#" class="'.$this->passivePageLinkClass.'" onclick="DoPaging(this, '.$i.')">'.$this->rightArrow.'</a>';
+
+		return $result;
+	}
+
+}
+
+	/***OLD CODE REFACTOR***/
 	class module_news extends Module
 	{
 		function module_news()
@@ -55,6 +247,27 @@
 			return parent::get_user_interface();
 		}
 
+		//veb: added begin.
+		function get_curent_pageIndex()
+		{
+			$p = $_GET["p"].$_POST["p"];;
+			if(!is_numeric($p)) $p = 0;
+			settype($p, "integer");
+			if($p<0) $p=0;
+			
+			return $p;
+		}
+		//veb: added end.
+		
+		function InitPaging($p, $perPage, $count)
+		{
+			$t = new cPageSplitter($p, $perPage, $count);
+			$t->SetLinkStyles("blogsection", "");
+			$t->SetArrows($left="&lt;&lt;", $right="&gt;&gt;");
+			$t->SetCountPagePerTab(10);
+			return $t->WriteOut();
+		}
+
 		function get_content(&$arguments,$properties)
 		{
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
@@ -70,7 +283,7 @@
 			$this->template->set_block('news','RssBlock','rsshandle');
 
 			$limit = $arguments['limit'] ? $arguments['limit'] : 5;
-
+			
 			if ($arguments['rsslink'])
 			{
 				$this->template->set_var('rsslink',
@@ -106,12 +319,25 @@
 				}
 			}
 
-			$newslist = $bonews->get_newslist($arguments['category'],$arguments['start'],'','',$limit,True);
-
+			//veb: added begin.
+			$arguments['start'] = $this->get_curent_pageIndex();
+			$newslist = $bonews->get_newslist($arguments['category'], $arguments['start']*$limit,'','',$limit,True);
+			//fix problem if user try to hack the page.
+			if($bonews->total < $arguments['start']*$limit)
+			{
+				$arguments['start'] = 0;
+				$newslist = $bonews->get_newslist($arguments['category'], $arguments['start']*$limit,'','',$limit,True);
+			}
+			$this->template->set_block('news','NewsPaging','pageitem');
+			$this->template->set_var('content', $this->InitPaging($arguments['start'], $limit, $bonews->total));
+			$this->template->parse('pageitem', 'NewsPaging');
+			//veb: added end.
+			
 			while (list(,$newsitem) = @each($newslist))
 			{
 				$this->render($newsitem);
 			}
+			
 			if ($arguments['start'])
 			{
 				$link_data['start'] = $arguments['start'] - $limit;
