@@ -330,6 +330,8 @@
 			}
 			$this->template->set_block('news','NewsPaging','pageitem');
 			$this->template->set_var('content', $this->InitPaging($arguments['start'], $limit, $bonews->total));
+			$this->template->set_var('label', lang('more news'));
+			;
 			$this->template->parse('pageitem', 'NewsPaging');
 			//veb: added end.
 			

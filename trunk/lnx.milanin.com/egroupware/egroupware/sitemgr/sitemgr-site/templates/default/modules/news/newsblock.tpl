@@ -1,3 +1,6 @@
+<!-- BEGIN NewsPaging -->
+<div align="right" style="padding:8px 0px 8px 0px;">{label}:&nbsp;{content}</div>
+<!-- END NewsPaging -->
 <!-- BEGIN NewsBlock -->
 <div align="left" class='newscontainer'>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -29,7 +32,7 @@
 <br/>
 <!-- END NewsBlock -->
 <!-- BEGIN NewsPaging -->
-<div align="center">{content}</div>
+<div align="right">{label}:&nbsp;{content}</div>
 <!-- END NewsPaging -->
 <!-- BEGIN RssBlock -->
 <a href="{rsslink}" target="_blank"><img src="images/M_images/rss.png" alt="RSS" /></a>
