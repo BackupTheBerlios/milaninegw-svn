@@ -150,7 +150,7 @@ AND `ticket_id` ='$ticket_id'");
       {
         // select group recipients
         $members  = $GLOBALS['phpgw']->accounts->member($group_id);
-        $body .= "Got in group, members is:".print_r($members,TRUE);
+//        $body .= "Got in group, members is:".print_r($members,TRUE);
       }
 
       // do we need to email the owner of this ticket?
@@ -158,14 +158,14 @@ AND `ticket_id` ='$ticket_id'");
       {
         // add owner to recipients
 		$members[] = array('account_id' => $GLOBALS['phpgw']->db->f('ticket_owner'));
-		$body .= "Got in owner, members is:".print_r($members,TRUE);
+//		$body .= "Got in owner, members is:".print_r($members,TRUE);
       }
 
       // do we need to email the user who is assigned to this ticket?
       if ($GLOBALS['phpgw']->config->config_data['assignednotification'])
       {
         // add assigned to recipients
-      $body .= "Got in assigned, members is:".print_r($members,TRUE);
+//      $body .= "Got in assigned, members is:".print_r($members,TRUE);
         $members[] = array('account_id' => $t_assigned);
       }
 
