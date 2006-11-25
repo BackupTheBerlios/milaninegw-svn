@@ -442,3 +442,31 @@ your administrator has not yet setup the web content manager for public viewing.
 your calendar	sitemgr	en	Your Calendar
 your comment	sitemgr	en	Your comment
 your name	sitemgr	en	Your name
+Personal data	sitemgr	en	Personal data
+Club data	sitemgr	en	Club data
+Club name	sitemgr	en	The name of the club you want to recommend
+Club address	sitemgr	en	The Web Site of the club you want to recommend
+Club description	sitemgr	en	Club activities description	
+How did you know about the club	sitemgr	en	How did you know about this club?
+recommend a club	sitemgr	en	Recommend a club
+his module lets visitors to submit a club	sitemgr	en	This module allows visitors to recommend a club
+Where to send recommendation	sitemgr	en	List of the e-mail addresses where to send recommendation
+how_did_u	sitemgr	en	"How did you know" answers list
+you must fill in all of the required fields	sitemgr	en	All the required fields should be filled
+you have entered an invalid email address	sitemgr	en	You have entered an invalid email address
+too short name	sitemgr	en	The name is too short
+too short club name	sitemgr	en	The club name is too short
+too short description	sitemgr	en	The club description is too short
+too short address	sitemgr	en	The Web Site address is too short
+There was a problem sending this mail!	sitemgr	en	There was a problem sending this mail!
+Recommendation is accepted		sitemgr it	Thank you for participating in the "Not only MilanIN" initiative
+Thank you for your recommendation	sitemgr	en	Thank you for participating in the "Not only MilanIN" initiative.\nYour recommendation will be validates by us and publicated as soon as possible.\n\nBest Regards\nB.C. Milan IN - Segreteria\n
+There was a problem sending mail to	sitemgr it	There was a problem sending mail to
+your name	sitemgr	en	Your Name
+your phone number	sitemgr	en	Your phone number
+your email	sitemgr	en	Your E-mail address
+I am a member of it	sitemgr	en	I am a member of it
+I know somebody who's a member of it	sitemgr	en	 I know somebody who's a member of it
+Just know about it	sitemgr	en	 Just know about it
+Social Networking Directory	sitemgr	en	 Found it on the Internet
+required fields	sitemgr	en	Required fields
