@@ -75,7 +75,7 @@
 					
 					if(!$mailer->Send())
 					{
-						$content .= 'There was a problem sending this mail!';
+						$content .= lang('There was a problem sending this mail!');
 						$content .= $mailer->ErrorInfo;
 					}
 
@@ -94,7 +94,7 @@
 					
 					if(!$mailer->Send())
 {
-						$content .= 'There was a problem sending mail to '.$p_email.'!';
+						$content .= lang('There was a problem sending mail to ')." ".$p_email.'!';
 						$content .= $mailer->ErrorInfo;
 }
 
@@ -114,15 +114,15 @@
                                           $content .= '<table>';
                                           $content .= '<tr><th colspan="2">'.lang('Personal data').'</th></tr>
                                           <tr>
-                                                  <td>'.lang('Name').' <font color="red">*</font> </td>
+                                                  <td>'.lang('Your name').' <font color="red">*</font> </td>
                                                   <td><input type="text" name="name" value='.$p_name.'></td>
                                           </tr>
                                           <tr>
-                                                  <td>'.lang('phone number').'</td>
+                                                  <td>'.lang('your phone number').'</td>
                                                   <td><input type="text" name="phone" value='.$p_phone.'></td>
                                           </tr>
                                           <tr>
-                                                  <td>'.lang('email').'<font color="red">*</font></td>
+                                                  <td>'.lang('yout email').'<font color="red">*</font></td>
                                                   <td><input type="text" name="email" value='.$p_email.'></td>
                                           </tr>
                                            <tr><th colspan="2">'.lang('Club data').'</th></tr>
