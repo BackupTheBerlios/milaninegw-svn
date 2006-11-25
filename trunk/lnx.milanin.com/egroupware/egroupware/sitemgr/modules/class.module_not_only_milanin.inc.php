@@ -114,7 +114,7 @@
                                           $content .= '<table>';
                                           $content .= '<tr><th colspan="2">'.lang('Personal data').'</th></tr>
                                           <tr>
-                                                  <td>'.lang('Your name').' <font color="red">*</font> </td>
+                                                  <td>'.lang('your name').' <font color="red">*</font> </td>
                                                   <td><input type="text" name="name" value='.$p_name.'></td>
                                           </tr>
                                           <tr>
@@ -122,7 +122,7 @@
                                                   <td><input type="text" name="phone" value='.$p_phone.'></td>
                                           </tr>
                                           <tr>
-                                                  <td>'.lang('yout email').'<font color="red">*</font></td>
+                                                  <td>'.lang('your email').'<font color="red">*</font></td>
                                                   <td><input type="text" name="email" value='.$p_email.'></td>
                                           </tr>
                                            <tr><th colspan="2">'.lang('Club data').'</th></tr>
