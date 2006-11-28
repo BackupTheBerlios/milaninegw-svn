@@ -85,6 +85,7 @@
 					
 					$mailer = new send();
 					$mailer->Subject = lang("Recommendation is accepted");  // change it 
+					$mailer->HTML = True;
 					$mailer->Body = $msg;
 					
 					$mailer->From = "iscrizioni@milanin.com";  // change it
