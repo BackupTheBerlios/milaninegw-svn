@@ -459,8 +459,8 @@ too short club name	sitemgr	en	The club name is too short
 too short description	sitemgr	en	The club description is too short
 too short address	sitemgr	en	The Web Site address is too short
 There was a problem sending this mail!	sitemgr	en	There was a problem sending this mail!
-Recommendation is accepted		sitemgr it	Thank you for participating in the "Not only MilanIN" initiative
-Thank you for your recommendation	sitemgr	en	Thank you for participating in the "Not only MilanIN" initiative.\nYour recommendation will be validates by us and publicated as soon as possible.\n\nBest Regards\nB.C. Milan IN - Segreteria\n
+Recommendation is accepted	sitemgr	en	Thank you for participating in the "Not only MilanIN" initiative
+Thank you for your recommendation	sitemgr	en	<p>Thank you for participating in the "Not only MilanIN" initiative.</p><p>Your recommendation will be validated by us and publicated as soon as possible.</p><p>Best Regards</br>B.C. Milan IN - Segreteria</p>
 There was a problem sending mail to	sitemgr it	There was a problem sending mail to
 your name	sitemgr	en	Your Name
 your phone number	sitemgr	en	Your phone number

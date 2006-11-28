@@ -15,8 +15,8 @@ too short club name	sitemgr	it	Il nome di club è tropo scorto
 too short description	sitemgr	it	La descrizione di club è tropo scorta
 too short address	sitemgr	it	L'indirizzo di sito web è tropo scorto
 There was a problem sending this mail!	sitemgr	it	E' stata scoperta una problema durante l'invio della segnalazione
-Recommendation is accepted		sitemgr	it	Grazie per avere partecipato alll'iniziativa "Non solo Milan IN"
-Thank you for your recommendation	sitemgr	it	Grazie per avere partecipato alll'iniziativa "Non solo Milan IN"\nLa tua segnalazione verrà vagliata dal CD del Club e pubblicata prima possibile.\n\nA presto!\nB.C. Milan IN - Segreteria\n
+Recommendation is accepted	sitemgr	it	Grazie per avere partecipato all'iniziativa "Non solo Milan IN"
+Thank you for your recommendation	sitemgr	it	<p>Grazie per avere partecipato all'iniziativa "Non solo Milan IN"</p><p>La tua segnalazione verrà vagliata dal CD del Club e pubblicata prima possibile.</p><p>A presto!<br/>B.C. Milan IN - Segreteria</p>
 There was a problem sending mail to	sitemgr	it	E' stata scoperta una problema durante l'invio e-mail a
 your name	sitemgr	it	Il tuo Nome
 your phone number	sitemgr	it	Il tuo numero telefonico
