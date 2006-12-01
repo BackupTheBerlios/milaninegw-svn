@@ -248,9 +248,9 @@
 		}
 
 		//veb: added begin.
-		function get_curent_pageIndex()
+		function get_curent_pageIndex($key = "p")
 		{
-			$p = $_GET["p"].$_POST["p"];;
+			$p = $_GET[$key].$_POST[$key];
 			if(!is_numeric($p)) $p = 0;
 			settype($p, "integer");
 			if($p<0) $p=0;
@@ -281,7 +281,8 @@
 			$this->template->set_file('news','newsblock.tpl');
 			$this->template->set_block('news','NewsBlock','newsitem');
 			$this->template->set_block('news','RssBlock','rsshandle');
-
+			
+			
 			$limit = $arguments['limit'] ? $arguments['limit'] : 5;
 			
 			if ($arguments['rsslink'])
@@ -299,10 +300,19 @@
 			// i have no idea why :( 
 			// so i added trim
 			// lkneschke 2004-02-24
-			$item = trim($arguments['item']);
+			//$item = trim($arguments['item']);
+			if($this->get_curent_pageIndex("news_id") > 0)
+				$item = $this->get_curent_pageIndex("news_id");
+
+			
+$this->template->set_block('news','PagingTopBlock', 'pageitemtop');
+			$this->template->set_block('news','PagingBottomBlock', 'pageitembottom');
 			if ($item)
 			{
+				$this->template->set_var('pageitemtop','');
+				$this->template->set_var('pageitembottom','');
 				$newsitem = $bonews->get_news($item);
+				
 				if ($newsitem && ($newsitem['category'] == $arguments['category']))
 				{
 					$this->render($newsitem);
@@ -328,11 +338,11 @@
 				$arguments['start'] = 0;
 				$newslist = $bonews->get_newslist($arguments['category'], $arguments['start']*$limit,'','',$limit,True);
 			}
-			$this->template->set_block('news','NewsPaging','pageitem');
+			
 			$this->template->set_var('content', $this->InitPaging($arguments['start'], $limit, $bonews->total));
 			$this->template->set_var('label', lang('more news'));
-			;
-			$this->template->parse('pageitem', 'NewsPaging');
+			$this->template->parse('pageitemtop', 'PagingTopBlock');
+			$this->template->parse('pageitembottom', 'PagingBottomBlock');
 			//veb: added end.
 			
 			while (list(,$newsitem) = @each($newslist))
@@ -366,7 +376,7 @@
 				'news_title' => stripslashes($newsitem['subject']),
 				'news_submitter' => $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']),
 				'news_date' => $GLOBALS['phpgw']->common->show_date($newsitem['date']),
-				'news_content' => stripslashes($newsitem['content'])
+				'news_content' => stripslashes($newsitem['content']), 'news_id'=>$newsitem['id'], 'news_link_title' => lang('read news')
 			));
 			$this->template->parse('newsitem','NewsBlock',True);
 		}
