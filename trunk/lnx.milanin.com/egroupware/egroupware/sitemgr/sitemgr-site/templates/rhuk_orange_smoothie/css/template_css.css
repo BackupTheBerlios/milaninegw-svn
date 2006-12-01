@@ -570,3 +570,14 @@ iframe.milanintv
 text-align:center;
 border:0;
 }
+a.newsTitle:link, a.newsTitle:visited {
+	color: #4D6165;
+	background-position: left;
+	text-align: right;
+ }
+
+a.newsTitle:hover {
+	color: #bf2868;
+	background-position: left;
+	text-align: left;
+	}
