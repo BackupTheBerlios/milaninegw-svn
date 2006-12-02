@@ -12,9 +12,9 @@ if (isset($_POST['home']['title']) && isset($_POST['home']['data'])) {
   //Do we have a page title already ?
     $result = db_query("select ident from ".tbl_prefix."home_data where owner = $page_owner AND name = 'title'");
     if (isset($result[0]->ident)){
-      $title_sql="update ".tbl_prefix."home_data set value='".$_POST['home']['title']."' where ident =".$result[0]->ident;
+      $title_sql="update ".tbl_prefix."home_data set value='".htmlentities(addslashes($_POST['home']['title']),ENT_QUOTES,'UTF-8')."' where ident =".$result[0]->ident;
     }else{
-      $title_sql="insert into ".tbl_prefix."home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'title','".$_POST['home']['title']."')";
+      $title_sql="insert into ".tbl_prefix."home_data ( `ident` , `owner` , `access` , `name` , `value` ) values ('',".$page_owner.",0,'title','".htmlentities(addslashes($_POST['home']['title'],ENT_QUOTES,'UTF-8'))."')";
     }
   //Should be ready to sql...
     db_query($body_sql);
