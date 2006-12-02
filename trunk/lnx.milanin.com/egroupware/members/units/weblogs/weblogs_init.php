@@ -29,6 +29,10 @@
 	// Add RSS to metatags
 	
 		global $metatags;
-		$metatags .= "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=\"".url."$page_userid/weblog/rss\" />\n";
+		if (isset($_GET['weblog_name'])){
+		  $metatags .= "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=\"".url."$page_userid/weblog/rss\" />\n";
+		}else{
+		  $metatags .= "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=\"".url."weblog/rss\" />\n";
+		}
 				
 ?>
