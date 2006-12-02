@@ -30,6 +30,10 @@
 		
 	// Function to display user's name
 		$function['profile:display:name'][] = path . "units/profile/function_display_name.php";
+       
+       // Function to display user's weblog title and description
+		$function['profile:display:weblog_title'][] = path . "units/profile/function_display_weblog_title.php";
+                $function['profile:display:weblog_description'][] = path . "units/profile/function_display_weblog_description.php";
 	
 	// "View" and "Edit" buttons
 		$function['menu:main'][] = path . "units/profile/menu_main.php";
