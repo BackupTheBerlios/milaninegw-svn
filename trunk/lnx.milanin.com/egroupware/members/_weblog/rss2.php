@@ -20,21 +20,22 @@
 		header("Content-type: text/xml");
 		
 		if (isset($page_owner)) {
+                  $info = db_query("select * from ".tbl_prefix."users where ident = $page_owner");
+			if (sizeof($info) > 0) {
+				$info = $info[0];
+				$name = htmlentities(run('profile:display:weblog_title'),ENT_QUOTES,'UTF-8');
+                                $description = htmlentities(run('profile:display:weblog_description'),ENT_QUOTES,'UTF-8');
+				$username = htmlentities(stripslashes($info->username));
+				$mainurl = htmlentities(url . $username . "/weblog/");
 			
 			echo <<< END
 <?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0'   xmlns:dc='http://purl.org/dc/elements/1.1/'>
 END;
-			$info = db_query("select * from ".tbl_prefix."users where ident = $page_owner");
-			if (sizeof($info) > 0) {
-				$info = $info[0];
-				$name = htmlentities(stripslashes($info->name));
-				$username = htmlentities(stripslashes($info->username));
-				$mainurl = htmlentities(url . $username . "/weblog/");
-				echo <<< END
+                        echo <<< END
   <channel xml:base='$mainurl'>
-    <title>$name : Weblog</title>
-    <description>The weblog for $name, hosted on $sitename.</description>
+    <title>$name</title>
+    <description>$description</description>
     <language>en-gb</language>
     <link>$mainurl</link>
 END;

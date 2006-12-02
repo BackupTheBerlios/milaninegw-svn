@@ -8,8 +8,7 @@
 		run("friends:init");
 		run("weblogs:init");
 		
-		$title = run("profile:display:name") . " :: Weblog";
-		
+		$title = run("profile:display:weblog_title");
 		$body = run("content:weblogs:view");
 		$body .= run("weblogs:view");
 		

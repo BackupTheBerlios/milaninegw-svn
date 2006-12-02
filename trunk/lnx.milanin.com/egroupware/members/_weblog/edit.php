@@ -1,5 +1,5 @@
 <?php
-
+//header('Content-type: text/html; charset=ISO-8859-1');
 	//	ELGG weblog edit / add post page
 
 	// Run includes
