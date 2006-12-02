@@ -15,7 +15,7 @@
 														&& isset($_REQUEST['new_weblog_keywords'])
 														&& run("permissions:check", "weblog")
 													) {
-														$title = addslashes($_REQUEST['new_weblog_title']);
+														$title = htmlentities(addslashes($_REQUEST['new_weblog_title']),ENT_QUOTES,'UTF-8');
 														$body = addslashes($_REQUEST['new_weblog_post']);
 														$access = addslashes($_REQUEST['new_weblog_access']);
 														db_query("insert into ".tbl_prefix."weblog_posts
@@ -34,7 +34,7 @@
 															sort($keyword_list);
 															if (sizeof($keyword_list) > 0) {
 																foreach($keyword_list as $key => $list_item) {
-																	$list_item = addslashes(trim($list_item));
+																	$list_item = htmlentities(addslashes(trim($list_item)),ENT_QUOTES,'UTF-8');
 																	db_query("insert into ".tbl_prefix."tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $insert_id, owner = " . $_SESSION['userid']);
 																}
 															}
@@ -56,7 +56,7 @@
 														&& isset($_REQUEST['edit_weblog_keywords'])
 													) {
 														$id = (int) $_REQUEST['edit_weblog_post_id'];
-														$title = addslashes($_REQUEST['edit_weblog_title']);
+														$title = htmlentities(addslashes($_REQUEST['edit_weblog_title']),ENT_QUOTES,'UTF-8');
 														$body = addslashes($_REQUEST['new_weblog_post']);
 														$access = addslashes($_REQUEST['edit_weblog_access']);
 														$exists = db_query("select count(ident) as post_exists
@@ -78,7 +78,7 @@
 																sort($keyword_list);
 																if (sizeof($keyword_list) > 0) {
 																	foreach($keyword_list as $key => $list_item) {
-																		$list_item = addslashes(trim($list_item));
+																		$list_item = htmlentities(addslashes(trim($list_item)),ENT_QUOTES,'UTF-8');
 																		db_query("insert into ".tbl_prefix."tags set tagtype = 'weblog', access = '$access', tag = '$list_item', ref = $id, owner = " . $_SESSION['userid']);
 																	}
 																}
