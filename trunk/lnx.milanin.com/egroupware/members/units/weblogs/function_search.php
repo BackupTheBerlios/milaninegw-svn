@@ -20,7 +20,7 @@
 					if ($searchline != "") {
 						$searchline .= " or ";
 					}
-					$searchline .= "weblog_posts.ident = " . $ref->ref;
+					$searchline .= tbl_prefix."weblog_posts.ident = " . $ref->ref;
 				}
 				$posts = db_query("select ".tbl_prefix."users.name, ".tbl_prefix."users.username, ".tbl_prefix."weblog_posts.title, ".tbl_prefix."weblog_posts.ident, ".tbl_prefix."weblog_posts.weblog, ".tbl_prefix."weblog_posts.owner, ".tbl_prefix."weblog_posts.posted from ".tbl_prefix."weblog_posts left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."weblog_posts.owner where ($searchline) order by posted desc");
 				$run_result .= "<h2>Weblog posts by " . stripslashes($posts[0]->name) . " in category '".$parameter[1]."'</h2>\n<ul>";
