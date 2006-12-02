@@ -30,7 +30,7 @@
 			switch($parameter[2]) {
 				
 				case "text":
-						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
+						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".stripslashes($parameter[1])."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
 				case "password":
 						$run_result .= "<input type=\"password\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
@@ -69,7 +69,7 @@
 						}
 						$parameter[1] = $keywords;
 						// $parameter[1] = var_export($parameter,true);
-						$run_result .= "<textarea  name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
+						$run_result .= "<textarea  name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".stripslashes($parameter[1])."</textarea>";
 						break;
 				case "longtext":
 						$run_result .= "<textarea ".$parameter[3]." name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 200px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";

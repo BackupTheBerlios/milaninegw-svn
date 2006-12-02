@@ -10,5 +10,6 @@
 	
 	// Select the correct database
 		$db = mysql_select_db(db_name);
+		mysql_query("SET CHARACTER SET 'utf8'", $db_connection);
 
 ?>

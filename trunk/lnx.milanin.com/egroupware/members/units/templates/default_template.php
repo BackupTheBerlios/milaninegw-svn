@@ -41,7 +41,8 @@ $template['pageshell'] .= <<< END
 <link href="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />
 <title>{{title}}</title>
 {{metatags}}
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
 </head>
 
 <body>
