@@ -48,9 +48,9 @@
 		
 		if (sizeof($users) > 0) {
 			if ($parameter[0] == "weblog") {
-				$run_result .= "<h2>Other members users with weblog posts in category '".$parameter[1]."'</h2>\n";
+				$run_result .= "<h2>Other members with weblog posts in category '".$parameter[1]."'</h2>\n";
 			} else {
-				$run_result .= "<h2>Users with weblog posts in category '".$parameter[1]."'</h2>\n";
+				$run_result .= "<h2>Members with weblog posts in category '".$parameter[1]."'</h2>\n";
 			}
 			$body = "<table><tr>";
 			$i = 1;
