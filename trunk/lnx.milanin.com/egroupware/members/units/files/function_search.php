@@ -45,7 +45,7 @@
 				if ($searchline != "") {
 					$searchline .= " or ";
 				}
-				$searchline .= "files.ident = " . $file->ref;
+				$searchline .= tbl_prefix."files.ident = " . $file->ref;
 			}
 			$files = db_query("select ".tbl_prefix."files.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as userfullname from ".tbl_prefix."files
 								left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."files.owner where ($searchline) 
