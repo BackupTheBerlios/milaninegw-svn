@@ -315,7 +315,7 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
 				
 				if ($newsitem && ($newsitem['category'] == $arguments['category']))
 				{
-					$this->render($newsitem);
+					$this->render($newsitem, true);
 					$link_data['item'] = 0;
 					$this->template->set_var('morelink',
 						'<a href="' . $this->link($link_data) . '">' . lang('More news') . '</a>'
@@ -370,13 +370,25 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
                                 .$this->template->parse('out','news');
 		}
 
-		function render($newsitem)
+		function render($newsitem, $isSingle = false)
 		{
+			if($isSingle)
+			{
+				$title = lang('home page');
+				$news_url = "/";
+			}
+			else
+			{
+				$title = lang('permanent link');
+				$news_url = "?news_id=".$newsitem['id'];
+			}
+			
 			$this->template->set_var(array(
 				'news_title' => stripslashes($newsitem['subject']),
 				'news_submitter' => $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']),
 				'news_date' => $GLOBALS['phpgw']->common->show_date($newsitem['date']),
-				'news_content' => stripslashes($newsitem['content']), 'news_id'=>$newsitem['id'], 'news_link_title' => lang('read news')
+				'news_content' => stripslashes($newsitem['content']), 'news_id'=>$newsitem['id'], 
+				'news_link_title' => $title, 'news_url' => $news_url
 			));
 			$this->template->parse('newsitem','NewsBlock',True);
 		}
