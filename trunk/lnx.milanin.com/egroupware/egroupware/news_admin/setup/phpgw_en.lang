@@ -59,3 +59,6 @@ webpage news admin	news_admin	en	Webpage news admin
 write	news_admin	en	Write
 write permissions	news_admin	en	Write permissions
 read news	news_admin	en	Read news
+permanent link	news_admin	en	Permanent link
+home page	news_admin	en	Home page
+

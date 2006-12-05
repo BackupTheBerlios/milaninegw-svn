@@ -58,3 +58,5 @@ visible	news_admin	it	Visibile
 webpage news admin	news_admin	it	Pagina web News Admin
 write	news_admin	it	Scrivi
 write permissions	news_admin	it	Permessi di scrittura
+permanent link	news_admin	it	Link permanente
+home page	news_admin	it	Home page
