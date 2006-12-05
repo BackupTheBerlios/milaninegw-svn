@@ -24,7 +24,7 @@
 			</tr>
 			<tr>
 				<td align="right" style="padding-right:10px;">
-							<a href="?news_id={news_id}">{news_link_title}</a>
+							<a href="{news_url}">{news_link_title}</a>
 				</td>
 			</tr>
 		</table>
@@ -40,5 +40,3 @@
 <!-- BEGIN RssBlock -->
 <a href="{rsslink}" target="_blank"><img src="images/M_images/rss.png" alt="RSS" /></a>
 <!-- END RssBlock -->
-
-
