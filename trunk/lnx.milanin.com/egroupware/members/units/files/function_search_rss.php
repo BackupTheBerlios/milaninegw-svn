@@ -11,12 +11,12 @@
 		$accessline = "(" . run("users:access_level_sql_where",$_SESSION['userid']) . ")";
 		$searchline_files = "$accessline and tagtype = 'file' and tag = '".addslashes($parameter[1])."'";
 		$searchline_folders = "$accessline and tagtype = 'folder' and tag = '".addslashes($parameter[1])."'";
-		$searchline_files = str_replace("access", "files.access", $searchline_files);
-		$searchline_files = str_replace("owner", "files.owner", $searchline_files);
-		$searchline_folders = str_replace("access", "file_folders.access", $searchline_folders);
-		$searchline_folders = str_replace("owner", "file_folders.owner", $searchline_folders);
+		$searchline_files = str_replace("access", tbl_prefix."files.access", $searchline_files);
+		$searchline_files = str_replace("owner", tbl_prefix."files.owner", $searchline_files);
+		$searchline_folders = str_replace("access", tbl_prefix."file_folders.access", $searchline_folders);
+		$searchline_folders = str_replace("owner", tbl_prefix."file_folders.owner", $searchline_folders);
 		$file_refs = db_query("select ".tbl_prefix."files.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as fullname, ref from ".tbl_prefix."tags left join ".tbl_prefix."files on ".tbl_prefix."files.ident = ".tbl_prefix."tags.ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where $searchline_files limit 50");
-		$folder_refs = db_query("select file_folders.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as fullname, ref from ".tbl_prefix."tags left join file_folders on file_folders.ident = ".tbl_prefix."tags.ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where $searchline_folders limit 50");
+		$folder_refs = db_query("select ".tbl_prefix."file_folders.*, ".tbl_prefix."users.username, ".tbl_prefix."users.name as fullname, ref from ".tbl_prefix."tags left join ".tbl_prefix."file_folders on ".tbl_prefix."file_folders.ident = ".tbl_prefix."tags.ref left join ".tbl_prefix."users on ".tbl_prefix."users.ident = ".tbl_prefix."tags.owner where $searchline_folders limit 50");
 		$searchline = "";
 		if (sizeof($folder_refs) > 0) {
 			foreach($folder_refs as $folder) {
