@@ -10,17 +10,7 @@
 	\**************************************************************************/
 
 	/* $Id: class.module_news.inc.php,v 1.10 2004/05/24 12:20:52 ralfbecker Exp $ */
-
-	function DebugLog($object, $responseEnd = false)
-	{
-		if(DEBUG == false) return;
-		print "<pre>";
-		print_r($object);
-		print "</pre>";
-		if($responseEnd) exit;
-	}
-	
-	class cPageSplitter
+class cPageSplitter
 {
 	// Draw the line like in the example below
 	// Example: << 8-15 16-23 >>
@@ -279,10 +269,13 @@
 			$my_cat = $cat->return_single($arguments['category']);
 			$this->template = Createobject('phpgwapi.Template',$this->find_template_dir());
 			$this->template->set_file('news','newsblock.tpl');
+			$this->template->set_block('news','ScriptBlock','ScriptBlock');
+			
+			$this->template->set_var(array("HideForm"=>lang('HideForm'), "SendToFriendBottom"=>lang('SendToFriendBottom')));
+			$this->template->parse('ScriptBlock','ScriptBlock');
+			
 			$this->template->set_block('news','NewsBlock','newsitem');
 			$this->template->set_block('news','RssBlock','rsshandle');
-			
-			
 			$limit = $arguments['limit'] ? $arguments['limit'] : 5;
 			
 			if ($arguments['rsslink'])
@@ -304,13 +297,17 @@
 			if($this->get_curent_pageIndex("news_id") > 0)
 				$item = $this->get_curent_pageIndex("news_id");
 
-			
-$this->template->set_block('news','PagingTopBlock', 'pageitemtop');
+
+			$this->template->set_block('news','PagingTopBlock', 'pageitemtop');
 			$this->template->set_block('news','PagingBottomBlock', 'pageitembottom');
+			$this->template->set_block('news','formurl', 'formurl');
+			
+			
 			if ($item)
 			{
 				$this->template->set_var('pageitemtop','');
 				$this->template->set_var('pageitembottom','');
+				
 				$newsitem = $bonews->get_news($item);
 				
 				if ($newsitem && ($newsitem['category'] == $arguments['category']))
@@ -320,6 +317,8 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
 					$this->template->set_var('morelink',
 						'<a href="' . $this->link($link_data) . '">' . lang('More news') . '</a>'
 					);
+					
+					$this->RenderForm();
 					return $this->template->parse('out','news');
 //					return $this->template->get_var('newsitem');
 				}
@@ -329,6 +328,7 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
 				}
 			}
 
+			$this->template->set_var('formurl','');
 			//veb: added begin.
 			$arguments['start'] = $this->get_curent_pageIndex();
 			$newslist = $bonews->get_newslist($arguments['category'], $arguments['start']*$limit,'','',$limit,True);
@@ -370,6 +370,73 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
                                 .$this->template->parse('out','news');
 		}
 
+		function RenderForm()
+		{
+			$message = "";
+			if(	isset($_POST["submit"]) && isset($_POST["comments"]) )
+			{	if(trim($_POST['emailto']) != "" && $this->IsValidEmail($_POST['emailto']) )
+				{
+					$this->SendForm();
+					$message = lang("ValidEmail");
+				}
+				else
+					$message = "<b>".lang('InvalidEmail')."</b>";
+			}
+			
+			$this->template->set_var( array('form_url' 	=> $_SERVER['REQUEST_URI'],
+											'message' 	=> $message,
+											'SendToFriend'	=> lang('SendToFriend'),
+											'FormPreText'	=> lang('FormPreText'),
+											
+											'FormNameTo'	=> lang('FormNameTo'),
+											'nameto'	=> $_POST['nameto'],
+											
+											'FormHisEmail'	=> lang('FormHisEmail'),
+											'emailto'	=> $_POST['emailto'],
+											
+											'FormYourName'	=> lang('FormYourName'),
+											'name'	=> $_POST['name'],
+											
+											'FormComments'	=> lang('FormComments'),
+											'comments'	=> $_POST['comments'],
+											
+											'SubmitButton' => lang('SubmitButton'),
+											'CancelButton' => lang('CancelButton'),
+											
+											'display'	=> ($_GET["f"]=="1" ? "block" : "none")
+											)
+									);
+			$this->template->parse('formurl', 'formurl', false);
+		}
+		
+		function IsValidEmail($email) #return '' if not mail
+		{
+			$email=trim($email);
+			return (preg_replace("/(([\w\d-]+(\.[\w\d-]+)*)\@(([\w\d-]+(\.[\w\d-]+)*)\.([\w]{2,4})))/", "", $email) == "");
+		}
+		
+		function SendForm()
+		{
+			$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			$url = preg_replace ("/(([\&|\?]*)f=(\d*))/i", "", $url);
+			$url = preg_replace ("/&$/", "", $url);
+		
+			require_once(PHPGW_API_INC.'/class.send.inc.php');
+			$mailer = new send();
+			
+			$values = $_POST;
+			$mailer->Subject = lang('EmailSubj');  // change it 
+			$mailer->From = "messenger@milanin.com";  // change it
+			$mailer->FromName = "Milan IN website";  // change it
+			
+			$body = sprintf(lang('EmailBody'), $url, $values['name'], $values['comments']);
+			
+			$mailer->Body = $body;
+			$mailer->AddAddress($values['emailto']);
+			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
+			$mailer->Send();
+		}
+		
 		function render($newsitem, $isSingle = false)
 		{
 			if($isSingle)
@@ -388,7 +455,8 @@ $this->template->set_block('news','PagingTopBlock', 'pageitemtop');
 				'news_submitter' => $GLOBALS['phpgw']->common->grab_owner_name($newsitem['submittedby']),
 				'news_date' => $GLOBALS['phpgw']->common->show_date($newsitem['date']),
 				'news_content' => stripslashes($newsitem['content']), 'news_id'=>$newsitem['id'], 
-				'news_link_title' => $title, 'news_url' => $news_url
+				'news_link_title' => $title, 'news_url' => $news_url,
+				'news_link_friend' => ($_GET["f"]=="1" ? lang('HideForm') : lang('SendToFriendBottom'))
 			));
 			$this->template->parse('newsitem','NewsBlock',True);
 		}
