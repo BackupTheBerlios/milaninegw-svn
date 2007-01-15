@@ -59,7 +59,9 @@
 					$msg = "There was a new post from Milan-IN Web Site on $date\nUser Data\nName: $p_name\n Phone: $p_phone\n e-mail: $p_email\n $p_msg";
 					
 					$mailer->Subject = $subjects[$p_subj];
-					$mailer->AddAddress($recepients[$p_subj]);
+					foreach ($recepients as $rcpt){
+					  $mailer->AddAddress($rcpt);
+					}
 					$mailer->Body = $msg;
 					
 					$mailer->From = "webmaster@milanin.com";  // change it
