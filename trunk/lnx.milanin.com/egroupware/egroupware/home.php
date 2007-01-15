@@ -309,7 +309,7 @@
                             window.onload=initmarquee(marqueecontent)
 //                           </script>';*/
                   echo "<!-- Finishing marquee-->";
-                  return '<center><script language="JavaScript1.2">
+                  return '<br/><center><script language="JavaScript1.2">
 
 /*
 Cross browser Marquee script- © Dynamic Drive (www.dynamicdrive.com)
