@@ -19,7 +19,8 @@
 				'recepient' => array('type' => 'textfield','label' => lang('Where to send recommendation')),
                                 /*'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
                                 'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') ),*/
-                                'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u') )
+                                'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u')),
+                                'loc' => array('type'=>'textfield','label'=>lang('Local events areas list'))
 			);
 			$this->properties = array();
 			$this->title = lang('recommend a club');
@@ -59,7 +60,8 @@
                                         "---- Club Name ----\n$p_club_name\n----\n".
                                         "---- Club Address ----\n$p_club_address\n----\n".
                                         "---- Club Description ----\n$p_club_descr\n----\n".
-                                        "---- How did ----\n$p_how_did_u\n----\n";
+                                        "---- How did ----\n$p_how_did_u\n----\n".
+                                        "---- Location ----\n$p_location\n----\n";;
 					
 					require_once(PHPGW_API_INC.'/class.send.inc.php');
 					
@@ -109,6 +111,7 @@
 				if  (!isset($p_btn_submit) || !empty ($log)){
                                 
                                   $how_did_u=explode(",",$arguments['how_did_u']);
+                                  $location=explode(",",$arguments['loc']);
                                           $content .=  "<p class='error'>$log </p>";
                                           $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
                                           $content .= '<form name="recommend_a_club" method="post" action="">';
@@ -142,6 +145,14 @@
                                                   <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
                                                   <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
+                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                            }
+                                          
+                                          $content.='</select></td>
+                                          </tr><tr>
+                                                  <td>'.lang("Local events area").'<font color="red">*</font></td>
+                                                  <td><select name="location">';
+                                          foreach ($location as $opt){
                                             $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
                                             }
                                           
