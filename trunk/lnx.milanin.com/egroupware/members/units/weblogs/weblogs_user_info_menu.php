@@ -22,11 +22,11 @@
 END;
 				if (run("users:type:get",$page_owner) == "person") {
 					$body .= <<< END
-				<a href="{$url}{$weblog_username}/weblog/">Personal Weblog</a> (<a href="{$url}{$weblog_username}/weblog/rss">RSS</a>)<br />
+				<a href="{$url}{$weblog_username}/weblog/">Personal Weblog</a><br/> (<a href="{$url}{$weblog_username}/weblog/rss"><img style="padding-right:5px;border:0;" src="{$url}_templates/default/feed-icon-16x16.jpg"/>RSS</a>)<br />
 END;
 				} else if (run("users:type:get",$page_owner) == "community") {
 					$body .= <<< END
-				<a href="{$url}{$weblog_username}/weblog/">Community Weblog</a> (<a href="{$url}{$weblog_username}/weblog/rss">RSS</a>)<br />
+				<a href="{$url}{$weblog_username}/weblog/">Community Weblog</a><br/> (<img style="padding-right:5px;border:0;" src="{$url}_templates/default/feed-icon-16x16.jpg"/><a href="{$url}{$weblog_username}/weblog/rss">RSS</a>)<br />
 END;
 				}
 				//<a href="{$url}{$weblog_username}/weblog/friends/">Friends Weblog</a>
@@ -36,6 +36,7 @@ END;
 			</p>
 			<p align="center">
                            <a href="{$url}_weblog/everyone.php">All Weblog Posts</a>
+                           <br/> (<img style="padding-right:5px;border:0;" src="{$url}_templates/default/feed-icon-16x16.jpg"/><a href="{$url}weblog/rss">RSS</a>)<br />
 			</p>
 END;
 
