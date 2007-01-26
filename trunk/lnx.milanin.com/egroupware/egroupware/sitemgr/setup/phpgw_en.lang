@@ -51,6 +51,7 @@ block not found.	sitemgr	en	Block not found.
 block reloaded	sitemgr	en	Block reloaded
 block returned no content.	sitemgr	en	Block returned no content.
 block saved	sitemgr	en	Block saved
+blogged by	sitemgr	en	Written by
 bookmarks	sitemgr	en	Bookmarks
 buy at %1	sitemgr	en	Buy at %1
 calendar	sitemgr	en	Calendar
@@ -71,6 +72,10 @@ choose language	sitemgr	en	Choose language
 choose template	sitemgr	en	Choose template
 choose the categories to display	sitemgr	en	Choose the categories to display
 choose your site's theme or template.  note that if you changed the above checkbox you need to save before choosing a theme or template.	sitemgr	en	Choose your site's theme or template.  Note that if you changed the above checkbox you need to save before choosing a theme or template.
+club address	sitemgr	en	The Web Site of the club you want to recommend
+club data	sitemgr	en	Club data
+club description	sitemgr	en	Club activities description
+club name	sitemgr	en	The name of the club you want to recommend
 collapse threads	sitemgr	en	Collapse Threads
 commit changes	sitemgr	en	Commit changes
 common prefix of the image-name (a number starting with 1 will be appended)	sitemgr	en	common prefix of the image-name (a number starting with 1 will be appended)
@@ -124,6 +129,7 @@ edit site	sitemgr	en	Edit Site
 edit site header and footer	common	en	Edit Site Header and Footer
 edit this block	sitemgr	en	Edit this block
 edit website	sitemgr	en	Edit Website
+elgg base url	sitemgr	en	ELGG base URL
 enter a name	sitemgr	en	Enter a name
 enter the block content here	sitemgr	en	Enter the block content here
 enter the page content here	sitemgr	en	Enter the page content here
@@ -158,7 +164,13 @@ header editor	sitemgr	en	Header Editor
 headlines	sitemgr	en	Headlines
 hello	sitemgr	en	Hello
 hello world	sitemgr	en	Hello world
+his module lets visitors to submit a club	sitemgr	en	This module allows visitors to recommend a club
+home page	news_admin	en	Home page
+how did you know about the club	sitemgr	en	How did you know about this club?
+how_did_u	sitemgr	en	"How did you know" answers list
 html module	sitemgr	en	HTML module
+i am a member of it	sitemgr	en	I am a member of it
+i know somebody who's a member of it	sitemgr	en	I know somebody who's a member of it
 i'm sorry, you do not have write permissions for any site categories.	sitemgr	en	I'm sorry, you do not have write permissions for any site categories.
 if you haven't done so already, create a user that will be used for public viewing of the site.  recommended name: anonymous.	sitemgr	en	If you haven't done so already, create a user that will be used for public viewing of the site.  Recommended name: anonymous.
 image type	sitemgr	en	image type
@@ -168,11 +180,15 @@ individual access permission	sitemgr	en	Individual Access Permission
 individual access permissions	sitemgr	en	Individual Access Permissions
 interface to google website	sitemgr	en	Interface to google website
 invalid template directory '%1' !!!	sitemgr	en	Invalid template directory '%1' !!!
+italy	sitemgr	en	Italy
+just know about it	sitemgr	en	Just know about it
 knowledge base	sitemgr	en	Knowledge Base
 languages the site user can choose from	sitemgr	en	Languages the site user can choose from
 last entries to the guestbook	sitemgr	en	Last entries to the guestbook
 latest reply	sitemgr	en	Latest Reply
 list of permitted modules specific to content area %1	sitemgr	en	List of permitted modules specific to content area %1
+local events area	sitemgr	en	Local events area
+local events areas	sitemgr	en	List of the options for areas of local events
 login	sitemgr	en	Login
 login name	sitemgr	en	Login Name
 main content	sitemgr	en	Main content
@@ -192,6 +208,8 @@ manage site-wide module properties	sitemgr	en	Manage site-wide module properties
 manage translations	sitemgr	en	Manage Translations
 master list of permitted modules	sitemgr	en	Master list of permitted modules
 migrating data for %1 to %2	sitemgr	en	Migrating data for %1 to %2
+milan	sitemgr	en	Milan
+milanin bloggers	sitemgr	en	MilanIN Bloggers
 module %1 is not permitted in this context!	sitemgr	en	Module %1 is not permitted in this context!
 module manager	sitemgr	en	Module manager
 module: %1, scope: %2, contentarea: %3, viewable: %4	sitemgr	en	Module: %1, Scope: %2, Contentarea: %3, Viewable: %4
@@ -226,8 +244,10 @@ no, chooser with preview	sitemgr	en	No, chooser with preview
 not yet translated	sitemgr	en	not yet translated
 note that you may get this message if your preferences are incorrect.  for example, if config.inc.php is not found in the directory that you specified.	sitemgr	en	Note that you may get this message if your preferences are incorrect.  For example, if config.inc.php is not found in the directory that you specified.
 number of news items to be displayed on page	sitemgr	en	Number of news items to be displayed on page
+on-line only	sitemgr	en	On-line ONLY
 only gallery	sitemgr	en	Only gallery
 or enter the title for a new guestbook	sitemgr	en	or enter the title for a new guestbook
+other posts	sitemgr	en	Other posts
 other websites	sitemgr	en	Other websites
 overview of all available categories	sitemgr	en	Overview of all available categories
 overview of one specific category	sitemgr	en	Overview of one specific category
@@ -249,25 +269,31 @@ password that you assigned for the anonymous user account.	sitemgr	en	Password t
 path to image-directory '%1' is not valid or readable by the webserver !!!	sitemgr	en	Path to image-directory '%1' is not valid or readable by the webserver !!!
 path to zip binary if not in path of the webserver	sitemgr	en	Path to zip binary if not in path of the webserver
 percentage	sitemgr	en	Percentage
+permanent link	news_admin	en	Permanent link
+personal data	sitemgr	en	Personal data
 phpgw users	sitemgr	en	phpgw users
 phrases in total	sitemgr	en	Phrases in total
 please enter a name for that site !	sitemgr	en	Please enter a name for that site !
 please sign the guestbook	sitemgr	en	Please sign the guestbook
 post a message to this thread	sitemgr	en	Post A Message To This Thread
+posts table	sitemgr	en	Posts table
 prepublished	sitemgr	en	prepublished
 preunpublished	sitemgr	en	preunpublished
 previous	sitemgr	en	Previous
 production mode	sitemgr	en	Production mode
 published	sitemgr	en	published
 reactivate content	sitemgr	en	Reactivate content
+read more	sitemgr	en	Complete story
 read permission	sitemgr	en	Read Permission
+recommend a club	sitemgr	en	Recommend a club
+recommendation is accepted	sitemgr	en	Thank you for participating in the "Not only MilanIN" initiative
 redirection	sitemgr	en	Redirection
 refresh	sitemgr	en	Refresh
 register for one now.	sitemgr	en	Register for one now.
 register new modules	sitemgr	en	Register new modules
 reload	sitemgr	en	Reload
 replies	sitemgr	en	Replies
-required fields	sitemgr	en	Required Fields
+required fields	sitemgr	en	Required fields
 reset	sitemgr	en	Reset
 return to forums	sitemgr	en	Return to forums
 return to main menu.	sitemgr	en	Return to main menu.
@@ -310,6 +336,7 @@ sitemgr setup instructions	sitemgr	en	SiteMgr Setup Instructions
 sitemgr setup page	sitemgr	en	sitemgr setup page
 sitemgr web content manager	common	en	SiteMgr Web Content Manager
 sitemgr websites	sitemgr	en	Sitemgr Websites
+social networking directory	sitemgr	en	Found it on the Internet
 sort order	sitemgr	en	Sort Order
 state	sitemgr	en	State
 strip html from block content?	sitemgr	en	Strip HTML from block content?
@@ -324,6 +351,7 @@ suppress the current page	sitemgr	en	Suppress the current page
 table of contents	sitemgr	en	Table of Contents
 template select	sitemgr	en	Template select
 textarea	sitemgr	en	textarea
+thank you for your recommendation	sitemgr	en	<p>Thank you for participating in the "Not only MilanIN" initiative.</p><p>Your recommendation will be validated by us and publicated as soon as possible.</p><p>Best Regards<br/>B.C. Milan IN - Segreteria</p>
 the category to display, 0 for complete table of contents	sitemgr	en	The category to display, 0 for complete table of contents
 the complete url or path to a file to be included	sitemgr	en	The complete URL or path to a file to be included
 the config.inc.php file needs to be edited to point to the phpgroupware directory. copy the config.inc.php.template file to config.inc.php and then edit it.	sitemgr	en	The config.inc.php file needs to be edited to point to the phpGroupWare directory. Copy the config.inc.php.template file to config.inc.php and then edit it.
@@ -331,6 +359,7 @@ the file to be downloaded	sitemgr	en	The file to be downloaded
 the filesystem path to your sitemgr-site directory '%1' is probably wrong. go to sitemgr --> define websites and edit/fix the concerned site.	sitemgr	en	The filesystem path to your sitemgr-site directory '%1' is probably wrong. Go to SiteMgr --> Define Websites and edit/fix the concerned Site.
 the first directory to think about is sitemgr-link.  if you move this to the parent directory of sitemgr (your phpgroupware root directory) then you can use setup to install the app and everyone with access to the app will get an icon on their navbar that links them directly to the public web site.  if you don't want this icon, there's no reason to ever bother with the directory.	sitemgr	en	The first directory to think about is sitemgr-link.  If you move this to the parent directory of sitemgr (your phpgroupware root directory) then you can use setup to install the app and everyone with access to the app will get an icon on their navbar that links them directly to the public web site.  If you don't want this icon, there's no reason to ever bother with the directory.
 the name field cannot contain punctuation or spaces (field modified).	sitemgr	en	The Name field cannot contain punctuation or spaces (field modified).
+the number of posts to show	sitemgr	en	The number of posts to show
 the page name must be unique.	sitemgr	en	The page name must be unique.
 the page was successfully saved.	sitemgr	en	The page was successfully saved.
 the path to the file to be downloaded	sitemgr	en	The path to the file to be downloaded
@@ -342,6 +371,7 @@ the url must be absolute and end in a slash, for example http://mydomain.com/mys
 the url to redirect to	sitemgr	en	The URL to redirect to
 the web	sitemgr	en	the web
 the whole page	sitemgr	en	the whole page
+the whole world	sitemgr	en	The whole world
 the xml files' common name	sitemgr	en	the XML files' common name
 theme or template select	sitemgr	en	Theme or template select
 there are no categories	sitemgr	en	There are no categories
@@ -352,11 +382,13 @@ there are no sections available to you.	sitemgr	en	There are no sections availab
 there are two subdirectories off of your sitemgr directory that you should move before you do anything else.  you don't <i>have</i> to move either of these directories, although you will probably want to.	sitemgr	en	There are two subdirectories off of your sitemgr directory that you should move before you do anything else.  You don't <i>have</i> to move either of these directories, although you will probably want to.
 there can only be one version in (pre(un))published state, with the one exeption that one prepublished version can coexist with one preunpublished version	sitemgr	en	There can only be one version in (pre(un))published state, with the one exeption that one prepublished version can coexist with one preunpublished version
 there is no website configured for url %1.  notify the administrator.	sitemgr	en	THERE IS NO WEBSITE CONFIGURED FOR URL %1.  NOTIFY THE ADMINISTRATOR.
+there was a problem sending this mail!	sitemgr	en	There was a problem sending this mail!
 there was an error accessing the requested page. either you do not have permission to view this page, or the page does not exist.	common	en	There was an error accessing the requested page. Either you do not have permission to view this page, or the page does not exist.
 there was an error writing to the database.	sitemgr	en	There was an error writing to the database.
 this block displays a javascript based tree menu	sitemgr	en	This block displays a javascript based tree menu
 this block displays the current section's table of contents	sitemgr	en	This block displays the current section's table of contents
 this category has no pages.	sitemgr	en	This category has no pages.
+this is a module to show bloggers posts as news	sitemgr	en	This is a module to show bloggers posts as news
 this is a simple sample module	sitemgr	en	This is a simple sample module
 this is only used as an internal name for the website.	sitemgr	en	This is only used as an internal name for the website.
 this is used chiefly for meta data and the title bar. if you change the site languages below you have to save before being able to set this preference for a new language.	sitemgr	en	This is used chiefly for meta data and the title bar. If you change the site languages below you have to save before being able to set this preference for a new language.
@@ -385,6 +417,10 @@ this should be a comma-separated list of language-codes.	sitemgr	en	This should 
 this should be a page that is readable by everyone. if you leave this blank, the site index will be shown by default.	sitemgr	en	This should be a page that is readable by everyone. If you leave this blank, the site index will be shown by default.
 this site	sitemgr	en	this site
 title	sitemgr	en	Title
+too short address	sitemgr	en	The Web Site address is too short
+too short club name	sitemgr	en	The club name is too short
+too short description	sitemgr	en	The club description is too short
+too short name	sitemgr	en	The name is too short
 topic	sitemgr	en	Topic
 translate	sitemgr	en	Translate
 translate category	sitemgr	en	Translate Category
@@ -401,6 +437,8 @@ use phpnuke themes instead of templates	sitemgr	en	Use phpNuke themes instead of
 use this module for displaying book ads for the amazon web site	sitemgr	en	Use this module for displaying book ads for the amazon web site
 use this module for displaying wiki-pages	sitemgr	en	Use this module for displaying wiki-pages
 user name	sitemgr	en	User Name
+users icons table	sitemgr	en	Users icons table
+users table	sitemgr	en	Users table
 view administrative menu	sitemgr	en	View Administrative Menu
 view full index	sitemgr	en	View full index
 view generated site	sitemgr	en	View Generated Site
@@ -413,6 +451,7 @@ web site manager	sitemgr	en	Web Site Manager
 website	sitemgr	en	Website
 week	sitemgr	en	week
 what do you want to do with existing translations of categories and pages for this language?	sitemgr	en	What do you want to do with existing translations of categories and pages for this language?
+where to send recommendation	sitemgr	en	List of the e-mail addresses where to send recommendation
 wiki	sitemgr	en	Wiki
 wiki startpage	sitemgr	en	Wiki startpage
 with which view should the module be displayed in the beginning?	sitemgr	en	With which view should the module be displayed in the beginning?
@@ -431,50 +470,18 @@ you do not have write permissions for any site categories.	sitemgr	en	You do not
 you don't have permission to write in the category	sitemgr	en	You don't have permission to write in the category
 you don't have permission to write to that category.	sitemgr	en	You don't have permission to write to that category.
 you failed to fill in one or more required fields.	sitemgr	en	You failed to fill in one or more required fields.
+you have entered an invalid email address	sitemgr	en	You have entered an invalid email address
 you have no rights to view wiki content or the wiki is not installed at all !!!	sitemgr	en	You have no rights to view wiki content or the wiki is not installed at all !!!
 you may have deinstalled the used template '%1'. reinstall it or go to sitemgr --> configure website and select an other one.	sitemgr	en	You may have deinstalled the used template '%1'. Reinstall it or go to SiteMgr --> Configure Website and select an other one.
 you must be an admin to edit categories.	sitemgr	en	You must be an admin to edit categories.
 you must be an admin to edit the site header and footer.	sitemgr	en	You must be an admin to edit the site header and footer.
 you must be an admin to manage module properties.	sitemgr	en	You must be an admin to manage module properties.
 you must be an administrator to setup the site manager.	sitemgr	en	You must be an administrator to setup the Site Manager.
+you must fill in all of the required fields	sitemgr	en	All the required fields should be filled
 you removed one ore more languages from your site languages.	sitemgr	en	You removed one ore more languages from your site languages.
 your administrator has not yet setup the web content manager for public viewing.  go bug your administrator to get their butt in gear.	sitemgr	en	Your administrator has not yet setup the web content manager for public viewing.  Go bug your administrator to get their butt in gear.
 your calendar	sitemgr	en	Your Calendar
 your comment	sitemgr	en	Your comment
-your name	sitemgr	en	Your name
-Personal data	sitemgr	en	Personal data
-Club data	sitemgr	en	Club data
-Club name	sitemgr	en	The name of the club you want to recommend
-Club address	sitemgr	en	The Web Site of the club you want to recommend
-Club description	sitemgr	en	Club activities description	
-How did you know about the club	sitemgr	en	How did you know about this club?
-recommend a club	sitemgr	en	Recommend a club
-his module lets visitors to submit a club	sitemgr	en	This module allows visitors to recommend a club
-Where to send recommendation	sitemgr	en	List of the e-mail addresses where to send recommendation
-how_did_u	sitemgr	en	"How did you know" answers list
-you must fill in all of the required fields	sitemgr	en	All the required fields should be filled
-you have entered an invalid email address	sitemgr	en	You have entered an invalid email address
-too short name	sitemgr	en	The name is too short
-too short club name	sitemgr	en	The club name is too short
-too short description	sitemgr	en	The club description is too short
-too short address	sitemgr	en	The Web Site address is too short
-There was a problem sending this mail!	sitemgr	en	There was a problem sending this mail!
-Recommendation is accepted	sitemgr	en	Thank you for participating in the "Not only MilanIN" initiative
-Thank you for your recommendation	sitemgr	en	<p>Thank you for participating in the "Not only MilanIN" initiative.</p><p>Your recommendation will be validated by us and publicated as soon as possible.</p><p>Best Regards<br/>B.C. Milan IN - Segreteria</p>
-There was a problem sending mail to	sitemgr it	There was a problem sending mail to
+your email	sitemgr	en	Your E-mail address
 your name	sitemgr	en	Your Name
 your phone number	sitemgr	en	Your phone number
-your email	sitemgr	en	Your E-mail address
-I am a member of it	sitemgr	en	I am a member of it
-I know somebody who's a member of it	sitemgr	en	 I know somebody who's a member of it
-Just know about it	sitemgr	en	 Just know about it
-Social Networking Directory	sitemgr	en	 Found it on the Internet
-required fields	sitemgr	en	Required fields
-permanent link	news_admin	en	Permanent link
-home page	news_admin	en	Home page
-Local events area	sitemgr	en	Local events area
-Milan	sitemgr	en	Milan
-Italy	sitemgr	en	Italy
-The whole world	sitemgr	en	The whole world
-On-line ONLY	sitemgr	en	On-line ONLY
-Local events areas	sitemgr	en	List of the options for areas of local events

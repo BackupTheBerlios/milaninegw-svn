@@ -1,36 +1,46 @@
-Personal data	sitemgr	it	Dati personali
-Club data	sitemgr	it	Dati del club
-Club name	sitemgr	it	Il nome del Club che vuoi segnalare
-Club address	sitemgr	it	Il sito del Club che vuoi segnalare
-Club description	sitemgr	it	Descrizione delle attività del Club
-How did you know about the club	sitemgr	it	Come hai conosciuto questa iniziativa?
-recommend a club	sitemgr	it	Segnala un club
+blogged by	sitemgr	it	Scritto da
+club address	sitemgr	it	Il sito del Club che vuoi segnalare
+club data	sitemgr	it	Dati del club
+club description	sitemgr	it	Descrizione delle attivitï¿½del Club
+club name	sitemgr	it	Il nome del Club che vuoi segnalare
+elgg base url	sitemgr	it	URL di base di ELGG
 his module lets visitors to submit a club	sitemgr	it	Questo modulo permette a visitatori segnalare un club
-Where to send recommendation	sitemgr	it	Lista di indirizzi e-mail dove inviare la segnalazione
+home page	news_admin	it	Home page
+how did you know about the club	sitemgr	it	Come hai conosciuto questa iniziativa?
 how_did_u	sitemgr	it	Lista di opzioni per la domanda "Come hai saputo"
-you must fill in all of the required fields	sitemgr	it	Bisogna compilare tutti i campi obligatori
+i am a member of it	sitemgr	it	Sono un socio di questo Club
+i know somebody who's a member of it	sitemgr	it	Conosco qualcuno che ne fa parte
+italy	sitemgr	it	Italia
+just know about it	sitemgr	it	Lo conosco, semplicemente
+local events area	sitemgr	it	Area di frequentazione
+local events areas list	sitemgr	it	Lista di opzioni per la area di frequentazione
+milan	sitemgr	it	Milano
+milanin bloggers	sitemgr	it	I Blogger di MilanIN
+on-line only	sitemgr	it	SOLO On-line
+other posts	sitemgr	it	Altri articoli
+permanent link	news_admin	it	Link permanente
+personal data	sitemgr	it	Dati personali
+posts table	sitemgr	it	Tabella delle articoli
+read more	sitemgr	it	Articolo completo
+recommend a club	sitemgr	it	Segnala un club
+recommendation is accepted	sitemgr	it	Grazie per avere partecipato all'iniziativa "Non solo Milan IN"
+required fields	sitemgr	it	Campi obligatori
+social networking directory	sitemgr	it	L'ho trovato su internet
+thank you for your recommendation	sitemgr	it	<p>Grazie per avere partecipato all'iniziativa "Non solo Milan IN"</p><p>La tua segnalazione verrï¿½vagliata dal CD del Club e pubblicata prima possibile.</p><p>A presto!<br/>B.C. Milan IN - Segreteria</p>
+the number of posts to show	sitemgr	it	Il numero dei articoli da vizzualizare
+the whole world	sitemgr	it	Tutto il mondo
+there was a problem sending mail to	sitemgr	it	E' stata scoperta una problema durante l'invio e-mail a
+there was a problem sending this mail!	sitemgr	it	E' stata scoperta una problema durante l'invio della segnalazione
+this is a module to show bloggers posts as news	sitemgr	it	Questo module per vizzualizare articoli dei blogger come le notizie
+too short address	sitemgr	it	L'indirizzo di sito web ï¿½tropo scorto
+too short club name	sitemgr	it	Il nome di club ï¿½tropo scorto
+too short description	sitemgr	it	La descrizione di club ï¿½tropo scorta
+too short name	sitemgr	it	Il nome ï¿½tropo scorto
+users icons table	sitemgr	it	Tabella di icone delle utente
+users table	sitemgr	it	Tabella delle utente
+where to send recommendation	sitemgr	it	Lista di indirizzi e-mail dove inviare la segnalazione
 you have entered an invalid email address	sitemgr	it	Hai digitato indirizzo e-mail non valido
-too short name	sitemgr	it	Il nome è tropo scorto
-too short club name	sitemgr	it	Il nome di club è tropo scorto
-too short description	sitemgr	it	La descrizione di club è tropo scorta
-too short address	sitemgr	it	L'indirizzo di sito web è tropo scorto
-There was a problem sending this mail!	sitemgr	it	E' stata scoperta una problema durante l'invio della segnalazione
-Recommendation is accepted	sitemgr	it	Grazie per avere partecipato all'iniziativa "Non solo Milan IN"
-Thank you for your recommendation	sitemgr	it	<p>Grazie per avere partecipato all'iniziativa "Non solo Milan IN"</p><p>La tua segnalazione verrà vagliata dal CD del Club e pubblicata prima possibile.</p><p>A presto!<br/>B.C. Milan IN - Segreteria</p>
-There was a problem sending mail to	sitemgr	it	E' stata scoperta una problema durante l'invio e-mail a
+you must fill in all of the required fields	sitemgr	it	Bisogna compilare tutti i campi obligatori
+your email	sitemgr	it	La tua E-Mail
 your name	sitemgr	it	Il tuo Nome
 your phone number	sitemgr	it	Il tuo numero telefonico
-your email	sitemgr	it	La tua E-Mail
-I am a member of it	sitemgr	it	Sono un socio di questo Club
-I know somebody who's a member of it	sitemgr	it	 Conosco qualcuno che ne fa parte
-Just know about it	sitemgr	it	 Lo conosco, semplicemente
-Social Networking Directory	sitemgr	it	 L'ho trovato su internet
-required fields	sitemgr	it	Campi obligatori
-permanent link	news_admin	it	Link permanente
-home page	news_admin	it	Home page
-Local events area	sitemgr	it	Area di frequentazione
-Milan	sitemgr	it	Milano
-Italy	sitemgr	it	Italia
-The whole world	sitemgr	it	Tutto il mondo
-On-line ONLY	sitemgr	it	SOLO On-line
-Local events areas list	sitemgr	it	Lista di opzioni per la area di frequentazione
