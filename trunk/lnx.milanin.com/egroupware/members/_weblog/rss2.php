@@ -62,6 +62,7 @@ END;
     <item>
         <title>$title</title>
         <link>$link</link>
+        <guid>$link</guid>
         <pubDate>$pubdate</pubDate>$keywordtags
         <description>$body</description>
     </item>
