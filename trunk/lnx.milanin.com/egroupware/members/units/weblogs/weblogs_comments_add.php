@@ -12,7 +12,7 @@
 	
 END;
 
-		$field = run("display:input_field",array("new_weblog_comment","","longtext"));
+		$field = run("display:input_field",array("milanin_new_weblog_comment","","longtext"));
 		if (logged_on) {
 			$userid = $_SESSION['userid'];
 		} else {
@@ -21,8 +21,8 @@ END;
 		$field .= <<< END
 		
 		<input type="hidden" name="action" value="weblogs:comment:add" />
-		<input type="hidden" name="post_id" value="{$post->ident}" />
-		<input type="hidden" name="owner" value="{$userid}" />
+		<input type="hidden" name="milanin_post_id" value="{$post->ident}" />
+		<input type="hidden" name="milanin_owner" value="{$userid}" />
 		
 END;
 
@@ -45,7 +45,7 @@ END;
 		
 								'context' => 'databox1',
 								'name' => 'Your name',
-								'column1' => "<input type=\"text\" name=\"postedname\" value=\"".htmlentities($comment_name)."\" />"
+								'column1' => "<input type=\"text\" name=\"milanin_postedname\" value=\"".htmlentities($comment_name)."\" />"
 		
 							)
 							);
