@@ -118,7 +118,6 @@ body			{
 					font-family: arial, helvetica;
 					font-size: 10pt;
 					line-height: 1.2ems;
-#margin: 10%;
 					padding: 0px;
 				}
 
