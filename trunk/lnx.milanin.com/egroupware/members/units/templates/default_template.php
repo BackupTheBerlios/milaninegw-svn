@@ -24,7 +24,6 @@
 END;
 if ($_SESSION['userid']>0){
 $template['pageshell'] .= <<< END
-<script language="javascript" type="text/javascript" src="/members/jscripts/humanoid.js"></script>
 <script language="javascript" type="text/javascript" src="/egroupware/jscripts/tiny_mce/tiny_mce.js"></script>
 <script language="javascript" type="text/javascript">
 tinyMCE.init({
@@ -37,6 +36,10 @@ tinyMCE.init({
 
 END;
 /**/
+}else{
+$template['pageshell'] .= <<< END
+<script language="javascript" type="text/javascript" src="/members/jscripts/humanoid.js"></script>
+END;
 }
 $template['pageshell'] .= <<< END
 <link href="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />

@@ -109,12 +109,14 @@
 													}
 													break;
 				// Create a weblog comment
-					case "weblogs:comment:add":	if (
+					case "weblogs:comment:add":
+                        if (
 														isset($_REQUEST['milanin_post_id'])
 														&& isset($_REQUEST['milanin_new_weblog_comment'])
 														&& isset($_REQUEST['milanin_postedname'])
 														&& isset($_REQUEST['milanin_owner'])
-													) {
+                        && (isset($_REQUEST['humanoid']) || logged_on)
+                                                                                                                       ) {
 														$post_id = (int) $_REQUEST['milanin_post_id'];
 														$where = run("users:access_level_sql_where",$_SESSION['userid']);
 														$post = db_query("select ident from ".tbl_prefix."weblog_posts where ($where) and ident = $post_id");

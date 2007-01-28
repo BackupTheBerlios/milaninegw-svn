@@ -1,5 +1,5 @@
 function addField() {
-        var  frm= document.getElementById("MyForm");
+        var  frm= document.getElementById("milanin_add_comment_form");
         var field = document.createElement('input');
         field.id = "humanoid";
         field.name = "humanoid";

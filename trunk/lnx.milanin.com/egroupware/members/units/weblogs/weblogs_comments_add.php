@@ -6,7 +6,8 @@
 		
 		$run_result .= <<< END
 		
-	<form action="" method="post">
+	<form action="" method="post" name="milanin_add_comment_form"
+         id="milanin_add_comment_form">
 	
 		<h2>Add a comment</h2>
 	
@@ -54,7 +55,7 @@ END;
 		
 								'context' => 'databox1',
 								'name' => '&nbsp;',
-								'column1' => "<input type=\"submit\" onclick=\"addField()\" value=\"Add comment\" />"
+								'column1' => "<input type=\"submit\" ".((logged_on) ? "":"onclick=\"addField()\" "). "value=\"Add comment\" />"
 		
 							)
 							);
