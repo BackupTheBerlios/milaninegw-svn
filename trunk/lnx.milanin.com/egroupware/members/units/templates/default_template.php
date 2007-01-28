@@ -52,7 +52,13 @@ $template['pageshell'] .= <<< END
 <body>
 <table align="center" width="898"  border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td id="pagetop"><a href="{{url}}"><!--img src="{{url}}_templates/default/graphics/purplecrayon.gif" alt="Elgg" width="227" height="70" border="0" /--></a></td>
+    <td id="pagetop">
+  <ul>
+  <li><a href="/"><span>Club Website</span></a></li>
+  <li><a href="/members"><span>Members Blogs</span></a></li>
+  <li><a href="/egroupware"><span>Members Area</span></a></li>
+  </ul>
+  </td>
   </tr>
 </table>
 <table align="center" width="898"  border="0" cellpadding="0" cellspacing="0" background="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/blocks_bg1.gif">
@@ -141,10 +147,17 @@ form			{
                                         height: 120px;
                                         background-image: url("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
                                         background-repeat: no-repeat;
+                                        vertical-align: top;
+                                        margin: 0px;
+					padding: 0px;
+                                        padding-left: 160px;
+                                        padding-top: 5px;
+                                        left: 0px;
+                                        text-align: left;
   
 				}
 #pagetop ul		{
-					position: absolute;
+                                        /*float: left;*/
 					right: 0;
 					top: 0;
 					list-style-type: none;
@@ -153,21 +166,20 @@ form			{
 				}
 #pagetop li		{
 					font-family: verdana, arial, helvetica, helv;
+                                        /*list-style-type: none;*/
+                                        list-style-type: square;
+                                        list-style: square;
 					color:#ffffff;
-					margin: 0;
-					padding: 0;
+					margin: 0px;
+					padding: 0px 24px 0px 0px;
+                                        float: left;
 				}
 #pagetop li a	{
 					display: block;
 					text-decoration: none;
-					color: #ffa800;
-					text-align: center;
-					background-color: #444444;
+					text-align: left;
 				}
-#pagetop li a:hover	{
-					color: #000000;
-					background-color: #ffa800;
-				}
+
 .messages        {
                     background-color: #EDF1F1;
 		    font-weight: bold;
