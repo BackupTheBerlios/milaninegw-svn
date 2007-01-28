@@ -17,14 +17,14 @@
 		
 		$sitename = htmlentities(sitename);
 		
-		header("Content-type: text/xml");
+		header("Content-type: text/xml; charset=ISO-8859-1");
 		
 				$name = htmlentities("MilanIN Webloggers");
                                 $description = htmlentities(sitename." Bloggers Feed");
 				$mainurl = htmlentities(url .  "_weblog/everyone.php");
 			
 			echo <<< END
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='ISO-8859-1'?>
 <rss version='2.0'   xmlns:dc='http://purl.org/dc/elements/1.1/'>
 <!-- all_rss -->
 END;
@@ -43,7 +43,7 @@ END;
 				}
 				if (sizeof($entries) > 0) {
 					foreach($entries as $entry) {
-						$title = htmlentities(stripslashes($entry->name.' :: '.$entry->title));
+						$title = stripslashes($entry->name.' :: '.html_entity_decode($entry->title));
 						$link = url .$entry->username . "/weblog/" . $entry->ident . ".html";
                                                 $body_header="<div style=\"margin:5px;float:left\"><img src=\"".url."_icons/data/".$entry->filename."\"/></div>";
 						$body = htmlentities($body_header.run("weblogs:text:process",stripslashes($entry->body)));

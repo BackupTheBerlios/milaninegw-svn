@@ -54,7 +54,7 @@ END;
 		
 								'context' => 'databox1',
 								'name' => '&nbsp;',
-								'column1' => "<input type=\"submit\" value=\"Add comment\" />"
+								'column1' => "<input type=\"submit\" onclick=\"addField()\" value=\"Add comment\" />"
 		
 							)
 							);
