@@ -486,12 +486,12 @@ a.category:hover {
 ul {
 	margin: 0px 0px 0px 0px;
 	}
-
+/*
 li {
 	list-style: inside url(../../../images/M_images/arrowp.png);
 	list-style-image: url(../../../images/M_images/arrowp.png);
 	}
-
+*/
 .fase4rdf {
 	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px; color: #242D0C; font-weight: normal;
