@@ -30,6 +30,7 @@ tinyMCE.init({
 	mode : "exact",
 	safari_warning : false,
 	elements: "home[data],new_weblog_post,profiledetails[biography],profiledetails[careergoals],new_weblog_comment",
+	convert_urls : false,
 	language: "it"
 });
 </script>
