@@ -188,7 +188,7 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 					<?php } ?>
 				</td>
 				
-				<?php if (mosCountModules( "right" ) + mosCountModules( "user2" ) > 0) { ?>
+				<?php if (mosCountModules( "right" ) + mosCountModules( "user2" ) + mosCountModules( "promote" ) > 0) { ?>
 				<td class="rightnav" width="175">
 					<?php if (mosCountModules( "right" )) { ?>
 					<!-- right nav -->
@@ -215,7 +215,30 @@ defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.'
 					<br>
 					<?php } ?>
 					
-					<?php if (mosCountModules( "user2" )) { ?>
+					<?php if (mosCountModules( "promote" )) { ?>
+					<!-- promote nav -->
+					<table border="0" cellspacing="0" cellpadding="0" width="171">
+					<tr>
+						<td class="navcontent">
+							<table border="0" cellspacing="0" cellpadding="0" width="165">
+								<tr>
+									<td class="navbg_main">
+									<?php mosLoadModules ( 'promote' ); ?>
+									</td>
+								</tr>
+							</table>
+						</td>	
+						<td valign="top" background="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/shadow_right.gif"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4"/></td>
+					</tr>
+					</table>
+					<table border="0" cellspacing="0" cellpadding="0" width="171">
+					<tr>
+						<td><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="4" height="4" /></td>
+						<td bgcolor="#becbcd"><img alt=""  src="<?php echo $mosConfig_live_site;?>/templates/rhuk_orange_smoothie/images/spacer.gif" width="147" height="4" /></td>
+					</tr>
+					</table>					
+					<?php } ?>
+                                        <?php if (mosCountModules( "user2" )) { ?>
 					<!-- user2 nav -->
 					<table border="0" cellspacing="0" cellpadding="0" width="171">
 					<tr>

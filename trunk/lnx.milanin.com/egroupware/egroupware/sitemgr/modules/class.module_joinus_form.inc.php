@@ -19,7 +19,8 @@
 				'recepient' => array('type' => 'textfield','label' => lang('Where to send request')),
                                 'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
                                 'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') ),
-                                'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u') )
+                                'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u') ),
+				'prof_profile' => array('type'=>'textfield','label'=>lang('Which professional profile better describes you') )
 			);
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
@@ -69,6 +70,9 @@
 					
 					if (strlen ($p_name)<2 || strlen ($p_surname)<2)
 						$log .= lang('too short name')."<br/>";
+					if (strlen ($p_prof_profile) <5){
+						$log .= lang('Proffessional profile is required')."<br/>";
+					}
 				}
 				
 				if (isset($p_btn_submit) && empty ($log))
@@ -132,6 +136,7 @@
                                         "---- Phone ----\n$p_phone\n----\n---- e-mail ----\n$p_email\n---- URL to LinkedIn ----\n$p_url\n".
                                         "---- Comment ----\n$p_msg\n----\n".
                                         "---- How did ----\n$p_how_did_u\n----\n".
+					"---- Proffessional Profile ----\n$p_prof_profile\n----\n".
                                         "\n Follow this link to view and edit the new user account:\n $link\n";
 					
 					require_once(PHPGW_API_INC.'/class.send.inc.php');
@@ -189,6 +194,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
                                   $how_did_u=explode(",",$arguments['how_did_u']);
+				  $prof_profile=explode(",",$arguments['prof_profile']);
                                         if (isset($g_ic)){
                                           $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
                                           $GLOBALS['phpgw_domain']['default']['db_user'],
@@ -222,6 +228,14 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           <tr>
 						<td>'.lang('last name').'<font color="red">*</font></td>
 						<td><input type="text" name="surname" value='.$p_surname.'></td>
+                                          </tr>
+					  <tr>
+                                                  <td>'.lang("Which professional profile better describes you").'<font color="red">*</font></td>
+                                                  <td><select name="prof_profile">';
+                                          foreach ($prof_profile as $opt){
+                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                          }
+                                          $content.='</select></td>
                                           </tr>
                                           <tr>
                                                   <td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
@@ -266,6 +280,14 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                           <tr>
                                                   <td>'.lang('last name').' <font color="red">*</font></td>
                                                   <td><input type="text" name="surname" value='.$p_surname.'></td>
+                                          </tr>
+					  <tr>
+                                                  <td>'.lang("Which professional profile better describes you").'<font color="red">*</font></td>
+                                                  <td><select name="prof_profile">';
+                                          foreach ($prof_profile as $opt){
+                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                          }
+                                          $content.='</select></td>
                                           </tr>
                                           <tr>
                                                   <td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
