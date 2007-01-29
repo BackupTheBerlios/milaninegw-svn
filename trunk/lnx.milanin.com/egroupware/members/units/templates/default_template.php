@@ -56,8 +56,8 @@ $template['pageshell'] .= <<< END
     <td id="pagetop">
   <ul>
   <li><a href="/"><span>Club Website</span></a></li>
-  <li><a href="/members"><span>Members Blogs</span></a></li>
-  <li><a href="/egroupware"><span>Members Area</span></a></li>
+  <li><a href="/members"><span>All Members Blogs</span></a></li>
+  <li><a href="/egroupware"><span>Restricted Members Area</span></a></li>
   </ul>
   </td>
   </tr>
