@@ -18,6 +18,8 @@
 	{
 		var $bo;
 		var $template;
+		var $broadcaster;
+		var $multicaster;
 		var $public_functions = array(
 			'inbox'          => True,
                         'archive'        => True,
@@ -35,16 +37,25 @@
 		{
 			$this->bo         = CreateObject('messenger.bomessenger');
 			$this->nextmatchs = createobject('phpgwapi.nextmatchs');
+		$this->broadcaster=$GLOBALS['phpgw']->acl->get_specific_rights(
+				$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group');
+		$this->multicaster = $GLOBALS['phpgw']->acl->get_specific_rights(
+				$GLOBALS['phpgw']->accounts->name2id('Multicast'),'phpgw_group');			
 		}
 
 		function display_headers($extras = '')
 		{
+		//$broadcaster=$GLOBALS['phpgw']->acl->get_specific_rights(
+				//$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group');
+		//$multicaster = $GLOBALS['phpgw']->acl->get_specific_rights(
+				//$GLOBALS['phpgw']->accounts->name2id('Multicast'),'phpgw_group');
 			$GLOBALS['phpgw']->template->set_file('_header','messenger_header.tpl');
 			$GLOBALS['phpgw']->template->set_block('_header','global_header');
 			$GLOBALS['phpgw']->template->set_var('lang_inbox','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.inbox') . '">' . lang('Inbox') . '</a>');
 			$GLOBALS['phpgw']->template->set_var('lang_archive','<a href="' .
 			$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.archive') . '">' . lang('archive') . '</a>');
 			$GLOBALS['phpgw']->template->set_var('lang_compose','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose') . '">' . lang('Compose to single-user') . '</a>');
+		if ($this->broadcaster || $this->multicaster)
 			$GLOBALS['phpgw']->template->set_var('lang_compose_multiple','<a href="' . $GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_multiple') . '">' . lang('Compose to multi-users') . '</a>');
 
 			if($extras['nextmatchs_left'])
@@ -335,77 +346,81 @@
 
 		function compose_multiple()
 		{
-			$message = $_POST['message'];
-
-			if($_POST['cancel'])
+			if ($this->broadcaster || $this->multicaster) 
 			{
-				$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
-			}
-			if($_POST['send'])
-			{
-				$errors = $this->bo->send_multiple_message($message);
-				if(@is_array($errors))
-				{
-					$GLOBALS['phpgw']->template->set_var('errors',$GLOBALS['phpgw']->common->error_list($errors));
-				}
-				else
+				$message = $_POST['message'];
+	
+				if($_POST['cancel'])
 				{
 					$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
 				}
-			}
-
-			// recipient dropdown field stuff added by tobi (gabele@uni-sql.de)
-			$sndid = array();
-			$broadcaster=$GLOBALS['phpgw']->acl->get_specific_rights(
-				$GLOBALS['phpgw']->accounts->name2id('Broadcast'),'phpgw_group');
-			
-			
-			if(count($message['to']) != 0)
-			{  
-			   foreach($message['to'] as $to)
-			   {
-			        $sndid[] = $GLOBALS['phpgw']->accounts->name2id($to);
-			   } 
-			}   
-			
-
-			$myownid=$GLOBALS['phpgw_info']['user']['account_id'];
-
-			$users = $this->bo->get_messenger_users();
-			$str = '';
-			foreach($users as $user)
-			{
-				if($user['account_id'] != (int)$myownid)
+				if($_POST['send'])
 				{
-					$str .= '    <option value="' .$user['account_lid']. '"'.(in_array($user['account_id'],$sndid) ?' selected':'').'>'.$user['account_firstname'].' '.$user['account_lastname'].'</option>'."\n";
+					$errors = $this->bo->send_multiple_message($message);
+					if(@is_array($errors))
+					{
+						$GLOBALS['phpgw']->template->set_var('errors',$GLOBALS['phpgw']->common->error_list($errors));
+					}
+					else
+					{
+						$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.inbox');
+					}
 				}
-			}
-
-				$tobox = "\n".'   <select name="message[to][]" multiple="1" height="100%">'."\n".$str.'   </select>';
 	
-			$this->display_headers();
-			$this->set_compose_read_blocks();
-
-			$this->set_common_langs();
-			$GLOBALS['phpgw']->template->set_var('header_message',lang('Compose message'));
-
-			$GLOBALS['phpgw']->template->set_var('form_action',$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_multiple'));
-			$GLOBALS['phpgw']->template->set_var('value_to',$tobox);
-			$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . $message['subject'] . '" size="30">');
-			$GLOBALS['phpgw']->template->set_var('value_content','<textarea name="message[content]" rows="20" wrap="hard" cols="76">' . $message['content'] . '</textarea>');
-
-			$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
-			$GLOBALS['phpgw']->template->set_var('button_cancel','<input type="submit" name="cancel" value="' . lang('Cancel') . '">');
-			$GLOBALS['phpgw']->template->set_var('cc_to_self','<input type="checkbox" name="message[cc_to_self]" />'.lang("cc to self"));
-                        if ($broadcaster){
-					$GLOBALS['phpgw']->template->set_var('bcast_only',
-                                          '<input type="checkbox" name="message[bcast_only]" />'.lang("bcast_only"));
-					echo '<!-- oh broadcast! -->';
-					
-                        }
-			$GLOBALS['phpgw']->template->fp('to','form_to');
-			$GLOBALS['phpgw']->template->fp('buttons','form_buttons');
-			$GLOBALS['phpgw']->template->pfp('out','form');
+				// recipient dropdown field stuff added by tobi (gabele@uni-sql.de)
+				$sndid = array();
+				
+				if(count($message['to']) != 0)
+				{  
+				foreach($message['to'] as $to)
+				{
+					$sndid[] = $GLOBALS['phpgw']->accounts->name2id($to);
+				} 
+				}   
+				
+	
+				$myownid=$GLOBALS['phpgw_info']['user']['account_id'];
+	
+				$users = $this->bo->get_messenger_users();
+				$str = '';
+				foreach($users as $user)
+				{
+					if($user['account_id'] != (int)$myownid)
+					{
+						$str .= '    <option value="' .$user['account_lid']. '"'.(in_array($user['account_id'],$sndid) ?' selected':'').'>'.$user['account_firstname'].' '.$user['account_lastname'].'</option>'."\n";
+					}
+				}
+	
+					$tobox = "\n".'   <select name="message[to][]" multiple="1" height="100%">'."\n".$str.'   </select>';
+		
+				$this->display_headers();
+				$this->set_compose_read_blocks();
+	
+				$this->set_common_langs();
+				$GLOBALS['phpgw']->template->set_var('header_message',lang('Compose message'));
+	
+				$GLOBALS['phpgw']->template->set_var('form_action',$GLOBALS['phpgw']->link('/index.php','menuaction=messenger.uimessenger.compose_multiple'));
+				$GLOBALS['phpgw']->template->set_var('value_to',$tobox);
+				$GLOBALS['phpgw']->template->set_var('value_subject','<input name="message[subject]" value="' . $message['subject'] . '" size="30">');
+				$GLOBALS['phpgw']->template->set_var('value_content','<textarea name="message[content]" rows="20" wrap="hard" cols="76">' . $message['content'] . '</textarea>');
+	
+				$GLOBALS['phpgw']->template->set_var('button_send','<input type="submit" name="send" value="' . lang('Send') . '">');
+				$GLOBALS['phpgw']->template->set_var('button_cancel','<input type="submit" name="cancel" value="' . lang('Cancel') . '">');
+				$GLOBALS['phpgw']->template->set_var('cc_to_self','<input type="checkbox" name="message[cc_to_self]" />'.lang("cc to self"));
+				if ($this->broadcaster){
+						$GLOBALS['phpgw']->template->set_var('bcast_only',
+						'<input type="checkbox" name="message[bcast_only]" />'.lang("bcast_only"));
+						echo '<!-- oh broadcast! -->';
+						
+				}
+				$GLOBALS['phpgw']->template->fp('to','form_to');
+				$GLOBALS['phpgw']->template->fp('buttons','form_buttons');
+				$GLOBALS['phpgw']->template->pfp('out','form');
+			}
+			else
+			{
+				$GLOBALS['phpgw']->redirect_link('/index.php','menuaction=messenger.uimessenger.compose');
+			}
 		}
 
 		function read_message()
