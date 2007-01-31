@@ -64,13 +64,16 @@ END;
 				if ($info->ident == $profile_id || (logged_on && (!isset($profile_id) && $info->ident == $_SESSION['userid']))) {
 					$rsslink = "<br />(<a href=\"{$url}{$info->username}/rss/\">RSS</a>)";
 				}
-				$homelink = "<br /><a href=\"{$url}{$info->username}/home/\">Home Page</a>";
+				if ($_SESSION['userid']==$profile_id){
+				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">Design your Home</a>";
+				  $pictureslink = "<br /><a href=\"{$url}_icons/\">Your site picture</a>";
+				}
 				$body .= <<< END
 		<td align="center" valign="top">
 			<a href="{$url}{$info->username}/">
 			<img src="{$url}_icons/data/{$icon}" width="{$width}" height="{$height}" alt="{$username}" border="0" /></a><br />
-			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}'s Profile {$usermenu}</span>
-			<span class="userdetails">{$homelink}</span><span>{$rsslink}</span>
+			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}&rsquo;s Profile {$usermenu}</span>
+			<span class="userdetails">{$homelink}</span><span>{$pictureslink}</span><span>{$rsslink}</span>
 		</td>
 		
 END;

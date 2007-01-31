@@ -2,15 +2,15 @@
 
 	$run_result .= run("templates:draw", array(
 						'context' => 'menuitem',
-						'name' => 'View your profile',
+						'name' => 'Profile',
 						'location' => url . $_SESSION['username'] . '/'
 					)
 					);
-	$run_result .= run("templates:draw", array(
+	/*$run_result .= run("templates:draw", array(
 						'context' => 'menuitem',
 						'name' => 'Edit your profile',
 						'location' => url . 'profile/edit.php'
 					)
-					);
+					);*/
 
 ?>

@@ -351,24 +351,16 @@ END;
 									);
 
 	$template['menu'] = <<< END
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<table width="100%" border="0" cellspacing="0" cellpadding="5">
           <tr>
             <td class="navcontent">
-		<table width="100%"  border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td class="navbg_main">
-			<table width="100%" class="moduletable">
-                          <tr>
-                            <td>
-                              <table cellspacing="2" cellpadding="2">
-                                <tr>
+		<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+                  <tr class="navbg_main">
+
+
                                   {{menuitems}}
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                    </td>
+
+
                   </tr>
                 </table>
               </td>
@@ -388,7 +380,7 @@ END;
 
 	$template['menuitem'] = <<< END
 	
-	<td style="border-style:  solid solid solid solid ; border-width: thin;"><a href="{{location}}">{{name}}</a></td>
+	<td align="center"><a href="{{location}}">{{name}}</a></td>
 	
 END;
 
