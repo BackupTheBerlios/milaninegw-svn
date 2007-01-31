@@ -18,7 +18,7 @@
 		
 	// Menus
 		$function['display:menus'][] = path . "units/display/function_mainmenu.php";
-		$function['display:menus'][] = path . "units/display/function_usermenu.php";
+		//$function['display:menus'][] = path . "units/display/function_usermenu.php";
 		
 	// Form elements
 		$function['display:input_field'][] = path . "units/display/function_input_field_display.php";
