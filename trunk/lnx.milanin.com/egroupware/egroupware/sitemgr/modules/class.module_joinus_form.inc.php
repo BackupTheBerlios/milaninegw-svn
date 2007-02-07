@@ -233,7 +233,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td>'.lang("Which professional profile better describes you").'<font color="red">*</font></td>
                                                   <td><select name="prof_profile">';
                                           foreach ($prof_profile as $opt){
-                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
                                           }
                                           $content.='</select></td>
                                           </tr>
@@ -253,7 +253,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
                                                   <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
-                                            $content.='<option value="'.lang($q).'">'.lang($q).'</option>'."\n";
+                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
                                           }
                                           $content.='</select></td>
                                           </tr>
@@ -285,7 +285,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td>'.lang("Which professional profile better describes you").'<font color="red">*</font></td>
                                                   <td><select name="prof_profile">';
                                           foreach ($prof_profile as $opt){
-                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
                                           }
                                           $content.='</select></td>
                                           </tr>
@@ -308,7 +308,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
                                                   <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
-                                            $content.='<option value="'.lang($opt).'">'.lang($opt).'</option>'."\n";
+                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
 }
                                           $content.='</select></td>
                                           </tr>
