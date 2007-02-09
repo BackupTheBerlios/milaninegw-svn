@@ -22,7 +22,7 @@ function ShowUrlForm(archor)
 <table width="98%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 	<td height="23" width="432">
-		<b><a href="?news_id={news_id}" class="newsTitle">{news_title}</a></b>
+		<b><a href="{friend_news_url}" class="newsTitle">{news_title}</a></b>
 	</td>
 </tr>
 <tr> 
@@ -39,7 +39,7 @@ function ShowUrlForm(archor)
 				</td>
 			</tr>
 			<tr>
-				<td style="padding-top:5px;"><a href="?news_id={news_id}&f=1#form" onclick="return ShowUrlForm(this);">{news_link_friend}</a></td>
+				<td style="padding-top:5px;"><a href="{friend_news_url}?f=1#form" onclick="return ShowUrlForm(this);">{news_link_friend}</a></td>
 				<td align="right" style="padding-right:10px;padding-top:5px;"><a href="{news_url}">{news_link_title}</a></td>
 			</tr>
 		</table>

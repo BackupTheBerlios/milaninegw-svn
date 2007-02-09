@@ -260,6 +260,7 @@ class cPageSplitter
 
 		function get_content(&$arguments,$properties)
 		{
+			//$arguments["category"] = 10;
 			if (!is_dir(PHPGW_SERVER_ROOT.'/news_admin') || !isset($GLOBALS['phpgw_info']['apps']['news_admin']))
 			{
 				return lang("Application '%1' is not installed !!!<br>Please install it, to be able to use the block.",'news_admin');
@@ -309,8 +310,7 @@ class cPageSplitter
 				$this->template->set_var('pageitembottom','');
 				
 				$newsitem = $bonews->get_news($item);
-				
-				if ($newsitem && ($newsitem['category'] == $arguments['category']))
+				if ($newsitem && ($newsitem['category'] == $arguments['category'] || strtolower(substr($_SERVER["SCRIPT_FILENAME"], -8)) == "news.php"))
 				{
 					$this->render($newsitem, true);
 					$link_data['item'] = 0;
@@ -439,15 +439,18 @@ class cPageSplitter
 		
 		function render($newsitem, $isSingle = false)
 		{
+			$permanentLink = $GLOBALS['sitemgr_info']['site_url']."news/".$newsitem['id'].".html";
 			if($isSingle)
 			{
 				$title = lang('home page');
-				$news_url = "/";
+				$news_url = $GLOBALS['sitemgr_info']['site_url'];
+				$friend_news_url = $permanentLink;
 			}
 			else
 			{
 				$title = lang('permanent link');
-				$news_url = "?news_id=".$newsitem['id'];
+				$news_url = $permanentLink;
+				$friend_news_url = $permanentLink;
 			}
 			
 			$this->template->set_var(array(
@@ -456,6 +459,7 @@ class cPageSplitter
 				'news_date' => $GLOBALS['phpgw']->common->show_date($newsitem['date']),
 				'news_content' => stripslashes($newsitem['content']), 'news_id'=>$newsitem['id'], 
 				'news_link_title' => $title, 'news_url' => $news_url,
+				'friend_news_url' => $friend_news_url,
 				'news_link_friend' => ($_GET["f"]=="1" ? lang('HideForm') : lang('SendToFriendBottom'))
 			));
 			$this->template->parse('newsitem','NewsBlock',True);
