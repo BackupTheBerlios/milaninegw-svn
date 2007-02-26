@@ -36,6 +36,7 @@
 		
 	// Edit / create weblog comments
 		$function['weblogs:comments:add'][] = path . "units/weblogs/weblogs_comments_add.php";
+		$function['weblogs:comments:friend'][] = path . "units/weblogs/weblogs_send_friend.php";
 		
 	// Menu button
 		$function['menu:main'][] = path . "units/weblogs/menu_main.php";	
