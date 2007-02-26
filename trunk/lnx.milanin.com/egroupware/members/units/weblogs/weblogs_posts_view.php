@@ -94,8 +94,9 @@ END;
 		}
 		$numcomments = $_SESSION['comment_cache'][$post->ident]->data;
 
-		$comments = "<a href=\"".url.$username."/weblog/{$post->ident}.html\">$numcomments comment(s)</a>";		
-
+		$comments = "<a href=\"".url.$username."/weblog/{$post->ident}.html\">$numcomments comment(s)</a>";
+		$sendToFriend = "<a href=\"".url.$username."/weblog/{$post->ident}.html?f=1#form\">Send to a Friend</a>";
+		
 		if (isset($individual) && ($individual == 1)) {
 			
 			$comments = db_query("select * from ".tbl_prefix."weblog_comments where post_id = " . $post->ident . " order by posted asc");
@@ -150,7 +151,8 @@ END;
 								)
 								);
 
-			$run_result .= run("weblogs:comments:add",$post);
+			$run_result .= run("weblogs:comments:add", $post);
+			$run_result .= run("weblogs:comments:friend", $post);
 			
 		} else {
 				
@@ -162,9 +164,10 @@ END;
 									'body' => $body,
 									'fullname' => $fullname,
 									'title' => $title,
-									'commentslink' => $comments
+									'commentslink' => $comments,
+									'sendToFriend' => $sendToFriend
 								)
-								);		
+								);
 		}
 	}
 
