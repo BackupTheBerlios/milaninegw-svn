@@ -43,7 +43,7 @@
 				{{body}}
 			</div>
 			<p>
-				<small>Posted by {{username}} at {{date}} | {{commentslink}} {{trackbackslink}}</small>
+				<small>Posted by {{username}} at {{date}} | {{commentslink}} {{trackbackslink}} | {{sendToFriend}}</small>
 			</p>
 			{{comments}}
 		</td>
