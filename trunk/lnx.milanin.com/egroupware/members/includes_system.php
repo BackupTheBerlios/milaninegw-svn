@@ -22,6 +22,9 @@
 		
 	// User icons
 		include(path . "units/icons/main.php");
+	// User videos
+		include(path . "units/videos/main.php");
+
 	// Profiles
 		include(path . "units/profile/main.php");
 		

@@ -67,13 +67,14 @@ END;
 				if ($_SESSION['userid']==$profile_id){
 				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">Design your Home</a>";
 				  $pictureslink = "<br /><a href=\"{$url}_icons/\">Your site picture</a>";
+				  $videoslink = "<br /><a href=\"{$url}_videos/\">Your site video</a>";
 				}
 				$body .= <<< END
 		<td align="center" valign="top">
 			<a href="{$url}{$info->username}/">
 			<img src="{$url}_icons/data/{$icon}" width="{$width}" height="{$height}" alt="{$username}" border="0" /></a><br />
 			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}&rsquo;s Profile {$usermenu}</span>
-			<span class="userdetails">{$homelink}</span><span>{$pictureslink}</span><span>{$rsslink}</span>
+			<span class="userdetails">{$homelink}</span><span>{$pictureslink}</span><span>{$videoslink}</span><span>{$rsslink}</span>
 		</td>
 		
 END;
