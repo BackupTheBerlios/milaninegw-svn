@@ -322,7 +322,9 @@
 						{
 							$this->add_attribute('users_status',$this->stream->f('cal_status'));
 						}
-						$this->add_attribute('participants',$this->stream->f('cal_status'),(int)$this->stream->f('cal_login'));
+						if ($GLOBALS['phpgw_info']['user']['account_lid'] != 'anonymous'){
+							$this->add_attribute('participants',$this->stream->f('cal_status'),(int)$this->stream->f('cal_login'));
+						}
 					}
 				}
 
