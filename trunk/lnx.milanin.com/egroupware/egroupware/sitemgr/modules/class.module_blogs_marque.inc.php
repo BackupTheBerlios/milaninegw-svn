@@ -38,7 +38,9 @@ class module_blogs_marque extends Module
 
 	function get_content(&$arguments,$properties) 
 	{
-                $this->db->query("select posts.*, users.username , users.name from `".$arguments['posts_table']."` posts left join `".$arguments['users_table']."` users on posts.owner=users.ident where access = 'PUBLIC' order by posted desc",_LINE_,_FILE_,0, $arguments['count']);
+                if ( (isset($arguments['posts_table']) && $arguments['posts_table']!='') && (isset($arguments['users_table']) && $arguments['users_table']!='') ){
+		
+		$this->db->query("select posts.*, users.username , users.name from `".$arguments['posts_table']."` posts left join `".$arguments['users_table']."` users on posts.owner=users.ident where access = 'PUBLIC' order by posted desc",_LINE_,_FILE_,0, (isset($arguments['count'])&&$arguments['count']>0)?$arguments['count']:10);
 		while($this->db->next_record()){
                   $row = $this->db->row();
                   $ret_val=$ret_val.'<a href="/members/'.$row['username'].'/weblog/'.$row['ident'].'.html">'.
@@ -139,5 +141,8 @@ document.write(\'</td></table>\')
 }
 }
 </script>';
-	}
+}else{
+	return "<p>Blogs marquee misses tables names</p>";
+}
+}
 }
