@@ -6,7 +6,7 @@
 	
 		global $profile_id;
 		$allvalues = db_query("select * from ".tbl_prefix."profile_data where owner = '$profile_id'");
-		
+		$run_result .= run("video:display:current");
 		if (sizeof($allvalues) > 0) {
 			foreach($data['profile:details'] as $field) {
 				$run_result .= run("profile:field:display",array($field, $allvalues));

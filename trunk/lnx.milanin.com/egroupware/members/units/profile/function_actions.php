@@ -17,7 +17,9 @@
 						$field = addslashes($field);
 						$access = addslashes($_POST['profileaccess'][$field]);
 						$owner = (int) $page_owner;
-						
+						if ($field=='google_ad_client'){
+                                                  $access='user'.$page_owner;
+                                                }
 						db_query("insert into ".tbl_prefix."profile_data set name = '$field', value = '$value', access = '$access', owner = '$owner'");
 						$insert_id = (int) db_id();
 						

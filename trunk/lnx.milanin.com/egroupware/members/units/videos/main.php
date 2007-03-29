@@ -18,5 +18,7 @@
 		$function["permissions:check"][] = path . "units/videos/permissions_check.php";
         //Mplayer runner
                 $function["mplayer:run"][] = path ."units/videos/function_mplayer_run.php";
+        //Display a div with current video or default image
+                $function["video:display:current"][] = path ."units/videos/function_display_video.php";
 		
-?> 
+?>

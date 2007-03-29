@@ -5,7 +5,8 @@ global $page_owner;
 	// Get all videos associated with a user
 		$videos = db_query("select * from ".tbl_prefix."videos where owner = $page_owner");
 		if ($page_owner != $_SESSION['userid']) {
-			$currentvideo = db_query("select videos.filename, ".tbl_prefix."users.video from ".tbl_prefix."users left join videos on videos.ident = ".tbl_prefix."users.video where ".tbl_prefix."users.ident = $page_owner");
+			$currentvideo = db_query("select videos.filename, ".tbl_prefix."users.video from ".tbl_prefix."users left join ".tbl_prefix."videos videos 
+                        on videos.ident = ".tbl_prefix."users.video where ".tbl_prefix."users.ident = $page_owner");
 			$currentvideo = $currentvideo[0]->filename;
 		} else {
 			$currentvideo = $_SESSION['video'];

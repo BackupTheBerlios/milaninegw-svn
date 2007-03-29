@@ -13,6 +13,7 @@
 		$data['profile:details'][] = array("LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
                 $data['profile:details'][] = array("Your ".sitename." Weblog Title","weblog_title","text","The name you give to your weblog");
                 $data['profile:details'][] = array("Your ".sitename." Weblog Description","weblog_description","text","How you describe your weblog");
+                $data['profile:details'][] = array("Your Google Adsense ID (google_ad_client)","google_ad_client","text","The id to use for showing \"My ads\", \"0\" will disable, empty - will show the default site's ads");
 		$data['profile:details'][] = array("ICQ number","icq","icq");
 		$data['profile:details'][] = array("MSN chat","msn","msn");
 		$data['profile:details'][] = array("AIM screenname","aim","aim");

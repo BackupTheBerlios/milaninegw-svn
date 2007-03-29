@@ -43,7 +43,7 @@ $template['pageshell'] .= <<< END
 END;
 }
 $template['pageshell'] .= <<< END
-<link href="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />
+<link href="/_templates/default/template_css.css" rel="stylesheet" type="text/css" />
 <title>{{title}}</title>
 {{metatags}}
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -152,7 +152,7 @@ form			{
 #pagetop		{
 					background-color: #FFFFFF;
                                         height: 120px;
-                                        background-image: url("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
+                                        background-image: url("/_templates/default/generic_header.jpg");
                                         background-repeat: no-repeat;
                                         vertical-align: top;
                                         margin: 0px;
@@ -278,6 +278,9 @@ form			{
 					font-size: 1.1em;
 					
 }
+#currentvideo {
+//   margin: 25px;
+  }
 	
 END;
 
