@@ -30,6 +30,8 @@
 		
 	// Weblog
 		include(path . "units/weblogs/main.php");
+        // My ads
+                include(path . "units/myads/main.php");
 
 	// File repository
 		include(path . "units/files/main.php");

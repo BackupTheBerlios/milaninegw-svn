@@ -9,18 +9,10 @@
 		run("userdetails:init");
 		run("profile:init");
 		run("videos:init");
-
-	// You must be logged on to view this!
-		protect(1);
-		
-		$title = run("profile:display:name") . " :: Manage user videos";
-		
-		$body = run("content:videos:manage");
-                if (!$_REQUEST['new']){
-                  $body .= run("videos:edit");
-                }
-		$body .= run("videos:add");
-                
+                global $profile_id;
+		$title = run("profile:display:name") . " ::  Personal Video Library";
+// 		$body = run("content:videos:manage");
+                $body .= run("videos:display:player:personal");
 		
 		$mainbody = run("templates:draw", array(
 							'context' => 'infobox',

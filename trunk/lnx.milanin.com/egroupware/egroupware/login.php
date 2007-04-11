@@ -233,17 +233,27 @@
 				$GLOBALS['phpgw']->translation->autoload_changed_langfiles();
 			}
 			$forward = isset($_GET['phpgw_forward']) ? urldecode($_GET['phpgw_forward']) : @$_POST['phpgw_forward'];
-			if (!$forward)
-			{
+                        $exforward = isset($_GET['ex_phpgw_forward']) ? urldecode($_GET['ex_phpgw_forward']) : @$_POST['ex_phpgw_forward'];
+//                         echo "ex: $exforward";
+                        if (!$exforward){
+                          if (!$forward)
+                          {
 				$extra_vars['cd'] = 'yes';
 				$forward = '/home.php';
-			}
-			else
-			{
-				list($forward,$extra_vars) = explode('?',$forward,2);
-			}
+                          }
+                          else
+                          {
+                                  list($forward,$extra_vars) = explode('?',$forward,2);
+                          }
+                        }
 			//echo "redirecting to ".$GLOBALS['phpgw']->link($forward,$extra_vars);
-			$GLOBALS['phpgw']->redirect_link($forward,$extra_vars);
+                        if (isset($forward)){
+//                           echo "got forward : $forward";
+                          $GLOBALS['phpgw']->redirect_link($forward,$extra_vars);
+                        }elseif (isset($exforward)){
+//                           echo "got ex_forward : $exforward";
+                          $GLOBALS['phpgw']->redirect($exforward);
+                        }
 		}
 	}
 	else

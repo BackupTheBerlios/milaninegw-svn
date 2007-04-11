@@ -19,7 +19,7 @@
 
 		$body = <<< END
 		
-		<form action="/egroupware/login.php" method="post">
+		<form action="https://egw.milanin.eu/login.php" method="post">
 END;
 		$body .= run("templates:draw",array(
 						'template' => -1,
@@ -41,10 +41,16 @@ END;
 				</tr>
 				<tr>
 					<td align="right">
+                                                <label><input type="checkbox" name="remember" checked="checked" /> Remember Login</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
 						<input type="hidden" name="action" value="log_on" />
 						<label>Log on: <input type="submit" name="submit" value="Go" /></label><br />
 						<small>
-							<a href="mailto:pwd.reminder@milanin.com?subject=I forgot my password for Milan IN Web Site">Forgotten password</a>
+							<a href="' . $url . '_invite/register.php">Register</a> |
+							<a href="' . $url . '_invite/forgotten_password.php">Forgotten password</a>
 						</small>
 					</td>
 				</tr>
@@ -58,10 +64,11 @@ END;
 		
                 $body .= '<input type="hidden" name="passwd_type" value="text"/>
 <input type="hidden" name="account_type" value="u"/>
-<input type="hidden" name="phpgw_forward" value="..'.$_SERVER['PHP_SELF'].'"/></form>';
+<input type="hidden" name="ex_phpgw_forward" value="'.((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http").
+            '://'.$_SERVER['HTTP_HOST']."/".$_SERVER['REQUEST_URI'].'"/></form>';
 
 		$run_result .= $body;
 			
 	}
-
+// echo "<pre>".print_r($_SERVER,1)."</pre>";
 ?>

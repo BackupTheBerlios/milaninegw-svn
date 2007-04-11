@@ -24,21 +24,25 @@
 	// Database config:
 	
 		// Database server (eg localhost)
-			define("db_server", "62.149.150.38");
+			define("db_server", "127.0.0.1");
 		// Database username
-			define("db_user", "Sql73134");
+			define("db_user", "");
 		// Database password
-			define("db_pass", "4e455633");
+			define("db_pass", "");
 		// Database name
-			define("db_name", "Sql73134_3");
+			define("db_name", "");
 		// Tables names prefix
                         define("tbl_prefix","members_");
 		// Groupware database name
-			define("db_gw_name", "Sql73134_1");
+			define("db_gw_name", "");
 				
 	//Egroupware bridge
                         define("egw_bridge",1);
                         
+	//My ads default google_ad_client
+			define("google_ad_client","");
+        //Video Player skin path
+                        define("player_skin_path",path."_videos/players/default");
         // Load required system files: do not edit this line.
 		require("includes_system.php");
 		

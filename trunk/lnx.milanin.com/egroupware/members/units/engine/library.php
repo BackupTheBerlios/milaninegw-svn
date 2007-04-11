@@ -37,7 +37,6 @@
 				if (isset($_REQUEST['debug'])) {
 					echo "<small>\{$context}</small>";
 				}
-				
 				foreach($function[$context] as $include) {
 					include($include);
 				}

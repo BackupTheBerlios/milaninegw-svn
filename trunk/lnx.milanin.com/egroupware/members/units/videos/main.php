@@ -5,6 +5,7 @@
 	*/
 
 	// Actions
+                $function["videos:init"][] = path . "units/videos/videos_init.php";
 		$function["videos:init"][] = path . "units/videos/function_actions.php";
 	
 	// Icon management
@@ -20,5 +21,8 @@
                 $function["mplayer:run"][] = path ."units/videos/function_mplayer_run.php";
         //Display a div with current video or default image
                 $function["video:display:current"][] = path ."units/videos/function_display_video.php";
+        //Display the personal player
+                $function["videos:display:player:personal"][]=path ."units/videos/function_display_player_personal.php";
+                $function["videos:list:personal"][] = path."units/videos/function_display_list_personal.php";
 		
 ?>
