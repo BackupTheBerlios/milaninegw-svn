@@ -1,0 +1,20 @@
+<li style="margin:5px">
+<a  style="cursor:pointer;cursor:hand;" href="javascript:toggleLayer('hiddendiv_{{ID}}')">{{name}}</a>
+<div style="width:400px;z-index: 1;background-color: #fff;layer-background-color:#fff;display:none;position:absolute;border: solid 1px" id="hiddendiv_{{ID}}" onclick="this.style.display='none'">
+<table>
+<tr>
+<td>
+{{filesize}} bytes
+</td></tr><tr><td>
+{{description}}
+</td></tr><tr><td>
+by {{author}}
+</td></tr><tr><td>
+at {{date}}
+</td></tr><tr><td align="center">
+<a href="{{url}}/{{filename}}" onclick="PlayIt(this.href);return false">Play</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
