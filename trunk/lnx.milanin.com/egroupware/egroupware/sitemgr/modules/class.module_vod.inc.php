@@ -39,7 +39,19 @@ class module_vod extends Module
                         'mask' => array(
 				'type' => 'textfield', 
 				'label' => lang('videos filename pattern')
-			)
+			),
+                        'current' => array(
+				'type' => 'textfield', 
+				'label' => lang('startup video full URL')
+			),
+                        'autoplay' => array(
+				'type' => 'checkbox', 
+				'label' => lang('autoplay the startup video')
+			),
+                        'loop' => array(
+				'type' => 'checkbox', 
+				'label' => lang('loop videos')
+			),
 		);
 		$this->post = array('start' => array('type' => 'hidden'));
 		$this->session = array('start');
@@ -132,14 +144,32 @@ class module_vod extends Module
         }
         function template_player(&$arguments,&$data){
           $player=file($arguments['path']."/".$arguments['player']."/player.html");
+          $keywords=array("/\{\{PATH\}\}/",
+                          "/\{\{VIDEOS_LIST\}\}/",
+                          "/\{\{SELECTED_VIDEO\}\}/",
+                          "/\{\{AUTOPLAY\}\}/",
+                          "/\{\{LOOP\}\}/");
+          $replacements=array($arguments['url']."/".$arguments['player'],
+                              $this->template_list($arguments).
+                              $this->render_controls($arguments,$_POST),
+                              );
+          if (isset($arguments['current']) && strlen($arguments['current'])){
+            $replacements[]=$arguments['current'];
+          }else{
+            $replacements[]="";
+          }
+          if (isset($arguments['autoplay']) && $arguments['autoplay']){
+            $replacements[]="true";
+          }else{
+            $replacements[]="false";
+          }
+          if (isset($arguments['loop']) && $arguments['loop']){
+            $replacements[]="true";
+          }else{
+            $replacements[]="false";
+          }
           if (count($player)>1){
-            $videos_list=$this->template_list($arguments).$this->render_controls($arguments,$_POST);
-            $player=preg_replace(
-                        array("/\{\{PATH\}\}/","/\{\{VIDEOS_LIST\}\}/"
-                        #,"/\{\{SELECTED_VIDEO\}\}/
-                             ),
-                        array($arguments['url']."/".$arguments['player'],$videos_list,$selected_video),
-                        $player);
+            $player=preg_replace($keywords,$replacements,$player);
             $run_result=join("\n",$player);
           }else{
             $run_result="Empty player or no player configured";
