@@ -7,7 +7,7 @@
 		
 		run("profile:init");
 		
-		$title = run("profile:display:name");
+		$title = sitename." : ".run("profile:display:name")."'s profile";
 
 		$body = run("content:profile:view");
 		$body .= run("profile:view");

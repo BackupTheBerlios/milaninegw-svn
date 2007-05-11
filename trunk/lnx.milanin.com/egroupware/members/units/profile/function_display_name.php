@@ -14,6 +14,6 @@
 		$name_cache[$profile_id]->data = stripslashes($result[0]->name);
 		
 	}
-	$run_result = sitename." : ".$name_cache[$profile_id]->data."'s profile";
+	$run_result = $name_cache[$profile_id]->data;
 	
 ?>
