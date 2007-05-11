@@ -9,7 +9,7 @@
 		run("friends:init");
 		run("weblogs:init");
 		
-		$title = "All Weblogs";		
+		$title = sitename." : All Weblogs";		
 
 		$body = run("content:weblogs:view");
 		$body .= run("weblogs:everyone:view");
