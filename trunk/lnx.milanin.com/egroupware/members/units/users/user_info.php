@@ -65,9 +65,9 @@ END;
 					$rsslink = "<br />(<a href=\"{$url}{$info->username}/rss/\">RSS</a>)";
 				}
 				if ($_SESSION['userid']==$profile_id){
-				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">Design your Home</a>";
-				  $pictureslink = "<br /><a href=\"{$url}_icons/\">Your site picture</a>";
-				  $videoslink = "<br /><a href=\"{$url}_videos/\">Your site video</a>";
+				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
+				  $pictureslink = "<br /><a href=\"{$url}_icons/\">My picture</a>";
+				  $videoslink = "<br /><a href=\"{$url}_videos/\">My video</a>";
 				}
 				$body .= <<< END
 		<td align="center" valign="top">
