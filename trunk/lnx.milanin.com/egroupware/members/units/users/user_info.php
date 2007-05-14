@@ -66,7 +66,7 @@ END;
 				}
 				if ($_SESSION['userid']==$profile_id){
 				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
-				  $pictureslink = "<br /><a href=\"{$url}_icons/\">My picture</a>";
+				  $pictureslink = "<br /><a href=\"{$url}_icons/\">My Picture</a>";
 				  $videoslink = "<br /><a href=\"{$url}_videos/\">My video</a>";
 				}
 				$body .= <<< END
