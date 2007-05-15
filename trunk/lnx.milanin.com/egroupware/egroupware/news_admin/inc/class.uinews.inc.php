@@ -464,7 +464,7 @@
 				'label_teaser' => lang('teaser') . ':',
 				'value_teaser' => '<input name="news[teaser]" size="60" value="' . @htmlspecialchars($this->news_data['teaser'],ENT_COMPAT,$GLOBALS['phpgw']->translation->charset()) . '" maxLength="100">',
 				'label_content' => lang('Content') . ':',
-				'value_content' => '<textarea cols="60" rows="16" name="news[content]" wrap="virtual">' . $this->news_data['content'] . '</textarea>',
+				'value_content' => '<textarea cols="60" rows="16" name="news[content]" wrap="virtual">' . stripslashes($this->news_data['content']) . '</textarea>',
 				'label_category' => lang('Category') . ':',
 				'value_category' => '<select name="news[category]">' . $this->selectlist('write', (int)$this->news_data['category']) . '</select>',
 				'label_visible' => lang('Visible') . ':',
