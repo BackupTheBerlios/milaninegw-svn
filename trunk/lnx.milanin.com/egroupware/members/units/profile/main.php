@@ -6,6 +6,7 @@
 		$function['profile:init'][] = path . "units/profile/function_init.php";
 		$function['profile:init'][] = path . "units/profile/function_editfield_defaults.php";
 		$function['profile:init'][] = path . "units/profile/function_actions.php";
+                $function['profile:init'][] = path . "units/profile/function_update_views.php";
 	
 	// Initialisation for the search function
 		$function['search:init'][] = path . "units/profile/function_init.php";
