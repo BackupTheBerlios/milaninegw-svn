@@ -15,13 +15,13 @@
 	/* $Id: index.php,v 1.4 2004/01/27 20:04:35 reinerj Exp $ */
 
 	$GLOBALS['phpgw_info']['flags'] = array(
-		'currentapp' => 'vanilla',
-		'noheader'   => True,
-		'nonavbar'   => True
+		'currentapp' => 'profile',
+		'noheader'   => False,
+		'nonavbar'   => False
 	);
 	include('../header.inc.php');
 
-	$obj = createobject('vanilla.uivanilla');
+	$obj = createobject('profile.uiprofile');
 	$obj->info();
 
 	$GLOBALS['phpgw']->common->phpgw_footer();
