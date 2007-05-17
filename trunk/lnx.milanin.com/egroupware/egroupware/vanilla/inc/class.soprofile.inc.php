@@ -38,7 +38,7 @@
                 {
                 	$this->db->query('SELECT count(*) as items FROM `'.
           				 $this->table_prefix.
-          				 'profile_data` WHERE `owner` =14');
+          				 'profile_data` WHERE `owner` ='.$this->owner);
                         $this->db->next_record();
 			return $this->db->f(0);
                 }
