@@ -23,5 +23,6 @@
 
 	$obj = createobject('profile.uiprofile');
 	$obj->info();
+        $obj->stats();
 
 	$GLOBALS['phpgw']->common->phpgw_footer();

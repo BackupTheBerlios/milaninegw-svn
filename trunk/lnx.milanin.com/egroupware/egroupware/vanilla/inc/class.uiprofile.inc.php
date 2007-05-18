@@ -20,6 +20,7 @@
 		var $template;
 		var $public_functions = array(
 			'info'          => True,
+          		'stats'         => True,
 		);
 
 		function uiprofile()
@@ -28,9 +29,12 @@
 		}
 
 		
-		function set_common_langs()
+		function set_common_langs($hooked=False)
 		{
-                  $GLOBALS['phpgw']->template->set_var('lang_my_profile',lang('My Profile'));
+                  $GLOBALS['phpgw']->template->set_var('lang_my_profile',
+          						($hooked ?lang( 'My profile')
+              							 :lang('Status'))
+            					      );
                   $GLOBALS['phpgw']->template->set_var('lang_my_profile_stats',lang('My Statistics'));
                   $GLOBALS['phpgw']->template->set_var('lang_views_by_members',lang('views by members'));
                   $GLOBALS['phpgw']->template->set_var('lang_views_by_guests',lang('views by guests'));
@@ -40,18 +44,13 @@
                   $GLOBALS['phpgw']->template->set_var('lang_guest_counter',lang('counter'));
 		}
 
-		
-		function info()
-		{
-                        $GLOBALS['phpgw']->template->set_file('_info','info.tpl');
-                        $GLOBALS['phpgw']->template->set_block('_info','info');
-                        $GLOBALS['phpgw']->template->set_block('_info','stats');
-                        $GLOBALS['phpgw']->template->set_block('_info','member_view');
-                        $GLOBALS['phpgw']->template->set_block('_info','guest_view');
-			$this->set_common_langs();
-			$GLOBALS['phpgw']->template->set_var('edit_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
-                        $GLOBALS['phpgw']->template->set_var('show_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
-			$GLOBALS['phpgw']->template->set_var('relative_percentage',$this->bo->get_relative_percentage());
+		function stats()
+                {
+                	$GLOBALS['phpgw']->template->set_file('_stats','stats.tpl');
+                        $GLOBALS['phpgw']->template->set_block('_stats','stats');
+                        $GLOBALS['phpgw']->template->set_block('_stats','member_view');
+                        $GLOBALS['phpgw']->template->set_block('_stats','guest_view');
+                        $this->set_common_langs();
                         $row_class='row_on';
                         foreach ($this->bo->members_views as $v){
                           $GLOBALS['phpgw']->template->set_var('member_icon',$v['icon']);
@@ -70,13 +69,20 @@
                           $GLOBALS['phpgw']->template->fp('guests_views','guest_view',TRUE);
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
-
-			
-
-
-                        //$extra_menuaction = '&menuaction=vanilla.uivanilla.info';
-			$GLOBALS['phpgw']->template->pfp('out','info');
                         $GLOBALS['phpgw']->template->pfp('out','stats');
+                }
+		function info($hooked=False)
+		{
+                	if ($hooked) {
+                          $GLOBALS['phpgw']->template->set_root('profile/templates/default');
+                        }
+                        $GLOBALS['phpgw']->template->set_file('_info','info.tpl');
+                        $GLOBALS['phpgw']->template->set_block('_info','info');
+			$this->set_common_langs($hooked);
+			$GLOBALS['phpgw']->template->set_var('edit_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
+                        $GLOBALS['phpgw']->template->set_var('show_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
+			$GLOBALS['phpgw']->template->set_var('relative_percentage',$this->bo->get_relative_percentage());
+                        return $GLOBALS['phpgw']->template->pfp('out','info');
 		}
 
 	}

@@ -25,7 +25,8 @@
 
 	/* The hooks this app includes, needed for hooks registration */
 	//$setup_info['profile']['hooks'][] = 'admin';
-	//$setup_info['profile']['hooks'][] = 'home';
+	$setup_info['profile']['hooks'][] = 'home';
+        $setup_info['profile']['hooks'][] = 'after_navbar';
 	//$setup_info['profile']['hooks'][] = 'preferences';
 	//$setup_info['profile']['hooks'][] = 'settings';
 	//$setup_info['profile']['hooks'][] = 'sidebox_menu';
