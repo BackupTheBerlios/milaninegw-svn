@@ -10,7 +10,7 @@ if (
   	(isset($_SESSION['userid']) && $_SESSION['userid']!=$page_owner)
    )
 {
-  if (isset($_SESSION['userid']) && $_SESSION['userid']>0)
+  if (isset($_SESSION['userid']) && $_SESSION['userid']>0 && $page_owner>0)
   {
           $viewer=$_SESSION['userid'];
           $referral='';
