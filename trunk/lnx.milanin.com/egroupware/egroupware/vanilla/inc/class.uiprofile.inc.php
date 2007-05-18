@@ -30,7 +30,14 @@
 		
 		function set_common_langs()
 		{
-			$GLOBALS['phpgw']->template->set_var('lang_my_profile',lang('My Profile'));
+                  $GLOBALS['phpgw']->template->set_var('lang_my_profile',lang('My Profile'));
+                  $GLOBALS['phpgw']->template->set_var('lang_my_profile_stats',lang('My Statistics'));
+                  $GLOBALS['phpgw']->template->set_var('lang_views_by_members',lang('views by members'));
+                  $GLOBALS['phpgw']->template->set_var('lang_views_by_guests',lang('views by guests'));
+                  $GLOBALS['phpgw']->template->set_var('lang_in_last_days',lang('in last %1 days',14));
+                  $GLOBALS['phpgw']->template->set_var('lang_guest_from',lang('referred by'));
+                  $GLOBALS['phpgw']->template->set_var('lang_guest_last_date',lang('last time'));
+                  $GLOBALS['phpgw']->template->set_var('lang_guest_counter',lang('counter'));
 		}
 
 		
@@ -38,32 +45,38 @@
 		{
                         $GLOBALS['phpgw']->template->set_file('_info','info.tpl');
                         $GLOBALS['phpgw']->template->set_block('_info','info');
+                        $GLOBALS['phpgw']->template->set_block('_info','stats');
+                        $GLOBALS['phpgw']->template->set_block('_info','member_view');
+                        $GLOBALS['phpgw']->template->set_block('_info','guest_view');
 			$this->set_common_langs();
 			$GLOBALS['phpgw']->template->set_var('edit_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
                         $GLOBALS['phpgw']->template->set_var('show_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
 			$GLOBALS['phpgw']->template->set_var('relative_percentage',$this->bo->get_relative_percentage());
-                        /*$row_class='row_on';
-                        foreach ($this->bo->latest_discussions() as $discussion){
-                          $GLOBALS['phpgw']->template->set_var('ld_name',sprintf("%25.25s...",$discussion['Name']));
-                          $GLOBALS['phpgw']->template->set_var('last_active',$discussion['DateLastActive']);
+                        $row_class='row_on';
+                        foreach ($this->bo->members_views as $v){
+                          $GLOBALS['phpgw']->template->set_var('member_icon',$v['icon']);
+                          $GLOBALS['phpgw']->template->set_var('member_name',$v['name']);
+                          $GLOBALS['phpgw']->template->set_var('member_date',$v['date']);
                           $GLOBALS['phpgw']->template->set_var('row_class',$row_class);
-                          $GLOBALS['phpgw']->template->fp('latest_discussions','latest_discussion',TRUE);
+                          $GLOBALS['phpgw']->template->fp('members_views','member_view',TRUE);
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
 			$row_class='row_on';
-			foreach ($this->bo->popular_discussions() as $discussion){
-                          $GLOBALS['phpgw']->template->set_var('pd_name',sprintf("%25.25s...",$discussion['Name']));
-                          $GLOBALS['phpgw']->template->set_var('comments_count',$discussion['CountComments']);
+			foreach ($this->bo->guests_views as $v){
+                          $GLOBALS['phpgw']->template->set_var('guest_from',$v['referral']);
+                          $GLOBALS['phpgw']->template->set_var('guest_last_date',$v['date']);
+                          $GLOBALS['phpgw']->template->set_var('guest_counter',$v['counter']);
                           $GLOBALS['phpgw']->template->set_var('row_class',$row_class);
-                          $GLOBALS['phpgw']->template->fp('popular_discussions','popular_discussion',TRUE);
+                          $GLOBALS['phpgw']->template->fp('guests_views','guest_view',TRUE);
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
-*/
+
 			
 
 
                         //$extra_menuaction = '&menuaction=vanilla.uivanilla.info';
 			$GLOBALS['phpgw']->template->pfp('out','info');
+                        $GLOBALS['phpgw']->template->pfp('out','stats');
 		}
 
 	}

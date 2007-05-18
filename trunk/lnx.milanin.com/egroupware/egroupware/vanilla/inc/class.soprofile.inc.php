@@ -22,6 +22,8 @@
                 var $table_prefix;
                 var $public_functions = array(
 			'get_relative_percentage'          => True,
+          		'get_members_views'          	   => True,
+          		'get_guests_views'          	   => True,
 		);
 		function soprofile()
 		{
@@ -44,17 +46,59 @@
                 }
                 function get_max_items()
                 {
-                	$this->db->limit_query('SELECT count(*)  as items FROM `'.
+                	$this->db->query('SELECT count(*)  as items FROM `'.
           					$this->table_prefix.
           					'profile_data` GROUP by `owner` '.
-          					'order by items desc',
-          					1,__LINE__,__FILE__);
+          					'order by items desc limit 0,1',__LINE__,__FILE__);
                         $this->db->next_record();
 			return $this->db->f(0);
                 }
                 function get_relative_percentage()
                 {
                 	return round($this->count_items()*100/$this->get_max_items(),0);
+                }
+                function get_members_views()
+                {
+                	$query='SELECT pf.viewer,
+                                       u.name,
+                                       u.username,
+                                       i.filename,
+                                       FROM_UNIXTIME( pf.timestamp, \'%D/%M/%y %h:%i\' ) AS viewdate
+                                       FROM `'.$this->table_prefix.'profile_views` pf
+                                       LEFT JOIN '.$this->table_prefix.'users u ON u.ident = pf.viewer
+                                       LEFT JOIN '.$this->table_prefix.'icons i ON i.ident = u.icon
+                                       WHERE pf.viewer !=0
+                                       AND pf.owner ='.$this->owner.' '.
+                                       'ORDER by pf.timestamp desc';
+                        $this->db->query($query,__LINE__,__FILE__);
+                        while ($this->db->next_record()){
+                          $v[]=array(
+                          	'name'=>$this->db->f('name'),
+                          	'user'=>$this->db->f('username'),
+                          	'icon'=>$this->db->f('filename'),
+                          	'date'=>$this->db->f('viewdate'),
+                          	);
+                        }
+			return $v;
+                }
+                function get_guests_views()
+                {
+                	$query='SELECT pf.referral,
+                                       pf.counter,
+                                       FROM_UNIXTIME( pf.timestamp, \'%D/%M/%y %h:%i\' ) AS viewdate
+                                       FROM `'.$this->table_prefix.'profile_views` pf
+                                       WHERE pf.viewer = 0
+                                       AND pf.owner ='.$this->owner.' '.
+                                       'ORDER by pf.timestamp desc';
+                        $this->db->query($query,__LINE__,__FILE__);
+                        while ($this->db->next_record()){
+                          $v[]=array(
+                          	'referral'=>$this->db->f('referral'),
+                          	'date'=>$this->db->f('viewdate'),
+                          	'counter'=>$this->db->f('counter')
+                          	);
+                        }
+			return $v;
                 }
 
 }
