@@ -40,6 +40,7 @@
 			
 			$weblog_name = htmlentities(stripslashes($_REQUEST['weblog_name']));
 			
+			$run_result .= '<table align="center" width="100%"><tr><td align="left">';
 			if ($numberofposts - ($weblog_offset + 25) > 0) {
 				$display_weblog_offset = $weblog_offset + 25;
 				//<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">&lt;&lt; Previous 25</a>
@@ -49,6 +50,7 @@
 				
 END;
 			}
+			$run_result.='</td><td align="right">';
 			if ($weblog_offset > 0) {
 				$display_weblog_offset = $weblog_offset - 25;
 				//<a href="/{$weblog_name}/weblog/skip={$display_weblog_offset}">Next 25 &gt;&gt;</a>
@@ -61,6 +63,7 @@ END;
 				
 END;
 			}
+			$run_result.='</td></tr></table>';
 			
 		}
 

@@ -41,11 +41,12 @@
 			}
 			
 			$weblog_name = htmlentities(stripslashes($_REQUEST['weblog_name']));
-			
+			$run_result .= '<table align="center" width="100%"><tr><td align="left">';
 			if ($numberofposts - ($weblog_offset + 25) > 0) {
 				$display_weblog_offset = $weblog_offset + 25;
 				$run_result .='<a href="'.url.'_weblog/everyone.php?weblog_offset='.$display_weblog_offset.'">&lt;&lt; Previous 25</a>';
 			}
+			$run_result.='</td><td align="right">';
 			if ($weblog_offset > 0) {
 				$display_weblog_offset = $weblog_offset - 25;
 				if ($display_weblog_offset < 0) {
@@ -53,6 +54,7 @@
 				}
 				$run_result .='<a href="'.url.'_weblog/everyone.php?weblog_offset='.$display_weblog_offset.'">Next 25 &gt;&gt;</a>';
 			}
+			$run_result.='</td></tr></table>';
 			
 		}
 
