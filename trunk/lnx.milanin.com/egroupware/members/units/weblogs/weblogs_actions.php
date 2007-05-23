@@ -136,13 +136,29 @@
 															$messages[] = "Your comment has been added.";
 //Sendmail
 $post_owner=db_query("SELECT ".tbl_prefix."users.* from ".tbl_prefix."weblog_posts, ".tbl_prefix."users WHERE ".tbl_prefix."users.ident = ".tbl_prefix."weblog_posts.owner AND ".tbl_prefix."weblog_posts.ident =".$post_id);
-
-ini_set("sendmail_from", "BC MilanIN <admin@milanin.com>");
+$headers = "From: ".sitename."<".email.">\r\n";
+$headers.= "Content-Type: text/plain; charset=ISO-8859-1 ";
+ini_set("sendmail_from", "BC MilanIN <noreply@milanin.com>");
 $mail_msg="A new comment was posted to your weblog entry: ".url.$post_owner[0]->username.'/weblog/'.$post_id.'.html';
-mail($post_owner[0]->email,"[BC MilanIN] A new comment added to your weblog", $mail_msg);
-															
-														}
-													}
+mail($post_owner[0]->email,"[".sitename."] A new comment added to your weblog", $mail_msg,$headers);
+	$commenters = db_query("select  distinct c.owner, u.name, u.email from 
+                               ".tbl_prefix."weblog_comments c
+                                left join ".tbl_prefix."users u on c.owner=u.ident
+				where c.post_id = ".$post_id." ".
+                                "and c.owner > 0 ".
+                                "and c.owner != ".$post_owner[0]->ident." ".
+                                "order by posted asc");
+          foreach ($commenters as $commenter){
+                  $mail_msg="Dear ".$commenter->name.
+                  "\nA new comment was posted to a weblog entry you have recently commented:\n
+                  ".url.$post_owner[0]->username.'/weblog/'.$post_id.'.html';
+                  mail($commenter->email,"[".sitename."] A new comment added to ".
+                                        $post_owner[0]->name.
+                                        "'s weblog", $mail_msg,$headers);
+          }
+        }
+                                			}
+													#}
 												break;
 				// Delete a weblog comment
 					case "weblog_comment_delete":	if (
@@ -150,11 +166,11 @@ mail($post_owner[0]->email,"[BC MilanIN] A new comment added to your weblog", $m
 															&& isset($_REQUEST['weblog_comment_delete'])
 														) {
 															$comment_id = (int) $_REQUEST['weblog_comment_delete'];
-															$commentinfo = db_query("select weblog_comments.*, ".tbl_prefix."weblog_posts.owner as postowner,
+															$commentinfo = db_query("select ".tbl_prefix."weblog_comments.*, ".tbl_prefix."weblog_posts.owner as postowner,
 																					 ".tbl_prefix."weblog_posts.ident as postid
 																					 from ".tbl_prefix."weblog_comments
-																					 left join ".tbl_prefix."weblog_posts.on ".tbl_prefix."weblog_posts.ident = weblog_comments.post_id
-																					 where weblog_comments.ident = $comment_id");
+																					 left join ".tbl_prefix."weblog_posts on ".tbl_prefix."weblog_posts.ident = ".tbl_prefix."weblog_comments.post_id
+																					 where ".tbl_prefix."weblog_comments.ident = $comment_id");
 															$commentinfo = $commentinfo[0];
 															if ($_SESSION['userinfo'] == $commentinfo->owner
 																|| $_SESSION['userinfo'] == $comentinfo->postowner) {
