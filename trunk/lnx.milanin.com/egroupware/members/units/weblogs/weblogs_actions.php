@@ -146,6 +146,7 @@ mail($post_owner[0]->email,"[".sitename."] A new comment added to your weblog", 
                                 left join ".tbl_prefix."users u on c.owner=u.ident
 				where c.post_id = ".$post_id." ".
                                 "and c.owner > 0 ".
+				"and c.owner != ".$owner." "
                                 "and c.owner != ".$post_owner[0]->ident." ".
                                 "order by posted asc");
           foreach ($commenters as $commenter){
