@@ -65,20 +65,31 @@ END;
 					$rsslink = "<br />(<a href=\"{$url}{$info->username}/rss/\">RSS</a>)";
 				}
 				if ($_SESSION['userid']==$profile_id){
-				  $pictureslink = "<br /><a href=\"{$url}_icons/\">My Picture</a>";
-				  $videoslink = "<br /><a href=\"{$url}_videos/\">My video</a>";
-				}
-				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
-				$body .= <<< END
-		<td align="center" valign="top">
-			<a href="{$url}{$info->username}/">
-			<img src="{$url}_icons/data/{$icon}" width="{$width}" height="{$height}" alt="{$username}" border="0" /></a><br />
-			<span class="userdetails"><a href="{$url}{$info->username}/">{$username}&rsquo;s Profile {$usermenu}</span>
-			<span class="userdetails">{$homelink}</span><span>{$pictureslink}</span><span>{$videoslink}</span><span>{$rsslink}</span>
-		</td>
-		
+                                  $profilelink = "<a href=\"{$url}{$info->username}/\">My Profile</a>";
+                                  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
+                                  $pictureslink = "<br /><a href=\"{$url}_icons/\">My Picture</a>";
+                                  $videoslink = "<br /><a href=\"{$url}_videos/\">My video</a>";
+				}else{
+                                  $homelink = "<br /><a href=\"{$url}{$info->username}/home/\">".$username."&rsquo;s Homepage</a>";
+                                  $profilelink = "<a href=\"{$url}{$info->username}/\">".$username."&rsquo;s Profile</a>";
+                                  $videoslink = "<br /><a href=\"{$url}_videos/\">".$username."&rsquo;s Videos</a>";
+                                }
+                                $body .= <<< END
+                <td align="center" valign="top">
+                        <a href="{$url}{$info->username}/">
+                        <img src="{$url}_icons/data/{$icon}" width="{$width}" height="{$height}" alt="{$username}" border="0
+" /></a><br />
 END;
-		
+                                if (basename($_SERVER['REQUEST_URI'])=="home"){
+                                        $body .= "<span class=\"userdetails\">{$profilelink}</span>";
+                                }elseif (basename($_SERVER['REQUEST_URI'])==$info->username){
+                                        $body .= "<span class=\"userdetails\">{$homelink}</span>";
+                                } else {
+                                        $body .= "<span class=\"userdetails\">{$profilelink}</span>";
+                                        $body .= "<span class=\"userdetails\">{$homelink}</span>";
+                                }
+                                $body .="<span>{$pictureslink}</span><!--span>{$videoslink}</span--><span>{$rsslink}</span>
+                </td>";
 				if ($span == 1 || ($span == 2 && ($i % 2 == 0))) {
 					$body .= "</tr><tr>";
 				}
