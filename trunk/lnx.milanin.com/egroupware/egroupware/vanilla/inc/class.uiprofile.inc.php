@@ -18,14 +18,17 @@
 	{
 		var $bo;
 		var $template;
+                var $percentage;
 		var $public_functions = array(
 			'info'          => True,
           		'stats'         => True,
+          		'links'         => True,
 		);
 
 		function uiprofile()
 		{
 			$this->bo         = CreateObject('profile.boprofile');
+                        $this->percentage = $this->bo->relative_percentage;
 		}
 
 		
@@ -42,6 +45,7 @@
                   $GLOBALS['phpgw']->template->set_var('lang_guest_from',lang('referred by'));
                   $GLOBALS['phpgw']->template->set_var('lang_guest_last_date',lang('last time'));
                   $GLOBALS['phpgw']->template->set_var('lang_guest_counter',lang('counter'));
+                  $GLOBALS['phpgw']->template->set_var('lang_my_profile_actions',lang('Actions'));
 		}
 
 		function stats()
@@ -73,16 +77,34 @@
                 }
 		function info($hooked=False)
 		{
-                	if ($hooked) {
+            		if ($hooked) {
                           $GLOBALS['phpgw']->template->set_root('profile/templates/default');
                         }
                         $GLOBALS['phpgw']->template->set_file('_info','info.tpl');
                         $GLOBALS['phpgw']->template->set_block('_info','info');
 			$this->set_common_langs($hooked);
-			$GLOBALS['phpgw']->template->set_var('edit_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
-                        $GLOBALS['phpgw']->template->set_var('show_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
+                        if ($hooked){
+                          $GLOBALS['phpgw']->template->set_var('edit_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
+                          $GLOBALS['phpgw']->template->set_var('show_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
+                        }
 			$GLOBALS['phpgw']->template->set_var('relative_percentage',$this->bo->get_relative_percentage());
                         return $GLOBALS['phpgw']->template->pfp('out','info');
 		}
+                function links()
+                {
+                  $GLOBALS['phpgw']->template->set_file('_links','links.tpl');
+                  $GLOBALS['phpgw']->template->set_block('_links','links');
+                  $this->set_common_langs($hooked);
+                  $GLOBALS['phpgw']->template->set_var('edit_profile_link','<a href="/members/profile/edit.php">'.lang("Edit Profile").'</a>');
+                  $GLOBALS['phpgw']->template->set_var('show_profile_link','<a href="/members/profile/index.php">'.lang("View Profile").'</a>');
+                  
+                  $GLOBALS['phpgw']->template->set_var('edit_homepage_link','<a href="/members/_home/edit.php">'.lang("Edit Homepage").'</a>');
+                  $GLOBALS['phpgw']->template->set_var('show_homepage_link','<a href="/members/_home/">'.lang("View Homepage").'</a>');
+                  
+                  $GLOBALS['phpgw']->template->set_var('edit_weblog_link','<a href="/members/_weblog/edit.php">'.lang("Edit Weblog").'</a>');
+                  $GLOBALS['phpgw']->template->set_var('show_weblog_link','<a href="/members/_weblog/">'.lang("View Weblog").'</a>');
+                  
+                  return $GLOBALS['phpgw']->template->pfp('out','links');
+                }
 
 	}

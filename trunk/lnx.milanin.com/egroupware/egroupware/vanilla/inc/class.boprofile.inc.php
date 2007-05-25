@@ -20,32 +20,34 @@
                 var $members_views;
                 var $guests_views;
                 var $members_url;
+                var $relative_percentage;
 		var $public_functions = array(
 			'get_relative_percentage'          => True,
 		);
 		function boprofile()
 		{
 			$this->so = CreateObject('profile.soprofile');
-                        $this->members_url=((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http").'://members.egw.milanin.eu/';
+                        $this->members_url=((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? "https" : "http").'://www.milanin.com/members/';
           		$this->get_members_views();
           		$this->get_guests_views();
+          		$this->relative_percentage=$this->so->get_relative_percentage();
 		}
                 function get_relative_percentage()
                 {
-                	$percentage=$this->so->get_relative_percentage();
-                        if ($percentage<70 && $percentage >30){
+                	
+                        if ($this->relative_percentage<70 && $this->relative_percentage >30){
                         	$color='yellow';
-                        }elseif ($percentage>=70){
+                        }elseif ($this->relative_percentage>=70){
                         	$color='green';
                         }else{
                         	$color='red';
                         }
                 	return '<div style="text-align:left;width:100px;height:10px;border:solid 1px">
         			  <div style="height:10px;width:'.
-                                  $percentage.
+                                  $this->relative_percentage.
                                   'px;background:'.$color.'"></div></div><span>'.
                                   lang('your profile is').' <span style="color:'.$color.'">'.
-                                  $percentage."%</span> ".lang('complete')."</span>";
+                                  $this->relative_percentage."%</span> ".lang('complete')."</span>";
                 }
                 function get_members_views()
                 {
