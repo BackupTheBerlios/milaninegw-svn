@@ -65,10 +65,10 @@ END;
 					$rsslink = "<br />(<a href=\"{$url}{$info->username}/rss/\">RSS</a>)";
 				}
 				if ($_SESSION['userid']==$profile_id){
-				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
 				  $pictureslink = "<br /><a href=\"{$url}_icons/\">My Picture</a>";
 				  $videoslink = "<br /><a href=\"{$url}_videos/\">My video</a>";
 				}
+				  $homelink = "<br /><a href=\"{$url}_home/edit.php\">My Homepage</a>";
 				$body .= <<< END
 		<td align="center" valign="top">
 			<a href="{$url}{$info->username}/">
