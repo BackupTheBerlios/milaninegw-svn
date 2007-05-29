@@ -73,8 +73,12 @@
                             $v['referral']='<a href="'.$v['referral'].
                                           '" title="'.$v['name'].'">'.
                                           $v['name'].'</a>';
-                            $this->guests_views[]=$v;
-                        }
+                        }else{
+			     $v['name']=$v['name'][1];
+                             $v['referral']=lang('direct');
+			}
+                       $this->guests_views[]=$v;
+
                        }
                 }
 	}

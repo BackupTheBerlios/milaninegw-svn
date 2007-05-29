@@ -18,3 +18,4 @@ view homepage	profile	en	View Homepage
 view weblog	profile	en	View Weblog
 edit homepage	profile	en	Design Homepage
 edit weblog	profile	en	Post to Weblog
+direct	profile	en	Direct

@@ -18,3 +18,4 @@ view homepage	profile	it	Mostra Homepage
 view weblog	profile	it	Mostra Weblog
 edit homepage	profile	it	Disegna la Homepage
 edit weblog	profile	it	Crea Post nel Blog
+direct	profile	it	Diretto
