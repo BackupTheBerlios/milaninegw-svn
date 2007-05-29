@@ -1,5 +1,6 @@
 <?
 global $page_owner;
+if ($page_owner>0){
 if (
   	( (!isset($_SESSION['userid'])
             ||
@@ -26,5 +27,6 @@ if (
   $query='DELETE FROM '.tbl_prefix.
           'profile_views WHERE `timestamp` < '.(time()-(86400*14));
   db_query($query);
+}
 }
 ?>
