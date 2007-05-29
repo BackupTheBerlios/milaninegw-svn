@@ -104,7 +104,7 @@
 						$run_result = $keywords;
 						break;
 				case "email":
-						$run_result = preg_replace("/([\w\.]*\w+@[\w\.]*\w)/i","<a href=\"mailto:$1\">$1</a>",$parameter[0]);
+						$run_result = preg_replace("/([\w\.-]*\w+@[\w\.-]*\w)/i","<a href=\"mailto:$1\">$1</a>",$parameter[0]);
 						break;
 				case "web":
 						$run_result = $parameter[0];
