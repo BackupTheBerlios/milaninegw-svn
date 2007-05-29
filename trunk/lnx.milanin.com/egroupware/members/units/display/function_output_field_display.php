@@ -107,11 +107,16 @@
 						$run_result = preg_replace("/([\w\.-]*\w+@[\w\.-]*\w)/i","<a href=\"mailto:$1\">$1</a>",$parameter[0]);
 						break;
 				case "web":
-						$run_result = $parameter[0];
-						if (substr_count($run_result,"http://") == 0) {
-							$run_result = "http://" . $run_result;
-						}
-						$run_result = "<a href=\"" . $run_result . "\" target=\"_blank\">" . $run_result . "</a>";
+						$run_result = "";#$parameter[0];
+						$urls=preg_split('/[;,\s]/',$parameter[0]);
+						foreach ($urls as $url){
+						  if (substr_count($url,"http://") == 0 and substr_count($url,"https://") == 0) {
+							$url = "http://" . $url;
+						  }
+						  if (preg_match('/.+\.[\w-]*\.[\w-]{2,4}/',$url)){
+						   $run_result .= "<a href=\"" . $url . "\" target=\"_blank\">" .preg_replace(array('/http:\/\//','/https:\/\//'),array('',''),$url) . "</a><br />";
+						   }
+						  }
 						break;
                                 case "linkedin":
 						$run_result = $parameter[0];
