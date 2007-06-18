@@ -20,7 +20,8 @@
                                 'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
                                 'members_db_name' => array('type'=>'textfield','label'=>lang('members db name') ),
                                 'how_did_u' => array('type'=>'textfield','label'=>lang('how_did_u') ),
-				'prof_profile' => array('type'=>'textfield','label'=>lang('Which professional profile better describes you') )
+				'prof_profile' => array('type'=>'textfield','label'=>lang('Which professional profile better describes you') ),
+				'ac_degree' =>array('type'=>'textfield','label'=>lang('academic degree') )
 			);
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
@@ -72,6 +73,9 @@
 						$log .= lang('too short name')."<br/>";
 					if (strlen ($p_prof_profile) <5){
 						$log .= lang('Proffessional profile is required')."<br/>";
+					}
+					if ($p_sex<1){
+						$log.=lang('choose your sex')."<br/>";
 					}
 				}
 				
@@ -190,11 +194,61 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 					unset ($_POST);
 						
 				}
-				
+				mysql_select_db ($GLOBALS['phpgw_domain']['default']['db_name']) or die(mysql_error());
+				$query = "SELECT data from other_data where name='countries_list'";
+				$countries_result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $countries=mysql_fetch_array($countries_result);
+				mysql_free_result($countries_result);
+				$countries=explode("\n",$countries[0]);
+                                $query = "SELECT data from other_data where name='sports' and lang='".
+                                          $GLOBALS['page']->lang."'";
+                                $result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $sports=mysql_fetch_array($result);
+                                mysql_free_result($result);
+                                $sports=explode("\n",$sports[0]);
+                                $query = "SELECT data from other_data where name='hobbies' and lang='".
+                                          $GLOBALS['page']->lang."'";
+                                $result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $hobbies=mysql_fetch_array($result);
+                                mysql_free_result($result);
+                                $hobbies=explode("\n",$hobbies[0]);
+                                
+                                $query = "SELECT data from other_data where name='industries' and lang='".
+                                          $GLOBALS['page']->lang."'";
+                                $result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $industries=mysql_fetch_array($result);
+                                mysql_free_result($result);
+                                $industries=explode("\n",$industries[0]);
+                                
+                                $query = "SELECT data from other_data where name='professions' and lang='".
+                                          $GLOBALS['page']->lang."'";
+                                $result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $professions=mysql_fetch_array($result);
+                                mysql_free_result($result);
+                                $professions=explode("\n",$professions[0]);
+                                
+                                $query = "SELECT data from other_data where name='occ_areas' and lang='".
+                                          $GLOBALS['page']->lang."'";
+                                $result=mysql_query ($query, $mysql_link) 
+                                          or die ($query."<br/>".mysql_error($mysql_link));
+                                $occ_areas=mysql_fetch_array($result);
+                                mysql_free_result($result);
+                                $occ_areas=explode("\n",$occ_areas[0]);
+                                
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
                                   $how_did_u=explode(",",$arguments['how_did_u']);
 				  $prof_profile=explode(",",$arguments['prof_profile']);
+				  $ac_degree=explode(",",$arguments['ac_degree']);
+
+			          $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
+                                  $content .= '<form name="joinus" method="post" action="">';
+				  $content .= "<p class='error'>$log </p>";
                                         if (isset($g_ic)){
                                           $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
                                           $GLOBALS['phpgw_domain']['default']['db_user'],
@@ -212,65 +266,17 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                         mysql_free_result($invite_result);
                                         
                                         if (isset($invitation['ident'])){
-                                          $content .= "<p class='error'>$log </p>";
+                                          
                                           $content .= '<p><h3>'.lang('invitation found').': '.lang('from').
                                             ' <a href="/members/'.$invitation['account_lid'].'">'.
                                             $invitation['inviter'].'</a> '.
                                             lang('to').' <b>'.$invitation['name'].'</b></h3></p>';
-                                          $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
-                                          $content .= '<form name="joinus" method="post" action="">';
+                                          
                                           $content .= '<input name="ic" value="'.$invitation['code'].'" type="hidden" />';
-                                          $content .= '<table>';
-                                          $content .= '<tr>
-                                          <td>'.lang('Name').'<font color="red">*</font> </td>
-						<td><input type="text" name="name" value=></td>
-                                          </tr>
-                                          <tr>
-						<td>'.lang('last name').'<font color="red">*</font></td>
-						<td><input type="text" name="surname" value='.$p_surname.'></td>
-                                          </tr>
-					  <tr>
-                                                  <td>'.lang("Which professional profile better describes you").'<font color="red">*</font></td>
-                                                  <td><select name="prof_profile">';
-                                          foreach ($prof_profile as $opt){
-                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
-                                          }
-                                          $content.='</select></td>
-                                          </tr>
-                                          <tr>
-                                                  <td><a href="#linkedin_url">URL to Linkedin Profile</a> </td>
-                                                  <td><input type="text" name="url" value='.$p_url.'></td>
-                                          </tr>
-                                          <tr>
-                                                  <td>'.lang('phone number').'</td>
-                                                  <td><input type="text" name="phone" value='.$p_phone.'></td>
-                                          </tr>
-                                          <tr>
-                                                  <td>Reason for requesting Club Membership <font color="red">*</font></td>
-                                                  <td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
-                                          </tr>
-                                          <tr>
-                                                  <td>'.lang("How did you know about the club").'<font color="red">*</font></td>
-                                                  <td><select name="how_did_u">';
-                                          foreach ($how_did_u as $opt){
-                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
-                                          }
-                                          $content.='</select></td>
-                                          </tr>
-                                          <tr>
-                                            <td colspan="2">
-                                                  <input type="submit" class="button" name="btn_submit" value="'.lang('send').'">
-                                              </td>
-                                          </tr>
-                                          </table>';
-                                          $content .= '</form>';
-                                          }else{
+					}else{
                                             $content.='<h3><font color="red">'.lang('invitation not found').'</font></h3>';
                                           }
-                                        }else{  
-                                          $content .=  "<p class='error'>$log </p>";
-                                          $content .= '<p><font color="red">*</font> - '.lang('required fields').'</p>';
-                                          $content .= '<form name="joinus" method="post" action="">';
+                                        }  
                                           $content .= '<table>';
                                           $content .= '
                                           <tr>
@@ -309,16 +315,151 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                                   <td><select name="how_did_u">';
                                           foreach ($how_did_u as $opt){
                                             $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
-}
+					  }	
                                           $content.='</select></td>
                                           </tr>
+					<tr>
+					<th colspan="2">'.lang("personal data").'</th>
+					</tr>
+					<tr>
+					<td>'.lang('sex').'<font color="red">*</font></td>
+						<td>
+						<select name="sex">
+						<option value="-1">---</option>
+						<option value="1">'.lang("female").'</option>
+						<option value="2">'.lang("male").'</option>
+						</select>
+					</td>
+                                          </tr>
+					<tr>
+                                                  <td>'.lang('birth date').'</td>
+                                                  <td>
+							<input size="2" type="text" name="birth_d" value='.
+							((isset($p_birth_d))?$p_birth_d:lang('dd')).' />
+							<input size="2" type="text" name="birth_m" value='.
+							((isset($p_birth_m))?$p_birth_m:lang('mm')).' />
+							<input size="4" type="text" name="birth_y" value='.
+							((isset($p_birth_y))?$p_birth_y:lang('yyyy')).' />
+						</td>
+                                          </tr>
+					<tr>
+                                                  <td>'.lang("country of residence").'<font color="red">*</font></td>
+                                                  <td><select name="residence_country">';
+					  $countries[]=lang("not in the list");
+                                          foreach ($countries as $country){
+					    $country=rtrim($country);
+                                            $content.='<option value="'.$country.'"'.
+						((isset($p_residence_country) && strcmp($p_residence_country,$country)==0)
+						?" selected" :"").
+					    '>'.$country.'</option>'."\n";
+                                          }
+                                          $content.='</select></td>
+					  </tr>
+					 <tr>
+                                                  <td>'.lang('city of residence').'</td>
+                                                  <td><input type="text" name="residence_city" value='.$p_residence_city.'></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang("your academic degree").'<font color="red">*</font></td>
+                                                  <td><select name="ac_degree">';
+                                          foreach ($ac_degree as $opt){
+                                            $content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
+                                          }     
+                                          $content.='</select></td>
+                                          </tr>
+                                          <tr>
+                                                  <td>'.lang("favorite sport").'<font color="red">*</font></td>
+                                                  <td><select name="favorite_sport">';
+                                          $sports[]=lang("not in the list");
+                                          foreach ($sports as $sport){
+                                            $sport=rtrim($sport);
+                                            $content.='<option value="'.$sport.'"'.
+                                                ((isset($p_favorite_sport) && strcmp($p_favorite_sport,$sport)==0)
+                                                ?" selected" :"").
+                                            '>'.$sport.'</option>'."\n";
+                                          }
+                                          $content.='</select></td>
+                                          </tr>
+                                          <tr>
+                                            <td>'.lang("interests").'<font color="red">*</font></td>
+                                            <td>';
+                                          $hobbies[]=lang("other");
+                                          foreach ($hobbies as $hobby){
+                                            $hobby=rtrim($hobby);
+                                            $hobby_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$hobby);
+                                            $content.='<input '.
+                                                ((isset($p_interests[$hobby_chkbox_name]))?"checked ":" ").
+                                                'type="checkbox"'.
+                                                'name="interests['.$hobby_chkbox_name.']">'.
+                                                $hobby.'<br/>';
+                                          }
+                                          $content.='</td>
+                                          </tr>
+                                          <tr>
+                                        <th colspan="2">'.lang("professional data").'</th>
+                                        </tr>
+                                        <tr>
+                                            <td>'.lang("industry").'<font color="red">*</font></td>
+                                            <td>';
+                                          $industries[]=lang("other");
+                                          foreach ($industries as $industry){
+                                            $industry=rtrim($industry);
+                                            $industry_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$industry);
+                                            $content.='<input '.
+                                                ((isset($p_industries[$industry_chkbox_name]))?"checked ":" ").
+                                                'type="checkbox"'.
+                                                'name="industries['.$industry_chkbox_name.']">'.
+                                                $industry.'<br/>';
+                                          }
+                                          $content.='</td>
+                                          </tr>
+                                          <tr>
+                                            <td>'.lang("profession").'<font color="red">*</font></td>
+                                            <td>';
+                                          $professions[]=lang("other");
+                                          foreach ($professions as $profession){
+                                            $profession=rtrim($profession);
+                                            $profession_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$profession);
+                                            $content.='<input '.
+                                                ((isset($p_professions[$profession_chkbox_name]))?"checked ":" ").
+                                                'type="checkbox"'.
+                                                'name="professions['.$profession_chkbox_name.']">'.
+                                                $profession.'<br/>';
+                                          }
+                                          $content.='</td>
+                                          </tr>
+                                          <tr>
+                                            <td>'.lang("occ_area").'<font color="red">*</font></td>
+                                            <td>';
+                                          $occ_areas[]=lang("other");
+                                          foreach ($occ_areas as $occ_area){
+                                            $occ_area=rtrim($occ_area);
+                                            $occ_area_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$occ_area);
+                                            $content.='<input '.
+                                                ((isset($p_occ_areas[$occ_area_chkbox_name]))?"checked ":" ").
+                                                'type="checkbox"'.
+                                                'name="occ_areas['.$occ_area_chkbox_name.']">'.
+                                                $occ_area.'<br/>';
+                                          }
+                                          $content.='</td>
+                                          </tr>
+                                          <tr>
+                                        <th colspan="2">'.lang("terms acceptance").'</th>
+                                        </tr>
+                                        <tr>
+                                              <td>'.lang('privacy terms').'</td>
+                                              <td><input type="checkbox" name="terms_privacy" />'.lang('accept').'
+                                        </tr>
+                                        <tr>
+                                              <td>'.lang('services terms').'</td>
+                                              <td><input type="checkbox" name="terms_services" />'.lang('accept').'
+                                        </tr>    
                                           <tr>
                                                   <td colspan="2"><input type="submit" class="button" name="btn_submit" value="'.lang('send').'"></td>
                                           </tr>
                                           </table>';
                                           $content .= '</form>';
                                         }
-				}
 				
 				return $content;
 		}
