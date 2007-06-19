@@ -12,7 +12,7 @@
                         $minilogin="<table>
                         	   <tr><td>Please, logon first if you are a member</td></tr>
                                    <tr><td>
-                        	   <form id=\"minilogin\" action=\"/egroupware/login.php\" method=\"post\">
+                        	   <form id=\"minilogin\" action=\"https://".$_SERVER['SERVER_NAME']."/egroupware/login.php\" method=\"post\">
                         	   
                                    <label>U:&nbsp;<input type=\"text\" name=\"login\" id=\"username\" style=\"size: 50px\" title=\"Username\"/>
                                    </label>

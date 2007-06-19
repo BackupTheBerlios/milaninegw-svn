@@ -105,7 +105,12 @@ END;
 			
 			if (sizeof($comments) > 0) {
 				foreach($comments as $comment) {
+                                	unset($posterdata);
 					$commentmenu = "";
+                                        if (logged_on && $post->owner == $_SESSION['userid']){
+                                          echo '<!-- kuku loged_on -->';
+                                          $posterdata=explode(",",$comment->posterdata,2);
+                                        }
 					if (logged_on && ($comment->owner == $_SESSION['userid'] || $post->owner == $_SESSION['userid'])) {
 						$commentmenu = <<< END
 			<p>
@@ -120,14 +125,17 @@ END;
                                           $owners_link=' <a href="'.url.$owners_realname[0]->username.'/">'.$comment->postedname.'</a> ';
                                         }else{
                                           $owners_link=$comment->postedname;
-                                          $posterdata=explode(",",$comment->posterdata,2);
+                                          if (!isset($posterdata) && $comment->owner<1){
+                                            echo '<!-- kuku anonymous -->';
+                                            $posterdata=explode(",",$comment->posterdata,2);
+                                          }
                                         }
 					$commentsbody .= run("templates:draw", array(
 											'context' => 'weblogcomment',
 											'postedname' => stripslashes($owners_link),
 											'body' => run("weblogs:text:process",stripslashes($comment->body)) . $commentmenu,
 											'posted' => gmdate("l, F jS, Y",$comment->posted) . " at " . gmdate("H:i",$comment->posted),
-                                            'posterdata' => (($comment->owner<1)?'/<span title="'.$posterdata[1].'">'.$posterdata[0].'</span>':"")
+                                            'posterdata' => ((isset($posterdata))?'/<span title="'.$posterdata[1].'">'.$posterdata[0].'</span>':"")
 											
 										)
 										);
