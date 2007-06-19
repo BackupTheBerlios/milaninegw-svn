@@ -19,7 +19,7 @@
                                    <label>P:&nbsp;<input type=\"password\" name=\"passwd\" id=\"password\" style=\"size: 50px\" />
                                    </label>
                                    <input type=\"hidden\" name=\"action\" value=\"log_on\" />
-				   <input type=\"submit\" name=\"submit\" value=\"Go\" />
+				   <input type=\"submit\" name=\"submit\" value=\"Login\" />
                                    <input type=\"hidden\" name=\"passwd_type\" value=\"text\"/>
 				   <input type=\"hidden\" name=\"account_type\" value=\"u\"/>
                                    <input type=\"hidden\" name=\"phpgw_forward\" value=\"..".
