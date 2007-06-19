@@ -3,13 +3,39 @@
 	if (isset($parameter)) {
 	
 		$post = $parameter;
-		
+                if (logged_on) {
+			$comment_name = $_SESSION['user_info_cache'][$_SESSION['userid']]->name ;
+                        $label="Commenting as ".$comment_name;
+		} else {
+			$comment_name = "Guest";
+                        $label="Your IP and UA will be shown with the comment";
+                        $minilogin="<table>
+                        	   <tr><td>Please, logon first if you are a member</td></tr>
+                                   <tr><td>
+                        	   <form id=\"minilogin\" action=\"/egroupware/login.php\" method=\"post\">
+                        	   
+                                   <label>U:&nbsp;<input type=\"text\" name=\"login\" id=\"username\" style=\"size: 50px\" title=\"Username\"/>
+                                   </label>
+                                   <label>P:&nbsp;<input type=\"password\" name=\"passwd\" id=\"password\" style=\"size: 50px\" />
+                                   </label>
+                                   <input type=\"hidden\" name=\"action\" value=\"log_on\" />
+				   <input type=\"submit\" name=\"submit\" value=\"Go\" />
+                                   <input type=\"hidden\" name=\"passwd_type\" value=\"text\"/>
+				   <input type=\"hidden\" name=\"account_type\" value=\"u\"/>
+                                   <input type=\"hidden\" name=\"phpgw_forward\" value=\"..".
+                                   $_SERVER['REDIRECT_SCRIPT_URL']."#add_comment_form\" /></form>
+                                   </td></tr></table>";
+                                   /*"<!--".
+                                   print_r($_SERVER,1)."
+				   -->*/
+		}
+		$run_result.=$minilogin;
 		$run_result .= <<< END
-		
+	
 	<form action="" method="post" name="milanin_add_comment_form"
          id="milanin_add_comment_form">
 	
-		<h2>Add a comment</h2>
+	<a name="add_comment_form"><h2>Add a comment</h2></a>
 	
 END;
 
@@ -36,21 +62,16 @@ END;
 							)
 							);
 							
-		if (logged_on) {
-			$comment_name = $_SESSION['user_info_cache'][$_SESSION['userid']]->name ;
-		} else {
-			$comment_name = "Guest";
-                        $label="Your IP and UA will be shown with the comment";
-		}
+		
 
 		$run_result .= run("templates:draw", array(
 		
 								'context' => 'databox1',
 								'name' => 'Your name',
-								'column1' => "<label for=\"milanin_postedname\">$label</label>
+								'column1' => "<label for=\"milanin_postedname\">$label
                     						<input type=\"text\" name=\"milanin_postedname\" 
                     						id=\"milanin_postedname\" 
-                    						 value=\"".htmlentities($comment_name)."\" />"
+                    						 value=\"".htmlentities($comment_name)."\" /></label>"
 		
 							)
 							);
