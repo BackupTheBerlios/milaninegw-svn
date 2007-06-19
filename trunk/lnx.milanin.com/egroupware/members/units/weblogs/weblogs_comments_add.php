@@ -8,15 +8,15 @@
                         $label="Commenting as ".$comment_name;
 		} else {
 			$comment_name = "Guest";
-                        $label="Your IP and UA will be shown with the comment";
-                        $minilogin="<table>
-                        	   <tr><td>Please, logon first if you are a member</td></tr>
+                        $label="<span class=\"error\">Your IP and UA will be shown with the comment</span>";
+                        $minilogin="<table align=\"center\">
+                        	   <tr><td class=\"error\">Please, logon first if you are a member</td></tr>
                                    <tr><td>
                         	   <form id=\"minilogin\" action=\"https://".$_SERVER['SERVER_NAME']."/egroupware/login.php\" method=\"post\">
                         	   
-                                   <label>U:&nbsp;<input type=\"text\" name=\"login\" id=\"username\" style=\"size: 50px\" title=\"Username\"/>
+                                   <label>U:&nbsp;<input type=\"text\" name=\"login\" id=\"username\" style=\"size: 150px;width:150px\" title=\"Username\"/>
                                    </label>
-                                   <label>P:&nbsp;<input type=\"password\" name=\"passwd\" id=\"password\" style=\"size: 50px\" />
+                                   <label>P:&nbsp;<input type=\"password\" name=\"passwd\" id=\"password\" style=\"size: 150px;width:150px\" />
                                    </label>
                                    <input type=\"hidden\" name=\"action\" value=\"log_on\" />
 				   <input type=\"submit\" name=\"submit\" value=\"Login\" />
