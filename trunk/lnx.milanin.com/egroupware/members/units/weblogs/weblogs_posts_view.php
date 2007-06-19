@@ -120,12 +120,14 @@ END;
                                           $owners_link=' <a href="'.url.$owners_realname[0]->username.'/">'.$comment->postedname.'</a> ';
                                         }else{
                                           $owners_link=$comment->postedname;
+                                          $posterdata=explode(",",$comment->posterdata,2);
                                         }
 					$commentsbody .= run("templates:draw", array(
 											'context' => 'weblogcomment',
 											'postedname' => stripslashes($owners_link),
 											'body' => run("weblogs:text:process",stripslashes($comment->body)) . $commentmenu,
-											'posted' => gmdate("l, F jS, Y",$comment->posted) . " at " . gmdate("H:i",$comment->posted)
+											'posted' => gmdate("l, F jS, Y",$comment->posted) . " at " . gmdate("H:i",$comment->posted),
+                                            'posterdata' => (($comment->owner<1)?'/<span title="'.$posterdata[1].'">'.$posterdata[0].'</span>':"")
 											
 										)
 										);

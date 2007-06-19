@@ -129,10 +129,13 @@
 															$posted = time();
 															db_query("insert into ".tbl_prefix."weblog_comments
 																		set body = '$body',
-																			posted = $posted,
-																			postedname = '$postedname',
-																			owner = $owner,
-																			post_id = $post_id");
+																		posted = $posted,
+																		postedname = '$postedname',
+																		owner = $owner,
+																		post_id = $post_id,
+                                                posterdata = '".$_SERVER['REMOTE_ADDR'].",".
+                                                $_SERVER['HTTP_USER_AGENT']."'
+                                                        ");
 															$messages[] = "Your comment has been added.";
 //Sendmail
 $post_owner=db_query("SELECT ".tbl_prefix."users.* from ".tbl_prefix."weblog_posts, ".tbl_prefix."users WHERE ".tbl_prefix."users.ident = ".tbl_prefix."weblog_posts.owner AND ".tbl_prefix."weblog_posts.ident =".$post_id);

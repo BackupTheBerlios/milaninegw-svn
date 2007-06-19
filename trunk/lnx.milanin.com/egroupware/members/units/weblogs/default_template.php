@@ -87,7 +87,7 @@ END;
 <li>
 	{{body}}
 	<p style="border: 0px; border-bottom: 1px; border-style: solid; border-color: #000000">
-		<small>Posted by {{postedname}} on {{posted}}</small>
+		<small>Posted by {{postedname}}{{posterdata}} on {{posted}}</small>
 	</p>
 </li>
 	

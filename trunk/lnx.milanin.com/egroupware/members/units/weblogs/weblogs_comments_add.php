@@ -40,13 +40,17 @@ END;
 			$comment_name = $_SESSION['user_info_cache'][$_SESSION['userid']]->name ;
 		} else {
 			$comment_name = "Guest";
+                        $label="Your IP and UA will be shown with the comment";
 		}
 
 		$run_result .= run("templates:draw", array(
 		
 								'context' => 'databox1',
 								'name' => 'Your name',
-								'column1' => "<input type=\"text\" name=\"milanin_postedname\" value=\"".htmlentities($comment_name)."\" />"
+								'column1' => "<label for=\"milanin_postedname\">$label</label>
+                    						<input type=\"text\" name=\"milanin_postedname\" 
+                    						id=\"milanin_postedname\" 
+                    						 value=\"".htmlentities($comment_name)."\" />"
 		
 							)
 							);
