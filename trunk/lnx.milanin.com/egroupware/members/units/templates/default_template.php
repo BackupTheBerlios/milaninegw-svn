@@ -147,6 +147,20 @@ form			{
 					margin: 0px;
 					padding: 0px;
 				}
+q {
+
+			border-left: 6px solid #BF2868;
+
+			background: #EDF1F1;
+
+			padding: 8px;
+
+			padding-left: 16px;
+
+			display: block;
+
+		}
+
 				
 /* Page top */
 #pagetop		{
