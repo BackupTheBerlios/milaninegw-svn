@@ -1,0 +1,94 @@
+  <script type="text/javascript">
+<!--
+function PlayIt(what,cur){
+document.getElementById('video').innerHTML='<object width="266" height="201" '
++'classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" '
++'codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701" '
++'standby="Loading Microsoft Windows Media Player components..." type="application/x-oleobject">'
++'<param name="url" value="'+what+'">'
++'<param name="uiMode" value="full">'
++'<param name="autoStart" value="true">'
++'<param name="loop" value="true">'
++'<embed type="application/x-mplayer2" '
++'pluginspage="http://microsoft.com/windows/mediaplayer/en/download/" '
++'showcontrols="false" uimode="full" width="266" height="201" '
++'src="'+what+'" autostart="true" loop="true">'
++'<\/object>';
+document.getElementById(prev).innerHTML=document.getElementById(prev).innerHTML.replace(/Playing\s::/g, "");
+document.getElementById(cur).innerHTML="Playing ::"+document.getElementById(cur).innerHTML;
+prev=cur;
+}
+//-->
+  </script>
+<table border="0" cellpadding="0" cellspacing="0" width="370" align="center">
+  <tbody>
+    <tr>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="34"></td>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="10"></td>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="266"></td>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="11"></td>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="49"></td>
+      <td><img src="{{PATH}}/a/shim.gif" alt="" border="0" height="1" width="1"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" height="71" valign="top"><img
+ name="vod_C1_R1" src="{{PATH}}/a/vod_C1_R1.jpg" alt="" border="0" height="71"
+ width="370"></td>
+      <td height="71" width="1"><img src="{{PATH}}/a/shim.gif" alt="" border="0"
+ height="71" width="1"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" height="201" valign="top"><img
+ name="vod_C1_R2" src="{{PATH}}/a/vod_C1_R2.jpg" alt="" border="0" height="201"
+ width="44"></td>
+      <td style="text-align: center;" height="201" valign="top"
+ width="266"><span id="video"><object id="player" name="player"
+ classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+ codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+ standby="Loading Microsoft Windows Media player components..."
+ type="application/x-oleobject" height="201" width="266"><param
+ name="url" value="{{SELECTED_VIDEO}}"><param name="uiMode" value="full"><param
+ name="autoStart" value="true"> <param name="loop" value="true">
+      <embed type="application/x-mplayer2"
+ pluginspage="http://microsoft.com/windows/mediaplayer/en/download/"
+ showcontrols="true" uimode="full" src="{{SELECTED_VIDEO}}" autostart="true" loop="true"
+ height="201" width="266"></object></span><br>
+      </td>
+      <td colspan="2" align="left" height="201" valign="top"><img
+ name="vod_C4_R2" src="{{PATH}}/a/vod_C4_R2.jpg" alt="" border="0" height="201"
+ width="60"></td>
+      <td height="201" width="1"><img src="{{PATH}}/a/shim.gif" alt="" border="0"
+ height="201" width="1"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" height="105" valign="top"><img
+ name="vod_C1_R3" src="{{PATH}}/a/vod_C1_R3.jpg" alt="" border="0" height="105"
+ width="370"></td>
+      <td height="105" width="1"><img src="{{PATH}}/a/shim.gif" alt="" border="0"
+ height="105" width="1"></td>
+    </tr>
+    <tr>
+      <td align="left" height="138" valign="top" width="34"><img
+ name="vod_C1_R4" src="{{PATH}}/a/vod_C1_R4.jpg" alt="" border="0" height="138"
+ width="34"></td>
+      <td style="text-align: left;" colspan="3" height="138"
+ valign="middle">
+      {{VIDEOS_LIST}}
+      </td>
+      <td align="left" height="138" valign="top" width="49"><img
+ name="vod_C5_R4" src="{{PATH}}/a/vod_C5_R4.jpg" alt="" border="0" height="138"
+ width="49"></td>
+      <td height="138" width="1"><img src="{{PATH}}/a/shim.gif" alt="" border="0"
+ height="138" width="1"></td>
+    </tr>
+    <tr>
+      <td colspan="5" align="left" height="55" valign="top"><img
+ name="vod_C1_R5" src="{{PATH}}/a/vod_C1_R5.jpg" alt="" border="0" height="55"
+ width="370"></td>
+      <td height="55" width="1"><img src="{{PATH}}/a/shim.gif" alt="" border="0"
+ height="55" width="1"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
