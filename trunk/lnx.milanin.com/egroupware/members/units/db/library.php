@@ -38,7 +38,7 @@
 					$querycache[$sql_query] = $data;
 					return $data;
 				} else {
-					 echo '<!--'.$sql_query . " :: " . @mysql_error() . " -->\n";
+					// echo '<!--'.$sql_query . " :: " . @mysql_error() . " -->\n";
 					$querycache[$sql_query] = FALSE;
 					return FALSE;
 				}
