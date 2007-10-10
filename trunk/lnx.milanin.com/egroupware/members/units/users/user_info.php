@@ -26,9 +26,9 @@
 			$body .= <<< END
 			
 	<table align="center" border="0" class="userlist">
-		<tr>
-			
 END;
+$body.=run('clubincall:display:small')."<tr>\n";
+
 			foreach($parameter[1] as $key => $ident) {
 				$ident = (int) $ident;
 				// if (!isset($_SESSION['user_info_cache'][$ident])) {
