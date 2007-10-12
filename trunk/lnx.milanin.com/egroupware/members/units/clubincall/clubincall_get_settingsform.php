@@ -6,17 +6,17 @@ require_once('../users/function_session_start.php');
 global $profile_id;
 
 $weekdays = array("Noday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
-$my_page_owner=$_GET['id'];
-if ($_SESSION['userid']==$_GET['id']){
+$my_page_owner= isset($_GET['id']) ? $_GET['id'] : $_SESSION['userid'];
+if ($_SESSION['userid']==$my_page_owner){
   $numbers_query="SELECT n.*,IF(ISNULL(gd.used),0,gd.used) as used FROM clubincall_numbers n
                            left join (select count(*) as used,dst from clubincall_dsts d 
-                                 where d.owner=".$_GET['id']." group by dst) gd 
+                                 where d.owner=".$my_page_owner." group by dst) gd 
                            on gd.dst=n.ident".
-                  " where n.owner=".$_GET['id'];
+                  " where n.owner=".$my_page_owner;
   $numbers=db_query($numbers_query);
   $dsts_query="SELECT d.*,n.number, n.description FROM clubincall_dsts d 
                join clubincall_numbers n on n.ident=d.dst 
-               where d.owner=".$_GET['id'];
+               where d.owner=".$my_page_owner;
   $dsts=db_query($dsts_query);
   header('Content-Type: text/xml');
   header("Cache-Control: no-cache, must-revalidate");
@@ -45,6 +45,7 @@ if ($_SESSION['userid']==$_GET['id']){
     echo '<number id="'.$number->ident.
                '" value="'.$number->number.
                '"  used="'.$number->used.
+               '"  description="'.$number->description.
           '"/>';
   }
   echo '</numbers>';
