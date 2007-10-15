@@ -11,9 +11,12 @@ var urls = {
 var xmlHttp=null;
 
 function indicate(){
+  props=client.getPage();
   indicator=document.getElementById('loading_indicator');
   if (document.getElementById('control_panel')){
     indicator.className="loading_indicator_centered";
+    indicator.style.height=props.pageY*0.8;
+    indicator.style.width=props.pageW*0.8;
   }else{
     indicator.className="loading_indicator";
   }
@@ -24,8 +27,82 @@ function indicate(){
     indicator.style.display='block';
   }
 }
+var client = { //
+    getPage:  function() { 
+                var pageWidth = 720; 
+                var pageHeight = 576; 
+                var scrollArr = this.getScroll(); 
+                var winArr = this.getWindow(); 
+                pageWidth = winArr.width + scrollArr.left; 
+                pageHeight = winArr.height + scrollArr.top; 
+                return { 
+                  scrollX: scrollArr.left, 
+                  scrollY: scrollArr.top, 
+                  winW: winArr.width, 
+                  winH: winArr.height, 
+                  pageW: pageWidth, 
+                  pageY: pageHeight 
+                }; 
+    }, 
+    getScroll: function() {
+                return { 
+                  left: this.scrollLeft(),
+                  top: this.scrollTop() 
+                }; 
+               },
+    getWindow: function() {
+                return { 
+                  width: this.windowWidth(),
+                  height: this.windowHeight()
+                }; 
+               }, 
+    scrollLeft: function() { 
+                  var xScroll = 0; 
+                  if (self.pageXOffset) xScroll = self.pageXOffset; 
+                  else if (document.documentElement && document.documentElement.scrollLeft)
+                   xScroll = document.documentElement.scrollLeft;
+                  else if (document.body) 
+                   xScroll = document.body.scrollLeft; 
+                  return xScroll; 
+                },
+    scrollTop: function() { 
+                  var yScroll = 0; 
+                  if (self.pageYOffset) 
+                   yScroll = self.pageYOffset; 
+                  else if (document.documentElement && document.documentElement.scrollTop) 
+                   yScroll = document.documentElement.scrollTop; 
+                  else if (document.body) 
+                   yScroll = document.body.scrollTop; return yScroll; 
+               },
+   windowWidth: function() { 
+                  var xWin = 720; 
+                  if (self.innerHeight) 
+                    xWin = self.innerWidth; 
+                  else if (document.documentElement && document.documentElement.clientWidth)
+                    xWin = document.documentElement.clientWidth;
+                  else if (document.body) 
+                    xWin = document.body.clientWidth; 
+                  return xWin; 
+                }, 
+   windowHeight: function() { 
+                  var yWin = 576; 
+                  if (self.innerHeight) 
+                    yWin = self.innerHeight; 
+                  else if (document.documentElement && document.documentElement.clientHeight)
+                    yWin = document.documentElement.clientHeight;
+                  else if (document.body)
+                    yWin = document.body.clientHeight; 
+                  return yWin; 
+                 }
+};
 
 function clubincall(id,url,sid){
+  
+//   for (prop in props){
+//     props+=" "+prop;
+//   }
+//   alert(props.pageW+"X"+props.pageY);
+  
   if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
   var clubincall_wrapper=document.getElementById("clubincall_wrapper");
   if (!document.getElementById('loading_indicator')){
@@ -36,7 +113,8 @@ function clubincall(id,url,sid){
     loading_indicator.appendChild(loading_indicator_img);
     loading_indicator_text.innerHTML="Loading...";
     loading_indicator.appendChild(loading_indicator_text);
-    clubincall_wrapper.appendChild(loading_indicator);
+    var body=document.getElementsByTagName('body');
+    body[0].appendChild(loading_indicator);
   }
   if (!document.getElementById('clubincall_dropdown')){
     var clubincall_dropdown=document.createElement('div');
@@ -181,19 +259,32 @@ function close_callform (){
 }
 
 function openSettings(id){
+  var props=client.getPage();
+  var body=document.getElementsByTagName('body');
+  body=body[0];
   var background_div=document.createElement('div');
   var control_panel=document.createElement('div');
   background_div.id='background_div';
   control_panel.id='control_panel';
   control_panel.className='control_panel';
   background_div.className='background_div';
-  var clubincall_wrapper=document.getElementById("clubincall_wrapper");
-  clubincall_wrapper.appendChild(background_div);
-  clubincall_wrapper.appendChild(control_panel);
+  background_div.style.height=props.pageY;
+  background_div.style.width=props.pageW;
+  control_panel.style.height=props.pageY*0.8;
+  var clubincall_dropdown=document.getElementById("clubincall_dropdown");
+  body.appendChild(background_div);
+  body.appendChild(control_panel);
   if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
   xmlHttp.open('GET',
   url+'/'+urls['api_prefix']+urls['get_settings']+'?id='+id, true);
   indicate();
+  removeElement(clubincall_dropdown);//.style.display='none';
+  body.style["overflow"]="hidden";
+  body.style["height"]=props.pageY;
+  if (document.body.scroll){
+    alert(document.body.scroll);
+    document.body.scroll="no";
+  }
   xmlHttp.send(null);
   xmlHttp.onreadystatechange = renderSettings;
 }
@@ -202,8 +293,53 @@ function render_titlebar(id,close_handler){
   var close_link=document.createElement('a');
   close_link.setAttribute('href','javascript:'+close_handler+'');
   close_link.innerHTML='<img alt="Close" class="close_img" src="'+url+'_templates/default/close.png" />';
+  titlebar.appendChild(renderSettingsMenu());
   titlebar.appendChild(close_link);
   return titlebar;
+}
+
+function renderSettingsMenu (){
+  var menu=createElementAll('settings_menu','ul');
+  items={'numbers_wrapper':'Numbers',
+         'dsts_wrapper'   :'Rules',
+         'check_wrapper'  :'Tests',
+         'help_wrapper'   :'Help'
+        };
+  for (var key in items){
+    var item=document.createElement('li');
+    item.id='menu_li_'+key;
+    item.className='settings_menu_li';
+    var item_a=document.createElement('a');
+    item_a.innerHTML=items[key];
+    item_a.setAttribute('href','javascript:openwrapper("'+key+'")');
+    item.appendChild(item_a);
+    menu.appendChild(item);
+  }
+  return menu;
+}
+
+function openwrapper(wrapper){
+  var settings_wrapper=document.getElementById('settings_wrapper');
+  var cur_settings=document.getElementById(wrapper);
+  for (var i in settings_wrapper.childNodes){
+    var myid=settings_wrapper.childNodes[i].id;
+    if (myid){
+      if (myid.indexOf('_wrapper')>1){
+        if (myid!=wrapper){
+          settings_wrapper.childNodes[i].style.display='none';
+        }
+      }
+    }
+  }
+  cur_settings.style.display='block';
+  var ul=document.getElementById('settings_menu');
+  for (var li in ul.childNodes){
+      if (ul.childNodes[li].id=='menu_li_'+wrapper){
+        ul.childNodes[li].className="settings_menu_li_active";
+      }else{
+        ul.childNodes[li].className="settings_menu_li";
+      }
+  }
 }
 
 function renderSettings(){
@@ -350,9 +486,11 @@ function renderNumber(number){
   number_fset.className='number_fset';
   var number_input=document.createElement('input');
   number_input.id='number_input_'+number_id;
+  number_input.className='number_input';
   number_input.value=number.getAttribute('value');
   var number_desc_input=document.createElement('input');
   number_desc_input.value=number.getAttribute('description');
+  number_desc_input.className='number_desc_input';
   var number_use=document.createElement('div');
   number_use.className='number_use';
   number_desc_input.id='number_desc_input_'+number_id;
@@ -393,6 +531,10 @@ function renderDstNmbrBtns(id,prefix){
   remove_button.id=prefix+'_remove_'+id;
   add_button.id=prefix+'_add_'+id;
   
+  save_button.className=prefix+'_save_button';
+  remove_button.className=prefix+'_remove_button';
+  add_button.className=prefix+'_add_button';
+  
   save_button.setAttribute('value','Save');
   remove_button.setAttribute('value','Remove');
   add_button.setAttribute('value','Add');
@@ -410,9 +552,6 @@ function save_handle(e){
       targ = targ.parentNode;
   if (xmlHttp==null) xmlHttp=ajaxFunction;
   props=targ.id.split('_');
-  //alert(targ.parentNode.tagName+','+targ.parentNode.parentNode.tagName);
-  //alert(targ.parentNode.classNameName+','+targ.parentNode.parentNode.className);
-  //alert(targ.parentNode.id+','+targ.parentNode.parentNode.id);
   var inputs=getAllInputs(targ.parentNode.parentNode);
   var xml = '<?xml version="1.0"?>\n' +
           '<clubincall_action action="save" target="'+props[0]+'" id="'+props[2]+'">\n';
@@ -489,6 +628,10 @@ function closeSettings(){
   removeallchilds(document.getElementById('control_panel'));
   removeElement(document.getElementById('control_panel'));
   removeElement(document.getElementById('background_div'));
+  var body=document.getElementsByTagName('body');
+  body=body[0];
+  body.style["overflow"]="visible";
+  body.style["height"]="100%";
 } 
 function findPos(obj) {
 	var curleft = curtop = 0;

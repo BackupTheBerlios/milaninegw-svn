@@ -678,8 +678,8 @@ div#clubincall_dropdown label {
   padding-bottom:4px;
 }
 .control_panel {
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  z-index: 2000;
   top: 10%;
   left: 10%;
   width: 80%;
@@ -688,17 +688,32 @@ div#clubincall_dropdown label {
   background-color: #fff;
   border-color:#990041;
   float: right;
-  overflow-y: scroll;
+  overflow: hidden;
+}
+#dsts_wrapper,#numbers_wrapper,#test_wrapper,#help_wrapper{
+ overflow-y: scroll;
+ height:85%;
+ width:100%;
+ position: absolute;
+ margin-top:22px;
+ top:0;
+}
+#dsts_wrapper{
+  display: none;
+}
+#numbers_wrapper{
+
 }
 .background_div {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background: #000;
   opacity: 0.8;
-  z-index:1; 
+  z-index:1000; 
+  
   FILTER:Alpha(Opacity=80); /* IE */
   -moz-opacity:0.80; /* FireFox */
   background-repeat:repeat;
@@ -731,31 +746,41 @@ div#clubincall_dropdown label {
  text-align: right;
  background-color: #F3F4F5;
  border-bottom: 1px solid #990041;
+ position:relative;
 }
+
 .close_img {
  border:0;
 }
-div[class=dst_row] select {
+
+#dsts_wrapper legend {
+  color: #000;
+}
+#dsts_wrapper fieldset select {
   margin: 2px;
   border: 1px solid #990041;
   background-color: #fff;
   font-size: 10pt;
 }
-div[class=dst_row] fieldset {
-  display: inline;
-  vertical-align: top;
-}
-div[class=dst_row] fieldset input[type=button] {
+
+.number_save_button,
+.number_add_button,
+.number_remove_button,
+.dst_save_button,
+.dst_add_button,
+.dst_remove_button
+ {
  display:block;
+ vertical-align: top;
  width:100px;
  height: 21px;
  margin: 2px;
  font-size: 8pt;
  border: 1px solid #990041;
  color: #000;
- background-color: #fff;
 }
-.number_row{
+
+.number_row {
   display: block;
  margin: 10px;
  margin-bottom:18px;
@@ -766,22 +791,20 @@ div[class=dst_row] fieldset input[type=button] {
  background-color: #F3F4F5;
  font-size: 10pt; 
 }
-div#number_row fieldset {
+
+#dsts_wrapper fieldset, #numbers_wrapper fieldset {
  display: inline;
  vertical-align:top;
+ padding:5px;
+ margin:2px;
+ border-style: groove;
+ background-color: #F3F4F5;
 }
 
-div#number_row input[type=button] {
- display:block;
- vertical-align: top;
- width:100px;
- height: 21px;
- margin: 2px;
- font-size: 8pt;
- border: 1px solid #990041;
- color: #000;
-}
-div#number_row input {
+
+.number_input,
+.number_desc_input
+ {
  display:inline;
  padding:2px;
  vertical-align: top;
@@ -797,6 +820,7 @@ div#number_row input {
  display:block;
  float: left;
  margin-top: -40px;
+ margin-left: 10px;
 }
 .loading_indicator {
  position: fixed;
@@ -810,7 +834,7 @@ div#number_row input {
 }
 
 .loading_indicator_centered {
-  position: fixed;
+  position: absolute;
   z-index: 10000;
   top: 10%;
   left: 10%;
@@ -826,3 +850,23 @@ div#number_row input {
  font-size: 8pt;
  padding: 2px;
 }
+.settings_menu {
+ display: inline;
+ width: 100%;
+ text-align: left;
+}
+.settings_menu li {
+  display: inline;
+  padding:5px;
+}
+.settings_menu_li{
+
+}
+.settings_menu_li_active {
+  background-color: #fff;
+  border-left: 1px solid #990041;
+  border-right: 1px solid #990041;
+}
+
+/*div#background_div. div#control_panel { position: absolute; left: 0px; top: 0px; }
+body > div#background_div, body > div#background_div { position: fixed; }*/
