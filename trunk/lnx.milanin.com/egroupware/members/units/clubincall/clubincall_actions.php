@@ -46,6 +46,7 @@ if ($_SESSION['userid']) {
           case 'dst' :{
             $result['result']=-1;
             $result['msg']='TBI';
+            $result['debug']=print_r($xml,1);
             break;
           }
           default : {

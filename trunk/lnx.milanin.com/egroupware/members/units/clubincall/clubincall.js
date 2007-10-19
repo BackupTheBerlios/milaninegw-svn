@@ -5,11 +5,20 @@ var urls = {
   'do_call'        : 'clubincall_do_call.php',
   'get_settings'   : 'clubincall_get_settingsform.php',
   'post_actions'   : 'clubincall_actions.php',
-  'template'       : '_templates/default/'
+  'template'       : '_templates/default/',
+  'openwrapper'    : 'clubincall_openwrapper.php'
 };
 
 var xmlHttp=null;
-
+var weekdays={ 1:"Monday",
+                     2:"Tuesday",
+                     3:"Wednesday",
+                     4:"Thursday",
+                     5:"Friday",
+                     6:"Saturday",
+                     7:"Sunday"
+                    };
+                    
 function indicate(){
   props=client.getPage();
   indicator=document.getElementById('loading_indicator');
@@ -305,10 +314,15 @@ function renderSettingsMenu (){
          'check_wrapper'  :'Tests',
          'help_wrapper'   :'Help'
         };
+  var default_item='numbers_wrapper';
   for (var key in items){
     var item=document.createElement('li');
     item.id='menu_li_'+key;
-    item.className='settings_menu_li';
+    if (key==default_item){
+      item.className='settings_menu_li_active'
+    }else{
+      item.className='settings_menu_li';
+    }
     var item_a=document.createElement('a');
     item_a.innerHTML=items[key];
     item_a.setAttribute('href','javascript:openwrapper("'+key+'")');
@@ -319,6 +333,17 @@ function renderSettingsMenu (){
 }
 
 function openwrapper(wrapper){
+  if (!xmlHttp) xmlHttp=ajaxFunction();
+  xmlHttp.open('GET',
+      url+'/'+urls['api_prefix']+urls['openwrapper']+'?wrapper='+wrapper, true);
+      xmlHttp.send(null);
+//       xmlHttp.onreadystatechange = function () {
+//                                                 if (xmlHttp.readyState===4 && 
+//                                                     xmlHttp.status == 200) 
+//                                                     { 
+//                                                       alert(xmlHttp.responseText);
+//                                                     }
+//                                                 };
   var settings_wrapper=document.getElementById('settings_wrapper');
   var cur_settings=document.getElementById(wrapper);
   for (var i in settings_wrapper.childNodes){
@@ -346,18 +371,14 @@ function renderSettings(){
   if (xmlHttp.readyState===4){
     if (xmlHttp.status == 200) {
       indicate();
-      var weekdays={ 1:"Monday",
-                     2:"Tuesday",
-                     3:"Wednesday",
-                     4:"Thursday",
-                     5:"Friday",
-                     6:"Saturday",
-                     7:"Sunday"
-                    };
-      var settings_wrapper=createElementAll('settings_wrapper','div');
+      
+      var settings_wrapper = document.getElementById('settings_wrapper');
+      if (!settings_wrapper)
+       settings_wrapper=createElementAll('settings_wrapper','div');
       var xmldoc=xmlHttp.responseXML;
       var dsts=xmldoc.getElementsByTagName('dst');
       var numbers=xmldoc.getElementsByTagName('number');
+      var activewrapper=xmldoc.getElementsByTagName('activewrapper');
       var numbers_wrapper=createElementAll('numbers_wrapper','div');
       var dsts_wrapper=createElementAll('dsts_wrapper','div');
 //       var control_panel_toolbar=createElementAll('control_panel_toolbar','div');
@@ -383,8 +404,10 @@ function renderSettings(){
         dst_row_label.className='dst_row_label';
         dst_row_label.setAttribute('for','wstart_select');
         dst_row_label.innerHTML='Calling rule number '+dsts[i].getAttribute('id');
+        
+        var row_id=dsts[i].getAttribute('id');
         var numbers_select=document.createElement('select');
-        numbers_select.id='numbers_select'+row_id;
+        numbers_select.id='numbers_select_'+row_id;
         numbers_select.className='numbers_select';
         for (ni=0;ni<numbers.length;ni++){
           var option=document.createElement('option');
@@ -395,7 +418,6 @@ function renderSettings(){
           numbers_select.options.add(option);
         }
           
-        var row_id=dsts[i].getAttribute('id');
         for (j=0;j<dsts[i].childNodes.length;j++){
           var dst_child=dsts[i].childNodes[j];
           switch(dst_child.tagName){
@@ -403,6 +425,7 @@ function renderSettings(){
               var wstart_select=document.createElement('select');
               wstart_select.className='week_select';
               wstart_select.id='wstart_select_'+row_id;
+              addEvent(wstart_select,'change',dst_select_update);
               for (var wd in weekdays){
                 var option=document.createElement('option');
                 option.text=weekdays[wd];
@@ -416,6 +439,7 @@ function renderSettings(){
               var wend_select=document.createElement('select');
               wend_select.className='week_select';
               wend_select.id='wend_select_'+row_id;
+              addEvent(wend_select,'change',dst_select_update);
               for (var wd in weekdays){
                 var option=document.createElement('option');
                 option.text=weekdays[wd];
@@ -429,6 +453,7 @@ function renderSettings(){
               var hstart_select=document.createElement('select');
               hstart_select.className='hour_select';
               hstart_select.id='hstart_select_'+row_id;
+              addEvent(hstart_select,'change',dst_select_update);
               for (var h in range(0,24)){
                 var option=document.createElement('option');
                 option.text=h+":00";
@@ -442,6 +467,7 @@ function renderSettings(){
               var hend_select=document.createElement('select');
               hend_select.className='hour_select';
               hend_select.id='hend_select_'+row_id;
+              addEvent(hend_select,'change',dst_select_update);
               for (var h in range(0,24)){
                 var option=document.createElement('option');
                 option.text=h+":00";
@@ -466,13 +492,26 @@ function renderSettings(){
           dst_number_fset.appendChild(dst_number_fset_l);
           dst_number_fset.appendChild(numbers_select);
         dst_row.appendChild(renderDstNmbrBtns(row_id,'dst'));
-        
         dsts_wrapper.appendChild(dst_row);
       }
       var control_panel=document.getElementById('control_panel');
+      
+      var add_button=document.createElement('input');
+        add_button.setAttribute('type','button');
+        addEvent(add_button,'click',add_handle);
+        add_button.setAttribute('value','Add New');
+        add_button.className='add_button';
+        add_button.id='add_button';
+        
       settings_wrapper.appendChild(numbers_wrapper);
       settings_wrapper.appendChild(dsts_wrapper);
+      settings_wrapper.appendChild(add_button);
       control_panel.appendChild(settings_wrapper);
+      if (activewrapper.length>0){
+        activewrapper=activewrapper[0].childNodes[0].nodeValue;
+        openwrapper(activewrapper);
+      }
+        
     }else{
       alert("Error getting xmlHttp response: "+xmlHttp.status);
     }
@@ -509,8 +548,8 @@ function renderNumber(number){
   }
   number_fset.appendChild(number_input);
   number_fset.appendChild(number_desc_input);
+  number_row.appendChild(number_use);
   number_row.appendChild(number_fset);
-  number_row.appendChild(number_use)
   number_row.appendChild(number_controls_fset);
   return number_row;
 }
@@ -523,24 +562,22 @@ function renderDstNmbrBtns(id,prefix){
   var remove_button=document.createElement('input');
   remove_button.setAttribute('type','button');
   addEvent(remove_button,'click',remove_handle);
-  var add_button=document.createElement('input');
-  add_button.setAttribute('type','button');
-  addEvent(add_button,'click',add_handle);
+
   
   save_button.id=prefix+'_save_'+id;
   remove_button.id=prefix+'_remove_'+id;
-  add_button.id=prefix+'_add_'+id;
+//   add_button.id=prefix+'_add_'+id;
   
   save_button.className=prefix+'_save_button';
   remove_button.className=prefix+'_remove_button';
-  add_button.className=prefix+'_add_button';
+//   add_button.className=prefix+'_add_button';
   
   save_button.setAttribute('value','Save');
   remove_button.setAttribute('value','Remove');
-  add_button.setAttribute('value','Add');
+//   add_button.setAttribute('value','Add');
   fieldset.appendChild(save_button);
   fieldset.appendChild(remove_button);
-  fieldset.appendChild(add_button);
+//   fieldset.appendChild(add_button);
   return fieldset;
 }
 
@@ -611,10 +648,10 @@ function getAllInputs(element){
     var ginputs=element.getElementsByTagName(input_tags[tag]);
 //     alert(input_tags[tag]+'s: '+ginputs.length);
     for ( var i=0 ; i<ginputs.length;i++ ){
-//       alert(ginputs[i].type +','+ ginputs[i].id);
+//        alert(ginputs[i].type +','+ ginputs[i].id);
       if (typeof(ginputs[i])=="object" && isInArray(input_types,ginputs[i].type) ){
         inputs.push(ginputs[i]);
-//         alert("pushed into inputs: "+i);
+//          alert("pushed into inputs: "+i);
       }
     }
   }
@@ -632,7 +669,98 @@ function closeSettings(){
   body=body[0];
   body.style["overflow"]="visible";
   body.style["height"]="100%";
-} 
+}
+ 
+function dst_select_update(e){
+  var updated=e.target;
+  var id=updated.id.split('_')[2];
+  if (updated.id){
+    if (updated.id.indexOf('w')==0){
+      if (updated.id.indexOf('wstart')==0){
+        wend_select=document.getElementById('wend_select_'+id);
+        if (updated.value>wend_select.value 
+              ||
+             (7-updated.value) > wend_select.options.length 
+              ||
+             (wend_select.options.length == 7 && updated.value>1)
+            ){
+          var selected_value=wend_select.value;
+          wend_select.options.length=0;
+          for (var i=updated.value;i<=7;i++){
+            var option=document.createElement('option');
+            option.value=i;
+            option.text=weekdays[i];
+            if (i==selected_value){
+              option.selected=true;
+            }
+            wend_select.options.add(option);
+          }
+        }
+      }
+      else if (updated.id.indexOf('wend')==0){
+        wstart_select=document.getElementById('wstart_select_'+id);
+        if (updated.value<wstart_select.value
+            ||
+            (7-updated.value) < wstart_select.options.length 
+          ){
+          var selected_value=wstart_select.value;
+          wstart_select.options.length=0;
+          for (var i=1;i<=updated.value;i++){
+            var option=document.createElement('option');
+            option.value=i;
+            option.text=weekdays[i];
+            if (i==selected_value){
+              option.selected=true;
+            }
+            wstart_select.options.add(option);
+          }
+        }
+      }
+    }else if (updated.id.indexOf('h')==0){
+      if (updated.id.indexOf('hstart')==0){
+        hend_select=document.getElementById('hend_select_'+id);
+        if (updated.value>hend_select.value 
+              ||
+             (24-updated.value) > hend_select.options.length 
+              ||
+             (hend_select.options.length == 24 && updated.value>0)
+            ){
+          var selected_value=hend_select.value;
+          hend_select.options.length=0;
+          for (var i=Number(updated.value)+1;i<=23;i++){
+            var option=document.createElement('option');
+            option.value=i;
+            option.text=i+':00';
+            if (i==selected_value){
+              option.selected=true;
+            }
+            hend_select.options.add(option);
+          }
+        }
+      }
+      else if (updated.id.indexOf('hend')==0){
+        hstart_select=document.getElementById('hstart_select_'+id);
+        if (updated.value < hstart_select.value
+            ||
+            (24-updated.value) < hstart_select.options.length 
+          ){
+          var selected_value=hstart_select.value;
+          hstart_select.options.length=0;
+          for (var i=0;i<Number(updated.value);i++){
+            var option=document.createElement('option');
+            option.value=i;
+            option.text=text=i+':00';
+            if (i==selected_value){
+              option.selected=true;
+            }
+            hstart_select.options.add(option);
+          }
+        }
+      }
+    }
+  }
+}
+
 function findPos(obj) {
 	var curleft = curtop = 0;
 	if (obj.offsetParent) {

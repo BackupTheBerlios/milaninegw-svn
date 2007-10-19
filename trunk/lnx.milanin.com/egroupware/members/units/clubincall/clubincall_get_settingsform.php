@@ -24,6 +24,8 @@ if ($_SESSION['userid']==$my_page_owner){
   header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
   echo '<?xml version="1.0" ?>';
   echo '<clubincall_settings>';
+  echo (isset($HTTP_COOKIE_VARS['last_settings_wrapper']) ? '<activewrapper>'.
+              $HTTP_COOKIE_VARS['last_settings_wrapper'].'</activewrapper>':'');
   echo '<debug><![CDATA['.$numbers_query."\n".$dsts_query.']]></debug>';
   echo '<dsts>';
   foreach ($dsts as $dst){
