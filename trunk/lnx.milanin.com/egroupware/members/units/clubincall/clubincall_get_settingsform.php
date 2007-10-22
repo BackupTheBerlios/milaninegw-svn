@@ -16,8 +16,10 @@ if ($_SESSION['userid']==$my_page_owner){
   $numbers=db_query($numbers_query);
   $dsts_query="SELECT d.*,n.number, n.description FROM clubincall_dsts d 
                join clubincall_numbers n on n.ident=d.dst 
-               where d.owner=".$my_page_owner;
+               where d.owner=".$my_page_owner."
+               ORDER by (d.wend - d.wstart), (d.hend - d.hstart)";
   $dsts=db_query($dsts_query);
+  
   header('Content-Type: text/xml');
   header("Cache-Control: no-cache, must-revalidate");
 //A date in the past

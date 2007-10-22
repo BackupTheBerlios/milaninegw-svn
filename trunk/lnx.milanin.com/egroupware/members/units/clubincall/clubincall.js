@@ -9,7 +9,8 @@ var urls = {
   'openwrapper'    : 'clubincall_openwrapper.php'
 };
 
-var xmlHttp=null;
+// var xmlHttp=null;
+// var xmlHttpAlt=null;
 var weekdays={ 1:"Monday",
                      2:"Tuesday",
                      3:"Wednesday",
@@ -24,8 +25,8 @@ function indicate(){
   indicator=document.getElementById('loading_indicator');
   if (document.getElementById('control_panel')){
     indicator.className="loading_indicator_centered";
-    indicator.style.height=props.pageY*0.8;
-    indicator.style.width=props.pageW*0.8;
+//     indicator.style.height=props.pageY*0.8;
+//     indicator.style.width=props.pageW*0.8;
   }else{
     indicator.className="loading_indicator";
   }
@@ -112,15 +113,15 @@ function clubincall(id,url,sid){
 //   }
 //   alert(props.pageW+"X"+props.pageY);
   
-  if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
+//   if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
   var clubincall_wrapper=document.getElementById("clubincall_wrapper");
   if (!document.getElementById('loading_indicator')){
     loading_indicator=createElementAll('loading_indicator','div');
+    loading_indicator_text=createElementAll('loading_indicator_text','div');
     loading_indicator_img=createElementAll('loading_indicator_img','img');
-    loading_indicator_text=createElementAll('loading_indicator_text','span');
     loading_indicator_img.setAttribute('src',urls['base']+urls['template']+'ajax-loader.gif');
-    loading_indicator.appendChild(loading_indicator_img);
     loading_indicator_text.innerHTML="Loading...";
+    loading_indicator_text.appendChild(loading_indicator_img);
     loading_indicator.appendChild(loading_indicator_text);
     var body=document.getElementsByTagName('body');
     body[0].appendChild(loading_indicator);
@@ -132,12 +133,11 @@ function clubincall(id,url,sid){
     
     clubincall_wrapper.appendChild(clubincall_dropdown);
   //   alert("calling "+url+'/'+urls['api_prefix']+urls['get_call_form']+'?id='+id+','+sid);
-    xmlHttp.open('GET',
-      url+'/'+urls['api_prefix']+urls['get_call_form']+'?id='+id, true);
+  
+    var ai = new AJAXInteraction(
+      url+'/'+urls['api_prefix']+urls['get_call_form']+'?id='+id, render_call_form);
       indicate();
-      xmlHttp.send(null);
-      xmlHttp.onreadystatechange = render_call_form;
-      
+      ai.doGet();
   }else{
     removeElement(document.getElementById('clubincall_dropdown'));
   }
@@ -148,37 +148,28 @@ function docall(){
   prefix=document.getElementById('prefixes_select').value;
   number=document.getElementById('caller_input').value;
 //   alert("calling" + url+'/'+urls['api_prefix']+urls['do_call']+'?id='+id)
-  xmlHttp.open('GET',
-      url+'/'+urls['api_prefix']+urls['do_call']+'?id='+id+
-      '&prefix='+prefix+'&number='+number, true);
-      indicate();
-      xmlHttp.send(null);
-      xmlHttp.onreadystatechange = get_call;
+  var ai = new AJAXInteraction(url+'/'+urls['api_prefix']+urls['do_call']+'?id='+id+
+      '&prefix='+prefix+'&number='+number, get_call);
+  indicate();
+  ai.doGet();
 }
-function get_call(){
-  if (xmlHttp.readyState===4){
-    if (xmlHttp.status == 200) {
+
+function get_call(xmldoc){
       indicate();
-      var xmldoc = xmlHttp.responseXML;
       var result = xmldoc.getElementsByTagName('result')[0].childNodes[0].nodeValue;
       if (result==0){
         alert("Will call !!!");
       }else{
         alert("Failed to setup the call: "+xmldoc.getElementsByTagName('error')[0].childNodes[0].nodeValue);
       }
-    }else{
-      alert("Error getting xmlHttp response: "+xmlHttp.status);
-    }
-  }
 }
 
-function render_call_form(){
-  if (xmlHttp.readyState===4){
-    if (xmlHttp.status == 200) {
+function render_call_form(xmldoc){
+  
+  
     indicate();
 //    alert('response: '+xmlHttp.responseText);
     var clubincall_dropdown=document.getElementById("clubincall_dropdown");
-    var xmldoc = xmlHttp.responseXML;
     var debug = xmldoc.getElementsByTagName('debug');
     var dstid = xmldoc.getElementsByTagName('dstid');
     var mname = xmldoc.getElementsByTagName('name');
@@ -211,12 +202,14 @@ function render_call_form(){
     dstnumberspan_post.className='dstnumberspan';
     caller_input.className='clubincall_dropdown_input';
     prefixes_select.className='clubincall_dropdown_select';
-    call_button.setAttribute('type','button');
+    call_button.setAttribute('type','image');
+    call_button.setAttribute('src','/'+urls['template']+'/clubincall-g.png');
+    cancel_button.setAttribute('src','/'+urls['template']+'/clubincall-r.png');
     dstid_input.setAttribute('type','hidden');
     call_button.className='clubincall_dropdown_button call_button';
     dstid_input.setAttribute('value',dstid[0].childNodes[0].nodeValue);
-    cancel_button.setAttribute('type','button');
-    caller_input_label.setAttribute('type','button');
+    cancel_button.setAttribute('type','image');
+    caller_input_label.setAttribute('type','text');
     cancel_button.className='clubincall_dropdown_button cancel_button';
     addEvent(cancel_button, 'click', close_callform);
     addEvent(call_button,'click',docall);
@@ -225,7 +218,9 @@ function render_call_form(){
       )
 //     cancel_button.setAttribute('value','Cancel');
     caller_input_label.setAttribute('value',"+0000");//"+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-    caller_input_label.className="clubincall_dropdown_button label_button";
+    caller_input_label.setAttribute('disabled',"true");
+    //caller_input_label.innerHTML="+0000";//"+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+    caller_input_label.className="clubincall_dropdown_input label_button";
     dstnumberspan_pre.innerHTML="Enter your number";
     if (dstnumber[0].childNodes[0].nodeValue!="voicemail") {
       dstnumberspan_post.innerHTML="to get in call with "+mname[0].childNodes[0].nodeValue+" @ "+dstnumber[0].childNodes[0].nodeValue;
@@ -235,15 +230,15 @@ function render_call_form(){
     caller_input.id='caller_input';
     for (i=0;i<prefixes.length;i++){
       option = document.createElement("option");
-      if (prefixes[i].getAttribute("selected")==1){
-        option.setAttribute('selected','true');
-        caller_input.value=prefixes[i].getAttribute("last_number");
-        caller_input_label.setAttribute('value',"+"+prefixes[i].getAttribute("value"));
-      }
       option.text=prefixes[i].getAttribute("country_name")+
                   " / "+prefixes[i].getAttribute("value");
       option.value=prefixes[i].getAttribute("value");
-      prefixes_select.options.add(option);
+      prefixes_select.options[prefixes_select.options.length]=option;
+      if (prefixes[i].getAttribute("selected")==1){
+        prefixes_select.selectedIndex=i;
+        caller_input.value=prefixes[i].getAttribute("last_number");
+        caller_input_label.setAttribute('value',"+"+prefixes[i].getAttribute("value"));
+      }
     }
     if (settings_link!=0)
        clubincall_dropdown.appendChild(settings_link);
@@ -257,11 +252,8 @@ function render_call_form(){
     callformcontrols.appendChild(cancel_button);
     clubincall_dropdown.appendChild(dstnumberspan_post);
 //    alert('response'+xmlHttp.responseText);
-    }else{
-      alert("Error getting xmlHttp response: "+xmlHttp.status);
-    }
-  }
 }
+
 function close_callform (){
   var clubincall_dropdown=document.getElementById("clubincall_dropdown");
   removeElement(clubincall_dropdown);
@@ -279,13 +271,13 @@ function openSettings(id){
   background_div.className='background_div';
   background_div.style.height=props.pageY;
   background_div.style.width=props.pageW;
-  control_panel.style.height=props.pageY*0.8;
+  control_panel.style.height=props.pageY*0.9;
   var clubincall_dropdown=document.getElementById("clubincall_dropdown");
   body.appendChild(background_div);
   body.appendChild(control_panel);
-  if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
-  xmlHttp.open('GET',
-  url+'/'+urls['api_prefix']+urls['get_settings']+'?id='+id, true);
+//   if (xmlHttp==null) { xmlHttp=ajaxFunction(); }
+  var ai = new AJAXInteraction(
+  url+'/'+urls['api_prefix']+urls['get_settings']+'?id='+id, renderSettings);
   indicate();
   removeElement(clubincall_dropdown);//.style.display='none';
   body.style["overflow"]="hidden";
@@ -294,8 +286,7 @@ function openSettings(id){
     alert(document.body.scroll);
     document.body.scroll="no";
   }
-  xmlHttp.send(null);
-  xmlHttp.onreadystatechange = renderSettings;
+  ai.doGet();
 }
 function render_titlebar(id,close_handler){
   var titlebar=createElementAll(id,'div');
@@ -333,20 +324,23 @@ function renderSettingsMenu (){
 }
 
 function openwrapper(wrapper){
-  if (!xmlHttp) xmlHttp=ajaxFunction();
-  xmlHttp.open('GET',
-      url+'/'+urls['api_prefix']+urls['openwrapper']+'?wrapper='+wrapper, true);
-      xmlHttp.send(null);
-//       xmlHttp.onreadystatechange = function () {
+
+  var ai = new AJAXInteraction(
+      url+'/'+urls['api_prefix']+urls['openwrapper']+'?wrapper='+wrapper,function () {
 //                                                 if (xmlHttp.readyState===4 && 
 //                                                     xmlHttp.status == 200) 
 //                                                     { 
 //                                                       alert(xmlHttp.responseText);
 //                                                     }
-//                                                 };
+//                                                 } 
+                                                        return;
+                                                   }
+    );
+      ai.doGet();
+//       xmlHttp.onreadystatechange = ;
   var settings_wrapper=document.getElementById('settings_wrapper');
   var cur_settings=document.getElementById(wrapper);
-  for (var i in settings_wrapper.childNodes){
+  for (var i=0;i<settings_wrapper.childNodes.length;i++){
     var myid=settings_wrapper.childNodes[i].id;
     if (myid){
       if (myid.indexOf('_wrapper')>1){
@@ -367,15 +361,16 @@ function openwrapper(wrapper){
   }
 }
 
-function renderSettings(){
-  if (xmlHttp.readyState===4){
-    if (xmlHttp.status == 200) {
+function renderSettings(xmldoc){
+//   if (xmlHttp.readyState===4){
+//     if (xmlHttp.status == 200) {
       indicate();
-      
       var settings_wrapper = document.getElementById('settings_wrapper');
       if (!settings_wrapper)
        settings_wrapper=createElementAll('settings_wrapper','div');
-      var xmldoc=xmlHttp.responseXML;
+//       alert(xmlHttp.responseText);
+//       var xmldoc=xmlHttp.responseXML;
+//       if (!xmldoc) alert("nodoc!!!");
       var dsts=xmldoc.getElementsByTagName('dst');
       var numbers=xmldoc.getElementsByTagName('number');
       var activewrapper=xmldoc.getElementsByTagName('activewrapper');
@@ -415,7 +410,7 @@ function renderSettings(){
           option.value=numbers[ni].getAttribute('id');
           if (numbers[ni].getAttribute('id')==dsts[i].getAttribute('nid'))
               option.setAttribute('selected','true');
-          numbers_select.options.add(option);
+          numbers_select.options[numbers_select.options.length]=option;
         }
           
         for (j=0;j<dsts[i].childNodes.length;j++){
@@ -430,9 +425,9 @@ function renderSettings(){
                 var option=document.createElement('option');
                 option.text=weekdays[wd];
                 option.value=wd
+                wstart_select.options[wstart_select.options.length]=option;
                 if (wd==dst_child.getAttribute('value'))
-                    option.setAttribute('selected','true');
-                wstart_select.options.add(option);
+                    wstart_select.selectedIndex=wd-1;
               }
             break
             case 'wend' :
@@ -444,9 +439,9 @@ function renderSettings(){
                 var option=document.createElement('option');
                 option.text=weekdays[wd];
                 option.value=wd
+                wend_select.options[wend_select.options.length]=option;
                 if (wd==dst_child.getAttribute('value'))
-                    option.setAttribute('selected','true');
-                wend_select.options.add(option);
+                    wend_select.selectedIndex=wd-1;
               }
             break
             case 'hstart' :
@@ -458,9 +453,9 @@ function renderSettings(){
                 var option=document.createElement('option');
                 option.text=h+":00";
                 option.value=h;
+                hstart_select.options[hstart_select.options.length]=option;
                 if (h==dst_child.getAttribute('value'))
-                    option.setAttribute('selected','true');
-                hstart_select.options.add(option);
+                    hstart_select.selectedIndex=h;
               }
             break
             case 'hend' :
@@ -472,9 +467,11 @@ function renderSettings(){
                 var option=document.createElement('option');
                 option.text=h+":00";
                 option.value=h;
-                if (h==dst_child.getAttribute('value'))
-                    option.setAttribute('selected','true');
-                hend_select.options.add(option);
+                hend_select.options[hend_select.options.length]=option;
+                if (h==dst_child.getAttribute('value')){
+                    hend_select.selectedIndex=h;
+                    
+                }
               }
             break  
           }
@@ -496,27 +493,165 @@ function renderSettings(){
       }
       var control_panel=document.getElementById('control_panel');
       
-      var add_button=document.createElement('input');
-        add_button.setAttribute('type','button');
-        addEvent(add_button,'click',add_handle);
-        add_button.setAttribute('value','Add New');
-        add_button.className='add_button';
-        add_button.id='add_button';
-        
       settings_wrapper.appendChild(numbers_wrapper);
       settings_wrapper.appendChild(dsts_wrapper);
-      settings_wrapper.appendChild(add_button);
+//       settings_wrapper.appendChild(render_toolbar('add'));
       control_panel.appendChild(settings_wrapper);
+      numbers_wrapper.appendChild(render_toolbar('number'));
+      dsts_wrapper.appendChild(render_toolbar('dst'));
       if (activewrapper.length>0){
         activewrapper=activewrapper[0].childNodes[0].nodeValue;
         openwrapper(activewrapper);
       }
         
-    }else{
-      alert("Error getting xmlHttp response: "+xmlHttp.status);
-    }
-  }
+//     }else{
+//       alert("Error getting xmlHttp response: "+xmlHttp.status);
+//     }
+//   }
 }
+function render_toolbar(suffix){
+  var mytoolbar=createElementAll('toolbar_'+suffix,'div');
+  var add_button=document.createElement('input');
+  add_button.setAttribute('type','button');
+  addEvent(add_button,'click',add_handle);
+  add_button.setAttribute('value','Add New');
+  add_button.className='add_button';
+  add_button.id='add_button_'+suffix;
+  mytoolbar.appendChild(add_button);
+//   mytoolbar.style["margin-top"]=(getElementHeight('control_panel')*0.8);
+//   mytoolbar.style.height=(getElementHeight('control_panel')*0.2);
+  return mytoolbar;
+}
+function renderNumberAdd(){
+  var number_row=createElementAll('number_row','div');
+  var number_row_label=createElementAll('adding_new_label','div');
+  number_row_label.innerHTML="Adding New Number :";
+  var number_fset=document.createElement('fieldset');
+  number_fset.className='number_fset';
+  var number_input=document.createElement('input');
+  number_input.id='number_input_';
+  number_input.className='number_input';
+  var number_desc_input=document.createElement('input');
+  number_desc_input.className='number_desc_input';
+  number_desc_input.id='number_desc_input_';
+  number_row.className='number_row';
+  number_input.className='number_input';
+  number_desc_input.className='number_desc_input';
+
+  var legend=document.createElement('legend');
+  legend.innerHTML="Number and Description";
+  number_fset.appendChild(legend);
+  number_fset.appendChild(number_input);
+  number_fset.appendChild(number_desc_input);
+  number_row.appendChild(number_row_label);
+  number_row.appendChild(number_fset);
+  number_row.appendChild(renderDstNmbrBtns(null,'number'));
+  
+//   numbers_wrapper=document.getElementById('numbers_wrapper');
+//   numbers_wrapper.appendChild(number_row);
+  return number_row;
+}
+
+function getNumbers(xmldoc){
+  numbers=xmldoc.getElementsByTagName('number');
+  numbers_select=document.getElementById('numbers_select_');
+  for (var ni=0;ni<numbers.length;ni++){
+    var option=document.createElement('option');
+    option.text=numbers[ni].getAttribute('value')+'/'+numbers[ni].getAttribute('description');
+    option.value=numbers[ni].getAttribute('id');
+    numbers_select.options[numbers_select.options.length]=option;
+  }
+  indicate();
+}
+
+function renderDstAdd(){
+    
+    var dst_row=document.createElement('div');
+    dst_row.className='dst_row';
+    dst_row.id='dst_add_row';
+    
+    var dst_row_label=createElementAll('adding_new_label','div');
+    
+    var dst_start_fset=document.createElement('fieldset');
+    var dst_start_fset_l=document.createElement('legend');
+    var dst_end_fset=document.createElement('fieldset');
+    var dst_end_fset_l=document.createElement('legend');
+    
+    var dst_number_fset=document.createElement('fieldset');
+    var dst_number_fset_l=document.createElement('legend');
+    
+    dst_number_fset_l.innerHTML="Ring this number :";
+    dst_start_fset_l.innerHTML="Starting from :";
+    dst_end_fset_l.innerHTML="Until :";
+    dst_row_label.innerHTML="Adding New Rule :";
+    
+    var numbers_select=document.createElement('select');
+    numbers_select.id='numbers_select_';
+    numbers_select.className='numbers_select';
+    
+    var wstart_select=document.createElement('select');
+    wstart_select.className='week_select';
+    wstart_select.id='wstart_select_';
+    for (var wd in weekdays){
+      var option=document.createElement('option');
+      option.text=weekdays[wd];
+      option.value=wd
+      wstart_select.options[wstart_select.options.length]=option;
+    }
+    wstart_select.selectedIndex=0;
+    addEvent(wstart_select,'change',dst_select_update);
+    
+    var wend_select=document.createElement('select');
+    wend_select.className='week_select';
+    wend_select.id='wend_select_';
+    for (var wd in weekdays){
+      var option=document.createElement('option');
+      option.text=weekdays[wd];
+      option.value=wd
+      wend_select.options[wend_select.options.length]=option;
+    }
+    wend_select.selectedIndex=6;
+    addEvent(wend_select,'change',dst_select_update);
+        
+    var hstart_select=document.createElement('select');
+    hstart_select.className='hour_select';
+    hstart_select.id='hstart_select_';
+    for (var h in range(0,24)){
+      var option=document.createElement('option');
+      option.text=h+":00";
+      option.value=h;
+      hstart_select.options[hstart_select.options.length]=option;
+    }
+    hstart_select.selectedIndex=0;
+    addEvent(hstart_select,'change',dst_select_update);
+    var hend_select=document.createElement('select');
+    hend_select.className='hour_select';
+    hend_select.id='hend_select_';
+    for (var h in range(0,24)){
+      var option=document.createElement('option');
+      option.text=h+":00";
+      option.value=h;
+      hend_select.options[hend_select.options.length]=option;
+    }
+      hend_select.selectedIndex=h;
+      addEvent(hend_select,'change',dst_select_update);
+    
+    dst_row.appendChild(dst_row_label);
+    dst_row.appendChild(dst_start_fset);
+      dst_start_fset.appendChild(dst_start_fset_l);
+      dst_start_fset.appendChild(wstart_select);
+      dst_start_fset.appendChild(hstart_select);
+    dst_row.appendChild(dst_end_fset);
+      dst_end_fset.appendChild(dst_end_fset_l);
+      dst_end_fset.appendChild(wend_select);
+      dst_end_fset.appendChild(hend_select);
+    dst_row.appendChild(dst_number_fset);
+      dst_number_fset.appendChild(dst_number_fset_l);
+      dst_number_fset.appendChild(numbers_select);
+    dst_row.appendChild(renderDstNmbrBtns(null,'dst'));
+    return dst_row;
+}
+
 function renderNumber(number){
   number_id=number.getAttribute('id');
   number_used=number.getAttribute('used');
@@ -546,6 +681,9 @@ function renderNumber(number){
     number_desc_input.className='number_desc_input';
     number_use.innerHTML='The number is not in use';
   }
+  var legend=document.createElement('legend');
+  legend.innerHTML="Number and Description";
+  number_fset.appendChild(legend);
   number_fset.appendChild(number_input);
   number_fset.appendChild(number_desc_input);
   number_row.appendChild(number_use);
@@ -575,9 +713,13 @@ function renderDstNmbrBtns(id,prefix){
   save_button.setAttribute('value','Save');
   remove_button.setAttribute('value','Remove');
 //   add_button.setAttribute('value','Add');
+  var legend=document.createElement('legend');
+  legend.innerHTML="Save or Remove";
+  fieldset.appendChild(legend);
   fieldset.appendChild(save_button);
   fieldset.appendChild(remove_button);
 //   fieldset.appendChild(add_button);
+  
   return fieldset;
 }
 
@@ -587,7 +729,7 @@ function save_handle(e){
   else if (e.srcElement) var targ = e.srcElement;
   if (targ.nodeType == 3) // defeat Safari bug
       targ = targ.parentNode;
-  if (xmlHttp==null) xmlHttp=ajaxFunction;
+//   if (xmlHttp==null) xmlHttp=ajaxFunction;
   props=targ.id.split('_');
   var inputs=getAllInputs(targ.parentNode.parentNode);
   var xml = '<?xml version="1.0"?>\n' +
@@ -596,11 +738,9 @@ function save_handle(e){
     xml += '<control id="'+inputs[i].id+'" value="'+inputs[i].value+'" />'
   }
   xml += '</clubincall_action>';
-  xmlHttp.open('POST', url+'/'+urls['api_prefix']+urls['post_actions']);
-  xmlHttp.setRequestHeader('content-type', 'text/xml');
-  xmlHttp.onreadystatechange = buttonXMLPosted;
+  var ai=new AJAXInteraction(url+'/'+urls['api_prefix']+urls['post_actions'],buttonXMLPosted);
   indicate();
-  xmlHttp.send(xml);
+  ai.doPost(xml);
 }
 function remove_handle(e){
   if (!e) var e = window.event;
@@ -608,37 +748,35 @@ function remove_handle(e){
   else if (e.srcElement) var targ = e.srcElement;
   if (targ.nodeType == 3) // defeat Safari bug
       targ = targ.parentNode;
-  if (xmlHttp==null) xmlHttp=ajaxFunction;
+//   if (xmlHttp==null) xmlHttp=ajaxFunction;
   props=targ.id.split('_');
     var xml = '<?xml version="1.0"?>\n' +
           '<clubincall_action action="remove" target="'+props[0]+'" id="'+props[2]+'">\n';
   xml += '</clubincall_action>';
-  xmlHttp.open('POST', url+'/'+urls['api_prefix']+urls['post_actions']);
-  xmlHttp.setRequestHeader('content-type', 'text/xml');
-  xmlHttp.onreadystatechange = buttonXMLPosted;
+  var ai=new AJAXInteraction(url+'/'+urls['api_prefix']+urls['post_actions'],buttonXMLPosted);
   indicate();
-  xmlHttp.send(xml);
+  ai.doPost(xml);
 }
 
-function buttonXMLPosted() {
-  if (xmlHttp.readyState != 4) return;
-  if (xmlHttp.status == 200) {
+function buttonXMLPosted(xmldoc) {
+//   if (xmlHttp.readyState != 4) return;
+//   if (xmlHttp.status == 200) {
     
-    var result = xmlHttp.responseXML;
-    var result_code=result.getElementsByTagName('result')[0].childNodes[0].nodeValue;
-    var msg=result.getElementsByTagName('msg')[0].childNodes[0].nodeValue;
-    var dbg=result.getElementsByTagName('debug')[0].childNodes[0].nodeValue;
-    alert("Got result: ["+result_code+"] with msg: ["+msg+"]");
-    if (dbg && dbg.length>0) alert(dbg);
+//     var result = xmlHttp.responseXML;
+     var result_code=xmldoc.getElementsByTagName('result')[0].childNodes[0].nodeValue;
+     var msg=xmldoc.getElementsByTagName('msg')[0].childNodes[0].nodeValue;
+//     var dbg=xmldoc.getElementsByTagName('debug')[0].childNodes[0].nodeValue;
+    if (result_code!=0){
+      alert("Error "+result_code+": \n "+msg);
+    }
     removeallchilds(document.getElementById('settings_wrapper'));
-    xmlHttp.open('GET',url+'/'+urls['api_prefix']+urls['get_settings'], true);
-    xmlHttp.send(null);
-    xmlHttp.onreadystatechange = renderSettings;
+    var ai=new AJAXInteraction(url+'/'+urls['api_prefix']+urls['get_settings'], renderSettings);
+    ai.doGet();
 //     indicate();
-  } else {
-    alert("Error getting xmlHttp response: "+xmlHttp.status);
-    indicate();
-  }
+//   } else {
+//     alert("Error getting xmlHttp response: "+xmlHttp.status);
+//     indicate();
+//   }
 }
 function getAllInputs(element){
   var inputs = new Array;
@@ -659,7 +797,48 @@ function getAllInputs(element){
 }
 
 
-function add_handle(e){alert( e.type)}
+function add_handle(e){
+  if (!e) var e = window.event;
+  if (e.target) var targ = e.target;
+  else if (e.srcElement) var targ = e.srcElement;
+  if (targ.nodeType == 3) // defeat Safari bug
+      targ = targ.parentNode;
+//   if (xmlHttp==null) xmlHttp=ajaxFunction;
+  props=targ.id.split('_');
+  switch (props[2]){
+    case 'number':
+      var add_row=renderNumberAdd();
+      break;
+    case 'dst':
+      indicate();
+      add_row=renderDstAdd();
+      var ai = new AJAXInteraction( url+'/'+urls['api_prefix']+urls['get_settings'],
+                                    getNumbers
+                                  );
+      ai.doGet();
+      break;
+  }
+  targ.parentNode.insertBefore(add_row,targ);
+  targ.setAttribute('disabled','true');
+  remove_button=document.getElementById(props[2]+'_remove_null');
+  removeEvent(remove_button,'click',remove_handle);
+  addEvent(remove_button,'click',removeAddingNew);
+}
+
+function removeAddingNew(e){
+  if (!e) var e = window.event;
+  if (e.target) var remove_button = e.target;
+  else if (e.srcElement) var remove_button = e.srcElement;
+  if (remove_button.nodeType == 3) // defeat Safari bug
+      remove_button = remove_button.parentNode;
+  props=remove_button.id.split("_");
+  var mytoolbar=document.getElementById('toolbar_'+props[0]);
+  var mydiv=mytoolbar.getElementsByTagName('div')[0];
+  mytoolbar.removeChild(mydiv);
+  
+  var add_button=document.getElementById('add_button_'+props[0]);
+  add_button.removeAttribute('disabled');
+}
 
 function closeSettings(){
   removeallchilds(document.getElementById('control_panel'));
@@ -672,7 +851,11 @@ function closeSettings(){
 }
  
 function dst_select_update(e){
-  var updated=e.target;
+  if (!e) var e = window.event;
+  if (e.target) var updated = e.target;
+  else if (e.srcElement) var updated = e.srcElement;
+  if (updated.nodeType == 3) // defeat Safari bug
+      updated = updated.parentNode;
   var id=updated.id.split('_')[2];
   if (updated.id){
     if (updated.id.indexOf('w')==0){
@@ -686,14 +869,16 @@ function dst_select_update(e){
             ){
           var selected_value=wend_select.value;
           wend_select.options.length=0;
+          var j=0;
           for (var i=updated.value;i<=7;i++){
             var option=document.createElement('option');
             option.value=i;
             option.text=weekdays[i];
+            wend_select.options[wend_select.options.length]=option;
             if (i==selected_value){
-              option.selected=true;
+              option.selectedIndex=j;
             }
-            wend_select.options.add(option);
+            j++;
           }
         }
       }
@@ -705,14 +890,16 @@ function dst_select_update(e){
           ){
           var selected_value=wstart_select.value;
           wstart_select.options.length=0;
+          var j=0;
           for (var i=1;i<=updated.value;i++){
             var option=document.createElement('option');
             option.value=i;
             option.text=weekdays[i];
+            wstart_select.options[wstart_select.options.length]=option;
             if (i==selected_value){
-              option.selected=true;
+              wstart_select.selectedIndex=j;
             }
-            wstart_select.options.add(option);
+            j++;
           }
         }
       }
@@ -727,14 +914,16 @@ function dst_select_update(e){
             ){
           var selected_value=hend_select.value;
           hend_select.options.length=0;
+          var j=0;
           for (var i=Number(updated.value)+1;i<=23;i++){
             var option=document.createElement('option');
             option.value=i;
             option.text=i+':00';
+            hend_select.options[hend_select.options.length]=option;
             if (i==selected_value){
-              option.selected=true;
+              hend_select.selectedIndex=j;
             }
-            hend_select.options.add(option);
+            j++;
           }
         }
       }
@@ -746,14 +935,16 @@ function dst_select_update(e){
           ){
           var selected_value=hstart_select.value;
           hstart_select.options.length=0;
+          var j=0;
           for (var i=0;i<Number(updated.value);i++){
             var option=document.createElement('option');
             option.value=i;
             option.text=text=i+':00';
+            hstart_select.options[hstart_select.options.length]=option;
             if (i==selected_value){
-              option.selected=true;
+              hstart_select.selectedIndex=j;
             }
-            hstart_select.options.add(option);
+            j++;
           }
         }
       }
@@ -907,4 +1098,62 @@ function isInArray(arr,thing){
     }
   }
   return false;
+}
+
+function AJAXInteraction(url, callback) {
+
+    var req = init();
+    req.onreadystatechange = processRequest;
+    
+        
+    function init() {
+      if (window.XMLHttpRequest) {
+        return new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        return new ActiveXObject("Microsoft.XMLHTTP");
+      }else{
+        alert("Call Huston! No XMLHTTP found!");
+      }
+    }
+    
+    function processRequest () {
+      if (req.readyState == 4) {
+        if (req.status == 200) {
+          if (req.responseXML){
+            if (callback) callback(req.responseXML);
+          }
+        }
+      }
+    }
+
+    this.doGet = function() {
+      req.open("GET", url, true);
+      req.send(null);
+    }
+    
+    this.doPost = function(body) {
+      req.open("POST", url, true);
+      req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      req.send(body);
+    }
+}
+function getElementHeight(Elem) {
+  if(document.getElementById) {
+          var elem = document.getElementById(Elem);
+  } else if (document.all){
+          var elem = document.all[Elem];
+  }
+  xPos = elem.offsetHeight;
+  return xPos;
+}
+function getElementWidth(Elem) {
+
+  if(document.getElementById) {
+          var elem = document.getElementById(Elem);
+  } else if (document.all){
+          var elem = document.all[Elem];
+  }
+  xPos = elem.offsetWidth;
+  return xPos;
+
 }

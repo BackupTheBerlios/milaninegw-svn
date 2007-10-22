@@ -614,8 +614,8 @@ a.newsTitle:hover {
   opacity: 0.95;
 }
 .clubincall_dropdown_button {
- width: 23px;
- height: 21px;
+ width: 16px;
+ height: 16px;
  margin-left: 8px;
  font-size: 8pt;
  background-repeat: no-repeat;
@@ -623,8 +623,11 @@ a.newsTitle:hover {
  border: 1px solid;
  vertical-align: top;
  color: #990041;
+ margin-top:2px;
 }
-
+#caller_input_label {
+ color: #000;
+}
 .clubincall_dropdown_input{
  left:0;
  width: 180px;
@@ -645,12 +648,12 @@ a.newsTitle:hover {
  background-color: #F3F4F5;
  font-size: 10pt;
 }
-.cancel_button {
+/*.cancel_button {
  background-image: url(clubincall-r.png)
 }
 .call_button {
  background-image: url(clubincall-g.png)
-}
+}*/
 .label_button{
  width: 40px;
  margin-left: 0px;
@@ -679,11 +682,11 @@ div#clubincall_dropdown label {
 }
 .control_panel {
   position: absolute;
+  height: 90%;
   z-index: 2000;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
+  top: 2%;
+  left: 5%;
+  width: 90%;
   border: 3px solid;
   background-color: #fff;
   border-color:#990041;
@@ -692,11 +695,14 @@ div#clubincall_dropdown label {
 }
 #dsts_wrapper,#numbers_wrapper,#test_wrapper,#help_wrapper{
  overflow-y: scroll;
- height:85%;
+ overflow: scroll;
+ overflow-x:hidden;
+ height:95%;
  width:100%;
- position: absolute;
- margin-top:22px;
+ margin-top:32px;
  top:0;
+ left:0;
+ position: absolute;
 }
 #dsts_wrapper{
   display: none;
@@ -728,10 +734,12 @@ div#clubincall_dropdown label {
  border: 1px solid #990041;
  background-color: #F3F4F5;
  font-size: 10pt;
+ text-align: center;
+ left: 50%;
 }
-.dst_row_label {
+.dst_row_label, .number_use {
  display: block;
- margin-top: -20px;
+/*  margin-top: -20px; */
  margin-bottom:8px;
  padding: 2px;
  vertical-align: top;
@@ -739,8 +747,10 @@ div#clubincall_dropdown label {
  border:  1px solid #000;
  background-color: #fff;
  width:50%;
+ display: none;
 }
 .control_panel_titlebar {
+ z-index: 31000;
  padding: 4px;
  margin-bottom:18px;
  text-align: right;
@@ -762,26 +772,27 @@ div#clubincall_dropdown label {
   background-color: #fff;
   font-size: 10pt;
 }
-
 .number_save_button,
 .number_add_button,
 .number_remove_button,
 .dst_save_button,
 .dst_add_button,
+.add_button,
 .dst_remove_button
  {
- display:block;
+ display:inline;
  vertical-align: top;
- width:100px;
+ width:80px;
  height: 21px;
  margin: 2px;
  font-size: 8pt;
  border: 1px solid #990041;
  color: #000;
+ background-color:#CFD0D1;
 }
 
 .number_row {
-  display: block;
+ display: block;
  margin: 10px;
  margin-bottom:18px;
  top: 2px;
@@ -789,7 +800,8 @@ div#clubincall_dropdown label {
  vertical-align: top;
  border: 1px solid #990041;
  background-color: #F3F4F5;
- font-size: 10pt; 
+ font-size: 10pt;
+ text-align: center;
 }
 
 #dsts_wrapper fieldset, #numbers_wrapper fieldset {
@@ -816,12 +828,7 @@ div#clubincall_dropdown label {
  border: 1px solid #990041;
  background-color: #fff;
 }
-.number_use{
- display:block;
- float: left;
- margin-top: -40px;
- margin-left: 10px;
-}
+
 .loading_indicator {
  position: fixed;
  left:0;
@@ -835,20 +842,35 @@ div#clubincall_dropdown label {
 
 .loading_indicator_centered {
   position: absolute;
-  z-index: 10000;
+  z-index: 100000;
   top: 10%;
   left: 10%;
-  width: 80%;
-  height: 80%;
-  border: 3px solid;
-  background-color: #fff;
-  border-color:#990041;
+  width: 100%;
+  height: 100%;
+/*   border: 3px solid; */
+/*   background-color: #fff; */
+/*   border-color:#990041; */
   display: none;
+  text-align: center;
 }
-.loading_indicator_img, .loading_indicator_text {
+.loading_indicator_img {
+ margin-left: 57px;
+ margin-top:20px;
+ display: block;
+}
+.loading_indicator_text {
  vertical-align: middle;
  font-size: 8pt;
  padding: 2px;
+ padding-top:20px;
+ height: 100px;
+ width: 150px;
+ background-color: #fff;
+ border: 1px solid #990041;
+ left: 50%;
+ margin-left: -75px;
+ top: 30%;
+ position: fixed;
 }
 .settings_menu {
  display: inline;
@@ -867,6 +889,25 @@ div#clubincall_dropdown label {
   border-left: 1px solid #990041;
   border-right: 1px solid #990041;
 }
-
-/*div#background_div. div#control_panel { position: absolute; left: 0px; top: 0px; }
-body > div#background_div, body > div#background_div { position: fixed; }*/
+.settings_wrapper, #settings_wrapper{
+/*   border-bottom: 1px solid #000; */
+}
+.add_button{
+  display: block;
+  position: relative;
+  vertical-align: bottom;
+/*   top: 83%; */
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 30000;
+}
+.toolbar_add {
+/*   height:10%; */
+  width:100%;
+  padding:15px;
+}
+.adding_new_label {
+  padding-bottom:20px;
+  color: #990041;
+  font-weight: bold;
+}

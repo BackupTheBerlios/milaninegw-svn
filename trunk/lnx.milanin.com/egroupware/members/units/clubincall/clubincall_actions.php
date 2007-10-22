@@ -40,13 +40,13 @@ if ($_SESSION['userid']) {
         $result=array();
         switch ($target){
           case 'number' : {
+            if (!is_numeric($id)) $id=NULL;
             check_save_number($controls,$id,$result);
             break;
           }
           case 'dst' :{
-            $result['result']=-1;
-            $result['msg']='TBI';
-            $result['debug']=print_r($xml,1);
+            if (!is_numeric($id)) $id=NULL;
+            check_save_dst($controls,$id,$result);
             break;
           }
           default : {
@@ -64,8 +64,7 @@ if ($_SESSION['userid']) {
             break;
           }
           case 'dst' :{
-            $result['result']=0;
-            $result['msg']='TBI';
+            check_remove_dst($id,$result);
             break;
           }
           default : {
@@ -90,10 +89,22 @@ if ($_SESSION['userid']) {
   
 
 echo "<result>".$result['result']."</result>\n".
-     "<msg><![CDATA[[".$result['msg']."]]></msg>\n".
+     "<msg><![CDATA[".$result['msg']."]]></msg>\n".
      "<debug><![CDATA[".$result['debug']."]]></debug>\n".
      "</clubincall_action_results>\n";
 }
+}
+function check_remove_dst(&$id,&$result){
+  $query="DELETE FROM clubincall_dsts where ident=".$id." and owner=".$_SESSION['userid'];
+      db_query($query);
+      if (db_affected_rows()!=1){
+        $result['result']=3;
+        $result['msg']='Failed to remove the number';
+        $result['debug']=$query;
+      }else{
+        $result['result']=0;
+        $result['msg']="Removed";
+      }
 }
 function check_remove_number(&$id,&$result){
   $query="SELECT IF(ISNULL(gd.used),0,gd.used) as used FROM clubincall_numbers n ".
@@ -125,7 +136,47 @@ function check_remove_number(&$id,&$result){
     }
   }
 }
+function check_save_dst (&$controls,&$id,&$result){
+  check_given_sch($controls['wstart_select_'.$id],
+        $controls['wend_select_'.$id],
+        $controls['hstart_select_'.$id],
+        $controls['hend_select_'.$id],
+        &$result);
+  if ($result['result']!=0) return;
+  if (!is_null($id)) { 
+    check_given_dst($controls['number_select_'.$id],$result);
+    if ($result['result']!=0) return;
+  }
+  save_dst($controls,$id,&$result);
+}
 
+function check_given_sch($wstart,$wend,$hstart,$hend,&$result){
+  if ($wstart > $wend ){
+    $result['result']=1;
+    $result['msg']="Start weekday is after end weekday";
+    return;
+  }
+  if ($hstart>$hend){
+    $result['result']=1;
+    $result['msg']="Start hour is after end hour";
+    return;
+  }
+  $result['result']=0;
+  $result['msg']="Schedule OK";
+  return;
+}
+function check_given_dst($dst,&$result){
+  $query='SELECT number from clubincall_numbers where ident='.$dst.
+  ' and owner='.$_SESSION['userid'];
+  $number=db_query($query);
+  if (count($number)!=1){
+    $result['result']=1;
+    $result['msg']="Could not find corresponding number";
+  }else{
+    $result['result']=0;
+    $result['msg']="Number OK";
+  }
+}
 function check_save_number(&$controls,&$id,&$result){
   check_given_number($controls['number_input_'.$id],&$result);
   if ($result['result']!=0) return;
@@ -133,20 +184,58 @@ function check_save_number(&$controls,&$id,&$result){
   if ($result['result']!=0) return;
 }
 
-function save_number(&$controls,&$id,&$result){
+function save_dst(&$controls,&$id,&$result){
   if (is_null($id)){
-  $query="insert into clubincall_numbers(owner,number,description,screened) VALUES".
-         "(".$_SESSION['userid'].",".$controls['number_input'].",".
-         "'".$controls['number_desc_input']."',1)";
+    $query="insert into clubincall_dsts(owner,wstart,wend,hstart,hend,dst) VALUES".
+         "(".$_SESSION['userid'].",".
+         $controls['wstart_select_'].",".
+         $controls['wend_select_'].",".
+         $controls['hstart_select_'].",".
+         $controls['hend_select_'].",".
+         $controls['numbers_select_'].")";
   }else{
-  $query="update clubincall_numbers set number=".$controls['number_input_'.$id].",".
-         "description='".$controls['number_desc_input_'.$id]."' where ident=".$id;
+    $query="update clubincall_dsts set ".
+           "wstart=".$controls['wstart_select_'.$id].",".
+           "wend=".$controls['wend_select_'.$id].",".
+           "hstart=".$controls['hstart_select_'.$id].",".
+           "hend=".$controls['hend_select_'.$id].",".
+           "wend=".$controls['wend_select_'.$id].",".
+           "dst=".$controls['numbers_select_'.$id]." ".
+           "where ident=".$id." and owner=".$_SESSION['userid'];
   }
   db_query($query);
   $rows=db_affected_rows();
   if ($rows>0){
     $result['result']=0;
     $result['msg']="Affected $rows record".($rows>1?"s":"");
+  }elseif ($rows==0 && mysql_errno()==0 ){
+    $result['result']=0;
+    $result['msg']="No changes done";
+  }else{
+    $result['result']=3;
+    $result['msg']="Failed to save the rule";
+    $result['debug']="[".mysql_error()."]\n$query\n";
+  }
+}
+    
+function save_number(&$controls,&$id,&$result){
+  if (is_null($id)){
+  $query="insert into clubincall_numbers(owner,number,description,screened) VALUES".
+         "(".$_SESSION['userid'].",".$controls['number_input_'].",".
+         "'".$controls['number_desc_input_']."',1)";
+  }else{
+  $query="update clubincall_numbers set number=".$controls['number_input_'.$id].",".
+         "description='".$controls['number_desc_input_'.$id]."' where ident=".$id." ".
+         "and owner=".$_SESSION['userid'];
+  }
+  db_query($query);
+  $rows=db_affected_rows();
+  if ($rows>0){
+    $result['result']=0;
+    $result['msg']="Affected $rows record".($rows>1?"s":"");
+  }elseif ($rows==0 && mysql_errno()==0 ){
+    $result['result']=0;
+    $result['msg']="No changes done";
   }else{
     $result['result']=3;
     $result['msg']="Failed to save number";

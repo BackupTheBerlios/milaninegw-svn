@@ -23,7 +23,8 @@ left join clubincall_dsts c
 left join clubincall_numbers n 
   on n.ident=c.dst
 WHERE
-  a.account_id=".$my_page_owner;
+  a.account_id=".$my_page_owner."
+  ORDER by (c.wend - c.wstart), (c.hend -c.hstart)";
 $current_dst=db_query($current_dst_query);
 $current_dst=$current_dst[0];
 if (!$current_dst->dstid) $current_dst->dstnumber='voicemail';
