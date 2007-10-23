@@ -5,15 +5,24 @@ if (isset($_GET['prefix']) && isset($_GET['number']) && isset($_GET['id'])){
     setcookie("last_prefix", $_GET['prefix'],time()+60*60*24*365);
     setcookie("last_number", $_GET['number'],time()+60*60*24*365);
     $mydst=$_GET['prefix'].$_GET['number'];
-    $current_dst_query="SELECT a.account_firstname as name, c.ident as dstid, n.number as dstnumber FROM phpgw_accounts a
+    $current_dst_query="SELECT CONCAT(a.account_firstname,' ',a.account_lastname) as name,
+     c.ident as dstid, 
+     n.number as dstnumber, 
+     n.description as description, 
+     IF(ISNULL(i.filename),'default.png',i.filename) as icon
+    FROM phpgw_accounts a
     left join clubincall_dsts c
       on c.owner=a.account_id 
       and ( (weekday( curdate())+1) >= c.wstart and (weekday( curdate())+1) <= c.wend )
       and ( hour(curtime()) >=c.hstart and hour(curtime()) <= c.hend )
     left join clubincall_numbers n 
       on n.ident=c.dst
+    left join members_users m on m.ident=a.account_id
+    left join members_icons i on i.ident=m.icon
     WHERE
-      a.account_id=".$_GET['id'];
+      a.account_id=".$_GET['id']."
+    ORDER by (c.wend - c.wstart), (c.hend -c.hstart)";
+    
     $current_dst=db_query($current_dst_query);
     $current_dst=$current_dst[0];
     
@@ -43,6 +52,10 @@ if (isset($_GET['prefix']) && isset($_GET['number']) && isset($_GET['id'])){
   echo '<debug><![CDATA['.print_r($prefix_match,1)."\n".print_r($current_dst,1)."\n".$current_dst_query.']]></debug>';
   echo '<result>'.(isset($result) ? $result : 0).'</result>';
   echo '<error>'.(isset($error) ? $error : "None").'</error>';
+  if (!isset($result)){
+    echo '<dst id="'.$current_dst->dstid.'" desc="'.$current_dst->description.'" name="'.$current_dst->name.'" icon="'.url . "_icons/data/".$current_dst->icon.'"/>'."\n";
+    echo '<src number="'.$_GET['prefix'].$_GET['number'].'" />'."\n";
+  }
   echo '</clubincall_call>';
 }
 ?>

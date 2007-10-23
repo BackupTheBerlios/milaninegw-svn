@@ -158,12 +158,52 @@ function get_call(xmldoc){
       indicate();
       var result = xmldoc.getElementsByTagName('result')[0].childNodes[0].nodeValue;
       if (result==0){
-        alert("Will call !!!");
+        openCall(xmldoc);
       }else{
         alert("Failed to setup the call: "+xmldoc.getElementsByTagName('error')[0].childNodes[0].nodeValue);
       }
 }
+function openCall(xmldoc){
+  var props=client.getPage();
+  var body=document.getElementsByTagName('body');
+  body=body[0];
+  var background_div=createElementAll('background_div','div');
+  var call_panel=createElementAll('call_panel','div');
+  background_div.style.height=props.pageY;
+  background_div.style.width=props.pageW;
+  call_panel.style.height=props.pageY*0.9;
+  var clubincall_dropdown=document.getElementById("clubincall_dropdown");
+  body.appendChild(background_div);
+  body.appendChild(call_panel);
+  indicate();
+  removeElement(clubincall_dropdown);
+  body.style["overflow"]="hidden";
+  body.style["height"]=props.pageY;
+  if (document.body.scroll){
+    alert(document.body.scroll);
+    document.body.scroll="no";
+  }
+  var progress_div=createElementAll('progress_div','div');
+  var mysrc=xmldoc.getElementsByTagName('src')[0];
+  var mydst=xmldoc.getElementsByTagName('dst')[0];
+  var member_div=createElementAll('member_div','div');
+  var member_icon=createElementAll('member_icon','img');
+  member_icon.setAttribute('src',mydst.getAttribute('icon'));
+  var member_name_span=createElementAll('member_name_span','span');
+  member_name_span.innerHTML=mydst.getAttribute('name')+
+                                " @ "+mydst.getAttribute('desc');
+  member_div.appendChild(member_icon);
+  member_div.appendChild(member_name_span);
+  progress_span=createElementAll('progress_span','span');
+  progress_span.innerHTML=progress_div.innerHTML+"Connecting "+mydst.getAttribute('name')+
+                         " to +"+mysrc.getAttribute('number');
+  member_div.appendChild(progress_span);
+  progress_div.appendChild(member_div);
+  call_panel.appendChild(progress_div);
+  indicate();
+}
 
+// function renderCall(xmldoc)
 function render_call_form(xmldoc){
   
   
