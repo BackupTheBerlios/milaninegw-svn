@@ -207,6 +207,7 @@ class cPageSplitter
 					'params' => array('size' => 3)
 				)
 			);
+
 			$this->get = array('item','start');
 			$this->session = array('item','start');
 			$this->properties = array();

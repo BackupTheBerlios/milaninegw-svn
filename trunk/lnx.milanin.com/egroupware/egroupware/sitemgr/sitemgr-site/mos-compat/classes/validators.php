@@ -1,0 +1,48 @@
+<?
+function IsValidEmail($email) #return '' if not mail
+{
+	$email=trim($email);
+	return (preg_replace("/(([\w\d-]+(\.[\w\d-]+)*)\@(([\w\d-]+(\.[\w\d-]+)*)\.([\w]{2,4})))/", "", $email) == "");
+}
+
+function str_is_int($str) {
+	$var=intval($str);
+	return ($str==$var."");
+}
+
+function setInteger($value)
+{
+	settype($value, "integer");
+	return $value;
+}
+function IsValidDate($date) #return '' if not mail
+{
+	if(trim($date) == "") return true;
+	$date = split("/", $date);
+	while( count($date) < 3 )
+		array_push($date, "0");
+	if( !(is_numeric($date[0]) && is_numeric($date[1]) && is_numeric($date[2])) )
+		return false;
+
+	$date = array_map("setInteger", $date);
+	return checkdate($date[1], $date[0], $date[2]);
+}
+
+function IsValidWebUrl($url)
+{
+	if(trim($url) == "") return true;
+	$pattern = "/(([\w]+:)?\/\/)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,4}(:[\d]+)?(\/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?/i";
+	preg_match($pattern, $url, $matches);
+
+	return (count($matches) > 0 && $matches[0] == $url);
+}
+
+function IsValidFriendlyUrl($url)
+{
+	if(trim($url) == "") return true;
+	$pattern = "/^([A-Za-z0-9\.\_\-]+)$/i";
+	preg_match($pattern, $url, $matches);
+	
+	return (count($matches) > 0 && $matches[0] == $url);
+}
+?>

@@ -12,32 +12,36 @@
     </tr>
 	<tr>
 		<td>{FORM.ProfessionalProfile}<font color="red">*</font></td>
-		<td><select name="prof_profile">';
-		foreach ($prof_profile as $opt){
-		$content.='<option value="'.$opt.'">'.$opt.'</option>'."\n";
-		}
-		$content.='</select></td>
+		<td>
+		<select name="prof_profile" {FORM.prof_profile_DISABLED}>
+			<option value=""></option>
+			<!-- BEGIN prof_profile -->
+			<option value="{FORM.prof_profile.VALUE}" {FORM.prof_profile.CHECKED}>{FORM.prof_profile.TEXT}</option>
+			<!-- END prof_profile -->
+		</select>
+		</td>
     </tr>
 	<tr>
-		<td><a href="#linkedin_url">URL to Linkedin Profile</a></td>
+		<td><a href="#linkedin_url">{FORM.LinkedinProfile}</a></td>
 		<td><input type="text" name="url" value="{FORM.url_VALUE}"></td>
 	</tr>
 	<tr>
 	    <td>{FORM.phonenumber}</td>
-	    <td><input type="text" name="phone" value='.$p_phone.'></td>
+	    <td><input type="text" name="phone" value="{FORM.phone_VALUE}"></td>
 	</tr>
 	<tr>
         <td>{FORM.email}<font color="red">*</font></td>
-        <td><input type="text" name="email" value='.$p_email.'></td>
+        <td><input type="text" name="email" value="{FORM.email_VALUE}"></td>
     </tr>
 	<tr>
-		<td>Reason for requesting Club Membership <font color="red">*</font></td>
-		<td><textarea name="msg" rows="10">'.$p_msg.'</textarea></td>
+		<td>{FORM.requestingReason}<font color="red">*</font></td>
+		<td><textarea name="msg" rows="10">{FORM.msg_VALUE}</textarea></td>
 	</tr>
 	<tr>
 		<td>{FORM.howknow}<font color="red">*</font></td>
 		<td>
 		<select name="how_did_u" {FORM.how_did_u_DISABLED}>
+			<option value=""></option>
 			<!-- BEGIN how_did_u -->
 			<option value="{FORM.how_did_u.VALUE}" {FORM.how_did_u.CHECKED}>{FORM.how_did_u.TEXT}</option>
 			<!-- END how_did_u -->
@@ -51,7 +55,7 @@
 		<td>{FORM.sex}<font color="red">*</font></td>
 		<td>
 		<select name="sex" {FORM.sex_DISABLED}>
-			<option value="">---</option>
+			<option value=""></option>
 			<!-- BEGIN sex -->
 			<option value="{FORM.sex.VALUE}" {FORM.sex.CHECKED}>{FORM.sex.TEXT}</option>
 			<!-- END sex -->
@@ -70,7 +74,7 @@
 		<td>{FORM.countryresidence}<font color="red">*</font></td>
 		<td>
 		<select name="residence_country" {FORM.residence_country_DISABLED}>
-			<option value="">---</option>
+			<option value=""></option>
 			<!-- BEGIN residence_country -->
 			<option value="{FORM.residence_country.VALUE}" {FORM.residence_country.CHECKED}>{FORM.residence_country.TEXT}</option>
 			<!-- END residence_country -->
@@ -85,99 +89,69 @@
 		<td>{FORM.academicdegree}<font color="red">*</font></td>
 		<td>
 		<select name="ac_degree" {FORM.ac_degree_DISABLED}>
-			<option value="">---</option>
+			<option value=""></option>
 			<!-- BEGIN ac_degree -->
 			<option value="{FORM.ac_degree.VALUE}" {FORM.ac_degree.CHECKED}>{FORM.ac_degree.TEXT}</option>
 			<!-- END ac_degree -->
 		</select>
 		</td>
-	</tr>                                  
+	</tr>
 	<tr>
 		<td>{FORM.favoritesport}<font color="red">*</font></td>
-		<td><select name="favorite_sport">';
-		$sports[]=lang("not in the list");
-		foreach ($sports as $sport){
-		$sport=rtrim($sport);
-		$content.='<option value="'.$sport.'"'.
-		((isset($p_favorite_sport) && strcmp($p_favorite_sport,$sport)==0)
-		?" selected" :"").
-		'>'.$sport.'</option>'."\n";
-		}
-		$content.='</select></td>
-	</tr>                                     
+		<td>
+		<select name="favorite_sport" {FORM.favorite_sport_DISABLED}>
+			<option value=""></option>
+			<!-- BEGIN favorite_sport -->
+			<option value="{FORM.favorite_sport.VALUE}" {FORM.favorite_sport.CHECKED}>{FORM.favorite_sport.TEXT}</option>
+			<!-- END favorite_sport -->
+		</select>
+		</td>
+	</tr>
 	<tr>
 	<td>{FORM.interests}<font color="red">*</font></td>
-		<td>';
-		$hobbies[]=lang("other");
-		foreach ($hobbies as $hobby){
-		$hobby=rtrim($hobby);
-		$hobby_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$hobby);
-		$content.='<input '.
-		((isset($p_interests[$hobby_chkbox_name]))?"checked ":" ").
-		'type="checkbox"'.
-		'name="interests['.$hobby_chkbox_name.']">'.
-		$hobby.'<br/>';
-		}
-		$content.='</td>
-	</tr>			
+		<td>
+			<!-- BEGIN interests -->
+			<input type="Checkbox" name="interests[]" value="{FORM.interests.VALUE}" {FORM.interests.CHECKED}> {FORM.interests.TEXT}<br>
+			<!-- END interests -->
+		</td>
+	</tr>
 	<tr>
 		<th colspan="2">{FORM.professionaldata}</th>
 	</tr>			
 	<tr>
 		<td>{FORM.industry}<font color="red">*</font></td>
-		<td>';
-		$industries[]=lang("other");
-		foreach ($industries as $industry){
-		$industry=rtrim($industry);
-		$industry_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$industry);
-		$content.='<input '.
-		((isset($p_industries[$industry_chkbox_name]))?"checked ":" ").
-		'type="checkbox"'.
-		'name="industries['.$industry_chkbox_name.']">'.
-		$industry.'<br/>';
-		}
-		$content.='</td>
-	</tr>                                               
+		<td>
+			<!-- BEGIN industries -->
+			<input type="Checkbox" name="industries[]" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}<br>
+			<!-- END industries -->
+		</td>
+	</tr>
 	<tr>
 		<td>{FORM.profession}<font color="red">*</font></td>
-		<td>';
-		$professions[]=lang("other");
-		foreach ($professions as $profession){
-		$profession=rtrim($profession);
-		$profession_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$profession);
-		$content.='<input '.
-		((isset($p_professions[$profession_chkbox_name]))?"checked ":" ").
-		'type="checkbox"'.
-		'name="professions['.$profession_chkbox_name.']">'.
-		$profession.'<br/>';
-		}
-		$content.='</td>
+		<td>
+			<!-- BEGIN professions -->
+			<input type="Checkbox" name="professions[]" value="{FORM.professions.VALUE}" {FORM.professions.CHECKED}> {FORM.professions.TEXT}<br>
+			<!-- END professions -->
+		</td>
 	</tr>
 	<tr>
 		<td>{FORM.occ_area}<font color="red">*</font></td>
-		<td>';
-		$occ_areas[]=lang("other");
-		foreach ($occ_areas as $occ_area){
-		$occ_area=rtrim($occ_area);
-		$occ_area_chkbox_name=preg_replace('/[^A-Za-z]/',"_",$occ_area);
-		$content.='<input '.
-		((isset($p_occ_areas[$occ_area_chkbox_name]))?"checked ":" ").
-		'type="checkbox"'.
-		'name="occ_areas['.$occ_area_chkbox_name.']">'.
-		$occ_area.'<br/>';
-		}
-		$content.='</td>
-	</tr>				 
-    <tr>
+		<td>
+			<!-- BEGIN occ_areas -->
+			<input type="Checkbox" name="occ_areas[]" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}<br>
+			<!-- END occ_areas -->
+		</td>
+	</tr>
+	<tr>
 		<th colspan="2">{FORM.termsacceptance}</th>
-	</tr>                                      
+	</tr>
 	<tr>
 		<td>{FORM.privacyterms}</td>
-		<td><input type="checkbox" name="terms_privacy" />{FORM.accept}
+		<td><input type="checkbox" name="terms_privacy" value="1" {FORM.terms_privacy_CHECKED} />{FORM.accept}
 	</tr>                                   
 	<tr>
 		<td>{FORM.servicesterms}</td>
-		<td><input type="checkbox" name="terms_services" />{FORM.accept}
+		<td><input type="checkbox" name="terms_services" value="1" {FORM.terms_services_CHECKED} />{FORM.accept}
 	</tr>
 	<tr>
 		<td colspan="2"><input type="submit" class="button" name="btn_submit" value="{FORM.send}"></td>

@@ -29,12 +29,11 @@ class cTFiller extends cTemplate
 		if(is_array($array)) reset($array);
 	}
 		
-	function getCheckedValue($value, $default, $type) {
+	function getCheckedValue($value, $default, $type, $checkedValue) {
 		$result = "";
 		$isChecked = ( $value == $default || ( is_array($default) && in_array($value, $default) ) );
 		if($isChecked == true && ($type == "DDL" || $type == "MDDL") )
-			$result = ' selected="selected" ';
-		
+			$result = $checkedValue;
 		return $result;
 	}
 
@@ -47,7 +46,7 @@ class cTFiller extends cTemplate
 			if(  !( is_array($cfg["exceptionKeys"]) && in_array($key, $cfg["exceptionKeys"]) !== false )   )
 			array_push($result, array(	"VALUE"		=> htmlspecialchars($key),
 														"TEXT"		=> $cfg["use_html_replace"] === true ? htmlspecialchars($value) : $value, 
-														"CHECKED" 	=> $this->getCheckedValue($key, $this->defaults[$cfg["control_id"]], $cfg["control_type"])) );
+														"CHECKED" 	=> $this->getCheckedValue($key, $this->defaults[$cfg["control_id"]], $cfg["control_type"], $cfg["checked_value"])) );
 		}
 		return $result;
 	}

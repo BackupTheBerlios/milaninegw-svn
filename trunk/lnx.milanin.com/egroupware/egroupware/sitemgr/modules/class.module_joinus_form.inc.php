@@ -12,6 +12,7 @@
 	/* $Id: class.module_lang_block.inc.php,v 1.6.2.1 2004/08/22 11:33:08 ralfbecker Exp $ */
 	require_once("classes/cTemplate.php");
 	require_once("classes/cTFiller.php");
+	require_once("classes/validators.php");
 	
 	class module_joinus_form extends Module
 	{
@@ -34,8 +35,6 @@
 	
 		function get_content(&$arguments,$properties)
 		{
-			DebugLog($arguments);
-			
 			$this->DbConnect();
 			$this->GetWords();
 			$this->FormConfig($arguments);
@@ -50,17 +49,17 @@
 			if ( count($_POST) > 0 )
 			{
 				$template->CollectPostedData($this->formCfg, true, false);
+				$template->ValidatePostedData($this->formCfg, true);
 			}
 			
 			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words);
-			
 			return $template->pparse('form');
 		}
 		
 		function DbConnect()
 		{
 			$vars = $GLOBALS['phpgw_domain']['default'];
-			$this->mysql_link = mysql_connect($vars['db_host'], $vars['db_user'], $vars['db_pass']) or die( "Unable to connect to SQL server");
+			$this->mysql_link = mysql_connect($vars['db_host'].":".$vars['db_port'], $vars['db_user'], $vars['db_pass']) or die( "Unable to connect to SQL server");
 			mysql_select_db($vars['db_name']) or die(mysql_error());
 		}
 		
@@ -80,103 +79,206 @@
             $industries = $this->GetMySQLArray("SELECT data from other_data where name='industries' and lang='".$GLOBALS['page']->lang."'");
             $professions = $this->GetMySQLArray("SELECT data from other_data where name='professions' and lang='".$GLOBALS['page']->lang."'");
             $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$GLOBALS['page']->lang."'");
-
-			$this->formCfg = array(
-				
-				"lists"	 => array(
-									"how_did_u" => array(
-														"control_id" => "how_did_u",
-														"control_type" => "DDL",
-														"use_key" => true,
-														"required" => true,
-														"required_message" => "",
-														"source" 		=> explode(",", $arguments['how_did_u']),
-														"checked_value" => 'selected="selected"',
-														"use_html_replace" => false
-														),
-									
-									"sex" => array(
-														"control_id" => "sex",
-														"control_type" => "DDL",
-														"use_key" => true,
-														"required" => true,
-														"required_message" => "",
-														"source" 		=> array("1"=>$this->words['female'], "2"=>$this->words['male']),
-														"checked_value" => 'selected="selected"',
-														"use_html_replace" => false
-														),
-								
-								"residence_country" => array(
-														"control_id" => "residence_country",
-														"control_type" => "DDL",
-														"use_key" => true,
-														"required" => true,
-														"required_message" => "",
-														"source" 		=> $countries,
-														"checked_value" => 'selected="selected"',
-														"use_html_replace" => false
-														),
-								
-								"ac_degree" => array(
-														"control_id" => "ac_degree",
-														"control_type" => "DDL",
-														"use_key" => true,
-														"required" => true,
-														"required_message" => "",
-														"source" 		=> explode(",",$arguments['ac_degree']),
-														"checked_value" => 'selected="selected"',
-														"use_html_replace" => false
-														),
-				),
-				"fields" => array("name" =>
-										array("control_id" => "name",
-											  "default_value"=>"",
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-								  "surname" =>
-										array("control_id" => "surname",
-											  "default_value"=>"",
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-											  
-								  "birth_d" =>
-										array("control_id" => "birth_d",
-											  "default_value"=>$this->words['dd'],
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-								  "birth_m" =>
-										array("control_id" => "birth_m",
-											  "default_value"=>$this->words['mm'],
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-								  "birth_y" =>
-										array("control_id" => "birth_y",
-											  "default_value"=>$this->words['yyyy'],
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-											  
-								  "residence_city" =>
-										array("control_id" => "residence_city",
-											  "default_value"=>"",
-											  "control_type" => "TXT",
-											  "required" => true,
-											  "required_message" => ""
-											  ),
-								
-								 )
-								);
+			$prof_profile = $this->GetMySQLArray("SELECT data from other_data where name='prof_profile' and lang='".$GLOBALS['page']->lang."'");
+			$ac_degree = $this->GetMySQLArray("SELECT data from other_data where name='ac_degree' and lang='".$GLOBALS['page']->lang."'");
+			
+			$this->formCfg = array	(
+									"fields" =>array("name" =>
+																array("control_id" => "name",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),
+													 "surname" =>
+																array("control_id" => "surname",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),
+													 "url" =>
+																array("control_id" => "url",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => false,
+																	  "required_message" => ""
+																	  ),
+													"phone" =>
+																array("control_id" => "phone",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => false,
+																	  "required_message" => ""
+																	  ),
+													"email" =>
+																array("control_id" => "email",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => "",
+																	  "validatorFun" => "IsValidEmail",
+																	  "validator_message" => ""
+																	  ),
+								  					"msg" =>
+																array("control_id" => "msg",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),
+													"birth_d" =>
+																array("control_id" => "birth_d",
+																	  "default_value"=>$this->words['dd'],
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),
+													"birth_m" =>
+																array("control_id" => "birth_m",
+																	  "default_value"=>$this->words['mm'],
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),
+													"birth_y" =>
+																array("control_id" => "birth_y",
+																	  "default_value"=>$this->words['yyyy'],
+																	  "control_type" => "TXT",
+																	  "required" => true,
+																	  "required_message" => ""
+																	  ),		  
+													"residence_city" =>
+																array("control_id" => "residence_city",
+																	  "default_value"=>"",
+																	  "control_type" => "TXT",
+																	  "required" => false,
+																	  "required_message" => ""
+																	  ),
+													"terms_privacy" =>
+																array("control_id" => "terms_privacy", 
+																	  "default_value"=>0, 
+																	  "required" => true, 
+																	  "value_on"=>1,
+																	  "control_type" => "CHK"),
+													"terms_services" =>
+																array("control_id" => "terms_services", 
+																	  "default_value"=>0, 
+																	  "required" => true, 
+																	  "value_on"=>1,
+																	  "control_type" => "CHK")
+																	  
+													),
+													
+									"lists"	 => array(
+														"prof_profile" => array(
+																"control_id" => "prof_profile",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $prof_profile,
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => true
+																),
+														"how_did_u" => array(
+																"control_id" => "how_did_u",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> explode(",", $arguments['how_did_u']),
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false
+																),
+														"sex" => array(
+																"control_id" => "sex",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> array("1"=>$this->words['female'], "2"=>$this->words['male']),
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false
+																),
+														"residence_country" => array(
+																"control_id" => "residence_country",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $countries,
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false
+																),
+														"ac_degree" => array(
+																"control_id" => "ac_degree",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $ac_degree,
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false
+																),
+														"favorite_sport" => array(
+																"control_id" => "favorite_sport",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $sports,
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false
+																),
+																
+														"interests" => array(
+																"control_id" => "interests",
+																"control_type" => "MDDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $hobbies,
+																"checked_value" => 'checked',
+																"use_html_replace" => false
+																),
+														"industries" => array(
+																"control_id" => "industries",
+																"control_type" => "MDDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $industries,
+																"checked_value" => 'checked',
+																"use_html_replace" => false
+																),
+																
+														"professions" => array(
+																"control_id" => "professions",
+																"control_type" => "MDDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $professions,
+																"checked_value" => 'checked',
+																"use_html_replace" => false
+																),
+																
+														"occ_areas" => array(
+																"control_id" => "occ_areas",
+																"control_type" => "MDDL",
+																"use_key" => false,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> $occ_areas,
+																"checked_value" => 'checked',
+																"use_html_replace" => false
+																),		
+																
+													  )
+									);
 		}
-		
+		//
 		function GetWords()
 		{
 			$words = array();
@@ -211,6 +313,8 @@
 			$words['mm'] = lang('mm');
 			$words['yyyy'] = lang('yyyy');
 			
+			$words['requestingReason'] = lang('Reason for requesting Club Membership');
+			$words['LinkedinProfile'] = lang('URL to Linkedin Profile');
 			$this->words = $words;
 		}
 	}
