@@ -63,6 +63,18 @@
 		</td>
  	</tr>
 	<tr>
+		<td>{FORM.MainLanguage}<font color="red">*</font></td>
+		<td>
+		<select name="languages" {FORM.languages_DISABLED}>
+			<option value=""></option>
+			<!-- BEGIN languages -->
+			<option value="{FORM.languages.VALUE}" {FORM.languages.CHECKED}>{FORM.languages.TEXT}</option>
+			<!-- END languages -->
+		</select>
+		</td>
+ 	</tr>
+	
+	<tr>
 		<td>{FORM.birthdate}</td>
 		<td>
 			<input size="2" maxlength="2" type="text" name="birth_d" value="{FORM.birth_d_VALUE}" />

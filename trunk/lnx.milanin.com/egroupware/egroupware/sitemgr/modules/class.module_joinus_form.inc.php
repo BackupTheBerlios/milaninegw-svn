@@ -13,6 +13,7 @@
 	require_once("classes/cTemplate.php");
 	require_once("classes/cTFiller.php");
 	require_once("classes/validators.php");
+	define('DB_TYPE', 'mysql');
 	
 	class module_joinus_form extends Module
 	{
@@ -20,6 +21,7 @@
 		var $words;
 		function module_joinus_form()
 		{
+			
 			$this->arguments = array(
 				'recepient' => array('type' => 'textfield','label' => lang('Where to send request')),
                                 'invitations_table' => array('type'=>'textfield','label'=>lang('invitations table') ),
@@ -52,7 +54,7 @@
 				$template->ValidatePostedData($this->formCfg, true);
 			}
 			
-			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words);
+			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
 			return $template->pparse('form');
 		}
 		
@@ -201,6 +203,17 @@
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
 																),
+														"languages" => array(
+																"control_id" => "languages",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"required" => true,
+																"required_message" => "",
+																"source" 		=> "select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name",
+																"checked_value" => 'selected="selected"',
+																"use_html_replace" => false,
+																"default_value" => "it"
+																),
 														"residence_country" => array(
 																"control_id" => "residence_country",
 																"control_type" => "DDL",
@@ -312,7 +325,7 @@
 			$words['dd'] = lang('dd');
 			$words['mm'] = lang('mm');
 			$words['yyyy'] = lang('yyyy');
-			
+			$words['MainLanguage'] = lang('MainLanguage');
 			$words['requestingReason'] = lang('Reason for requesting Club Membership');
 			$words['LinkedinProfile'] = lang('URL to Linkedin Profile');
 			$this->words = $words;

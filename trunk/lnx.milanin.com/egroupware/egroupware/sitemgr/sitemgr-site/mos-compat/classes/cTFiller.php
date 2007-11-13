@@ -55,7 +55,7 @@ class cTFiller extends cTemplate
 		return ($type == "TXT" || $type == "TXTA" || $type == "PWD");
 	}
 
-	function FillBlockWithStaticValues($cfg, $blockName="", $staticValues = array())
+	function FillBlockWithStaticValues($cfg, $blockName="", $staticValues = array(), $dbLink=null)
 	{
 		global $db;
 		$blockValues = $staticValues;
@@ -78,9 +78,22 @@ class cTFiller extends cTemplate
 				$arr = $ctrlCfg["source"];
 			elseif(function_exists ($ctrlCfg["source"]))
 				$arr = call_user_func($ctrlCfg["source"]);
-			elseif(strtolower(substr($ctrlCfg["source"], 0, 7)) == 'select ' && defined('DB_TYPE') && $res = $db->sql_query($ctrlCfg["source"]) )
-				while($rs = $db->sql_fetchrow($res))
-					$arr[ $rs[0] ] = $rs[1];
+			elseif( strtolower(substr($ctrlCfg["source"], 0, 7)) == 'select ' && defined('DB_TYPE') )
+				{
+					if($dbLink != null)
+					{
+						if($res = mysql_query ($ctrlCfg["source"], $dbLink))
+						while($rs = mysql_fetch_row($res))
+							$arr[ $rs[0] ] = $rs[1];
+					}
+					else
+					{
+						if($res = $db->sql_query($ctrlCfg["source"]))
+						while($rs = $db->sql_fetchrow($res))
+							$arr[ $rs[0] ] = $rs[1];
+					}
+				}
+
 			
 			$lists[ $blockName.($blockName == "" ? "" : ".").$ctrlCfg["control_id"] ] = $this->FillList($arr, $ctrlCfg);
 			if( $ctrlCfg["disabled"] === true )
