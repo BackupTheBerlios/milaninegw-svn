@@ -15,6 +15,7 @@ function setInteger($value)
 	settype($value, "integer");
 	return $value;
 }
+
 function IsValidDate($date) #return '' if not mail
 {
 	if(trim($date) == "") return true;
@@ -26,6 +27,19 @@ function IsValidDate($date) #return '' if not mail
 
 	$date = array_map("setInteger", $date);
 	return checkdate($date[1], $date[0], $date[2]);
+}
+
+function CheckDateValue($dd, $mm, $yyyy)
+{
+	$dd = trim($dd); $mm = trim($mm); $yyyy = trim($yyyy);
+	if( $dd == "" && $mm == "" && $yyyy == "")
+		return true;
+	else
+	{
+		if( !(is_numeric($dd) && is_numeric($mm) && is_numeric($yyyy)) )
+			return false;
+		else return checkdate($mm, $dd, $yyyy);
+	}
 }
 
 function IsValidWebUrl($url)

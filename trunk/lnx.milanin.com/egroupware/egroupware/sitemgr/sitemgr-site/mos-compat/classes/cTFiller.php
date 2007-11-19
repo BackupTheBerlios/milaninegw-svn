@@ -41,12 +41,45 @@ class cTFiller extends cTemplate
 		if( !is_array($data) ) return;
 		$this->arrReset($data);
 		$result = array();
+		$isColumn = false; 
+		$j=1;
+		if( isset($cfg["colCount"]) && is_numeric($cfg["colCount"]) ) $isColumn = true;
+		
+		$length = count($data);
+		
 		while (list($key, $value) = each($data)) {
 			$key = ($cfg["use_key"] === true ? $key : $value);
 			if(  !( is_array($cfg["exceptionKeys"]) && in_array($key, $cfg["exceptionKeys"]) !== false )   )
-			array_push($result, array(	"VALUE"		=> htmlspecialchars($key),
-														"TEXT"		=> $cfg["use_html_replace"] === true ? htmlspecialchars($value) : $value, 
+			{
+				$beforeText = "";
+				$afterText = "";
+				
+				if($isColumn && $length == count($data) ) $beforeText .= '<table class="'.$cfg['control_id'].'" cellpadding="0" cellspacing="0" border="0">';
+				$length--;
+				
+				if( $isColumn )
+				{
+					if($j > $cfg["colCount"]) 
+						$j = 1;
+					if($j == 1) $beforeText .= "<tr>";
+					if($j <= $cfg["colCount"]) $beforeText .= "<td>";
+					$afterText .= "</td>";
+					if($j == $cfg["colCount"]) $afterText .= "</tr>";
+					if($length == 0)
+						$afterText .= "</table>";
+					$j++;
+					
+				}
+				else
+				{
+					$afterText = "";
+					$beforeText = "";
+				}
+				//RenderArrayTable($blockName, $array, $blockValues=array(), $onItemBind="", $onItemCreated="")
+				array_push($result, array(	"Before"=>$beforeText, "After"=>$afterText, "VALUE"		=> htmlspecialchars($key),
+														"TEXT"		=> ($cfg["use_html_replace"] === true ? htmlspecialchars($value) : $value), 
 														"CHECKED" 	=> $this->getCheckedValue($key, $this->defaults[$cfg["control_id"]], $cfg["control_type"], $cfg["checked_value"])) );
+			}
 		}
 		return $result;
 	}

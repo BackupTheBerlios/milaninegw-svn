@@ -1,15 +1,33 @@
+<!-- BEGIN FORM_ERROR -->
+	<p><font color="#ff0000">{FORM_ERROR.Message}</font></p>
+<!-- END FORM_ERROR -->
+
 <!-- BEGIN FORM -->
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
-<table>
+<table border="1">
 	<tr>
 		<td>{FORM.Name}<font color="red">*</font> </td>
 		<td><input type="text" name="name" value="{FORM.name_VALUE}"></td>
 	</tr>
+	<!-- BEGIN name_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.name_ErrReq.Message}</td>
+	</tr>
+	<!-- END name_ErrReq -->
+	
 	<tr>
 		<td>{FORM.LastName}<font color="red">*</font></td>
 		<td><input type="text" name="surname" value="{FORM.surname_VALUE}"></td>
     </tr>
+	<!-- BEGIN surname_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.surname_ErrReq.Message}</td>
+	</tr>
+	<!-- END surname_ErrReq -->
+
 	<tr>
 		<td>{FORM.ProfessionalProfile}<font color="red">*</font></td>
 		<td>
@@ -21,22 +39,51 @@
 		</select>
 		</td>
     </tr>
+	<!-- BEGIN prof_profile_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.prof_profile_ErrReq.Message}</td>
+	</tr>
+	<!-- END prof_profile_ErrReq -->
+	
 	<tr>
 		<td><a href="#linkedin_url">{FORM.LinkedinProfile}</a></td>
 		<td><input type="text" name="url" value="{FORM.url_VALUE}"></td>
 	</tr>
+	
 	<tr>
 	    <td>{FORM.phonenumber}</td>
 	    <td><input type="text" name="phone" value="{FORM.phone_VALUE}"></td>
 	</tr>
+
 	<tr>
         <td>{FORM.email}<font color="red">*</font></td>
         <td><input type="text" name="email" value="{FORM.email_VALUE}"></td>
     </tr>
+	<!-- BEGIN email_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.email_ErrReq.Message}</td>
+	</tr>
+	<!-- END email_ErrReq -->
+	<!-- BEGIN email_ErrRule -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.email_ErrRule.Message}</td>
+	</tr>
+	<!-- END email_ErrRule -->
+
 	<tr>
 		<td>{FORM.requestingReason}<font color="red">*</font></td>
 		<td><textarea name="msg" rows="10">{FORM.msg_VALUE}</textarea></td>
 	</tr>
+	<!-- BEGIN msg_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.msg_ErrReq.Message}</td>
+	</tr>
+	<!-- END msg_ErrReq -->
+
 	<tr>
 		<td>{FORM.howknow}<font color="red">*</font></td>
 		<td>
@@ -48,9 +95,16 @@
 		</select>
 		</td>
 	</tr>
+	<!-- BEGIN how_did_u_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.how_did_u_ErrReq.Message}</td>
+	</tr>
+	<!-- END how_did_u_ErrReq -->
 	<tr>
 		<th colspan="2">{FORM.personaldata}</th>
 	</tr>
+	
 	<tr>
 		<td>{FORM.sex}<font color="red">*</font></td>
 		<td>
@@ -62,6 +116,13 @@
 		</select>
 		</td>
  	</tr>
+	<!-- BEGIN sex_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.sex_ErrReq.Message}</td>
+	</tr>
+	<!-- END sex_ErrReq -->
+
 	<tr>
 		<td>{FORM.MainLanguage}<font color="red">*</font></td>
 		<td>
@@ -73,6 +134,12 @@
 		</select>
 		</td>
  	</tr>
+	<!-- BEGIN languages_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.languages_ErrReq.Message}</td>
+	</tr>
+	<!-- END languages_ErrReq -->
 	
 	<tr>
 		<td>{FORM.birthdate}</td>
@@ -82,6 +149,13 @@
 			<input size="4" maxlength="4" type="text" name="birth_y" value="{FORM.birth_y_VALUE}" />
 		</td>
 	</tr>
+	<!-- BEGIN birth_d_ErrRule -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.birth_d_ErrRule.Message}</td>
+	</tr>
+	<!-- END birth_d_ErrRule -->
+	
 	<tr>
 		<td>{FORM.countryresidence}<font color="red">*</font></td>
 		<td>
@@ -93,10 +167,18 @@
 		</select>
 		</td>
 	</tr>
+	<!-- BEGIN residence_country_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.residence_country_ErrReq.Message}</td>
+	</tr>
+	<!-- END residence_country_ErrReq -->
+
 	<tr>
 		<td>{FORM.cityresidence}</td>
 		<td><input type="text" name="residence_city" value="{FORM.residence_city_VALUE}"></td>
 	</tr>
+	
 	<tr>
 		<td>{FORM.academicdegree}<font color="red">*</font></td>
 		<td>
@@ -108,6 +190,13 @@
 		</select>
 		</td>
 	</tr>
+	<!-- BEGIN ac_degree_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.ac_degree_ErrReq.Message}</td>
+	</tr>
+	<!-- END ac_degree_ErrReq -->
+	
 	<tr>
 		<td>{FORM.favoritesport}<font color="red">*</font></td>
 		<td>
@@ -119,14 +208,15 @@
 		</select>
 		</td>
 	</tr>
+	<!-- BEGIN favorite_sport_ErrReq -->
 	<tr>
-	<td>{FORM.interests}<font color="red">*</font></td>
-		<td>
-			<!-- BEGIN interests -->
-			<input type="Checkbox" name="interests[]" value="{FORM.interests.VALUE}" {FORM.interests.CHECKED}> {FORM.interests.TEXT}<br>
-			<!-- END interests -->
-		</td>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.favorite_sport_ErrReq.Message}</td>
 	</tr>
+	<!-- END favorite_sport_ErrReq -->
+	
+	
+	
 	<tr>
 		<th colspan="2">{FORM.professionaldata}</th>
 	</tr>			
@@ -134,26 +224,66 @@
 		<td>{FORM.industry}<font color="red">*</font></td>
 		<td>
 			<!-- BEGIN industries -->
-			<input type="Checkbox" name="industries[]" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}<br>
+			{FORM.industries.Before}<input type="Checkbox" name="industries[]" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}{FORM.industries.After}
 			<!-- END industries -->
 		</td>
 	</tr>
+	<!-- BEGIN industries_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.industries_ErrReq.Message}</td>
+	</tr>
+	<!-- END industries_ErrReq -->
+	
 	<tr>
 		<td>{FORM.profession}<font color="red">*</font></td>
 		<td>
 			<!-- BEGIN professions -->
-			<input type="Checkbox" name="professions[]" value="{FORM.professions.VALUE}" {FORM.professions.CHECKED}> {FORM.professions.TEXT}<br>
+			{FORM.professions.Before}<input type="Checkbox" name="professions[]" value="{FORM.professions.VALUE}" {FORM.professions.CHECKED}> {FORM.professions.TEXT}{FORM.professions.After}
 			<!-- END professions -->
 		</td>
 	</tr>
+	<!-- BEGIN professions_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.professions_ErrReq.Message}</td>
+	</tr>
+	<!-- END professions_ErrReq -->
+	
+	
 	<tr>
 		<td>{FORM.occ_area}<font color="red">*</font></td>
 		<td>
 			<!-- BEGIN occ_areas -->
-			<input type="Checkbox" name="occ_areas[]" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}<br>
+			{FORM.occ_areas.Before}<input type="Checkbox" name="occ_areas[]" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}{FORM.occ_areas.After}
 			<!-- END occ_areas -->
 		</td>
 	</tr>
+	<!-- BEGIN occ_areas_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.occ_areas_ErrReq.Message}</td>
+	</tr>
+	<!-- END occ_areas_ErrReq -->
+	
+	
+	<tr>
+		<td>{FORM.interests}<font color="red">*</font></td>
+		<td>
+			<!-- BEGIN interests -->
+			{FORM.interests.Before}<input type="Checkbox" name="interests[]" value="{FORM.interests.VALUE}" {FORM.interests.CHECKED}> {FORM.interests.TEXT}{FORM.interests.After}
+			<!-- END interests -->
+		</td>
+	</tr>
+	<!-- BEGIN interests_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.interests_ErrReq.Message}</td>
+	</tr>
+	<!-- END interests_ErrReq -->
+	
+	
+
 	<tr>
 		<th colspan="2">{FORM.termsacceptance}</th>
 	</tr>

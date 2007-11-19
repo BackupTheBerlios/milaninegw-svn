@@ -52,6 +52,15 @@
 			{
 				$template->CollectPostedData($this->formCfg, true, false);
 				$template->ValidatePostedData($this->formCfg, true);
+				if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
+					{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
+				
+				if($template->HasValidationErrors())
+					$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
+
+					
+					
+				DebugLog( $template->errorsBlocks);
 			}
 			
 			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
@@ -70,7 +79,9 @@
 			$res = mysql_query ($sql, $this->mysql_link) or die ($sql."<br/>".mysql_error($this->mysql_link));
 			$rs = mysql_fetch_array($res);
 			mysql_free_result($res);
-			return explode("\n", $rs[0]);
+			$result = explode("\n", $rs[0]);
+			$result = array_map("trim", $result);
+			return $result;
 		}
 		
 		function FormConfig($arguments)
@@ -90,14 +101,14 @@
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => ""
+																	  "required_message" => $this->words['thisRequired']
 																	  ),
 													 "surname" =>
 																array("control_id" => "surname",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => ""
+																	  "required_message" => $this->words['thisRequired']
 																	  ),
 													 "url" =>
 																array("control_id" => "url",
@@ -118,36 +129,36 @@
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => "",
+																	  "required_message" => $this->words['thisRequired'],
 																	  "validatorFun" => "IsValidEmail",
-																	  "validator_message" => ""
+																	  "validator_message" => $this->words['inputValidEmail']
 																	  ),
 								  					"msg" =>
 																array("control_id" => "msg",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => ""
+																	  "required_message" => $this->words['thisRequired']
 																	  ),
 													"birth_d" =>
 																array("control_id" => "birth_d",
 																	  "default_value"=>$this->words['dd'],
 																	  "control_type" => "TXT",
-																	  "required" => true,
-																	  "required_message" => ""
+																	  "required" => false,
+																	  "validator_message" => $this->words['birthInvalid']
 																	  ),
 													"birth_m" =>
 																array("control_id" => "birth_m",
 																	  "default_value"=>$this->words['mm'],
 																	  "control_type" => "TXT",
-																	  "required" => true,
+																	  "required" => false,
 																	  "required_message" => ""
 																	  ),
 													"birth_y" =>
 																array("control_id" => "birth_y",
 																	  "default_value"=>$this->words['yyyy'],
 																	  "control_type" => "TXT",
-																	  "required" => true,
+																	  "required" => false,
 																	  "required_message" => ""
 																	  ),		  
 													"residence_city" =>
@@ -178,7 +189,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $prof_profile,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => true
@@ -188,7 +199,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> explode(",", $arguments['how_did_u']),
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
@@ -198,7 +209,7 @@
 																"control_type" => "DDL",
 																"use_key" => true,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> array("1"=>$this->words['female'], "2"=>$this->words['male']),
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
@@ -219,7 +230,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $countries,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
@@ -229,7 +240,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $ac_degree,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
@@ -239,7 +250,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $sports,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false
@@ -250,20 +261,22 @@
 																"control_type" => "MDDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $hobbies,
 																"checked_value" => 'checked',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"colCount" => 2
 																),
 														"industries" => array(
 																"control_id" => "industries",
 																"control_type" => "MDDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $industries,
 																"checked_value" => 'checked',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"colCount" => 2
 																),
 																
 														"professions" => array(
@@ -271,10 +284,11 @@
 																"control_type" => "MDDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $professions,
 																"checked_value" => 'checked',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"colCount" => 2
 																),
 																
 														"occ_areas" => array(
@@ -282,10 +296,11 @@
 																"control_type" => "MDDL",
 																"use_key" => false,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $occ_areas,
 																"checked_value" => 'checked',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"colCount" => 2
 																),		
 																
 													  )
@@ -321,13 +336,18 @@
 			$words['servicesterms'] = lang('services terms');
 			$words['female'] = lang("female");
 			$words['male'] = lang("male");
-			
 			$words['dd'] = lang('dd');
 			$words['mm'] = lang('mm');
 			$words['yyyy'] = lang('yyyy');
 			$words['MainLanguage'] = lang('MainLanguage');
 			$words['requestingReason'] = lang('Reason for requesting Club Membership');
 			$words['LinkedinProfile'] = lang('URL to Linkedin Profile');
+			
+			$words['thisRequired'] = lang("thisRequired");
+			$words['commonError'] = lang("commonError");
+			$words['inputValidEmail'] = lang("inputValidEmail");
+			$words['birthInvalid'] = lang("birthInvalid");
+			
 			$this->words = $words;
 		}
 	}
