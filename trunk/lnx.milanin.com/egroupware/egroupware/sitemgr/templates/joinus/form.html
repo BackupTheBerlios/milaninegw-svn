@@ -5,7 +5,7 @@
 <!-- BEGIN FORM -->
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
-<table border="1">
+<table border="0">
 	<tr>
 		<td>{FORM.Name}<font color="red">*</font> </td>
 		<td><input type="text" name="name" value="{FORM.name_VALUE}"></td>
@@ -198,7 +198,7 @@
 	<!-- END ac_degree_ErrReq -->
 	
 	<tr>
-		<td>{FORM.favoritesport}<font color="red">*</font></td>
+		<td>{FORM.favoritesport}</td>
 		<td>
 		<select name="favorite_sport" {FORM.favorite_sport_DISABLED}>
 			<option value=""></option>
@@ -219,7 +219,10 @@
 	
 	<tr>
 		<th colspan="2">{FORM.professionaldata}</th>
-	</tr>			
+	</tr>
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
 	<tr>
 		<td>{FORM.industry}<font color="red">*</font></td>
 		<td>
@@ -234,6 +237,10 @@
 		<td class="required">{FORM.industries_ErrReq.Message}</td>
 	</tr>
 	<!-- END industries_ErrReq -->
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
+	
 	
 	<tr>
 		<td>{FORM.profession}<font color="red">*</font></td>
@@ -249,7 +256,9 @@
 		<td class="required">{FORM.professions_ErrReq.Message}</td>
 	</tr>
 	<!-- END professions_ErrReq -->
-	
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
 	
 	<tr>
 		<td>{FORM.occ_area}<font color="red">*</font></td>
@@ -265,10 +274,12 @@
 		<td class="required">{FORM.occ_areas_ErrReq.Message}</td>
 	</tr>
 	<!-- END occ_areas_ErrReq -->
-	
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
 	
 	<tr>
-		<td>{FORM.interests}<font color="red">*</font></td>
+		<td>{FORM.interests}</td>
 		<td>
 			<!-- BEGIN interests -->
 			{FORM.interests.Before}<input type="Checkbox" name="interests[]" value="{FORM.interests.VALUE}" {FORM.interests.CHECKED}> {FORM.interests.TEXT}{FORM.interests.After}
@@ -281,7 +292,9 @@
 		<td class="required">{FORM.interests_ErrReq.Message}</td>
 	</tr>
 	<!-- END interests_ErrReq -->
-	
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
 	
 
 	<tr>
@@ -290,11 +303,26 @@
 	<tr>
 		<td>{FORM.privacyterms}</td>
 		<td><input type="checkbox" name="terms_privacy" value="1" {FORM.terms_privacy_CHECKED} />{FORM.accept}
-	</tr>                                   
+	</tr>
+	<!-- BEGIN terms_privacy_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.terms_privacy_ErrReq.Message}</td>
+	</tr>
+	<!-- END terms_privacy_ErrReq -->
+	
+	
 	<tr>
 		<td>{FORM.servicesterms}</td>
 		<td><input type="checkbox" name="terms_services" value="1" {FORM.terms_services_CHECKED} />{FORM.accept}
 	</tr>
+	<!-- BEGIN terms_services_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.terms_services_ErrReq.Message}</td>
+	</tr>
+	<!-- END terms_services_ErrReq -->
+	
 	<tr>
 		<td colspan="2"><input type="submit" class="button" name="btn_submit" value="{FORM.send}"></td>
 	</tr>

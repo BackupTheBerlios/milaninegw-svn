@@ -277,7 +277,11 @@ a.contentpagetitle:hover {
 	border-bottom: 2px solid #990041;
 	height: 18px;
 	}
-
+.checkBoxSplitter
+{
+	border-bottom: 1px solid #990041;
+	height:1px;
+}
 .contentpagetitle {
 	font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px;
