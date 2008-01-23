@@ -39,7 +39,6 @@
 			parse_str($extravars,$extravarsnew);
 			$extravars = $extravarsnew;
 		}
-
 		if ($extravars['page_name'] != '' && $GLOBALS['sitemgr_info']['htaccess_rewrite'])
 		{
 			$url = '/'.$extravars['page_name'];

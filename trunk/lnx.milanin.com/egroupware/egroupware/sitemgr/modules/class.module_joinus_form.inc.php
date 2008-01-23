@@ -44,9 +44,6 @@
 			$this->GetWords();
 			$this->FormConfig($arguments);
 			
-			extract ($_POST, EXTR_PREFIX_ALL, 'p');
-			extract ($_GET, EXTR_PREFIX_ALL, 'g');
-			
 			$template = new cTFiller(PHPGW_SERVER_ROOT);
 			$template->set_filenames( array('form' => 'sitemgr/templates/joinus/form.html') );
 			$template->CollectPostedData($this->formCfg, false, false);
@@ -60,7 +57,9 @@
 				
 				//add account validation!!!!!!!!!!!
 				if($template->HasValidationErrors())
+				{
 					$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
+				}
 				else
 				{
 					$template->defaults["account_lid"] = strtolower($template->defaults["name"].".".$template->defaults["surname"]);
@@ -77,7 +76,7 @@
 					$sqlCommand->AddColumnValue("account_membership_date", 'CURDATE()');
 					
 					
-					/*$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
+					$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
 					$res = mysql_query ($sql, $this->mysql_link);
 					$user_id =  mysql_insert_id($this->mysql_link);
 					
@@ -92,117 +91,41 @@
 					$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
 						   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
 						   '".$template->defaults["email"]."', '".$template->defaults["account_pwd"]."', '".$template->defaults["name"]." ".$template->defaults["surname"]."', $users_opt, $user_id)";
-					$res = mysql_query ($sql, $this->mysql_link);*/
-					
-					DebugLog($arguments['recepient']);
-					
-				/*		
-				$log ="";
-				$content = "";
-				if (isset($p_ic)){
-                                          mysql_select_db ($arguments['members_db_name']) or die("cannot select db:".mysql_error($mysql_link));
-                                          $invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
-                                          "FROM ".$arguments['members_db_name'].".`".$arguments['invitations_table'].'`i '.
-                                          'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
-                                          'WHERE (i.code =\''.$g_ic.'\')';
-                                          $invite_result=mysql_query ($invite_query, $mysql_link) 
-                                            or die ($invite_query."<br/>".mysql_error($mysql_link));
-                                          $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
-                                          mysql_free_result($invite_result);
-                                          
-                                          if (isset($invitation['ident']))
-										  {
-                                            $p_email=$invitation['email'];
-                                            $remove_invitation_query='DELETE FROM '.$arguments['members_db_name'].".".
-                                                                      $arguments['invitations_table'].
-                                                                     ' WHERE ident='.$invitation['ident'];
-                                          } 
-										  else 
-										  {
-                                            $log.=lang("invitation not found");
-                                          }
-                                }
-				if (isset($p_btn_submit))
-				{
-					if (empty ($p_name) || empty ($p_surname) ||  empty ($p_email) || empty ($p_msg))
-						$log .= lang('you must fill in all of the required fields')."<br/>";
-					
-					if (!preg_match ("/.+@.+\.[a-z]+/", strtolower($p_email)))
-						$log .= lang('you have entered an invalid email address').": [".$p_email."] <br/>";
-					
-					if (strlen ($p_name)<2 || strlen ($p_surname)<2)
-						$log .= lang('too short name')."<br/>";
-					if (strlen ($p_prof_profile) <5){
-						$log .= lang('Proffessional profile is required')."<br/>";
-					}
-					if ($p_sex<1){
-						$log.=lang('choose your sex')."<br/>";
-					}
-				}
+					$res = mysql_query ($sql, $this->mysql_link);
 
-				if (isset($p_btn_submit) && empty ($log))
-				{
- 					if ($remove_invitation_query != ""){
-                                          $result = mysql_query ($remove_invitation_query, $mysql_link) 
-                                          or die ($remove_invitation_query."<br/>".mysql_error($mysql_link));
-                                        }
-					//Start mail:
-					
-					$date = date("d.m.Y H:i");
-					$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
-					$msg = "";
-					
-					
-					
-					$mailer = new send();
-					$mailer->Subject = "New membership application";  // change it 
-					$mailer->Body = $msg;
-					
-					$mailer->From = "messenger@milanin.com";  // change it
-					$mailer->FromName = "Milan IN website";  // change it
-					 
-					//$mailer->AddAddress("piercarlo.pozzati@milanin.com"); // change it 
-					$mailer->AddAddress($arguments['recepient']);
-					
-					if(!$mailer->Send())
+					if(!$template->HasValidationErrors())
 					{
-						$content .= 'There was a problem sending this mail!';
-						$content .= $mailer->ErrorInfo;
-					}
-
-					$mailer->ClearAddresses();
-
-					$msg = "Gentile Collega,\n
-abbiamo ricevuto la tua richiesta di iscrizione al Business Club Milan IN.\n
-Nel giro di qualche giorno riceverai da Pier Carlo Pozzati (presidente del Club) la richiesta di collegamento LinkedIn: ti preghiamo di accettarla, dal momento che questa una condizione essenziale per completare la tua iscrizione.\n
-Una volta accettata questa richiesta ti verr inviata una welcome letter contenete le istruzioni per il sito, username e password per accedere.\n
-Nel caso invece questa richiesta fosse stata inviata per errore ti preghiamo di segnalarlo a silvia.lenich@milanin.com.\n
-Grazie per il tuo interesse per il nostro Club e a presto!\n
-Silvia Lenich\nSegreteria Business Club Milan IN\n";
-					
-					$mailer = new send();
-					$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
-					$mailer->Body = $msg;
-					
-					$mailer->From = "iscrizioni@milanin.com";  // change it
-					$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
-					 
-					//$mailer->AddAddress("piercarlo.pozzati@milanin.com"); // change it 
-					$mailer->AddAddress($p_email);
-					
-					if(!$mailer->Send())
-{
-						$content .= 'There was a problem sending mail to '.$p_email.'!';
-						$content .= $mailer->ErrorInfo;
-}
-
-					$mailer->ClearAddresses();
-					
-					$content .= lang("joinus success");
-                                        //<h3>Your application for the membership has been sent, the administration is notified, and you will be contacted shortly. <br/>We thank you for your interest</h3>";
-					unset ($_POST);
+						/*if ($remove_invitation_query != ""){
+	                                          $result = mysql_query ($remove_invitation_query, $mysql_link) 
+	                                          or die ($remove_invitation_query."<br/>".mysql_error($mysql_link)); $date = date("d.m.Y H:i");
+												$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
+	                                        }*/
+						$tEmail = new cTFiller(PHPGW_SERVER_ROOT);
+						$tEmail->set_filenames( array('admin' => 'sitemgr/templates/joinus/email-to-admin.html', 'user' => 'sitemgr/templates/joinus/email-to-user.html') );
 						
-				}
+						//send email to ADMIN user.				
+						$mailer = new send();
+						$mailer->Subject = "New membership application";  // change it
+						$mailer->Body = $tEmail->pparse('admin');
+						$mailer->From = "messenger@milanin.com";  // change it
+						$mailer->FromName = "Milan IN website";  // change it
+						$mailer->AddAddress($arguments['recepient']);
+						$mailer->Send();
+						$mailer->ClearAddresses();
+						
+						//send email to registered user
+						$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
+						$mailer->Body = $tEmail->pparse('user');
+						$mailer->From = "iscrizioni@milanin.com";  // change it
+						$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
+						$mailer->AddAddress($template->defaults["email"]);
+						$mailer->Send();
+						$mailer->ClearAddresses();
+						
+						$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+					}
+				
+				/*
 				if  (!isset($p_btn_submit) || !empty ($log))
 				{
 				  $prof_profile=explode(",",$arguments['prof_profile']);
@@ -238,8 +161,7 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
                                         }
 				return $content;*/
 				}
-					
-					
+				
 				DebugLog( $template->errorsBlocks);
 			}
 			
@@ -548,6 +470,34 @@ Silvia Lenich\nSegreteria Business Club Milan IN\n";
 			$words['inputValidEmail'] = lang("inputValidEmail");
 			$words['birthInvalid'] = lang("birthInvalid");
 			
+			$words["I_not_donate"] = lang("I won't donate to Milan-IN");
+			$words["I_donate"] = lang("I will donate to Milan-IN");
+			
 			$this->words = $words;
 		}
 	}
+	/*				if (isset($p_ic)){
+                                          mysql_select_db ($arguments['members_db_name']) or die("cannot select db:".mysql_error($mysql_link));
+                                          $invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
+                                          "FROM ".$arguments['members_db_name'].".`".$arguments['invitations_table'].'`i '.
+                                          'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
+                                          'WHERE (i.code =\''.$g_ic.'\')';
+                                          $invite_result=mysql_query ($invite_query, $mysql_link) 
+                                            or die ($invite_query."<br/>".mysql_error($mysql_link));
+                                          $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
+                                          mysql_free_result($invite_result);
+                                          
+                                          if (isset($invitation['ident']))
+										  {
+                                            $p_email=$invitation['email'];
+                                            $remove_invitation_query='DELETE FROM '.$arguments['members_db_name'].".".
+                                                                      $arguments['invitations_table'].
+                                                                     ' WHERE ident='.$invitation['ident'];
+                                          } 
+										  else 
+										  {
+                                            $log.=lang("invitation not found");
+                                          }
+                                }
+*/
+?>
