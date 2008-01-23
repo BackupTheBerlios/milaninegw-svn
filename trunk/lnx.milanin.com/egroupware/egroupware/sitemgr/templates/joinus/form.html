@@ -1,8 +1,19 @@
+<!-- BEGIN REGISTER_COMPLETE -->
+{REGISTER_COMPLETE.JoinUsSuccess}
+<!-- END REGISTER_COMPLETE -->
+
 <!-- BEGIN FORM_ERROR -->
 	<p><font color="#ff0000">{FORM_ERROR.Message}</font></p>
 <!-- END FORM_ERROR -->
 
 <!-- BEGIN FORM -->
+<script>
+function ChangeDonate(chk)
+{
+	var isVisible = (chk.value == 1);
+	document.getElementById("donateBlock").style.display = isVisible ? 'block' : 'none';
+}
+</script>
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
 <table border="0">
@@ -296,12 +307,32 @@
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
 	
-
+	<tr>
+		<th colspan="2">Donate to Milan-IN</th>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+		<input type="radio" name="isdonate" value="0" {FORM.nodonate_CHECKED} onclick="ChangeDonate(this)" /> {FORM.I_not_donate} <br />
+		<input type="radio" name="isdonate" value="1" {FORM.yesdonate_CHECKED} onclick="ChangeDonate(this)" /> {FORM.I_donate} <br />
+		<div style="display:none;padding-left:20px;" id="donateBlock">
+			<input type="radio" name="moneydonate" value="10" /> 10 EUR <br />
+			<input type="radio" name="moneydonate" value="20" /> 20 EUR <br />
+			<input type="radio" name="moneydonate" value="30" /> 30 EUR <br />
+			<input type="radio" name="moneydonate" value="50" /> 50 EUR <br />
+		</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
+	</tr>
+	
 	<tr>
 		<th colspan="2">{FORM.termsacceptance}</th>
 	</tr>
 	<tr>
-		<td>{FORM.privacyterms}</td>
+		<td>{FORM.privacyterms} <br /><a href="privacy.pdf" target="_blank">Read</a></td>
 		<td><input type="checkbox" name="terms_privacy" value="1" {FORM.terms_privacy_CHECKED} />{FORM.accept}
 	</tr>
 	<!-- BEGIN terms_privacy_ErrReq -->
@@ -313,7 +344,7 @@
 	
 	
 	<tr>
-		<td>{FORM.servicesterms}</td>
+		<td>{FORM.servicesterms} <br /><a href="disclaimer.pdf" target="_blank">Read</a></td>
 		<td><input type="checkbox" name="terms_services" value="1" {FORM.terms_services_CHECKED} />{FORM.accept}
 	</tr>
 	<!-- BEGIN terms_services_ErrReq -->
@@ -322,6 +353,9 @@
 		<td class="required">{FORM.terms_services_ErrReq.Message}</td>
 	</tr>
 	<!-- END terms_services_ErrReq -->
+	
+	
+	
 	
 	<tr>
 		<td colspan="2"><input type="submit" class="button" name="btn_submit" value="{FORM.send}"></td>
