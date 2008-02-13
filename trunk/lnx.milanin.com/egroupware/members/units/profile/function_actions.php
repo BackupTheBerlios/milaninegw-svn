@@ -10,6 +10,9 @@
 			if (isset($_POST['profiledetails'])) {
 				db_query("delete from ".tbl_prefix."profile_data where owner = '".$page_owner."' and name != 'linkedin'");
 				foreach($_POST['profiledetails'] as $field => $value) {
+					//veb fix for multi select 
+					if(is_array($value))
+						$value = implode(",", $value);
 
 					if ($value != "") {
 				

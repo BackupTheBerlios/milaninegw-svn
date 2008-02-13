@@ -3,7 +3,20 @@
 	// Initial profile data
 		$data['profile:details'][] = array("Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
 		$data['profile:details'][] = array("Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
-		$data['profile:details'][] = array("Which professional profile better describes you?","professions","GW_dropdown");
+		$data['profile:details'][] = array("Which professional profile better describes you?","prof_profile","GW_dropdown");
+		$data['profile:details'][] = array("Phone Number","phone","text");
+		//should we add email?
+		//membership reason
+		//how did you know
+		$data['profile:details'][] = array("Sex","sex","GW_dropdown");
+		
+		
+		$data['profile:details'][] = array("Profession","professions","GW_GroupCheckBox");
+		
+		
+		
+		
+		
 		
 		
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");

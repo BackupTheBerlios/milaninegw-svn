@@ -38,6 +38,7 @@
 						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
 						$obj = db_query($sql);
 						$arr = explode("\n", $obj[0]->value);
+						$arr = array_map("trim", $arr);
 						if (count($arr) > 0) 
 						{
 							for($i=0; $i<count($arr); $i++) 
@@ -46,6 +47,31 @@
 							}
 						}
 						$run_result .= "</select>";
+						break;
+				case "GW_GroupCheckBox":
+						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
+						$obj = db_query($sql);
+						$arr = explode("\n", $obj[0]->value);
+						$arr = array_map("trim", $arr);
+						$param_arr = explode(",", $parameter[1]);
+						if (count($arr) > 0) 
+						{
+							$run_result .= '<table border="1">';
+							for($i=0; $i<count($arr); $i++) 
+							{
+								if($i % 2 == 0)
+									$run_result .= "<tr>";
+
+								$run_result .= "<td><input type=\"Checkbox\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$parameter[0]."[]\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
+
+								if($i % 2 == 1)
+									$run_result .= "</tr>";
+							}
+							if(count($arr) % 2 == 1)
+								$run_result .= "<td>&nbsp;</td>";
+
+							$run_result .= '</table>';
+						}
 						break;
 				case "text":
 						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".stripslashes($parameter[1])."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
