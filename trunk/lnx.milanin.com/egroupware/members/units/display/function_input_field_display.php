@@ -29,6 +29,24 @@
 			
 			switch($parameter[2]) {
 				
+				case "GW_label":
+						$obj = db_query($parameter[3]);
+						$run_result .= stripslashes($obj[0]->value);
+						break;
+				case "GW_dropdown":
+						$run_result .= "<select name=\"".$parameter[0]."\" id=\"".$parameter[0]."\">";
+						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
+						$obj = db_query($sql);
+						$arr = explode("\n", $obj[0]->value);
+						if (count($arr) > 0) 
+						{
+							for($i=0; $i<count($arr); $i++) 
+							{
+								$run_result .= "<option value=\"$i\"".($i == $parameter[1] ? " selected" : "").">".stripslashes($arr[$i])."</option>";
+							}
+						}
+						$run_result .= "</select>";
+						break;
 				case "text":
 						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".stripslashes($parameter[1])."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
@@ -88,7 +106,8 @@
 								//to sync all rtes, use updateRTEs
 								updateRTE('<?=$parameter[0]?>');
 								//updateRTEs();
-								//alert("rte1 = " + document.elggform.<?=$parameter[0]?>.value);
+								//alert("rte1 = " + document.elggform.
+								//<?=$parameter[0].value);
 								
 								//change the following line to true to submit form
 								return true;

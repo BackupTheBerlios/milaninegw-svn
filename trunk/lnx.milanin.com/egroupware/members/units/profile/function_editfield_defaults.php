@@ -1,7 +1,11 @@
 <?php
 
 	// Initial profile data
-
+		$data['profile:details'][] = array("Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
+		$data['profile:details'][] = array("Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
+		$data['profile:details'][] = array("Which professional profile better describes you?","professions","GW_dropdown");
+		
+		
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
 		$data['profile:details'][] = array("Email address","emailaddress","email");
@@ -11,9 +15,9 @@
 		$data['profile:details'][] = array("Official website address","workweb","web","The URL to your official website, if you have one.");
 		$data['profile:details'][] = array("Personal website address","personalweb","web","The URL to your personal website, if you have one.");
 		$data['profile:details'][] = array("LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
-                $data['profile:details'][] = array("Your ".sitename." Weblog Title","weblog_title","text","The name you give to your weblog");
-                $data['profile:details'][] = array("Your ".sitename." Weblog Description","weblog_description","text","How you describe your weblog");
-                $data['profile:details'][] = array("Your Google Adsense ID (google_ad_client)","google_ad_client","text","The id to use for showing \"My ads\", \"0\" will disable, empty - will show the default site's ads");
+        $data['profile:details'][] = array("Your ".sitename." Weblog Title","weblog_title","text","The name you give to your weblog");
+        $data['profile:details'][] = array("Your ".sitename." Weblog Description","weblog_description","text","How you describe your weblog");
+        $data['profile:details'][] = array("Your Google Adsense ID (google_ad_client)","google_ad_client","text","The id to use for showing \"My ads\", \"0\" will disable, empty - will show the default site's ads");
 		$data['profile:details'][] = array("ICQ number","icq","icq");
 		$data['profile:details'][] = array("MSN chat","msn","msn");
 		$data['profile:details'][] = array("AIM screenname","aim","aim");
