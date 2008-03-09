@@ -62,8 +62,15 @@
 				}
 				else
 				{
-					$template->defaults["account_lid"] = strtolower($template->defaults["name"].".".$template->defaults["surname"]);
-					$template->defaults["account_pwd"] = md5 (strtolower ($template->defaults["name"]) );
+					$template->defaults["account_lid"] = strtolower(
+									preg_replace( '/\s+/' , '' ,$template->defaults["name"]).
+									".".
+									preg_replace( '/\s+/' , '' ,$template->defaults["surname"])
+									);
+					$template->defaults["account_pwd"] = md5 (strtolower (
+										  preg_replace( '/\s+/' , '' ,$template->defaults["name"])
+										 ) 
+									     );
 					$template->defaults["email"] = strtolower($template->defaults["email"]);
 
 					$sqlCommand = new cSqlCommand();
