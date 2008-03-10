@@ -14,8 +14,9 @@
 		$title = run("users:display:name", $page_owner) . " :: Edit profile";
 		
 		$body = run("content:profile:edit");
-		$body .= run("profile:edit");
 		
+		$body .= run("profile:edit");
+		print $body;exit;
 		$body = run("templates:draw", array(
 						'context' => 'infobox',
 						'name' => $title,

@@ -119,4 +119,5 @@
 	{
 		$GLOBALS['phpgw']->common->phpgw_footer();
 	}
+	
 ?>
