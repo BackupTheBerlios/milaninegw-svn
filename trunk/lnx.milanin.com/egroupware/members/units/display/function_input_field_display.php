@@ -53,7 +53,9 @@
 						$obj = db_query($sql);
 						$arr = explode("\n", $obj[0]->value);
 						$arr = array_map("trim", $arr);
-						$param_arr = explode(",", $parameter[1]);
+						
+						$param_arr = $parameter[1] == "" ? array() : explode(",", $parameter[1]);
+						
 						if (count($arr) > 0) 
 						{
 							$run_result .= '<table border="1">';

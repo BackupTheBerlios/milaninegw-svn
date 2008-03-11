@@ -8,17 +8,20 @@
 		//should we add email?
 		//membership reason
 		//how did you know
+		$data['profile:details'][] = array("Your academic degree","ac_degree","GW_dropdown");
+		$data['profile:details'][] = array("Favorite sport","favorite_sport","GW_dropdown");
+		$data['profile:details'][] = array("Industry","industries","GW_GroupCheckBox");
+		$data['profile:details'][] = array("occ_area","occ_areas","GW_GroupCheckBox");
+		$data['profile:details'][] = array("Interests","interests","GW_GroupCheckBox");
 		$data['profile:details'][] = array("Sex","sex","GW_dropdown");
-		
-		
 		$data['profile:details'][] = array("Profession","professions","GW_GroupCheckBox");
+		$data['profile:details'][] = array("Reason for requesting Club Membership","msg","mediumtext","");
+		$data['profile:details'][] = array("City of residence","residence_city","text","");
+		$data['profile:details'][] = array("How did you know about this club?","how_did_u","text","");
 		
 		
 		
-		
-		
-		
-		
+		/*
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
 		$data['profile:details'][] = array("Email address","emailaddress","email");
@@ -50,5 +53,5 @@
 		$data['profile:details'][] = array("University / College","university","text");
 		$data['profile:details'][] = array("Degree","universitydegree","text");
 		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
-		
+		*/
 ?>

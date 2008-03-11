@@ -1,5 +1,11 @@
 <?php
-
+	function DebugLog($object, $responseEnd = false)
+	{
+		print "<pre>";
+		print_r($object);
+		print "</pre>";
+		if($responseEnd) exit;
+	}
 	ini_set("display_errors", "1");
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
@@ -17,20 +23,20 @@
 		                                . "://".$_SERVER['SERVER_NAME']."/members/");
 		// Physical path to the files (eg /home/elggserver/httpdocs/)
 		// NB: **MUST** have a final slash at the end
-			define("path", "/web/htdocs/www.milanin.com/home/members/");
+			define("path", "W:\\home\\mil\\www\\members\\");
 		// Email address of the master admin (eg elgg-admin@bogton.edu)
 			define("email", "webmaster@milanin.com");
 
 	// Database config:
 	
 		// Database server (eg localhost)
-			define("db_server", "127.0.0.1");
+			define("db_server", "localhost:3307");
 		// Database username
-			define("db_user", "");
+			define("db_user", "root");
 		// Database password
-			define("db_pass", "");
+			define("db_pass", "root");
 		// Database name
-			define("db_name", "");
+			define("db_name", "egroupware");
 		// Tables names prefix
                         define("tbl_prefix","members_");
 		// Groupware database name
