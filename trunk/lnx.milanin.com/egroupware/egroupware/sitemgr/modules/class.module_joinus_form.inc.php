@@ -38,7 +38,7 @@
 			$this->description = lang('This module lets users to submit registration form');
 		}
 	
-		function get_content(&$arguments,$properties)
+		function onInitContent(&$arguments, $properties)
 		{
 			$this->DbConnect();
 			$this->GetWords();
@@ -48,132 +48,133 @@
 			$template->set_filenames( array('form' => 'sitemgr/templates/joinus/form.html') );
 			$template->CollectPostedData($this->formCfg, false, false);
 			
+			return $template;
+		}
+		
+		function getNewUniqueId($template)
+		{
+			$sqlCommand = new cSqlCommand();
+			$sqlCommand->SetValuesViaConfig($this->formCfg, $template->defaults);
+			$sqlCommand->AddColumnValue("account_type", "u");
+			$sqlCommand->AddColumnValue("account_primary_group", 8);
+			$sqlCommand->AddColumnValue("account_expires", -1);
+			$sqlCommand->AddColumnValue("person_id", 0);
+			$sqlCommand->AddColumnValue("account_status", '');
+			$sqlCommand->AddColumnValue("account_membership_date", date("Y-m-d"));
+			
+			$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
+			$res = mysql_query ($sql, $this->mysql_link);
+			$userID =  mysql_insert_id($this->mysql_link);
+			return $userID;
+		}
+		
+		function setPrivilegesToNewUser($user_id, $template)
+		{
+			//set privileges
+			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',8,".$user_id.",1)";
+			$res = mysql_query ($sql, $this->mysql_link);
+			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',18,".$user_id.",1)";
+			$res = mysql_query ($sql, $this->mysql_link);
+			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('preferences','changepassword',".$user_id.",1)";
+			$res = mysql_query ($sql, $this->mysql_link);
+			$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
+			$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
+				   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
+				   '".$template->defaults["email"]."', '".$template->defaults["account_pwd"]."', '".$template->defaults["name"]." ".$template->defaults["surname"]."', $users_opt, $user_id)";
+			$res = mysql_query ($sql, $this->mysql_link);
+		}
+		
+		function getNewElggUniqueId($userID, $template)
+		{
+			/*begin: block adds a member to eLgg*/
+			$cmd = new cSqlCommand();
+			$cmd->AddColumnValue("username", $template->defaults["account_lid"]);
+			$cmd->AddColumnValue("password", $template->defaults["account_pwd"]);
+			$cmd->AddColumnValue("email", $template->defaults["email"]);
+			$cmd->AddColumnValue("name", ucwords(strtolower($template->defaults["name"]." ".$template->defaults["surname"])) );
+			$sql = $cmd->PrepareInsertSQL("members_users");
+			
+			$res = mysql_query ($sql, $this->mysql_link);
+			$elggUserID =  mysql_insert_id($this->mysql_link);
+			return $elggUserID;
+			/*end: block adds a member to eLgg*/
+		}
+		
+		function appendElggProfileData($elggUserID, $template)
+		{
+			$cmd = new cSqlCommand();
+			
+			$cmd->AddColumnValue("owner", $elggUserID);
+			$cmd->AddColumnValue("access", 'LOGGED_IN');
+			$cmd->AddColumnValue("name", 'xxx');
+			$cmd->AddColumnValue("value", 'xxx');
+			$sql = $cmd->PrepareInsertSQL("members_profile_data");
+			$res = mysql_query ($sql, $this->mysql_link);
+		}
+		
+		function get_content(&$arguments, $properties)
+		{
+			$template = $this->onInitContent(&$arguments, $properties);
 			if ( count($_POST) > 0 )
 			{
 				$template->CollectPostedData($this->formCfg, true, false);
+				$template->defaults["account_lid"] = strtolower(trim($template->defaults["name"]).".".trim($template->defaults["surname"]) );
+				$template->defaults["account_pwd"] = md5 (strtolower ( trim($template->defaults["name"]) ) );
+				$template->defaults["email"] = strtolower($template->defaults["email"]);
+				//begin: Validation block
+				
 				$template->ValidatePostedData($this->formCfg, true);
 				if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
 					{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
-				
-				//add account validation!!!!!!!!!!!
 				if($template->HasValidationErrors())
 				{
 					$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
 				}
 				else
 				{
-					$template->defaults["account_lid"] = strtolower(
-									preg_replace( '/\s+/' , '' ,$template->defaults["name"]).
-									".".
-									preg_replace( '/\s+/' , '' ,$template->defaults["surname"])
-									);
-					$template->defaults["account_pwd"] = md5 (strtolower (
-										  preg_replace( '/\s+/' , '' ,$template->defaults["name"])
-										 ) 
-									     );
-					$template->defaults["email"] = strtolower($template->defaults["email"]);
-
-					$sqlCommand = new cSqlCommand();
-					$sqlCommand->SetValuesViaConfig($this->formCfg, $template->defaults);
-					$sqlCommand->AddColumnValue("account_type", "u");
-					$sqlCommand->AddColumnValue("account_primary_group", 8);
-					$sqlCommand->AddColumnValue("account_expires", -1);
-					$sqlCommand->AddColumnValue("person_id", 0);
-					$sqlCommand->AddColumnValue("account_status", '');
-					$sqlCommand->AddColumnValue("account_membership_date", 'CURDATE()');
-					
-					
-					$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
-					$res = mysql_query ($sql, $this->mysql_link);
-					$user_id =  mysql_insert_id($this->mysql_link);
-					
-					//set privileges
-					$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',8,".$user_id.",1)";
-					$res = mysql_query ($sql, $this->mysql_link);
-					$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',18,".$user_id.",1)";
-					$res = mysql_query ($sql, $this->mysql_link);
-					$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('preferences','changepassword',".$user_id.",1)";
-					$res = mysql_query ($sql, $this->mysql_link);
-					$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
-					$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
-						   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
-						   '".$template->defaults["email"]."', '".$template->defaults["account_pwd"]."', '".$template->defaults["name"]." ".$template->defaults["surname"]."', $users_opt, $user_id)";
-					$res = mysql_query ($sql, $this->mysql_link);
-
-					if(!$template->HasValidationErrors())
+					$userID = $this->getNewUniqueId($template);
+					if($userID == 0)
 					{
-						/*if ($remove_invitation_query != ""){
-	                                          $result = mysql_query ($remove_invitation_query, $mysql_link) 
-	                                          or die ($remove_invitation_query."<br/>".mysql_error($mysql_link)); $date = date("d.m.Y H:i");
-												$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
-	                                        }*/
-						$tEmail = new cTFiller(PHPGW_SERVER_ROOT);
-						$tEmail->set_filenames( array('admin' => 'sitemgr/templates/joinus/email-to-admin.html', 'user' => 'sitemgr/templates/joinus/email-to-user.html') );
-						
-						//send email to ADMIN user.				
-						$mailer = new send();
-						$mailer->Subject = "New membership application";  // change it
-						$mailer->Body = $tEmail->pparse('admin');
-						$mailer->From = "messenger@milanin.com";  // change it
-						$mailer->FromName = "Milan IN website";  // change it
-						$mailer->AddAddress($arguments['recepient']);
-						$mailer->Send();
-						$mailer->ClearAddresses();
-						
-						//send email to registered user
-						$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
-						$mailer->Body = $tEmail->pparse('user');
-						$mailer->From = "iscrizioni@milanin.com";  // change it
-						$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
-						$mailer->AddAddress($template->defaults["email"]);
-						$mailer->Send();
-						$mailer->ClearAddresses();
-						
-						$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+						$template->assign_block_vars("UNIQUE_ERROR", array("Message"=> $this->words['uniqueError']) );
 					}
-				
-				/*
-				if  (!isset($p_btn_submit) || !empty ($log))
-				{
-				  $prof_profile=explode(",",$arguments['prof_profile']);
-		          $content .= '';
-				  $content .= "<p class='error'>$log </p>";
-                                        if (isset($g_ic)){
-                                          $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
-                                          $GLOBALS['phpgw_domain']['default']['db_user'],
-                                          $GLOBALS['phpgw_domain']['default']['db_pass']) 
-                                          or die( "Unable to connect to SQL server");
-					mysql_select_db ($arguments['members_db_name']) or die(mysql_error());
-					$invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
-                                        "FROM `".$arguments['invitations_table'].'`i '.
-                                        'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
-                                        'WHERE (i.code =\''.$g_ic.'\')';
-                                        $invite_result=mysql_query ($invite_query, $mysql_link) 
-                                          or die ($invite_query."<br/>".mysql_error($mysql_link));
-                                        $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
-                                        mysql_free_result($invite_result);
-                                        
-                                        if (isset($invitation['ident'])){
-                                          
-                                          $content .= '<p><h3>'.lang('invitation found').': '.lang('from').
-                                            ' <a href="/members/'.$invitation['account_lid'].'">'.
-                                            $invitation['inviter'].'</a> '.
-                                            lang('to').' <b>'.$invitation['name'].'</b></h3></p>';
-                                          
-                                          $content .= '<input name="ic" value="'.$invitation['code'].'" type="hidden" />';
-					}else{
-                                            $content.='<h3><font color="red">'.lang('invitation not found').'</font></h3>';
-                                          }
-                                        }  
-                                        }
-				return $content;*/
+					else
+					{
+						$this->setPrivilegesToNewUser($userID, $template);
+						$elggUserID = $this->getNewElggUniqueId($userID, $template);
+						$this->appendElggProfileData($elggUserID, $template);
+						$this->SendRegistrationEmail();
+						//$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+					}
 				}
-				
-				DebugLog( $template->errorsBlocks);
+				//end:   Validation block
 			}
-			
 			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
 			return $template->pparse('form');
+		}
+		
+		function SendRegistrationEmail($arguments, $template)
+		{
+			$tEmail = new cTFiller(PHPGW_SERVER_ROOT);
+			$tEmail->set_filenames( array('admin' => 'sitemgr/templates/joinus/email-to-admin.html', 'user' => 'sitemgr/templates/joinus/email-to-user.html') );
+			
+			//send email to ADMIN user.				
+			$mailer = new send();
+			$mailer->Subject = "New membership application";  // change it
+			$mailer->Body = $tEmail->pparse('admin');
+			$mailer->From = "messenger@milanin.com";  // change it
+			$mailer->FromName = "Milan IN website";  // change it
+			$mailer->AddAddress($arguments['recepient']);
+			$mailer->Send();
+			$mailer->ClearAddresses();
+			
+			//send email to registered user
+			$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
+			$mailer->Body = $tEmail->pparse('user');
+			$mailer->From = "iscrizioni@milanin.com";  // change it
+			$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
+			$mailer->AddAddress($template->defaults["email"]);
+			$mailer->Send();
+			$mailer->ClearAddresses();
 		}
 		
 		function DbConnect()
@@ -196,8 +197,8 @@
 		function FormConfig($arguments)
 		{
 			$countries = $this->GetMySQLArray("SELECT data from other_data where name='countries_list'");
-			$sports = $this->GetMySQLArray("SELECT data from other_data where name='sports' and lang='".$GLOBALS['page']->lang."'");
-			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='hobbies' and lang='".$GLOBALS['page']->lang."'");
+			$sports = $this->GetMySQLArray("SELECT data from other_data where name='favorite_sport' and lang='".$GLOBALS['page']->lang."'");
+			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='interests' and lang='".$GLOBALS['page']->lang."'");
             $industries = $this->GetMySQLArray("SELECT data from other_data where name='industries' and lang='".$GLOBALS['page']->lang."'");
             $professions = $this->GetMySQLArray("SELECT data from other_data where name='professions' and lang='".$GLOBALS['page']->lang."'");
             $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$GLOBALS['page']->lang."'");
@@ -430,7 +431,7 @@
 																"checked_value" => 'checked',
 																"use_html_replace" => false,
 																"colCount" => 2
-																),		
+																),
 																
 													  )
 									);
@@ -479,6 +480,7 @@
 			
 			$words["I_not_donate"] = lang("I won't donate to Milan-IN");
 			$words["I_donate"] = lang("I will donate to Milan-IN");
+			$words['uniqueError'] = lang("User with same id already exists");
 			
 			$this->words = $words;
 		}
@@ -506,5 +508,49 @@
                                             $log.=lang("invitation not found");
                                           }
                                 }
+								
+								
+								
+								/*
+				if  (!isset($p_btn_submit) || !empty ($log))
+				{
+				  $prof_profile=explode(",",$arguments['prof_profile']);
+		          $content .= '';
+				  $content .= "<p class='error'>$log </p>";
+                                        if (isset($g_ic)){
+                                          $mysql_link = mysql_connect($GLOBALS['phpgw_domain']['default']['db_host'],
+                                          $GLOBALS['phpgw_domain']['default']['db_user'],
+                                          $GLOBALS['phpgw_domain']['default']['db_pass']) 
+                                          or die( "Unable to connect to SQL server");
+					mysql_select_db ($arguments['members_db_name']) or die(mysql_error());
+					$invite_query="SELECT i.*,concat(a.account_firstname,' ',a.account_lastname) as inviter,a.account_lid ".
+                                        "FROM `".$arguments['invitations_table'].'`i '.
+                                        'join '.$GLOBALS['phpgw_domain']['default']['db_name'].'.phpgw_accounts a on i.owner=a.account_id '.
+                                        'WHERE (i.code =\''.$g_ic.'\')';
+                                        $invite_result=mysql_query ($invite_query, $mysql_link) 
+                                          or die ($invite_query."<br/>".mysql_error($mysql_link));
+                                        $invitation=mysql_fetch_array($invite_result, MYSQL_BOTH);
+                                        mysql_free_result($invite_result);
+                                        
+                                        if (isset($invitation['ident'])){
+                                          
+                                          $content .= '<p><h3>'.lang('invitation found').': '.lang('from').
+                                            ' <a href="/members/'.$invitation['account_lid'].'">'.
+                                            $invitation['inviter'].'</a> '.
+                                            lang('to').' <b>'.$invitation['name'].'</b></h3></p>';
+                                          
+                                          $content .= '<input name="ic" value="'.$invitation['code'].'" type="hidden" />';
+					}else{
+                                            $content.='<h3><font color="red">'.lang('invitation not found').'</font></h3>';
+                                          }
+                                        }  
+                                        }
+				return $content;
+				
+				/*if ($remove_invitation_query != ""){
+	                                          $result = mysql_query ($remove_invitation_query, $mysql_link) 
+	                                          or die ($remove_invitation_query."<br/>".mysql_error($mysql_link)); $date = date("d.m.Y H:i");
+												$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
+	                                        }
 */
 ?>
