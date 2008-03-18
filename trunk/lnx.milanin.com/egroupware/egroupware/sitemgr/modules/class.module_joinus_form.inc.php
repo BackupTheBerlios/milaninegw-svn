@@ -100,16 +100,98 @@
 			/*end: block adds a member to eLgg*/
 		}
 		
-		function appendElggProfileData($elggUserID, $template)
+		function DoELggInsert($elggUserID, $accessMask, $columnName, $columnValue)
 		{
 			$cmd = new cSqlCommand();
-			
 			$cmd->AddColumnValue("owner", $elggUserID);
-			$cmd->AddColumnValue("access", 'LOGGED_IN');
-			$cmd->AddColumnValue("name", 'xxx');
-			$cmd->AddColumnValue("value", 'xxx');
+			$cmd->AddColumnValue("access", $accessMask); //
+			$cmd->AddColumnValue("name", $columnName);
+			$cmd->AddColumnValue("value", $columnValue);
 			$sql = $cmd->PrepareInsertSQL("members_profile_data");
 			$res = mysql_query ($sql, $this->mysql_link);
+		}
+		
+		function appendElggProfileData($elggUserID, $template)
+		{
+			$cfg = $this->formCfg;
+			//insert eLgg fields values.
+			while ( is_array($cfg["fields"]) && list($field, $ctrlCfg) = each($cfg["fields"]))
+			{
+				if($ctrlCfg["eLggExternal"] === true)
+				{
+					$this->DoELggInsert($elggUserID, 'LOGGED_IN', $ctrlCfg["control_id"], $template->defaults[$ctrlCfg["control_id"]]);
+				}
+			}
+			
+			if(is_array($cfg["lists"])) reset($cfg["lists"]);
+			while ( is_array($cfg["lists"]) && list($cfgKey, $ctrlCfg) = each($cfg["lists"]))
+			{
+				if($ctrlCfg["eLggExternal"] === true)
+				{
+					$arr = array();
+					if(is_array($ctrlCfg["source"]))
+						$arr = $ctrlCfg["source"];
+					elseif(function_exists ($ctrlCfg["source"]))
+						$arr = call_user_func($ctrlCfg["source"]);
+					elseif( strtolower(substr($ctrlCfg["source"], 0, 7)) == 'select ')
+					{
+						if($this->mysql_link != null)
+						{
+							if($res = mysql_query ($ctrlCfg["source"], $this->mysql_link))
+							while($rs = mysql_fetch_row($res))
+								$arr[ $rs[0] ] = $rs[1];
+						}
+						else
+						{
+							if($res = $db->sql_query($ctrlCfg["source"]))
+							while($rs = $db->sql_fetchrow($res))
+								$arr[ $rs[0] ] = $rs[1];
+						}
+					}//end get array bind values.
+					$value = $template->defaults[$ctrlCfg["control_id"]];
+					if(is_array($value))
+						$value = implode(",", $value);
+					//DebugLog($value);
+					$this->DoELggInsert($elggUserID, 'LOGGED_IN', $ctrlCfg["control_id"], $value);
+				}
+			}//end list while
+		}
+		
+		function setUserUID($name, $surname)
+		{
+			$result = "";
+			$name = strtolower($name);
+			$name = preg_replace("/[^A-Za-z]/", "", $name);
+			
+			$surname = strtolower($surname);
+			$surname = preg_replace("/[^A-Za-z]/", "", $surname);
+			
+			$result = $name.".".$surname;
+
+			return $result;
+		}
+		
+		function getRandomPwd($count=8)
+		{
+		 mt_srand((double)microtime()*1000000);
+		 $key = "";
+		 for ($i=0; $i<$count; $i++)
+		 {
+   			$c = mt_rand(0,2);
+		    if ($c==0)
+		    {
+		      $key .= chr(mt_rand(65,90));
+		    }
+		    elseif ($c==1)
+		    {
+		     $key .= chr(mt_rand(97,122));
+		    }
+		    else
+		    {
+		      $key .= mt_rand(0,9);
+		    }
+		 }
+		 return $key;
 		}
 		
 		function get_content(&$arguments, $properties)
@@ -118,8 +200,12 @@
 			if ( count($_POST) > 0 )
 			{
 				$template->CollectPostedData($this->formCfg, true, false);
-				$template->defaults["account_lid"] = strtolower(trim($template->defaults["name"]).".".trim($template->defaults["surname"]) );
-				$template->defaults["account_pwd"] = md5 (strtolower ( trim($template->defaults["name"]) ) );
+				$template->defaults["name"] = trim($template->defaults["name"]);
+				$template->defaults["surname"] = trim($template->defaults["surname"]);
+
+				$template->defaults["account_lid"] = $this->setUserUID($template->defaults["name"], $template->defaults["surname"]);
+				$template->defaults["pwd"] = $this->getRandomPwd();
+				$template->defaults["account_pwd"] = md5 ( $template->defaults["pwd"] );
 				$template->defaults["email"] = strtolower($template->defaults["email"]);
 				//begin: Validation block
 				
@@ -142,7 +228,7 @@
 						$this->setPrivilegesToNewUser($userID, $template);
 						$elggUserID = $this->getNewElggUniqueId($userID, $template);
 						$this->appendElggProfileData($elggUserID, $template);
-						$this->SendRegistrationEmail();
+						$this->SendRegistrationEmail($arguments, $template);
 						//$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
 					}
 				}
@@ -237,11 +323,11 @@
 																	  "required_message" => $this->words['thisRequired'],
 																	  "DbField" => "account_lastname"
 																	  ),
-													 "url" =>
-																array("control_id" => "url",
+													 "linkedin" =>
+																array("control_id" => "linkedin",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
-																	  "required" => false,
+																	  "required" => true,
 																	  "required_message" => ""
 																	  ),
 													"phone" =>
@@ -261,12 +347,13 @@
 																	  "validator_message" => $this->words['inputValidEmail'],
 																	  "DbField" => "account_email"
 																	  ),
-								  					"msg" =>
-																array("control_id" => "msg",
+								  					"requestReason" =>
+																array("control_id" => "requestReason",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => $this->words['thisRequired']
+																	  "required_message" => $this->words['thisRequired'],
+																	  "eLggExternal" => true
 																	  ),
 													"birth_d" =>
 																array("control_id" => "birth_d",
@@ -294,7 +381,8 @@
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
-																	  "required_message" => ""
+																	  "required_message" => "",
+																	  "eLggExternal" => true
 																	  ),
 													"terms_privacy" =>
 																array("control_id" => "terms_privacy", 
@@ -317,22 +405,26 @@
 														"prof_profile" => array(
 																"control_id" => "prof_profile",
 																"control_type" => "DDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $prof_profile,
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => true
+																"use_html_replace" => true,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 														"how_did_u" => array(
 																"control_id" => "how_did_u",
 																"control_type" => "DDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> explode(",", $arguments['how_did_u']),
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 														"sex" => array(
 																"control_id" => "sex",
@@ -342,7 +434,9 @@
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> array("1"=>$this->words['female'], "2"=>$this->words['male']),
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 														"languages" => array(
 																"control_id" => "languages",
@@ -368,69 +462,81 @@
 														"ac_degree" => array(
 																"control_id" => "ac_degree",
 																"control_type" => "DDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $ac_degree,
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 														"favorite_sport" => array(
 																"control_id" => "favorite_sport",
 																"control_type" => "DDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => false,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $sports,
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 																
 														"interests" => array(
 																"control_id" => "interests",
 																"control_type" => "MDDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => false,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $hobbies,
 																"checked_value" => 'checked',
 																"use_html_replace" => false,
-																"colCount" => 2
+																"colCount" => 2,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 														"industries" => array(
 																"control_id" => "industries",
 																"control_type" => "MDDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $industries,
 																"checked_value" => 'checked',
 																"use_html_replace" => false,
-																"colCount" => 2
+																"colCount" => 2,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 																
 														"professions" => array(
 																"control_id" => "professions",
 																"control_type" => "MDDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $professions,
 																"checked_value" => 'checked',
 																"use_html_replace" => false,
-																"colCount" => 2
+																"colCount" => 2,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 																
 														"occ_areas" => array(
 																"control_id" => "occ_areas",
 																"control_type" => "MDDL",
-																"use_key" => false,
+																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $occ_areas,
 																"checked_value" => 'checked',
 																"use_html_replace" => false,
-																"colCount" => 2
+																"colCount" => 2,
+																"eLggExternal" => true,
+																"default_value" => -1
 																),
 																
 													  )

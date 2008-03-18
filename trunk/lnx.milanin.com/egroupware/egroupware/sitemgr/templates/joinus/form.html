@@ -22,6 +22,11 @@ function ChangeDonate(chk)
 <form name="joinus" method="post" action="">
 <table border="0">
 	<tr>
+		<td>UID<font color="red">:</font> </td>
+		<td>{FORM.account_lid_VALUE}</td>
+	</tr>
+	
+	<tr>
 		<td>{FORM.Name}<font color="red">*</font> </td>
 		<td><input type="text" name="name" value="{FORM.name_VALUE}"></td>
 	</tr>
@@ -47,7 +52,7 @@ function ChangeDonate(chk)
 		<td>{FORM.ProfessionalProfile}<font color="red">*</font></td>
 		<td>
 		<select name="prof_profile" {FORM.prof_profile_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN prof_profile -->
 			<option value="{FORM.prof_profile.VALUE}" {FORM.prof_profile.CHECKED}>{FORM.prof_profile.TEXT}</option>
 			<!-- END prof_profile -->
@@ -63,7 +68,7 @@ function ChangeDonate(chk)
 	
 	<tr>
 		<td><a href="#linkedin_url">{FORM.LinkedinProfile}</a></td>
-		<td><input type="text" name="url" value="{FORM.url_VALUE}"></td>
+		<td><input type="text" name="linkedin" value="{FORM.linkedin_VALUE}"></td>
 	</tr>
 	
 	<tr>
@@ -90,7 +95,7 @@ function ChangeDonate(chk)
 
 	<tr>
 		<td>{FORM.requestingReason}<font color="red">*</font></td>
-		<td><textarea name="msg" rows="10">{FORM.msg_VALUE}</textarea></td>
+		<td><textarea name="requestReason" rows="10">{FORM.requestReason_VALUE}</textarea></td>
 	</tr>
 	<!-- BEGIN msg_ErrReq -->
 	<tr>
@@ -103,7 +108,7 @@ function ChangeDonate(chk)
 		<td>{FORM.howknow}<font color="red">*</font></td>
 		<td>
 		<select name="how_did_u" {FORM.how_did_u_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN how_did_u -->
 			<option value="{FORM.how_did_u.VALUE}" {FORM.how_did_u.CHECKED}>{FORM.how_did_u.TEXT}</option>
 			<!-- END how_did_u -->
