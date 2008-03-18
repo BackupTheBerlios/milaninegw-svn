@@ -1,8 +1,8 @@
 <?php
 
 	global $page_owner;
-
-	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin' ) {
+	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin') 
+	{
 		$value = db_query("select * from ".tbl_prefix."profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
 		$value = $value[0];
 		
@@ -22,9 +22,13 @@ END;
 		}
 		
 		$column1 = run("display:input_field",array("profiledetails[" . $parameter[1] . "]",$value->value,$parameter[2],$parameter[1],$value->ident,$page_owner));
-
-		$column2 = "<label>Access level:";
-		$column2 .= run("display:access_level_select",array("profileaccess[".$parameter[1] . "]",$value->access)) . "</label>";
+		
+		$column2 = "";
+		if($parameter[2] != "HR")
+		{
+			$column2 = "<label>Access level:";
+			$column2 .= run("display:access_level_select",array("profileaccess[".$parameter[1] . "]",$value->access)) . "</label>";
+		}
 		
 		$run_result .= run("templates:draw", array(
 							'context' => 'databox',
@@ -35,5 +39,4 @@ END;
 						);
 		
 	}
-
 ?>

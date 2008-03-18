@@ -33,12 +33,19 @@
 						$obj = db_query($parameter[3]);
 						$run_result .= stripslashes($obj[0]->value);
 						break;
+				case "HR":
+						$run_result .= '<hr color="red" height="1">';
+						break;
+						
 				case "GW_dropdown":
 						$run_result .= "<select name=\"".$parameter[0]."\" id=\"".$parameter[0]."\">";
 						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
 						$obj = db_query($sql);
 						$arr = explode("\n", $obj[0]->value);
 						$arr = array_map("trim", $arr);
+						
+						$run_result .= "<option value=\"-1\""."></option>";
+						
 						if (count($arr) > 0) 
 						{
 							for($i=0; $i<count($arr); $i++) 
