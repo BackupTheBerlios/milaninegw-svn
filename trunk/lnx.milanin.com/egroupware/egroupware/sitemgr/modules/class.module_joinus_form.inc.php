@@ -157,15 +157,26 @@
 			}//end list while
 		}
 		
+		function ModifyStringForUID($value)
+		{
+			$value = strtolower($value);
+			$chrs = 	array( "/".chr(236)."/", "/".chr(232)."/", "/".chr(249)."/", "/".chr(237)."/", "/".chr(243)."/",
+							   "/".chr(242)."/", "/".chr(224)."/", "/".chr(233)."/", "/".chr(231)."/", "/".chr(225)."/", "/".chr(250)."/");
+							   
+			$rChrs = 	array( "i", "e", "u", "i", "o",
+							   "o", "a", "e", "c", "a", "u" );
+			
+			$value = preg_replace($chrs, $rChrs, $value);
+
+			$value = preg_replace("/[^A-Za-z]/", "", $value);
+			
+			return $value;
+		}
 		function setUserUID($name, $surname)
 		{
 			$result = "";
-			$name = strtolower($name);
-			$name = preg_replace("/[^A-Za-z]/", "", $name);
-			
-			$surname = strtolower($surname);
-			$surname = preg_replace("/[^A-Za-z]/", "", $surname);
-			
+			$name = $this->ModifyStringForUID($name);
+			$surname = $this->ModifyStringForUID($surname);
 			$result = $name.".".$surname;
 
 			return $result;
