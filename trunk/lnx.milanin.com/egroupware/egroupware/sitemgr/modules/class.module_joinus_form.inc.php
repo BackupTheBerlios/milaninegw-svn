@@ -157,7 +157,7 @@
 			}//end list while
 		}
 		
-		function ModifyStringForUID($value)
+		function ModifyStringForUID($value, &$template, $blockError)
 		{
 			$value = strtolower($value);
 			$chrs = 	array( "/".chr(236)."/", "/".chr(232)."/", "/".chr(249)."/", "/".chr(237)."/", "/".chr(243)."/",
@@ -168,15 +168,22 @@
 			
 			$value = preg_replace($chrs, $rChrs, $value);
 
-			$value = preg_replace("/[^A-Za-z]/", "", $value);
-			
+			$tmp = preg_replace("/[^A-Za-z]/", "", $value);
+			if($tmp != $value)
+			{
+				$template->errorsBlocks[$blockError."_ErrRule"] = $this->words['invalidLetters'];
+				
+			}
+			$value = $tmp;
 			return $value;
 		}
-		function setUserUID($name, $surname)
+		
+		function setUserUID(&$template)
 		{
+			//, , 
 			$result = "";
-			$name = $this->ModifyStringForUID($name);
-			$surname = $this->ModifyStringForUID($surname);
+			$name = $this->ModifyStringForUID($template->defaults["name"], &$template, "name");
+			$surname = $this->ModifyStringForUID($template->defaults["surname"], &$template, "surname");
 			$result = $name.".".$surname;
 
 			return $result;
@@ -214,13 +221,13 @@
 				$template->defaults["name"] = trim($template->defaults["name"]);
 				$template->defaults["surname"] = trim($template->defaults["surname"]);
 
-				$template->defaults["account_lid"] = $this->setUserUID($template->defaults["name"], $template->defaults["surname"]);
 				$template->defaults["pwd"] = $this->getRandomPwd();
 				$template->defaults["account_pwd"] = md5 ( $template->defaults["pwd"] );
 				$template->defaults["email"] = strtolower($template->defaults["email"]);
 				//begin: Validation block
-				
 				$template->ValidatePostedData($this->formCfg, true);
+				$template->defaults["account_lid"] = $this->setUserUID(&$template);
+				
 				if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
 					{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
 				if($template->HasValidationErrors())
@@ -598,6 +605,7 @@
 			$words["I_not_donate"] = lang("I won't donate to Milan-IN");
 			$words["I_donate"] = lang("I will donate to Milan-IN");
 			$words['uniqueError'] = lang("User with same id already exists");
+			$words['invalidLetters'] = lang("Please type your name in plain English");
 			
 			$this->words = $words;
 		}
