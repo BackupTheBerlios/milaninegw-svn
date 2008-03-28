@@ -36,8 +36,14 @@
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
 			$this->description = lang('This module lets users to submit registration form');
+			$this->debug = false;
 		}
 	
+		function IsDebug()
+		{
+			return ($this->debug === true);
+		}
+		
 		function onInitContent(&$arguments, $properties)
 		{
 			$this->DbConnect();
@@ -61,27 +67,40 @@
 			$sqlCommand->AddColumnValue("person_id", 0);
 			$sqlCommand->AddColumnValue("account_status", '');
 			$sqlCommand->AddColumnValue("account_membership_date", date("Y-m-d"));
+			$sqlCommand->AddColumnValue("account_linkedin", $template->defaults["linkedin"]);
 			
 			$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
-			$res = mysql_query ($sql, $this->mysql_link);
-			$userID =  mysql_insert_id($this->mysql_link);
+			if(!$this->IsDebug())
+			{
+				$res = mysql_query ($sql, $this->mysql_link);
+				$userID =  mysql_insert_id($this->mysql_link);
+			}
+			else
+			{
+				DebugLog($sql);
+				return 666;
+			}
+			
 			return $userID;
 		}
 		
 		function setPrivilegesToNewUser($user_id, $template)
 		{
 			//set privileges
-			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',8,".$user_id.",1)";
-			$res = mysql_query ($sql, $this->mysql_link);
-			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',18,".$user_id.",1)";
-			$res = mysql_query ($sql, $this->mysql_link);
-			$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('preferences','changepassword',".$user_id.",1)";
-			$res = mysql_query ($sql, $this->mysql_link);
-			$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
-			$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
-				   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
-				   '".$template->defaults["email"]."', '".$template->defaults["account_pwd"]."', '".$template->defaults["name"]." ".$template->defaults["surname"]."', $users_opt, $user_id)";
-			$res = mysql_query ($sql, $this->mysql_link);
+			if(!$this->IsDebug())
+			{
+				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',8,".$user_id.",1)";
+				$res = mysql_query ($sql, $this->mysql_link);
+				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',18,".$user_id.",1)";
+				$res = mysql_query ($sql, $this->mysql_link);
+				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('preferences','changepassword',".$user_id.",1)";
+				$res = mysql_query ($sql, $this->mysql_link);
+				$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
+				$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
+					   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
+					   '".$template->defaults["email"]."', '".$template->defaults["account_pwd"]."', '".$template->defaults["name"]." ".$template->defaults["surname"]."', $users_opt, $user_id)";
+				$res = mysql_query ($sql, $this->mysql_link);
+			}
 		}
 		
 		function getNewElggUniqueId($userID, $template)
@@ -91,11 +110,19 @@
 			$cmd->AddColumnValue("username", $template->defaults["account_lid"]);
 			$cmd->AddColumnValue("password", $template->defaults["account_pwd"]);
 			$cmd->AddColumnValue("email", $template->defaults["email"]);
+			
 			$cmd->AddColumnValue("name", ucwords(strtolower($template->defaults["name"]." ".$template->defaults["surname"])) );
 			$sql = $cmd->PrepareInsertSQL("members_users");
-			
-			$res = mysql_query ($sql, $this->mysql_link);
-			$elggUserID =  mysql_insert_id($this->mysql_link);
+			if(!$this->IsDebug())
+			{
+				$res = mysql_query ($sql, $this->mysql_link);
+				$elggUserID =  mysql_insert_id($this->mysql_link);
+			}
+			else
+			{
+				DebugLog($sql);
+				return 666;
+			}
 			return $elggUserID;
 			/*end: block adds a member to eLgg*/
 		}
@@ -108,7 +135,15 @@
 			$cmd->AddColumnValue("name", $columnName);
 			$cmd->AddColumnValue("value", $columnValue);
 			$sql = $cmd->PrepareInsertSQL("members_profile_data");
-			$res = mysql_query ($sql, $this->mysql_link);
+			if(!$this->IsDebug())
+			{
+				$res = mysql_query ($sql, $this->mysql_link);
+			}
+			else
+			{
+				DebugLog($sql);
+				return 666;
+			}
 		}
 		
 		function appendElggProfileData($elggUserID, $template)
@@ -119,7 +154,7 @@
 			{
 				if($ctrlCfg["eLggExternal"] === true)
 				{
-					$this->DoELggInsert($elggUserID, 'LOGGED_IN', $ctrlCfg["control_id"], $template->defaults[$ctrlCfg["control_id"]]);
+					$this->DoELggInsert($elggUserID, $ctrlCfg["eLggPublic"] === true ? 'PUBLIC' : 'LOGGED_IN', $ctrlCfg["control_id"], $template->defaults[$ctrlCfg["control_id"]]);
 				}
 			}
 			
@@ -152,7 +187,7 @@
 					if(is_array($value))
 						$value = implode(",", $value);
 					//DebugLog($value);
-					$this->DoELggInsert($elggUserID, 'LOGGED_IN', $ctrlCfg["control_id"], $value);
+					$this->DoELggInsert($elggUserID, $ctrlCfg["eLggPublic"] === true ? 'PUBLIC' : 'LOGGED_IN', $ctrlCfg["control_id"], $value);
 				}
 			}//end list while
 		}
@@ -212,24 +247,34 @@
 		 return $key;
 		}
 		
+		function OnPostData(&$template)
+		{
+			$template->defaults["name"] = ucwords(trim($template->defaults["name"]));
+			$template->defaults["surname"] = ucwords(trim($template->defaults["surname"]));
+			 
+			$template->defaults["pwd"] = $this->getRandomPwd();
+			$template->defaults["account_pwd"] = md5 ( $template->defaults["pwd"] );
+			$template->defaults["email"] = strtolower($template->defaults["email"]);
+		}
+		
 		function get_content(&$arguments, $properties)
 		{
 			$template = $this->onInitContent(&$arguments, $properties);
 			if ( count($_POST) > 0 )
 			{
 				$template->CollectPostedData($this->formCfg, true, false);
-				$template->defaults["name"] = trim($template->defaults["name"]);
-				$template->defaults["surname"] = trim($template->defaults["surname"]);
-
-				$template->defaults["pwd"] = $this->getRandomPwd();
-				$template->defaults["account_pwd"] = md5 ( $template->defaults["pwd"] );
-				$template->defaults["email"] = strtolower($template->defaults["email"]);
+				$this->OnPostData(&$template);
 				//begin: Validation block
 				$template->ValidatePostedData($this->formCfg, true);
+				
 				$template->defaults["account_lid"] = $this->setUserUID(&$template);
 				
 				if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
 					{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
+				else
+				{
+					$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
+				}
 				if($template->HasValidationErrors())
 				{
 					$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
@@ -346,14 +391,18 @@
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
-																	  "required_message" => ""
+																	  "required_message" => $this->words['thisRequired'],
+																	  "validatorFun"=>"str_is_int",
+																	  "validator_message" => $this->words['LinkedinValidatorRule'],
+																	  "eLggExternal" => true
 																	  ),
 													"phone" =>
 																array("control_id" => "phone",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
-																	  "required_message" => ""
+																	  "required_message" => "",
+																	  "eLggExternal" => true
 																	  ),
 													"email" =>
 																array("control_id" => "email",
@@ -393,14 +442,22 @@
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "required_message" => ""
+																	  ),
+													"birthDate" =>
+																array("control_id" => "birthDate",
+																	  "control_type" => "TXT",
+																	  "required" => false,
+																	  "eLggExternal" => true
 																	  ),		  
+																	  
 													"residence_city" =>
 																array("control_id" => "residence_city",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "required_message" => "",
-																	  "eLggExternal" => true
+																	  "eLggExternal" => true,
+																	  "eLggPublic" => true
 																	  ),
 													"terms_privacy" =>
 																array("control_id" => "terms_privacy", 
@@ -430,7 +487,8 @@
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => true,
 																"eLggExternal" => true,
-																"default_value" => -1
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"how_did_u" => array(
 																"control_id" => "how_did_u",
@@ -442,7 +500,8 @@
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"eLggExternal" => true,
-																"default_value" => -1
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"sex" => array(
 																"control_id" => "sex",
@@ -450,11 +509,12 @@
 																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
-																"source" 		=> array("1"=>$this->words['female'], "2"=>$this->words['male']),
+																"source" 		=> array("0"=>$this->words['female'], "1"=>$this->words['male']),
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"eLggExternal" => true,
-																"default_value" => -1
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"languages" => array(
 																"control_id" => "languages",
@@ -465,7 +525,11 @@
 																"source" 		=> "select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name",
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
-																"default_value" => "it"
+																"default_value" => "it",
+																"eLggExternal" => true,
+																"eLggPublic" => true,
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"residence_country" => array(
 																"control_id" => "residence_country",
@@ -475,7 +539,11 @@
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $countries,
 																"checked_value" => 'selected="selected"',
-																"use_html_replace" => false
+																"use_html_replace" => false,
+																"eLggPublic" => true,
+																"eLggExternal" => true,
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"ac_degree" => array(
 																"control_id" => "ac_degree",
@@ -487,7 +555,8 @@
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"eLggExternal" => true,
-																"default_value" => -1
+																"default_value" => -1,
+																"invalid_value" => -1
 																),
 														"favorite_sport" => array(
 																"control_id" => "favorite_sport",
@@ -606,6 +675,9 @@
 			$words["I_donate"] = lang("I will donate to Milan-IN");
 			$words['uniqueError'] = lang("User with same id already exists");
 			$words['invalidLetters'] = lang("Please type your name in plain English");
+			
+			$words['LinkedinRule']= lang("Input just a number.");
+			$words['LinkedinValidatorRule']= lang("You should input integer value.");
 			
 			$this->words = $words;
 		}

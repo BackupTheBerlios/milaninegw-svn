@@ -252,7 +252,7 @@ class cTFiller extends cTemplate
 			
 			if( $subConfig["control_type"] == "DDL" || $subConfig["control_type"] == "MDDL")
 			{
-				if($subConfig["required"] === true && trim($this->defaults[$subConfig["control_id"]]) == "")
+				if($subConfig["required"] === true && ( trim($this->defaults[$subConfig["control_id"]]) == "" || $this->defaults[$subConfig["control_id"]] == $subConfig["invalid_value"]) )
 				{
 					$this->errorsBlocks[$subConfig["control_id"]."_ErrReq"] =
 						isset($subConfig["required_message"]) ? $subConfig["required_message"] : "";

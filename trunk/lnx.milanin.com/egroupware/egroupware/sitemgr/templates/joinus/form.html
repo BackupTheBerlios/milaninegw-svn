@@ -17,6 +17,10 @@ function ChangeDonate(chk)
 	var isVisible = (chk.value == 1);
 	document.getElementById("donateBlock").style.display = isVisible ? 'block' : 'none';
 }
+function ChangeLinkedUrl(obj)
+{
+	document.getElementById('linkedin_url').href="https://www.linkedin.com/profile?viewProfile=&key="+obj.value
+}
 </script>
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
@@ -79,9 +83,26 @@ function ChangeDonate(chk)
 	<!-- END prof_profile_ErrReq -->
 	
 	<tr>
-		<td><a href="#linkedin_url">{FORM.LinkedinProfile}</a></td>
-		<td><input type="text" name="linkedin" value="{FORM.linkedin_VALUE}"></td>
+		<td><a href="https://www.linkedin.com/profile?viewProfile=&amp;key={FORM.linkedin_VALUE}" id="linkedin_url" name="linkedin_url">{FORM.LinkedinProfile}</a></td>
+		<td>
+			<input type="text" name="linkedin" value="{FORM.linkedin_VALUE}" size="10" onkeyup="ChangeLinkedUrl(this)"><br />
+			{FORM.LinkedinRule}<br />
+			https://www.linkedin.com/profile?viewProfile=&amp;key=XXXXXX 
+		</td>
 	</tr>
+	<!-- BEGIN linkedin_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.linkedin_ErrReq.Message}</td>
+	</tr>
+	<!-- END linkedin_ErrReq -->
+	<!-- BEGIN linkedin_ErrRule -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.linkedin_ErrRule.Message}</td>
+	</tr>
+	<!-- END linkedin_ErrRule -->
+	
 	
 	<tr>
 	    <td>{FORM.phonenumber}</td>
@@ -141,7 +162,7 @@ function ChangeDonate(chk)
 		<td>{FORM.sex}<font color="red">*</font></td>
 		<td>
 		<select name="sex" {FORM.sex_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN sex -->
 			<option value="{FORM.sex.VALUE}" {FORM.sex.CHECKED}>{FORM.sex.TEXT}</option>
 			<!-- END sex -->
@@ -159,7 +180,7 @@ function ChangeDonate(chk)
 		<td>{FORM.MainLanguage}<font color="red">*</font></td>
 		<td>
 		<select name="languages" {FORM.languages_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN languages -->
 			<option value="{FORM.languages.VALUE}" {FORM.languages.CHECKED}>{FORM.languages.TEXT}</option>
 			<!-- END languages -->
@@ -192,7 +213,7 @@ function ChangeDonate(chk)
 		<td>{FORM.countryresidence}<font color="red">*</font></td>
 		<td>
 		<select name="residence_country" {FORM.residence_country_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN residence_country -->
 			<option value="{FORM.residence_country.VALUE}" {FORM.residence_country.CHECKED}>{FORM.residence_country.TEXT}</option>
 			<!-- END residence_country -->
@@ -215,7 +236,7 @@ function ChangeDonate(chk)
 		<td>{FORM.academicdegree}<font color="red">*</font></td>
 		<td>
 		<select name="ac_degree" {FORM.ac_degree_DISABLED}>
-			<option value=""></option>
+			<option value="-1"></option>
 			<!-- BEGIN ac_degree -->
 			<option value="{FORM.ac_degree.VALUE}" {FORM.ac_degree.CHECKED}>{FORM.ac_degree.TEXT}</option>
 			<!-- END ac_degree -->
@@ -327,7 +348,7 @@ function ChangeDonate(chk)
 	<tr>
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
-	
+	<!-- 
 	<tr>
 		<th colspan="2">Donate to Milan-IN</th>
 	</tr>
@@ -344,7 +365,7 @@ function ChangeDonate(chk)
 		</div>
 		</td>
 	</tr>
-	
+	-->
 	<tr>
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
@@ -374,10 +395,6 @@ function ChangeDonate(chk)
 		<td class="required">{FORM.terms_services_ErrReq.Message}</td>
 	</tr>
 	<!-- END terms_services_ErrReq -->
-	
-	
-	
-	
 	<tr>
 		<td colspan="2"><input type="submit" class="button" name="btn_submit" value="{FORM.send}"></td>
 	</tr>
