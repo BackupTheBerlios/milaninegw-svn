@@ -32,6 +32,8 @@
 			
 			$run_result = NULL;
 			
+			//print_r($function["display:input_field"]);print ("<br>");
+			
 			if (isset($function[$context])) {
 				
 				if (isset($_REQUEST['debug'])) {

@@ -20,7 +20,7 @@
 		global $page_owner;
 	
 		if (isset($parameter) && sizeof($parameter) > 1) {
-			
+			print $parameter[1]."<br>";
 			if (!isset($parameter[4])) {
 				$parameter[4] = -1;
 			}
@@ -34,6 +34,11 @@
 			
 			switch($parameter[1]) {
 				
+				case "GW_label":
+						$obj = db_query($parameter[3]);
+						$run_result .= stripslashes($obj[0]->value);
+						break;
+						
 				case "icq":
 						$run_result = "<img src=\"http://web.icq.com/whitepages/online?icq=".htmlentities(stripslashes($parameter[0]))."&img=5\" height=\"18\" width=\"18\" />  <b>".htmlentities(stripslashes($parameter[0]))."</b> (<a href=\"http://wwp.icq.com/scripts/search.dll?to=".htmlentities(stripslashes($parameter[0]))."\">Add User</a>, <a href=\"http://wwp.icq.com/scripts/contact.dll?msgto=".htmlentities(stripslashes($parameter[0]))."\">Send Message</a>)";
 						break;

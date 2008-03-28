@@ -1,6 +1,7 @@
 <?php
 
 	// Initial profile data
+		
 		$data['profile:details'][] = array("Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
 		$data['profile:details'][] = array("Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
 		$data['profile:details'][] = array("Which professional profile better describes you?","prof_profile","GW_dropdown");
@@ -10,9 +11,10 @@
 		$data['profile:details'][] = array("Reason for requesting Club Membership","requestReason","mediumtext","");
 		$data['profile:details'][] = array("How did you know about this club?","how_did_u","text","");
 		$data['profile:details'][] = array("Sex","sex","GW_dropdown");
-		//languages
-		//birthdate
-		//country of residence
+		$data['profile:details'][] = array("Main language","languages","GW_dropdown");
+		$data['profile:details'][] = array("Birthday","birthDate","text");
+		//"select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name"
+		$data['profile:details'][] = array("Country of residence","residence_country","text","");
 		$data['profile:details'][] = array("City of residence","residence_city","text","");
 		$data['profile:details'][] = array("Your academic degree","ac_degree","GW_dropdown");
 		$data['profile:details'][] = array("Favorite sport","favorite_sport","GW_dropdown");
@@ -20,8 +22,8 @@
 		$data['profile:details'][] = array("Profession","professions","GW_GroupCheckBox");
 		$data['profile:details'][] = array("occ_area","occ_areas","GW_GroupCheckBox");
 		$data['profile:details'][] = array("Interests","interests","GW_GroupCheckBox");
-		
 		$data['profile:details'][] = array("","","HR");
+
 		/*
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
