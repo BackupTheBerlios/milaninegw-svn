@@ -1,27 +1,27 @@
 <?php
 
 	// Initial profile data
-		
-		$data['profile:details'][] = array("Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
-		$data['profile:details'][] = array("Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
-		$data['profile:details'][] = array("Which professional profile better describes you?","prof_profile","GW_dropdown");
-		$data['profile:details'][] = array("LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
-		$data['profile:details'][] = array("Phone Number","phone","text");
-		$data['profile:details'][] = array("Email address","emailaddress","email");
-		$data['profile:details'][] = array("Reason for requesting Club Membership","requestReason","mediumtext","");
-		$data['profile:details'][] = array("How did you know about this club?","how_did_u","text","");
-		$data['profile:details'][] = array("Sex","sex","GW_dropdown");
-		$data['profile:details'][] = array("Main language","languages","GW_dropdown");
-		$data['profile:details'][] = array("Birthday","birthDate","text");
+		//	-1 ~ "ReadOnly"=> 'true' or 'false'
+		$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
+		$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
+		$data['profile:details'][] = array(-1 => true, "Which professional profile better describes you?","prof_profile","GW_dropdown");
+		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
+		$data['profile:details'][] = array(-1 => true, "Phone Number","phone","text");
+		$data['profile:details'][] = array(-1 => true, "Email address","emailaddress","email");
+		$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
+		$data['profile:details'][] = array(-1 => true, "How did you know about this club?","how_did_u","GW_dropdown","");
+		$data['profile:details'][] = array(-1 => true, "Sex","sex","GW_dropdown");
+		$data['profile:details'][] = array(-1 => true, "Main language","languages","GW_dropdown");
+		$data['profile:details'][] = array(-1 => true, "Birthday","birthDate","text");
 		//"select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name"
-		$data['profile:details'][] = array("Country of residence","residence_country","text","");
-		$data['profile:details'][] = array("City of residence","residence_city","text","");
-		$data['profile:details'][] = array("Your academic degree","ac_degree","GW_dropdown");
-		$data['profile:details'][] = array("Favorite sport","favorite_sport","GW_dropdown");
-		$data['profile:details'][] = array("Industry","industries","GW_GroupCheckBox");
-		$data['profile:details'][] = array("Profession","professions","GW_GroupCheckBox");
-		$data['profile:details'][] = array("occ_area","occ_areas","GW_GroupCheckBox");
-		$data['profile:details'][] = array("Interests","interests","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "Country of residence","residence_country","text","");
+		$data['profile:details'][] = array(-1 => true, "City of residence","residence_city","text","");
+		$data['profile:details'][] = array(-1 => true, "Your academic degree","ac_degree","GW_dropdown");
+		$data['profile:details'][] = array(-1 => true, "Favorite sport","favorite_sport","GW_dropdown");
+		$data['profile:details'][] = array(-1 => true, "Industry","industries","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "occ_area","occ_areas","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "Interests","interests","GW_GroupCheckBox");
 		$data['profile:details'][] = array("","","HR");
 
 		/*

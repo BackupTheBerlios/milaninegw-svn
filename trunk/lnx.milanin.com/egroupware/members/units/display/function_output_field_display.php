@@ -20,7 +20,6 @@
 		global $page_owner;
 	
 		if (isset($parameter) && sizeof($parameter) > 1) {
-			print $parameter[1]."<br>";
 			if (!isset($parameter[4])) {
 				$parameter[4] = -1;
 			}
@@ -33,7 +32,32 @@
 			}
 			
 			switch($parameter[1]) {
+				case "GW_dropdown":
+						$run_result .= DisplayGW_dropdown($parameter[2], $parameter[0]);
+						break;
 				
+				case "GW_GroupCheckBox":
+						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[2]);
+						$obj = db_query($sql);
+						$arr = explode("\n", $obj[0]->value);
+						$arr = array_map("trim", $arr);
+						//$arr contains all valid values from database && $parameter[0] - contains selected value;
+						$param_arr = $parameter[0] == "" ? array() : explode(",", $parameter[0]);
+						if (count($arr) > 0) 
+						{
+							$catched = false;
+							for($i=0; $i<count($arr); $i++) 
+							{
+								if(!(array_search($i, $param_arr) === FALSE))
+								{
+									$run_result .= ($catched ? ", " : "").$arr[$i];
+									$catched = true;
+								}
+							}
+						}
+						
+						break;
+						
 				case "GW_label":
 						$obj = db_query($parameter[3]);
 						$run_result .= stripslashes($obj[0]->value);
@@ -123,7 +147,7 @@
 						   }
 						  }
 						break;
-                                case "linkedin":
+                case "linkedin":
 						$run_result = $parameter[0];
 						$run_result = "<a href=\"https://www.linkedin.com/profile?viewProfile=&key=" 
                                                 . $run_result . "\" target=\"_blank\"><img src=\"/logos/linkedin-logo-smaller.gif\"/></a>";

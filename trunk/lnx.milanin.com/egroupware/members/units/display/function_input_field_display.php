@@ -17,6 +17,7 @@
 	
 	*/
 	
+		
 		if (isset($parameter) && sizeof($parameter) > 2) {
 			
 			if (!isset($parameter[4])) {
@@ -38,52 +39,20 @@
 						break;
 						
 				case "GW_dropdown":
-						$run_result .= "<select name=\"".$parameter[0]."\" id=\"".$parameter[0]."\">";
-						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
-						$obj = db_query($sql);
-						$arr = explode("\n", $obj[0]->value);
-						$arr = array_map("trim", $arr);
-						
-						$run_result .= "<option value=\"-1\""."></option>";
-						
-						if (count($arr) > 0) 
-						{
-							for($i=0; $i<count($arr); $i++) 
-							{
-								$run_result .= "<option value=\"$i\"".($i == $parameter[1] ? " selected" : "").">".stripslashes($arr[$i])."</option>";
-							}
-						}
-						$run_result .= "</select>";
+						//$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);
+						$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1]);
 						break;
 				case "GW_GroupCheckBox":
-						$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='en'", $parameter[3]);
-						$obj = db_query($sql);
-						$arr = explode("\n", $obj[0]->value);
-						$arr = array_map("trim", $arr);
-						
-						$param_arr = $parameter[1] == "" ? array() : explode(",", $parameter[1]);
-						
-						if (count($arr) > 0) 
-						{
-							$run_result .= '<table border="1">';
-							for($i=0; $i<count($arr); $i++) 
-							{
-								if($i % 2 == 0)
-									$run_result .= "<tr>";
-
-								$run_result .= "<td><input type=\"Checkbox\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$parameter[0]."[]\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
-
-								if($i % 2 == 1)
-									$run_result .= "</tr>";
-							}
-							if(count($arr) % 2 == 1)
-								$run_result .= "<td>&nbsp;</td>";
-
-							$run_result .= '</table>';
-						}
+						//DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);
+						$run_result .= DisplayGW_GroupCheckBox($parameter[3], $parameter[1]);
 						break;
 				case "text":
-						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".stripslashes($parameter[1])."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
+						if(is_array($parameter["fullParam"]) && $parameter["fullParam"][-1] === true)
+						{
+							$run_result .= htmlentities(stripslashes($parameter[1]));
+						}
+						else
+							$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".stripslashes($parameter[1])."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
 				case "password":
 						$run_result .= "<input type=\"password\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
@@ -91,7 +60,12 @@
 							
 						
 				case "mediumtext":
-						$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
+						if(is_array($parameter["fullParam"]) && $parameter["fullParam"][-1] === true)
+						{
+							$run_result .= '<div style="border:1px solid gray;">'.htmlentities(stripslashes($parameter[1])).'</div>';
+						}
+						else
+							$run_result .= "<textarea name=\"".$parameter[0]."\" id=\"".$parameter[0]."\" style=\"width: 95%; height: 100px\">".htmlentities(stripslashes($parameter[1]))."</textarea>";
 						break;
 				case "keywords":
 						/*
@@ -170,11 +144,15 @@ END;
 				case "msn":
 				case "skype":
 				case "icq":
-						$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
+						if(is_array($parameter["fullParam"]) && $parameter["fullParam"][-1] === true)
+						{
+							$run_result .= htmlentities(stripslashes($parameter[1]));
+						}
+						else
+							$run_result .= "<input type=\"text\" name=\"".$parameter[0]."\" value=\"".htmlentities(stripslashes($parameter[1]))."\" style=\"width: 95%\" id=\"".$parameter[0]."\" />";
 						break;
 						
 			}
 			
 		}
-	
 ?>

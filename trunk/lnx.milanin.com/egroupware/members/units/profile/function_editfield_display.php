@@ -21,7 +21,7 @@ END;
 			$parameter[2] = "text";
 		}
 		
-		$column1 = run("display:input_field",array("profiledetails[" . $parameter[1] . "]",$value->value,$parameter[2],$parameter[1],$value->ident,$page_owner));
+		$column1 = run("display:input_field",array("profiledetails[" . $parameter[1] . "]",$value->value,$parameter[2],$parameter[1],$value->ident,$page_owner, "fullParam"=>$parameter));
 		
 		$column2 = "";
 		if($parameter[2] != "HR")

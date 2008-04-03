@@ -36,5 +36,77 @@
 		return $tmpString;
 	}
 
+	function DisplayGW_dropdown($metaID, $value, $isReadOnly = true, $ctrlID="", $lang="en")
+	{
+		$res = $isReadOnly ? "" : "<select name=\"".$ctrlID."\" id=\"".$ctrlID."\">";
+	
+		$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='%s'", $metaID, $lang);
+		$obj = db_query($sql);
+		$arr = explode("\n", $obj[0]->value);
+		$arr = array_map("trim", $arr);
 		
+		if( !$isReadOnly )
+			$res .= "<option value=\"-1\""."></option>";
+
+		//$arr contains all valid values from database && $parameter - contains selected value;
+		if (count($arr) > 0) 
+		{
+			for($i=0; $i<count($arr); $i++) 
+			{
+				if($value == $i && $isReadOnly)
+					$res .= $arr[$i];
+				elseif(!$isReadOnly)
+					$res .= "<option value=\"$i\"".($i == $value ? " selected" : "").">".stripslashes($arr[$i])."</option>";
+			}
+		}
+		
+		if( !$isReadOnly )
+			$res .= "</select>";
+			
+		return $res;
+	}
+	
+	function DisplayGW_GroupCheckBox($metaID, $value, $isReadOnly = true, $ctrlID="", $lang="en")
+	{
+		$res = "";
+		$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='%s'", $metaID, $lang);
+		$obj = db_query($sql);
+		$arr = explode("\n", $obj[0]->value);
+		$arr = array_map("trim", $arr);
+		//$arr contains all valid values from database && $parameter[0] - contains selected value;
+		$param_arr = $value == "" ? array() : explode(",", $value);
+
+		if (count($arr) > 0) 
+		{
+			if(!$isReadOnly)
+				$res .= '<table border="1">';
+			
+			$catched = false;
+			for($i=0; $i<count($arr); $i++) 
+			{
+				if($isReadOnly && !(array_search($i, $param_arr) === FALSE))
+				{
+					$res .= ($catched ? ", " : "").$arr[$i];
+					$catched = true;
+				}
+				elseif(!$isReadOnly)
+				{
+					if($i % 2 == 0)
+						$res .= "<tr>";
+					
+					$res .= "<td><input type=\"Checkbox\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$ctrlID."[]\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
+					
+					if($i % 2 == 1)
+						$res .= "</tr>";
+				}
+			}
+			
+			if(!$isReadOnly && count($arr) % 2 == 1)
+				$res .= "<td>&nbsp;</td>";
+								
+			if(!$isReadOnly)
+				$res .= '</table>';
+		}
+		return $res;
+	}
 ?>
