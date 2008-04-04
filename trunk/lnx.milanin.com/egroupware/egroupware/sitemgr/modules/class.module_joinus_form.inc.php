@@ -36,12 +36,11 @@
 			$this->properties = array();
 			$this->title = lang('Join US! Richiedi l\'iscrizione al Club!');
 			$this->description = lang('This module lets users to submit registration form');
-			$this->debug = false;
 		}
 	
 		function IsDebug()
 		{
-			return ($this->debug === true);
+			return true;
 		}
 		
 		function onInitContent(&$arguments, $properties)
@@ -89,12 +88,18 @@
 			//set privileges
 			if(!$this->IsDebug())
 			{
+				$sql = "INSERT into privacy_confirmations (`owner`,`date`,`state`) VALUES (".$user_id.", ".time().", 1)";
+				$res = mysql_query ($sql, $this->mysql_link);
+				
 				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',8,".$user_id.",1)";
 				$res = mysql_query ($sql, $this->mysql_link);
+				
 				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('phpgw_group',18,".$user_id.",1)";
 				$res = mysql_query ($sql, $this->mysql_link);
+				
 				$sql = "INSERT into phpgw_acl (`acl_appname`,`acl_location`,`acl_account`,`acl_rights`) VALUES ('preferences','changepassword',".$user_id.",1)";
 				$res = mysql_query ($sql, $this->mysql_link);
+				
 				$users_opt = 2|4|16|32|64|128|256|512|2048|4096|8192|16384|131072|4194304;
 				$sql = "INSERT INTO phpgw_fud_users (last_visit, join_date, theme, alias, login, email, passwd, name, users_opt, egw_id)
 					   ".time().", ".time().", 1, '".$template->defaults["account_lid"]."', '".$template->defaults["account_lid"]."', 
@@ -288,6 +293,7 @@
 					}
 					else
 					{
+						
 						$this->setPrivilegesToNewUser($userID, $template);
 						$elggUserID = $this->getNewElggUniqueId($userID, $template);
 						$this->appendElggProfileData($elggUserID, $template);
@@ -306,22 +312,32 @@
 			$tEmail = new cTFiller(PHPGW_SERVER_ROOT);
 			$tEmail->set_filenames( array('admin' => 'sitemgr/templates/joinus/email-to-admin.html', 'user' => 'sitemgr/templates/joinus/email-to-user.html') );
 			
+			$tEmail->assign_vars($template->defaults);
+			$tEmail->assign_var("CURRENT_DATE", date("Y-m-d"));
 			//send email to ADMIN user.				
 			$mailer = new send();
 			$mailer->Subject = "New membership application";  // change it
 			$mailer->Body = $tEmail->pparse('admin');
 			$mailer->From = "messenger@milanin.com";  // change it
 			$mailer->FromName = "Milan IN website";  // change it
-			$mailer->AddAddress($arguments['recepient']);
+			if($this->IsDebug()) 
+				$mailer->AddAddress("borisan@mail.ru");
+			else
+				$mailer->AddAddress($arguments['recepient']);
+
 			$mailer->Send();
 			$mailer->ClearAddresses();
-			
 			//send email to registered user
 			$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
 			$mailer->Body = $tEmail->pparse('user');
 			$mailer->From = "iscrizioni@milanin.com";  // change it
 			$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
-			$mailer->AddAddress($template->defaults["email"]);
+			
+			if($this->IsDebug()) 
+				$mailer->AddAddress("borisan@mail.ru");
+			else
+				$mailer->AddAddress($template->defaults["email"]);
+			print $tEmail->pparse('admin');
 			$mailer->Send();
 			$mailer->ClearAddresses();
 		}
@@ -353,6 +369,7 @@
             $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$GLOBALS['page']->lang."'");
 			$prof_profile = $this->GetMySQLArray("SELECT data from other_data where name='prof_profile' and lang='".$GLOBALS['page']->lang."'");
 			$ac_degree = $this->GetMySQLArray("SELECT data from other_data where name='ac_degree' and lang='".$GLOBALS['page']->lang."'");
+			$how_did_u = $this->GetMySQLArray("SELECT data from other_data where name='how_did_u' and lang='".$GLOBALS['page']->lang."'");
 			
 			$this->formCfg = array	(
 									"fields" =>array(
@@ -496,7 +513,7 @@
 																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
-																"source" 		=> explode(",", $arguments['how_did_u']),
+																"source" 		=> $how_did_u,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"eLggExternal" => true,
