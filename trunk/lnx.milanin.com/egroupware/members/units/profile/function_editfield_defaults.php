@@ -24,7 +24,7 @@
 		$data['profile:details'][] = array(-1 => true, "Interests","interests","GW_GroupCheckBox");
 		$data['profile:details'][] = array("","","HR");
 
-		/*
+		
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
 		
@@ -56,5 +56,5 @@
 		$data['profile:details'][] = array("University / College","university","text");
 		$data['profile:details'][] = array("Degree","universitydegree","text");
 		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
-		*/
+		
 ?>
