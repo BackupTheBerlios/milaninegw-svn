@@ -31,7 +31,7 @@ class cTFiller extends cTemplate
 		
 	function getCheckedValue($value, $default, $type, $checkedValue) {
 		$result = "";
-		$isChecked = ( $value == $default || ( is_array($default) && in_array($value, $default) ) );
+		$isChecked = ( $value."" == $default."" || ( is_array($default) && in_array($value, $default) ) );
 		if($isChecked == true && ($type == "DDL" || $type == "MDDL") )
 			$result = $checkedValue;
 		return $result;
@@ -181,17 +181,9 @@ class cTFiller extends cTemplate
 			$this->assign_block_vars($blockName.".EMPTY", $blockValues);
 	}
 
-
-
-
-
-
-
-
 	/**REFACTOR PLEASE***/
 	function SetDefaultsFromRecordSet($cfg, $rs)
 	{
-		
 		if(is_array($cfg["lists"])) reset($cfg["lists"]);
 		while ( is_array($cfg["lists"]) && list($list_block, $subConfig) = each($cfg["lists"]))
 			$this->defaults[$subConfig["control_id"]] = isset( $rs[ $subConfig["DbField"] ] ) && $rs[ $subConfig["DbField"] ]!="0" ? $rs[ $subConfig["DbField"] ] : $subConfig["default_value"];

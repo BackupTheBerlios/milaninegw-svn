@@ -249,27 +249,7 @@ function ChangeLinkedUrl(obj)
 		<td class="required">{FORM.ac_degree_ErrReq.Message}</td>
 	</tr>
 	<!-- END ac_degree_ErrReq -->
-	
-	<tr>
-		<td>{FORM.favoritesport}</td>
-		<td>
-		<select name="favorite_sport" {FORM.favorite_sport_DISABLED}>
-			<option value=""></option>
-			<!-- BEGIN favorite_sport -->
-			<option value="{FORM.favorite_sport.VALUE}" {FORM.favorite_sport.CHECKED}>{FORM.favorite_sport.TEXT}</option>
-			<!-- END favorite_sport -->
-		</select>
-		</td>
-	</tr>
-	<!-- BEGIN favorite_sport_ErrReq -->
-	<tr>
-		<td>&nbsp;</td>
-		<td class="required">{FORM.favorite_sport_ErrReq.Message}</td>
-	</tr>
-	<!-- END favorite_sport_ErrReq -->
-	
-	
-	
+
 	<tr>
 		<th colspan="2">{FORM.professionaldata}</th>
 	</tr>
@@ -280,7 +260,7 @@ function ChangeLinkedUrl(obj)
 		<td>{FORM.industry}<font color="red">*</font></td>
 		<td>
 			<!-- BEGIN industries -->
-			{FORM.industries.Before}<input type="Checkbox" name="industries[]" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}{FORM.industries.After}
+			{FORM.industries.Before}<input type="radio" name="industries" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}{FORM.industries.After}
 			<!-- END industries -->
 		</td>
 	</tr>
@@ -294,30 +274,11 @@ function ChangeLinkedUrl(obj)
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
 	
-	
-	<tr>
-		<td>{FORM.profession}<font color="red">*</font></td>
-		<td>
-			<!-- BEGIN professions -->
-			{FORM.professions.Before}<input type="Checkbox" name="professions[]" value="{FORM.professions.VALUE}" {FORM.professions.CHECKED}> {FORM.professions.TEXT}{FORM.professions.After}
-			<!-- END professions -->
-		</td>
-	</tr>
-	<!-- BEGIN professions_ErrReq -->
-	<tr>
-		<td>&nbsp;</td>
-		<td class="required">{FORM.professions_ErrReq.Message}</td>
-	</tr>
-	<!-- END professions_ErrReq -->
-	<tr>
-		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
-	</tr>
-	
 	<tr>
 		<td>{FORM.occ_area}<font color="red">*</font></td>
 		<td>
 			<!-- BEGIN occ_areas -->
-			{FORM.occ_areas.Before}<input type="Checkbox" name="occ_areas[]" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}{FORM.occ_areas.After}
+			{FORM.occ_areas.Before}<input type="radio" name="occ_areas" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}{FORM.occ_areas.After}
 			<!-- END occ_areas -->
 		</td>
 	</tr>
@@ -348,6 +309,22 @@ function ChangeLinkedUrl(obj)
 	<tr>
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
+	
+	<tr>
+		<td>{FORM.favoritesport}</td>
+		<td>
+			<!-- BEGIN favorite_sport -->
+				{FORM.favorite_sport.Before}<input type="Checkbox" name="favorite_sport[]" value="{FORM.favorite_sport.VALUE}" {FORM.favorite_sport.CHECKED}> {FORM.favorite_sport.TEXT}{FORM.favorite_sport.After}
+			<!-- END favorite_sport -->
+		</td>
+	</tr>
+	<!-- BEGIN favorite_sport_ErrReq -->
+	<tr>
+		<td>&nbsp;</td>
+		<td class="required">{FORM.favorite_sport_ErrReq.Message}</td>
+	</tr>
+	<!-- END favorite_sport_ErrReq -->
+	
 	<!-- 
 	<tr>
 		<th colspan="2">Donate to Milan-IN</th>

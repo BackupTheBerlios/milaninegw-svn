@@ -320,10 +320,16 @@
 			$mailer->Body = $tEmail->pparse('admin');
 			$mailer->From = "messenger@milanin.com";  // change it
 			$mailer->FromName = "Milan IN website";  // change it
-			if($this->IsDebug()) 
+			if($this->IsDebug())
+			{
 				$mailer->AddAddress("borisan@mail.ru");
+			}
 			else
+			{
 				$mailer->AddAddress($arguments['recepient']);
+			}
+			
+			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
 
 			$mailer->Send();
 			$mailer->ClearAddresses();
@@ -333,11 +339,15 @@
 			$mailer->From = "iscrizioni@milanin.com";  // change it
 			$mailer->FromName = "Segreteria Business Club Milan IN";  // change it
 			
-			if($this->IsDebug()) 
+			if($this->IsDebug())
+			{
 				$mailer->AddAddress("borisan@mail.ru");
+			}
 			else
+			{
 				$mailer->AddAddress($template->defaults["email"]);
-			print $tEmail->pparse('admin');
+			}
+			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
 			$mailer->Send();
 			$mailer->ClearAddresses();
 		}
@@ -365,7 +375,7 @@
 			$sports = $this->GetMySQLArray("SELECT data from other_data where name='favorite_sport' and lang='".$GLOBALS['page']->lang."'");
 			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='interests' and lang='".$GLOBALS['page']->lang."'");
             $industries = $this->GetMySQLArray("SELECT data from other_data where name='industries' and lang='".$GLOBALS['page']->lang."'");
-            $professions = $this->GetMySQLArray("SELECT data from other_data where name='professions' and lang='".$GLOBALS['page']->lang."'");
+            //$professions = $this->GetMySQLArray("SELECT data from other_data where name='professions' and lang='".$GLOBALS['page']->lang."'");
             $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$GLOBALS['page']->lang."'");
 			$prof_profile = $this->GetMySQLArray("SELECT data from other_data where name='prof_profile' and lang='".$GLOBALS['page']->lang."'");
 			$ac_degree = $this->GetMySQLArray("SELECT data from other_data where name='ac_degree' and lang='".$GLOBALS['page']->lang."'");
@@ -582,8 +592,9 @@
 																"required" => false,
 																"required_message" => $this->words['thisRequired'],
 																"source" 		=> $sports,
-																"checked_value" => 'selected="selected"',
+																"checked_value" => 'checked',
 																"use_html_replace" => false,
+																"colCount" => 2,
 																"eLggExternal" => true,
 																"default_value" => -1
 																),
@@ -615,7 +626,7 @@
 																"default_value" => -1
 																),
 																
-														"professions" => array(
+														/*"professions" => array(
 																"control_id" => "professions",
 																"control_type" => "MDDL",
 																"use_key" => true,
@@ -627,7 +638,7 @@
 																"colCount" => 2,
 																"eLggExternal" => true,
 																"default_value" => -1
-																),
+																),*/
 																
 														"occ_areas" => array(
 																"control_id" => "occ_areas",
@@ -668,7 +679,7 @@
 			$words['interests'] = lang("interests");
 			$words['professionaldata'] = lang("professional data");
 			$words['industry'] = lang("industry");
-			$words['profession'] = lang("profession");
+			//$words['profession'] = lang("profession");
 			$words['occ_area'] = lang("occ_area");
 			$words['termsacceptance'] = lang("terms acceptance");
 			$words['privacyterms'] = lang('privacy terms');
