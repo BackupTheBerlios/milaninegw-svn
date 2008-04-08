@@ -200,6 +200,8 @@
 		function ModifyStringForUID($value, &$template, $blockError)
 		{
 			$value = strtolower($value);
+			$value = preg_replace("/\s+/", "", $value);
+			
 			$chrs = 	array( "/".chr(236)."/", "/".chr(232)."/", "/".chr(249)."/", "/".chr(237)."/", "/".chr(243)."/",
 							   "/".chr(242)."/", "/".chr(224)."/", "/".chr(233)."/", "/".chr(231)."/", "/".chr(225)."/", "/".chr(250)."/");
 							   
@@ -693,7 +695,7 @@
 			$words['MainLanguage'] = lang('MainLanguage');
 			$words['requestingReason'] = lang('Reason for requesting Club Membership');
 			$words['LinkedinProfile'] = lang('URL to Linkedin Profile');
-			
+			$words['Invalid_characters'] = lang('Invalid characters');
 			$words['thisRequired'] = lang("thisRequired");
 			$words['commonError'] = lang("commonError");
 			$words['inputValidEmail'] = lang("inputValidEmail");

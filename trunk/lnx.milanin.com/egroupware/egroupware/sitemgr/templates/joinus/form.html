@@ -21,18 +21,50 @@ function ChangeLinkedUrl(obj)
 {
 	document.getElementById('linkedin_url').href="https://www.linkedin.com/profile?viewProfile=&key="+obj.value
 }
+
+function GetReplacedWord(value)
+{
+	var chrs = new Array( String.fromCharCode(236), String.fromCharCode(232), String.fromCharCode(249), String.fromCharCode(237), String.fromCharCode(243),
+							   String.fromCharCode(242), String.fromCharCode(224), 
+							   String.fromCharCode(233), String.fromCharCode(231), String.fromCharCode(225), String.fromCharCode(250));
+	var rChrs = new	Array( "i", "e", "u", "i", "o",
+							   "o", "a", "e", "c", "a", "u" );
+				   
+	value = value.toLowerCase();
+	value = value.replace(/\s+/ig, "");
+	
+	for(var i=0; i<chrs.length; i++)
+	{
+		var re = new RegExp(chrs[i], "ig");
+		value = value.replace(re, rChrs[i]);
+	}
+	var tmp = value.replace(/[^A-Za-z]/, "");
+	return new Array(value, (tmp == value) );
+}
+			
+function GenerateUID()
+{
+	var surname = GetReplacedWord(document.getElementById("surname").value) ;
+	var name 	= GetReplacedWord(document.getElementById("name").value) ;
+	
+	document.getElementById("uid_error").style.display = (!name[1] || !surname[1]) ? "inline" : "none";
+	document.getElementById("uid").innerHTML = name[0]+"."+surname[0];
+}
 </script>
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
 <table border="0">
 	<tr>
 		<td>UID<font color="red">:</font> </td>
-		<td>{FORM.account_lid_VALUE}</td>
+		<td>
+			<div id="uid">{FORM.account_lid_VALUE}</div>
+			<div id="uid_error" style="display:none;border:1px dotted red;">{FORM.Invalid_characters}</div>
+		</td>
 	</tr>
 	
 	<tr>
 		<td>{FORM.Name}<font color="red">*</font> </td>
-		<td><input type="text" name="name" value="{FORM.name_VALUE}"></td>
+		<td><input type="text" id="name" name="name" onkeyup="GenerateUID()" value="{FORM.name_VALUE}"></td>
 	</tr>
 	<!-- BEGIN name_ErrReq -->
 	<tr>
@@ -49,7 +81,7 @@ function ChangeLinkedUrl(obj)
 	
 	<tr>
 		<td>{FORM.LastName}<font color="red">*</font></td>
-		<td><input type="text" name="surname" value="{FORM.surname_VALUE}"></td>
+		<td><input type="text" id="surname" name="surname" onkeyup="GenerateUID()" value="{FORM.surname_VALUE}"></td>
     </tr>
 	<!-- BEGIN surname_ErrReq -->
 	<tr>
