@@ -19,7 +19,7 @@
 		$data['profile:details'][] = array(-1 => true, "Your academic degree","ac_degree","GW_dropdown");
 		$data['profile:details'][] = array(-1 => true, "Favorite sport","favorite_sport","GW_dropdown");
 		$data['profile:details'][] = array(-1 => true, "Industry","industries","GW_GroupCheckBox");
-		$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
+		//$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
 		$data['profile:details'][] = array(-1 => true, "occ_area","occ_areas","GW_GroupCheckBox");
 		$data['profile:details'][] = array(-1 => true, "Interests","interests","GW_GroupCheckBox");
 		$data['profile:details'][] = array("","","HR");
