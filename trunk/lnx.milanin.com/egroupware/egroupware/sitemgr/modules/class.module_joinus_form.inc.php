@@ -40,7 +40,7 @@
 	
 		function IsDebug()
 		{
-			return true;
+			return false;
 		}
 		
 		function onInitContent(&$arguments, $properties)
@@ -313,9 +313,15 @@
 		{
 			$tEmail = new cTFiller(PHPGW_SERVER_ROOT);
 			$tEmail->set_filenames( array('admin' => 'sitemgr/templates/joinus/email-to-admin.html', 'user' => 'sitemgr/templates/joinus/email-to-user.html') );
-			
+
 			$tEmail->assign_vars($template->defaults);
 			$tEmail->assign_var("CURRENT_DATE", date("Y-m-d"));
+			$tEmail->assign_var("prof_profile_text", $this->formCfg["lists"]["prof_profile"]["source"][$template->defaults["prof_profile"]]);
+			$tEmail->assign_var("how_did_u_text", $this->formCfg["lists"]["how_did_u"]["source"][$template->defaults["how_did_u"]]);
+			
+			$tEmail->assign_var("industries_text", $this->formCfg["lists"]["industries"]["source"][$template->defaults["industries"]]);
+			$tEmail->assign_var("occ_areas_text", $this->formCfg["lists"]["occ_areas"]["source"][$template->defaults["occ_areas"]]);
+
 			//send email to ADMIN user.				
 			$mailer = new send();
 			$mailer->Subject = "New membership application";  // change it
@@ -325,6 +331,7 @@
 			if($this->IsDebug())
 			{
 				$mailer->AddAddress("borisan@mail.ru");
+				$mailer->AddAddress("andrey@milanin.com");
 			}
 			else
 			{
@@ -344,6 +351,7 @@
 			if($this->IsDebug())
 			{
 				$mailer->AddAddress("borisan@mail.ru");
+				$mailer->AddAddress("andrey@milanin.com");
 			}
 			else
 			{
@@ -382,6 +390,7 @@
 			$prof_profile = $this->GetMySQLArray("SELECT data from other_data where name='prof_profile' and lang='".$GLOBALS['page']->lang."'");
 			$ac_degree = $this->GetMySQLArray("SELECT data from other_data where name='ac_degree' and lang='".$GLOBALS['page']->lang."'");
 			$how_did_u = $this->GetMySQLArray("SELECT data from other_data where name='how_did_u' and lang='".$GLOBALS['page']->lang."'");
+			$sex = $this->GetMySQLArray("SELECT data from other_data where name='sex' and lang='".$GLOBALS['page']->lang."'");
 			
 			$this->formCfg = array	(
 									"fields" =>array(
@@ -433,15 +442,16 @@
 																	  "required_message" => "",
 																	  "eLggExternal" => true
 																	  ),
-													"email" =>
-																array("control_id" => "email",
+													"emailaddress" =>
+																array("control_id" => "emailaddress",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => true,
 																	  "required_message" => $this->words['thisRequired'],
 																	  "validatorFun" => "IsValidEmail",
 																	  "validator_message" => $this->words['inputValidEmail'],
-																	  "DbField" => "account_email"
+																	  "DbField" => "account_email",
+																	  "eLggExternal" => true
 																	  ),
 								  					"requestReason" =>
 																array("control_id" => "requestReason",
@@ -449,7 +459,7 @@
 																	  "control_type" => "TXT",
 																	  "required" => true,
 																	  "required_message" => $this->words['thisRequired'],
-																	  "eLggExternal" => true
+																	  "DbField" => "account_reason"
 																	  ),
 													"birth_d" =>
 																array("control_id" => "birth_d",
@@ -538,7 +548,7 @@
 																"use_key" => true,
 																"required" => true,
 																"required_message" => $this->words['thisRequired'],
-																"source" 		=> array("0"=>$this->words['female'], "1"=>$this->words['male']),
+																"source" 		=> $sex,
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"eLggExternal" => true,

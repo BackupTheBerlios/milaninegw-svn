@@ -51,6 +51,12 @@ function GenerateUID()
 	document.getElementById("uid").innerHTML = name[0]+"."+surname[0];
 }
 </script>
+<style>
+td.required
+{
+	color:red;
+}
+</style>
 <p><font color="red">*</font> - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
 <table border="0">
@@ -143,20 +149,20 @@ function GenerateUID()
 
 	<tr>
         <td>{FORM.email}<font color="red">*</font></td>
-        <td><input type="text" name="email" value="{FORM.email_VALUE}"></td>
+        <td><input type="text" name="emailaddress" value="{FORM.emailaddress_VALUE}"></td>
     </tr>
-	<!-- BEGIN email_ErrReq -->
+	<!-- BEGIN emailaddress_ErrReq -->
 	<tr>
 		<td>&nbsp;</td>
-		<td class="required">{FORM.email_ErrReq.Message}</td>
+		<td class="required">{FORM.emailaddress_ErrReq.Message}</td>
 	</tr>
-	<!-- END email_ErrReq -->
-	<!-- BEGIN email_ErrRule -->
+	<!-- END emailaddress_ErrReq -->
+	<!-- BEGIN emailaddress_ErrRule -->
 	<tr>
 		<td>&nbsp;</td>
-		<td class="required">{FORM.email_ErrRule.Message}</td>
+		<td class="required">{FORM.emailaddress_ErrRule.Message}</td>
 	</tr>
-	<!-- END email_ErrRule -->
+	<!-- END emailaddress_ErrRule -->
 
 	<tr>
 		<td>{FORM.requestingReason}<font color="red">*</font></td>
