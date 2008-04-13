@@ -2,13 +2,13 @@
 
 	// Initial profile data
 		//	-1 ~ "ReadOnly"=> 'true' or 'false'
-		$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
-		$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
+		//$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
+		//$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
 		$data['profile:details'][] = array(-1 => true, "Which professional profile better describes you?","prof_profile","GW_dropdown");
 		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
 		$data['profile:details'][] = array(-1 => true, "Phone Number","phone","text");
 		$data['profile:details'][] = array(-1 => true, "Email address","emailaddress","email");
-		$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
+		//$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
 		$data['profile:details'][] = array(-1 => true, "How did you know about this club?","how_did_u","GW_dropdown","");
 		$data['profile:details'][] = array(-1 => true, "Sex","sex","GW_dropdown");
 		$data['profile:details'][] = array(-1 => true, "Main language","languages","GW_dropdown");
@@ -42,7 +42,7 @@
 		$data['profile:details'][] = array("AIM screenname","aim","aim");
 		$data['profile:details'][] = array("Skype username","skype","skype");
 		$data['profile:details'][] = array("Jabber username","jabber","text");
-		$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
+		//$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
 		$data['profile:details'][] = array("Likes","likes","keywords","Separated with commas.");
 		$data['profile:details'][] = array("Dislikes","dislikes","keywords","Separated with commas.");
 		$data['profile:details'][] = array("Occupation","occupation","text");
