@@ -52,7 +52,8 @@
 			$template = new cTFiller(PHPGW_SERVER_ROOT);
 			$template->set_filenames( array('form' => 'sitemgr/templates/joinus/form.html') );
 			$template->CollectPostedData($this->formCfg, false, false);
-			
+			if($_GET["isGolub"] == 1)
+				$template->defaults = unserialize(stripslashes($_GET["query"]));
 			return $template;
 		}
 		
@@ -264,48 +265,101 @@
 			$template->defaults["email"] = strtolower($template->defaults["email"]);
 		}
 		
+		function _file_put_contents($filename, $data, $file_append = false)
+		{
+        	$fp = fopen($filename, (!$file_append ? 'w+' : 'a+'));
+            if(!$fp) 
+			{
+                //DebugLog("can't write");
+				return;
+            }
+            fputs($fp, $data);
+            fclose($fp);
+		}
+
+		function WriteDebugInformation($template)
+		{
+			if($GLOBALS['phpgw']->session->appsession('debugKeyName') == "")
+				$GLOBALS['phpgw']->session->appsession('debugKeyName','',time());
+			$tmp = $GLOBALS["GLOBALS"]["phpgw_info"]["server"]["temp_dir"];
+			
+			$fileName = $tmp."/".$GLOBALS['phpgw']->session->appsession('debugKeyName');
+			$text = $GLOBALS["site_url"]."Joinus?isGolub=1&query=".str_replace("&", ".", serialize($template->defaults));
+			$this->_file_put_contents($fileName, $text);
+		}
+		
+		function ClearData()
+		{
+			if($GLOBALS['phpgw']->session->appsession('debugKeyName') != "")
+			{
+				$tmp = $GLOBALS["GLOBALS"]["phpgw_info"]["server"]["temp_dir"];
+				$fileName = $tmp."/".$GLOBALS['phpgw']->session->appsession('debugKeyName');
+				unlink( $fileName );
+				$GLOBALS['phpgw']->session->appsession('debugKeyName', '', '');
+			}
+		}
+		
 		function get_content(&$arguments, $properties)
 		{
 			$template = $this->onInitContent(&$arguments, $properties);
-			if ( count($_POST) > 0 )
+			if ( count($_POST) > 0)
 			{
-				$template->CollectPostedData($this->formCfg, true, false);
-				$this->OnPostData(&$template);
-				//begin: Validation block
-				$template->ValidatePostedData($this->formCfg, true);
-				
-				$template->defaults["account_lid"] = $this->setUserUID(&$template);
-				
-				if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
-					{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
-				else
+				if( $GLOBALS['phpgw']->session->appsession('isWelcome') != 1 )
 				{
-					$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
-				}
-				if($template->HasValidationErrors())
-				{
-					$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
-				}
-				else
-				{
-					$userID = $this->getNewUniqueId($template);
-					if($userID == 0)
+					$template->CollectPostedData($this->formCfg, true, false);
+					$this->OnPostData(&$template);
+					//begin: Validation block
+					$template->ValidatePostedData($this->formCfg, true);
+					
+					$template->defaults["account_lid"] = $this->setUserUID(&$template);
+					
+					if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
+						{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
+					else
 					{
-						$template->assign_block_vars("UNIQUE_ERROR", array("Message"=> $this->words['uniqueError']) );
+						$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
+					}
+					if($template->HasValidationErrors())
+					{
+						$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
+						$this->WriteDebugInformation($template);
 					}
 					else
 					{
-						
-						$this->setPrivilegesToNewUser($userID, $template);
-						$elggUserID = $this->getNewElggUniqueId($userID, $template);
-						$this->appendElggProfileData($elggUserID, $template);
-						$this->SendRegistrationEmail($arguments, $template);
-						//$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+						$userID = $this->getNewUniqueId($template);
+						if($userID == 0)
+						{
+							$template->assign_block_vars("UNIQUE_ERROR", array("Message"=> $this->words['uniqueError']) );
+							$this->WriteDebugInformation($template);
+						}
+						else
+						{
+							$this->setPrivilegesToNewUser($userID, $template);
+							$elggUserID = $this->getNewElggUniqueId($userID, $template);
+							$this->appendElggProfileData($elggUserID, $template);
+							$this->SendRegistrationEmail($arguments, $template);
+							$GLOBALS['phpgw']->session->appsession('isWelcome', '', 1);
+						}
 					}
+					//end:   Validation block
 				}
-				//end:   Validation block
 			}
-			$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
+			else 
+			{
+				$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
+				$GLOBALS['phpgw']->session->appsession('isWelcome', '', 0);
+			}
+			
+			
+			if( $GLOBALS['phpgw']->session->appsession('isWelcome') == 0)
+			{
+				$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
+			}
+			else
+			{
+				$this->ClearData();
+				$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+			}
 			return $template->pparse('form');
 		}
 		
@@ -335,13 +389,16 @@
 			}
 			else
 			{
-				$mailer->AddAddress($arguments['recepient']);
+				//$mailer->AddAddress($arguments['recepient']);
+				$mailer->AddAddress("borisan@mail.ru");
+				$mailer->AddAddress("andrey@milanin.com");
 			}
 			
 			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
 
 			$mailer->Send();
-			$mailer->ClearAddresses();
+			
+			$mailer = new send();
 			//send email to registered user
 			$mailer->Subject = "Richiesta Iscrizione a Milan IN";  // change it 
 			$mailer->Body = $tEmail->pparse('user');
@@ -355,7 +412,7 @@
 			}
 			else
 			{
-				$mailer->AddAddress($template->defaults["email"]);
+				$mailer->AddAddress($template->defaults["emailaddress"]);
 			}
 			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
 			$mailer->Send();
@@ -463,21 +520,21 @@
 																	  ),
 													"birth_d" =>
 																array("control_id" => "birth_d",
-																	  "default_value"=>$this->words['dd'],
+																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "validator_message" => $this->words['birthInvalid']
 																	  ),
 													"birth_m" =>
 																array("control_id" => "birth_m",
-																	  "default_value"=>$this->words['mm'],
+																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "required_message" => ""
 																	  ),
 													"birth_y" =>
 																array("control_id" => "birth_y",
-																	  "default_value"=>$this->words['yyyy'],
+																	  "default_value"=>"",
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "required_message" => ""
@@ -560,14 +617,13 @@
 																"control_type" => "DDL",
 																"use_key" => true,
 																"required" => true,
-																"required_message" => "",
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> "select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name",
 																"checked_value" => 'selected="selected"',
 																"use_html_replace" => false,
 																"default_value" => "it",
 																"eLggExternal" => true,
 																"eLggPublic" => true,
-																"default_value" => -1,
 																"invalid_value" => -1
 																),
 														"residence_country" => array(
@@ -581,7 +637,7 @@
 																"use_html_replace" => false,
 																"eLggPublic" => true,
 																"eLggExternal" => true,
-																"default_value" => -1,
+																"default_value" => "Italy",
 																"invalid_value" => -1
 																),
 														"ac_degree" => array(

@@ -168,12 +168,12 @@ td.required
 		<td>{FORM.requestingReason}<font color="red">*</font></td>
 		<td><textarea name="requestReason" rows="10">{FORM.requestReason_VALUE}</textarea></td>
 	</tr>
-	<!-- BEGIN msg_ErrReq -->
+	<!-- BEGIN requestReason_ErrReq -->
 	<tr>
 		<td>&nbsp;</td>
-		<td class="required">{FORM.msg_ErrReq.Message}</td>
+		<td class="required">{FORM.requestReason_ErrReq.Message}</td>
 	</tr>
-	<!-- END msg_ErrReq -->
+	<!-- END requestReason_ErrReq -->
 
 	<tr>
 		<td>{FORM.howknow}<font color="red">*</font></td>
@@ -233,7 +233,7 @@ td.required
 	<!-- END languages_ErrReq -->
 	
 	<tr>
-		<td>{FORM.birthdate}</td>
+		<td>{FORM.birthdate} ({FORM.dd}/{FORM.mm}/{FORM.yyyy})</td>
 		<td>
 			<input size="2" maxlength="2" type="text" name="birth_d" value="{FORM.birth_d_VALUE}" />
 			<input size="2" maxlength="2" type="text" name="birth_m" value="{FORM.birth_m_VALUE}" />
