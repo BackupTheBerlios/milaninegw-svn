@@ -19,7 +19,15 @@ function ChangeDonate(chk)
 }
 function ChangeLinkedUrl(obj)
 {
-	document.getElementById('linkedin_url').href="https://www.linkedin.com/profile?viewProfile=&key="+obj.value
+	if(!isNaN(obj.value))
+		document.getElementById('linkedin_url_view').href="https://www.linkedin.com/profile?viewProfile=&key="+obj.value;
+	else 
+	{
+		var value = obj.value.toLowerCase();
+		if(value.indexOf("http://") == 0 || value.indexOf("https://") == 0) 
+			document.getElementById('linkedin_url_view').href = obj.value;
+		else document.getElementById('linkedin_url_view').href = "#linkedin_url";
+	}
 }
 
 function GetReplacedWord(value)
@@ -121,11 +129,10 @@ td.required
 	<!-- END prof_profile_ErrReq -->
 	
 	<tr>
-		<td><a href="https://www.linkedin.com/profile?viewProfile=&amp;key={FORM.linkedin_VALUE}" id="linkedin_url" name="linkedin_url">{FORM.LinkedinProfile}</a></td>
+		<td>{FORM.LinkedinProfile} <a href="{FORM.linkedin_url_view_VALUE}" id="linkedin_url_view" name="linkedin_url_view">Check<sup>???</sup></a></td>
 		<td>
-			<input type="text" name="linkedin" value="{FORM.linkedin_VALUE}" size="10" onkeyup="ChangeLinkedUrl(this)"><br />
+			<input type="text" name="linkedin" value="{FORM.linkedin_VALUE}" onkeyup="ChangeLinkedUrl(this)"><br />
 			{FORM.LinkedinRule}<br />
-			https://www.linkedin.com/profile?viewProfile=&amp;key=XXXXXX 
 		</td>
 	</tr>
 	<!-- BEGIN linkedin_ErrReq -->
@@ -233,10 +240,8 @@ td.required
 	<!-- END languages_ErrReq -->
 	
 	<tr>
-		<td>{FORM.birthdate} ({FORM.dd}/{FORM.mm}/{FORM.yyyy})</td>
+		<td>{FORM.birthdate} ({FORM.yyyy})</td>
 		<td>
-			<input size="2" maxlength="2" type="text" name="birth_d" value="{FORM.birth_d_VALUE}" />
-			<input size="2" maxlength="2" type="text" name="birth_m" value="{FORM.birth_m_VALUE}" />
 			<input size="4" maxlength="4" type="text" name="birth_y" value="{FORM.birth_y_VALUE}" />
 		</td>
 	</tr>

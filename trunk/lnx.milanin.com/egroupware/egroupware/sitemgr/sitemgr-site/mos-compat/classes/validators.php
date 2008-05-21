@@ -16,6 +16,23 @@ function setInteger($value)
 	return $value;
 }
 
+function ValidateLinkedin($value, $returnInt=false)
+{
+	if(str_is_int($value))
+		return $returnInt ? $value : true;
+	
+	$matches = array();
+	preg_match("/^.*?linkedin\.com.*?[?&]+key\=(\d+).*?$/i", $value, $matches);
+	if(str_is_int($matches[1]))
+		return $returnInt ? $matches[1] : true;
+	
+	preg_match("/^.*?linkedin\.com.*?[?&]+id\=(\d+).*?$/i", $value, $matches);
+	if(str_is_int($matches[1]))
+		return $returnInt ? $matches[1] : true;
+	
+	return false;
+}
+
 function IsValidDate($date) #return '' if not mail
 {
 	if(trim($date) == "") return true;

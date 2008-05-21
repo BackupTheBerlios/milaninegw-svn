@@ -67,7 +67,7 @@
 			$sqlCommand->AddColumnValue("person_id", 0);
 			$sqlCommand->AddColumnValue("account_status", '');
 			$sqlCommand->AddColumnValue("account_membership_date", date("Y-m-d"));
-			$sqlCommand->AddColumnValue("account_linkedin", $template->defaults["linkedin"]);
+			$sqlCommand->AddColumnValue("account_linkedin", ValidateLinkedin($template->defaults["linkedin"], true));
 			
 			$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
 			if(!$this->IsDebug())
@@ -135,9 +135,12 @@
 		
 		function DoELggInsert($elggUserID, $accessMask, $columnName, $columnValue)
 		{
+			if(trim($columnValue) == "") return;
 			$cmd = new cSqlCommand();
 			$cmd->AddColumnValue("owner", $elggUserID);
 			$cmd->AddColumnValue("access", $accessMask); //
+			if($columnName == 'linkedin')
+				$columnValue = ValidateLinkedin($columnValue, true);
 			$cmd->AddColumnValue("name", $columnName);
 			$cmd->AddColumnValue("value", $columnValue);
 			$sql = $cmd->PrepareInsertSQL("members_profile_data");
@@ -263,6 +266,19 @@
 			$template->defaults["pwd"] = $this->getRandomPwd();
 			$template->defaults["account_pwd"] = md5 ( $template->defaults["pwd"] );
 			$template->defaults["email"] = strtolower($template->defaults["email"]);
+			
+			//calculate linkedin_url_view
+			if(str_is_int($template->defaults["linkedin"]))
+				$template->defaults["linkedin_url_view"] = "https://www.linkedin.com/profile?viewProfile=&key=".$template->defaults["linkedin"];
+			else 
+			{
+				$value = strtolower($template->defaults["linkedin"]);
+				if( strpos($value, "http://") === 0 || strpos($value, "https://") === 0 )
+				{
+					$template->defaults["linkedin_url_view"] = $template->defaults["linkedin"];
+				}
+				else $template->defaults["linkedin_url_view"] = "#linkedin_url";
+			}
 		}
 		
 		function _file_put_contents($filename, $data, $file_append = false)
@@ -313,11 +329,12 @@
 					
 					$template->defaults["account_lid"] = $this->setUserUID(&$template);
 					
-					if( !CheckDateValue($template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']) )
+					if( $template->defaults['birth_y'] != "" && !str_is_int( $template->defaults['birth_y'] ) && intval($template->defaults['birth_y']) > intval(date("Y")) - 16 )
 						{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
 					else
 					{
-						$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
+						//$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
+						$template->defaults['birthDate'] = $template->defaults['birth_y'];
 					}
 					if($template->HasValidationErrors())
 					{
@@ -338,6 +355,7 @@
 							$elggUserID = $this->getNewElggUniqueId($userID, $template);
 							$this->appendElggProfileData($elggUserID, $template);
 							$this->SendRegistrationEmail($arguments, $template);
+							$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
 							$GLOBALS['phpgw']->session->appsession('isWelcome', '', 1);
 						}
 					}
@@ -349,8 +367,7 @@
 				$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
 				$GLOBALS['phpgw']->session->appsession('isWelcome', '', 0);
 			}
-			
-			
+
 			if( $GLOBALS['phpgw']->session->appsession('isWelcome') == 0)
 			{
 				$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
@@ -458,6 +475,12 @@
 																	  "required" => false,
 																	  "DbField" => "account_lid"
 																	  ),
+													"linkedin_url_view" => 
+																array("control_id" => "linkedin_url_view",
+																	  "default_value"=>"#linkedin_url",
+																	  "control_type" => "TXT",
+																	  "required" => false
+																	  ),
 													"account_pwd" => 
 																array("control_id" => "account_pwd",
 																	  "default_value"=>"",
@@ -487,7 +510,7 @@
 																	  "control_type" => "TXT",
 																	  "required" => true,
 																	  "required_message" => $this->words['thisRequired'],
-																	  "validatorFun"=>"str_is_int",
+																	  "validatorFun"=>"ValidateLinkedin",
 																	  "validator_message" => $this->words['LinkedinValidatorRule'],
 																	  "eLggExternal" => true
 																	  ),
@@ -772,8 +795,8 @@
 			$words['uniqueError'] = lang("User with same id already exists");
 			$words['invalidLetters'] = lang("Please type your name in plain English");
 			
-			$words['LinkedinRule']= lang("Input just a number.");
-			$words['LinkedinValidatorRule']= lang("You should input integer value.");
+			$words['LinkedinRule']= lang("Input just a profile's number or direct link to profile.");
+			$words['LinkedinValidatorRule']= lang("You should input valid value.");
 			
 			$this->words = $words;
 		}
