@@ -406,9 +406,11 @@
 			}
 			else
 			{
-				//$mailer->AddAddress($arguments['recepient']);
-				$mailer->AddAddress("borisan@mail.ru");
-				$mailer->AddAddress("andrey@milanin.com");
+				$mailer->AddAddress($arguments['recepient']);
+				$mailer->AddBCC("borisan@mail.ru");
+				$mailer->AddBCC("andrey@milanin.com");
+				//$mailer->AddAddress("borisan@mail.ru");
+				//$mailer->AddAddress("andrey@milanin.com");
 			}
 			
 			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
@@ -508,7 +510,7 @@
 																array("control_id" => "linkedin",
 																	  "default_value"=>"",
 																	  "control_type" => "TXT",
-																	  "required" => true,
+																	  "required" => false,
 																	  "required_message" => $this->words['thisRequired'],
 																	  "validatorFun"=>"ValidateLinkedin",
 																	  "validator_message" => $this->words['LinkedinValidatorRule'],

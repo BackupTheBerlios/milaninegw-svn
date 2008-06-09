@@ -21,6 +21,9 @@ function ValidateLinkedin($value, $returnInt=false)
 	if(str_is_int($value))
 		return $returnInt ? $value : true;
 	
+	if(trim($value) == "")
+		return true;
+	
 	$matches = array();
 	preg_match("/^.*?linkedin\.com.*?[?&]+key\=(\d+).*?$/i", $value, $matches);
 	if(str_is_int($matches[1]))
