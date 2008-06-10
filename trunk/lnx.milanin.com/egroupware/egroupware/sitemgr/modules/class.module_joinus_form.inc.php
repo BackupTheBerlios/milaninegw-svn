@@ -407,7 +407,7 @@
 			else
 			{
 				$mailer->AddAddress($arguments['recepient']);
-				$mailer->AddBCC("borisan@mail.ru");
+				//$mailer->AddBCC("borisan@mail.ru");
 				$mailer->AddBCC("andrey@milanin.com");
 				//$mailer->AddAddress("borisan@mail.ru");
 				//$mailer->AddAddress("andrey@milanin.com");
