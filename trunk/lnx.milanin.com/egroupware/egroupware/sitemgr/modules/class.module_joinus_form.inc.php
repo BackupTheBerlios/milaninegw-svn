@@ -54,6 +54,7 @@
 			$template->CollectPostedData($this->formCfg, false, false);
 			if($_GET["isGolub"] == 1)
 				$template->defaults = unserialize(stripslashes($_GET["query"]));
+			$this->words["moneydonateDisplay"] = ($template->defaults["isdonate"] == "1") ? "block" : "none";
 			return $template;
 		}
 		
@@ -323,6 +324,7 @@
 				if( $GLOBALS['phpgw']->session->appsession('isWelcome') != 1 )
 				{
 					$template->CollectPostedData($this->formCfg, true, false);
+					$this->words["moneydonateDisplay"] = ($template->defaults["isdonate"] == "1") ? "block" : "none";
 					$this->OnPostData(&$template);
 					//begin: Validation block
 					$template->ValidatePostedData($this->formCfg, true);
@@ -376,6 +378,13 @@
 			{
 				$this->ClearData();
 				$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+				if($template->defaults["isdonate"] == "1" && $template->defaults["moneydonate"] != "")
+				{
+					$template->assign_block_vars("DONATE", array("amount"=>$_POST["moneydonate"], 
+																"FLANG"=>strtoupper($GLOBALS['page']->lang),
+																"TitleText"=>$this->words["DonateTitleText"]));
+					$template->assign_block_vars("DONATE.".strtoupper($GLOBALS['page']->lang), array()); 
+				}
 			}
 			return $template->pparse('form');
 		}
@@ -407,10 +416,7 @@
 			else
 			{
 				$mailer->AddAddress($arguments['recepient']);
-				//$mailer->AddBCC("borisan@mail.ru");
 				$mailer->AddBCC("andrey@milanin.com");
-				//$mailer->AddAddress("borisan@mail.ru");
-				//$mailer->AddAddress("andrey@milanin.com");
 			}
 			
 			$mailer->AddReplyTo("no-reply@milanin.com", "no-reply@milanin.com");
@@ -470,6 +476,8 @@
 			
 			$this->formCfg = array	(
 									"fields" =>array(
+													
+													
 													"account_lid" => 
 																array("control_id" => "account_lid",
 																	  "default_value"=>"",
@@ -593,11 +601,30 @@
 																	  "required" => true, 
 																	  "required_message" => $this->words['thisRequired'],
 																	  "value_on"=>1,
-																	  "control_type" => "CHK")
+																	  "control_type" => "CHK"),
 																	  
 													),
 													
 									"lists"	 => array(
+														"isdonate" => array(
+																"control_id" => "isdonate",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"required" => false,
+																"source" 		=> array(0=>$this->words["I_not_donate"], 1=>$this->words["I_donate"]),
+																"checked_value" => 'checked',
+																"default_value" => 0,
+																),
+														"moneydonate" => array(
+																"control_id" => "moneydonate",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"required" => false,
+																"source" 		=> array(10,20,30,50),
+																"checked_value" => 'checked',
+																"default_value" => 10
+																),
+																
 														"prof_profile" => array(
 																"control_id" => "prof_profile",
 																"control_type" => "DDL",
@@ -799,7 +826,7 @@
 			
 			$words['LinkedinRule']= lang("Input just a profile's number or direct link to profile.");
 			$words['LinkedinValidatorRule']= lang("You should input valid value.");
-			
+			$words['DonateTitleText']= lang("You select donation.");
 			$this->words = $words;
 		}
 	}
