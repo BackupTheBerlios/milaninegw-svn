@@ -613,7 +613,7 @@
 																"required" => false,
 																"source" 		=> array(0=>$this->words["I_not_donate"], 1=>$this->words["I_donate"]),
 																"checked_value" => 'checked',
-																"default_value" => 0,
+																"default_value" => -1,
 																),
 														"moneydonate" => array(
 																"control_id" => "moneydonate",
@@ -719,8 +719,8 @@
 																"default_value" => -1
 																),
 																
-														"interests" => array(
-																"control_id" => "interests",
+														"interestsBase" => array(
+																"control_id" => "interestsBase",
 																"control_type" => "MDDL",
 																"use_key" => true,
 																"required" => false,
@@ -796,7 +796,7 @@
 			$words['cityresidence'] = lang('city of residence');
 			$words['academicdegree'] = lang("your academic degree");
 			$words['favoritesport'] = lang("favorite sport");
-			$words['interests'] = lang("interests");
+			$words['interestsBase'] = lang("Base Interests");
 			$words['professionaldata'] = lang("professional data");
 			$words['industry'] = lang("industry");
 			//$words['profession'] = lang("profession");

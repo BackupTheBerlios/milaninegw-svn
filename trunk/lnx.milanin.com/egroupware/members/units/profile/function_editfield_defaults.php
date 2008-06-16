@@ -21,7 +21,8 @@
 		$data['profile:details'][] = array(-1 => true, "Industry","industries","GW_GroupCheckBox");
 		//$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
 		$data['profile:details'][] = array(-1 => true, "occ_area","occ_areas","GW_GroupCheckBox");
-		$data['profile:details'][] = array(-1 => true, "Interests","interests","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "Base interests","interestsBase","GW_GroupCheckBox");
+		$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
 		$data['profile:details'][] = array("","","HR");
 
 		
