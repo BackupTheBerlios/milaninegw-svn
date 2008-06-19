@@ -69,7 +69,9 @@
 			$sqlCommand->AddColumnValue("account_status", '');
 			$sqlCommand->AddColumnValue("account_membership_date", date("Y-m-d"));
 			$sqlCommand->AddColumnValue("account_linkedin", ValidateLinkedin($template->defaults["linkedin"], true));
-			
+			if($this->IsUserWantToDonate($template))
+				$sqlCommand->AddColumnValue("paypal_amount", $template->defaults["moneydonate"]);
+				
 			$sql =  $sqlCommand->PrepareInsertSQL("phpgw_accounts");
 			if(!$this->IsDebug())
 			{
@@ -227,7 +229,6 @@
 		
 		function setUserUID(&$template)
 		{
-			//, , 
 			$result = "";
 			$name = $this->ModifyStringForUID($template->defaults["name"], &$template, "name");
 			$surname = $this->ModifyStringForUID($template->defaults["surname"], &$template, "surname");
@@ -316,77 +317,140 @@
 			}
 		}
 		
+		function ModuleLogFile($postfix="")
+		{
+			$tmp = $GLOBALS["GLOBALS"]["phpgw_info"]["server"]["temp_dir"];
+			$fileName = $tmp."/sub/module_joinus$postfix.log";
+			return $fileName;
+		}
+		
+		function ValidPaypalTransaction()
+		{
+			$posted = $_GET;
+			$postdata="";
+			foreach ($posted as $key=>$value) $postdata.=$key."=".urlencode($value)."&";
+			$postdata .= "cmd=_notify-validate";
+			
+			if (function_exists('curl_init'))
+			{
+				$curl = curl_init("https://www.paypal.com/cgi-bin/webscr"); 
+				curl_setopt ($curl, CURLOPT_HEADER, 0);  
+				curl_setopt ($curl, CURLOPT_POST, 1); 
+				curl_setopt ($curl, CURLOPT_POSTFIELDS, $postdata); 
+	  			curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0);  
+	  			curl_setopt ($curl, CURLOPT_RETURNTRANSFER, 1); 
+	  			curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 1); 
+	  			$response = curl_exec ($curl); 
+	  			curl_close ($curl); 
+			}
+  			return ($response == "VERIFIED");
+		}
+		
+		function isDonateRequest()
+		{
+			return isset($_GET["payer_id"]) && isset($_GET["verify_sign"]) && isset($_GET["receiver_email"]) && $_GET["receiver_email"] == "mbrembil@gmail.com";
+			//return true;
+		}
+		
 		function get_content(&$arguments, $properties)
 		{
 			$template = $this->onInitContent(&$arguments, $properties);
-			if ( count($_POST) > 0)
+			if(!$this->isDonateRequest())
 			{
-				if( $GLOBALS['phpgw']->session->appsession('isWelcome') != 1 )
+			
+					if ( count($_POST) > 0)
+					{
+						if( $GLOBALS['phpgw']->session->appsession('isWelcome') != 1 )
+						{
+							$template->CollectPostedData($this->formCfg, true, false);
+							$this->words["moneydonateDisplay"] = ($template->defaults["isdonate"] == "1") ? "block" : "none";
+							$this->OnPostData(&$template);
+							//begin: Validation block
+							$template->ValidatePostedData($this->formCfg, true);
+							
+							$template->defaults["account_lid"] = $this->setUserUID(&$template);
+							
+							if( ( $template->defaults['birth_y'] != "" && !str_is_int( $template->defaults['birth_y'] ) )
+								 || ($template->defaults['birth_y'] != "" && str_is_int( $template->defaults['birth_y'] ) && intval($template->defaults['birth_y']) > intval(date("Y")) - 16) )
+								{ $template->errorsBlocks["birth_y_ErrRule"] = $this->words['birthInvalid']; }
+							else
+							{
+								//$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
+								$template->defaults['birthDate'] = $template->defaults['birth_y'];
+							}
+							if($template->HasValidationErrors())
+							{
+								$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
+								$this->WriteDebugInformation($template);
+							}
+							else
+							{
+								$userID = $this->getNewUniqueId($template);
+								if($userID == 0)
+								{
+									$template->assign_block_vars("UNIQUE_ERROR", array("Message"=> $this->words['uniqueError']) );
+									$this->WriteDebugInformation($template);
+								}
+								else
+								{
+									$GLOBALS['phpgw']->session->appsession('joinusUserid', '', $userID);
+									$template->defaults['account_user_id'] = $userID;
+									$this->setPrivilegesToNewUser($userID, $template);
+									$elggUserID = $this->getNewElggUniqueId($userID, $template);
+									$this->appendElggProfileData($elggUserID, $template);
+									$this->SendRegistrationEmail($arguments, $template);
+									$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
+									$GLOBALS['phpgw']->session->appsession('isWelcome', '', 1);
+								}
+							}
+							//end:   Validation block
+						}
+					}
+					else
+					{
+						$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
+						$GLOBALS['phpgw']->session->appsession('isWelcome', '', 0);
+					}
+		
+					if( $GLOBALS['phpgw']->session->appsession('isWelcome') == 0)
+					{
+						$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
+					}
+					else
+					{
+						$this->ClearData();
+						$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
+						if($this->IsUserWantToDonate($template))
+						{
+							$template->assign_block_vars("DONATE", array_merge(array("amount"=>$template->defaults["moneydonate"], 
+																		"FLANG"=>strtoupper($GLOBALS['page']->lang),
+																		"TitleText"=>$this->words["DonateTitleText"],
+																		"USERID"=>$GLOBALS['phpgw']->session->appsession('joinusUserid')
+																		), $_SERVER)
+														);
+							$template->assign_block_vars("DONATE.".strtoupper($GLOBALS['page']->lang), array()); 
+						}
+					}
+			}
+			else // this is a donate request from paypal. we should verify it.
+			{
+				if($this->ValidPaypalTransaction() && str_is_int($_GET["item_number"]))
 				{
-					$template->CollectPostedData($this->formCfg, true, false);
-					$this->words["moneydonateDisplay"] = ($template->defaults["isdonate"] == "1") ? "block" : "none";
-					$this->OnPostData(&$template);
-					//begin: Validation block
-					$template->ValidatePostedData($this->formCfg, true);
-					
-					$template->defaults["account_lid"] = $this->setUserUID(&$template);
-					
-					if( $template->defaults['birth_y'] != "" && !str_is_int( $template->defaults['birth_y'] ) && intval($template->defaults['birth_y']) > intval(date("Y")) - 16 )
-						{ $template->errorsBlocks["birth_d_ErrRule"] = $this->words['birthInvalid']; }
-					else
-					{
-						//$template->defaults['birthDate'] = sprintf("%d-%d-%d", $template->defaults['birth_d'], $template->defaults['birth_m'], $template->defaults['birth_y']);
-						$template->defaults['birthDate'] = $template->defaults['birth_y'];
-					}
-					if($template->HasValidationErrors())
-					{
-						$template->assign_block_vars("FORM_ERROR", array("Message"=> $this->words['commonError']) );
-						$this->WriteDebugInformation($template);
-					}
-					else
-					{
-						$userID = $this->getNewUniqueId($template);
-						if($userID == 0)
-						{
-							$template->assign_block_vars("UNIQUE_ERROR", array("Message"=> $this->words['uniqueError']) );
-							$this->WriteDebugInformation($template);
-						}
-						else
-						{
-							$this->setPrivilegesToNewUser($userID, $template);
-							$elggUserID = $this->getNewElggUniqueId($userID, $template);
-							$this->appendElggProfileData($elggUserID, $template);
-							$this->SendRegistrationEmail($arguments, $template);
-							$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
-							$GLOBALS['phpgw']->session->appsession('isWelcome', '', 1);
-						}
-					}
-					//end:   Validation block
+					$template->assign_block_vars("DONATE_VALID", array("text"=>$this->words["validDonate"]) );
+					$sql = "update phpgw_accounts set paypal_accepted = 1 where paypal_accepted = 0 and account_id = ".$_GET["item_number"];
+					$res = mysql_query ($sql, $this->mysql_link);
 				}
-			}
-			else 
-			{
-				$GLOBALS['phpgw']->session->appsession('isWelcome', '', '');
-				$GLOBALS['phpgw']->session->appsession('isWelcome', '', 0);
-			}
-
-			if( $GLOBALS['phpgw']->session->appsession('isWelcome') == 0)
-			{
-				$template->FillBlockWithStaticValues($this->formCfg, "FORM", $this->words, $this->mysql_link);
-			}
-			else
-			{
-				$this->ClearData();
-				$template->assign_block_vars("REGISTER_COMPLETE", array("JoinUsSuccess"=> lang("joinus success")) );
-				if($template->defaults["isdonate"] == "1" && $template->defaults["moneydonate"] != "")
+				else
 				{
-					$template->assign_block_vars("DONATE", array("amount"=>$_POST["moneydonate"], 
-																"FLANG"=>strtoupper($GLOBALS['page']->lang),
-																"TitleText"=>$this->words["DonateTitleText"]));
-					$template->assign_block_vars("DONATE.".strtoupper($GLOBALS['page']->lang), array()); 
+					$template->assign_block_vars("DONATE_INVALID", array("text"=>$this->words["invalidDonate"]) ); 
 				}
 			}
 			return $template->pparse('form');
+		}
+		
+		function IsUserWantToDonate($template)
+		{
+			return $template->defaults["isdonate"] == "1" && $template->defaults["moneydonate"] != "";
 		}
 		
 		function SendRegistrationEmail($arguments, $template)
@@ -465,7 +529,7 @@
 		{
 			$countries = $this->GetMySQLArray("SELECT data from other_data where name='countries_list'");
 			$sports = $this->GetMySQLArray("SELECT data from other_data where name='favorite_sport' and lang='".$GLOBALS['page']->lang."'");
-			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='interests' and lang='".$GLOBALS['page']->lang."'");
+			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='interestsBase' and lang='".$GLOBALS['page']->lang."'");
             $industries = $this->GetMySQLArray("SELECT data from other_data where name='industries' and lang='".$GLOBALS['page']->lang."'");
             //$professions = $this->GetMySQLArray("SELECT data from other_data where name='professions' and lang='".$GLOBALS['page']->lang."'");
             $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$GLOBALS['page']->lang."'");
@@ -520,8 +584,8 @@
 																	  "control_type" => "TXT",
 																	  "required" => false,
 																	  "required_message" => $this->words['thisRequired'],
-																	  "validatorFun"=>"ValidateLinkedin",
-																	  "validator_message" => $this->words['LinkedinValidatorRule'],
+																	  /*"validatorFun"=>"ValidateLinkedin",
+																	  "validator_message" => $this->words['LinkedinValidatorRule'],*/
 																	  "eLggExternal" => true
 																	  ),
 													"phone" =>
@@ -578,7 +642,7 @@
 																	  "required" => false,
 																	  "eLggExternal" => true
 																	  ),		  
-																	  
+																		
 													"residence_city" =>
 																array("control_id" => "residence_city",
 																	  "default_value"=>"",
@@ -591,7 +655,7 @@
 													"terms_privacy" =>
 																array("control_id" => "terms_privacy", 
 																	  "default_value"=>0, 
-																	  "required" => true, 
+																	  "required" => false, 
 																	  "required_message" => $this->words['thisRequired'],
 																	  "value_on"=>1,
 																	  "control_type" => "CHK"),
@@ -610,7 +674,8 @@
 																"control_id" => "isdonate",
 																"control_type" => "DDL",
 																"use_key" => true,
-																"required" => false,
+																"required" => true,
+																"required_message" => $this->words['thisRequired'],
 																"source" 		=> array(0=>$this->words["I_not_donate"], 1=>$this->words["I_donate"]),
 																"checked_value" => 'checked',
 																"default_value" => -1,
@@ -620,7 +685,7 @@
 																"control_type" => "DDL",
 																"use_key" => false,
 																"required" => false,
-																"source" 		=> array(10,20,30,50),
+																"source" 		=> array(10, 20, 30, 50),
 																"checked_value" => 'checked',
 																"default_value" => 10
 																),
@@ -745,21 +810,6 @@
 																"eLggExternal" => true,
 																"default_value" => -1
 																),
-																
-														/*"professions" => array(
-																"control_id" => "professions",
-																"control_type" => "MDDL",
-																"use_key" => true,
-																"required" => true,
-																"required_message" => $this->words['thisRequired'],
-																"source" 		=> $professions,
-																"checked_value" => 'checked',
-																"use_html_replace" => false,
-																"colCount" => 2,
-																"eLggExternal" => true,
-																"default_value" => -1
-																),*/
-																
 														"occ_areas" => array(
 																"control_id" => "occ_areas",
 																"control_type" => "MDDL",
@@ -826,7 +876,10 @@
 			
 			$words['LinkedinRule']= lang("Input just a profile's number or direct link to profile.");
 			$words['LinkedinValidatorRule']= lang("You should input valid value.");
-			$words['DonateTitleText']= lang("You select donation.");
+			$words['DonateTitleText'] = lang("You select donation.");
+			$words["validDonate"] = lang("Thank you for donation.");
+			$words["invalidDonate"] = lang("We couldn't process your donate. Please call us directly.");
+
 			$this->words = $words;
 		}
 	}
@@ -898,4 +951,44 @@
 												$link = "http://". $_SERVER['SERVER_NAME']."/egroupware/index.php?menuaction=admin.uiaccounts.edit_user&account_id=$user_id";
 	                                        }
 */
+/*$posted = Array
+					(
+					    "page_name" => "Joinus",
+					    "mc_gross" => 0.01,
+					    "address_status" => "unconfirmed",
+					    "payer_id" => "DLBNF8ZY3VFLU",
+					    "tax" => 0.00,
+					    "address_street" => "Via Dei Caduti,26",
+					    "payment_date" => "07:24:09 Jun 17, 2008 PDT",
+					    "payment_status" => "Completed",
+					    "charset" => "windows-1252",
+					    "address_zip" => 20020,
+					    "first_name" => "Michael",
+					    "mc_fee" => 0.01,
+					    "address_country_code" => "IT",
+					    "address_name" => "Michael Tabolsky",
+					    "notify_version" => 2.4,
+					    "custom" => "",
+					    "payer_status" => "verified",
+					    "business" => "tesoreria@milanin.com",
+					    "address_country" => "Italy",
+					    "address_city" => "Arese",
+					    "quantity" => 0,
+					    "payer_email" => "mtabolsky@gmail.com", 
+					    "verify_sign" => "A33ruGD7coVRDZKptpgWMT0AdMjjAYWk7Qx0ubztIj4fv1gKydhqUg0w",
+					    "txn_id" => "99232146S5864270W",
+					    "payment_type" => "instant",
+					    "last_name" => "Tabolsky",
+					    "address_state" => "Milano",
+					    "receiver_email" => "mbrembil@gmail.com",
+					    "payment_fee" => "",
+					    "receiver_id" => "FFL42LAWPNF4G",
+					    "txn_type" => "web_accept",
+					    "item_name" => "Donate to Milan IN B.C.",
+					    "mc_currency" => "EUR",
+					    "item_number" => 666,
+					    "residence_country" => "IT",
+					    "payment_gross" => "",
+					    "merchant_return_link" => "Return to Business Club Milan IN"
+					);*/
 ?>

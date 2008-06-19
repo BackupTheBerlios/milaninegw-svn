@@ -24,9 +24,31 @@ function ChangeLinkedUrl(obj)
 	else 
 	{
 		var value = obj.value.toLowerCase();
-		if(value.indexOf("http://") == 0 || value.indexOf("https://") == 0) 
-			document.getElementById('linkedin_url_view').href = obj.value;
-		else document.getElementById('linkedin_url_view').href = "#linkedin_url";
+		if(value.indexOf("http://") == 0 || value.indexOf("https://") == 0)
+		{
+			var re = /^.*?linkedin\.com.*?[?&]+key\=(\d+).*?$/i
+  			var str = obj.value;
+			var arr = str.match(re)
+			if(arr!= null && !isNaN(arr[1]))
+				document.getElementById('linkedin_url_view').href="https://www.linkedin.com/profile?viewProfile=&key="+arr[1];
+			else
+			{
+				re = /^.*?linkedin\.com.*?[?&]+id\=(\d+).*?$/i
+				arr = str.match(re)
+				if(arr!= null && !isNaN(arr[1]))
+				{
+					document.getElementById('linkedin_url_view').href="https://www.linkedin.com/profile?viewProfile=&key="+arr[1];
+				}
+				else
+				{
+					document.getElementById('linkedin_url_view').href = "#linkedin_url";
+				}
+			}
+		}
+		else 
+		{
+			document.getElementById('linkedin_url_view').href = "#linkedin_url";
+		}
 	}
 }
 
@@ -60,12 +82,12 @@ function GenerateUID()
 }
 </script>
 <style>
-td.required
+td.required, span.required
 {
 	color:red;
 }
 </style>
-<p><font color="red">*</font> - {FORM.requiredfields}</p>
+<p>&nbsp;(<font color="red">*</font>) - {FORM.requiredfields}</p>
 <form name="joinus" method="post" action="">
 <table border="0">
 	<tr>
@@ -77,7 +99,7 @@ td.required
 	</tr>
 	
 	<tr>
-		<td>{FORM.Name}<font color="red">*</font> </td>
+		<td>{FORM.Name} (<font color="red">*</font>) </td>
 		<td><input type="text" id="name" name="name" onkeyup="GenerateUID()" value="{FORM.name_VALUE}"></td>
 	</tr>
 	<!-- BEGIN name_ErrReq -->
@@ -94,7 +116,7 @@ td.required
 	<!-- END name_ErrRule -->
 	
 	<tr>
-		<td>{FORM.LastName}<font color="red">*</font></td>
+		<td>{FORM.LastName}&nbsp;(<font color="red">*</font>)</td>
 		<td><input type="text" id="surname" name="surname" onkeyup="GenerateUID()" value="{FORM.surname_VALUE}"></td>
     </tr>
 	<!-- BEGIN surname_ErrReq -->
@@ -111,7 +133,7 @@ td.required
 	<!-- END surname_ErrRule -->
 	
 	<tr>
-		<td>{FORM.ProfessionalProfile}<font color="red">*</font></td>
+		<td>{FORM.ProfessionalProfile}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="prof_profile" {FORM.prof_profile_DISABLED}>
 			<option value="-1"></option>
@@ -155,7 +177,7 @@ td.required
 	</tr>
 
 	<tr>
-        <td>{FORM.email}<font color="red">*</font></td>
+        <td>{FORM.email}&nbsp;(<font color="red">*</font>)</td>
         <td><input type="text" name="emailaddress" value="{FORM.emailaddress_VALUE}"></td>
     </tr>
 	<!-- BEGIN emailaddress_ErrReq -->
@@ -172,7 +194,7 @@ td.required
 	<!-- END emailaddress_ErrRule -->
 
 	<tr>
-		<td>{FORM.requestingReason}<font color="red">*</font></td>
+		<td>{FORM.requestingReason}&nbsp;(<font color="red">*</font>)</td>
 		<td><textarea name="requestReason" rows="10">{FORM.requestReason_VALUE}</textarea></td>
 	</tr>
 	<!-- BEGIN requestReason_ErrReq -->
@@ -183,7 +205,7 @@ td.required
 	<!-- END requestReason_ErrReq -->
 
 	<tr>
-		<td>{FORM.howknow}<font color="red">*</font></td>
+		<td>{FORM.howknow}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="how_did_u" {FORM.how_did_u_DISABLED}>
 			<option value="-1"></option>
@@ -204,7 +226,7 @@ td.required
 	</tr>
 	
 	<tr>
-		<td>{FORM.sex}<font color="red">*</font></td>
+		<td>{FORM.sex}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="sex" {FORM.sex_DISABLED}>
 			<option value="-1"></option>
@@ -222,7 +244,7 @@ td.required
 	<!-- END sex_ErrReq -->
 
 	<tr>
-		<td>{FORM.MainLanguage}<font color="red">*</font></td>
+		<td>{FORM.MainLanguage}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="languages" {FORM.languages_DISABLED}>
 			<option value="-1"></option>
@@ -245,15 +267,15 @@ td.required
 			<input size="4" maxlength="4" type="text" name="birth_y" value="{FORM.birth_y_VALUE}" />
 		</td>
 	</tr>
-	<!-- BEGIN birth_d_ErrRule -->
+	<!-- BEGIN birth_y_ErrRule -->
 	<tr>
 		<td>&nbsp;</td>
-		<td class="required">{FORM.birth_d_ErrRule.Message}</td>
+		<td class="required">{FORM.birth_y_ErrRule.Message}</td>
 	</tr>
-	<!-- END birth_d_ErrRule -->
+	<!-- END birth_y_ErrRule -->
 	
 	<tr>
-		<td>{FORM.countryresidence}<font color="red">*</font></td>
+		<td>{FORM.countryresidence}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="residence_country" {FORM.residence_country_DISABLED}>
 			<option value="-1"></option>
@@ -276,7 +298,7 @@ td.required
 	</tr>
 	
 	<tr>
-		<td>{FORM.academicdegree}<font color="red">*</font></td>
+		<td>{FORM.academicdegree}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 		<select name="ac_degree" {FORM.ac_degree_DISABLED}>
 			<option value="-1"></option>
@@ -300,7 +322,7 @@ td.required
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
 	<tr>
-		<td>{FORM.industry}<font color="red">*</font></td>
+		<td>{FORM.industry}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 			<!-- BEGIN industries -->
 			{FORM.industries.Before}<input type="radio" name="industries" value="{FORM.industries.VALUE}" {FORM.industries.CHECKED}> {FORM.industries.TEXT}{FORM.industries.After}
@@ -318,7 +340,7 @@ td.required
 	</tr>
 	
 	<tr>
-		<td>{FORM.occ_area}<font color="red">*</font></td>
+		<td>{FORM.occ_area}&nbsp;(<font color="red">*</font>)</td>
 		<td>
 			<!-- BEGIN occ_areas -->
 			{FORM.occ_areas.Before}<input type="radio" name="occ_areas" value="{FORM.occ_areas.VALUE}" {FORM.occ_areas.CHECKED}> {FORM.occ_areas.TEXT}{FORM.occ_areas.After}
@@ -368,9 +390,9 @@ td.required
 	</tr>
 	<!-- END favorite_sport_ErrReq -->
 	
-	<!--
+	
 	<tr>
-		<th colspan="2">Donate to Milan-IN</th>
+		<th colspan="2">Donate to Milan-IN (<font color="red">*</font>)</th>
 	</tr>
 	
 	<tr>
@@ -378,14 +400,19 @@ td.required
 		<!-- BEGIN isdonate -->
 			<input type="radio" name="isdonate" value="{FORM.isdonate.VALUE}" {FORM.isdonate.CHECKED} onclick="ChangeDonate(this)" /> {FORM.isdonate.TEXT} <br />
 		<!-- END isdonate -->
-		<div style="display:{FORM.moneydonateDisplay};padding-left:20px;" id="donateBlock">
+		<div style="display:{FORM.moneydonateDisplay};padding-left:20px;border:1px dotted blue;" id="donateBlock">
 			<!-- BEGIN moneydonate -->
 				<input type="radio" name="moneydonate" value="{FORM.moneydonate.VALUE}" {FORM.moneydonate.CHECKED} /> {FORM.moneydonate.TEXT} EUR <br />
 			<!-- END moneydonate -->
 		</div>
 		</td>
 	</tr>
-	-->
+	<!-- BEGIN isdonate_ErrReq -->
+	<tr>
+		<td class="required" colspan=2>{FORM.isdonate_ErrReq.Message}</td>
+	</tr>
+	<!-- END isdonate_ErrReq -->
+	
 	<tr>
 		<td colspan="2" class="checkBoxSplitter">&nbsp;</td>
 	</tr>
@@ -395,7 +422,7 @@ td.required
 	</tr>
 	<tr>
 		<td>{FORM.privacyterms} <br /><a href="privacy.pdf" target="_blank">Read</a></td>
-		<td><input type="checkbox" name="terms_privacy" value="1" {FORM.terms_privacy_CHECKED} />{FORM.accept}
+		<td><input type="checkbox" name="terms_privacy" value="1" {FORM.terms_privacy_CHECKED} />{FORM.accept}</td>
 	</tr>
 	<!-- BEGIN terms_privacy_ErrReq -->
 	<tr>
@@ -406,15 +433,14 @@ td.required
 	
 	
 	<tr>
-		<td>{FORM.servicesterms} <br /><a href="disclaimer.pdf" target="_blank">Read</a></td>
+		<td>{FORM.servicesterms} (<font color="red">*</font>)<br /><a href="disclaimer.pdf" target="_blank">Read</a></td>
 		<td><input type="checkbox" name="terms_services" value="1" {FORM.terms_services_CHECKED} />{FORM.accept}
+		<!-- BEGIN terms_services_ErrReq -->
+		&nbsp;<span class="required">{FORM.terms_services_ErrReq.Message}</span>
+		<!-- END terms_services_ErrReq -->
+		</td>
 	</tr>
-	<!-- BEGIN terms_services_ErrReq -->
-	<tr>
-		<td>&nbsp;</td>
-		<td class="required">{FORM.terms_services_ErrReq.Message}</td>
-	</tr>
-	<!-- END terms_services_ErrReq -->
+	
 	<tr>
 		<td colspan="2"><input type="submit" class="button" name="btn_submit" value="{FORM.send}"></td>
 	</tr>
@@ -431,6 +457,13 @@ td.required
 <input type="hidden" name="item_name" value="Donate to Milan IN B.C.">
 <input type="hidden" name="no_note" value="1"/>
 <input type="hidden" name="tax" value="0"/>
+
+<input type="hidden" name="item_number" value="{DONATE.USERID}"> 
+<input type="hidden" name="return" value="{DONATE.HTTP_REFERER}"> 
+<input type="hidden" name="cancel_return" value="{DONATE.HTTP_REFERER}"> 
+<input type="hidden" name="rm" value="2"> 
+<input type="hidden" name="no_shipping" value="0"> 
+
 <input type="hidden" name="lc" value="{DONATE.FLANG}"/>
 <input type="hidden" name="bn" value="PP-DonationsBF"/>
 <input type="hidden" name="currency_code" value="EUR">
@@ -445,4 +478,15 @@ td.required
 <!-- END IT -->
 </form>
 </center>
+<script>
+	//document.forms["_xclick"].submit();
+</script>
 <!-- END DONATE -->
+
+<!-- BEGIN DONATE_VALID -->
+{DONATE_VALID.text}
+<!-- END DONATE_VALID -->
+
+<!-- BEGIN DONATE_INVALID -->
+{DONATE_INVALID.text}
+<!-- END DONATE_INVALID -->
