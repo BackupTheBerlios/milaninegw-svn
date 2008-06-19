@@ -5,7 +5,9 @@
 	{
 		$value = db_query("select * from ".tbl_prefix."profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
 		$value = $value[0];
-		
+		if(!(trim($value) == "" && $parameter[-1] == -1))
+		{
+		#start render field to edit
 		$name = <<< END
 					<label for="{$parameter[1]}">
 						<b>{$parameter[0]}</b>
@@ -37,6 +39,7 @@ END;
 							'column2' => $column2
 						)
 						);
-		
+		#end render field to edit
+		}
 	}
 ?>

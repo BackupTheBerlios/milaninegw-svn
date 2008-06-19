@@ -17,7 +17,6 @@
 	
 	*/
 	
-		
 		if (isset($parameter) && sizeof($parameter) > 2) {
 			
 			if (!isset($parameter[4])) {

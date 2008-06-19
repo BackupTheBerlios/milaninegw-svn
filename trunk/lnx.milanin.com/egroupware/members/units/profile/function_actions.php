@@ -13,8 +13,9 @@
 					if(is_array($value))
 						$value = implode(",", $value);
 
-					if ($value != "") {
-				
+					if ($value != "") 
+					{
+						
 						$value = addslashes($value);
 						$field = addslashes($field);
 						$access = addslashes($_POST['profileaccess'][$field]);
@@ -70,7 +71,7 @@
 				}
 				$messages[] = "Profile updated.";
 			}
-		
+		exit;
 		}
 
 ?>
