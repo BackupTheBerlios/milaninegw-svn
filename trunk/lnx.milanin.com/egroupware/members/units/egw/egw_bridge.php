@@ -23,11 +23,12 @@ function egw_get_id_by_lid(){
   if ($egw['session_storage'] == 'db') {
     $sessionid = $_COOKIE['sessionid'];
     $sql="SELECT * FROM ".$egw['db_name'].".".$egw['db_tables_sessions']."  WHERE session_id='".$sessionid."' and session_flags != 'A'";
-    $result = db_query($sql);
-    if($row = $result[0]) {
+	$result = db_query($sql);
+    if($row = $result[0]) 
+	{
       $sql='SELECT account_id FROM '.$egw['db_name'].'.'.$egw['db_tables_accounts'].' WHERE '.
            'account_lid = \''.substr($row->session_lid,0,strpos($row->session_lid,'@')).'\' or account_lid = \''.$row->session_lid.'\'';
-      $result = db_query($sql);
+	  $result = db_query($sql);
       if($row = $result[0]) {
         return $row->account_id;
       }else{
@@ -47,7 +48,6 @@ function egw_get_id_by_lid(){
 //returs array of account information from egw db
 function egw_get_account_info($id){
   global $egw;
-
   $sql = 'SELECT account_id AS ident, '.
        'account_lid AS username, '.
        'account_pwd AS password, '.
@@ -71,8 +71,9 @@ function egw_get_account_info($id){
 
 //Creates new record in the ".tbl_prefix."users.table based on object passed from egw_get_account_info
 function egw_is_new_user(){
-  global $egw;
-  $id=egw_get_id_by_lid();
+  global $egw; 
+  $id = egw_get_id_by_lid();
+  if($id > 0) return 1; //veb: special fix. We have already eLgg profile. So we don't need to create it.
   
   $sql = "SELECT ident from ".tbl_prefix."users WHERE ident = ".$id;
   $result = db_query($sql);
