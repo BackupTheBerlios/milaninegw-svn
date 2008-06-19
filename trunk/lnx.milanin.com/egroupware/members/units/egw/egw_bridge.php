@@ -73,7 +73,7 @@ function egw_get_account_info($id){
 function egw_is_new_user(){
   global $egw; 
   $id = egw_get_id_by_lid();
-  if($id > 0) return 1; //veb: special fix. We have already eLgg profile. So we don't need to create it.
+  if($id > 0) return 0; //veb: special fix. We have already eLgg profile. So we don't need to create it.
   
   $sql = "SELECT ident from ".tbl_prefix."users WHERE ident = ".$id;
   $result = db_query($sql);
