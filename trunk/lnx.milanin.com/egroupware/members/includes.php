@@ -1,9 +1,9 @@
 <?php
 	function DebugLog($object, $responseEnd = false)
 	{
-		print "<pre>";
+		print "<pre><div style='border:1px dotted red;background-color:yellow;'>";
 		print_r($object);
-		print "</pre>";
+		print "</div></pre>";
 		if($responseEnd) exit;
 	}
 	ini_set("display_errors", "1");

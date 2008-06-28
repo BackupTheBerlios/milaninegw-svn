@@ -56,7 +56,7 @@
 				if($value == $i && $isReadOnly)
 					$res .= $arr[$i];
 				elseif(!$isReadOnly)
-					$res .= "<option value=\"$i\"".($i == $value ? " selected" : "").">".stripslashes($arr[$i])."</option>";
+					$res .= "<option value=\"$i\"".($i."" == $value."" ? " selected" : "").">".stripslashes($arr[$i])."</option>";
 			}
 		}
 		
@@ -66,16 +66,17 @@
 		return $res;
 	}
 	
-	function DisplayGW_GroupCheckBox($metaID, $value, $isReadOnly = true, $ctrlID="", $lang="en")
+	function DisplayGW_GroupCheckBox($metaID, $value, $isReadOnly = true, $ctrlID="", $type="chk", $lang="en")
 	{
 		$res = "";
 		$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='%s'", $metaID, $lang);
 		$obj = db_query($sql);
 		$arr = explode("\n", $obj[0]->value);
 		$arr = array_map("trim", $arr);
-		//$arr contains all valid values from database && $parameter[0] - contains selected value;
+		//$arr contains all valid values from database && $parameter[0] - contains selected value(s);
+		
 		$param_arr = $value == "" ? array() : explode(",", $value);
-
+		
 		if (count($arr) > 0) 
 		{
 			if(!$isReadOnly)
@@ -94,7 +95,17 @@
 					if($i % 2 == 0)
 						$res .= "<tr>";
 					
-					$res .= "<td><input type=\"Checkbox\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$ctrlID."[]\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
+					switch($type)
+					{
+						case "chk":
+							$res .= "<td><input type=\"Checkbox\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$ctrlID."[]\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
+							break;
+							
+						case "radio":
+							$res .= "<td><input type=\"radio\" ".(array_search($i, $param_arr) === FALSE ? "" : " checked")." name=\"".$ctrlID."\" value=\"".$i."\" > ".stripslashes($arr[$i])."</td>";
+							break;
+					}
+					
 					
 					if($i % 2 == 1)
 						$res .= "</tr>";

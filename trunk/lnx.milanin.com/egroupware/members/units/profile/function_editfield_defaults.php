@@ -34,14 +34,17 @@
 		}
 		else
 		{
-		
+			$indicator = '&nbsp;(<font color="red">*</font>)';
 		
 		// Initial profile data
 		//	-1 ~ "ReadOnly"=> 'true' or 'false'
 		//$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
 		//$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
-		$data['profile:details'][] = array(-1 => true, "Which professional profile better describes you?","prof_profile","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
+		$data['profile:details'][] = array(-1 => false, "Which professional profile better describes you?$indicator", "prof_profile", "GW_dropdown",
+											"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>"This field is required.") );
+		//$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
+		
+		/*
 		$data['profile:details'][] = array(-1 => true, "Phone Number","phone","text");
 		$data['profile:details'][] = array(-1 => true, "Email address","emailaddress","email");
 		//$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
@@ -53,8 +56,11 @@
 		$data['profile:details'][] = array(-1 => true, "Country of residence","residence_country","text","");
 		$data['profile:details'][] = array(-1 => true, "City of residence","residence_city","text","");
 		$data['profile:details'][] = array(-1 => true, "Your academic degree","ac_degree","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "Favorite sport","favorite_sport","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "Industry","industries","GW_GroupCheckBox");
+		$data['profile:details'][] = array(-1 => true, "Favorite sport","favorite_sport","GW_dropdown");*/
+		
+		$data['profile:details'][] = array(-1 => false, "Industry$indicator", "industries", "GW_GroupCheckBox", "type"=>"radio",
+											"Valid"=>array("required" => true, "invalid"=>"", "required_message"=>"This field is required.") );
+		/*
 		//$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
 		$data['profile:details'][] = array(-1 => true, "occ_area","occ_areas","GW_GroupCheckBox");
 		$data['profile:details'][] = array(-1 => true, "Base interests","interestsBase","GW_GroupCheckBox");
@@ -92,6 +98,8 @@
 		$data['profile:details'][] = array("High School","highschool","text");
 		$data['profile:details'][] = array("University / College","university","text");
 		$data['profile:details'][] = array("Degree","universitydegree","text");
-		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
+		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");*/
 		}
+		
+		db_query("update global_config set value='".count($data['profile:details'])."' where name='profile_data_count'")
 ?>

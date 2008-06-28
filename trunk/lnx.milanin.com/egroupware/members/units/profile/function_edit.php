@@ -5,9 +5,8 @@
 	if (run("permissions:check", "profile")) {
 	
 		$profile_username = run("users:id_to_name",$page_owner);
-		
-		$body = "<form action=\"".url . $profile_username ."/\" method=\"post\">";
-	
+		//$body = "<form action=\"".url . $profile_username ."/\" method=\"post\">";
+		$body = "<form method=\"post\">"; //we need to post data into 
 		// Cycle through all defined profile detail fields and display them
 	
 		if (isset($data['profile:details']) && sizeof($data['profile:details']) > 0) {

@@ -1,21 +1,21 @@
 <?php
-
-	// Action parser for profiles
-
-		global $page_owner;
-	
-		if (isset($_POST['action']) && $_POST['action'] == "profile:edit" && logged_on && run("permissions:check", "profile")) {
-		
-			if (isset($_POST))			
-			if (isset($_POST['profiledetails'])) {
-				foreach($_POST['profiledetails'] as $field => $value) {
+// Action parser for profiles
+global $page_owner, $pVal;
+$pVal = new ProfileValidation();
+if ($pVal->IsPost())
+{
+	$pVal->ValidatePostedData(&$data['profile:details']);
+	if($pVal->isValid )
+	{
+		//start send data to DB
+		foreach($_POST['profiledetails'] as $field => $value) 
+				{
 					//veb fix for multi select 
 					if(is_array($value))
 						$value = implode(",", $value);
 
 					if ($value != "") 
 					{
-						
 						$value = addslashes($value);
 						$field = addslashes($field);
 						$access = addslashes($_POST['profileaccess'][$field]);
@@ -65,13 +65,61 @@
 								}
 							}
 						//} //end foreach
-
 					}
-			
 				}
 				$messages[] = "Profile updated.";
-			}
-		exit;
+				//end send data to db.
+				
+		if(!$pVal->stayOnThisPage)
+		{
+			$profile_username = run("users:id_to_name",$page_owner);
+			header("Location: ".url.$profile_username); 
+			exit;
 		}
+	}
+}
+
+/*****************************************************************************************************/
+class ProfileValidation
+{
+	var $isValid;
+	
+	function ProfileValidation()
+	{
+		$this->isValid = true;
+		$this->stayOnThisPage = true;
+	}
+	
+	function IsPost()
+	{
+		return isset($_POST['action']) && isset($_POST['profiledetails']) && $_POST['action'] == "profile:edit" && logged_on && run("permissions:check", "profile");
+	}
+	
+	function ValidatePostedData(&$fields)
+	{
+		foreach($fields as $key => $field)
+		{
+			$pValue = $_POST['profiledetails'][$field[1]];
+			$fields[$key]["pAccess"] = $_POST['profileaccess'][$field[1]];
+			$fields[$key]["pValue"] = $pValue;
+			if( isset($field["Valid"]) )
+			{
+				$rules = &$field["Valid"];
+				if($rules["required"] === true && trim($pValue) == $rules["invalid"])
+				{
+					$fields[$key]["Valid"]["showReq"] = true;
+					$this->isValid = false;
+				}
+				else
+				{
+
+				}
+			}
+		}
+	}
+}
+			
+
+				
 
 ?>

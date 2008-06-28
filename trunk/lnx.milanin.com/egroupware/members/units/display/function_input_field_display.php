@@ -1,9 +1,6 @@
 <?php
-
 	// Displays different HTML depending on input field type
-
 	/*
-	
 		$parameter(
 		
 						0 => input name to display (for forms etc)
@@ -12,9 +9,7 @@
 						3 => reference name (for tag fields and so on)
 						4 => ID number (if any)
 						5 => Owner
-		
 					)
-	
 	*/
 	
 		if (isset($parameter) && sizeof($parameter) > 2) {
@@ -26,7 +21,7 @@
 			if (!isset($parameter[5])) {
 				$parameter[5] = $_SESSION['userid'];
 			}
-			
+
 			switch($parameter[2]) {
 				
 				case "GW_label":
@@ -39,11 +34,11 @@
 						
 				case "GW_dropdown":
 						//$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);
-						$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1]);
+						$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], $parameter["fullParam"][-1], $parameter[0]);
 						break;
 				case "GW_GroupCheckBox":
 						//DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);
-						$run_result .= DisplayGW_GroupCheckBox($parameter[3], $parameter[1]);
+						$run_result .= DisplayGW_GroupCheckBox($parameter[3], $parameter[1], $parameter["fullParam"][-1], $parameter[0], $parameter["fullParam"]["type"]);
 						break;
 				case "text":
 						if(is_array($parameter["fullParam"]) && $parameter["fullParam"][-1] === true)
