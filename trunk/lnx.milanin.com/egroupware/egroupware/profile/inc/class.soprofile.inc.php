@@ -46,12 +46,9 @@
                 }
                 function get_max_items()
                 {
-                	$this->db->query('SELECT count(*)  as items FROM `'.
-          					$this->table_prefix.
-          					'profile_data` GROUP by `owner` '.
-          					'order by items desc limit 0,1',__LINE__,__FILE__);
-                        $this->db->next_record();
-			return $this->db->f(0);
+                	$this->db->query("SELECT value FROM `global_config` where name='profile_data_count'",__LINE__,__FILE__);
+                    $this->db->next_record();
+					return $this->db->f(0);
                 }
                 function get_relative_percentage()
                 {

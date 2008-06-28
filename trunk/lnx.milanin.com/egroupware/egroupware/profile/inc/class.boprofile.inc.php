@@ -51,7 +51,9 @@
                 }
                 function get_members_views()
                 {
-                	foreach ($this->so->get_members_views() as $v){
+					$tmp = $this->so->get_members_views();
+					if(is_array($tmp))
+                	foreach ($tmp as $v){
                           $v['icon']='<a href="'.$this->members_url.$v['user'].
                           '" title="'.lang("view profile of").' '.$v['name'].'">'.
                           '<img src="'.$this->members_url.
