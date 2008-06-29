@@ -69,7 +69,9 @@
                 }
                 function get_guests_views()
                 {
-                	foreach ($this->so->get_guests_views() as $v){
+					$res = $this->so->get_guests_views();
+					if(is_array($res))
+                	foreach ($res as $v){
                           if (preg_match('/:\/\/([A-Za-z0-9-.]*)\//',$v['referral'],$v['name'])){
                             $v['name']=$v['name'][1];
                             $v['referral']='<a href="'.$v['referral'].

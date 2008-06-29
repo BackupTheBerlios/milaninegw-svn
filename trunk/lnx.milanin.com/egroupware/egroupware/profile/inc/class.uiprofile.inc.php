@@ -56,6 +56,7 @@
                         $GLOBALS['phpgw']->template->set_block('_stats','guest_view');
                         $this->set_common_langs();
                         $row_class='row_on';
+						if(is_array($this->bo->members_views))
                         foreach ($this->bo->members_views as $v){
                           $GLOBALS['phpgw']->template->set_var('member_icon',$v['icon']);
                           $GLOBALS['phpgw']->template->set_var('member_name',$v['name']);
@@ -65,6 +66,7 @@
                           $row_class= ($row_class=='row_on') ? 'row_off' : 'row_on';
                         }
 			$row_class='row_on';
+			if(is_array($this->bo->guests_views))
 			foreach ($this->bo->guests_views as $v){
                           $GLOBALS['phpgw']->template->set_var('guest_from',$v['referral']);
                           $GLOBALS['phpgw']->template->set_var('guest_last_date',$v['date']);

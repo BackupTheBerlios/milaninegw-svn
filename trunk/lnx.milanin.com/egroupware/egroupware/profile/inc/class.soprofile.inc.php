@@ -18,42 +18,53 @@
 	{
 		var $db;
 		var $owner;
+		var $elggID;
                 var $owner_groups;
                 var $table_prefix;
                 var $public_functions = array(
 			'get_relative_percentage'          => True,
           		'get_members_views'          	   => True,
-          		'get_guests_views'          	   => True,
-		);
+          		'get_guests_views'          	   => True);
+
 		function soprofile()
 		{
 			$this->db    = &$GLOBALS['phpgw']->db;
-                        $this->table_prefix = "members_";
+            $this->table_prefix = "members_";
 			$this->owner = $GLOBALS['phpgw_info']['user']['account_id'];
+			$this->elggID = $this->GetActualeLggProfileID();
 			$this->owner_groups= array_keys($GLOBALS['phpgw']->accounts->search(array('type'=>'owngroups','query'=>$owner,'query_type'=>'id')));
 			$config = CreateObject('phpgwapi.config');
 			$config->read_repository();
 			$GLOBALS['phpgw_info']['server']['profile'] = $config->config_data;
 			unset($config);
 		}
-                function count_items()
-                {
-                	$this->db->query('SELECT count(*) as items FROM `'.
-          				 $this->table_prefix.
-          				 'profile_data` WHERE `owner` ='.$this->owner);
-                        $this->db->next_record();
+		function GetActualeLggProfileID()
+		{
+			$this->db->query('SELECT ident as items FROM `'.$this->table_prefix.'users` WHERE `username` = (select account_lid from phpgw_accounts where account_id = '.$this->owner.')');
+			$this->db->next_record();
 			return $this->db->f(0);
-                }
-                function get_max_items()
-                {
-                	$this->db->query("SELECT value FROM `global_config` where name='profile_data_count'",__LINE__,__FILE__);
-                    $this->db->next_record();
-					return $this->db->f(0);
-                }
-                function get_relative_percentage()
-                {
-                	return round($this->count_items()*100/$this->get_max_items(),0);
-                }
+		}
+		
+		function count_items()
+		{
+			$this->db->query('SELECT count(*) as items FROM `'.$this->table_prefix.'profile_data` WHERE `owner` = '.$this->elggID);
+			$this->db->next_record();
+			return $this->db->f(0);
+		}
+		
+		function get_max_items()
+		{
+			$this->db->query("SELECT value FROM `global_config` where name='profile_data_count'",__LINE__,__FILE__);
+			$this->db->next_record();
+			return $this->db->f(0);
+		}
+				
+		function get_relative_percentage()
+		{
+			$res = round($this->count_items()*100/$this->get_max_items(),0);
+			return ($res > 100) ? 100 : $res;
+		}
+				
                 function get_members_views()
                 {
                 	$query='SELECT pf.viewer,
@@ -65,7 +76,7 @@
                                        LEFT JOIN '.$this->table_prefix.'users u ON u.ident = pf.viewer
                                        LEFT JOIN '.$this->table_prefix.'icons i ON i.ident = u.icon
                                        WHERE pf.viewer !=0
-                                       AND pf.owner ='.$this->owner.' '.
+                                       AND pf.owner ='.$this->elggID.' '.
                                        'ORDER by pf.timestamp desc';
                         $this->db->query($query,__LINE__,__FILE__);
                         while ($this->db->next_record()){
@@ -85,7 +96,7 @@
                                        FROM_UNIXTIME( pf.timestamp, \'%D/%M/%y %h:%i\' ) AS viewdate
                                        FROM `'.$this->table_prefix.'profile_views` pf
                                        WHERE pf.viewer = 0
-                                       AND pf.owner ='.$this->owner.' '.
+                                       AND pf.owner ='.$this->elggID.' '.
                                        'ORDER by pf.timestamp desc';
                         $this->db->query($query,__LINE__,__FILE__);
                         while ($this->db->next_record()){
