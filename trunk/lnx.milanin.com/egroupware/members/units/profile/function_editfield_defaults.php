@@ -34,40 +34,46 @@
 		}
 		else
 		{
-			$indicator = '&nbsp;(<font color="red">*</font>)';
-		
-		// Initial profile data
-		//	-1 ~ "ReadOnly"=> 'true' or 'false'
-		//$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
-		//$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
+			$indicator = ( isset($GLOBALS["argv"][0]) && substr($GLOBALS["argv"][0], 0, 13) == "profile_name=" ) ? "" : '&nbsp;(<font color="red">*</font>)';
+			$requiredMessage = "This field is required.";
+		// Initial profile data 	-1 ~ "ReadOnly"=> 'true' or 'false'
+
 		$data['profile:details'][] = array(-1 => false, "Which professional profile better describes you?$indicator", "prof_profile", "GW_dropdown",
-											"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>"This field is required.") );
-		//$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
-		
-		/*
-		$data['profile:details'][] = array(-1 => true, "Phone Number","phone","text");
+											"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
+		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
+		$data['profile:details'][] = array(-1 => false, "Phone Number","phone","text");
 		$data['profile:details'][] = array(-1 => true, "Email address","emailaddress","email");
-		//$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
 		$data['profile:details'][] = array(-1 => true, "How did you know about this club?","how_did_u","GW_dropdown","");
-		$data['profile:details'][] = array(-1 => true, "Sex","sex","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "Main language","languages","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "Birthday","birthDate","text");
-		//"select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name"
-		$data['profile:details'][] = array(-1 => true, "Country of residence","residence_country","text","");
-		$data['profile:details'][] = array(-1 => true, "City of residence","residence_city","text","");
-		$data['profile:details'][] = array(-1 => true, "Your academic degree","ac_degree","GW_dropdown");
-		$data['profile:details'][] = array(-1 => true, "Favorite sport","favorite_sport","GW_dropdown");*/
+		$data['profile:details'][] = array(-1 => false, "Sex$indicator","sex","GW_dropdown",
+									"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
+		
+		$data['profile:details'][] = array(-1 => false, "Main language$indicator","languages","GW_dropdown",
+									"source"=>array("en"=>"English", "it"=>"Italian"), 
+									"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
+
+		$data['profile:details'][] = array(-1 => false, "Year of birth (YYYY)", "birthDate", "text",
+									"Valid"=>array("required" => false, "invalid"=>"", "required_message"=>$requiredMessage,
+												   "validFun"=>"IsValidBirthDate", "validFun_message"=>"Birth date is invalid") );
+
+		$data['profile:details'][] = array(-1 => false, "Country of residence$indicator","residence_country","GW_dropdown","", "use_key" =>false, 
+									"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage));
+									
+		$data['profile:details'][] = array(-1 => false, "City of residence","residence_city","text","");
+		$data['profile:details'][] = array(-1 => false, "Your academic degree$indicator","ac_degree","GW_dropdown",
+									"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage));
 		
 		$data['profile:details'][] = array(-1 => false, "Industry$indicator", "industries", "GW_GroupCheckBox", "type"=>"radio",
-											"Valid"=>array("required" => true, "invalid"=>"", "required_message"=>"This field is required.") );
-		/*
-		//$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
-		$data['profile:details'][] = array(-1 => true, "occ_area","occ_areas","GW_GroupCheckBox");
-		$data['profile:details'][] = array(-1 => true, "Base interests","interestsBase","GW_GroupCheckBox");
-		$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
-		$data['profile:details'][] = array("","","HR");
-
+									"Valid"=>array("required" => true, "invalid"=>"", "required_message"=>$requiredMessage) );
 		
+		$data['profile:details'][] = array(-1 => false, "Occupation area$indicator","occ_areas","GW_GroupCheckBox", "type"=>"radio",
+									"Valid"=>array("required" => true, "invalid"=>"", "required_message"=>$requiredMessage));
+		
+		$data['profile:details'][] = array(-1 => false, "Base interests","interestsBase", "GW_GroupCheckBox", "type"=>"chk");
+		$data['profile:details'][] = array(-1 => false, "Favorite sport","favorite_sport","GW_GroupCheckBox", "type"=>"chk");
+		
+		$data['profile:details'][] = array("","","HR");
+		$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
+
 		$data['profile:details'][] = array("Who am I?","biography","evenlongertext","A short introduction to you.");
 		$data['profile:details'][] = array("Postal address","postaladdress","mediumtext");
 		
@@ -85,7 +91,7 @@
 		$data['profile:details'][] = array("AIM screenname","aim","aim");
 		$data['profile:details'][] = array("Skype username","skype","skype");
 		$data['profile:details'][] = array("Jabber username","jabber","text");
-		//$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
+		
 		$data['profile:details'][] = array("Likes","likes","keywords","Separated with commas.");
 		$data['profile:details'][] = array("Dislikes","dislikes","keywords","Separated with commas.");
 		$data['profile:details'][] = array("Occupation","occupation","text");
@@ -98,8 +104,17 @@
 		$data['profile:details'][] = array("High School","highschool","text");
 		$data['profile:details'][] = array("University / College","university","text");
 		$data['profile:details'][] = array("Degree","universitydegree","text");
-		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");*/
+		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
 		}
 		
-		db_query("update global_config set value='".count($data['profile:details'])."' where name='profile_data_count'")
+		db_query("update global_config set value='".count($data['profile:details'])."' where name='profile_data_count'");
+		
+		/*
+		$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
+		$data['profile:details'][] = array(-1 => true, "Last name","select account_lastname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly" );
+		$data['profile:details'][] = array(-1 => true, "Reason for requesting Club Membership","requestReason","mediumtext","");
+		"select * FROM phpgw_languages where lang_id in ("."'".str_replace(",", "','", $GLOBALS['sitemgr_info']['site_languages'])."'".") ORDER BY lang_name"
+		//$data['profile:details'][] = array(-1 => true, "Profession","professions","GW_GroupCheckBox");
+		//$data['profile:details'][] = array("Interests","interests","keywords","Separated with commas.");
+		*/
 ?>

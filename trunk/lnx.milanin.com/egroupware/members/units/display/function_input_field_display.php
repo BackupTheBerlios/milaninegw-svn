@@ -34,7 +34,7 @@
 						
 				case "GW_dropdown":
 						//$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);
-						$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], $parameter["fullParam"][-1], $parameter[0]);
+						$run_result .= DisplayGW_dropdown($parameter[3], $parameter[1], $parameter["fullParam"][-1], $parameter[0], $parameter["fullParam"]);
 						break;
 				case "GW_GroupCheckBox":
 						//DisplayGW_dropdown($parameter[3], $parameter[1], false, $parameter[0]);

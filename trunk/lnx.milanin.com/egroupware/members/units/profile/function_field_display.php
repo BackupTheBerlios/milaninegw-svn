@@ -26,7 +26,7 @@
 
 		if ((($value->value != "" && $value->value != "blank")) && run("users:access_level_check", $value->access)) {
 			$name = $field[0];
-			$column1 = run("display:output_field",array($value->value,$field[2],$field[1],$field[0],$value->ident));
+			$column1 = run("display:output_field",array($value->value,$field[2],$field[1],$field[0],$value->ident, "fullParam"=>$parameter[0]));
 			$run_result .= run("templates:draw", array(
 									'context' => 'databox1',
 									'name' => $name,

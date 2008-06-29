@@ -26,11 +26,17 @@
 						<b>{$parameter[0]}</b>
 END;
 		
-		if (isset($parameter[3])) {
+		if (isset($parameter[3]) && $parameter[3] != "") {
 			$name .= "<br /><i>" . $parameter[3] . "</i>";
 		}
+		
+		//required message.
 		if( isset($parameter["Valid"]) && isset($parameter["Valid"]["showReq"]) && $parameter["Valid"]["showReq"] == true)
 			$name .= "<br /><font color='red'>" .$parameter["Valid"]["required_message"] . "</font>";
+		//validation message.
+		if( isset($parameter["Valid"]) && isset($parameter["Valid"]["showFunValid"]) && $parameter["Valid"]["showFunValid"] == true)
+			$name .= "<br /><font color='red'>" .$parameter["Valid"]["validFun_message"] . "</font>";
+			
 		//$fields[$key]["Valid"]["showReq"] = true;
 		//if(required_message
 		$name .= <<< END

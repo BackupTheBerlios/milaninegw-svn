@@ -36,27 +36,32 @@
 		return $tmpString;
 	}
 
-	function DisplayGW_dropdown($metaID, $value, $isReadOnly = true, $ctrlID="", $lang="en")
+	function DisplayGW_dropdown($metaID, $value, $isReadOnly = true, $ctrlID="", $fullParam="", $lang="en")
 	{
 		$res = $isReadOnly ? "" : "<select name=\"".$ctrlID."\" id=\"".$ctrlID."\">";
-	
 		$sql = sprintf("SELECT data as value from other_data where name='%s' and lang='%s'", $metaID, $lang);
 		$obj = db_query($sql);
-		$arr = explode("\n", $obj[0]->value);
+		$arr = is_array($fullParam["source"]) ? $fullParam["source"] : explode("\n", $obj[0]->value);
 		$arr = array_map("trim", $arr);
-		
 		if( !$isReadOnly )
 			$res .= "<option value=\"-1\""."></option>";
 
 		//$arr contains all valid values from database && $parameter - contains selected value;
 		if (count($arr) > 0) 
 		{
-			for($i=0; $i<count($arr); $i++) 
+			foreach($arr as $i=>$j) 
 			{
-				if($value == $i && $isReadOnly)
+				$oValue = $i;
+				if(	$fullParam["use_key"] === false)
+					$oValue = $arr[$i];
+						
+				if($value == $oValue && $isReadOnly)
 					$res .= $arr[$i];
 				elseif(!$isReadOnly)
-					$res .= "<option value=\"$i\"".($i."" == $value."" ? " selected" : "").">".stripslashes($arr[$i])."</option>";
+				{
+					
+					$res .= "<option value=\"$oValue\"".($oValue."" == $value."" ? " selected" : "").">".stripslashes($arr[$i])."</option>";
+				}
 			}
 		}
 		
@@ -74,9 +79,11 @@
 		$arr = explode("\n", $obj[0]->value);
 		$arr = array_map("trim", $arr);
 		//$arr contains all valid values from database && $parameter[0] - contains selected value(s);
-		
-		$param_arr = $value == "" ? array() : explode(",", $value);
-		
+		if(!is_array($value))
+			$param_arr = $value == "" ? array() : explode(",", $value);
+		else
+			$param_arr = $value;
+
 		if (count($arr) > 0) 
 		{
 			if(!$isReadOnly)

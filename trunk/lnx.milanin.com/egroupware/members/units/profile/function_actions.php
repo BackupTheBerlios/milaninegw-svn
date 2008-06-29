@@ -5,7 +5,7 @@ $pVal = new ProfileValidation();
 if ($pVal->IsPost())
 {
 	$pVal->ValidatePostedData(&$data['profile:details']);
-	if($pVal->isValid )
+	if($pVal->isValid)
 	{
 		//start send data to DB
 		foreach($_POST['profiledetails'] as $field => $value) 
@@ -14,7 +14,11 @@ if ($pVal->IsPost())
 					if(is_array($value))
 						$value = implode(",", $value);
 
-					if ($value != "") 
+					if ($value == "") 
+					{
+						db_query("delete from ".tbl_prefix."profile_data where name = '$field' and owner = '".$page_owner."' and name != 'linkedin'");
+					}
+					else
 					{
 						$value = addslashes($value);
 						$field = addslashes($field);
@@ -87,7 +91,7 @@ class ProfileValidation
 	function ProfileValidation()
 	{
 		$this->isValid = true;
-		$this->stayOnThisPage = true;
+		$this->stayOnThisPage = false;
 	}
 	
 	function IsPost()
@@ -99,27 +103,44 @@ class ProfileValidation
 	{
 		foreach($fields as $key => $field)
 		{
-			$pValue = $_POST['profiledetails'][$field[1]];
+			$pValue = is_array($_POST['profiledetails'][$field[1]]) ? $_POST['profiledetails'][$field[1]] : trim($_POST['profiledetails'][$field[1]]);
 			$fields[$key]["pAccess"] = $_POST['profileaccess'][$field[1]];
 			$fields[$key]["pValue"] = $pValue;
+
 			if( isset($field["Valid"]) )
 			{
 				$rules = &$field["Valid"];
-				if($rules["required"] === true && trim($pValue) == $rules["invalid"])
+				if($rules["required"] === true && $pValue == $rules["invalid"])
 				{
 					$fields[$key]["Valid"]["showReq"] = true;
 					$this->isValid = false;
 				}
-				else
+				elseif(isset($rules["validFun"]))
 				{
-
+					$isInvalid = false;
+					switch($rules["validFun"])
+					{
+						case "IsValidBirthDate" :
+							$isInvalid = !$this->IsValidBirthDate($pValue);
+							break;
+					}
+					$fields[$key]["Valid"]["showFunValid"] = $isInvalid;
+					if($isInvalid)
+						$this->isValid = false;
 				}
 			}
 		}
 	}
+	
+	function IsValidBirthDate($value)
+	{
+		return !( ($value != "" && !$this->str_is_int( $value ) ) || ($value != "" && $this->str_is_int( $value ) && intval($value) > intval(date("Y")) - 16) );
+	}
+
+	function str_is_int($str)
+	{
+		$var=intval($str);
+		return ($str==$var."");
+	}
 }
-			
-
-				
-
 ?>
