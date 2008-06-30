@@ -109,7 +109,7 @@
 		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
 		}
 		
-		db_query("update global_config set value='".count($data['profile:details'])."' where name='profile_data_count'");
+		db_query("update global_config set value='".(count($data['profile:details'])-1)."' where name='profile_data_count'");
 		
 		/*
 		$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");
