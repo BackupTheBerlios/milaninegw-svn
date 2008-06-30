@@ -46,12 +46,57 @@ $body.=run('clubincall:display:small')."<tr>\n";
 							$icon = $icon[0]->filename;
 						} else {
 							//$_SESSION['icon_cache'][$info->icon]->data = "default.png";
-							$icon = "default.png";
-						}
-					// }
+							$icon = db_query("SELECT CONCAT( CONCAT_WS( '-', 'default',
+							CASE sex.value
+								WHEN 1
+								THEN 'w'
+								ELSE 'm'
+							END ,
+							CASE acc.account_status
+								WHEN 'A'
+									THEN 'active'
+								ELSE 'disabled'
+							END 
+							) , 
+							'.png' ) AS filename
+							FROM phpgw_accounts acc
+							LEFT JOIN ".tbl_prefix."users u ON u.username = acc.account_lid
+							LEFT JOIN ".tbl_prefix."profile_data sex ON sex.owner = u.ident
+							WHERE u.ident =". $ident . "
+							AND sex.name = 'sex'");
+							if (sizeof($icon) == 1) {
+							//$_SESSION['icon_cache'][$info->icon]->data = $icon[0]->filename;
+								$icon = $icon[0]->filename;
+							}else{
+								$icon = "default.png";
+							}
+					 	}
 					// $icon = $_SESSION['icon_cache'][$info->icon]->data;
 				} else {
-					$icon = "default.png";
+					$icon = db_query("SELECT CONCAT( CONCAT_WS( '-', 'default',
+							CASE sex.value
+								WHEN 1
+								THEN 'w'
+								ELSE 'm'
+							END ,
+							CASE acc.account_status
+								WHEN 'A'
+									THEN 'active'
+								ELSE 'disabled'
+							END 
+							) , 
+							'.png' ) AS filename
+							FROM phpgw_accounts acc
+							LEFT JOIN ".tbl_prefix."users u ON u.username = acc.account_lid
+							LEFT JOIN ".tbl_prefix."profile_data sex ON sex.owner = u.ident
+							WHERE u.ident =". $ident . "
+							AND sex.name = 'sex'");
+							if (sizeof($icon) == 1) {
+							//$_SESSION['icon_cache'][$info->icon]->data = $icon[0]->filename;
+								$icon = $icon[0]->filename;
+							}else{
+								$icon = "default.png";
+							}
 				}
 				list($width, $height, $type, $attr) = getimagesize(path . "_icons/data/" . $icon);
 				if (sizeof($parameter[1]) > 4) {
