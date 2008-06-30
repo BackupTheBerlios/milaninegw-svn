@@ -680,7 +680,7 @@ div#clubincall_dropdown label {
   border-bottom: 1px solid #000;
   padding-bottom:4px;
 }
-.control_panel {
+.control_panel, .call_panel {
   position: absolute;
   height: 90%;
   z-index: 2000;
@@ -910,4 +910,36 @@ div#clubincall_dropdown label {
   padding-bottom:20px;
   color: #990041;
   font-weight: bold;
+}
+.progress_div {
+ width: 70%;
+ text-align:center;
+ color: #000;
+ margin-top: 5%;
+ margin-left: auto;
+ margin-right: auto;
+ border: solid 1px #707070;
+ padding: 32px;
+}
+.member_div {
+
+}
+.member_icon {
+ display: inline;
+ border: 1px solid #990041;
+ padding: 4px;
+}
+.member_name_span {
+ color: #990041;
+ font-weight: bold;
+ margin:12px;
+ vertical-align: top;
+ display: block;
+
+}
+.progress_span {
+ border: 1px solid #990041;
+ padding: 10px;
+ display: block;
+ margin: 10px;
 }
