@@ -40,7 +40,7 @@
 			$requiredMessage = "This field is required.";
 		// Initial profile data 	-1 ~ "ReadOnly"=> 'true' or 'false'
 
-		$data['profile:details'][] = array(-1 => true, "Active/Disabled","activeInactive","activeInactive");
+		$data['profile:details'][] = array(-1 => true, "Active/Inactive","activeInactive","activeInactive");
 		$data['profile:details'][] = array(-1 => false, "Which professional profile better describes you?$indicator", "prof_profile", "GW_dropdown",
 											"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
 		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
