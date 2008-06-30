@@ -159,7 +159,8 @@
 						$value = db_query($sql);
 						$value = $value[0];
 						$sufix = ($value->gender."" == "" || $value->gender."" == "0") ? "m" : "w";
-						$run_result = '<img border="0" width="32" height="32" alt="'.($value->account_status == "A" ? "Active" : "Disabled").'" src="_templates/default/'.($value->account_status == "A" ? "user-".$sufix."-active.png" : "user-".$sufix."-disabled.png").'"/>';
+						$run_result = '<img border="0" width="32" height="32" alt="'.($value->account_status == "A" ? "Active" : "Inactive").
+						'" src="'.url.'/_templates/default/'.($value->account_status == "A" ? "user-".$sufix."-active.png" : "user-".$sufix."-disabled.png").'"/>';
 						break;
 			}
 			
