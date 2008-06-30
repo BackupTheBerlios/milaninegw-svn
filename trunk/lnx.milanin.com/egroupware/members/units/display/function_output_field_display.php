@@ -155,10 +155,11 @@
 						break;
 						
 				 case "activeInactive":
-				 		$sql = "select account_status from phpgw_accounts where account_lid = (select username from ".tbl_prefix."users where ident = '". $page_owner ."')";
-				 		$value = db_query($sql);
+				 		$sql = "select account_status, sex.value as gender from phpgw_accounts left join ".tbl_prefix."profile_data sex on sex.name='sex' and owner='". $page_owner ."' where account_lid = (select username from ".tbl_prefix."users where ident = '". $page_owner ."')";
+						$value = db_query($sql);
 						$value = $value[0];
-						$run_result = '<img border="0" width="32" height="32" alt="'.($value->account_status == "A" ? "Active" : "Disabled").'" src="_templates/default/'.($value->account_status == "A" ? "user-active.png" : "user-disabled.png").'"/>';
+						$sufix = ($value->gender."" == "" || $value->gender."" == "0") ? "m" : "w";
+						$run_result = '<img border="0" width="32" height="32" alt="'.($value->account_status == "A" ? "Active" : "Disabled").'" src="_templates/default/'.($value->account_status == "A" ? "user-".$sufix."-active.png" : "user-".$sufix."-disabled.png").'"/>';
 						break;
 			}
 			
