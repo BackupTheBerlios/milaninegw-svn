@@ -4,8 +4,8 @@
 	
 	$field = $parameter[0];
 	$allvalues = $parameter[1];
-	
-	if (sizeof($field) >= 2) {
+	if (sizeof($field) >= 2) 
+	{
 	
 		// $value = db_query("select * from ".tbl_prefix."profile_data where name = '".$field[1]."' and owner = '$profile_id'");
 		
@@ -23,8 +23,8 @@
 			$value->value = "";
 			$value->access = "";
 		} */
-
-		if ((($value->value != "" && $value->value != "blank")) && run("users:access_level_check", $value->access)) {
+		if ((($value->value != "" && $value->value != "blank")) && run("users:access_level_check", $value->access) || $field[1] == "activeInactive") 
+		{
 			$name = $field[0];
 			$column1 = run("display:output_field",array($value->value,$field[2],$field[1],$field[0],$value->ident, "fullParam"=>$parameter[0]));
 			$run_result .= run("templates:draw", array(

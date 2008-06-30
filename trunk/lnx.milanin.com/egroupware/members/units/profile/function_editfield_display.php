@@ -5,9 +5,8 @@
 			$X = db_query("select ident from members_users where username = (select account_lid from phpgw_accounts where account_id = $page_owner ) order by ident desc limit 1");
 			$fix_page_owner = (int)$X[0]->ident;
 		}*/
-		
 	global $page_owner;
-	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin') 
+	if (sizeof($parameter) >= 2 && $parameter[1] != 'linkedin' && $parameter[1] != "activeInactive") 
 	{
 		$value = db_query("select * from ".tbl_prefix."profile_data where name = '".$parameter[1]."' and owner = '". $page_owner ."'");
 		$value = $value[0];

@@ -40,6 +40,7 @@
 			$requiredMessage = "This field is required.";
 		// Initial profile data 	-1 ~ "ReadOnly"=> 'true' or 'false'
 
+		$data['profile:details'][] = array(-1 => true, "Active/Disabled","activeInactive","activeInactive");
 		$data['profile:details'][] = array(-1 => false, "Which professional profile better describes you?$indicator", "prof_profile", "GW_dropdown",
 											"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
 		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
@@ -109,7 +110,7 @@
 		$data['profile:details'][] = array("Main Skills","skills","keywords","Separated with commas.");
 		}
 		
-		db_query("update global_config set value='".(count($data['profile:details'])-1)."' where name='profile_data_count'");
+		db_query("update global_config set value='".(count($data['profile:details'])-2)."' where name='profile_data_count'");
 		
 		/*
 		$data['profile:details'][] = array(-1 => true, "Name", "select account_firstname value from `phpgw_accounts` where account_id=".$_SESSION["userid"], "GW_label", "Readonly");

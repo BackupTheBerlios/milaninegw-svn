@@ -30,7 +30,7 @@
 					$parameter[5] = -1;
 				}
 			}
-			
+
 			switch($parameter[1]) {
 				case "GW_dropdown":
 						//$run_result .= DisplayGW_dropdown($parameter[2], $parameter[0]);
@@ -152,6 +152,13 @@
 						$run_result = $parameter[0];
 						$run_result = "<a href=\"https://www.linkedin.com/profile?viewProfile=&key=" 
                                                 . $run_result . "\" target=\"_blank\"><img border=\"0\" src=\"http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif\"/></a>";
+						break;
+						
+				 case "activeInactive":
+				 		$sql = "select account_status from phpgw_accounts where account_lid = (select username from ".tbl_prefix."users where ident = '". $page_owner ."')";
+				 		$value = db_query($sql);
+						$value = $value[0];
+						$run_result = '<img border="0" width="32" height="32" alt="'.($value->account_status == "A" ? "Active" : "Disabled").'" src="_templates/default/'.($value->account_status == "A" ? "user-active.png" : "user-disabled.png").'"/>';
 						break;
 			}
 			
