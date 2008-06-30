@@ -34,7 +34,9 @@
 		}
 		else
 		{
-			$indicator = ( isset($GLOBALS["argv"][0]) && substr($GLOBALS["argv"][0], 0, 13) == "profile_name=" ) ? "" : '&nbsp;(<font color="red">*</font>)';
+			$indicator = ( (isset($GLOBALS["argv"][0]) && substr($GLOBALS["argv"][0], 0, 13) == "profile_name=") ||
+				(isset($GLOBALS[HTTP_SERVER_VARS]["argv"][0]) && substr($GLOBALS[HTTP_SERVER_VARS]["argv"][0], 0, 13) == "profile_name=") )
+				 ? "" : '&nbsp;(<font color="red">*</font>)';
 			$requiredMessage = "This field is required.";
 		// Initial profile data 	-1 ~ "ReadOnly"=> 'true' or 'false'
 
@@ -43,7 +45,7 @@
 		$data['profile:details'][] = array(-1 => true, "LinkedIn profile","linkedin","linkedin","The URL to your LinkedIn Profile page");
 		$data['profile:details'][] = array(-1 => false, "Phone Number","phone","text");
 		$data['profile:details'][] = array(-1 => true, "Email address","emailaddress","email");
-		$data['profile:details'][] = array(-1 => true, "How did you know about this club?","how_did_u","GW_dropdown","");
+		//$data['profile:details'][] = array(-1 => true, "How did you know about this club?","how_did_u","GW_dropdown","");
 		$data['profile:details'][] = array(-1 => false, "Sex$indicator","sex","GW_dropdown",
 									"Valid"=>array("required" => true, "invalid"=>-1, "required_message"=>$requiredMessage) );
 		

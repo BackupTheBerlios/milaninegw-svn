@@ -35,7 +35,7 @@
 		if (isset($_REQUEST['template_preview'])) {
 			$template_id = (int) $_REQUEST['template_preview'];
 		}
-		
+		//DebugLog($template[$parameter['context']]);
 	// Grab the template content
 		if ($template_id == -1) {
 			$template_element = $template[$parameter['context']];	
@@ -43,6 +43,7 @@
 			$template_context = addslashes($parameter['context']);
 				if (!isset($page_template_cache[$parameter['context']])) {
 					$result = db_query("select * from ".tbl_prefix."template_elements where template_id = $template_id and name = '$template_context'");
+					
 					$page_template_cache[$parameter['context']] = $result;
 				} else {
 					$result = $page_template_cache[$parameter['context']];

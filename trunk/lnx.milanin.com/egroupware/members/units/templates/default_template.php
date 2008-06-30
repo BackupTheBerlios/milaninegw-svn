@@ -43,11 +43,13 @@ $template['pageshell'] .= <<< END
 END;
 }
 $template['pageshell'] .= <<< END
-<link href="/_templates/default/template_css.css" rel="stylesheet" type="text/css" />
+<link href="/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/css/template_css.css" rel="stylesheet" type="text/css" />
+<link href="/members/_templates/default/template_css.css" rel="stylesheet" type="text/css" />
 <title>{{title}}</title>
 {{metatags}}
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!--meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /-->
+<script language="javascript" type="text/javascript" src="/members/units/clubincall/clubincall.js"></script>
 </head>
 
 <body>
@@ -84,25 +86,25 @@ $template['pageshell'] .= <<< END
 <tr>
 <td height="100" colspan="5" align="center" valign="middle">
       <table width="100%" align="center" class="infobox" style="text-align:center">
-<tbody><tr><th>Copyright &copy; 2005-2006 B.C. Milan In</th>
+<tbody><tr><th>Copyright &copy; 2005-2008 Business Club Milan IN</th>
 </tr>
 <tr>
 <th>
   <table width="100%" style="text-align:center">
   <tr><td><a href="http://www.milanin.com">http://www.milanin.com</a>
-- Sede legale Via Tanaro, 22
-- 20128 Milano
+- via Conca del Naviglio, 18
+- 20129 Milano
 - CF 97413780152
 - <a href="mailto:info@milanin.com">info@milanin.com</a></td></tr>
   </table>
 </th>
 </tr>
 </tbody></table> 
-<script src="http://www.google-analytics.com/urchin.js"
+<script src="https://ssl.google-analytics.com/urchin.js"
 type="text/javascript">
 </script>
 <script type="text/javascript">
-_uacct = "UA-331235-6";
+_uacct = "UA-331235-1";
 urchinTracker();
 </script>
 </body>
@@ -160,13 +162,12 @@ q {
 			display: block;
 
 		}
-
 				
 /* Page top */
 #pagetop		{
 					background-color: #FFFFFF;
                                         height: 120px;
-                                        background-image: url("/_templates/default/generic_header.jpg");
+                                        background-image: url("/egroupware/sitemgr/sitemgr-site/templates/rhuk_orange_smoothie/images/generic_header.jpg");
                                         background-repeat: no-repeat;
                                         vertical-align: top;
                                         margin: 0px;
@@ -292,9 +293,6 @@ q {
 					font-size: 1.1em;
 					
 }
-#currentvideo {
-//   margin: 25px;
-  }
 	
 END;
 
@@ -450,10 +448,10 @@ END;
 
 <table width="95%" class="profiletable" align="center" style="margin-bottom: 3px">
 	<tr>
-		<td width="20%" class="fieldname">
+		<td width="170" class="fieldname">
 			{{name}}
 		</td>
-		<td width="80%">
+		<td>
 			{{column1}}
 		</td>
 	</tr>

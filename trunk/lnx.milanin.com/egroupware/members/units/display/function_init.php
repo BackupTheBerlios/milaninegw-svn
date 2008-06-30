@@ -87,7 +87,7 @@
 		if (count($arr) > 0) 
 		{
 			if(!$isReadOnly)
-				$res .= '<table border="1">';
+				$res .= '<table border="0">';
 			
 			$catched = false;
 			for($i=0; $i<count($arr); $i++) 
