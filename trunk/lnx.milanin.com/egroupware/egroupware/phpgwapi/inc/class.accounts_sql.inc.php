@@ -43,6 +43,7 @@
 			
 			$this->table = 'phpgw_accounts';
 			$this->db->set_app('phpgwapi');	// to load the right table-definitions for insert, select, update, ...
+			$this->FormConfig($args);
 		}
 
 		function list_methods($_type='xmlrpc')
@@ -138,97 +139,24 @@
 			$this->db->delete($this->table,array('account_id'=>$account_id),__LINE__,__FILE__);
 			$this->db->unlock();
 		}
-		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
-
-{
-
-			if (! $sort)
-			{
-				$sort = "DESC";
-			}
-
-			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
-			{
-				$orderclause = "ORDER BY $order $sort, account_lid ASC";
-			}
-			else
-			{
-				$orderclause = "ORDER BY account_lid ASC";
-			}
-
-			switch($_type)
-			{
-				case 'accounts':
-					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
-					break;
-				case 'accounts_a':
-					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
-					break;	
-				case 'accounts_p':
-					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
-					break;	
-				case 'groups':
-					$whereclause = "WHERE account_type = 'g'";
-					break;
-				default:
-					$whereclause = '';
-			}
-
-			if ($query)
-			{
-				if ($whereclause)
-				{
-					$whereclause .= ' AND ( ';
-				}
-				else
-				{
-					$whereclause = ' WHERE ( ';
-				}
-				switch($query_type)
-				{
-					case 'all':
-					default:
-						$query = '%'.$query;
-						// fall-through
-					case 'start':
-						$query .= '%';
-						// fall-through
-					case 'exact':
-						$query = $this->db->quote($query);
-						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
-						break;
-					case 'firstname':
-					  $query = $this->db->quote($query."%");
-						$whereclause .= " account_firstname LIKE $query )";
-						break;
-					case 'lastname':
-						$query = $this->db->quote($query."%");
-						$whereclause .= " account_lastname LIKE $query )";
-						break;
-
-					case 'lid':
-					case 'email':
-						$query = $this->db->quote('%'.$query.'%');
-						$whereclause .= " account_$query_type LIKE $query )";
-						break;
-				}
-			}
-
-			
-			
-			$this->db->query("SELECT count(*) FROM $this->table $whereclause");
-			$this->db->next_record();
-			$total = $this->db->f(0);
-			return $total;
-		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		function get_online_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
-{
+		{
 			if (! $sort)
 			{
 				$sort = "DESC";
 			}
-$data = $GLOBALS['phpgw']->crypto->decrypt($data);
+			$data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
 			{
 				$orderclause = "ORDER BY $order $sort, account_lid ASC";
@@ -263,8 +191,7 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 		}		
 		
 		function get_guest_count($_type='both')
-
-                {
+		{
                 $sql="SELECT count(distinct session_ip) FROM phpgw_sessions where session_flags='A' and session_logintime > ".(time() - $GLOBALS['phpgw_info']['server']['sessions_timeout']);
 			
 			$this->db->query($sql);
@@ -272,9 +199,9 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			$total = $this->db->f(0);
 			return $total;
 		}		
-                function get_online_members($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
-
-{
+        
+		function get_online_members($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
+		{
 			if (! $sort)
 			{
 				$sort = "DESC";
@@ -306,9 +233,9 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 				default:
 					$whereclause = '';
 			}
-
 			if ($query)
 			{
+				
 				if ($whereclause)
 				{
 					$whereclause .= ' AND ( ';
@@ -432,14 +359,110 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			return $accounts;
 		}
 
-		function get_online_list($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
+		/**/
+		function GetMySQLArray($sql)
+		{
+			$this->db->query($sql,__LINE__,__FILE__);
+			$this->db->next_record();
+			$result = explode("\n", $this->db->f(0));
+			$result = array_map("trim", $result);
+			return $result;
+		}
+		
+		var $formCfg, $lang;
+		function FormConfig($args)
+		{
+			$this->lang = $GLOBALS['phpgw']->preferences->data[common][lang]; 
+			
+			$prof_profile = $this->GetMySQLArray("SELECT data from other_data where name='prof_profile' and lang='".$this->lang."'");
+			$countries = $this->GetMySQLArray("SELECT data from other_data where name='countries_list'");
+			$sports = $this->GetMySQLArray("SELECT data from other_data where name='favorite_sport' and lang='".$this->lang."'");
+			$hobbies = $this->GetMySQLArray("SELECT data from other_data where name='interestsBase' and lang='".$this->lang."'");
+            $industries = $this->GetMySQLArray("SELECT data from other_data where name='industries' and lang='".$this->lang."'");
+            $occ_areas = $this->GetMySQLArray("SELECT data from other_data where name='occ_areas' and lang='".$this->lang."'");
+			$ac_degree = $this->GetMySQLArray("SELECT data from other_data where name='ac_degree' and lang='".$this->lang."'");
+			$how_did_u = $this->GetMySQLArray("SELECT data from other_data where name='how_did_u' and lang='".$this->lang."'");
+			$sex = $this->GetMySQLArray("SELECT data from other_data where name='sex' and lang='".$this->lang."'");
+			
+			$this->formCfg = array	(
+									"lists"	 => array(
+														"prof_profile" => array(
+																"control_id" => "prof_profile",
+																"control_type" => "DDL",
+																"source" 		=> $prof_profile,
+																"use_key" => true,
+																"eLggExternal" => true
+																),
+														"residence_country" => array(
+																"control_id" => "residence_country",
+																"control_type" => "DDL",
+																"use_key" => false,
+																"source" 		=> $countries,
+																"eLggExternal" => true
+																),
 
-{
-			if (! $sort)
+														"sex" => array(
+																"control_id" => "sex",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"source" 		=> $sex,
+																"eLggExternal" => true
+																),
+														"ac_degree" => array(
+																"control_id" => "ac_degree",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"source" 		=> $ac_degree,
+																"eLggExternal" => true
+																),
+														"favorite_sport" => array(
+																"control_id" => "favorite_sport",
+																"control_type" => "MDDL",
+																"use_key" => true,
+																"source" 		=> $sports,
+																"eLggExternal" => true
+																),
+																
+														"interestsBase" => array(
+																"control_id" => "interestsBase",
+																"control_type" => "MDDL",
+																"use_key" => true,
+																"source" 		=> $hobbies,
+																"eLggExternal" => true
+																),
+														"industries" => array(
+																"control_id" => "industries",
+																"control_type" => "DDL",
+																"use_key" => true,
+																"source" 		=> $industries,
+																"eLggExternal" => true
+																),
+														"occ_areas" => array(
+																"control_id" => "occ_areas",
+																"control_type" => "MDDL",
+																"use_key" => true,
+																"source" 		=> $occ_areas,
+																"eLggExternal" => true
+																)
+																
+													  )
+									);
+		}
+		
+		var $sqlRule;
+		function get_where_clause($_type, $sort, $order)
+		{
+			/*if($this->sqlRule) 
+				return $this->sqlRule;*/
+			
+			if (isset($_POST["query"]))
+				$query = $_POST["query"];
+
+			if (!$sort)
 			{
 				$sort = "DESC";
 			}
-
+			
 			if (!empty($order) && preg_match('/^[a-zA-Z_0-9, ]+$/',$order) && (empty($sort) || preg_match('/^(DESC|ASC|desc|asc)$/',$sort)))
 			{
 				$orderclause = "ORDER BY $order $sort, account_lid ASC";
@@ -448,77 +471,131 @@ $data = $GLOBALS['phpgw']->crypto->decrypt($data);
 			{
 				$orderclause = "ORDER BY account_lid ASC";
 			}
-
+			$whereclause = "where 1=1 ";
+			
+			if ($_POST["wordChar"])
+			{
+				$letter = $this->db->quote($_POST["wordChar"]."%");
+				$whereclause .= " AND ( account_firstname LIKE $letter OR account_lastname LIKE $letter OR account_lid LIKE $letter )";
+			}
 			switch($_type)
 			{
 				case 'accounts':
-					$whereclause = "WHERE account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause .= " AND account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;
 				case 'accounts_a':
-					$whereclause = "WHERE account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause .= " AND account_status = 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;	
 				case 'accounts_p':
-					$whereclause = "WHERE account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
+					$whereclause .= " AND account_status != 'A' And account_type = 'u' AND  account_primary_group != 6 AND account_primary_group != 35 AND account_lid != 'anonymous'";
 					break;	
 				case 'groups':
-					$whereclause = "WHERE account_type = 'g'";
+					$whereclause .= " AND account_type = 'g'";
 					break;
 				default:
-					$whereclause = '';
+					$whereclause .= '';
 			}
-
+			
 			if ($query)
 			{
-				if ($whereclause)
-				{
-					$whereclause .= ' AND ( ';
-				}
-				else
-				{
-					$whereclause = ' WHERE ( ';
-				}
 				switch($query_type)
 				{
 					case 'all':
 					default:
+					case 'start':	
+						$whereclause .=	$this->get_AdditionalElggSearchClause($query);
+						
 						$query = '%'.$query;
 						// fall-through
-					case 'start':
 						$query .= '%';
 						// fall-through
 					case 'exact':
 						$query = $this->db->quote($query);
-						$whereclause .= " account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
+						$whereclause .= "  AND (account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
 						break;
 					case 'firstname':
-						$query = $this->db->quote($query."%");
-						$whereclause .= " account_firstname LIKE $query )";
+					  $query = $this->db->quote($query."%");
+						$whereclause .= "  AND (account_firstname LIKE $query )";
 						break;
-
 					case 'lastname':
 						$query = $this->db->quote($query."%");
-						$whereclause .= " account_lastname LIKE $query )";
+						$whereclause .= "  AND (account_lastname LIKE $query )";
 						break;
-                                        case 'account_status':
-						//$query = $this->db->quote($query);
-						if ($query == 'A'){
-						$whereclause .= " account_status = 'A' )";
-						}else{
-						$whereclause .= " account_status != 'A' )";
-						}
-						break;
+
 					case 'lid':
 					case 'email':
 						$query = $this->db->quote('%'.$query.'%');
-						$whereclause .= " account_$query_type LIKE $query )";
+						$whereclause .= "  AND (account_$query_type LIKE $query)";
 						break;
 				}
 			}
+			
+			
+			
+			$whereclause .=	$this->get_AdditionalElggEqualClause("prof_profile");
+			$whereclause .=	$this->get_AdditionalElggEqualClause("residence_country");
+			$whereclause .=	$this->get_AdditionalElggEqualClause("occ_areas");
+			$whereclause .=	$this->get_AdditionalElggEqualClause("industries");
+			$this->sqlRule = array("where"=>$whereclause, "order"=>$orderclause);
+			return $this->sqlRule;
+		}
+		
+		function get_AdditionalElggSearchClause($query)
+		{
+			$t=trim($query);
+			if($t == "")
+				return ;
+			
+			$elggEqual = " OR account_lid in (select username from members_users where ident in 
+								(select distinct owner from members_profile_data where value like %s and (access='PUBLIC' or access='LOGGED_IN') ))";
+			$result = "";
+			
+			$arr = split(" ", $t);
+			for($i=0; $i<count($arr); $i++)
+				if(trim($arr[$i]) != "")
+				{
+					$value = $this->db->quote("%".$arr[$i]."%");
+					$result .= sprintf($elggEqual, $value);
+				}
+
+			return $result;
+		}
+		
+		function get_AdditionalElggEqualClause($id)
+		{
+			$elggEqual = " AND account_lid in (select username from members_users where ident in 
+								(select distinct owner from members_profile_data where name='%s' and value=%s and (access='PUBLIC' or access='LOGGED_IN') ))";
+			if (isset($_POST[$id]) && $_POST[$id] != "")
+			{
+				$value = $this->db->quote($_POST[$id]);
+				
+				return sprintf($elggEqual, $id, $value);
+			}
+		}
+		
+		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+		{
+			$sqlRule = $this->get_where_clause($_type, $sort, $order);
+			$sql = "SELECT count(*) FROM $this->table ".$sqlRule[where];
+			$this->db->query($sql);
+			$this->db->next_record();
+			$total = $this->db->f(0);
+			return $total;
+		}
+		
+		function get_online_list($_type='both',$start = '',$sort = '',$order='',$query='',$offset= '',$query_type='',$offline=TRUE)
+		{
+			$sqlRule = $this->get_where_clause($_type, $sort, $order);
 			$joiner= ($offline) ? " LEFT " : "";
 
-
-			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') $whereclause $orderclause";
-			
+			$sql = "select distinct b.account_id, b.`account_lid`, LENGTH(s.session_id) as account_pwd, 
+						b.`account_firstname`, b.`account_lastname`, b.`account_lastlogin`, 
+						b.`account_lastloginfrom`, b.`account_lastpwd_change`, b.`account_status`, b.`account_expires`, 
+						b.`account_type`, b.`person_id`, b.`account_primary_group`, b.`account_email`, 
+						b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date 
+					FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') 
+					".$sqlRule[where]." ". $sqlRule[order];
+			//DebugLog($sql, true);
 			if ($offset)
 			{
 				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);

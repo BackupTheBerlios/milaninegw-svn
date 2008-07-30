@@ -101,21 +101,21 @@ $body .= <<< END
 
 END;
     $body .= input_text_search_str($query);
+	
     $body .= letters_search_str($offset_page, $prev_page, $next_page, $pages_count);
 		$body .= <<< END
  <input type="hidden" name="start_from" value="$start_from">
 
-<table align="center">
+<table align="center" border=2>
 END;
  
 $body .= table_header_result_count_str(sizeOf($members['online']), $query, $query_result_count);
 $body .= table_header_search_str($members_online_count, $guests_online_count, $members_reg_count);
+$body .= '</table>';
 if (sizeOf($members['online']) > 0)
-$body .= table_result_str($members['online']);
-
+	$body .= table_result_str($members['online']);
 
 $body .= <<< END
-</table>
 </form>		
 END;
 $body .= pages_str($pages_count, $offset_page, $start_from, $current_page);

@@ -12,6 +12,44 @@ function doQuery(query, start_from)
 				 document.userSearchform.submit();
 				 return true;
 				}
+				
+function doABCQuery(letter, start_from)	
+{
+	document.userSearchform.wordChar.value=letter;
+	if (start_from != null)
+		document.userSearchform.start_from.value=start_from;
+	document.userSearchform.submit();
+	return true;
+}
+
+var lastShownId = null;
+
+function HideInfo(id)
+{
+	var obj = document.getElementById("divInfo"+id);
+	if(obj != null)
+	{
+		obj.style.display = 'none';
+		lastShownId = null;
+	}
+}
+
+function ShowInfo(id)
+{
+	var obj = document.getElementById("divInfo"+id);
+	if(obj != null)
+	{
+		if(lastShownId != null)
+			HideInfo(lastShownId);
+
+		obj.style.display = 'block';
+		lastShownId = id;
+	}
+}
+function WarningMessage(mess)
+{
+	alert(mess);
+}
 function doSubmit()	
 				{
 				  document.userSearchform.start_from.value=0;
@@ -42,4 +80,21 @@ function setValues(query_type, order_by, regstatus)
 				  }
 				 }
 -->
-</script>		
+</script>
+<style>
+	.divContainer
+	{
+		position:absolute;
+	}
+	.divContainer .divInfo
+	{
+		background-color:white;
+		position:relative;
+		border:1px solid gray;
+		display:none;
+		width:250px;
+		padding:10px 3px 10px 3px;
+		top:-10px;
+		z-Index:1000;
+	}
+</style>	
