@@ -95,6 +95,32 @@ function setValues(query_type, order_by, regstatus)
 		width:250px;
 		padding:10px 3px 10px 3px;
 		top:-10px;
+		left:-230px;
 		z-Index:1000;
+	}
+	.tableHeader td
+	{
+		background-color:#006699;
+		text-align:center;
+		font-weight:bold;
+		color:white;
+	}
+	.tableLayout
+	{
+		border-color:#CCCCCC;
+		border-style:none;
+		border-width:1px;
+		background-color:white;
+		color:#000066;
+	}
+	
+	.tableLayout .Row
+	{
+		background-color:#d2f1ff;
+	}
+	
+	.tableLayout .altRow
+	{
+		background-color:#c7e4f1;
 	}
 </style>	

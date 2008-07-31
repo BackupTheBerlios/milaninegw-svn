@@ -450,7 +450,7 @@
 		}
 		
 		var $sqlRule;
-		function get_where_clause($_type, $sort, $order)
+		function get_where_clause($_type, $sort, $order, $useQueryString = true)
 		{
 			/*if($this->sqlRule) 
 				return $this->sqlRule;*/
@@ -473,7 +473,7 @@
 			}
 			$whereclause = "where 1=1 ";
 			
-			if ($_POST["wordChar"])
+			if ($_POST["wordChar"] && $useQueryString)
 			{
 				$letter = $this->db->quote($_POST["wordChar"]."%");
 				$whereclause .= " AND ( account_firstname LIKE $letter OR account_lastname LIKE $letter OR account_lid LIKE $letter )";
@@ -496,7 +496,7 @@
 					$whereclause .= '';
 			}
 			
-			if ($query)
+			if ($query && $useQueryString)
 			{
 				switch($query_type)
 				{
@@ -531,11 +531,13 @@
 			}
 			
 			
-			
-			$whereclause .=	$this->get_AdditionalElggEqualClause("prof_profile");
-			$whereclause .=	$this->get_AdditionalElggEqualClause("residence_country");
-			$whereclause .=	$this->get_AdditionalElggEqualClause("occ_areas");
-			$whereclause .=	$this->get_AdditionalElggEqualClause("industries");
+			if($useQueryString)
+			{
+				$whereclause .=	$this->get_AdditionalElggEqualClause("prof_profile");
+				$whereclause .=	$this->get_AdditionalElggEqualClause("residence_country");
+				$whereclause .=	$this->get_AdditionalElggEqualClause("occ_areas");
+				$whereclause .=	$this->get_AdditionalElggEqualClause("industries");
+			}
 			$this->sqlRule = array("where"=>$whereclause, "order"=>$orderclause);
 			return $this->sqlRule;
 		}
@@ -573,9 +575,9 @@
 			}
 		}
 		
-		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+		function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='', $useQueryString=true)
 		{
-			$sqlRule = $this->get_where_clause($_type, $sort, $order);
+			$sqlRule = $this->get_where_clause($_type, $sort, $order, $useQueryString);
 			$sql = "SELECT count(*) FROM $this->table ".$sqlRule[where];
 			$this->db->query($sql);
 			$this->db->next_record();
@@ -595,7 +597,6 @@
 						b.`account_linkedin`, DATE_FORMAT(b.`account_membership_date`,'%d/%m/%y') as account_membership_date 
 					FROM `phpgw_accounts` as b".$joiner."JOIN `phpgw_sessions` as s on `account_lid`=REPLACE(`session_lid`,'@default','') 
 					".$sqlRule[where]." ". $sqlRule[order];
-			//DebugLog($sql, true);
 			if ($offset)
 			{
 				$this->db->limit_query($sql,$start,__LINE__,__FILE__,$offset);

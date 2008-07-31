@@ -42,15 +42,14 @@ function letters_search_str($offset_page, $prev_page, $next_page, $pages_count)
 
 function input_text_search_str($query)
 {
-$search_str = "<table align=\"center\" border='0' width='520'><tr><td width='350'>
+$search_str = "<table align=\"center\" border='0' width='520'><tr><td width='400'>
 		<input type='text' name='query' value='".$query."' style='width:100%'></td>
-		<td>&nbsp;<select name='query_type'><option value='all'>"
+		<td>&nbsp;<select name='query_type' style='width:99px;'><option value='all'>"
 		.lang("elg_all")."</option>
 		<option value='firstname'>"
 		.lang("elg_first_name")."</option>
 		<option value='lastname'>".lang("elg_last_name").
-		"</option></select></td><td>
-		<input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td>";
+		"</option></select></td>";
 $search_str .= "</tr></table>\n";
 $search_str .= DisplayExtendedSearchField();
 return $search_str;
@@ -103,20 +102,27 @@ $search_str = "<tr class=divSideboxHeader><td align=\"left\" colspan=\"2\">".
 		lang("elg_anonymous")." : ".$guests_online_count."<br/>".
 		lang("elg_registered")." total: ".$members_reg_count.
 		"<br/></td><td align=\"left\" colspan=\"3\">".
-		table_header_select_str()."</td></tr>\n";  
+		table_header_select_str()."</td></tr>\n";
+$search_str .= "<tr><td colspan=5 align=center><input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td></tr> ";
+if($members_reg_count > 50)
+	$search_str .= "<tr><td colspan=5 align=center><b>".lang("Note: you see only first 50 records.")."</b></td></tr> ";
+	
 return $search_str;
 }
-
+/*
+<td>
+		</td>
+		 <input type=submit value='".lang("elg_go")."' title=".lang("elg_go").">*/
 function table_header_select_str()
 {
 
-$select_str .= "<table align=\"left\" ><tr ><td>".lang("elg_order_by").": </td><td colspan=\"4\"><select name='order_by' onChange='userSearchform.submit();'><option value='session_id' ";
+$select_str .= "<table align=\"left\" ><tr ><td>".lang("elg_order_by").": </td><td colspan=\"4\"><select name='order_by'><option value='session_id' ";
 
 $select_str .= ">".lang("elg_online_status")."</option><option value='account_firstname' ";
 
 $select_str .= ">".lang("elg_first_name")."</option><option value='account_lastname' ";
 
-$select_str .= ">".lang("elg_last_name")."</option></select> <input type=submit value='".lang("elg_go")."' title=".lang("elg_go")."></td></tr>";
+$select_str .= ">".lang("elg_last_name")."</option></select></td></tr>";
 
 $select_str .= "<tr><td>".lang("elg_registration_status")."</td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"accounts_a\" ";
 
@@ -127,7 +133,8 @@ $select_str .= ">".lang("elg_active")."</td><td><INPUT TYPE=\"radio\" NAME=\"reg
 $select_str .= ">".lang("elg_inactive")."</td><td><INPUT TYPE=\"radio\" NAME=\"regstatus\" VALUE=\"accounts\" ";
 
 
-$select_str .= ">".lang("elg_all")."</td></tr></table>\n";
+$select_str .= ">".lang("elg_all")."</td></tr>";
+$select_str .= "</table>\n";
   
   
 return $select_str;
@@ -218,10 +225,8 @@ function get_view_layout($member, $userInfo)
 
 function table_result_str($members)
 {
-	
-	
-	$res_str = '<table align="center" border=2>';
-	$res_str .= sprintf('<tr>
+	$res_str = '<table align="center" border="0" cellspacing="1" class="tableLayout">';
+	$res_str .= sprintf('<tr class="tableHeader">
 							<td>%s</td>
 							<td>%s</td>
 							<td>%s</td>
@@ -229,10 +234,11 @@ function table_result_str($members)
 							<td>%s</td>
 							<td>%s</td>
 							<td>%s</td>
-						</tr>', lang("Status"), lang("Name/Surname"), lang("Member since (date)"), lang("Industry"), lang("Occupation area"), lang("City of Residence"), lang("Details"));
+							<td>&nbsp;</td>
+						</tr>', lang("Status"), lang("Name/Surname"), lang("Member since (date)"), lang("Professional Status"), lang("Industry"), lang("Occupation area"), lang("City of Residence"));
 
 	$db = $GLOBALS['phpgw']->db;
-
+	$counter = 0;
 	foreach ($members as $member)
 	{
 		$userInfo = get_member_info($db, $member[account_lid]);
@@ -241,23 +247,35 @@ function table_result_str($members)
 		$isOnline = ($member['account_pwd'] != null);
 		if ($member['account_status'] == 'A')
 		{
-			$res_str .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s<a href="javascript:ShowInfo(%d);void(0);">%s</a></td></tr>',
+			$res_str .= sprintf('<tr class="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s<a href="javascript:ShowInfo(%d);void(0);">%s</a></td></tr>',
+					(( $counter++ % 2 == 0 ) ? "altRow" : "Row"), 
 					$imgStatus, ($isOnline ? "<b>" : "").$member['account_firstname']." ".$member['account_lastname'].($isOnline ? "</b>" : ""),
-					$member['account_membership_date'], GetValueFromElggList("industries", $userInfo["industries"]), 
+					$member['account_membership_date'], GetValueFromElggList("prof_profile", $userInfo["prof_profile"]),
+					GetValueFromElggList("industries", $userInfo["industries"]), 
 					GetValueFromElggList("occ_areas", $userInfo["occ_areas"]), ($userInfo[residence_city] ? $userInfo[residence_city] : "-"),
 					get_view_layout($member, $userInfo), $member['account_id'], lang("Details"));
 		}
 		else
 		{
-			$res_str .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><font color="red">%s</font></td></tr>',
+			$res_str .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><font color="red">%s</font></td></tr>',
 					$imgStatus, ($isOnline ? "<b>" : "").$member['account_firstname']." ".$member['account_lastname'].($isOnline ? "</b>" : ""),
-					$member['account_membership_date'], GetValueFromElggList("industries", $userInfo["industries"]), 
+					$member['account_membership_date'], GetValueFromElggList("prof_profile", $userInfo["prof_profile"]),
+					GetValueFromElggList("industries", $userInfo["industries"]), 
 					GetValueFromElggList("occ_areas", $userInfo["occ_areas"]), ($userInfo[residence_city] ? $userInfo[residence_city] : "-"),
 					lang("elg_inactive"));
 		}
 	}
   $res_str .= '</table>';
   return $res_str;
+}
+
+function total_information($totalUser, $totalOnlyActive, $totalSelected)
+{
+	$res_str = sprintf('<table align="center" border="0" cellspacing="1" class="tableLayout"><tr class="tableHeader"><td><b>%s</b></td><td><b>%s</b></td><td><b>%s</b></td></tr>', 
+					lang("Total users"), lang("Total ACTIVE users"), lang("Total SELECTED users"));
+	$res_str .= sprintf('<tr><td align="center"><b>%s</b></td><td align="center"><b>%s</b></td><td align="center"><b>%s</b></td></tr>', $totalUser, $totalOnlyActive, $totalSelected);
+	$res_str .= "</table>";
+	return $res_str;
 }
 
 function pages_str($pages_count, $offset_page, $start_page, $current_page)

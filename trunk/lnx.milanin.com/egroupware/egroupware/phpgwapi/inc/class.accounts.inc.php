@@ -292,9 +292,9 @@
 			return $account_search[$serial]['data'];
 		}
 
-function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
+function get_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='', $useQueryString=true)
 {
-$count=accounts_::get_count($_type,$start,$sort,$order,$query,$offset,$query_type);
+$count=accounts_::get_count($_type,$start,$sort,$order,$query,$offset,$query_type, $useQueryString);
 return $count;
 }
 
