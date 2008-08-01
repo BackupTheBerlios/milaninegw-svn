@@ -140,16 +140,7 @@
 			$this->db->unlock();
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		function get_online_count($_type='both',$start = '',$sort = '', $order = '', $query = '', $offset = '',$query_type='')
 		{
 			if (! $sort)
@@ -511,7 +502,7 @@
 						// fall-through
 					case 'exact':
 						$query = $this->db->quote($query);
-						$whereclause .= "  AND (account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
+						//$whereclause .= "  AND (account_firstname LIKE $query OR account_lastname LIKE $query OR account_lid LIKE $query )";
 						break;
 					case 'firstname':
 					  $query = $this->db->quote($query."%");
@@ -539,6 +530,7 @@
 				$whereclause .=	$this->get_AdditionalElggEqualClause("industries");
 			}
 			$this->sqlRule = array("where"=>$whereclause, "order"=>$orderclause);
+			//DebugLog($this->sqlRule);
 			return $this->sqlRule;
 		}
 		
@@ -547,9 +539,11 @@
 			$t=trim($query);
 			if($t == "")
 				return ;
-			
+			//and (1=1 OR ... OR ...
 			$elggEqual = " OR account_lid in (select username from members_users where ident in 
-								(select distinct owner from members_profile_data where value like %s and (access='PUBLIC' or access='LOGGED_IN') ))";
+								(select distinct owner from members_profile_data where value like %s and (access='PUBLIC' or access='LOGGED_IN')) 
+								or name like %s
+						 )";
 			$result = "";
 			
 			$arr = split(" ", $t);
@@ -557,9 +551,9 @@
 				if(trim($arr[$i]) != "")
 				{
 					$value = $this->db->quote("%".$arr[$i]."%");
-					$result .= sprintf($elggEqual, $value);
+					$result .= sprintf($elggEqual, $value, $value);
 				}
-
+			$result = " AND (".substr($result, 4).")";
 			return $result;
 		}
 		
