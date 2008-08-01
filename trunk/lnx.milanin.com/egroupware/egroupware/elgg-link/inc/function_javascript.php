@@ -18,6 +18,8 @@ function doABCQuery(letter, start_from)
 	document.userSearchform.wordChar.value=letter;
 	if (start_from != null)
 		document.userSearchform.start_from.value=start_from;
+	else document.userSearchform.start_from.value=0;
+	
 	document.userSearchform.submit();
 	return true;
 }
@@ -113,8 +115,15 @@ function setValues(query_type, order_by, regstatus)
 		background-color:white;
 		color:#000066;
 	}
-	
-	.tableLayout .Row
+	.selectedLetter
+	{
+		display:block;
+		background:yellow;
+		border:1px solid red;
+		padding:0 3px 0 3px;
+		font-weight:bold;
+	}
+	/*.tableLayout .Row
 	{
 		background-color:#d2f1ff;
 	}
@@ -122,5 +131,5 @@ function setValues(query_type, order_by, regstatus)
 	.tableLayout .altRow
 	{
 		background-color:#c7e4f1;
-	}
+	}*/
 </style>	

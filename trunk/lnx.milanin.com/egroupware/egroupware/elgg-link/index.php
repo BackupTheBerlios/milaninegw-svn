@@ -83,7 +83,7 @@ $members_online_count=$GLOBALS['phpgw']->accounts->get_online_count('accounts', 
 
 $guests_online_count=$GLOBALS['phpgw']->accounts->get_guest_count('accounts');
 
-/*
+
 $pages_count = round($query_result_count/$offset_page);  
 if (($pages_count*$offset_page) < $query_result_count){    
 $pages_count = $pages_count +1;          
@@ -100,7 +100,7 @@ $prev_page = $current_page -1;
 $next_page=$pages_count;
 if (($current_page +1) < $pages_count)
 $next_page = $current_page +1;
-*/
+
 $body .= <<< END
 <form name='userSearchform'  action='' method='post' onsubmit="return doSubmit()">
 
@@ -118,7 +118,7 @@ $body .= table_header_result_count_str(sizeOf($members['online']), $query, $quer
 $body .= table_header_search_str($members_online_count, $guests_online_count, $members_reg_count);
 $body .= '</table>';
 if (sizeOf($members['online']) > 0)
-	$body .= table_result_str($members['online']);
+	$body .= table_result_str($members['online'], $offset_page, $prev_page, $next_page, $pages_count, $current_page);
 	
 	
 
@@ -127,7 +127,7 @@ $body .= total_information($totalOnlyActive+$totalOnlyPassive, $totalOnlyActive,
 $body .= <<< END
 </form>		
 END;
-//$body .= pages_str($pages_count, $offset_page, $start_from, $current_page);
+	//$body .= pages_str($pages_count, $offset_page, $start_from, $current_page);
 
 $body .= <<< END
  <script language="JavaScript" type="text/javascript">

@@ -12,7 +12,6 @@ function letters_search_str($offset_page, $prev_page, $next_page, $pages_count)
 	$aar[] = lang("elg_all");
 	$search_str = '<input type="hidden" name="wordChar" id="wordChar" value="'.$_POST["wordChar"].'">';
 	$search_str .= "<table align=\"center\"><tr class=divSideboxEntry  colspan=".(sizeOf($aar) + 4).">";
-	$search_str .= "<td align='right'><a href=\"javascript:doQuery('', 0);\"><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' title='".lang("elg_first")."' border='0' hspace='2' /></a></td><td align='right'><a href=\"javascript:doQuery('', ".(($prev_page -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='".lang("elg_previous")."' hspace='2' /></a></td>";
 
 	foreach($aar as $char)
 	{
@@ -21,21 +20,20 @@ function letters_search_str($offset_page, $prev_page, $next_page, $pages_count)
 		{
 			$isThat = ($_POST["wordChar"] === "" || !isset($_POST["wordChar"]));
 			$search_str .= "<a href=\"javascript:doABCQuery('');\">";
-			$search_str .= sprintf("%s%s%s", $isThat ? "<b style='display:block;background:yellow;border:1px solid red;padding:0 3px 0 3px;'>" : "", $char, $isThat ? "</b>" : "");
+			$search_str .= sprintf("%s%s%s", $isThat ? "<span class='selectedLetter'>" : "", $char, $isThat ? "</span>" : "");
 			$search_str .= "</a>";
 		}
 		else
 		{
 			$isThat = $_POST["wordChar"] === $char;
 			$search_str .= "<a href=\"javascript:doABCQuery('".$char."');\">";
-			$search_str .= sprintf("%s%s%s", $isThat ? "<b style='display:block;background:yellow;border:1px solid red;padding:0 3px 0 3px;'>" : "", $char, $isThat ? "</b>" : "");
+			$search_str .= sprintf("%s%s%s", $isThat ? "<span class='selectedLetter'>" : "", $char, $isThat ? "</span>" : "");
 			$search_str .= "</a>";
 		}
 	$search_str .= "</td>";	
 	}
 	unset($aar);
 	unset($char);
-	$search_str .= "<td align='right'><a href=\"javascript:doQuery('', ".(($next_page -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='".lang("elg_next")."' hspace='2' /></a></td><td align='right'><a href=\"javascript:doQuery('', ".(($pages_count -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='".lang("elg_last")."' hspace='2' /></a></td>";			
 	$search_str .= "</tr></table>";
 	return $search_str;
 }
@@ -57,7 +55,7 @@ return $search_str;
 
 function RenderSearchDropDownList($id, $arr, $useKey = true, $includeAll=true)
 {
-	$str = sprintf('<select name="%s" id="%s" style="width:250px;">', $id, $id);
+	$str = sprintf('<select name="%s" id="%s" style="width:200px;">', $id, $id);
 	if($includeAll)
 		$str .= '<option value="">'.lang("elg_all").'</option>';
 	for($i=0;$i<count($arr);$i++)
@@ -76,21 +74,18 @@ function DisplayExtendedSearchField()
 	$str .='
 	<table align="center" border="0" width="520">
 		<tr>
-			<td>'.lang("Professional Status").'</td>
+			<td>'.lang("Industry").'</td>
+			<td>'.RenderSearchDropDownList("industries", $GLOBALS['phpgw']->accounts->formCfg[lists][industries][source]).'</td>
 			<td>'.lang("Country of residence").'</td>
-		</tr>
-		<tr>
-			<td>'.RenderSearchDropDownList("prof_profile", $GLOBALS['phpgw']->accounts->formCfg[lists][prof_profile][source]).'</td>
 			<td>'.RenderSearchDropDownList("residence_country", $GLOBALS['phpgw']->accounts->formCfg[lists][residence_country][source], false).'</td>
 		</tr>
 		<tr>
+			<td>'.lang("Professional Status").'</td>
+			<td>'.RenderSearchDropDownList("prof_profile", $GLOBALS['phpgw']->accounts->formCfg[lists][prof_profile][source]).'</td>
 			<td>'.lang("Occupation area").'</td>
-			<td>'.lang("Industry").'</td>
-		</tr>
-		<tr>
 			<td>'.RenderSearchDropDownList("occ_areas", $GLOBALS['phpgw']->accounts->formCfg[lists][occ_areas][source]).'</td>
-			<td>'.RenderSearchDropDownList("industries", $GLOBALS['phpgw']->accounts->formCfg[lists][industries][source]).'</td>
 		</tr>
+		
 	</table>';
 	return $str;
 }
@@ -102,17 +97,10 @@ $search_str = "<tr class=divSideboxHeader><td align=\"left\" colspan=\"2\">".
 		lang("elg_anonymous")." : ".$guests_online_count."<br/>".
 		lang("elg_registered")." total: ".$members_reg_count.
 		"<br/></td><td align=\"left\" colspan=\"3\">".
-		table_header_select_str()."</td></tr>\n";
-$search_str .= "<tr><td colspan=5 align=center><input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td></tr> ";
-if($members_reg_count > 50)
-	$search_str .= "<tr><td colspan=5 align=center><b>".lang("Note: you see only first 50 records.")."</b></td></tr> ";
-	
+		table_header_select_str()."</td><td valign='bottom' style='padding-bottom:4px;'><input type='submit' name='Search' value='".lang("elg_search")."' onSubmit=\"javascript:doSubmit();\"></td></tr>\n";
 return $search_str;
 }
-/*
-<td>
-		</td>
-		 <input type=submit value='".lang("elg_go")."' title=".lang("elg_go").">*/
+/*$search_str .= "</tr> ";*/
 function table_header_select_str()
 {
 
@@ -223,9 +211,33 @@ function get_view_layout($member, $userInfo)
 	return $result;
 }
 
-function table_result_str($members)
+function table_result_str($members, $offset_page, $prev_page, $next_page, $pages_count, $current_page)
 {
+	$img = array("&nbsp;", "&nbsp;", "&nbsp;", "&nbsp;");
+	if($current_page != 1)
+	{
+		$img[0] = "<a href=\"javascript:doQuery('', 0);\"><img src='/egroupware/phpgwapi/templates/idots/images/first-grey.png' title='".lang("elg_first")."' border='0' hspace='2' /></a>";
+		$img[1] = "<a href=\"javascript:doQuery('', ".(($prev_page -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/left-grey.png' border='0' title='".lang("elg_previous")."' hspace='2' /></a>";
+	}
+	if($pages_count > 1 && $current_page != $pages_count)
+	{
+		$img[2] = "<a href=\"javascript:doQuery('', ".(($next_page -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/right-grey.png' border='0' title='".lang("elg_next")."' hspace='2' /></a>";
+		$img[3] = "<a href=\"javascript:doQuery('', ".(($pages_count -1) * $offset_page).");\"><img src='/egroupware/phpgwapi/templates/idots/images/last-grey.png' border='0' title='".lang("elg_last")."' hspace='2' /></a>";
+	}
+
 	$res_str = '<table align="center" border="0" cellspacing="1" class="tableLayout">';
+	$res_str .= sprintf('<tr><td colspan="8">
+		<table width="100%%" border="0" cellspacing="1" cellpadding="0">
+			<tr>
+				<td width="15">%s</td>
+				<td width="15">%s</td>
+				<td width="90%%">%s</td>
+				<td width="15">%s</td>
+				<td width="15">%s</td>
+			</tr>
+		</table>
+	</td></tr>', $img[0], $img[1], "&nbsp;", $img[2], $img[3]);
+	
 	$res_str .= sprintf('<tr class="tableHeader">
 							<td>%s</td>
 							<td>%s</td>
