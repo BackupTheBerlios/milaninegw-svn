@@ -1,0 +1,43 @@
+active	elgg-link	it	Active
+city of residence	elgg-link	it	City of Residence
+country of residence	elgg-link	it	Country of residence
+details	elgg-link	it	Details
+disabled	elgg-link	it	Disabled
+elg_active	elgg-link	it	Active
+elg_all	elgg-link	it	All
+elg_anonymous	elgg-link	it	Anonymous
+elg_current_page	elgg-link	it	Current Page
+elg_first	elgg-link	it	First
+elg_first_name	elgg-link	it	First Name
+elg_go_to_page	elgg-link	it	Go to page
+elg_inactive	elgg-link	it	Inactive
+elg_last	elgg-link	it	Last
+elg_last_name	elgg-link	it	Last Name
+elg_members	elgg-link	it	Members
+elg_next	elgg-link	it	Next
+elg_online_status	elgg-link	it	Online status
+elg_order_by	elgg-link	it	Order by
+elg_previous	elgg-link	it	Previous
+elg_registered	elgg-link	it	Registered
+elg_registration_status	elgg-link	it	Registration status
+elg_result	elgg-link	it	Result
+elg_returned_no_result	elgg-link	it	No results returned
+elg_returned_result	elgg-link	it	Returned results
+elg_search	elgg-link	it	Search
+elg_send_private_message_to	elgg-link	it	Send private message to
+elg_total_pages	elgg-link	it	elg_total_pages
+elg_view_linkedin_profile	elgg-link	it	LinkedIn profile
+elg_view_profile	elgg-link	it	View profile
+industry	elgg-link	it	Industry
+instant msg	elgg-link	it	Instant MSG
+linkedin url	elgg-link	it	LinkedIn URL
+member since (date)	elgg-link	it	Member since (date)
+name/surname	elgg-link	it	Name/Surname
+occupation area	elgg-link	it	Occupation area
+professional status	elgg-link	it	Professional Status
+profile url	elgg-link	it	Profile URL
+status	elgg-link	it	Status
+total active users	elgg-link	it	Total ACTIVE users
+total selected users	elgg-link	it	Total SELECTED users
+total users	elgg-link	it	Total users
+warningemtpylinkedinprofile	elgg-link	it	WarningEmtpyLinkedInProfile
